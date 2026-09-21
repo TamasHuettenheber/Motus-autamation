@@ -1,0 +1,103 @@
+name: Motus Renderer
+
+on:
+  workflow_dispatch:
+    inputs:
+      audio_url:
+        description: "URL der Deep-Sprachdatei"
+        required: true
+        type: string
+      transcript:
+        description: "Gesprochener Text"
+        required: true
+        type: string
+      output_name:
+        description: "Name der MP4-Datei"
+        required: true
+        default: "motus-video"
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository laden
+        uses: actions/checkout@v4
+
+      - name: FFmpeg prüfen
+        run: |
+          ffmpeg -version
+          ffprobe -version
+
+      - name: Arbeitsordner erstellen
+        run: mkdir -p output
+
+      - name: Deep-Audio laden
+        env:
+          AUDIO_URL: ${{ inputs.audio_url }}
+        run: |
+          curl --fail --location --retry 3 \
+            "$AUDIO_URL" \
+            --output voice.mp3
+
+      - name: Audiodauer bestimmen
+        id: audio
+        run: |
+          DURATION=$(ffprobe -v error \
+            -show_entries format=duration \
+            -of default=noprint_wrappers=1:nokey=1 \
+            voice.mp3)
+
+          VIDEO_DURATION=$(awk -v d="$DURATION" 'BEGIN {printf "%.3f", d + 1.5}')
+
+          echo "audio_duration=$DURATION" >> "$GITHUB_OUTPUT"
+          echo "video_duration=$VIDEO_DURATION" >> "$GITHUB_OUTPUT"
+
+      - name: Motus Testvideo rendern
+        env:
+          VIDEO_DURATION: ${{ steps.audio.outputs.video_duration }}
+          OUTPUT_NAME: ${{ inputs.output_name }}
+        run: |
+          ffmpeg -y \
+            -f lavfi \
+            -i "color=c=0x171717:s=1080x1920:r=30:d=${VIDEO_DURATION}" \
+            -i voice.mp3 \
+            -filter_complex \
+            "[0:v]format=yuv420p[v]" \
+            -map "[v]" \
+            -map 1:a \
+            -c:v libx264 \
+            -preset medium \
+            -crf 20 \
+            -c:a aac \
+            -b:a 192k \
+            -ar 48000 \
+            -movflags +faststart \
+            -t "$VIDEO_DURATION" \
+            "output/${OUTPUT_NAME}.mp4"
+
+      - name: Qualitätskontrolle
+        env:
+          OUTPUT_NAME: ${{ inputs.output_name }}
+        run: |
+          echo "=== VIDEO ==="
+          ffprobe -v error \
+            -show_entries stream=codec_name,width,height,r_frame_rate,pix_fmt \
+            -show_entries format=duration \
+            "output/${OUTPUT_NAME}.mp4"
+
+          echo "=== AUDIO ==="
+          ffprobe -v error \
+            -show_entries format=duration \
+            voice.mp3
+
+      - name: MP4 als Artifact bereitstellen
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.output_name }}
+          path: output/${{ inputs.output_name }}.mp4
+          retention-days: 7
