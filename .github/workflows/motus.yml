@@ -1,24 +1,20 @@
+
 name: Motus Renderer
 
 on:
   workflow_dispatch:
     inputs:
       audio_url:
-        description: "URL der Deep-Sprachdatei"
+        description: "Deep-Audio URL"
         required: true
         type: string
-      transcript:
-        description: "Gesprochener Text"
+      text:
+        description: "Text für das Video"
         required: true
-        type: string
-      output_name:
-        description: "Name der MP4-Datei"
-        required: true
-        default: "motus-video"
         type: string
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   render:
@@ -31,74 +27,184 @@ jobs:
       - name: FFmpeg installieren
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg
-          ffmpeg -version
-          ffprobe -version
+          sudo apt-get install -y ffmpeg curl file
 
       - name: Arbeitsordner erstellen
-        run: mkdir -p output
+        run: |
+          mkdir -p output
+          mkdir -p work
 
-      - name: Deep-Audio laden
+      - name: Deep-Audio laden und prüfen
         env:
           AUDIO_URL: ${{ inputs.audio_url }}
         run: |
-          curl --fail --location --retry 3 \
+          set -e
+
+          echo "Lade Deep-Audio..."
+
+          curl \
+            --fail \
+            --location \
+            --retry 3 \
+            --retry-delay 2 \
+            --connect-timeout 20 \
+            --max-time 120 \
+            -A "Mozilla/5.0" \
+            -H "Accept: audio/mpeg,audio/*;q=0.9,*/*;q=0.8" \
             "$AUDIO_URL" \
-            --output voice.mp3
+            -o work/audio_download
+
+          echo "Download abgeschlossen."
+          echo "Dateigröße:"
+          wc -c work/audio_download
+
+          echo "Erkannter Dateityp:"
+          file work/audio_download
+
+          if [ ! -s work/audio_download ]; then
+            echo "FEHLER: Audio-Download ist leer."
+            exit 1
+          fi
+
+          SIZE=$(stat -c%s work/audio_download)
+
+          if [ "$SIZE" -lt 5000 ]; then
+            echo "FEHLER: Audio-Datei ist ungewöhnlich klein."
+            echo "Erste Bytes der Antwort:"
+            head -c 300 work/audio_download || true
+            exit 1
+          fi
+
+      - name: Audio normalisieren
+        run: |
+          set -e
+
+          ffmpeg \
+            -hide_banner \
+            -loglevel error \
+            -y \
+            -i work/audio_download \
+            -vn \
+            -ac 2 \
+            -ar 44100 \
+            -b:a 192k \
+            work/voice.mp3
+
+          if [ ! -s work/voice.mp3 ]; then
+            echo "FEHLER: Normalisierte MP3 wurde nicht erstellt."
+            exit 1
+          fi
+
+          echo "Audio erfolgreich normalisiert."
 
       - name: Audiodauer bestimmen
         id: audio
         run: |
-          DURATION=$(ffprobe -v error \
+          set -e
+
+          DURATION=$(ffprobe \
+            -v error \
             -show_entries format=duration \
             -of default=noprint_wrappers=1:nokey=1 \
-            voice.mp3)
+            work/voice.mp3)
 
-          VIDEO_DURATION=$(awk -v d="$DURATION" 'BEGIN {printf "%.3f", d + 1.5}')
+          if [ -z "$DURATION" ]; then
+            echo "FEHLER: Audiodauer konnte nicht bestimmt werden."
+            exit 1
+          fi
+
+          VIDEO_DURATION=$(awk "BEGIN {printf \"%.3f\", $DURATION + 1.5}")
+
+          echo "Audiodauer: $DURATION Sekunden"
+          echo "Videodauer: $VIDEO_DURATION Sekunden"
 
           echo "audio_duration=$DURATION" >> "$GITHUB_OUTPUT"
           echo "video_duration=$VIDEO_DURATION" >> "$GITHUB_OUTPUT"
 
+      - name: Textdatei erstellen
+        env:
+          VIDEO_TEXT: ${{ inputs.text }}
+        run: |
+          printf '%s\n' "$VIDEO_TEXT" > work/text.txt
+
       - name: Motus Testvideo rendern
         env:
           VIDEO_DURATION: ${{ steps.audio.outputs.video_duration }}
-          OUTPUT_NAME: ${{ inputs.output_name }}
         run: |
-          ffmpeg -y \
+          set -e
+
+          ffmpeg \
+            -hide_banner \
+            -loglevel error \
+            -y \
             -f lavfi \
             -i "color=c=0x171717:s=1080x1920:r=30:d=${VIDEO_DURATION}" \
-            -i voice.mp3 \
-            -filter_complex "[0:v]format=yuv420p[v]" \
-            -map "[v]" \
-            -map 1:a \
+            -i work/voice.mp3 \
+            -vf "drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile=work/text.txt:fontcolor=white:fontsize=54:line_spacing=18:x=(w-text_w)/2:y=(h-text_h)/2-150:box=1:boxcolor=black@0.45:boxborderw=35" \
+            -map 0:v:0 \
+            -map 1:a:0 \
             -c:v libx264 \
             -preset medium \
             -crf 20 \
+            -pix_fmt yuv420p \
+            -r 30 \
             -c:a aac \
             -b:a 192k \
-            -ar 48000 \
             -movflags +faststart \
             -t "$VIDEO_DURATION" \
-            "output/${OUTPUT_NAME}.mp4"
+            output/motus-test.mp4
 
       - name: Qualitätskontrolle
-        env:
-          OUTPUT_NAME: ${{ inputs.output_name }}
         run: |
-          echo "=== VIDEO ==="
-          ffprobe -v error \
-            -show_entries stream=codec_name,width,height,r_frame_rate,pix_fmt \
-            -show_entries format=duration \
-            "output/${OUTPUT_NAME}.mp4"
+          set -e
 
-          echo "=== AUDIO ==="
-          ffprobe -v error \
+          echo "=== VIDEO ==="
+
+          ffprobe \
+            -v error \
+            -show_entries stream=codec_name,width,height,r_frame_rate \
+            -show_entries format=duration,size \
+            -of default=noprint_wrappers=1 \
+            output/motus-test.mp4
+
+          WIDTH=$(ffprobe -v error -select_streams v:0 \
+            -show_entries stream=width \
+            -of csv=p=0 output/motus-test.mp4)
+
+          HEIGHT=$(ffprobe -v error -select_streams v:0 \
+            -show_entries stream=height \
+            -of csv=p=0 output/motus-test.mp4)
+
+          AUDIO_DURATION=$(ffprobe -v error \
             -show_entries format=duration \
-            voice.mp3
+            -of csv=p=0 work/voice.mp3)
+
+          VIDEO_DURATION=$(ffprobe -v error \
+            -show_entries format=duration \
+            -of csv=p=0 output/motus-test.mp4)
+
+          echo "Auflösung: ${WIDTH}x${HEIGHT}"
+          echo "Audio: $AUDIO_DURATION Sekunden"
+          echo "Video: $VIDEO_DURATION Sekunden"
+
+          if [ "$WIDTH" != "1080" ] || [ "$HEIGHT" != "1920" ]; then
+            echo "FEHLER: Video ist nicht 1080x1920."
+            exit 1
+          fi
+
+          CHECK=$(awk "BEGIN {print ($VIDEO_DURATION >= $AUDIO_DURATION + 1.0) ? 1 : 0}")
+
+          if [ "$CHECK" != "1" ]; then
+            echo "FEHLER: Video ist nicht mindestens 1 Sekunde länger als das Audio."
+            exit 1
+          fi
+
+          echo "QUALITÄTSCHECK BESTANDEN"
 
       - name: MP4 als Artifact bereitstellen
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ inputs.output_name }}
-          path: output/${{ inputs.output_name }}.mp4
+          name: motus-testvideo
+          path: output/motus-test.mp4
+          if-no-files-found: error
           retention-days: 7
