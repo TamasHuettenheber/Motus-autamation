@@ -7,114 +7,120 @@ on:
         description: "Direkte Deep-Audio MP3 URL"
         required: true
         type: string
-
       text:
         description: "Gesprochener und eingeblendeter Text"
         required: true
         type: string
-
       broll_url:
         description: "Optional: direkte MP4-B-Roll URL"
         required: false
+        default: ""
         type: string
-
       output_name:
         description: "Dateiname ohne .mp4"
         required: true
         default: "motus-video"
         type: string
 
+  issues:
+    types: [opened]
+
 permissions:
   contents: write
+  issues: write
 
 jobs:
   render:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'issues' && startsWith(github.event.issue.title, '[MOTUS]'))
     runs-on: ubuntu-latest
 
     steps:
-      - name: Repository laden
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Werkzeuge installieren
+      - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg curl file fonts-dejavu-core
 
-          mkdir -p output
-          mkdir -p work
-          mkdir -p published
-
-      - name: Deep-Audio laden und normalisieren
+      - name: Read input
+        id: input
         env:
-          AUDIO_URL: ${{ inputs.audio_url }}
+          EVENT_NAME: ${{ github.event_name }}
+          DISPATCH_AUDIO: ${{ inputs.audio_url }}
+          DISPATCH_TEXT: ${{ inputs.text }}
+          DISPATCH_BROLL: ${{ inputs.broll_url }}
+          DISPATCH_OUTPUT: ${{ inputs.output_name }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
         run: |
-          set -euo pipefail
-
-          echo "Deep-Audio wird geladen..."
-
-          curl \
-            --fail \
-            --location \
-            --retry 3 \
-            --retry-delay 2 \
-            --connect-timeout 20 \
-            --max-time 180 \
-            -A "Mozilla/5.0" \
-            -H "Accept: audio/mpeg,audio/*;q=0.9,*/*;q=0.8" \
-            "$AUDIO_URL" \
-            -o work/audio_download
-
-          test -s work/audio_download
-
-          SIZE=$(stat -c%s work/audio_download)
-
-          if [ "$SIZE" -lt 5000 ]; then
-            echo "FEHLER: Audio-Datei ist zu klein."
-            exit 1
-          fi
-
-          ffmpeg \
-            -hide_banner \
-            -loglevel error \
-            -y \
-            -i work/audio_download \
-            -vn \
-            -ac 2 \
-            -ar 48000 \
-            -b:a 192k \
-            work/voice.mp3
-
-          ffprobe -v error work/voice.mp3
-
-          echo "Deep-Audio erfolgreich vorbereitet."
-
-      - name: Dauer und Text vorbereiten
-        id: prep
-        env:
-          VIDEO_TEXT: ${{ inputs.text }}
-        run: |
-          set -euo pipefail
-
-          DURATION=$(ffprobe \
-            -v error \
-            -show_entries format=duration \
-            -of default=noprint_wrappers=1:nokey=1 \
-            work/voice.mp3)
-
-          VIDEO_DURATION=$(awk -v d="$DURATION" \
-            'BEGIN {printf "%.3f", d + 1.50}')
-
-          echo "audio_duration=$DURATION" >> "$GITHUB_OUTPUT"
-          echo "video_duration=$VIDEO_DURATION" >> "$GITHUB_OUTPUT"
-
           python3 - <<'PY'
           import os
+          import re
+
+          event = os.environ.get("EVENT_NAME", "")
+
+          if event == "workflow_dispatch":
+              audio = os.environ.get("DISPATCH_AUDIO", "").strip()
+              text = os.environ.get("DISPATCH_TEXT", "").strip()
+              broll = os.environ.get("DISPATCH_BROLL", "").strip()
+              output = os.environ.get("DISPATCH_OUTPUT", "").strip()
+          else:
+              body = os.environ.get("ISSUE_BODY", "")
+
+              def get_value(name, required=False):
+                  pattern = rf"(?mi)^{re.escape(name)}:\s*(.*)$"
+                  match = re.search(pattern, body)
+                  value = match.group(1).strip() if match else ""
+                  if required and not value:
+                      raise SystemExit(f"Missing required issue field: {name}")
+                  return value
+
+              audio = get_value("AUDIO_URL", True)
+              text = get_value("TEXT", True)
+              broll = get_value("BROLL_URL", False)
+              output = get_value("OUTPUT_NAME", True)
+
+          if not audio:
+              raise SystemExit("audio_url missing")
+          if not text:
+              raise SystemExit("text missing")
+          if not output:
+              raise SystemExit("output_name missing")
+
+          with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as f:
+              f.write(f"AUDIO_URL={audio}\n")
+              f.write(f"BROLL_URL={broll}\n")
+              f.write(f"OUTPUT_NAME={output}\n")
+
+              delimiter = "MOTUS_TEXT_EOF"
+              f.write(f"MOTUS_TEXT<<{delimiter}\n")
+              f.write(text + "\n")
+              f.write(f"{delimiter}\n")
+
+          print("Input loaded successfully.")
+          PY
+
+      - name: Prepare files
+        run: |
+          mkdir -p work published
+
+          SAFE_NAME="$(echo "$OUTPUT_NAME" | tr -cd 'A-Za-z0-9._-')"
+
+          if [ -z "$SAFE_NAME" ]; then
+            SAFE_NAME="motus-video"
+          fi
+
+          echo "SAFE_NAME=$SAFE_NAME" >> "$GITHUB_ENV"
+
+          printf '%s\n' "$MOTUS_TEXT" > work/raw_text.txt
+
+          python3 - <<'PY'
           import textwrap
 
-          text = os.environ["VIDEO_TEXT"].strip()
-
-          if not text:
-              raise SystemExit("Video-Text ist leer.")
+          with open("work/raw_text.txt", "r", encoding="utf-8") as f:
+              text = f.read().strip()
 
           wrapped = "\n".join(
               textwrap.wrap(
@@ -129,277 +135,235 @@ jobs:
               f.write(wrapped)
           PY
 
-          echo "Audio: $DURATION Sekunden"
-          echo "Video: $VIDEO_DURATION Sekunden"
-
-      - name: B-Roll laden
-        env:
-          BROLL_URL: ${{ inputs.broll_url }}
+      - name: Download and normalize audio
         run: |
-          set -euo pipefail
+          curl -L --fail --retry 3 --retry-delay 2 \
+            "$AUDIO_URL" \
+            -o work/audio_source
 
-          if [ -n "${BROLL_URL:-}" ]; then
+          test -s work/audio_source
 
-            echo "B-Roll wird geladen..."
+          ffmpeg -y \
+            -i work/audio_source \
+            -vn \
+            -ar 48000 \
+            -ac 2 \
+            -b:a 192k \
+            work/audio.mp3
 
-            curl \
-              --fail \
-              --location \
-              --retry 3 \
-              --retry-delay 2 \
-              --connect-timeout 20 \
-              --max-time 240 \
-              -A "Mozilla/5.0" \
-              "$BROLL_URL" \
-              -o work/broll.mp4
+          ffprobe -v error \
+            -show_entries format=duration \
+            -of default=noprint_wrappers=1:nokey=1 \
+            work/audio.mp3 > work/audio_duration.txt
 
-            test -s work/broll.mp4
-            ffprobe -v error work/broll.mp4
+          AUDIO_DURATION="$(cat work/audio_duration.txt)"
 
-            echo "BROLL=1" >> "$GITHUB_ENV"
-            echo "B-Roll erfolgreich geladen."
+          VIDEO_DURATION="$(python3 - <<PY
+          a=float("$AUDIO_DURATION")
+          print(f"{a+1.50:.3f}")
+          PY
+          )"
 
-          else
+          echo "AUDIO_DURATION=$AUDIO_DURATION" >> "$GITHUB_ENV"
+          echo "VIDEO_DURATION=$VIDEO_DURATION" >> "$GITHUB_ENV"
 
-            echo "Keine B-Roll angegeben."
-            echo "Motus-Fallback wird verwendet."
-            echo "BROLL=0" >> "$GITHUB_ENV"
-
-          fi
-
-      - name: Motus Video rendern
-        env:
-          VIDEO_DURATION: ${{ steps.prep.outputs.video_duration }}
-          OUTPUT_NAME: ${{ inputs.output_name }}
+      - name: Download optional B-roll
+        if: env.BROLL_URL != ''
         run: |
-          set -euo pipefail
+          curl -L --fail --retry 3 --retry-delay 2 \
+            "$BROLL_URL" \
+            -o work/broll.mp4
 
-          SAFE_NAME=$(echo "$OUTPUT_NAME" | tr -cd '[:alnum:]_-')
+          test -s work/broll.mp4
 
-          if [ -z "$SAFE_NAME" ]; then
-            SAFE_NAME="motus-video"
-          fi
-
-          echo "safe_name=$SAFE_NAME" >> "$GITHUB_ENV"
-
-          if [ "$BROLL" = "1" ]; then
-
-            ffmpeg \
-              -hide_banner \
-              -loglevel error \
-              -y \
-              -stream_loop -1 \
-              -i work/broll.mp4 \
-              -i work/voice.mp3 \
-              -filter_complex \
-              "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1,fps=30,eq=brightness=-0.08:saturation=0.88,drawbox=x=0:y=0:w=iw:h=ih:color=black@0.18:t=fill,drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile=work/text.txt:fontcolor=white:fontsize=52:line_spacing=16:x=(w-text_w)/2:y=430:box=1:boxcolor=black@0.42:boxborderw=30[v]" \
-              -map "[v]" \
-              -map 1:a:0 \
-              -c:v libx264 \
-              -preset medium \
-              -crf 20 \
-              -pix_fmt yuv420p \
-              -r 30 \
-              -c:a aac \
-              -b:a 192k \
-              -ar 48000 \
-              -movflags +faststart \
-              -t "$VIDEO_DURATION" \
-              "output/${SAFE_NAME}.mp4"
-
-          else
-
-            ffmpeg \
-              -hide_banner \
-              -loglevel error \
-              -y \
-              -f lavfi \
-              -i "color=c=0x171717:s=1080x1920:r=30:d=${VIDEO_DURATION}" \
-              -i work/voice.mp3 \
-              -filter_complex \
-              "[0:v]drawbox=x='mod(t*90,1340)-260':y=250:w=420:h=420:color=white@0.035:t=fill,drawbox=x='1080-mod(t*65,1600)':y=1120:w=520:h=520:color=white@0.025:t=fill,drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile=work/text.txt:fontcolor=white:fontsize=52:line_spacing=16:x=(w-text_w)/2:y=430:box=1:boxcolor=black@0.35:boxborderw=30[v]" \
-              -map "[v]" \
-              -map 1:a:0 \
-              -c:v libx264 \
-              -preset medium \
-              -crf 20 \
-              -pix_fmt yuv420p \
-              -r 30 \
-              -c:a aac \
-              -b:a 192k \
-              -ar 48000 \
-              -movflags +faststart \
-              -t "$VIDEO_DURATION" \
-              "output/${SAFE_NAME}.mp4"
-
-          fi
-
-          test -s "output/${SAFE_NAME}.mp4"
-
-          echo "Rendering abgeschlossen."
-
-      - name: Qualitätskontrolle
+      - name: Render with B-roll
+        if: env.BROLL_URL != ''
         run: |
-          set -euo pipefail
+          ffmpeg -y \
+            -stream_loop -1 \
+            -i work/broll.mp4 \
+            -i work/audio.mp3 \
+            -t "$VIDEO_DURATION" \
+            -filter_complex "
+              [0:v]
+              scale=1080:1920:force_original_aspect_ratio=increase,
+              crop=1080:1920,
+              fps=30,
+              eq=brightness=-0.12:saturation=0.85,
+              drawtext=
+                fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:
+                textfile=work/text.txt:
+                fontcolor=white:
+                fontsize=58:
+                line_spacing=18:
+                x=(w-text_w)/2:
+                y=430:
+                box=1:
+                boxcolor=black@0.48:
+                boxborderw=35
+              [v]
+            " \
+            -map "[v]" \
+            -map 1:a \
+            -c:v libx264 \
+            -preset medium \
+            -crf 20 \
+            -pix_fmt yuv420p \
+            -r 30 \
+            -c:a aac \
+            -b:a 192k \
+            -movflags +faststart \
+            -shortest \
+            "work/$SAFE_NAME.mp4"
 
-          V="output/${safe_name}.mp4"
+      - name: Render fallback background
+        if: env.BROLL_URL == ''
+        run: |
+          ffmpeg -y \
+            -f lavfi \
+            -i "color=c=0x171717:s=1080x1920:r=30:d=$VIDEO_DURATION" \
+            -i work/audio.mp3 \
+            -filter_complex "
+              [0:v]
+              drawbox=
+                x='120+80*sin(t*0.55)':
+                y='250+70*cos(t*0.45)':
+                w=840:
+                h=420:
+                color=white@0.035:
+                t=fill,
+              drawbox=
+                x='180+100*cos(t*0.35)':
+                y='1180+90*sin(t*0.40)':
+                w=720:
+                h=360:
+                color=white@0.025:
+                t=fill,
+              drawtext=
+                fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:
+                textfile=work/text.txt:
+                fontcolor=white:
+                fontsize=58:
+                line_spacing=18:
+                x=(w-text_w)/2:
+                y=430:
+                box=1:
+                boxcolor=black@0.40:
+                boxborderw=35
+              [v]
+            " \
+            -map "[v]" \
+            -map 1:a \
+            -c:v libx264 \
+            -preset medium \
+            -crf 20 \
+            -pix_fmt yuv420p \
+            -r 30 \
+            -c:a aac \
+            -b:a 192k \
+            -movflags +faststart \
+            -shortest \
+            "work/$SAFE_NAME.mp4"
 
-          WIDTH=$(ffprobe \
-            -v error \
-            -select_streams v:0 \
+      - name: Quality control
+        run: |
+          VIDEO="work/$SAFE_NAME.mp4"
+
+          test -s "$VIDEO"
+
+          WIDTH="$(ffprobe -v error -select_streams v:0 \
             -show_entries stream=width \
-            -of csv=p=0 \
-            "$V")
+            -of csv=p=0 "$VIDEO")"
 
-          HEIGHT=$(ffprobe \
-            -v error \
-            -select_streams v:0 \
+          HEIGHT="$(ffprobe -v error -select_streams v:0 \
             -show_entries stream=height \
-            -of csv=p=0 \
-            "$V")
+            -of csv=p=0 "$VIDEO")"
 
-          FPS=$(ffprobe \
-            -v error \
-            -select_streams v:0 \
-            -show_entries stream=r_frame_rate \
-            -of csv=p=0 \
-            "$V")
+          CODEC="$(ffprobe -v error -select_streams v:0 \
+            -show_entries stream=codec_name \
+            -of csv=p=0 "$VIDEO")"
 
-          PIX=$(ffprobe \
-            -v error \
-            -select_streams v:0 \
+          PIXFMT="$(ffprobe -v error -select_streams v:0 \
             -show_entries stream=pix_fmt \
-            -of csv=p=0 \
-            "$V")
+            -of csv=p=0 "$VIDEO")"
 
-          VCODEC=$(ffprobe \
-            -v error \
-            -select_streams v:0 \
+          AUDIO_CODEC="$(ffprobe -v error -select_streams a:0 \
             -show_entries stream=codec_name \
-            -of csv=p=0 \
-            "$V")
+            -of csv=p=0 "$VIDEO")"
 
-          ACODEC=$(ffprobe \
-            -v error \
-            -select_streams a:0 \
-            -show_entries stream=codec_name \
-            -of csv=p=0 \
-            "$V")
-
-          AUDIO_DURATION=$(ffprobe \
-            -v error \
+          FINAL_DURATION="$(ffprobe -v error \
             -show_entries format=duration \
-            -of csv=p=0 \
-            work/voice.mp3)
+            -of default=noprint_wrappers=1:nokey=1 "$VIDEO")"
 
-          VIDEO_DURATION=$(ffprobe \
-            -v error \
-            -show_entries format=duration \
-            -of csv=p=0 \
-            "$V")
+          FILE_SIZE="$(stat -c%s "$VIDEO")"
 
-          FILESIZE=$(stat -c%s "$V")
+          echo "Resolution: ${WIDTH}x${HEIGHT}"
+          echo "Video codec: $CODEC"
+          echo "Pixel format: $PIXFMT"
+          echo "Audio codec: $AUDIO_CODEC"
+          echo "Audio duration: $AUDIO_DURATION"
+          echo "Video duration: $FINAL_DURATION"
+          echo "File size: $FILE_SIZE"
 
-          echo "============================="
-          echo "MOTUS QUALITÄTSKONTROLLE"
-          echo "============================="
-          echo "Auflösung: ${WIDTH}x${HEIGHT}"
-          echo "FPS: $FPS"
-          echo "Pixel-Format: $PIX"
-          echo "Video-Codec: $VCODEC"
-          echo "Audio-Codec: $ACODEC"
-          echo "Audio-Dauer: $AUDIO_DURATION"
-          echo "Video-Dauer: $VIDEO_DURATION"
-          echo "Dateigröße: $FILESIZE Bytes"
-          echo "============================="
+          test "$WIDTH" = "1080"
+          test "$HEIGHT" = "1920"
+          test "$CODEC" = "h264"
+          test "$PIXFMT" = "yuv420p"
+          test "$AUDIO_CODEC" = "aac"
+          test "$FILE_SIZE" -ge 100000
 
-          if [ "$WIDTH" != "1080" ]; then
-            echo "FEHLER: Breite stimmt nicht."
-            exit 1
-          fi
+          python3 - <<PY
+          audio=float("$AUDIO_DURATION")
+          video=float("$FINAL_DURATION")
 
-          if [ "$HEIGHT" != "1920" ]; then
-            echo "FEHLER: Höhe stimmt nicht."
-            exit 1
-          fi
+          if video < audio + 1.0:
+              raise SystemExit(
+                  f"QC failed: video {video:.2f}s, audio {audio:.2f}s"
+              )
 
-          if [ "$PIX" != "yuv420p" ]; then
-            echo "FEHLER: Pixel-Format stimmt nicht."
-            exit 1
-          fi
+          print(
+              f"QC passed: audio={audio:.2f}s video={video:.2f}s"
+          )
+          PY
 
-          if [ "$VCODEC" != "h264" ]; then
-            echo "FEHLER: Video ist nicht H.264."
-            exit 1
-          fi
-
-          if [ "$ACODEC" != "aac" ]; then
-            echo "FEHLER: Audio ist nicht AAC."
-            exit 1
-          fi
-
-          CHECK=$(awk \
-            -v v="$VIDEO_DURATION" \
-            -v a="$AUDIO_DURATION" \
-            'BEGIN {print (v >= a + 1.0) ? 1 : 0}')
-
-          if [ "$CHECK" != "1" ]; then
-            echo "FEHLER: Video endet zu früh."
-            exit 1
-          fi
-
-          if [ "$FILESIZE" -lt 100000 ]; then
-            echo "FEHLER: Videodatei ist ungewöhnlich klein."
-            exit 1
-          fi
-
-          echo "QUALITÄTSCHECK BESTANDEN"
-
-      - name: MP4 als Artifact bereitstellen
+      - name: Upload workflow artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.safe_name }}
-          path: output/${{ env.safe_name }}.mp4
-          if-no-files-found: error
+          name: ${{ env.SAFE_NAME }}
+          path: work/${{ env.SAFE_NAME }}.mp4
           retention-days: 7
 
-      - name: Öffentliche MP4 vorbereiten
+      - name: Publish MP4 to repository
         run: |
-          set -euo pipefail
+          cp "work/$SAFE_NAME.mp4" "published/$SAFE_NAME.mp4"
 
-          cp \
-            "output/${safe_name}.mp4" \
-            "published/${safe_name}.mp4"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Öffentliche MP4 speichern
-        run: |
-          set -euo pipefail
-
-          git config user.name "Motus Automation"
-          git config user.email "actions@users.noreply.github.com"
-
-          git add "published/${safe_name}.mp4"
+          git add "published/$SAFE_NAME.mp4"
 
           if git diff --cached --quiet; then
-
-            echo "Keine neue Datei zu committen."
-
+            echo "No repository change required."
           else
-
-            git commit -m "Publish ${safe_name}"
+            git commit -m "Publish $SAFE_NAME"
             git push
-
           fi
 
-      - name: Fertig
+      - name: Close Motus trigger issue
+        if: github.event_name == 'issues' && success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
-          echo "================================"
-          echo "MOTUS VIDEO FERTIG"
-          echo "================================"
-          echo "Datei: published/${safe_name}.mp4"
-          echo "1080x1920"
-          echo "H.264 + AAC"
-          echo "30 FPS"
-          echo "Deep-Audio"
-          echo "Qualitätskontrolle bestanden"
-          echo "================================"
+          gh issue close "$ISSUE_NUMBER" \
+            --repo "${{ github.repository }}" \
+            --comment "Motus render completed successfully."
+
+      - name: Summary
+        run: |
+          echo "## Motus render completed" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Output: $SAFE_NAME.mp4" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Audio: $AUDIO_DURATION seconds" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Video: $VIDEO_DURATION seconds" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Public path: published/$SAFE_NAME.mp4" >> "$GITHUB_STEP_SUMMARY"
