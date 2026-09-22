@@ -170,14 +170,19 @@ jobs:
       - name: Download optional B-roll
         if: env.BROLL_URL != ''
         run: |
-          curl -L --fail --retry 3 --retry-delay 2 \
+          if curl -L --fail --retry 3 --retry-delay 2 \
             "$BROLL_URL" \
-            -o work/broll.mp4
-
-          test -s work/broll.mp4
+            -o work/broll.mp4 && test -s work/broll.mp4; then
+            echo "BROLL_READY=true" >> "$GITHUB_ENV"
+            echo "B-roll downloaded successfully."
+          else
+            rm -f work/broll.mp4
+            echo "BROLL_READY=false" >> "$GITHUB_ENV"
+            echo "B-roll unavailable. Static fallback will be used."
+          fi
 
       - name: Render with B-roll
-        if: env.BROLL_URL != ''
+        if: env.BROLL_READY == 'true'
         run: |
           ffmpeg -y \
             -stream_loop -1 \
@@ -217,7 +222,7 @@ jobs:
             "work/$SAFE_NAME.mp4"
 
       - name: Render fallback background
-        if: env.BROLL_URL == ''
+        if: env.BROLL_READY != 'true'
         run: |
           ffmpeg -y \
             -f lavfi \
