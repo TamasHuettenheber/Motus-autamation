@@ -321,7 +321,9 @@ jobs:
           audio=float("$AUDIO_DURATION")
           video=float("$FINAL_DURATION")
 
-          if video < audio + 1.0:
+          # ffmpeg -shortest can end the muxed file a few frames before
+          # the decoded audio duration. Only fail when audio is materially cut.
+          if video < audio - 0.25:
               raise SystemExit(
                   f"QC failed: video {video:.2f}s, audio {audio:.2f}s"
               )
