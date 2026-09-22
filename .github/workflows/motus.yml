@@ -46,7 +46,6 @@ jobs:
           sudo apt-get install -y ffmpeg curl file fonts-dejavu-core
 
       - name: Read input
-        id: input
         env:
           EVENT_NAME: ${{ github.event_name }}
           DISPATCH_AUDIO: ${{ inputs.audio_url }}
@@ -56,281 +55,102 @@ jobs:
           ISSUE_BODY: ${{ github.event.issue.body }}
         run: |
           python3 - <<'PY'
-          import os
-          import re
-
-          event = os.environ.get("EVENT_NAME", "")
-
-          if event == "workflow_dispatch":
-              audio = os.environ.get("DISPATCH_AUDIO", "").strip()
-              text = os.environ.get("DISPATCH_TEXT", "").strip()
-              broll = os.environ.get("DISPATCH_BROLL", "").strip()
-              output = os.environ.get("DISPATCH_OUTPUT", "").strip()
+          import os, re
+          event=os.environ.get('EVENT_NAME','')
+          if event=='workflow_dispatch':
+              audio=os.environ.get('DISPATCH_AUDIO','').strip(); text=os.environ.get('DISPATCH_TEXT','').strip(); broll=os.environ.get('DISPATCH_BROLL','').strip(); output=os.environ.get('DISPATCH_OUTPUT','').strip()
           else:
-              body = os.environ.get("ISSUE_BODY", "")
-
-              def get_value(name, required=False):
-                  pattern = rf"(?mi)^{re.escape(name)}:\s*(.*)$"
-                  match = re.search(pattern, body)
-                  value = match.group(1).strip() if match else ""
-                  if required and not value:
-                      raise SystemExit(f"Missing required issue field: {name}")
-                  return value
-
-              audio = get_value("AUDIO_URL", True)
-              text = get_value("TEXT", True)
-              broll = get_value("BROLL_URL", False)
-              output = get_value("OUTPUT_NAME", True)
-
-          if not audio:
-              raise SystemExit("audio_url missing")
-          if not text:
-              raise SystemExit("text missing")
-          if not output:
-              raise SystemExit("output_name missing")
-
-          with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as f:
-              f.write(f"AUDIO_URL={audio}\n")
-              f.write(f"BROLL_URL={broll}\n")
-              f.write(f"OUTPUT_NAME={output}\n")
-
-              delimiter = "MOTUS_TEXT_EOF"
-              f.write(f"MOTUS_TEXT<<{delimiter}\n")
-              f.write(text + "\n")
-              f.write(f"{delimiter}\n")
-
-          print("Input loaded successfully.")
+              body=os.environ.get('ISSUE_BODY','')
+              def getv(name, required=False):
+                  m=re.search(rf'(?mi)^{re.escape(name)}:\s*(.*)$',body); v=m.group(1).strip() if m else ''
+                  if required and not v: raise SystemExit(f'Missing required issue field: {name}')
+                  return v
+              audio=getv('AUDIO_URL',True); text=getv('TEXT',True); broll=getv('BROLL_URL'); output=getv('OUTPUT_NAME',True)
+          with open(os.environ['GITHUB_ENV'],'a',encoding='utf-8') as f:
+              f.write(f'AUDIO_URL={audio}\nBROLL_URL={broll}\nOUTPUT_NAME={output}\n')
+              f.write('MOTUS_TEXT<<MOTUS_TEXT_EOF\n'+text+'\nMOTUS_TEXT_EOF\n')
           PY
 
-      - name: Prepare files
+      - name: Prepare files and audio
         run: |
           mkdir -p work published
-
-          SAFE_NAME="$(echo "$OUTPUT_NAME" | tr -cd 'A-Za-z0-9._-')"
-
-          if [ -z "$SAFE_NAME" ]; then
-            SAFE_NAME="motus-video"
-          fi
-
+          SAFE_NAME="$(echo "$OUTPUT_NAME" | tr -cd 'A-Za-z0-9._-')"; [ -n "$SAFE_NAME" ] || SAFE_NAME="motus-video"
           echo "SAFE_NAME=$SAFE_NAME" >> "$GITHUB_ENV"
-
           printf '%s\n' "$MOTUS_TEXT" > work/raw_text.txt
-
-          python3 - <<'PY'
-          import textwrap
-
-          with open("work/raw_text.txt", "r", encoding="utf-8") as f:
-              text = f.read().strip()
-
-          wrapped = "\n".join(
-              textwrap.wrap(
-                  text,
-                  width=34,
-                  break_long_words=False,
-                  break_on_hyphens=False
-              )
-          )
-
-          with open("work/text.txt", "w", encoding="utf-8") as f:
-              f.write(wrapped)
-          PY
-
-      - name: Download and normalize audio
-        run: |
-          curl -L --fail --retry 3 --retry-delay 2 \
-            "$AUDIO_URL" \
-            -o work/audio_source
-
+          curl -L --fail --retry 3 --retry-delay 2 "$AUDIO_URL" -o work/audio_source
           test -s work/audio_source
-
-          ffmpeg -y \
-            -i work/audio_source \
-            -vn \
-            -ar 48000 \
-            -ac 2 \
-            -b:a 192k \
-            work/audio.mp3
-
-          ffprobe -v error \
-            -show_entries format=duration \
-            -of default=noprint_wrappers=1:nokey=1 \
-            work/audio.mp3 > work/audio_duration.txt
-
-          AUDIO_DURATION="$(cat work/audio_duration.txt)"
-
+          ffmpeg -y -i work/audio_source -vn -ar 48000 -ac 2 -b:a 192k work/audio.mp3
+          AUDIO_DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 work/audio.mp3)"
           VIDEO_DURATION="$(python3 - <<PY
-          a=float("$AUDIO_DURATION")
-          print(f"{a+1.50:.3f}")
+          a=float('$AUDIO_DURATION'); print(f'{a+0.35:.3f}')
           PY
           )"
-
           echo "AUDIO_DURATION=$AUDIO_DURATION" >> "$GITHUB_ENV"
           echo "VIDEO_DURATION=$VIDEO_DURATION" >> "$GITHUB_ENV"
+
+      - name: Build timed safe-zone captions
+        run: |
+          python3 - <<'PY'
+          import os,re,textwrap
+          text=os.environ['MOTUS_TEXT'].strip(); dur=float(os.environ['AUDIO_DURATION'])
+          # Split into short spoken units; never show the full transcript at once.
+          raw=[x.strip() for x in re.split(r'(?<=[.!?])\s+|\s*[;:]\s+|\s+[–—]\s+',text) if x.strip()]
+          chunks=[]
+          for part in raw:
+              words=part.split()
+              while len(words)>10:
+                  cut=min(9,len(words)); chunks.append(' '.join(words[:cut])); words=words[cut:]
+              if words: chunks.append(' '.join(words))
+          if not chunks: chunks=[text]
+          weights=[max(1,len(c.split())) for c in chunks]; total=sum(weights)
+          def ts(sec):
+              h=int(sec//3600); sec-=h*3600; m=int(sec//60); sec-=m*60
+              return f'{h}:{m:02d}:{sec:05.2f}'
+          def esc(s): return s.replace('\\','\\\\').replace('{','\\{').replace('}','\\}')
+          ass='''[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\nScaledBorderAndShadow: yes\n\n[V4+ Styles]\nFormat: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding\nStyle: Motus,DejaVu Sans,62,&H00FFFFFF,&H000000FF,&H00151515,&H99000000,-1,0,0,0,100,100,0,0,3,2,0,8,115,115,420,1\n\n[Events]\nFormat: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text\n'''
+          t=0.0
+          for i,(c,w) in enumerate(zip(chunks,weights)):
+              end=dur if i==len(chunks)-1 else t+dur*w/total
+              wrapped='\\N'.join(textwrap.wrap(c,width=24,break_long_words=False,break_on_hyphens=False))
+              ass+=f'Dialogue: 0,{ts(t)},{ts(end)},Motus,,0,0,0,,{esc(wrapped)}\n'; t=end
+          open('work/captions.ass','w',encoding='utf-8').write(ass)
+          print(f'Caption chunks: {len(chunks)}')
+          PY
 
       - name: Download optional B-roll
         if: env.BROLL_URL != ''
         run: |
-          if curl -L --fail --retry 3 --retry-delay 2 \
-            "$BROLL_URL" \
-            -o work/broll.mp4 && test -s work/broll.mp4; then
+          if curl -L --fail --retry 3 --retry-delay 2 "$BROLL_URL" -o work/broll.mp4 && test -s work/broll.mp4 && ffprobe -v error work/broll.mp4; then
             echo "BROLL_READY=true" >> "$GITHUB_ENV"
-            echo "B-roll downloaded successfully."
           else
-            rm -f work/broll.mp4
-            echo "BROLL_READY=false" >> "$GITHUB_ENV"
-            echo "B-roll unavailable. Static fallback will be used."
+            rm -f work/broll.mp4; echo "BROLL_READY=false" >> "$GITHUB_ENV"
           fi
 
       - name: Render with B-roll
         if: env.BROLL_READY == 'true'
         run: |
-          ffmpeg -y \
-            -stream_loop -1 \
-            -i work/broll.mp4 \
-            -i work/audio.mp3 \
-            -t "$VIDEO_DURATION" \
-            -filter_complex "
-              [0:v]
-              scale=1080:1920:force_original_aspect_ratio=increase,
-              crop=1080:1920,
-              fps=30,
-              eq=brightness=-0.12:saturation=0.85,
-              drawtext=
-                fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:
-                textfile=work/text.txt:
-                fontcolor=white:
-                fontsize=58:
-                line_spacing=18:
-                x=(w-text_w)/2:
-                y=430:
-                box=1:
-                boxcolor=black@0.48:
-                boxborderw=35
-              [v]
-            " \
-            -map "[v]" \
-            -map 1:a \
-            -c:v libx264 \
-            -preset medium \
-            -crf 20 \
-            -pix_fmt yuv420p \
-            -r 30 \
-            -c:a aac \
-            -b:a 192k \
-            -movflags +faststart \
-            -shortest \
-            "work/$SAFE_NAME.mp4"
+          ffmpeg -y -stream_loop -1 -i work/broll.mp4 -i work/audio.mp3 -t "$VIDEO_DURATION" -filter_complex "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,eq=brightness=-0.08:saturation=0.90,drawbox=x=0:y=0:w=iw:h=ih:color=black@0.12:t=fill,subtitles=work/captions.ass[v]" -map "[v]" -map 1:a -c:v libx264 -preset medium -crf 20 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -movflags +faststart -shortest "work/$SAFE_NAME.mp4"
 
-      - name: Render fallback background
+      - name: Render animated fallback
         if: env.BROLL_READY != 'true'
         run: |
-          ffmpeg -y \
-            -f lavfi \
-            -i "color=c=0x171717:s=1080x1920:r=30:d=$VIDEO_DURATION" \
-            -i work/audio.mp3 \
-            -filter_complex "
-              [0:v]
-              drawbox=
-                x='120+80*sin(t*0.55)':
-                y='250+70*cos(t*0.45)':
-                w=840:
-                h=420:
-                color=white@0.035:
-                t=fill,
-              drawbox=
-                x='180+100*cos(t*0.35)':
-                y='1180+90*sin(t*0.40)':
-                w=720:
-                h=360:
-                color=white@0.025:
-                t=fill,
-              drawtext=
-                fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:
-                textfile=work/text.txt:
-                fontcolor=white:
-                fontsize=58:
-                line_spacing=18:
-                x=(w-text_w)/2:
-                y=430:
-                box=1:
-                boxcolor=black@0.40:
-                boxborderw=35
-              [v]
-            " \
-            -map "[v]" \
-            -map 1:a \
-            -c:v libx264 \
-            -preset medium \
-            -crf 20 \
-            -pix_fmt yuv420p \
-            -r 30 \
-            -c:a aac \
-            -b:a 192k \
-            -movflags +faststart \
-            -shortest \
-            "work/$SAFE_NAME.mp4"
+          ffmpeg -y -f lavfi -i "color=c=0x263842:s=1080x1920:r=30:d=$VIDEO_DURATION" -i work/audio.mp3 -filter_complex "[0:v]drawbox=x='mod(t*75,1500)-420':y=230:w=560:h=560:color=white@0.055:t=fill,drawbox=x='1080-mod(t*55,1600)':y=1180:w=620:h=620:color=white@0.035:t=fill,subtitles=work/captions.ass[v]" -map "[v]" -map 1:a -c:v libx264 -preset medium -crf 20 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -movflags +faststart -shortest "work/$SAFE_NAME.mp4"
 
       - name: Quality control
         run: |
-          VIDEO="work/$SAFE_NAME.mp4"
-
-          test -s "$VIDEO"
-
-          WIDTH="$(ffprobe -v error -select_streams v:0 \
-            -show_entries stream=width \
-            -of csv=p=0 "$VIDEO")"
-
-          HEIGHT="$(ffprobe -v error -select_streams v:0 \
-            -show_entries stream=height \
-            -of csv=p=0 "$VIDEO")"
-
-          CODEC="$(ffprobe -v error -select_streams v:0 \
-            -show_entries stream=codec_name \
-            -of csv=p=0 "$VIDEO")"
-
-          PIXFMT="$(ffprobe -v error -select_streams v:0 \
-            -show_entries stream=pix_fmt \
-            -of csv=p=0 "$VIDEO")"
-
-          AUDIO_CODEC="$(ffprobe -v error -select_streams a:0 \
-            -show_entries stream=codec_name \
-            -of csv=p=0 "$VIDEO")"
-
-          FINAL_DURATION="$(ffprobe -v error \
-            -show_entries format=duration \
-            -of default=noprint_wrappers=1:nokey=1 "$VIDEO")"
-
+          VIDEO="work/$SAFE_NAME.mp4"; test -s "$VIDEO"
+          WIDTH="$(ffprobe -v error -select_streams v:0 -show_entries stream=width -of csv=p=0 "$VIDEO")"
+          HEIGHT="$(ffprobe -v error -select_streams v:0 -show_entries stream=height -of csv=p=0 "$VIDEO")"
+          CODEC="$(ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of csv=p=0 "$VIDEO")"
+          PIXFMT="$(ffprobe -v error -select_streams v:0 -show_entries stream=pix_fmt -of csv=p=0 "$VIDEO")"
+          AUDIO_CODEC="$(ffprobe -v error -select_streams a:0 -show_entries stream=codec_name -of csv=p=0 "$VIDEO")"
+          FINAL_DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$VIDEO")"
           FILE_SIZE="$(stat -c%s "$VIDEO")"
-
-          echo "Resolution: ${WIDTH}x${HEIGHT}"
-          echo "Video codec: $CODEC"
-          echo "Pixel format: $PIXFMT"
-          echo "Audio codec: $AUDIO_CODEC"
-          echo "Audio duration: $AUDIO_DURATION"
-          echo "Video duration: $FINAL_DURATION"
-          echo "File size: $FILE_SIZE"
-
-          test "$WIDTH" = "1080"
-          test "$HEIGHT" = "1920"
-          test "$CODEC" = "h264"
-          test "$PIXFMT" = "yuv420p"
-          test "$AUDIO_CODEC" = "aac"
-          test "$FILE_SIZE" -ge 100000
-
+          test "$WIDTH" = "1080"; test "$HEIGHT" = "1920"; test "$CODEC" = "h264"; test "$PIXFMT" = "yuv420p"; test "$AUDIO_CODEC" = "aac"; test "$FILE_SIZE" -ge 100000
           python3 - <<PY
-          audio=float("$AUDIO_DURATION")
-          video=float("$FINAL_DURATION")
-
-          # ffmpeg -shortest can end the muxed file a few frames before
-          # the decoded audio duration. Only fail when audio is materially cut.
-          if video < audio - 0.25:
-              raise SystemExit(
-                  f"QC failed: video {video:.2f}s, audio {audio:.2f}s"
-              )
-
-          print(
-              f"QC passed: audio={audio:.2f}s video={video:.2f}s"
-          )
+          a=float('$AUDIO_DURATION'); v=float('$FINAL_DURATION')
+          if v < a-0.25: raise SystemExit(f'QC failed: video {v:.2f}s, audio {a:.2f}s')
+          print(f'QC passed: audio={a:.2f}s video={v:.2f}s')
           PY
 
       - name: Upload workflow artifact
@@ -343,34 +163,13 @@ jobs:
       - name: Publish MP4 to repository
         run: |
           cp "work/$SAFE_NAME.mp4" "published/$SAFE_NAME.mp4"
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "published/$SAFE_NAME.mp4"
-
-          if git diff --cached --quiet; then
-            echo "No repository change required."
-          else
-            git commit -m "Publish $SAFE_NAME"
-            git push
-          fi
+          if ! git diff --cached --quiet; then git commit -m "Publish $SAFE_NAME" && git push; fi
 
       - name: Close Motus trigger issue
         if: github.event_name == 'issues' && success()
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
-        run: |
-          gh issue close "$ISSUE_NUMBER" \
-            --repo "${{ github.repository }}" \
-            --comment "Motus render completed successfully."
-
-      - name: Summary
-        run: |
-          echo "## Motus render completed" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Output: $SAFE_NAME.mp4" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Audio: $AUDIO_DURATION seconds" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Video: $VIDEO_DURATION seconds" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Public path: published/$SAFE_NAME.mp4" >> "$GITHUB_STEP_SUMMARY"
+        run: gh issue close "$ISSUE_NUMBER" --repo "${{ github.repository }}" --comment "Motus render completed successfully."
