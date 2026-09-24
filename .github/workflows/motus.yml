@@ -377,6 +377,7 @@ jobs:
                       "mode": "customScheduled",
                       "dueAt": due_at,
                       "aiAssisted": True,
+                      "metadata": {"tiktok": {"isAiGenerated": True}},
                       "assets": [
                           {
                               "video": {
