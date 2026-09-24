@@ -1,0 +1,93 @@
+name: Buffer Check
+
+on:
+  push:
+    paths:
+      - ".github/workflows/buffer-check.yml"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check Buffer connection
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import os
+          import json
+          import urllib.request
+
+          API = "https://api.buffer.com"
+          KEY = os.environ["BUFFER_API_KEY"]
+
+          def gql(query):
+              req = urllib.request.Request(
+                  API,
+                  data=json.dumps({"query": query}).encode(),
+                  headers={
+                      "Content-Type": "application/json",
+                      "Authorization": f"Bearer {KEY}",
+                  },
+                  method="POST",
+              )
+              with urllib.request.urlopen(req) as r:
+                  data = json.loads(r.read())
+              if data.get("errors"):
+                  raise SystemExit(data["errors"])
+              return data["data"]
+
+          account = gql("""
+          query {
+            account {
+              organizations {
+                id
+                name
+              }
+            }
+          }
+          """)
+
+          orgs = account["account"]["organizations"]
+          if not orgs:
+              raise SystemExit("Keine Buffer-Organisation gefunden.")
+
+          org = orgs[0]
+
+          channels = gql(f"""
+          query {{
+            channels(input: {{organizationId: "{org['id']}"}}) {{
+              id
+              name
+              displayName
+              service
+            }}
+          }}
+          """)
+
+          print("Buffer-Verbindung: OK")
+          print("Organisation:", org["name"])
+
+          found = False
+          for c in channels["channels"]:
+              print(
+                  f"CHANNEL: {c['service']} | "
+                  f"{c.get('name')} | "
+                  f"{c.get('displayName')} | "
+                  f"{c['id']}"
+              )
+
+              names = {
+                  str(c.get("name", "")).lower(),
+                  str(c.get("displayName", "")).lower(),
+              }
+
+              if c.get("service", "").lower() == "tiktok" and "motus614" in names:
+                  print("MOTUS_TIKTOK_CHANNEL_FOUND:", c["id"])
+                  found = True
+
+          if not found:
+              raise SystemExit("TikTok-Kanal motus614 wurde nicht gefunden.")
+          PY
