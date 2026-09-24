@@ -1,10 +1,7 @@
 name: Buffer API Smoke Test
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - buffer-test-trigger.txt
+  workflow_dispatch:
 
 permissions:
   contents: write
