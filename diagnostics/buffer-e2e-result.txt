@@ -1,0 +1,9 @@
+BUFFER END-TO-END TEST PASSED
+Channel: motus614
+Channel ID: 6ab5124fea19ca0bded4aa0b
+Media: https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-24-1830.mp4
+Scheduled dueAt: 2026-09-30T20:00:00.000Z
+Scheduling type: automatic
+Buffer status verified: scheduled
+Video asset verified: yes
+Test post deleted: yes
