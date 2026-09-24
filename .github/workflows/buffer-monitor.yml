@@ -1,0 +1,169 @@
+name: Buffer Status Monitor
+
+on:
+  push:
+    paths:
+      - ".github/workflows/buffer-monitor.yml"
+  schedule:
+    - cron: "7 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read Buffer status for motus614
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import urllib.request
+          from datetime import datetime, timezone
+
+          api = "https://api.buffer.com"
+          key = os.environ["BUFFER_API_KEY"].strip()
+
+          def gql(query, variables=None):
+              payload = {"query": query}
+              if variables is not None:
+                  payload["variables"] = variables
+              req = urllib.request.Request(
+                  api,
+                  data=json.dumps(payload).encode("utf-8"),
+                  headers={
+                      "Content-Type": "application/json",
+                      "Authorization": f"Bearer {key}",
+                  },
+                  method="POST",
+              )
+              with urllib.request.urlopen(req, timeout=60) as response:
+                  result = json.load(response)
+              if result.get("errors"):
+                  raise SystemExit(json.dumps(result["errors"], ensure_ascii=False))
+              return result["data"]
+
+          orgs = gql("""
+          query {
+            account {
+              organizations { id name }
+            }
+          }
+          """)["account"]["organizations"]
+          if not orgs:
+              raise SystemExit("No Buffer organization found")
+          org = orgs[0]
+
+          channels = gql(
+              """
+              query Channels($orgId: OrganizationId!) {
+                channels(input: { organizationId: $orgId }) {
+                  id name displayName service
+                }
+              }
+              """,
+              {"orgId": org["id"]},
+          )["channels"]
+
+          channel = next(
+              (
+                  c for c in channels
+                  if str(c.get("service", "")).lower() == "tiktok"
+                  and "motus614" in {
+                      str(c.get("name", "")).lower(),
+                      str(c.get("displayName", "")).lower(),
+                  }
+              ),
+              None,
+          )
+          if not channel:
+              raise SystemExit("TikTok channel motus614 not found")
+
+          posts = gql(
+              """
+              query MotusPosts($input: PostsInput!) {
+                posts(
+                  first: 50
+                  input: $input
+                ) {
+                  edges {
+                    node {
+                      id
+                      text
+                      status
+                      dueAt
+                      sentAt
+                      externalLink
+                      channelId
+                      assets {
+                        mimeType
+                        source
+                      }
+                    }
+                  }
+                }
+              }
+              """,
+              {
+                  "input": {
+                      "organizationId": org["id"],
+                      "filter": {
+                          "channelIds": [channel["id"]],
+                          "status": ["scheduled", "sent", "error"],
+                      },
+                      "sort": [
+                          {"field": "dueAt", "direction": "desc"},
+                          {"field": "createdAt", "direction": "desc"},
+                      ],
+                  }
+              },
+          )["posts"]["edges"]
+
+          out = {
+              "checked_at_utc": datetime.now(timezone.utc).isoformat(),
+              "organization": {"id": org["id"], "name": org["name"]},
+              "channel": {
+                  "id": channel["id"],
+                  "name": channel.get("displayName") or channel.get("name"),
+                  "service": channel["service"],
+              },
+              "posts": [edge["node"] for edge in posts],
+          }
+
+          os.makedirs("diagnostics", exist_ok=True)
+          with open("diagnostics/buffer-status.json", "w", encoding="utf-8") as f:
+              json.dump(out, f, ensure_ascii=False, indent=2)
+              f.write("\n")
+
+          counts = {}
+          for edge in posts:
+              status = edge["node"]["status"]
+              counts[status] = counts.get(status, 0) + 1
+
+          print("BUFFER_STATUS_OK")
+          print("COUNTS:", counts)
+          for edge in posts[:10]:
+              p = edge["node"]
+              print(
+                  "POST:",
+                  p["status"],
+                  p.get("dueAt"),
+                  p.get("sentAt"),
+                  p.get("externalLink"),
+                  p["id"],
+              )
+          PY
+
+      - name: Commit Buffer status snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add diagnostics/buffer-status.json
+          git diff --cached --quiet || (git commit -m "Update Buffer status snapshot" && git push)
