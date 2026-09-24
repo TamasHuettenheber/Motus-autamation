@@ -1,0 +1,119 @@
+name: Buffer Live Publish Verify
+
+on:
+  push:
+    paths:
+      - ".github/workflows/buffer-live-verify.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Wait for live test publication and verify
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_POST_ID: "6ab5344f047a2dd58cd221fc"
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import time
+          import urllib.request
+          from datetime import datetime, timezone
+
+          key = os.environ["BUFFER_API_KEY"].strip()
+          post_id = os.environ["BUFFER_POST_ID"].strip()
+          target = datetime.fromisoformat("2026-09-24T14:38:10+00:00").timestamp()
+
+          now = time.time()
+          if now < target:
+              wait = target - now
+              print(f"Waiting {wait:.0f}s for scheduled publish time...")
+              time.sleep(wait)
+
+          def gql(query, variables=None):
+              payload = {"query": query}
+              if variables is not None:
+                  payload["variables"] = variables
+              req = urllib.request.Request(
+                  "https://api.buffer.com",
+                  data=json.dumps(payload).encode("utf-8"),
+                  headers={
+                      "Content-Type": "application/json",
+                      "Authorization": f"Bearer {key}",
+                  },
+                  method="POST",
+              )
+              with urllib.request.urlopen(req, timeout=60) as response:
+                  result = json.load(response)
+              if result.get("errors"):
+                  raise RuntimeError(json.dumps(result["errors"], ensure_ascii=False))
+              return result["data"]
+
+          final = None
+          for attempt in range(19):
+              post = gql(
+                  """
+                  query GetPost($id: PostId!) {
+                    post(input: { id: $id }) {
+                      id
+                      status
+                      dueAt
+                      sentAt
+                      externalLink
+                      channelId
+                      text
+                      assets {
+                        mimeType
+                        source
+                      }
+                    }
+                  }
+                  """,
+                  {"id": post_id},
+              )["post"]
+
+              final = post
+              print(
+                  f"Attempt {attempt+1}: status={post.get('status')} "
+                  f"sentAt={post.get('sentAt')} externalLink={post.get('externalLink')}"
+              )
+
+              if post.get("status") in ("sent", "error"):
+                  break
+              time.sleep(10)
+
+          os.makedirs("diagnostics", exist_ok=True)
+          result = {
+              "checked_at_utc": datetime.now(timezone.utc).isoformat(),
+              "test": "Motus live Buffer -> TikTok publish",
+              "post": final,
+          }
+          with open("diagnostics/buffer-live-test.json", "w", encoding="utf-8") as f:
+              json.dump(result, f, ensure_ascii=False, indent=2)
+              f.write("\n")
+
+          if not final:
+              raise SystemExit("No Buffer post returned")
+          if final.get("status") != "sent":
+              raise SystemExit(f"Live publish test failed or timed out: {final.get('status')}")
+          if not final.get("externalLink"):
+              raise SystemExit("Buffer marked post sent but returned no externalLink")
+
+          print("LIVE_TEST_SENT: YES")
+          print("TIKTOK_URL:", final["externalLink"])
+          PY
+
+      - name: Commit live test result
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add diagnostics/buffer-live-test.json || true
+          git diff --cached --quiet || (git commit -m "Record Buffer live publish test" && git push)
