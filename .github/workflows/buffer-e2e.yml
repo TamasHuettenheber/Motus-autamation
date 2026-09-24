@@ -1,0 +1,282 @@
+name: Buffer End-to-End Test
+
+on:
+  push:
+    paths:
+      - ".github/workflows/buffer-e2e.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Schedule real Motus video in Buffer, verify, then delete
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import time
+          import urllib.request
+          import urllib.error
+
+          API = "https://api.buffer.com"
+          KEY = os.environ["BUFFER_API_KEY"].strip()
+          MEDIA_URL = "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-24-1830.mp4"
+          DUE_AT = "2026-09-30T20:00:00.000Z"
+          TEST_TEXT = "MOTUS Buffer End-to-End-Test – dieser Testpost wird nach erfolgreicher Prüfung automatisch wieder gelöscht."
+
+          if not KEY:
+              raise SystemExit("BUFFER_API_KEY secret is missing")
+
+          def buffer_request(query, variables=None, allow_graphql_errors=False):
+              payload = {"query": query}
+              if variables is not None:
+                  payload["variables"] = variables
+              req = urllib.request.Request(
+                  API,
+                  data=json.dumps(payload).encode("utf-8"),
+                  headers={
+                      "Content-Type": "application/json",
+                      "Authorization": f"Bearer {KEY}",
+                  },
+                  method="POST",
+              )
+              try:
+                  with urllib.request.urlopen(req, timeout=60) as response:
+                      result = json.load(response)
+              except urllib.error.HTTPError as exc:
+                  body = exc.read().decode("utf-8", "replace")
+                  raise RuntimeError(f"Buffer HTTP {exc.code}: {body[:1000]}")
+              if result.get("errors") and not allow_graphql_errors:
+                  raise RuntimeError("Buffer GraphQL error: " + json.dumps(result["errors"], ensure_ascii=False))
+              return result
+
+          # Prove that Buffer can fetch the exact MP4 URL we are about to attach.
+          req = urllib.request.Request(MEDIA_URL, method="HEAD")
+          with urllib.request.urlopen(req, timeout=30) as response:
+              content_length = response.headers.get("Content-Length")
+              content_type = response.headers.get("Content-Type")
+              print("MEDIA_URL_OK:", response.status, content_type, content_length)
+
+          account = buffer_request("""
+          query {
+            account {
+              organizations {
+                id
+                name
+              }
+            }
+          }
+          """)["data"]["account"]["organizations"]
+
+          if not account:
+              raise RuntimeError("No Buffer organization found")
+
+          org = account[0]
+          channels = buffer_request(
+              """
+              query Channels($orgId: OrganizationId!) {
+                channels(input: { organizationId: $orgId }) {
+                  id
+                  name
+                  displayName
+                  service
+                }
+              }
+              """,
+              {"orgId": org["id"]},
+          )["data"]["channels"]
+
+          channel = next(
+              (
+                  c for c in channels
+                  if str(c.get("service", "")).lower() == "tiktok"
+                  and "motus614" in {
+                      str(c.get("name", "")).lower(),
+                      str(c.get("displayName", "")).lower(),
+                  }
+              ),
+              None,
+          )
+          if not channel:
+              raise RuntimeError("TikTok channel motus614 not found")
+
+          print("TARGET_CHANNEL:", channel["displayName"], channel["id"])
+          post_id = None
+          verification_error = None
+
+          try:
+              create = buffer_request(
+                  """
+                  mutation CreatePost($input: CreatePostInput!) {
+                    createPost(input: $input) {
+                      __typename
+                      ... on PostActionSuccess {
+                        post {
+                          id
+                          text
+                          status
+                          dueAt
+                          channelId
+                          assets {
+                            mimeType
+                            source
+                          }
+                        }
+                      }
+                      ... on MutationError {
+                        message
+                      }
+                    }
+                  }
+                  """,
+                  {
+                      "input": {
+                          "text": TEST_TEXT,
+                          "channelId": channel["id"],
+                          "schedulingType": "automatic",
+                          "mode": "customScheduled",
+                          "dueAt": DUE_AT,
+                          "aiAssisted": True,
+                          "assets": [
+                              {
+                                  "video": {
+                                      "url": MEDIA_URL,
+                                      "metadata": {"thumbnailOffset": 1000},
+                                  }
+                              }
+                          ],
+                      }
+                  },
+              )["data"]["createPost"]
+
+              print("CREATE_RESPONSE:", json.dumps(create, ensure_ascii=False))
+              if create.get("__typename") != "PostActionSuccess" or not create.get("post"):
+                  raise RuntimeError("Buffer did not create the scheduled post: " + json.dumps(create, ensure_ascii=False))
+
+              post = create["post"]
+              post_id = post["id"]
+              print("POST_CREATED:", post_id)
+              print("POST_DUE_AT:", post.get("dueAt"))
+              print("POST_STATUS_INITIAL:", post.get("status"))
+              print("POST_ASSETS_INITIAL:", json.dumps(post.get("assets"), ensure_ascii=False))
+
+              # Give Buffer a moment to ingest/inspect the remote video.
+              time.sleep(8)
+
+              fetched = buffer_request(
+                  """
+                  query GetPost($id: PostId!) {
+                    post(input: { id: $id }) {
+                      id
+                      text
+                      status
+                      dueAt
+                      channelId
+                      allowedActions
+                      assets {
+                        mimeType
+                        source
+                      }
+                    }
+                  }
+                  """,
+                  {"id": post_id},
+              )["data"]["post"]
+
+              print("POST_VERIFIED:", json.dumps(fetched, ensure_ascii=False))
+
+              if fetched["channelId"] != channel["id"]:
+                  raise RuntimeError("Verification failed: wrong channel")
+              if fetched["status"] != "scheduled":
+                  raise RuntimeError(f"Verification failed: expected scheduled, got {fetched['status']}")
+              if fetched["dueAt"] != DUE_AT:
+                  raise RuntimeError(f"Verification failed: dueAt mismatch: {fetched['dueAt']}")
+              assets = fetched.get("assets") or []
+              if not assets:
+                  raise RuntimeError("Verification failed: no video asset attached")
+              if not any(str(a.get("mimeType") or "").startswith("video/") for a in assets):
+                  raise RuntimeError("Verification failed: Buffer did not recognize a video asset")
+
+              print("BUFFER_QUEUE_VERIFIED: YES")
+              print("AUTOMATIC_SCHEDULING_VERIFIED: YES")
+              print("VIDEO_ASSET_VERIFIED: YES")
+
+          except Exception as exc:
+              verification_error = exc
+
+          finally:
+              if post_id:
+                  delete = buffer_request(
+                      """
+                      mutation DeletePost($input: DeletePostInput!) {
+                        deletePost(input: $input) {
+                          __typename
+                          ... on DeletePostSuccess {
+                            id
+                          }
+                          ... on MutationError {
+                            message
+                          }
+                        }
+                      }
+                      """,
+                      {"input": {"id": post_id}},
+                  )["data"]["deletePost"]
+                  print("DELETE_RESPONSE:", json.dumps(delete, ensure_ascii=False))
+                  if delete.get("__typename") != "DeletePostSuccess":
+                      raise RuntimeError("Cleanup failed; test post may still exist: " + json.dumps(delete, ensure_ascii=False))
+
+                  # Confirm it is truly gone.
+                  time.sleep(2)
+                  gone = buffer_request(
+                      """
+                      query GetDeletedPost($id: PostId!) {
+                        post(input: { id: $id }) {
+                          id
+                        }
+                      }
+                      """,
+                      {"id": post_id},
+                      allow_graphql_errors=True,
+                  )
+                  print("POST_AFTER_DELETE:", json.dumps(gone, ensure_ascii=False))
+                  errors = gone.get("errors") or []
+                  not_found = any((e.get("extensions") or {}).get("code") == "NOT_FOUND" for e in errors)
+                  if not not_found and (gone.get("data") or {}).get("post"):
+                      raise RuntimeError("Cleanup verification failed: deleted post is still retrievable")
+                  print("DELETION_CONFIRMED: YES")
+
+          if verification_error:
+              raise verification_error
+
+          os.makedirs("diagnostics", exist_ok=True)
+          with open("diagnostics/buffer-e2e-result.txt", "w", encoding="utf-8") as f:
+              f.write("BUFFER END-TO-END TEST PASSED\n")
+              f.write("Channel: motus614\n")
+              f.write(f"Channel ID: {channel['id']}\n")
+              f.write(f"Media: {MEDIA_URL}\n")
+              f.write(f"Scheduled dueAt: {DUE_AT}\n")
+              f.write("Scheduling type: automatic\n")
+              f.write("Buffer status verified: scheduled\n")
+              f.write("Video asset verified: yes\n")
+              f.write("Test post deleted: yes\n")
+          print("BUFFER_E2E_TEST: PASSED")
+          PY
+
+      - name: Record E2E result
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add diagnostics/buffer-e2e-result.txt
+          git diff --cached --quiet || (git commit -m "Record Buffer end-to-end test" && git push)
