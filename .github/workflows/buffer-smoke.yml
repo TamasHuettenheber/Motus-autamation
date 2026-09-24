@@ -1,0 +1,109 @@
+name: Buffer API Smoke Test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - buffer-test-trigger.txt
+
+permissions:
+  contents: write
+
+jobs:
+  buffer-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify Buffer API and locate motus614
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.error
+
+          key = os.environ.get("BUFFER_API_KEY", "").strip()
+          if not key:
+              raise SystemExit("BUFFER_API_KEY secret is missing")
+
+          def gql(query):
+              req = urllib.request.Request(
+                  "https://api.buffer.com",
+                  data=json.dumps({"query": query}).encode("utf-8"),
+                  headers={
+                      "Content-Type": "application/json",
+                      "Authorization": f"Bearer {key}",
+                  },
+                  method="POST",
+              )
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as response:
+                      payload = json.load(response)
+              except urllib.error.HTTPError as exc:
+                  body = exc.read().decode("utf-8", "replace")
+                  raise SystemExit(f"Buffer HTTP {exc.code}: {body[:500]}")
+              if payload.get("errors"):
+                  raise SystemExit("Buffer GraphQL error: " + json.dumps(payload["errors"]))
+              return payload.get("data") or {}
+
+          account = gql("""
+          query {
+            account {
+              organizations {
+                id
+                name
+              }
+            }
+          }
+          """)
+
+          orgs = (account.get("account") or {}).get("organizations") or []
+          if not orgs:
+              raise SystemExit("No Buffer organizations found")
+
+          found = None
+          for org in orgs:
+              org_id = org["id"]
+              data = gql(f"""
+              query {{
+                channels(input: {{ organizationId: "{org_id}" }}) {{
+                  id
+                  name
+                  displayName
+                  service
+                  isQueuePaused
+                  timezone
+                }}
+              }}
+              """)
+              for ch in data.get("channels") or []:
+                  names = {str(ch.get("name") or "").lower(), str(ch.get("displayName") or "").lower()}
+                  service = str(ch.get("service") or "").lower()
+                  if "motus614" in names and service == "tiktok":
+                      found = (org, ch)
+                      break
+              if found:
+                  break
+
+          if not found:
+              raise SystemExit("TikTok channel motus614 not found")
+
+          org, ch = found
+          os.makedirs("diagnostics", exist_ok=True)
+          with open("diagnostics/buffer-test-result.txt", "w", encoding="utf-8") as f:
+              f.write("Buffer API smoke test passed.\n")
+              f.write(f"Organization: {org['name']}\n")
+              f.write(f"Channel: {ch.get('displayName') or ch.get('name')}\n")
+              f.write(f"Channel ID: {ch['id']}\n")
+              f.write(f"Service: {ch['service']}\n")
+              f.write(f"Timezone: {ch.get('timezone')}\n")
+              f.write(f"Queue paused: {ch.get('isQueuePaused')}\n")
+          print("Buffer API smoke test passed for motus614")
+          PY
+
+      - name: Commit diagnostic result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add diagnostics/buffer-test-result.txt
+          git diff --cached --quiet || (git commit -m "Record Buffer API smoke test" && git push)
