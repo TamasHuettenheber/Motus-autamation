@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-24T13:54:46.602135+00:00",
+  "checked_at_utc": "2026-09-24T18:23:31.659720+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,21 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6ab5344f047a2dd58cd221fc",
+      "text": "Ein Nein wird oft erst dann schwer, wenn du anfängst, es zu erklären. Jede zusätzliche Begründung lädt dein Gegenüber dazu ein, über deine Grenze zu verhandeln. Versuch es kürzer: Heute passt es für mich nicht. Punkt. Freundlichkeit braucht keine Rechtfertigung. Eine klare Antwort kann respektvoll sein, auch wenn sie nicht jedem gefällt.",
+      "status": "sent",
+      "dueAt": "2026-09-24T14:38:00.000Z",
+      "sentAt": "2026-09-24T14:39:44.177Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7689111143360548128",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab5344f047a2dd58cd221fc_video.mp4"
+        }
+      ]
+    },
     {
       "id": "6ab512513e964944d5346f3d",
       "text": "Du musst einen chaotischen Tag nicht komplett reparieren. Ein bewusster Abschluss kann verändern, wie er sich im Rückblick anfühlt. #motus #alltagspsychologie #abendroutine #mentaleklarheit",
