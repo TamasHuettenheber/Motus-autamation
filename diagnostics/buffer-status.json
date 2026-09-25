@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-25T13:38:54.625894+00:00",
+  "checked_at_utc": "2026-09-25T18:29:58.647091+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -28,15 +28,15 @@
     {
       "id": "6ab58fda7794ad3835660f25",
       "text": "Kennst du das: Du gehst nach einem Gespräch nach Hause und plötzlich fallen dir zehn bessere Antworten ein? Dein Kopf versucht nicht, dich zu ärgern. Er sucht im Nachhinein nach Kontrolle. Das Problem beginnt, wenn aus kurzem Nachdenken eine Endlosschleife wird. Stell dir dann nur eine Frage: Gibt es etwas, das ich morgen wirklich klären oder anders machen kann? Wenn ja, notiere einen Satz dazu. Wenn nein, ist weiteres Denken keine Vorbereitung mehr, sondern Wiederholung. Du musst ein Gespräch nicht im Kopf gewinnen, nachdem es längst vorbei ist.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-09-25T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-09-25T16:32:42.493Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7689511470555532577",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-25-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab58fda7794ad3835660f25_video.mp4"
         }
       ]
     },
