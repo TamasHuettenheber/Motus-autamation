@@ -152,8 +152,9 @@ jobs:
           for line in Path("work/captions.ass").read_text(encoding="utf-8").splitlines():
               if line.startswith("Dialogue:"):
                   caption=line.rsplit(",,",1)[-1]
-                  probe=caption.replace(r"\\N","").replace(r"\\{","").replace(r"\\}","")
-                  if "\\" in probe:
+                  # ASS uses \\N as a valid line-break control. Any other backslash is forbidden.
+                  probe=caption.replace("\\\\N","").replace("\\\\{","").replace("\\\\}","")
+                  if "\\\\" in probe:
                       raise SystemExit("QC failed: stray literal backslash in captions")
           print("Caption QC passed: no stray literal backslashes")
           PY
