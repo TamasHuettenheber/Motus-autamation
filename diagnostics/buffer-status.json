@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-26T07:33:07.552849+00:00",
+  "checked_at_utc": "2026-09-26T12:59:51.585083+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,36 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6ab7798e84e8fc26af259c2e",
+      "text": "Manche Entscheidungen fühlen sich schwer an, weil du versuchst, jede Möglichkeit gleichzeitig offen zu halten. Dreh die Frage um: Welche Option würde ich wählen, wenn ich sie nur für die nächsten sieben Tage testen müsste? Ein kleiner Test nimmt einer Entscheidung den Anspruch, für immer richtig sein zu müssen. Klarheit entsteht oft nicht vor dem ersten Schritt, sondern durch ihn.",
+      "status": "scheduled",
+      "dueAt": "2026-09-26T20:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-26-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ab77a33dffba3cec6f35113",
+      "text": "Du setzt dich nur kurz hin und plötzlich ist eine Stunde weg. Oft fehlt nicht die Zeit, sondern ein klares Ende. Gib kleinen Aufgaben deshalb vorher eine Grenze: zehn Minuten, dann stopp. Ein fester Rahmen macht aus einer offenen Aufgabe eine überschaubare Entscheidung. Du kannst danach bewusst weitermachen. Aber du entscheidest neu, statt einfach hineinzurutschen.",
+      "status": "scheduled",
+      "dueAt": "2026-09-26T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-26-1830.mp4"
+        }
+      ]
+    },
     {
       "id": "6ab60de9cbe818dd4ffab9b9",
       "text": "Wenn du etwas Neues lernst, fühlt sich Fortschritt nicht jeden Tag gleich an. Manche Schritte sind sichtbar, andere bestehen nur darin, dass dir etwas leichter fällt als gestern. Miss Entwicklung deshalb nicht nur am Ergebnis. Frag dich auch: Was verstehe ich heute schneller? Was gelingt mir mit weniger Aufwand? Kleine Veränderungen wirken unscheinbar, bis du nach einigen Wochen zurückblickst. Fortschritt muss nicht laut sein, um echt zu sein.",
