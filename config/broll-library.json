@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "description": "Curated free Motus B-roll library. Direct MP4 URLs are tried in topic-ranked rotation before animated fallback.",
+  "clips": [
+    {
+      "id": "night-walk-4121893",
+      "tags": [
+        "nacht",
+        "abend",
+        "abstand",
+        "ruhe",
+        "gedanken",
+        "gruebeln",
+        "entscheidung",
+        "beziehung",
+        "allein",
+        "spaziergang",
+        "city",
+        "walking"
+      ],
+      "direct_url": "https://videos.pexels.com/video-files/4121893/4121893-uhd_3840_2160_25fps.mp4",
+      "source_page": "https://www.pexels.com/video/a-person-walking-in-the-street-at-night-4121893/",
+      "license": "Pexels Free"
+    },
+    {
+      "id": "night-city-13658220",
+      "tags": [
+        "nacht",
+        "abend",
+        "stadt",
+        "menschen",
+        "alltag",
+        "bewegung",
+        "social",
+        "beziehung",
+        "city",
+        "walking"
+      ],
+      "direct_url": "https://videos.pexels.com/video-files/13658220/13658220-hd_1920_1080_25fps.mp4",
+      "source_page": "https://www.pexels.com/video/people-walking-in-city-at-night-13658220/",
+      "license": "Pexels Free"
+    },
+    {
+      "id": "phone-cafe-5075207",
+      "tags": [
+        "nachricht",
+        "handy",
+        "telefon",
+        "kommunikation",
+        "beziehung",
+        "antwort",
+        "social",
+        "cafe",
+        "alltag",
+        "scrollen"
+      ],
+      "direct_url": "https://videos.pexels.com/video-files/5075207/5075207-uhd_2160_4096_25fps.mp4",
+      "source_page": "https://www.pexels.com/video/a-woman-is-using-her-phone-to-take-a-picture-of-her-coffee-5075207/",
+      "license": "Pexels Free"
+    },
+    {
+      "id": "work-laptop-8479274",
+      "tags": [
+        "arbeit",
+        "fokus",
+        "konzentration",
+        "produktiv",
+        "produktivitaet",
+        "aufgabe",
+        "motivation",
+        "lernen",
+        "entscheidung",
+        "laptop",
+        "office"
+      ],
+      "direct_url": "https://videos.pexels.com/video-files/8479274/8479274-hd_1080_1920_25fps.mp4",
+      "source_page": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
+      "license": "Pexels Free"
+    },
+    {
+      "id": "train-window-36620147",
+      "tags": [
+        "reise",
+        "zug",
+        "weg",
+        "veraenderung",
+        "perspektive",
+        "klarheit",
+        "abstand",
+        "gedanken",
+        "ruhe",
+        "fenster",
+        "bewegung"
+      ],
+      "direct_url": "https://videos.pexels.com/video-files/36620147/15526034_1440_2218_30fps.mp4",
+      "source_page": "https://www.pexels.com/video/scenic-views-through-train-window-36620147/",
+      "license": "Pexels Free"
+    },
+    {
+      "id": "rain-window-32661246",
+      "tags": [
+        "regen",
+        "fenster",
+        "ruhe",
+        "gedanken",
+        "gruebeln",
+        "nacht",
+        "melancholie",
+        "pause",
+        "stress",
+        "entspannung"
+      ],
+      "direct_url": "https://videos.pexels.com/video-files/32661246/13925574_2160_3840_25fps.mp4",
+      "source_page": "https://www.pexels.com/video/rainy-window-view-with-drops-on-glass-32661246/",
+      "license": "Pexels Free"
+    }
+  ]
+}
