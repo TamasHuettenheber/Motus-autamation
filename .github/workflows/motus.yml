@@ -165,7 +165,17 @@ jobs:
           cp "work/$SAFE_NAME.mp4" "published/$SAFE_NAME.mp4"
           git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "published/$SAFE_NAME.mp4"
-          if ! git diff --cached --quiet; then git commit -m "Publish $SAFE_NAME" && git push; fi
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish $SAFE_NAME"
+            # The Buffer status monitor can commit diagnostics while a render is running.
+            # Rebase the finished video commit onto the latest main before pushing.
+            for attempt in 1 2 3; do
+              git pull --rebase origin main && git push && break
+              if [ "$attempt" -eq 3 ]; then exit 1; fi
+              git rebase --abort 2>/dev/null || true
+              sleep 3
+            done
+          fi
 
       - name: Schedule Motus video in Buffer
         env:
