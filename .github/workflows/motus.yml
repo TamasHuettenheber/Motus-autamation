@@ -147,6 +147,16 @@ jobs:
           FINAL_DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$VIDEO")"
           FILE_SIZE="$(stat -c%s "$VIDEO")"
           test "$WIDTH" = "1080"; test "$HEIGHT" = "1920"; test "$CODEC" = "h264"; test "$PIXFMT" = "yuv420p"; test "$AUDIO_CODEC" = "aac"; test "$FILE_SIZE" -ge 100000
+          python3 - <<'PY'
+          from pathlib import Path
+          for line in Path("work/captions.ass").read_text(encoding="utf-8").splitlines():
+              if line.startswith("Dialogue:"):
+                  caption=line.rsplit(",,",1)[-1]
+                  probe=caption.replace(r"\\N","").replace(r"\\{","").replace(r"\\}","")
+                  if "\\" in probe:
+                      raise SystemExit("QC failed: stray literal backslash in captions")
+          print("Caption QC passed: no stray literal backslashes")
+          PY
           python3 - <<PY
           a=float('$AUDIO_DURATION'); v=float('$FINAL_DURATION')
           if v < a-0.25: raise SystemExit(f'QC failed: video {v:.2f}s, audio {a:.2f}s')
