@@ -62,7 +62,7 @@ jobs:
           else:
               body=os.environ.get('ISSUE_BODY','')
               def getv(name, required=False):
-                  m=re.search(rf'(?mi)^{re.escape(name)}:[ \\t]*(.*)
+                  m=re.search(rf'(?mi)^{re.escape(name)}:[ \\t]*(.*)$',body); v=m.group(1).strip() if m else ''
                   if required and not v: raise SystemExit(f'Missing required issue field: {name}')
                   return v
               audio=getv('AUDIO_URL',True); text=getv('TEXT',True); broll=getv('BROLL_URL'); output=getv('OUTPUT_NAME',True)
