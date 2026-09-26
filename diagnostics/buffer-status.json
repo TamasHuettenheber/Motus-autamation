@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-26T12:59:51.585083+00:00",
+  "checked_at_utc": "2026-09-26T17:05:09.450014+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -28,15 +28,15 @@
     {
       "id": "6ab77a33dffba3cec6f35113",
       "text": "Du setzt dich nur kurz hin und plötzlich ist eine Stunde weg. Oft fehlt nicht die Zeit, sondern ein klares Ende. Gib kleinen Aufgaben deshalb vorher eine Grenze: zehn Minuten, dann stopp. Ein fester Rahmen macht aus einer offenen Aufgabe eine überschaubare Entscheidung. Du kannst danach bewusst weitermachen. Aber du entscheidest neu, statt einfach hineinzurutschen.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-09-26T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-09-26T16:31:42.475Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7689882195372150048",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-26-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab77a33dffba3cec6f35113_video.mp4"
         }
       ]
     },
