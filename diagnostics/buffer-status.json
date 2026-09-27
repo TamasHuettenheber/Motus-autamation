@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-27T18:17:25.695274+00:00",
+  "checked_at_utc": "2026-09-27T22:02:08.886450+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -11,17 +11,47 @@
   },
   "posts": [
     {
-      "id": "6ab847330f79a37c5d3cfde0",
-      "text": "Manchmal brauchst du keine neue Antwort. Du brauchst Abstand. Geh raus, lass das Handy in der Tasche und bewege dich zehn Minuten ohne etwas lösen zu wollen. Dein Kopf arbeitet trotzdem weiter. Oft merkst du erst unterwegs, was wirklich wichtig ist und was nur laut war.",
+      "id": "6ab98e0070ec211d1d28e207",
+      "text": "Ein schlechter Morgen muss nicht deinen ganzen Tag bekommen. Unser Kopf liebt den Gedanken: Jetzt ist es sowieso gelaufen. Genau da hilft ein Neustartpunkt. Nimm die nächste volle Stunde und entscheide nur, wie diese eine Stunde aussehen soll. Du musst den Tag nicht retten. Du musst nur verhindern, dass ein schlechter Moment automatisch der nächste wird.",
       "status": "scheduled",
-      "dueAt": "2026-09-27T20:00:00.000Z",
+      "dueAt": "2026-09-28T20:00:00.000Z",
       "sentAt": null,
       "externalLink": null,
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-27-2200.mp4"
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-28-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ab9886d70ec211d1d28511a",
+      "text": "Du wartest auf Motivation, obwohl dein Umfeld längst für dich entscheidet. Liegt das Handy neben dir, greifst du hin. Stehen die Schuhe an der Tür, gehst du eher los. Mach die gewünschte Handlung sichtbar und die Ablenkung unbequem. Gute Gewohnheiten brauchen nicht immer mehr Disziplin. Oft brauchen sie einfach weniger Reibung.",
+      "status": "scheduled",
+      "dueAt": "2026-09-28T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-28-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ab847330f79a37c5d3cfde0",
+      "text": "Manchmal brauchst du keine neue Antwort. Du brauchst Abstand. Geh raus, lass das Handy in der Tasche und bewege dich zehn Minuten ohne etwas lösen zu wollen. Dein Kopf arbeitet trotzdem weiter. Oft merkst du erst unterwegs, was wirklich wichtig ist und was nur laut war.",
+      "status": "sent",
+      "dueAt": "2026-09-27T20:00:00.000Z",
+      "sentAt": "2026-09-27T20:03:21.481Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7690307609764597024",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab847330f79a37c5d3cfde0_video.mp4"
         }
       ]
     },
