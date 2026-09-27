@@ -257,7 +257,9 @@ jobs:
           p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\\n",encoding='utf-8')
           PY
           git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # The MP4 is the critical output. Never let shared diagnostics block publishing.
+          # Discard the advisory history edit made earlier in this step before rebasing.
+          # The MP4 is the critical output and must never be blocked by diagnostics.
+          git restore diagnostics/broll-history.json 2>/dev/null || true
           git add "published/$SAFE_NAME.mp4"
           if ! git diff --cached --quiet; then
             git commit -m "Publish $SAFE_NAME"
