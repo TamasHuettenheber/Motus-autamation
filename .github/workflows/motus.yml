@@ -131,7 +131,11 @@ jobs:
           explicit=os.environ.get('BROLL_URL','').strip()
           library=json.loads(Path('config/broll-library.json').read_text(encoding='utf-8'))
           history_path=Path('diagnostics/broll-history.json')
-          history=json.loads(history_path.read_text(encoding='utf-8')) if history_path.exists() else {"uses":[]}
+          try:
+              history=json.loads(history_path.read_text(encoding='utf-8')) if history_path.exists() else {"uses":[]}
+          except json.JSONDecodeError as exc:
+              print(f'BROLL_HISTORY_WARNING: invalid JSON ignored: {exc}')
+              history={"uses":[]}
           recent_ids=[x.get("clip_id") for x in history.get("uses",[])[-8:] if x.get("clip_id")]
           ranked=[]
           for clip in library.get('clips',[]):
@@ -192,13 +196,25 @@ jobs:
             echo "BROLL_FALLBACK: no candidate succeeded; animated fallback will be used"
           fi
 
+      - name: Reuse published QC video
+        id: reuse
+        run: |
+          URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/main/published/$SAFE_NAME.mp4"
+          if curl -L --fail --silent --show-error "$URL" -o "work/$SAFE_NAME.mp4" && test -s "work/$SAFE_NAME.mp4" && ffprobe -v error "work/$SAFE_NAME.mp4" >/dev/null 2>&1; then
+            echo "REUSE_EXISTING=true" >> "$GITHUB_ENV"
+            echo "REUSE_EXISTING=true"
+          else
+            rm -f "work/$SAFE_NAME.mp4"
+            echo "REUSE_EXISTING=false" >> "$GITHUB_ENV"
+          fi
+
       - name: Render with B-roll
-        if: env.BROLL_READY == 'true'
+        if: env.REUSE_EXISTING != 'true' && env.BROLL_READY == 'true'
         run: |
           ffmpeg -y -stream_loop -1 -i work/broll.mp4 -i work/audio.mp3 -t "$VIDEO_DURATION" -filter_complex "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,eq=brightness=-0.08:saturation=0.90,drawbox=x=0:y=0:w=iw:h=ih:color=black@0.12:t=fill,subtitles=work/captions.ass[v]" -map "[v]" -map 1:a -c:v libx264 -preset medium -crf 20 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -movflags +faststart -shortest "work/$SAFE_NAME.mp4"
 
       - name: Render animated fallback
-        if: env.BROLL_READY != 'true'
+        if: env.REUSE_EXISTING != 'true' && env.BROLL_READY != 'true'
         run: |
           ffmpeg -y -f lavfi -i "color=c=0x263842:s=1080x1920:r=30:d=$VIDEO_DURATION" -i work/audio.mp3 -filter_complex "[0:v]drawbox=x='mod(t*75,1500)-420':y=230:w=560:h=560:color=white@0.055:t=fill,drawbox=x='1080-mod(t*55,1600)':y=1180:w=620:h=620:color=white@0.035:t=fill,subtitles=work/captions.ass[v]" -map "[v]" -map 1:a -c:v libx264 -preset medium -crf 20 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -movflags +faststart -shortest "work/$SAFE_NAME.mp4"
 
@@ -239,7 +255,7 @@ jobs:
 
       - name: Publish MP4 to repository
         run: |
-          cp "work/$SAFE_NAME.mp4" "published/$SAFE_NAME.mp4"
+          if [ "$REUSE_EXISTING" = "true" ]; then echo "REUSE_PUBLISH: existing published MP4 retained"; else cp "work/$SAFE_NAME.mp4" "published/$SAFE_NAME.mp4"; fi
           python3 - <<'PY'
           import json, os
           from datetime import datetime, timezone
