@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "description": "Curated free Motus B-roll library. Direct MP4 URLs are tried in topic-ranked rotation before animated fallback.",
+  "version": 2,
+  "description": "Curated free Motus B-roll library. Topic-ranked selection with persistent 8-render cooldown before animated fallback.",
   "clips": [
     {
       "id": "night-walk-4121893",
@@ -112,6 +112,162 @@
       ],
       "direct_url": "https://videos.pexels.com/video-files/32661246/13925574_2160_3840_25fps.mp4",
       "source_page": "https://www.pexels.com/video/rainy-window-view-with-drops-on-glass-32661246/",
+      "license": "Pexels Free"
+    },
+    {
+      "id": "work-phone-7174377",
+      "tags": [
+        "arbeit",
+        "fokus",
+        "telefon",
+        "kommunikation",
+        "kaffee",
+        "alltag",
+        "produktivitaet"
+      ],
+      "direct_url": "https://videos.pexels.com/video-files/7174377/7174377-hd_1080_1920_25fps.mp4",
+      "source_page": "https://www.pexels.com/video/a-man-talking-on-the-phone-while-at-work-7174377/",
+      "license": "Pexels Free"
+    },
+    {
+      "id": "coffee-phone-13736547",
+      "tags": [
+        "handy",
+        "telefon",
+        "social",
+        "kaffee",
+        "alltag",
+        "pause",
+        "scrollen"
+      ],
+      "direct_url": "https://videos.pexels.com/video-files/13736547/13736547-uhd_2160_3840_24fps.mp4",
+      "source_page": "https://www.pexels.com/video/a-woman-using-her-phone-and-drinking-a-cup-of-coffee-13736547/",
+      "license": "Pexels Free"
+    },
+    {
+      "id": "waiting-phone-7339414",
+      "tags": [
+        "warten",
+        "handy",
+        "telefon",
+        "gedanken",
+        "pause",
+        "alltag",
+        "kaffee"
+      ],
+      "direct_url": "https://videos.pexels.com/video-files/7339414/7339414-uhd_2160_4096_25fps.mp4",
+      "source_page": "https://www.pexels.com/video/a-man-using-his-phone-while-waiting-7339414/",
+      "license": "Pexels Free"
+    },
+    {
+      "id": "city-phone-13802094",
+      "tags": [
+        "stadt",
+        "arbeit",
+        "handy",
+        "telefon",
+        "fokus",
+        "weg",
+        "alltag",
+        "walking"
+      ],
+      "direct_url": "https://videos.pexels.com/video-files/13802094/13802094-uhd_2160_3840_24fps.mp4",
+      "source_page": "https://www.pexels.com/video/a-man-in-a-suit-looking-at-his-phone-while-walking-in-the-city-13802094/",
+      "license": "Pexels Free"
+    },
+    {
+      "id": "hallway-phone-6585106",
+      "tags": [
+        "handy",
+        "telefon",
+        "bewegung",
+        "arbeit",
+        "alltag",
+        "walking",
+        "fokus"
+      ],
+      "direct_url": "https://videos.pexels.com/video-files/6585106/6585106-uhd_2160_3840_30fps.mp4",
+      "source_page": "https://www.pexels.com/video/person-walking-while-using-smartphone-6585106/",
+      "license": "Pexels Free"
+    },
+    {
+      "id": "forest-walk-5838174",
+      "tags": [
+        "natur",
+        "ruhe",
+        "abstand",
+        "gedanken",
+        "spaziergang",
+        "walking",
+        "klarheit",
+        "stress"
+      ],
+      "direct_url": "https://videos.pexels.com/video-files/5838174/5838174-uhd_2160_4096_30fps.mp4",
+      "source_page": "https://www.pexels.com/video/vertical-video-of-a-woman-walking-alone-through-the-forest-5838174/",
+      "license": "Pexels Free"
+    },
+    {
+      "id": "forest-walk-5838469",
+      "tags": [
+        "natur",
+        "morgen",
+        "ruhe",
+        "abstand",
+        "spaziergang",
+        "walking",
+        "klarheit",
+        "entspannung"
+      ],
+      "direct_url": "https://videos.pexels.com/video-files/5838469/5838469-uhd_2160_4096_30fps.mp4",
+      "source_page": "https://www.pexels.com/video/vertical-video-of-a-woman-walking-through-the-woods-5838469/",
+      "license": "Pexels Free"
+    },
+    {
+      "id": "train-phone-12908973",
+      "tags": [
+        "zug",
+        "reise",
+        "warten",
+        "handy",
+        "alltag",
+        "weg",
+        "veraenderung",
+        "entscheidung"
+      ],
+      "direct_url": "https://videos.pexels.com/video-files/12908973/12908973-uhd_2160_3840_24fps.mp4",
+      "source_page": "https://www.pexels.com/video/woman-waiting-for-a-train-and-using-her-phone-12908973/",
+      "license": "Pexels Free"
+    },
+    {
+      "id": "park-walk-8296235",
+      "tags": [
+        "natur",
+        "park",
+        "walking",
+        "bewegung",
+        "motivation",
+        "ruhe",
+        "alltag",
+        "spaziergang"
+      ],
+      "direct_url": "https://videos.pexels.com/video-files/8296235/8296235-hd_1080_1920_25fps.mp4",
+      "source_page": "https://www.pexels.com/video/a-man-walking-around-the-park-8296235/",
+      "license": "Pexels Free"
+    },
+    {
+      "id": "rain-city-13961930",
+      "tags": [
+        "regen",
+        "stadt",
+        "walking",
+        "stress",
+        "alltag",
+        "gedanken",
+        "bewegung",
+        "abend"
+      ],
+      "direct_url": "https://videos.pexels.com/video-files/13961930/13961930-hd_1080_1920_30fps.mp4",
+      "source_page": "https://www.pexels.com/video/people-walking-in-city-under-rainfall-13961930/",
       "license": "Pexels Free"
     }
   ]
