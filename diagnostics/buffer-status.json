@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-27T13:52:03.852678+00:00",
+  "checked_at_utc": "2026-09-27T18:17:25.695274+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -28,15 +28,15 @@
     {
       "id": "6ab845ba3d66d464e5bee3ac",
       "text": "Du musst nicht jede Entscheidung sofort treffen. Manchmal entsteht Klarheit erst, wenn du aufhörst, dieselbe Frage immer wieder zu drehen. Geh einen Schritt zurück. Schlaf eine Nacht darüber. Was morgen noch wichtig ist, verdient deine Energie. Was kleiner geworden ist, brauchte wahrscheinlich nur Abstand.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-09-27T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-09-27T16:33:09.638Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7690253748282641697",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-27-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab845ba3d66d464e5bee3ac_video.mp4"
         }
       ]
     },
