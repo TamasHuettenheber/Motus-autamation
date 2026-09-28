@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-28T03:05:40.200241+00:00",
+  "checked_at_utc": "2026-09-28T06:42:19.207848+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -58,15 +58,15 @@
     {
       "id": "6ab9c4ee82dee5c85bd1c3ee",
       "text": "Du brauchst heute Morgen nicht erst Motivation. Du brauchst einen Anfang. Stell die Füße auf den Boden, trink einen Schluck Wasser und mach die erste kleine Sache sofort. Nicht den ganzen Tag planen. Nicht auf das richtige Gefühl warten. Ein guter Morgen beginnt mit Bewegung. Der erste Schritt erzeugt Energie – nicht umgekehrt. Also: aufstehen, anfangen und dem Tag zeigen, wer entscheidet.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-09-28T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-09-28T05:01:53.413Z",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7690446548710280481?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-28-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab9c4ee82dee5c85bd1c3ee_video.mp4"
         }
       ]
     },
@@ -76,7 +76,7 @@
       "status": "sent",
       "dueAt": "2026-09-27T20:00:00.000Z",
       "sentAt": "2026-09-27T20:03:21.481Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7690307609764597024",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7690307609764597024?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -91,7 +91,7 @@
       "status": "sent",
       "dueAt": "2026-09-27T16:30:00.000Z",
       "sentAt": "2026-09-27T16:33:09.638Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7690253748282641697",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7690253748282641697?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -106,7 +106,7 @@
       "status": "sent",
       "dueAt": "2026-09-26T22:36:00.000Z",
       "sentAt": "2026-09-26T22:37:46.718Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7689976483825143073",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7689976483825143073?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -121,7 +121,7 @@
       "status": "sent",
       "dueAt": "2026-09-26T20:00:00.000Z",
       "sentAt": "2026-09-26T20:01:58.456Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7689936409121099040",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7689936409121099040?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -136,7 +136,7 @@
       "status": "sent",
       "dueAt": "2026-09-26T16:30:00.000Z",
       "sentAt": "2026-09-26T16:31:42.475Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7689882195372150048",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7689882195372150048?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -151,7 +151,7 @@
       "status": "sent",
       "dueAt": "2026-09-25T20:00:00.000Z",
       "sentAt": "2026-09-25T20:02:16.497Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7689565420231167265",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7689565420231167265?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -166,12 +166,42 @@
       "status": "sent",
       "dueAt": "2026-09-25T16:30:00.000Z",
       "sentAt": "2026-09-25T16:32:42.493Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7689511470555532577",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7689511470555532577?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab58fda7794ad3835660f25_video.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6aba057573c74fd89db07178",
+      "text": "Ein klares Nein braucht nicht immer eine lange Erklärung. #motus #grenzen #selbstrespekt #kommunikation #alltagspsychologie",
+      "status": "sent",
+      "dueAt": "2026-09-24T20:01:51.000Z",
+      "sentAt": "2026-09-24T20:01:51.000Z",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7689194585175756054?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://www.tiktok.com/@motus614/video/7689194585175756054?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
+        }
+      ]
+    },
+    {
+      "id": "6aba057573c74fd89db0718c",
+      "text": "Nicht jede Pause zwischen zwei Nachrichten bedeutet etwas. Hol dir deine Aufmerksamkeit zurück. #motus #alltagspsychologie #digitalbalance #innereruhe #aufmerksamkeit",
+      "status": "sent",
+      "dueAt": "2026-09-24T16:31:04.000Z",
+      "sentAt": "2026-09-24T16:31:04.000Z",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7689140277755284758?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://www.tiktok.com/@motus614/video/7689140277755284758?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         }
       ]
     },
@@ -562,6 +592,36 @@
         {
           "mimeType": "video/mp4",
           "source": "https://www.tiktok.com/@motus614/video/7683256843417832726?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
+        }
+      ]
+    },
+    {
+      "id": "6aba057673c74fd89db0762e",
+      "text": "Du wartest nicht auf Motivation. Motivation wartet auf deinen ersten Schritt. Nicht morgen. Heute. #motivation #disziplin #mindset #motus #neuanfang",
+      "status": "sent",
+      "dueAt": "2026-09-08T17:07:24.000Z",
+      "sentAt": "2026-09-08T17:07:24.000Z",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7683212266396749078?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://www.tiktok.com/@motus614/video/7683212266396749078?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
+        }
+      ]
+    },
+    {
+      "id": "6aba057573c74fd89db07184",
+      "text": "Motivation kommt nicht vor dem Anfang. Sie entsteht durch den ersten Schritt. Was ist Dein erster Schritt heute? #motivation #disziplin #mindset #motus #neuanfang",
+      "status": "sent",
+      "dueAt": "2026-09-07T23:05:54.000Z",
+      "sentAt": "2026-09-07T23:05:54.000Z",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7682933538089372950?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://www.tiktok.com/@motus614/video/7682933538089372950?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         }
       ]
     }
