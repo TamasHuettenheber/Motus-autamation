@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-28T06:42:19.207848+00:00",
+  "checked_at_utc": "2026-09-28T15:19:34.261345+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -43,15 +43,15 @@
     {
       "id": "6ab9c55536a0dcfcb3ebb1cb",
       "text": "Dein Kopf braucht nicht für jede Aufgabe Motivation. Oft reicht ein klarer Startpunkt. Wähle heute Mittag genau eine Sache, die du in den nächsten zehn Minuten wirklich abschließt. Nicht planen, nicht optimieren, anfangen. Ein sichtbarer kleiner Fortschritt gibt deinem Nachmittag mehr Energie als zehn offene Gedanken.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-09-28T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-09-28T10:02:54.261Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7690524145544596768",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-28-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab9c55536a0dcfcb3ebb1cb_video.mp4"
         }
       ]
     },
