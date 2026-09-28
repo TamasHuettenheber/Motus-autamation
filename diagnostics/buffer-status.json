@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-28T00:35:04.807465+00:00",
+  "checked_at_utc": "2026-09-28T03:05:40.200241+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -37,6 +37,36 @@
         {
           "mimeType": "video/mp4",
           "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-28-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ab9c55536a0dcfcb3ebb1cb",
+      "text": "Dein Kopf braucht nicht für jede Aufgabe Motivation. Oft reicht ein klarer Startpunkt. Wähle heute Mittag genau eine Sache, die du in den nächsten zehn Minuten wirklich abschließt. Nicht planen, nicht optimieren, anfangen. Ein sichtbarer kleiner Fortschritt gibt deinem Nachmittag mehr Energie als zehn offene Gedanken.",
+      "status": "scheduled",
+      "dueAt": "2026-09-28T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-28-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ab9c4ee82dee5c85bd1c3ee",
+      "text": "Du brauchst heute Morgen nicht erst Motivation. Du brauchst einen Anfang. Stell die Füße auf den Boden, trink einen Schluck Wasser und mach die erste kleine Sache sofort. Nicht den ganzen Tag planen. Nicht auf das richtige Gefühl warten. Ein guter Morgen beginnt mit Bewegung. Der erste Schritt erzeugt Energie – nicht umgekehrt. Also: aufstehen, anfangen und dem Tag zeigen, wer entscheidet.",
+      "status": "scheduled",
+      "dueAt": "2026-09-28T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-28-0700.mp4"
         }
       ]
     },
