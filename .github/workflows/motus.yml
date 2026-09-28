@@ -270,7 +270,7 @@ jobs:
           })
           d["uses"]=d["uses"][-100:]
           p.parent.mkdir(parents=True,exist_ok=True)
-          p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\\n",encoding='utf-8')
+          p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding='utf-8')
           PY
           git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # Discard the advisory history edit made earlier in this step before rebasing.
@@ -303,7 +303,7 @@ jobs:
                   "used_at_utc": datetime.now(timezone.utc).isoformat()
               })
           d["uses"]=d["uses"][-100:]
-          p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\\n",encoding='utf-8')
+          p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding='utf-8')
           PY
           git add diagnostics/broll-history.json
           if ! git diff --cached --quiet; then
