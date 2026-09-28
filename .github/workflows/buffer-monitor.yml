@@ -165,5 +165,57 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add diagnostics/buffer-status.json
-          git diff --cached --quiet || (git commit -m "Update Buffer status snapshot" && git push)
+
+          # Keep the freshly queried Buffer snapshot outside the worktree while
+          # refreshing main. This prevents non-fast-forward failures when another
+          # Motus workflow commits between checkout and this step.
+          cp diagnostics/buffer-status.json /tmp/buffer-status.json
+
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git reset --hard origin/main
+
+            python3 - <<'PY'
+          import json
+          import shutil
+          from pathlib import Path
+
+          fresh = Path("/tmp/buffer-status.json")
+          target = Path("diagnostics/buffer-status.json")
+          new = json.loads(fresh.read_text(encoding="utf-8"))
+          old = {}
+          if target.exists():
+              try:
+                  old = json.loads(target.read_text(encoding="utf-8"))
+              except json.JSONDecodeError:
+                  old = {}
+
+          if str(old.get("checked_at_utc", "")) >= str(new.get("checked_at_utc", "")):
+              Path("/tmp/buffer-status-skip").write_text("remote snapshot is newer or equal", encoding="utf-8")
+          else:
+              shutil.copyfile(fresh, target)
+          PY
+
+            if [ -f /tmp/buffer-status-skip ]; then
+              echo "BUFFER_STATUS_COMMIT_SKIPPED: remote snapshot is newer or equal"
+              exit 0
+            fi
+
+            git add diagnostics/buffer-status.json
+            if git diff --cached --quiet; then
+              echo "BUFFER_STATUS_COMMIT_SKIPPED: no change"
+              exit 0
+            fi
+
+            git commit -m "Update Buffer status snapshot"
+            if git push origin HEAD:main; then
+              echo "BUFFER_STATUS_COMMIT_OK"
+              exit 0
+            fi
+
+            echo "BUFFER_STATUS_PUSH_RETRY: $attempt"
+            sleep $((attempt * 2))
+          done
+
+          echo "BUFFER_STATUS_PUSH_FAILED after retries"
+          exit 1
