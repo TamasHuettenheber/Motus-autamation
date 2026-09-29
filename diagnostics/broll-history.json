@@ -47,6 +47,12 @@
       "clip_id": "phone-cafe-5075207",
       "source": "https://www.pexels.com/video/a-woman-is-using-her-phone-to-take-a-picture-of-her-coffee-5075207/",
       "used_at_utc": "2026-09-29T05:07:18.838387+00:00"
+    },
+    {
+      "output_name": "motus-2026-09-29-2200",
+      "clip_id": "night-walk-4121893",
+      "source": "https://www.pexels.com/video/a-person-walking-in-the-street-at-night-4121893/",
+      "used_at_utc": "2026-09-29T05:07:42.916685+00:00"
     }
   ]
 }
