@@ -1,0 +1,326 @@
+name: Motus Daily Batch Status
+
+on:
+  workflow_run:
+    workflows: ["Motus Renderer"]
+    types: [completed]
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  actions: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+
+    steps:
+      - name: Reconcile open Motus day batches
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import re
+          import urllib.error
+          import urllib.request
+          from datetime import datetime, timezone
+          from zoneinfo import ZoneInfo
+
+          repo = os.environ["REPO"]
+          token = os.environ["GH_TOKEN"]
+          buffer_key = os.environ.get("BUFFER_API_KEY","").strip()
+          api_base = f"https://api.github.com/repos/{repo}"
+          headers = {
+              "Authorization": f"Bearer {token}",
+              "Accept": "application/vnd.github+json",
+              "X-GitHub-Api-Version": "2022-11-28",
+              "User-Agent": "motus-daily-status",
+          }
+
+          def gh(method, path, payload=None):
+              data = None if payload is None else json.dumps(payload).encode("utf-8")
+              req = urllib.request.Request(api_base + path, data=data, headers=headers, method=method)
+              try:
+                  with urllib.request.urlopen(req, timeout=60) as resp:
+                      raw = resp.read().decode("utf-8")
+                      return json.loads(raw) if raw else {}
+              except urllib.error.HTTPError as exc:
+                  body = exc.read().decode("utf-8","replace")
+                  raise RuntimeError(f"GitHub {method} {path} -> HTTP {exc.code}: {body[:1500]}")
+
+          def comments(issue_number):
+              return gh("GET", f"/issues/{issue_number}/comments?per_page=100")
+
+          def comment(issue_number, body):
+              gh("POST", f"/issues/{issue_number}/comments", {"body": body})
+
+          def has_marker(issue_number, marker):
+              try:
+                  return any(marker in str(c.get("body","")) for c in comments(issue_number))
+              except Exception:
+                  return False
+
+          def parse_batch(issue):
+              try:
+                  batch = json.loads(issue.get("body") or "")
+              except Exception:
+                  return None
+              date = str(batch.get("date","")).strip()
+              slots = batch.get("slots")
+              if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
+                  return None
+              if not isinstance(slots,list) or len(slots)!=4:
+                  return None
+              out=[]
+              seen=set()
+              for slot in slots:
+                  if not isinstance(slot,dict):
+                      return None
+                  hm=str(slot.get("time","")).replace(":","").strip()
+                  if not re.fullmatch(r"\d{4}",hm) or hm in seen:
+                      return None
+                  seen.add(hm)
+                  out.append({
+                      "time":hm,
+                      "audio_url":str(slot.get("audio_url","")).strip(),
+                      "text":str(slot.get("text","")).strip(),
+                      "broll_url":str(slot.get("broll_url","")).strip(),
+                      "output_name":f"motus-{date}-{hm}",
+                  })
+              return {"date":date,"slots":out,"dry_run":bool(batch.get("dry_run",False))}
+
+          def buffer_request(query, variables=None):
+              if not buffer_key:
+                  raise RuntimeError("BUFFER_API_KEY missing")
+              payload={"query":query}
+              if variables is not None:
+                  payload["variables"]=variables
+              req=urllib.request.Request(
+                  "https://api.buffer.com",
+                  data=json.dumps(payload).encode("utf-8"),
+                  headers={"Content-Type":"application/json","Authorization":f"Bearer {buffer_key}"},
+                  method="POST",
+              )
+              try:
+                  with urllib.request.urlopen(req,timeout=60) as response:
+                      result=json.load(response)
+              except urllib.error.HTTPError as exc:
+                  body=exc.read().decode("utf-8","replace")
+                  raise RuntimeError(f"Buffer HTTP {exc.code}: {body[:1200]}")
+              if result.get("errors"):
+                  raise RuntimeError("Buffer GraphQL error: "+json.dumps(result["errors"],ensure_ascii=False))
+              return result["data"]
+
+          def get_buffer_posts():
+              orgs=buffer_request("query { account { organizations { id name } } }")["account"]["organizations"]
+              if not orgs:
+                  raise RuntimeError("No Buffer organization found")
+              org=orgs[0]
+              channels=buffer_request(
+                  """query Channels($orgId: OrganizationId!) {
+                    channels(input: { organizationId: $orgId }) { id name displayName service }
+                  }""",
+                  {"orgId":org["id"]},
+              )["channels"]
+              channel=next(
+                  (c for c in channels
+                   if str(c.get("service","")).lower()=="tiktok"
+                   and "motus614" in {str(c.get("name","")).lower(),str(c.get("displayName","")).lower()}),
+                  None,
+              )
+              if not channel:
+                  raise RuntimeError("TikTok channel motus614 not found")
+              edges=buffer_request(
+                  """query MotusPosts($input: PostsInput!) {
+                    posts(first: 50, input: $input) {
+                      edges { node { id text status dueAt sentAt externalLink channelId assets { mimeType source } } }
+                    }
+                  }""",
+                  {
+                      "input":{
+                          "organizationId":org["id"],
+                          "filter":{"channelIds":[channel["id"]],"status":["scheduled","sent","error"]},
+                          "sort":[{"field":"dueAt","direction":"desc"},{"field":"createdAt","direction":"desc"}],
+                      }
+                  },
+              )["posts"]["edges"]
+              return channel,[e["node"] for e in edges]
+
+          open_issues = gh("GET","/issues?state=open&per_page=100&sort=created&direction=desc")
+          parents=[
+              i for i in open_issues
+              if not i.get("pull_request") and str(i.get("title","")).startswith("[MOTUS-DAY]")
+          ]
+          if not parents:
+              print("NO_OPEN_MOTUS_DAY_BATCH")
+              raise SystemExit(0)
+
+          # Current renderer runs are enough for one day of batches; exact run-name binds them.
+          renderer_runs = gh("GET","/actions/workflows/motus.yml/runs?event=workflow_dispatch&per_page=100").get("workflow_runs",[])
+          now=datetime.now(timezone.utc)
+
+          for issue in parents:
+              issue_number=int(issue["number"])
+              batch=parse_batch(issue)
+              if not batch:
+                  if not has_marker(issue_number,"MOTUS_DAY_FAILED_FINAL"):
+                      comment(issue_number,"MOTUS_DAY_FAILED_FINAL\n\nParent issue JSON is invalid and cannot be reconciled automatically.")
+                  continue
+              if batch["dry_run"]:
+                  continue
+              if has_marker(issue_number,"MOTUS_DAY_COMPLETE"):
+                  continue
+              if has_marker(issue_number,"MOTUS_DAY_FAILED_FINAL"):
+                  continue
+
+              created=datetime.fromisoformat(str(issue["created_at"]).replace("Z","+00:00"))
+              age_minutes=(now-created).total_seconds()/60.0
+
+              latest={}
+              for slot in batch["slots"]:
+                  target=f"Motus {slot['output_name']}"
+                  matches=[r for r in renderer_runs if str(r.get("display_title",""))==target]
+                  if matches:
+                      matches.sort(key=lambda r:r.get("created_at",""),reverse=True)
+                      latest[slot["output_name"]]=matches[0]
+
+              missing=[s for s in batch["slots"] if s["output_name"] not in latest]
+              if missing:
+                  # Recover an internal dispatch that never produced a run. This is safe and
+                  # deterministic because exact run-name lookup prevents duplicates.
+                  for slot in missing:
+                      gh(
+                          "POST",
+                          "/actions/workflows/motus.yml/dispatches",
+                          {
+                              "ref":"main",
+                              "inputs":{
+                                  "audio_url":slot["audio_url"],
+                                  "text":slot["text"],
+                                  "broll_url":slot["broll_url"],
+                                  "output_name":slot["output_name"],
+                              },
+                          },
+                      )
+                  comment(
+                      issue_number,
+                      "MOTUS_DAY_RECOVERED_MISSING_DISPATCH\n\nRe-dispatched missing renderer slot(s): "
+                      + ", ".join(s["output_name"] for s in missing)
+                  )
+                  print("RECOVERED_MISSING_DISPATCH",issue_number)
+                  continue
+
+              waiting=[]
+              failed=[]
+              for slot in batch["slots"]:
+                  run=latest[slot["output_name"]]
+                  status=str(run.get("status",""))
+                  conclusion=str(run.get("conclusion") or "")
+                  attempt=int(run.get("run_attempt") or 1)
+                  if status!="completed":
+                      waiting.append((slot,run))
+                  elif conclusion!="success":
+                      failed.append((slot,run,attempt))
+
+              if waiting:
+                  print("WAIT_RENDERERS",issue_number,[(s["output_name"],r.get("status")) for s,r in waiting])
+                  continue
+
+              if failed:
+                  retrying=[]
+                  exhausted=[]
+                  for slot,run,attempt in failed:
+                      if attempt < 3:
+                          gh("POST",f"/actions/runs/{run['id']}/rerun-failed-jobs")
+                          retrying.append(f"{slot['output_name']} run={run['id']} attempt={attempt+1}")
+                      else:
+                          exhausted.append(f"{slot['output_name']} run={run['id']} conclusion={run.get('conclusion')} attempt={attempt}")
+                  if retrying:
+                      comment(issue_number,"MOTUS_DAY_RETRY\n\nGitHub is retrying failed renderer(s):\n- "+"\n- ".join(retrying))
+                  if exhausted and not has_marker(issue_number,"MOTUS_DAY_FAILED_FINAL"):
+                      comment(issue_number,"MOTUS_DAY_FAILED_FINAL\n\nRenderer retries exhausted:\n- "+"\n- ".join(exhausted))
+                  print("RENDERER_FAILURE_HANDLED",issue_number)
+                  continue
+
+              # All four renderers are successful. Verify Buffer directly against the
+              # four expected Europe/Berlin dueAt values and a video asset.
+              try:
+                  channel,posts=get_buffer_posts()
+              except Exception as exc:
+                  print("BUFFER_VERIFY_TEMPORARY_ERROR",issue_number,repr(exc))
+                  if age_minutes >= 30 and not has_marker(issue_number,"MOTUS_DAY_BUFFER_VERIFY_ERROR"):
+                      comment(issue_number,"MOTUS_DAY_BUFFER_VERIFY_ERROR\n\nAll renderer runs succeeded, but direct Buffer verification is temporarily unavailable: "+str(exc))
+                  continue
+
+              berlin=ZoneInfo("Europe/Berlin")
+              verified={}
+              expected={}
+              for slot in batch["slots"]:
+                  local=datetime.strptime(
+                      f"{batch['date']} {slot['time'][:2]}:{slot['time'][2:]}",
+                      "%Y-%m-%d %H:%M",
+                  ).replace(tzinfo=berlin)
+                  due=local.astimezone(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00","Z")
+                  expected[slot["output_name"]]={"local":local.isoformat(),"utc":due}
+                  matches=[
+                      p for p in posts
+                      if p.get("dueAt")==due
+                      and p.get("status")=="scheduled"
+                      and any(str(a.get("mimeType","")).startswith("video/") for a in (p.get("assets") or []))
+                  ]
+                  if matches:
+                      verified[slot["output_name"]]=matches[0]
+
+              if len(verified)<4:
+                  missing_names=[s["output_name"] for s in batch["slots"] if s["output_name"] not in verified]
+                  # Give Buffer eventual consistency a window. After 20 minutes, repair
+                  # only the affected slot by re-running its successful workflow. The
+                  # renderer reuses the existing published QC MP4 and schedules idempotently.
+                  if age_minutes < 20:
+                      print("WAIT_BUFFER",issue_number,missing_names)
+                      continue
+
+                  repair=[]
+                  exhausted=[]
+                  for name in missing_names:
+                      run=latest[name]
+                      attempt=int(run.get("run_attempt") or 1)
+                      if attempt < 3:
+                          gh("POST",f"/actions/runs/{run['id']}/rerun")
+                          repair.append(f"{name} run={run['id']} attempt={attempt+1}")
+                      else:
+                          exhausted.append(f"{name} run={run['id']} attempt={attempt}")
+                  if repair:
+                      comment(issue_number,"MOTUS_DAY_BUFFER_REPAIR\n\nBuffer confirmation missing; reusing published QC MP4 and retrying only affected slot(s):\n- "+"\n- ".join(repair))
+                  if exhausted and not has_marker(issue_number,"MOTUS_DAY_FAILED_FINAL"):
+                      comment(issue_number,"MOTUS_DAY_FAILED_FINAL\n\nBuffer verification still missing after repair attempts:\n- "+"\n- ".join(exhausted))
+                  print("BUFFER_REPAIR_HANDLED",issue_number)
+                  continue
+
+              rows=[]
+              for slot in batch["slots"]:
+                  name=slot["output_name"]
+                  post=verified[name]
+                  rows.append(
+                      f"| {slot['time'][:2]}:{slot['time'][2:]} | {name}.mp4 | success | scheduled | {post['dueAt']} |"
+                  )
+              report=(
+                  "MOTUS_DAY_COMPLETE\n\n"
+                  + "| Slot | MP4 | QC/Renderer | Buffer | dueAt |\n"
+                  + "|---|---|---|---|---|\n"
+                  + "\n".join(rows)
+                  + "\n\nAll four slots are fully prepared. GitHub handled fan-out, retries and final Buffer verification."
+              )
+              comment(issue_number,report)
+              gh("PATCH",f"/issues/{issue_number}",{"state":"closed","state_reason":"completed"})
+              print("MOTUS_DAY_COMPLETE",issue_number)
+
+          PY
