@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-29T01:48:53.545447+00:00",
+  "checked_at_utc": "2026-09-29T08:21:05.315163+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6abb47b193a81b612b5c73f1",
+      "text": "Du kannst jemandem verzeihen und trotzdem Abstand behalten. Verzeihen beantwortet die Frage, ob du den Groll weitertragen willst. Vertrauen beantwortet eine andere: Hat sich genug verändert, damit Nähe wieder sicher ist? Diese beiden Entscheidungen müssen nicht am selben Tag fallen. Frieden bedeutet nicht automatisch, dass alles wieder wie vorher sein muss.",
+      "status": "scheduled",
+      "dueAt": "2026-09-29T20:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-29-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6abb4798b6b2614895906bdd",
+      "text": "Jemand ist kurz angebunden, antwortet spät oder wirkt gereizt – und dein Kopf macht daraus sofort eine Geschichte über dich. Mach einen Gegencheck: Welche drei Gründe gäbe es, die nichts mit mir zu tun haben? Du musst fremdes Verhalten nicht schönreden. Aber du musst es auch nicht automatisch persönlich nehmen. Ein bisschen Unsicherheit ist oft ehrlicher als eine schnelle Erklärung.",
+      "status": "scheduled",
+      "dueAt": "2026-09-29T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-29-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6abb478c93a81b612b5c6f65",
+      "text": "Nur weil du schon Zeit in etwas gesteckt hast, musst du nicht noch mehr hineinstecken. Vergangene Mühe ist kein Vertrag mit deiner Zukunft. Frag dich heute Mittag: Würde ich diese Sache jetzt noch einmal anfangen, wenn ich erst heute entscheiden müsste? Wenn die Antwort Nein ist, darf ein Kurswechsel vernünftig sein – nicht schwach.",
+      "status": "scheduled",
+      "dueAt": "2026-09-29T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-29-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6abb4798320ca548b4daa51f",
+      "text": "Bevor heute irgendjemand deine Aufmerksamkeit bekommt, entscheide selbst, wofür dieser Morgen steht. Öffne nicht sofort Nachrichten. Stell dir eine einzige Frage: Was soll bis neun Uhr erledigt sein, damit sich der Tag nach dir anfühlt und nicht nach den Erwartungen anderer? Schreib genau eine Sache auf. Dann fang damit an. Wer den ersten Fokus setzt, startet nicht nur früher – sondern klarer.",
+      "status": "sent",
+      "dueAt": "2026-09-29T05:15:00.000Z",
+      "sentAt": "2026-09-29T05:16:49.376Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7690821476668214561",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abb4798320ca548b4daa51f_video.mp4"
+        }
+      ]
+    },
     {
       "id": "6ab98e0070ec211d1d28e207",
       "text": "Ein schlechter Morgen muss nicht deinen ganzen Tag bekommen. Unser Kopf liebt den Gedanken: Jetzt ist es sowieso gelaufen. Genau da hilft ein Neustartpunkt. Nimm die nächste volle Stunde und entscheide nur, wie diese eine Stunde aussehen soll. Du musst den Tag nicht retten. Du musst nur verhindern, dass ein schlechter Moment automatisch der nächste wird.",
