@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-29T15:42:04.879173+00:00",
+  "checked_at_utc": "2026-09-29T20:41:23.704478+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -13,30 +13,30 @@
     {
       "id": "6abb47b193a81b612b5c73f1",
       "text": "Du kannst jemandem verzeihen und trotzdem Abstand behalten. Verzeihen beantwortet die Frage, ob du den Groll weitertragen willst. Vertrauen beantwortet eine andere: Hat sich genug verändert, damit Nähe wieder sicher ist? Diese beiden Entscheidungen müssen nicht am selben Tag fallen. Frieden bedeutet nicht automatisch, dass alles wieder wie vorher sein muss.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-09-29T20:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-09-29T20:02:26.768Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7691049672705641760",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-29-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abb47b193a81b612b5c73f1_video.mp4"
         }
       ]
     },
     {
       "id": "6abb4798b6b2614895906bdd",
       "text": "Jemand ist kurz angebunden, antwortet spät oder wirkt gereizt – und dein Kopf macht daraus sofort eine Geschichte über dich. Mach einen Gegencheck: Welche drei Gründe gäbe es, die nichts mit mir zu tun haben? Du musst fremdes Verhalten nicht schönreden. Aber du musst es auch nicht automatisch persönlich nehmen. Ein bisschen Unsicherheit ist oft ehrlicher als eine schnelle Erklärung.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-09-29T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-09-29T16:33:08.687Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7690995851367370017",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-29-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abb4798b6b2614895906bdd_video.mp4"
         }
       ]
     },
