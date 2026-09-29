@@ -133,8 +133,15 @@ jobs:
               print("MOTUS_DAY_DRY_RUN_OK")
               raise SystemExit(0)
 
-          dispatch_started = datetime.now(timezone.utc)
+          # Dispatch one renderer at a time and bind the newly created run ID
+          # immediately. This avoids relying on GitHub's display_title/run-name
+          # behavior and makes slot-to-run mapping deterministic.
+          run_ids = {}
+          existing_runs = gh("GET", "/actions/workflows/motus.yml/runs?event=workflow_dispatch&per_page=100").get("workflow_runs", [])
+          known_ids = {int(r["id"]) for r in existing_runs}
+
           for slot in normalized:
+              dispatch_time = datetime.now(timezone.utc)
               gh(
                   "POST",
                   "/actions/workflows/motus.yml/dispatches",
@@ -150,34 +157,31 @@ jobs:
               )
               print("DISPATCHED:", slot["output_name"])
 
-          # Find the four workflow_dispatch runs by the deterministic run-name.
-          run_ids = {}
-          redispatched = set()
-          find_deadline = time.time() + 180
-          while time.time() < find_deadline and len(run_ids) < len(normalized):
-              runs = gh("GET", "/actions/workflows/motus.yml/runs?event=workflow_dispatch&per_page=100").get("workflow_runs", [])
-              for slot in normalized:
-                  if slot["output_name"] in run_ids:
-                      continue
-                  target = f"Motus {slot['output_name']}"
-                  matches = []
+              found = None
+              for _ in range(30):
+                  runs = gh("GET", "/actions/workflows/motus.yml/runs?event=workflow_dispatch&per_page=100").get("workflow_runs", [])
+                  candidates = []
                   for run in runs:
-                      if run.get("display_title") != target:
+                      rid = int(run["id"])
+                      if rid in known_ids:
                           continue
                       created = datetime.fromisoformat(str(run["created_at"]).replace("Z","+00:00"))
-                      if created >= dispatch_started - timedelta(seconds=15):
-                          matches.append(run)
-                  if matches:
-                      matches.sort(key=lambda r:r["created_at"], reverse=True)
-                      run_ids[slot["output_name"]] = int(matches[0]["id"])
-                      print("RUN_FOUND:", slot["output_name"], run_ids[slot["output_name"]])
-              if len(run_ids) < len(normalized):
-                  time.sleep(5)
+                      if created >= dispatch_time - timedelta(seconds=10):
+                          candidates.append(run)
+                  if candidates:
+                      candidates.sort(key=lambda r:r["created_at"], reverse=True)
+                      found = candidates[0]
+                      break
+                  time.sleep(2)
 
-          if len(run_ids) < len(normalized):
-              missing = [s["output_name"] for s in normalized if s["output_name"] not in run_ids]
-              comment("MOTUS_DAY_FAILED\n\nNo renderer run appeared for: " + ", ".join(missing))
-              raise SystemExit("Missing renderer runs: " + ", ".join(missing))
+              if not found:
+                  comment("MOTUS_DAY_FAILED\n\nNo renderer run appeared after dispatch for: " + slot["output_name"])
+                  raise SystemExit("Renderer dispatch did not create a run: " + slot["output_name"])
+
+              rid = int(found["id"])
+              known_ids.add(rid)
+              run_ids[slot["output_name"]] = rid
+              print("RUN_BOUND:", slot["output_name"], rid)
 
           # Self-heal renderer failures. GitHub owns retries after the single external batch handoff.
           retry_count = {name: 0 for name in run_ids}
