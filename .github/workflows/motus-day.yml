@@ -128,9 +128,37 @@ jobs:
           )
 
           if dry_run:
-              comment("MOTUS_DAY_DRY_RUN_OK\n\nJSON schema, four-slot validation and issue orchestration entrypoint passed.")
+              # Validate the exact internal workflow-dispatch permission path without
+              # rendering or touching Buffer.
+              before = gh("GET", "/actions/workflows/motus-probe.yml/runs?event=workflow_dispatch&per_page=50").get("workflow_runs", [])
+              known = {int(r["id"]) for r in before}
+              probe_tag = f"issue-{issue_number}-{int(time.time())}"
+              gh("POST", "/actions/workflows/motus-probe.yml/dispatches", {"ref":"main","inputs":{"tag":probe_tag}})
+              probe_id = None
+              for _ in range(30):
+                  runs = gh("GET", "/actions/workflows/motus-probe.yml/runs?event=workflow_dispatch&per_page=50").get("workflow_runs", [])
+                  fresh = [r for r in runs if int(r["id"]) not in known]
+                  if fresh:
+                      fresh.sort(key=lambda r:r["created_at"], reverse=True)
+                      probe_id = int(fresh[0]["id"])
+                      break
+                  time.sleep(2)
+              if not probe_id:
+                  comment("MOTUS_DAY_DRY_RUN_FAILED\n\nInternal workflow_dispatch probe did not create a run.")
+                  raise SystemExit("Internal workflow_dispatch probe failed to create a run")
+              probe_deadline = time.time() + 120
+              probe = {}
+              while time.time() < probe_deadline:
+                  probe = gh("GET", f"/actions/runs/{probe_id}")
+                  if probe.get("status") == "completed":
+                      break
+                  time.sleep(3)
+              if probe.get("conclusion") != "success":
+                  comment(f"MOTUS_DAY_DRY_RUN_FAILED\n\nProbe run {probe_id}: status={probe.get('status')} conclusion={probe.get('conclusion')}")
+                  raise SystemExit("Internal workflow_dispatch probe did not succeed")
+              comment(f"MOTUS_DAY_DRY_RUN_OK\n\nJSON schema validation passed and internal workflow_dispatch succeeded (probe run {probe_id}).")
               gh("PATCH", f"/issues/{issue_number}", {"state":"closed","state_reason":"completed"})
-              print("MOTUS_DAY_DRY_RUN_OK")
+              print("MOTUS_DAY_DRY_RUN_OK", probe_id)
               raise SystemExit(0)
 
           # Dispatch one renderer at a time and bind the newly created run ID
