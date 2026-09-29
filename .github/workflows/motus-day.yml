@@ -17,37 +17,30 @@ permissions:
   actions: write
 
 jobs:
-  batch:
+  dispatch:
     if: >
       (github.event_name == 'issues' && startsWith(github.event.issue.title, '[MOTUS-DAY]')) ||
       github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 5
 
     steps:
-      - name: Orchestrate daily batch
+      - name: Validate batch and dispatch missing renderers
         env:
           GH_TOKEN: ${{ github.token }}
           REPO: ${{ github.repository }}
-          EVENT_NAME: ${{ github.event_name }}
           EVENT_ISSUE_NUMBER: ${{ github.event.issue.number }}
           DISPATCH_ISSUE_NUMBER: ${{ inputs.issue_number }}
-          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
         run: |
           python3 - <<'PY'
           import json
           import os
           import re
-          import time
           import urllib.error
-          import urllib.parse
           import urllib.request
-          from datetime import datetime, timezone, timedelta
-          from zoneinfo import ZoneInfo
 
           repo = os.environ["REPO"]
           token = os.environ["GH_TOKEN"]
-          buffer_key = os.environ.get("BUFFER_API_KEY","").strip()
           issue_number = (os.environ.get("EVENT_ISSUE_NUMBER") or os.environ.get("DISPATCH_ISSUE_NUMBER") or "").strip()
           if not issue_number:
               raise SystemExit("Missing batch issue number")
@@ -72,8 +65,7 @@ jobs:
                   raise RuntimeError(f"GitHub {method} {path} -> HTTP {exc.code}: {body[:1500]}")
 
           issue = gh("GET", f"/issues/{issue_number}")
-          title = str(issue.get("title",""))
-          if not title.startswith("[MOTUS-DAY]"):
+          if not str(issue.get("title","")).startswith("[MOTUS-DAY]"):
               raise SystemExit(f"Issue #{issue_number} is not a [MOTUS-DAY] batch")
 
           try:
@@ -108,68 +100,41 @@ jobs:
                   raise SystemExit(f"Slot {hm}: AUDIO_URL must be a direct AI Voice Generator preview MP3")
               if not text:
                   raise SystemExit(f"Slot {hm}: text is missing")
-              output = f"motus-{date}-{hm}"
               normalized.append({
                   "time": hm,
                   "audio_url": audio,
                   "text": text,
                   "broll_url": broll,
-                  "output_name": output,
+                  "output_name": f"motus-{date}-{hm}",
               })
 
           def comment(body):
               gh("POST", f"/issues/{issue_number}/comments", {"body": body})
 
-          comment(
-              "MOTUS_DAY_ACCEPTED\n\n"
-              + f"Date: {date}\n"
-              + "Slots: " + ", ".join(x["time"] for x in normalized)
-              + ("\nMode: DRY RUN" if dry_run else "\nMode: production")
-          )
-
           if dry_run:
-              # Validate the exact internal workflow-dispatch permission path without
-              # rendering or touching Buffer.
-              before = gh("GET", "/actions/workflows/motus-probe.yml/runs?event=workflow_dispatch&per_page=50").get("workflow_runs", [])
-              known = {int(r["id"]) for r in before}
-              probe_tag = f"issue-{issue_number}-{int(time.time())}"
-              gh("POST", "/actions/workflows/motus-probe.yml/dispatches", {"ref":"main","inputs":{"tag":probe_tag}})
-              probe_id = None
-              for _ in range(30):
-                  runs = gh("GET", "/actions/workflows/motus-probe.yml/runs?event=workflow_dispatch&per_page=50").get("workflow_runs", [])
-                  fresh = [r for r in runs if int(r["id"]) not in known]
-                  if fresh:
-                      fresh.sort(key=lambda r:r["created_at"], reverse=True)
-                      probe_id = int(fresh[0]["id"])
-                      break
-                  time.sleep(2)
-              if not probe_id:
-                  comment("MOTUS_DAY_DRY_RUN_FAILED\n\nInternal workflow_dispatch probe did not create a run.")
-                  raise SystemExit("Internal workflow_dispatch probe failed to create a run")
-              probe_deadline = time.time() + 120
-              probe = {}
-              while time.time() < probe_deadline:
-                  probe = gh("GET", f"/actions/runs/{probe_id}")
-                  if probe.get("status") == "completed":
-                      break
-                  time.sleep(3)
-              if probe.get("conclusion") != "success":
-                  comment(f"MOTUS_DAY_DRY_RUN_FAILED\n\nProbe run {probe_id}: status={probe.get('status')} conclusion={probe.get('conclusion')}")
-                  raise SystemExit("Internal workflow_dispatch probe did not succeed")
-              comment(f"MOTUS_DAY_DRY_RUN_OK\n\nJSON schema validation passed and internal workflow_dispatch succeeded (probe run {probe_id}).")
+              comment(
+                  "MOTUS_DAY_DRY_RUN_OK\n\n"
+                  + f"Date: {date}\n"
+                  + "Slots: " + ", ".join(x["time"] for x in normalized)
+                  + "\nJSON schema and four-slot validation passed. No renderer was started."
+              )
               gh("PATCH", f"/issues/{issue_number}", {"state":"closed","state_reason":"completed"})
-              print("MOTUS_DAY_DRY_RUN_OK", probe_id)
+              print("MOTUS_DAY_DRY_RUN_OK")
               raise SystemExit(0)
 
-          # Dispatch one renderer at a time and bind the newly created run ID
-          # immediately. This avoids relying on GitHub's display_title/run-name
-          # behavior and makes slot-to-run mapping deterministic.
-          run_ids = {}
-          existing_runs = gh("GET", "/actions/workflows/motus.yml/runs?event=workflow_dispatch&per_page=100").get("workflow_runs", [])
-          known_ids = {int(r["id"]) for r in existing_runs}
+          # Idempotency: if the batch workflow is re-opened or re-run, only dispatch
+          # renderer slots for which no workflow_dispatch run exists yet.
+          runs = gh("GET", "/actions/workflows/motus.yml/runs?event=workflow_dispatch&per_page=100").get("workflow_runs", [])
+          existing_titles = {str(r.get("display_title","")) for r in runs}
+          dispatched = []
+          reused = []
 
           for slot in normalized:
-              dispatch_time = datetime.now(timezone.utc)
+              title = f"Motus {slot['output_name']}"
+              if title in existing_titles:
+                  reused.append(slot["output_name"])
+                  print("REUSE_EXISTING_RUN:", slot["output_name"])
+                  continue
               gh(
                   "POST",
                   "/actions/workflows/motus.yml/dispatches",
@@ -183,228 +148,17 @@ jobs:
                       },
                   },
               )
+              dispatched.append(slot["output_name"])
               print("DISPATCHED:", slot["output_name"])
 
-              found = None
-              for _ in range(30):
-                  runs = gh("GET", "/actions/workflows/motus.yml/runs?event=workflow_dispatch&per_page=100").get("workflow_runs", [])
-                  candidates = []
-                  for run in runs:
-                      rid = int(run["id"])
-                      if rid in known_ids:
-                          continue
-                      created = datetime.fromisoformat(str(run["created_at"]).replace("Z","+00:00"))
-                      if created >= dispatch_time - timedelta(seconds=10):
-                          candidates.append(run)
-                  if candidates:
-                      candidates.sort(key=lambda r:r["created_at"], reverse=True)
-                      found = candidates[0]
-                      break
-                  time.sleep(2)
-
-              if not found:
-                  comment("MOTUS_DAY_FAILED\n\nNo renderer run appeared after dispatch for: " + slot["output_name"])
-                  raise SystemExit("Renderer dispatch did not create a run: " + slot["output_name"])
-
-              rid = int(found["id"])
-              known_ids.add(rid)
-              run_ids[slot["output_name"]] = rid
-              print("RUN_BOUND:", slot["output_name"], rid)
-
-          # Self-heal renderer failures. GitHub owns retries after the single external batch handoff.
-          retry_count = {name: 0 for name in run_ids}
-          deadline = time.time() + 1500
-          final = {}
-          while time.time() < deadline:
-              all_done = True
-              for name, run_id in run_ids.items():
-                  run = gh("GET", f"/actions/runs/{run_id}")
-                  status = run.get("status")
-                  conclusion = run.get("conclusion")
-                  attempt = int(run.get("run_attempt") or 1)
-                  final[name] = {"run_id":run_id,"status":status,"conclusion":conclusion,"attempt":attempt}
-                  if status != "completed":
-                      all_done = False
-                      continue
-                  if conclusion == "success":
-                      continue
-                  if retry_count[name] < 2:
-                      retry_count[name] += 1
-                      all_done = False
-                      print("RERUN_FAILED:", name, run_id, "retry", retry_count[name])
-                      gh("POST", f"/actions/runs/{run_id}/rerun-failed-jobs")
-                      time.sleep(4)
-                  else:
-                      print("RERUN_EXHAUSTED:", name, conclusion)
-              if all_done:
-                  break
-              time.sleep(12)
-
-          failed = [name for name, st in final.items() if st.get("status") != "completed" or st.get("conclusion") != "success"]
-          if failed:
-              details = "\n".join(
-                  f"- {name}: run {final[name]['run_id']}, status={final[name]['status']}, conclusion={final[name]['conclusion']}, attempt={final[name]['attempt']}"
-                  for name in failed
-              )
-              comment("MOTUS_DAY_FAILED\n\nRenderer retries exhausted or timed out:\n" + details)
-              raise SystemExit("Renderer batch incomplete")
-
-          if not buffer_key:
-              comment("MOTUS_DAY_FAILED\n\nAll renderer runs succeeded, but BUFFER_API_KEY is unavailable to the coordinator for final verification.")
-              raise SystemExit("BUFFER_API_KEY missing")
-
-          def buffer_request(query, variables=None):
-              payload = {"query": query}
-              if variables is not None:
-                  payload["variables"] = variables
-              req = urllib.request.Request(
-                  "https://api.buffer.com",
-                  data=json.dumps(payload).encode("utf-8"),
-                  headers={"Content-Type":"application/json","Authorization":f"Bearer {buffer_key}"},
-                  method="POST",
-              )
-              try:
-                  with urllib.request.urlopen(req, timeout=60) as response:
-                      result = json.load(response)
-              except urllib.error.HTTPError as exc:
-                  body = exc.read().decode("utf-8","replace")
-                  raise RuntimeError(f"Buffer HTTP {exc.code}: {body[:1200]}")
-              if result.get("errors"):
-                  raise RuntimeError("Buffer GraphQL error: " + json.dumps(result["errors"],ensure_ascii=False))
-              return result["data"]
-
-          def get_posts():
-              orgs = buffer_request("""query { account { organizations { id name } } }""")["account"]["organizations"]
-              if not orgs:
-                  raise RuntimeError("No Buffer organization found")
-              org = orgs[0]
-              channels = buffer_request(
-                  """query Channels($orgId: OrganizationId!) {
-                    channels(input: { organizationId: $orgId }) { id name displayName service }
-                  }""",
-                  {"orgId":org["id"]},
-              )["channels"]
-              channel = next(
-                  (c for c in channels
-                   if str(c.get("service","")).lower()=="tiktok"
-                   and "motus614" in {str(c.get("name","")).lower(),str(c.get("displayName","")).lower()}),
-                  None,
-              )
-              if not channel:
-                  raise RuntimeError("TikTok channel motus614 not found")
-              edges = buffer_request(
-                  """query MotusPosts($input: PostsInput!) {
-                    posts(first: 50, input: $input) {
-                      edges { node { id text status dueAt sentAt externalLink channelId assets { mimeType source } } }
-                    }
-                  }""",
-                  {
-                      "input":{
-                          "organizationId":org["id"],
-                          "filter":{"channelIds":[channel["id"]],"status":["scheduled","sent","error"]},
-                          "sort":[{"field":"dueAt","direction":"desc"},{"field":"createdAt","direction":"desc"}],
-                      }
-                  },
-              )["posts"]["edges"]
-              return channel, [e["node"] for e in edges]
-
-          berlin = ZoneInfo("Europe/Berlin")
-          expected = {}
-          for slot in normalized:
-              local = datetime.strptime(f"{date} {slot['time'][:2]}:{slot['time'][2:]}","%Y-%m-%d %H:%M").replace(tzinfo=berlin)
-              utc = local.astimezone(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00","Z")
-              expected[slot["output_name"]] = {"local":local.isoformat(),"utc":utc}
-
-          verified = {}
-          for verify_attempt in range(8):
-              channel, posts = get_posts()
-              verified = {}
-              for slot in normalized:
-                  name = slot["output_name"]
-                  due = expected[name]["utc"]
-                  wanted_media = f"/published/{name}.mp4"
-                  match = next(
-                      (
-                          p for p in posts
-                          if p.get("dueAt") == due
-                          and p.get("status") == "scheduled"
-                          and any(
-                              str(a.get("mimeType","")).startswith("video/")
-                              and wanted_media in str(a.get("source",""))
-                              for a in (p.get("assets") or [])
-                          )
-                      ),
-                      None,
-                  )
-                  if match:
-                      verified[name] = match
-              if len(verified) == len(normalized):
-                  break
-              time.sleep(10)
-
-          if len(verified) != len(normalized):
-              missing = [s["output_name"] for s in normalized if s["output_name"] not in verified]
-              # Successful render but missing Buffer confirmation: re-run only those deterministic
-              # workflows once. The renderer reuses the published QC MP4 and its Buffer logic is idempotent.
-              comment("MOTUS_DAY_BUFFER_REPAIR\n\nMissing final Buffer confirmation for: " + ", ".join(missing) + ". Reusing published MP4 and retrying only affected renderer run(s).")
-              for name in missing:
-                  gh("POST", f"/actions/runs/{run_ids[name]}/rerun")
-              repair_deadline = time.time() + 600
-              while time.time() < repair_deadline:
-                  repaired = True
-                  for name in missing:
-                      st = gh("GET", f"/actions/runs/{run_ids[name]}")
-                      if st.get("status") != "completed" or st.get("conclusion") != "success":
-                          repaired = False
-                  if repaired:
-                      break
-                  time.sleep(12)
-              for _ in range(8):
-                  channel, posts = get_posts()
-                  verified = {}
-                  for slot in normalized:
-                      name = slot["output_name"]
-                      due = expected[name]["utc"]
-                      wanted_media = f"/published/{name}.mp4"
-                      match = next(
-                          (
-                              p for p in posts
-                              if p.get("dueAt") == due
-                              and p.get("status") == "scheduled"
-                              and any(
-                                  str(a.get("mimeType","")).startswith("video/")
-                                  and wanted_media in str(a.get("source",""))
-                                  for a in (p.get("assets") or [])
-                              )
-                          ),
-                          None,
-                      )
-                      if match:
-                          verified[name] = match
-                  if len(verified) == len(normalized):
-                      break
-                  time.sleep(10)
-
-          if len(verified) != len(normalized):
-              missing = [s["output_name"] for s in normalized if s["output_name"] not in verified]
-              comment("MOTUS_DAY_FAILED\n\nRenderer completed, but Buffer verification is still missing for: " + ", ".join(missing))
-              raise SystemExit("Buffer verification incomplete")
-
-          rows = []
-          for slot in normalized:
-              name = slot["output_name"]
-              p = verified[name]
-              rows.append(
-                  f"| {slot['time'][:2]}:{slot['time'][2:]} | {name}.mp4 | QC/renderer success | scheduled | {p['dueAt']} |"
-              )
-          report = (
-              "MOTUS_DAY_COMPLETE\n\n"
-              + "| Slot | MP4 | QC | Buffer | dueAt |\n"
-              + "|---|---|---|---|---|\n"
-              + "\n".join(rows)
-              + "\n\nAll four slots are fully prepared. GitHub handled fan-out, retries and final Buffer verification."
+          body = (
+              "MOTUS_DAY_DISPATCHED\n\n"
+              + f"Date: {date}\n"
+              + "Slots: " + ", ".join(x["time"] for x in normalized)
+              + "\nNew renderer dispatches: " + (", ".join(dispatched) if dispatched else "none")
+              + "\nExisting renderer runs reused: " + (", ".join(reused) if reused else "none")
+              + "\n\nGitHub now owns rendering, retries and final Buffer verification. The parent issue remains open until MOTUS_DAY_COMPLETE."
           )
-          comment(report)
-          gh("PATCH", f"/issues/{issue_number}", {"state":"closed","state_reason":"completed"})
-          print("MOTUS_DAY_COMPLETE")
+          comment(body)
+          print("MOTUS_DAY_HANDOFF_COMPLETE")
           PY
