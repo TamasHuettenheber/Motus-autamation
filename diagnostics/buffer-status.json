@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-29T08:21:05.315163+00:00",
+  "checked_at_utc": "2026-09-29T15:42:04.879173+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -43,15 +43,15 @@
     {
       "id": "6abb478c93a81b612b5c6f65",
       "text": "Nur weil du schon Zeit in etwas gesteckt hast, musst du nicht noch mehr hineinstecken. Vergangene Mühe ist kein Vertrag mit deiner Zukunft. Frag dich heute Mittag: Würde ich diese Sache jetzt noch einmal anfangen, wenn ich erst heute entscheiden müsste? Wenn die Antwort Nein ist, darf ein Kurswechsel vernünftig sein – nicht schwach.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-09-29T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-09-29T10:03:47.275Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7690895055359446304",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-29-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abb478c93a81b612b5c6f65_video.mp4"
         }
       ]
     },
