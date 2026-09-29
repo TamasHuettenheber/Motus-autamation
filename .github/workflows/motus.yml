@@ -1,4 +1,5 @@
 name: Motus Renderer
+run-name: Motus ${{ inputs.output_name || github.event.issue.title }}
 
 on:
   workflow_dispatch:
@@ -213,10 +214,11 @@ jobs:
         run: |
           ffmpeg -y -stream_loop -1 -i work/broll.mp4 -i work/audio.mp3 -t "$VIDEO_DURATION" -filter_complex "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,eq=brightness=-0.08:saturation=0.90,drawbox=x=0:y=0:w=iw:h=ih:color=black@0.12:t=fill,subtitles=work/captions.ass[v]" -map "[v]" -map 1:a -c:v libx264 -preset medium -crf 20 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -movflags +faststart -shortest "work/$SAFE_NAME.mp4"
 
-      - name: Render animated fallback
+      - name: Reject missing moving B-roll
         if: env.REUSE_EXISTING != 'true' && env.BROLL_READY != 'true'
         run: |
-          ffmpeg -y -f lavfi -i "color=c=0x263842:s=1080x1920:r=30:d=$VIDEO_DURATION" -i work/audio.mp3 -filter_complex "[0:v]drawbox=x='mod(t*75,1500)-420':y=230:w=560:h=560:color=white@0.055:t=fill,drawbox=x='1080-mod(t*55,1600)':y=1180:w=620:h=620:color=white@0.035:t=fill,subtitles=work/captions.ass[v]" -map "[v]" -map 1:a -c:v libx264 -preset medium -crf 20 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -movflags +faststart -shortest "work/$SAFE_NAME.mp4"
+          echo "BROLL_REQUIRED: no valid moving B-roll candidate succeeded; diagnostic fallback is not publishable"
+          exit 1
 
       - name: Quality control
         run: |
