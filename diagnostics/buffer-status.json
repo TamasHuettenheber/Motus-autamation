@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-30T13:36:18.939303+00:00",
+  "checked_at_utc": "2026-09-30T19:08:20.527218+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -28,15 +28,15 @@
     {
       "id": "6abc70a05df9296bd8db9a0b",
       "text": "Nicht jede Müdigkeit bedeutet, dass du aufgeben solltest. Manchmal bedeutet sie nur, dass du zu lange ohne echte Pause funktioniert hast. Bevor du heute Abend an dir zweifelst, prüfe zuerst das Offensichtliche: Hast du gegessen, getrunken, dich bewegt und fünf Minuten nichts geleistet? Erschöpfung ist ein schlechter Berater für große Urteile über dein Leben.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-09-30T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-09-30T16:33:44.824Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7691367063310454049",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-30-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abc70a05df9296bd8db9a0b_video.mp4"
         }
       ]
     },
