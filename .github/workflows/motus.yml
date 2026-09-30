@@ -23,8 +23,6 @@ on:
         default: "motus-video"
         type: string
 
-  issues:
-    types: [opened]
 
 permissions:
   contents: write
@@ -33,9 +31,6 @@ permissions:
 
 jobs:
   render:
-    if: >
-      github.event_name == 'workflow_dispatch' ||
-      (github.event_name == 'issues' && startsWith(github.event.issue.title, '[MOTUS]'))
     runs-on: ubuntu-latest
 
     steps:
@@ -560,12 +555,6 @@ jobs:
           print("BUFFER_MEDIA:", media_url)
           PY
 
-      - name: Close Motus trigger issue
-        if: github.event_name == 'issues' && success()
-        env:
-          GH_TOKEN: ${{ github.token }}
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-        run: gh issue close "$ISSUE_NUMBER" --repo "${{ github.repository }}" --comment "Motus render completed successfully."
 
       - name: Trigger Motus day reconciliation
         if: always() && github.event_name == 'workflow_dispatch' && startsWith(inputs.output_name, 'motus-20')
