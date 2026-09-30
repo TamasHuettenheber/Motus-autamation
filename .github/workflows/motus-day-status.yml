@@ -64,7 +64,12 @@ jobs:
 
           def has_marker(issue_number, marker):
               try:
-                  return any(marker in str(c.get("body","")) for c in comments(issue_number))
+                  for item in comments(issue_number):
+                      body=str(item.get("body","") or "").strip()
+                      first_line=body.splitlines()[0].strip() if body else ""
+                      if first_line == marker:
+                          return True
+                  return False
               except Exception:
                   return False
 
