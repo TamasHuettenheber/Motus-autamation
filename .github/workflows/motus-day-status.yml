@@ -1,6 +1,9 @@
 name: Motus Daily Batch Status
 
 on:
+  push:
+    paths:
+      - ".github/workflows/motus-day-status.yml"
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch:
@@ -162,6 +165,7 @@ jobs:
 
           # Current renderer runs are enough for one day of batches; exact run-name binds them.
           renderer_runs = gh("GET","/actions/workflows/motus.yml/runs?event=workflow_dispatch&per_page=100").get("workflow_runs",[])
+          main_sha = str(gh("GET","/commits/main").get("sha",""))
           now=datetime.now(timezone.utc)
 
           for issue in parents:
@@ -240,7 +244,26 @@ jobs:
                   retrying=[]
                   exhausted=[]
                   for slot,run,attempt in failed:
-                      if attempt < 3:
+                      run_sha=str(run.get("head_sha") or "")
+                      if main_sha and run_sha != main_sha:
+                          # Workflow code changed after this renderer started. Re-running the
+                          # old run would reuse the old workflow definition, so dispatch exactly
+                          # one fresh run on current main with the same deterministic slot inputs.
+                          gh(
+                              "POST",
+                              "/actions/workflows/motus.yml/dispatches",
+                              {
+                                  "ref":"main",
+                                  "inputs":{
+                                      "audio_url":slot["audio_url"],
+                                      "text":slot["text"],
+                                      "broll_url":slot["broll_url"],
+                                      "output_name":slot["output_name"],
+                                  },
+                              },
+                          )
+                          retrying.append(f"{slot['output_name']} fresh-dispatch current-main after failed old-sha run={run['id']}")
+                      elif attempt < 3:
                           gh("POST",f"/actions/runs/{run['id']}/rerun-failed-jobs")
                           retrying.append(f"{slot['output_name']} run={run['id']} attempt={attempt+1}")
                       else:
@@ -292,10 +315,28 @@ jobs:
 
                   repair=[]
                   exhausted=[]
+                  slot_by_name={s["output_name"]:s for s in batch["slots"]}
                   for name in missing_names:
                       run=latest[name]
                       attempt=int(run.get("run_attempt") or 1)
-                      if attempt < 3:
+                      run_sha=str(run.get("head_sha") or "")
+                      slot=slot_by_name[name]
+                      if main_sha and run_sha != main_sha:
+                          gh(
+                              "POST",
+                              "/actions/workflows/motus.yml/dispatches",
+                              {
+                                  "ref":"main",
+                                  "inputs":{
+                                      "audio_url":slot["audio_url"],
+                                      "text":slot["text"],
+                                      "broll_url":slot["broll_url"],
+                                      "output_name":slot["output_name"],
+                                  },
+                              },
+                          )
+                          repair.append(f"{name} fresh-dispatch current-main after old-sha run={run['id']}")
+                      elif attempt < 3:
                           gh("POST",f"/actions/runs/{run['id']}/rerun")
                           repair.append(f"{name} run={run['id']} attempt={attempt+1}")
                       else:
