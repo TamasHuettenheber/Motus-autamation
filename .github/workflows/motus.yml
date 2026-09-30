@@ -285,15 +285,19 @@ jobs:
           # Discard the advisory history edit made earlier in this step before rebasing.
           # The MP4 is the critical output and must never be blocked by diagnostics.
           git restore diagnostics/broll-history.json 2>/dev/null || true
-          git add "published/$SAFE_NAME.mp4"
-          if ! git diff --cached --quiet; then
-            git commit -m "Publish $SAFE_NAME"
-            for attempt in 1 2 3; do
-              git pull --rebase origin main && git push && break
-              if [ "$attempt" -eq 3 ]; then exit 1; fi
-              git rebase --abort 2>/dev/null || true
-              sleep 3
-            done
+          if [ "$REUSE_EXISTING" != "true" ]; then
+            git add "published/$SAFE_NAME.mp4"
+            if ! git diff --cached --quiet; then
+              git commit -m "Publish $SAFE_NAME"
+              for attempt in 1 2 3; do
+                git pull --rebase origin main && git push && break
+                if [ "$attempt" -eq 3 ]; then exit 1; fi
+                git rebase --abort 2>/dev/null || true
+                sleep 3
+              done
+            fi
+          else
+            echo "REUSE_PUBLISH_GIT_SKIP: published MP4 already exists on main; no pathspec/add required"
           fi
           # B-roll history is advisory only. Refresh it after the MP4 push and never
           # fail the production if another parallel run changed the same JSON file.
