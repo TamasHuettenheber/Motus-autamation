@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-30T06:37:03.555037+00:00",
+  "checked_at_utc": "2026-09-30T13:36:18.939303+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -43,15 +43,15 @@
     {
       "id": "6abc70875df9296bd8db9683",
       "text": "Wenn dein Vormittag chaotisch war, musst du den Rest des Tages nicht abschreiben. Zieh mittags eine klare Grenze: Was ist wirklich noch wichtig, was kann warten und was darf komplett weg? Ein schlechter Start ist keine Verpflichtung für einen schlechten Tag. Du kannst jederzeit neu priorisieren. Nicht alles retten. Nur das Richtige als Nächstes tun.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-09-30T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-09-30T10:01:44.432Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7691266152596557089",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-30-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abc70875df9296bd8db9683_video.mp4"
         }
       ]
     },
