@@ -77,6 +77,12 @@
       "clip_id": "city-phone-13802094",
       "source": "https://www.pexels.com/video/a-man-in-a-suit-looking-at-his-phone-while-walking-in-the-city-13802094/",
       "used_at_utc": "2026-09-30T02:14:42.229425+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-01-1830",
+      "clip_id": "explicit",
+      "source": "issue",
+      "used_at_utc": "2026-09-30T21:48:37.956981+00:00"
     }
   ]
 }
