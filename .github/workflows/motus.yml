@@ -147,7 +147,18 @@ jobs:
           candidates=[]
           seen=set()
           if explicit:
-              candidates.append(('explicit',explicit,'issue',999))
+              matched=next(
+                  (clip for clip in library.get('clips',[])
+                   if clip.get('direct_url','').strip()==explicit),
+                  None,
+              )
+              if matched:
+                  if matched['id'] in recent_ids:
+                      raise SystemExit(f"BROLL_COOLDOWN_VIOLATION: explicit clip {matched['id']} was used within the last 8 renders")
+                  candidates.append((matched['id'],explicit,matched.get('source_page',''),999))
+              else:
+                  explicit_id='explicit-'+hashlib.sha256(explicit.encode()).hexdigest()[:12]
+                  candidates.append((explicit_id,explicit,'explicit-url',999))
               seen.add(explicit)
           for _,score,_,clip in ranked:
               url=clip.get('direct_url','').strip()
@@ -490,8 +501,7 @@ jobs:
                       )
                   print("Removed previous scheduled copy:", post["id"])
 
-          created = buffer_request(
-              """
+          create_query = """
               mutation CreatePost($input: CreatePostInput!) {
                 createPost(input: $input) {
                   __typename
@@ -510,27 +520,39 @@ jobs:
                   ... on MutationError { message }
                 }
               }
-              """,
-              {
-                  "input": {
-                      "text": text,
-                      "channelId": channel["id"],
-                      "schedulingType": "automatic",
-                      "mode": "customScheduled",
-                      "dueAt": due_at,
-                      "aiAssisted": True,
-                      "metadata": {"tiktok": {"isAiGenerated": True}},
-                      "assets": [
-                          {
-                              "video": {
-                                  "url": media_url,
-                                  "metadata": {"thumbnailOffset": 1000},
-                              }
+              """
+          create_variables = {
+              "input": {
+                  "text": text,
+                  "channelId": channel["id"],
+                  "schedulingType": "automatic",
+                  "mode": "customScheduled",
+                  "dueAt": due_at,
+                  "aiAssisted": True,
+                  "metadata": {"tiktok": {"isAiGenerated": True}},
+                  "assets": [
+                      {
+                          "video": {
+                              "url": media_url,
+                              "metadata": {"thumbnailOffset": 1000},
                           }
-                      ],
-                  }
-              },
-          )["createPost"]
+                      }
+                  ],
+              }
+          }
+
+          created = None
+          for create_attempt in range(1, 6):
+              created = buffer_request(create_query, create_variables)["createPost"]
+              if created.get("__typename") == "PostActionSuccess" and created.get("post"):
+                  break
+              message = str(created.get("message") or "")
+              if "Video could not be read from its URL" in message and create_attempt < 5:
+                  wait_seconds = 15 * create_attempt
+                  print(f"BUFFER_MEDIA_PROPAGATION_RETRY: attempt={create_attempt} wait={wait_seconds}s")
+                  time.sleep(wait_seconds)
+                  continue
+              break
 
           if created.get("__typename") != "PostActionSuccess" or not created.get("post"):
               raise RuntimeError("Buffer scheduling failed: " + json.dumps(created, ensure_ascii=False))
