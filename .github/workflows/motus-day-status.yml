@@ -1,9 +1,6 @@
 name: Motus Daily Batch Status
 
 on:
-  workflow_run:
-    workflows: ["Motus Renderer"]
-    types: [completed]
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch:
@@ -194,8 +191,13 @@ jobs:
 
               missing=[s for s in batch["slots"] if s["output_name"] not in latest]
               if missing:
-                  # Recover an internal dispatch that never produced a run. This is safe and
-                  # deterministic because exact run-name lookup prevents duplicates.
+                  # Give the parent batch enough time to finish dispatching all four renderer
+                  # runs before declaring a dispatch missing. This prevents duplicate fan-out
+                  # when reconciliation happens during the initial batch launch.
+                  if age_minutes < 3:
+                      print("WAIT_INITIAL_DISPATCH",issue_number,[s["output_name"] for s in missing])
+                      continue
+                  # Recover only genuinely missing dispatches after the grace window.
                   for slot in missing:
                       gh(
                           "POST",
