@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-30T19:08:20.527218+00:00",
+  "checked_at_utc": "2026-09-30T23:41:26.897071+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -11,17 +11,77 @@
   },
   "posts": [
     {
-      "id": "6abc70853b1eb12e6e3fa6b4",
-      "text": "Du musst heute Nacht nicht jede offene Frage lösen. Manche Gedanken wirken um zweiundzwanzig Uhr dringend, obwohl sie morgen mit Abstand viel kleiner aussehen. Schreib auf, was dich beschäftigt, und entscheide bewusst, wann du dich darum kümmerst. Aufschieben aus Angst ist etwas anderes als Vertagen mit Plan. Dein Kopf darf Feierabend bekommen.",
+      "id": "6abd9386c6f337a779f709f2",
+      "text": "Bevor du den Tag als zu wenig abstempelst, schau auf das, was tatsächlich passiert ist. Dein Kopf merkt sich offene Punkte oft stärker als erledigte. Schreib heute Abend drei Dinge auf, die du abgeschlossen, entschieden oder bewusst gelassen hast. Ein Tag muss nicht perfekt sein, um Fortschritt zu enthalten.",
       "status": "scheduled",
-      "dueAt": "2026-09-30T20:00:00.000Z",
+      "dueAt": "2026-10-01T20:00:00.000Z",
       "sentAt": null,
       "externalLink": null,
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-09-30-2200.mp4"
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-01-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6abd83b8f245fa4cd5333d9f",
+      "text": "Du musst nicht auf jede Nachricht sofort reagieren. Eine schnelle Antwort ist nicht automatisch eine gute Antwort. Wenn dich etwas trifft, ärgert oder unter Druck setzt, gib dir Zeit, bevor du reagierst. Abstand zwischen Reiz und Antwort ist keine Schwäche. Genau dort beginnt Selbstkontrolle.",
+      "status": "scheduled",
+      "dueAt": "2026-10-01T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-01-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6abd83c6f245fa4cd5333f5d",
+      "text": "Vergleiche deinen Fortschritt nicht mit dem fertigen Ergebnis anderer. Du siehst bei ihnen meistens die sichtbare Oberfläche und bei dir jeden Umweg. Frag dich heute Mittag nur: Was kann ich heute besser als vor vier Wochen? Fortschritt wird fairer, wenn du ihn an deiner eigenen Strecke misst.",
+      "status": "scheduled",
+      "dueAt": "2026-10-01T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-01-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6abd84cd9b58fd09c05a5236",
+      "text": "Heute Morgen musst du nicht schneller werden. Du musst klarer werden. Bevor der Tag dich zieht, entscheide bewusst, was heute nicht deine Energie bekommt. Eine Sache weniger kann dir mehr Fokus geben als fünf neue Vorsätze. Starte nicht mit mehr. Starte mit weniger Ablenkung.",
+      "status": "scheduled",
+      "dueAt": "2026-10-01T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-01-0700.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6abc70853b1eb12e6e3fa6b4",
+      "text": "Du musst heute Nacht nicht jede offene Frage lösen. Manche Gedanken wirken um zweiundzwanzig Uhr dringend, obwohl sie morgen mit Abstand viel kleiner aussehen. Schreib auf, was dich beschäftigt, und entscheide bewusst, wann du dich darum kümmerst. Aufschieben aus Angst ist etwas anderes als Vertagen mit Plan. Dein Kopf darf Feierabend bekommen.",
+      "status": "sent",
+      "dueAt": "2026-09-30T20:00:00.000Z",
+      "sentAt": "2026-09-30T20:02:52.523Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7691420932224634144",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abc70853b1eb12e6e3fa6b4_video.mp4"
         }
       ]
     },
@@ -697,51 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://www.tiktok.com/@motus614/video/7683573920171117846?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512523e964944d53470ad",
-      "text": "Du musst nicht jedem erklären, warum du dich veränderst. Selbstrespekt beginnt oft bei einem Nein, das Du nicht mehr rechtfertigst. #selbstwert #grenzen #mindset #motus #entwicklung",
-      "status": "sent",
-      "dueAt": "2026-09-08T20:00:21.000Z",
-      "sentAt": "2026-09-08T20:00:21.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7683256843417832726?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7683256843417832726?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6aba057673c74fd89db0762e",
-      "text": "Du wartest nicht auf Motivation. Motivation wartet auf deinen ersten Schritt. Nicht morgen. Heute. #motivation #disziplin #mindset #motus #neuanfang",
-      "status": "sent",
-      "dueAt": "2026-09-08T17:07:24.000Z",
-      "sentAt": "2026-09-08T17:07:24.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7683212266396749078?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7683212266396749078?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6aba057573c74fd89db07184",
-      "text": "Motivation kommt nicht vor dem Anfang. Sie entsteht durch den ersten Schritt. Was ist Dein erster Schritt heute? #motivation #disziplin #mindset #motus #neuanfang",
-      "status": "sent",
-      "dueAt": "2026-09-07T23:05:54.000Z",
-      "sentAt": "2026-09-07T23:05:54.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7682933538089372950?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7682933538089372950?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         }
       ]
     }
