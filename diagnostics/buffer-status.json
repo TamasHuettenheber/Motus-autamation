@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-01T13:02:21.464009+00:00",
+  "checked_at_utc": "2026-10-01T18:48:58.124394+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -28,15 +28,15 @@
     {
       "id": "6abd83b8f245fa4cd5333d9f",
       "text": "Du musst nicht auf jede Nachricht sofort reagieren. Eine schnelle Antwort ist nicht automatisch eine gute Antwort. Wenn dich etwas trifft, ärgert oder unter Druck setzt, gib dir Zeit, bevor du reagierst. Abstand zwischen Reiz und Antwort ist keine Schwäche. Genau dort beginnt Selbstkontrolle.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-01T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-01T16:32:38.623Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7691737813359873313",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-01-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abd83b8f245fa4cd5333d9f_video.mp4"
         }
       ]
     },
