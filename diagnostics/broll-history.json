@@ -113,6 +113,12 @@
       "clip_id": "journal-7260657",
       "source": "https://www.pexels.com/video/a-woman-writing-on-a-journal-7260657/",
       "used_at_utc": "2026-10-01T23:47:25.103304+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-02-1830",
+      "clip_id": "night-city-13658220",
+      "source": "https://www.pexels.com/video/people-walking-in-city-at-night-13658220/",
+      "used_at_utc": "2026-10-01T23:47:33.993747+00:00"
     }
   ]
 }
