@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-30T23:41:26.897071+00:00",
+  "checked_at_utc": "2026-10-01T05:40:44.646532+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -58,15 +58,15 @@
     {
       "id": "6abd84cd9b58fd09c05a5236",
       "text": "Heute Morgen musst du nicht schneller werden. Du musst klarer werden. Bevor der Tag dich zieht, entscheide bewusst, was heute nicht deine Energie bekommt. Eine Sache weniger kann dir mehr Fokus geben als fünf neue Vorsätze. Starte nicht mit mehr. Starte mit weniger Ablenkung.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-01T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-01T05:02:06.431Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7691559829168524576",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-01-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abd84cd9b58fd09c05a5236_video.mp4"
         }
       ]
     },
