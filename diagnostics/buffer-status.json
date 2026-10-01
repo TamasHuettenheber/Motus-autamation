@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-01T05:40:44.646532+00:00",
+  "checked_at_utc": "2026-10-01T13:02:21.464009+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -43,15 +43,15 @@
     {
       "id": "6abd83c6f245fa4cd5333f5d",
       "text": "Vergleiche deinen Fortschritt nicht mit dem fertigen Ergebnis anderer. Du siehst bei ihnen meistens die sichtbare Oberfläche und bei dir jeden Umweg. Frag dich heute Mittag nur: Was kann ich heute besser als vor vier Wochen? Fortschritt wird fairer, wenn du ihn an deiner eigenen Strecke misst.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-01T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-01T10:02:18.270Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7691637236613270817",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-01-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abd83c6f245fa4cd5333f5d_video.mp4"
         }
       ]
     },
