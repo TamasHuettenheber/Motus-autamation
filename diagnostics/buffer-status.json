@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-01T23:05:54.228852+00:00",
+  "checked_at_utc": "2026-10-02T02:10:33.962982+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -11,12 +11,72 @@
   },
   "posts": [
     {
+      "id": "6abef11045400a0e30005a5f",
+      "text": "Wenn dir heute ein Fehler im Kopf hängen bleibt, mach daraus keine Endlosschleife. Frag dich stattdessen: Was würde ich morgen konkret anders machen? Eine brauchbare Antwort reicht. Reflexion hilft dir weiter, Selbstbestrafung nicht. Du musst den Fehler nicht hundertmal denken, um aus ihm zu lernen. Nimm die Lektion mit und lass den Rest für heute liegen.",
+      "status": "scheduled",
+      "dueAt": "2026-10-02T20:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-02-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6abef127b435ee01190649a7",
+      "text": "Ein Nein braucht nicht immer eine lange Rechtfertigung. Wenn du etwas nicht willst, nicht kannst oder heute nicht mehr schaffst, darf eine klare Grenze kurz sein. Erklärungen sind sinnvoll, wenn sie etwas klären. Aber wenn du dich nur rechtfertigst, damit niemand enttäuscht ist, zahlst oft du den Preis. Klarheit ist nicht unhöflich.",
+      "status": "scheduled",
+      "dueAt": "2026-10-02T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-02-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6abef135c07bdc2fc26063be",
+      "text": "Zu viele Optionen machen Entscheidungen oft schwerer, nicht leichter. Wenn du heute Mittag zwischen zehn Dingen springst, leg dir einen Standard fest: Was mache ich immer zuerst, wenn alles gleichzeitig wichtig wirkt? Ein guter Standard spart Energie. Du musst nicht jede Entscheidung neu verhandeln. Manchmal ist weniger Auswahl genau das, was dich wieder handlungsfähig macht.",
+      "status": "scheduled",
+      "dueAt": "2026-10-02T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-02-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6abef10922215530c70a4299",
+      "text": "Heute Morgen geht es nicht darum, dich neu zu erfinden. Halte einfach eine kleine Zusage an dich selbst, bevor der Tag laut wird. Vielleicht fünf Minuten Bewegung, ein Glas Wasser oder die erste Aufgabe ohne Aufschub. Selbstvertrauen wächst nicht nur aus großen Erfolgen. Es wächst daraus, dass du dir selbst glaubst, wenn du sagst: Ich mache das jetzt.",
+      "status": "scheduled",
+      "dueAt": "2026-10-02T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-02-0700.mp4"
+        }
+      ]
+    },
+    {
       "id": "6abd9386c6f337a779f709f2",
       "text": "Bevor du den Tag als zu wenig abstempelst, schau auf das, was tatsächlich passiert ist. Dein Kopf merkt sich offene Punkte oft stärker als erledigte. Schreib heute Abend drei Dinge auf, die du abgeschlossen, entschieden oder bewusst gelassen hast. Ein Tag muss nicht perfekt sein, um Fortschritt zu enthalten.",
       "status": "sent",
       "dueAt": "2026-10-01T20:00:00.000Z",
       "sentAt": "2026-10-01T20:02:45.158Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7691792030850223393",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7691792030850223393?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -31,7 +91,7 @@
       "status": "sent",
       "dueAt": "2026-10-01T16:30:00.000Z",
       "sentAt": "2026-10-01T16:32:38.623Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7691737813359873313",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7691737813359873313?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -46,7 +106,7 @@
       "status": "sent",
       "dueAt": "2026-10-01T10:00:00.000Z",
       "sentAt": "2026-10-01T10:02:18.270Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7691637236613270817",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7691637236613270817?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -61,7 +121,7 @@
       "status": "sent",
       "dueAt": "2026-10-01T05:00:00.000Z",
       "sentAt": "2026-10-01T05:02:06.431Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7691559829168524576",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7691559829168524576?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -76,7 +136,7 @@
       "status": "sent",
       "dueAt": "2026-09-30T20:00:00.000Z",
       "sentAt": "2026-09-30T20:02:52.523Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7691420932224634144",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7691420932224634144?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -91,7 +151,7 @@
       "status": "sent",
       "dueAt": "2026-09-30T16:30:00.000Z",
       "sentAt": "2026-09-30T16:33:44.824Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7691367063310454049",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7691367063310454049?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -106,7 +166,7 @@
       "status": "sent",
       "dueAt": "2026-09-30T10:00:00.000Z",
       "sentAt": "2026-09-30T10:01:44.432Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7691266152596557089",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7691266152596557089?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -121,7 +181,7 @@
       "status": "sent",
       "dueAt": "2026-09-30T05:00:00.000Z",
       "sentAt": "2026-09-30T05:02:06.468Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7691188766500785440",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7691188766500785440?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -136,7 +196,7 @@
       "status": "sent",
       "dueAt": "2026-09-29T20:00:00.000Z",
       "sentAt": "2026-09-29T20:02:26.768Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7691049672705641760",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7691049672705641760?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -151,7 +211,7 @@
       "status": "sent",
       "dueAt": "2026-09-29T16:30:00.000Z",
       "sentAt": "2026-09-29T16:33:08.687Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7690995851367370017",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7690995851367370017?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -166,7 +226,7 @@
       "status": "sent",
       "dueAt": "2026-09-29T10:00:00.000Z",
       "sentAt": "2026-09-29T10:03:47.275Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7690895055359446304",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7690895055359446304?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -181,7 +241,7 @@
       "status": "sent",
       "dueAt": "2026-09-29T05:15:00.000Z",
       "sentAt": "2026-09-29T05:16:49.376Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7690821476668214561",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7690821476668214561?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -196,7 +256,7 @@
       "status": "sent",
       "dueAt": "2026-09-28T20:00:00.000Z",
       "sentAt": "2026-09-28T20:05:53.873Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7690678826329836832",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7690678826329836832?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -211,7 +271,7 @@
       "status": "sent",
       "dueAt": "2026-09-28T16:30:00.000Z",
       "sentAt": "2026-09-28T16:33:14.641Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7690624826431589665",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7690624826431589665?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -226,7 +286,7 @@
       "status": "sent",
       "dueAt": "2026-09-28T10:00:00.000Z",
       "sentAt": "2026-09-28T10:02:54.261Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7690524145544596768",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7690524145544596768?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://www.tiktok.com/@motus614/video/7684315976858406166?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512513e964944d5346f43",
-      "text": "Nicht jede Distanz ist Verlust. Manchmal findest du dabei dich selbst wieder. #selbstwert #grenzen #beziehungen #klarheit #motus",
-      "status": "sent",
-      "dueAt": "2026-09-10T20:00:17.000Z",
-      "sentAt": "2026-09-10T20:00:17.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7683999004388085014?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7683999004388085014?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512523e964944d53470a9",
-      "text": "Du brauchst keinen perfekten Tag. Du brauchst einen ehrlichen Anfang. #handeln #aufschub #disziplin #neuanfang #motus",
-      "status": "sent",
-      "dueAt": "2026-09-10T16:30:22.000Z",
-      "sentAt": "2026-09-10T16:30:22.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7683944907731406102?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7683944907731406102?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512523e964944d5347056",
-      "text": "Grenzen vertreiben nicht die Richtigen. Sie zeigen, wer dich wirklich respektiert. #selbstwert #grenzen #beziehungen #entwicklung #motus",
-      "status": "sent",
-      "dueAt": "2026-09-09T20:00:05.000Z",
-      "sentAt": "2026-09-09T20:00:05.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7683627859201592598?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7683627859201592598?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512513e964944d5347044",
-      "text": "Mach heute absichtlich weniger – aber das Richtige. Sieben Minuten reichen für den Anfang. #disziplin #aufschub #handeln #fokus #motus",
-      "status": "sent",
-      "dueAt": "2026-09-09T16:30:42.000Z",
-      "sentAt": "2026-09-09T16:30:42.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7683573920171117846?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7683573920171117846?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         }
       ]
     }
