@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-02T02:10:33.962982+00:00",
+  "checked_at_utc": "2026-10-02T09:38:54.992503+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -58,15 +58,15 @@
     {
       "id": "6abef10922215530c70a4299",
       "text": "Heute Morgen geht es nicht darum, dich neu zu erfinden. Halte einfach eine kleine Zusage an dich selbst, bevor der Tag laut wird. Vielleicht fünf Minuten Bewegung, ein Glas Wasser oder die erste Aufgabe ohne Aufschub. Selbstvertrauen wächst nicht nur aus großen Erfolgen. Es wächst daraus, dass du dir selbst glaubst, wenn du sagst: Ich mache das jetzt.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-02T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-02T05:02:04.276Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7691930885750312225",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-02-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abef10922215530c70a4299_video.mp4"
         }
       ]
     },
