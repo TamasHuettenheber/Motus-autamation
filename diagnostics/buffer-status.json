@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-02T09:38:54.992503+00:00",
+  "checked_at_utc": "2026-10-02T16:14:02.378543+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -43,15 +43,15 @@
     {
       "id": "6abef135c07bdc2fc26063be",
       "text": "Zu viele Optionen machen Entscheidungen oft schwerer, nicht leichter. Wenn du heute Mittag zwischen zehn Dingen springst, leg dir einen Standard fest: Was mache ich immer zuerst, wenn alles gleichzeitig wichtig wirkt? Ein guter Standard spart Energie. Du musst nicht jede Entscheidung neu verhandeln. Manchmal ist weniger Auswahl genau das, was dich wieder handlungsfähig macht.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-02T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-02T10:02:21.469Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7692008298433793312",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-02-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abef135c07bdc2fc26063be_video.mp4"
         }
       ]
     },
