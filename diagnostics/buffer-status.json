@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-02T16:14:02.378543+00:00",
+  "checked_at_utc": "2026-10-02T21:17:02.543353+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -13,30 +13,30 @@
     {
       "id": "6abef11045400a0e30005a5f",
       "text": "Wenn dir heute ein Fehler im Kopf hängen bleibt, mach daraus keine Endlosschleife. Frag dich stattdessen: Was würde ich morgen konkret anders machen? Eine brauchbare Antwort reicht. Reflexion hilft dir weiter, Selbstbestrafung nicht. Du musst den Fehler nicht hundertmal denken, um aus ihm zu lernen. Nimm die Lektion mit und lass den Rest für heute liegen.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-02T20:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-02T20:02:21.706Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7692162953126202657",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-02-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abef11045400a0e30005a5f_video.mp4"
         }
       ]
     },
     {
       "id": "6abef127b435ee01190649a7",
       "text": "Ein Nein braucht nicht immer eine lange Rechtfertigung. Wenn du etwas nicht willst, nicht kannst oder heute nicht mehr schaffst, darf eine klare Grenze kurz sein. Erklärungen sind sinnvoll, wenn sie etwas klären. Aber wenn du dich nur rechtfertigst, damit niemand enttäuscht ist, zahlst oft du den Preis. Klarheit ist nicht unhöflich.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-02T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-02T16:32:40.242Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7692108884906872097",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-02-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abef127b435ee01190649a7_video.mp4"
         }
       ]
     },
