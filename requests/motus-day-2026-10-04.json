@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-04",
+  "slots": [
+    {
+      "slot": "0700",
+      "time": "07:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/2a356d81-82fb-4773-af02-7f7a97e2e3ca.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/18303443/18303443-hd_1080_1920_60fps.mp4",
+      "text": "Bevor du heute auf Nachrichten, Termine und Erwartungen reagierst, setz selbst den ersten Punkt. Wähle eine Sache, die heute wirklich zählt, und gib ihr die ersten zehn konzentrierten Minuten. So startet dein Tag nicht mit Fremdsteuerung, sondern mit Richtung. Was bekommt heute deine ersten zehn Minuten? Schreib es in die Kommentare."
+    },
+    {
+      "slot": "1200",
+      "time": "12:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/fa4dc3e0-a6af-4c15-8d4a-95ce7acf7d6f.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/9198715/9198715-hd_1080_1920_25fps.mp4",
+      "text": "Wenn du bei einer Aufgabe festhängst, brauchst du nicht immer mehr Motivation. Manchmal ist der nächste Schritt einfach noch zu groß formuliert. Mach ihn kleiner, bis er fast lächerlich leicht wird: Datei öffnen, zwei Sätze schreiben, einen Anruf machen. Bewegung erzeugt oft erst die Motivation. Welchen nächsten Schritt kannst du heute kleiner machen? Schreib ihn in die Kommentare."
+    },
+    {
+      "slot": "1830",
+      "time": "18:30",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/489592d0-a082-4a29-a2fd-b1948638461f.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/13802094/13802094-uhd_2160_3840_24fps.mp4",
+      "text": "Nicht jede Nachricht verdient sofort deine Aufmerksamkeit. Wenn du ständig auf jedes Signal reagierst, entscheidet dein Handy, worauf du dich konzentrierst. Leg heute für eine Weile einen festen Zeitraum ohne Benachrichtigungen fest und beobachte, was mit deinem Kopf passiert. Welche App unterbrichst du heute bewusst? Schreib sie in die Kommentare."
+    },
+    {
+      "slot": "2200",
+      "time": "22:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/ffd4d057-955a-445b-bfdb-9a8a2901d8e2.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/32661246/13925574_2160_3840_25fps.mp4",
+      "text": "Du musst heute nicht schon den ganzen morgigen Tag lösen. Schreib dir vor dem Schlafen genau den ersten Schritt für morgen auf und lass den Rest liegen. Damit gibst du deinem Kopf einen klaren Startpunkt, ohne die Nacht zur Planungsrunde zu machen. Wenn du jemanden kennst, der abends nie abschalten kann, schick ihm dieses Video weiter."
+    }
+  ]
+}
