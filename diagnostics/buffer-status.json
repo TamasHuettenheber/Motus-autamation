@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-03T12:27:37.505058+00:00",
+  "checked_at_utc": "2026-10-03T17:12:14.656303+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -28,15 +28,15 @@
     {
       "id": "6ac053ee724c7034229c58af",
       "text": "Offene Schleifen ziehen Aufmerksamkeit, auch wenn du gerade gar nicht daran arbeitest. Bevor dein Abend beginnt, schließe heute bewusst eine davon: beantworten, entscheiden, absagen oder auf einen festen Termin setzen. Du musst nicht alles erledigen. Aber eine offene Sache weniger macht den Kopf leichter. Welche Schleife schließt du heute? Schreib es in die Kommentare.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-03T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-03T16:32:25.953Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7692479876133063969",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-03-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac053ee724c7034229c58af_video.mp4"
         }
       ]
     },
