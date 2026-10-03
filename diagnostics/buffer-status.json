@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-03T17:12:14.656303+00:00",
+  "checked_at_utc": "2026-10-03T21:08:14.793671+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -13,15 +13,15 @@
     {
       "id": "6ac053fb5831428806ab48dd",
       "text": "Du darfst heute bewusst Schluss machen. Nicht jede freie Minute muss noch produktiv werden. Erholung beginnt oft erst dann, wenn du aufhörst, innerlich weiterzuarbeiten. Leg für heute fest: Das reicht. Morgen ist wieder Zeit für den Rest. Wenn jemand in deinem Umfeld das gerade hören muss, schick ihm dieses Video weiter.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-03T20:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-03T20:02:14.205Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7692534014984408352",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-03-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac053fb5831428806ab48dd_video.mp4"
         }
       ]
     },
