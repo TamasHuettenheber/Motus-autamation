@@ -149,6 +149,12 @@
       "clip_id": "sunrise-sea-18303443",
       "source": "https://www.pexels.com/video/sunrise-over-the-sea-vertical-video-18303443/",
       "used_at_utc": "2026-10-03T21:13:47.916148+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-04-2200",
+      "clip_id": "rain-window-32661246",
+      "source": "https://www.pexels.com/video/rainy-window-view-with-drops-on-glass-32661246/",
+      "used_at_utc": "2026-10-03T21:13:55.056095+00:00"
     }
   ]
 }
