@@ -22,6 +22,11 @@ on:
         required: true
         default: "motus-video"
         type: string
+      force_rerender:
+        description: "Vorhandene MP4 trotz gleichem Output-Namen neu rendern"
+        required: false
+        default: false
+        type: boolean
 
 
 permissions:
@@ -49,6 +54,7 @@ jobs:
           DISPATCH_TEXT: ${{ inputs.text }}
           DISPATCH_BROLL: ${{ inputs.broll_url }}
           DISPATCH_OUTPUT: ${{ inputs.output_name }}
+          FORCE_RERENDER: ${{ inputs.force_rerender }}
           ISSUE_BODY: ${{ github.event.issue.body }}
         run: |
           python3 - <<'PY'
@@ -84,6 +90,11 @@ jobs:
           )"
           echo "AUDIO_DURATION=$AUDIO_DURATION" >> "$GITHUB_ENV"
           echo "VIDEO_DURATION=$VIDEO_DURATION" >> "$GITHUB_ENV"
+          MUSIC_URL="https://raw.githubusercontent.com/tannerhelland/free-music/master/mp3/Now%20or%20Never.mp3"
+          curl -L --fail --retry 3 --retry-delay 2 "$MUSIC_URL" -o work/music_source.mp3
+          ffmpeg -y -stream_loop -1 -i work/music_source.mp3 -t "$VIDEO_DURATION" -ar 48000 -ac 2 -b:a 192k work/music.mp3
+          test -s work/music.mp3
+          echo "MOTUS_MUSIC_PRESENT=true" >> "$GITHUB_ENV"
 
       - name: Build timed safe-zone captions
         run: |
@@ -208,7 +219,11 @@ jobs:
         id: reuse
         run: |
           URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/main/published/$SAFE_NAME.mp4"
-          if curl -L --fail --silent --show-error "$URL" -o "work/$SAFE_NAME.mp4" && test -s "work/$SAFE_NAME.mp4" && ffprobe -v error "work/$SAFE_NAME.mp4" >/dev/null 2>&1; then
+          if [ "$FORCE_RERENDER" = "true" ]; then
+            rm -f "work/$SAFE_NAME.mp4"
+            echo "REUSE_EXISTING=false" >> "$GITHUB_ENV"
+            echo "FORCE_RERENDER=true: existing published MP4 will be replaced after QC"
+          elif curl -L --fail --silent --show-error "$URL" -o "work/$SAFE_NAME.mp4" && test -s "work/$SAFE_NAME.mp4" && ffprobe -v error "work/$SAFE_NAME.mp4" >/dev/null 2>&1; then
             echo "REUSE_EXISTING=true" >> "$GITHUB_ENV"
             echo "REUSE_EXISTING=true"
           else
@@ -219,7 +234,7 @@ jobs:
       - name: Render with B-roll
         if: env.REUSE_EXISTING != 'true' && env.BROLL_READY == 'true'
         run: |
-          ffmpeg -y -stream_loop -1 -i work/broll.mp4 -i work/audio.mp3 -t "$VIDEO_DURATION" -filter_complex "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,eq=brightness=-0.08:saturation=0.90,drawbox=x=0:y=0:w=iw:h=ih:color=black@0.12:t=fill,subtitles=work/captions.ass[v]" -map "[v]" -map 1:a -c:v libx264 -preset medium -crf 20 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -movflags +faststart -shortest "work/$SAFE_NAME.mp4"
+          ffmpeg -y -stream_loop -1 -i work/broll.mp4 -i work/audio.mp3 -t "$VIDEO_DURATION" -stream_loop -1 -i work/music.mp3 -filter_complex "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,eq=brightness=-0.08:saturation=0.90,drawbox=x=0:y=0:w=iw:h=ih:color=black@0.12:t=fill,subtitles=work/captions.ass[v];[1:a]volume=1.0[voice];[2:a]volume=0.16,afade=t=in:st=0:d=0.6[music];[voice][music]amix=inputs=2:duration=first:dropout_transition=0[a]" -map "[v]" -map "[a]" -c:v libx264 -preset medium -crf 20 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -movflags +faststart -shortest "work/$SAFE_NAME.mp4"
 
       - name: Reject missing moving B-roll
         if: env.REUSE_EXISTING != 'true' && env.BROLL_READY != 'true'
@@ -235,6 +250,7 @@ jobs:
           CODEC="$(ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of csv=p=0 "$VIDEO")"
           PIXFMT="$(ffprobe -v error -select_streams v:0 -show_entries stream=pix_fmt -of csv=p=0 "$VIDEO")"
           AUDIO_CODEC="$(ffprobe -v error -select_streams a:0 -show_entries stream=codec_name -of csv=p=0 "$VIDEO")"
+          test "${MOTUS_MUSIC_PRESENT:-}" = "true"
           FINAL_DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$VIDEO")"
           FILE_SIZE="$(stat -c%s "$VIDEO")"
           test "$WIDTH" = "1080"; test "$HEIGHT" = "1920"; test "$CODEC" = "h264"; test "$PIXFMT" = "yuv420p"; test "$AUDIO_CODEC" = "aac"; test "$FILE_SIZE" -ge 100000
@@ -341,6 +357,7 @@ jobs:
           key = os.environ.get("BUFFER_API_KEY", "").strip()
           safe_name = os.environ.get("SAFE_NAME", "").strip()
           text = os.environ.get("MOTUS_TEXT", "").strip()
+          text = text + "\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)"
           repo = os.environ.get("GITHUB_REPOSITORY", "").strip()
 
           if not key:
