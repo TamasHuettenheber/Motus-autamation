@@ -76,6 +76,7 @@ jobs:
           date = str(batch.get("date","")).strip()
           slots = batch.get("slots")
           dry_run = bool(batch.get("dry_run", False))
+          force_rerender = bool(batch.get("force_rerender", False))
           if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
               raise SystemExit("Invalid or missing date")
           if not isinstance(slots, list) or len(slots) != 4:
@@ -131,7 +132,7 @@ jobs:
 
           for slot in normalized:
               title = f"Motus {slot['output_name']}"
-              if title in existing_titles:
+              if title in existing_titles and not force_rerender:
                   reused.append(slot["output_name"])
                   print("REUSE_EXISTING_RUN:", slot["output_name"])
                   continue
@@ -145,6 +146,7 @@ jobs:
                           "text": slot["text"],
                           "broll_url": slot["broll_url"],
                           "output_name": slot["output_name"],
+                          "force_rerender": "true" if force_rerender else "false",
                       },
                   },
               )
