@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-02T21:17:02.543353+00:00",
+  "checked_at_utc": "2026-10-03T01:05:34.171095+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6ac053fb5831428806ab48dd",
+      "text": "Du darfst heute bewusst Schluss machen. Nicht jede freie Minute muss noch produktiv werden. Erholung beginnt oft erst dann, wenn du aufhörst, innerlich weiterzuarbeiten. Leg für heute fest: Das reicht. Morgen ist wieder Zeit für den Rest. Wenn jemand in deinem Umfeld das gerade hören muss, schick ihm dieses Video weiter.",
+      "status": "scheduled",
+      "dueAt": "2026-10-03T20:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-03-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac053ee724c7034229c58af",
+      "text": "Offene Schleifen ziehen Aufmerksamkeit, auch wenn du gerade gar nicht daran arbeitest. Bevor dein Abend beginnt, schließe heute bewusst eine davon: beantworten, entscheiden, absagen oder auf einen festen Termin setzen. Du musst nicht alles erledigen. Aber eine offene Sache weniger macht den Kopf leichter. Welche Schleife schließt du heute? Schreib es in die Kommentare.",
+      "status": "scheduled",
+      "dueAt": "2026-10-03T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-03-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac053f5ad2f47bd7d4de9d6",
+      "text": "Perfektion hält dich oft länger auf als die Aufgabe selbst. Frag dich heute Mittag: Reichen achtzig Prozent, damit ich weitermachen kann? Wenn ja, dann hör auf zu polieren und bring es raus. Fertig schafft Bewegung, perfekt oft nur Verzögerung. Wo könntest du heute mit achtzig Prozent weiterkommen? Schreib es in die Kommentare.",
+      "status": "scheduled",
+      "dueAt": "2026-10-03T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-03-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac053f5ad2f47bd7d4dea31",
+      "text": "Starte heute mit einem Mini-Sieg. Nimm dir genau die kleine nervende Aufgabe vor, die du seit Tagen wegschiebst, und erledige sie zuerst. Nicht weil sie groß ist, sondern weil sie Platz im Kopf frisst. Ein kleiner Haken am Morgen kann mehr Energie geben als zehn neue Pläne. Welche Kleinigkeit willst du heute endlich abhaken? Schreib sie in die Kommentare.",
+      "status": "scheduled",
+      "dueAt": "2026-10-03T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-03-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6abef11045400a0e30005a5f",
       "text": "Wenn dir heute ein Fehler im Kopf hängen bleibt, mach daraus keine Endlosschleife. Frag dich stattdessen: Was würde ich morgen konkret anders machen? Eine brauchbare Antwort reicht. Reflexion hilft dir weiter, Selbstbestrafung nicht. Du musst den Fehler nicht hundertmal denken, um aus ihm zu lernen. Nimm die Lektion mit und lass den Rest für heute liegen.",
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://www.tiktok.com/@motus614/video/7684883109287922966?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512513e964944d5346f62",
-      "text": "Du darfst Verantwortung übernehmen, ohne gegen dich selbst zu kämpfen. Ehrlichkeit und Selbstrespekt schließen sich nicht aus. #selbstwert #innereruhe #entwicklung #psychologie #motus",
-      "status": "sent",
-      "dueAt": "2026-09-12T20:00:12.000Z",
-      "sentAt": "2026-09-12T20:00:12.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7684741153853279510?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7684741153853279510?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512523e964944d5347050",
-      "text": "Ein später Anfang ist kein verlorener Tag. Zwölf konzentrierte Minuten schlagen eine weitere Ausrede. #aufschub #disziplin #handeln #neuanfang #motus",
-      "status": "sent",
-      "dueAt": "2026-09-12T16:30:11.000Z",
-      "sentAt": "2026-09-12T16:30:11.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7684687037332507907?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7684687037332507907?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512513e964944d5346f6a",
-      "text": "Eine Grenze fühlt sich nicht immer sofort gut an. Manchmal kommen zuerst Schuldgefühle – und später Selbstrespekt. #selbstwert #grenzen #beziehungen #psychologie #motus",
-      "status": "sent",
-      "dueAt": "2026-09-11T20:00:16.000Z",
-      "sentAt": "2026-09-11T20:00:16.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7684370068272155906?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7684370068272155906?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512513e964944d5346f3f",
-      "text": "Aufschub ist oft keine Faulheit. Der erste Schritt macht aus Möglichkeiten eine Entscheidung. Mach ihn heute zwei Minuten lang. #aufschub #disziplin #handeln #fokus #motus",
-      "status": "sent",
-      "dueAt": "2026-09-11T16:30:18.000Z",
-      "sentAt": "2026-09-11T16:30:18.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7684315976858406166?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7684315976858406166?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         }
       ]
     }
