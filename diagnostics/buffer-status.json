@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-04T06:46:12.212087+00:00",
+  "checked_at_utc": "2026-10-04T13:08:57.263915+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -43,15 +43,15 @@
     {
       "id": "6ac1703daa79e514b9ffc68d",
       "text": "Wenn du bei einer Aufgabe festhängst, brauchst du nicht immer mehr Motivation. Manchmal ist der nächste Schritt einfach noch zu groß formuliert. Mach ihn kleiner, bis er fast lächerlich leicht wird: Datei öffnen, zwei Sätze schreiben, einen Anruf machen. Bewegung erzeugt oft erst die Motivation. Welchen nächsten Schritt kannst du heute kleiner machen? Schreib ihn in die Kommentare.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-04T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-04T10:02:29.207Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7692750456698768673",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-04-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac1703daa79e514b9ffc68d_video.mp4"
         }
       ]
     },
