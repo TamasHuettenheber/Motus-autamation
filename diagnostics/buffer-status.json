@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-03T21:08:14.793671+00:00",
+  "checked_at_utc": "2026-10-04T00:31:27.546031+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6ac170607ff895d757bc0e32",
+      "text": "Du musst heute nicht schon den ganzen morgigen Tag lösen. Schreib dir vor dem Schlafen genau den ersten Schritt für morgen auf und lass den Rest liegen. Damit gibst du deinem Kopf einen klaren Startpunkt, ohne die Nacht zur Planungsrunde zu machen. Wenn du jemanden kennst, der abends nie abschalten kann, schick ihm dieses Video weiter.",
+      "status": "scheduled",
+      "dueAt": "2026-10-04T20:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-04-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac170227ff895d757bc06b7",
+      "text": "Nicht jede Nachricht verdient sofort deine Aufmerksamkeit. Wenn du ständig auf jedes Signal reagierst, entscheidet dein Handy, worauf du dich konzentrierst. Leg heute für eine Weile einen festen Zeitraum ohne Benachrichtigungen fest und beobachte, was mit deinem Kopf passiert. Welche App unterbrichst du heute bewusst? Schreib sie in die Kommentare.",
+      "status": "scheduled",
+      "dueAt": "2026-10-04T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-04-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac1703daa79e514b9ffc68d",
+      "text": "Wenn du bei einer Aufgabe festhängst, brauchst du nicht immer mehr Motivation. Manchmal ist der nächste Schritt einfach noch zu groß formuliert. Mach ihn kleiner, bis er fast lächerlich leicht wird: Datei öffnen, zwei Sätze schreiben, einen Anruf machen. Bewegung erzeugt oft erst die Motivation. Welchen nächsten Schritt kannst du heute kleiner machen? Schreib ihn in die Kommentare.",
+      "status": "scheduled",
+      "dueAt": "2026-10-04T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-04-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac1700fad7fd83bc503f51c",
+      "text": "Bevor du heute auf Nachrichten, Termine und Erwartungen reagierst, setz selbst den ersten Punkt. Wähle eine Sache, die heute wirklich zählt, und gib ihr die ersten zehn konzentrierten Minuten. So startet dein Tag nicht mit Fremdsteuerung, sondern mit Richtung. Was bekommt heute deine ersten zehn Minuten? Schreib es in die Kommentare.",
+      "status": "scheduled",
+      "dueAt": "2026-10-04T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-04-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6ac053fb5831428806ab48dd",
       "text": "Du darfst heute bewusst Schluss machen. Nicht jede freie Minute muss noch produktiv werden. Erholung beginnt oft erst dann, wenn du aufhörst, innerlich weiterzuarbeiten. Leg für heute fest: Das reicht. Morgen ist wieder Zeit für den Rest. Wenn jemand in deinem Umfeld das gerade hören muss, schick ihm dieses Video weiter.",
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://www.tiktok.com/@motus614/video/7685488553161231638?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512523e964944d53470ab",
-      "text": "Weniger vornehmen. Eine Sache wirklich tun. #Fokus #Disziplin #Überforderung #Produktivität #Motus",
-      "status": "sent",
-      "dueAt": "2026-09-14T16:32:04.000Z",
-      "sentAt": "2026-09-14T16:32:04.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7685429655658106134?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7685429655658106134?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512513e964944d5346f68",
-      "text": "Eine Grenze ist kein Angriff. Sie zeigt, wie Nähe gesund bleiben kann. #Selbstwert #Grenzen #Beziehungen #Psychologie #Motus",
-      "status": "sent",
-      "dueAt": "2026-09-13T20:01:51.000Z",
-      "sentAt": "2026-09-13T20:01:51.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7685112648811302166?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7685112648811302166?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512513e964944d5347046",
-      "text": "Du brauchst keinen perfekten Start. Du brauchst einen echten. #Disziplin #Anfangen #Motivation #Fokus #Motus",
-      "status": "sent",
-      "dueAt": "2026-09-13T16:30:49.000Z",
-      "sentAt": "2026-09-13T16:30:49.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7685058276035153174?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7685058276035153174?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512513e964944d5346f92",
-      "text": "Klein anfangen ist kein kleiner Erfolg. Es ist der Moment, in dem aus Warten Bewegung wird. #motivation #anfangen #aufschub #selbstentwicklung #motus",
-      "status": "sent",
-      "dueAt": "2026-09-13T05:11:21.000Z",
-      "sentAt": "2026-09-13T05:11:21.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7684883109287922966?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7684883109287922966?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         }
       ]
     }
