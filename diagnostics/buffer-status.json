@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-04T13:08:57.263915+00:00",
+  "checked_at_utc": "2026-10-04T18:05:52.191960+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -28,15 +28,15 @@
     {
       "id": "6ac170227ff895d757bc06b7",
       "text": "Nicht jede Nachricht verdient sofort deine Aufmerksamkeit. Wenn du ständig auf jedes Signal reagierst, entscheidet dein Handy, worauf du dich konzentrierst. Leg heute für eine Weile einen festen Zeitraum ohne Benachrichtigungen fest und beobachte, was mit deinem Kopf passiert. Welche App unterbrichst du heute bewusst? Schreib sie in die Kommentare.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-04T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-04T16:31:05.845Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7692850895570128161",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-04-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac170227ff895d757bc06b7_video.mp4"
         }
       ]
     },
