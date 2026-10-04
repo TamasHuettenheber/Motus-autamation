@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-04T00:31:27.546031+00:00",
+  "checked_at_utc": "2026-10-04T06:46:12.212087+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -58,15 +58,15 @@
     {
       "id": "6ac1700fad7fd83bc503f51c",
       "text": "Bevor du heute auf Nachrichten, Termine und Erwartungen reagierst, setz selbst den ersten Punkt. Wähle eine Sache, die heute wirklich zählt, und gib ihr die ersten zehn konzentrierten Minuten. So startet dein Tag nicht mit Fremdsteuerung, sondern mit Richtung. Was bekommt heute deine ersten zehn Minuten? Schreib es in die Kommentare.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-04T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-04T05:01:51.668Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7692672949043678497",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-04-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac1700fad7fd83bc503f51c_video.mp4"
         }
       ]
     },
