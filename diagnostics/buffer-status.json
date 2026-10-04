@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-04T18:05:52.191960+00:00",
+  "checked_at_utc": "2026-10-04T21:18:11.456118+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -13,15 +13,15 @@
     {
       "id": "6ac170607ff895d757bc0e32",
       "text": "Du musst heute nicht schon den ganzen morgigen Tag lösen. Schreib dir vor dem Schlafen genau den ersten Schritt für morgen auf und lass den Rest liegen. Damit gibst du deinem Kopf einen klaren Startpunkt, ohne die Nacht zur Planungsrunde zu machen. Wenn du jemanden kennst, der abends nie abschalten kann, schick ihm dieses Video weiter.",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-04T20:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-04T20:02:21.010Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7692905093351476513",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-04-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac170607ff895d757bc0e32_video.mp4"
         }
       ]
     },
