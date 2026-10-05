@@ -214,7 +214,7 @@ jobs:
           echo "BROLL_SELECTED_SOURCE=$SELECTED_SOURCE" >> "$GITHUB_ENV"
           echo "BROLL_ATTEMPTS=$ATTEMPT" >> "$GITHUB_ENV"
           if [ "$READY" != "true" ]; then
-            echo "BROLL_FALLBACK: no candidate succeeded; animated fallback will be used"
+            echo "BROLL_REQUIRED: no moving B-roll candidate succeeded; no fallback will be published"
           fi
 
       - name: Reuse published QC video
