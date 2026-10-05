@@ -203,6 +203,12 @@
       "clip_id": "train-window-36620147",
       "source": "https://www.pexels.com/video/scenic-views-through-train-window-36620147/",
       "used_at_utc": "2026-10-05T21:28:16.056868+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-06-2200",
+      "clip_id": "night-walk-4121893",
+      "source": "https://www.pexels.com/video/a-person-walking-in-the-street-at-night-4121893/",
+      "used_at_utc": "2026-10-05T21:30:45.574313+00:00"
     }
   ]
 }
