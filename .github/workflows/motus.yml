@@ -165,8 +165,10 @@ jobs:
               )
               if matched:
                   if matched['id'] in recent_ids:
-                      raise SystemExit(f"BROLL_COOLDOWN_VIOLATION: explicit clip {matched['id']} was used within the last 8 renders")
-                  candidates.append((matched['id'],explicit,matched.get('source_page',''),999))
+                      print(f"BROLL_COOLDOWN_SKIP: explicit clip {matched['id']} was used within the last 8 renders; selecting a fresh library candidate instead")
+                  else:
+                      candidates.append((matched['id'],explicit,matched.get('source_page',''),999))
+                      seen.add(explicit)
               else:
                   explicit_id='explicit-'+hashlib.sha256(explicit.encode()).hexdigest()[:12]
                   candidates.append((explicit_id,explicit,'explicit-url',999))
