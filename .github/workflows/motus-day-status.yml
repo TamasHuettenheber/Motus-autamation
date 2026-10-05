@@ -390,15 +390,23 @@ jobs:
                   ).replace(tzinfo=berlin)
                   due=local.astimezone(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00","Z")
                   expected[slot["output_name"]]={"local":local.isoformat(),"utc":due}
-                  valid_statuses={"scheduled"}
-                  if local.astimezone(timezone.utc) <= now:
-                      valid_statuses.add("sent")
-                  matches=[
-                      p for p in posts
-                      if p.get("dueAt")==due
-                      and p.get("status") in valid_statuses
-                      and any(str(a.get("mimeType","")).startswith("video/") for a in (p.get("assets") or []))
-                  ]
+                  media_url=f"https://raw.githubusercontent.com/{repo}/main/published/{slot['output_name']}.mp4"
+                  is_past=local.astimezone(timezone.utc) <= now
+                  valid_statuses={"scheduled","sent"} if is_past else {"scheduled"}
+                  matches=[]
+                  for p in posts:
+                      if p.get("status") not in valid_statuses:
+                          continue
+                      assets=p.get("assets") or []
+                      has_video=any(str(a.get("mimeType","")).startswith("video/") for a in assets)
+                      if not has_video:
+                          continue
+                      sources={str(a.get("source") or "") for a in assets}
+                      if is_past:
+                          if media_url in sources:
+                              matches.append(p)
+                      elif p.get("dueAt")==due:
+                          matches.append(p)
                   if matches:
                       verified[slot["output_name"]]=matches[0]
 
@@ -413,8 +421,23 @@ jobs:
 
                   repair=[]
                   exhausted=[]
+                  active_titles=set()
+                  for active_run in renderer_runs:
+                      if str(active_run.get("status","")) not in {"queued","in_progress"}:
+                          continue
+                      try:
+                          active_started=datetime.fromisoformat(str(active_run.get("created_at","")).replace("Z","+00:00"))
+                          active_age=(now-active_started).total_seconds()/60.0
+                      except Exception:
+                          continue
+                      if active_age < 10:
+                          active_titles.add(str(active_run.get("display_title","")))
                   slot_by_name={s["output_name"]:s for s in batch["slots"]}
                   for name in missing_names:
+                      target=f"Motus {name}"
+                      if target in active_titles:
+                          print("BUFFER_REPAIR_SUPPRESSED_ACTIVE_RUN",name)
+                          continue
                       run=latest[name]
                       attempt=int(run.get("run_attempt") or 1)
                       run_sha=str(run.get("head_sha") or "")
