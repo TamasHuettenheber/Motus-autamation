@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-05T06:54:03.145304+00:00",
+  "checked_at_utc": "2026-10-05T08:24:34.268864+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6ac354e85de5ee424c2d07b9",
+      "text": "Bevor du heute schlafen gehst, such nicht nach allem, was noch fehlt. Nenn dir einen Moment des Tages, den du behalten möchtest: etwas, das gut war, ruhig war oder dich kurz gefreut hat. Dein Tag besteht nicht nur aus Aufgaben und Problemen. Worauf möchtest du heute mit einem guten Gefühl zurückblicken?\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-05T20:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-05-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac354eeca1380ada84d2327",
+      "text": "Ein schwieriges Gespräch wird selten leichter, nur weil du es länger im Kopf führst. Wenn etwas geklärt werden muss, formuliere heute einen einzigen ehrlichen Satz, mit dem du das Gespräch eröffnen kannst. Du musst nicht den ganzen Verlauf kontrollieren. Du brauchst nur einen klaren Anfang. Welches Gespräch schiebst du gerade vor dir her?\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-05T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-05-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac35bc2d467abe8cfde909a",
+      "text": "Wenn deine To-do-Liste heute immer länger wird, sortiere nicht nach dem, was am lautesten ruft. Frag dich: Welche eine Aufgabe macht den Rest leichter oder sogar überflüssig? Genau dort setzt du an. Wirkung ist wichtiger als eine volle Liste mit Haken. Welche Aufgabe hat heute den größten Hebel? Schreib sie in die Kommentare.\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-05T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-05-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac35d3569a169193a634131",
+      "text": "Du brauchst heute Morgen keinen perfekten Plan. Gib deinem Körper zuerst ein klares Startsignal: steh auf, richte dich auf und geh für fünf Minuten bewusst in Bewegung, bevor du dich irgendwo festscrollst. Energie kommt nicht immer vor dem Start. Oft entsteht sie erst, wenn du losgehst. Was ist dein erstes Startsignal heute? Schreib es in die Kommentare.\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "status": "sent",
+      "dueAt": "2026-10-05T08:20:00.000Z",
+      "sentAt": "2026-10-05T08:21:45.312Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7693095656025525537",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac35d3569a169193a634131_video.mp4"
+        }
+      ]
+    },
     {
       "id": "6ac170607ff895d757bc0e32",
       "text": "Du musst heute nicht schon den ganzen morgigen Tag lösen. Schreib dir vor dem Schlafen genau den ersten Schritt für morgen auf und lass den Rest liegen. Damit gibst du deinem Kopf einen klaren Startpunkt, ohne die Nacht zur Planungsrunde zu machen. Wenn du jemanden kennst, der abends nie abschalten kann, schick ihm dieses Video weiter.",
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://www.tiktok.com/@motus614/video/7686225972600818966?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512513e964944d5346f66",
-      "text": "Ein Fehler ist Information, kein Urteil über dich. #UmgangMitFehlern #Selbstentwicklung #Psychologie #Lernen #Motus",
-      "status": "sent",
-      "dueAt": "2026-09-16T16:31:18.000Z",
-      "sentAt": "2026-09-16T16:31:18.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7686171646331325718?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7686171646331325718?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512513e964944d5346f60",
-      "text": "Manchmal braucht ein Gespräch keinen Rat, sondern jemanden, der wirklich zuhört. #Zuhören #Kommunikation #Miteinander #Alltagspsychologie #Motus",
-      "status": "sent",
-      "dueAt": "2026-09-15T20:02:09.000Z",
-      "sentAt": "2026-09-15T20:02:09.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7685854894305086742?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7685854894305086742?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512513e964944d5346f64",
-      "text": "Nicht jede Alltagssache braucht jeden Tag eine neue Antwort. #Entscheidungsmüdigkeit #Routine #Alltagspsychologie #Klarheit #Motus",
-      "status": "sent",
-      "dueAt": "2026-09-15T16:32:49.000Z",
-      "sentAt": "2026-09-15T16:32:49.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7685800934303223062?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7685800934303223062?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512513e964944d5346fae",
-      "text": "Nicht jeder Gedanke, der nachts laut wird, sagt die Wahrheit. #Grübeln #Gedanken #InnereRuhe #Psychologie #Motus",
-      "status": "sent",
-      "dueAt": "2026-09-14T20:20:33.000Z",
-      "sentAt": "2026-09-14T20:20:33.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7685488553161231638?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7685488553161231638?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         }
       ]
     }
