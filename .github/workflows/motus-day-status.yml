@@ -242,11 +242,17 @@ jobs:
                       failed.append((slot,run,attempt))
 
               if waiting:
-                  active_titles={
-                      str(r.get("display_title",""))
-                      for r in renderer_runs
-                      if str(r.get("status","")) in {"queued","in_progress"}
-                  }
+                  active_titles=set()
+                  for active_run in renderer_runs:
+                      if str(active_run.get("status","")) not in {"queued","in_progress"}:
+                          continue
+                      try:
+                          active_started=datetime.fromisoformat(str(active_run.get("created_at","")).replace("Z","+00:00"))
+                          active_age=(now-active_started).total_seconds()/60.0
+                      except Exception:
+                          continue
+                      if active_age < 10:
+                          active_titles.add(str(active_run.get("display_title","")))
                   # Failed old-SHA slots must also be recovered immediately; do not let
                   # unrelated stale in-progress slots postpone a future slot such as 22:00.
                   failed_fresh=[]
@@ -317,11 +323,17 @@ jobs:
                   # This prevents reconciliation cycles from multiplying renderer runs.
                   retrying=[]
                   exhausted=[]
-                  active_titles={
-                      str(r.get("display_title",""))
-                      for r in renderer_runs
-                      if str(r.get("status","")) in {"queued","in_progress"}
-                  }
+                  active_titles=set()
+                  for active_run in renderer_runs:
+                      if str(active_run.get("status","")) not in {"queued","in_progress"}:
+                          continue
+                      try:
+                          active_started=datetime.fromisoformat(str(active_run.get("created_at","")).replace("Z","+00:00"))
+                          active_age=(now-active_started).total_seconds()/60.0
+                      except Exception:
+                          continue
+                      if active_age < 10:
+                          active_titles.add(str(active_run.get("display_title","")))
                   for slot,run,attempt in failed:
                       target=f"Motus {slot['output_name']}"
                       if target in active_titles:
