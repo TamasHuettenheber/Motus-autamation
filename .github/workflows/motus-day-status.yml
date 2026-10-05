@@ -246,9 +246,20 @@ jobs:
                   continue
 
               if failed:
+                  # Retry only when there is no newer active run for the same slot.
+                  # This prevents reconciliation cycles from multiplying renderer runs.
                   retrying=[]
                   exhausted=[]
+                  active_titles={
+                      str(r.get("display_title",""))
+                      for r in renderer_runs
+                      if str(r.get("status","")) in {"queued","in_progress"}
+                  }
                   for slot,run,attempt in failed:
+                      target=f"Motus {slot['output_name']}"
+                      if target in active_titles:
+                          print("RETRY_SUPPRESSED_ACTIVE_RUN",slot["output_name"])
+                          continue
                       run_sha=str(run.get("head_sha") or "")
                       if main_sha and run_sha != main_sha:
                           # Workflow code changed after this renderer started. Re-running the
