@@ -390,10 +390,13 @@ jobs:
                   ).replace(tzinfo=berlin)
                   due=local.astimezone(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00","Z")
                   expected[slot["output_name"]]={"local":local.isoformat(),"utc":due}
+                  valid_statuses={"scheduled"}
+                  if local.astimezone(timezone.utc) <= now:
+                      valid_statuses.add("sent")
                   matches=[
                       p for p in posts
                       if p.get("dueAt")==due
-                      and p.get("status")=="scheduled"
+                      and p.get("status") in valid_statuses
                       and any(str(a.get("mimeType","")).startswith("video/") for a in (p.get("assets") or []))
                   ]
                   if matches:
