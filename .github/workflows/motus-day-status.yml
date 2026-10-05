@@ -242,6 +242,11 @@ jobs:
                       failed.append((slot,run,attempt))
 
               if waiting:
+                  active_titles={
+                      str(r.get("display_title",""))
+                      for r in renderer_runs
+                      if str(r.get("status","")) in {"queued","in_progress"}
+                  }
                   # Failed old-SHA slots must also be recovered immediately; do not let
                   # unrelated stale in-progress slots postpone a future slot such as 22:00.
                   failed_fresh=[]
