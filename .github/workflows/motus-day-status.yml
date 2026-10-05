@@ -251,6 +251,10 @@ jobs:
                   # unrelated stale in-progress slots postpone a future slot such as 22:00.
                   failed_fresh=[]
                   for slot,run,attempt in failed:
+                      target=f"Motus {slot['output_name']}"
+                      if target in active_titles:
+                          print("FAILED_RECOVERY_SUPPRESSED_ACTIVE_RUN",slot["output_name"])
+                          continue
                       run_sha=str(run.get("head_sha") or "")
                       if main_sha and run_sha != main_sha:
                           gh(
