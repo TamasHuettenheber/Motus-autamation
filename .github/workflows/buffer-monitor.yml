@@ -219,3 +219,4 @@ jobs:
 
           echo "BUFFER_STATUS_PUSH_FAILED after retries"
           exit 1
+# manual verification trigger 2026-10-05 after recovery publish
