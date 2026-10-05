@@ -234,7 +234,7 @@ jobs:
       - name: Render with B-roll
         if: env.REUSE_EXISTING != 'true' && env.BROLL_READY == 'true'
         run: |
-          ffmpeg -y -stream_loop -1 -i work/broll.mp4 -i work/audio.mp3 -t "$VIDEO_DURATION" -stream_loop -1 -i work/music.mp3 -filter_complex "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,eq=brightness=-0.08:saturation=0.90,drawbox=x=0:y=0:w=iw:h=ih:color=black@0.12:t=fill,subtitles=work/captions.ass[v];[1:a]volume=1.0[voice];[2:a]volume=0.26,afade=t=in:st=0:d=0.6[music];[voice][music]amix=inputs=2:duration=first:dropout_transition=0[a]" -map "[v]" -map "[a]" -c:v libx264 -preset veryfast -crf 22 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -movflags +faststart -shortest "work/$SAFE_NAME.mp4"
+          timeout 180 ffmpeg -y -i work/broll.mp4 -i work/audio.mp3 -stream_loop -1 -i work/music.mp3 -t "$VIDEO_DURATION" -filter_complex "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,eq=brightness=-0.08:saturation=0.90,drawbox=x=0:y=0:w=iw:h=ih:color=black@0.12:t=fill,subtitles=work/captions.ass[v];[1:a]volume=1.0[voice];[2:a]volume=0.26,afade=t=in:st=0:d=0.6[music];[voice][music]amix=inputs=2:duration=first:dropout_transition=0[a]" -map "[v]" -map "[a]" -c:v libx264 -preset veryfast -crf 22 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -movflags +faststart -shortest "work/$SAFE_NAME.mp4"
 
       - name: Reject missing moving B-roll
         if: env.REUSE_EXISTING != 'true' && env.BROLL_READY != 'true'
