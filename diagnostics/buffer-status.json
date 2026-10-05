@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-05T08:24:34.268864+00:00",
+  "checked_at_utc": "2026-10-05T15:54:33.986669+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -43,15 +43,15 @@
     {
       "id": "6ac35bc2d467abe8cfde909a",
       "text": "Wenn deine To-do-Liste heute immer länger wird, sortiere nicht nach dem, was am lautesten ruft. Frag dich: Welche eine Aufgabe macht den Rest leichter oder sogar überflüssig? Genau dort setzt du an. Wirkung ist wichtiger als eine volle Liste mit Haken. Welche Aufgabe hat heute den größten Hebel? Schreib sie in die Kommentare.\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-05T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-05T10:02:27.095Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7693121502958423329",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-05-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac35bc2d467abe8cfde909a_video.mp4"
         }
       ]
     },
