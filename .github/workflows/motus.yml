@@ -380,9 +380,20 @@ jobs:
           due = local_due.astimezone(timezone.utc)
           due_at = due.isoformat(timespec="milliseconds").replace("+00:00", "Z")
 
+          now_utc = datetime.now(timezone.utc)
+          recovery_due = False
           if due.timestamp() <= time.time() + 120:
-              print(f"Buffer scheduling skipped: slot {local_due.isoformat()} is already past or too close")
-              raise SystemExit(0)
+              today_berlin = now_utc.astimezone(ZoneInfo("Europe/Berlin")).date()
+              if local_due.date() == today_berlin:
+                  due = now_utc.replace(microsecond=0)
+                  due = due.replace(second=0)
+                  due = due + __import__("datetime").timedelta(minutes=3)
+                  due_at = due.isoformat(timespec="milliseconds").replace("+00:00", "Z")
+                  recovery_due = True
+                  print(f"BUFFER_RECOVERY_SLOT: original={local_due.isoformat()} recovery_due={due_at}")
+              else:
+                  print(f"Buffer scheduling skipped: slot {local_due.isoformat()} is in the past")
+                  raise SystemExit(0)
 
           media_url = f"https://raw.githubusercontent.com/{repo}/main/published/{safe_name}.mp4"
           api = "https://api.buffer.com"
