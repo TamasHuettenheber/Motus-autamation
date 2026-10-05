@@ -242,6 +242,29 @@ jobs:
                       failed.append((slot,run,attempt))
 
               if waiting:
+                  # Failed old-SHA slots must also be recovered immediately; do not let
+                  # unrelated stale in-progress slots postpone a future slot such as 22:00.
+                  failed_fresh=[]
+                  for slot,run,attempt in failed:
+                      run_sha=str(run.get("head_sha") or "")
+                      if main_sha and run_sha != main_sha:
+                          gh(
+                              "POST",
+                              "/actions/workflows/motus.yml/dispatches",
+                              {
+                                  "ref":"main",
+                                  "inputs":{
+                                      "audio_url":slot["audio_url"],
+                                      "text":slot["text"],
+                                      "broll_url":slot["broll_url"],
+                                      "output_name":slot["output_name"],
+                                      "force_rerender":"true",
+                                  },
+                              },
+                          )
+                          failed_fresh.append(slot["output_name"])
+                  if failed_fresh:
+                      comment(issue_number,"MOTUS_DAY_FAILED_SLOT_CURRENT_MAIN_RECOVERY\n\nFresh current-main render dispatched for failed old-workflow slot(s): "+", ".join(failed_fresh))
                   # A renderer that remains active on an older workflow SHA after the
                   # renderer has been fixed must not block the whole day indefinitely.
                   stale_redispatched=[]
