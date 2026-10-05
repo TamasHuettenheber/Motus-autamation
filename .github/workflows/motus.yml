@@ -358,9 +358,38 @@ jobs:
 
           key = os.environ.get("BUFFER_API_KEY", "").strip()
           safe_name = os.environ.get("SAFE_NAME", "").strip()
-          text = os.environ.get("MOTUS_TEXT", "").strip()
-          text = text + "\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)"
+          base_text = os.environ.get("MOTUS_TEXT", "").strip()
           repo = os.environ.get("GITHUB_REPOSITORY", "").strip()
+
+          def fold(value):
+              return (
+                  value.lower()
+                  .replace("ä","ae").replace("ö","oe").replace("ü","ue").replace("ß","ss")
+              )
+
+          def choose_hashtags(value):
+              t = fold(value)
+              themes = [
+                  (["morgen","start","energie","motivation","routine","bewegung"], ["#motivation","#morgenroutine","#mindset","#selbstentwicklung"]),
+                  (["grenze","nein","rechtfert","respekt","abstand"], ["#grenzensetzen","#selbstrespekt","#kommunikation","#alltagspsychologie"]),
+                  (["gespraech","kommunikation","nachricht","antwort","zuhören","zuhoeren"], ["#kommunikation","#alltagspsychologie","#selbstentwicklung","#mentaleklarheit"]),
+                  (["gruebel","gedanke","kopf","ruhe","stress","fehler"], ["#innereruhe","#mentaleklarheit","#alltagspsychologie","#selbstentwicklung"]),
+                  (["fokus","aufmerksamkeit","ablenkung","handy","benachrichtigung"], ["#fokus","#digitalbalance","#aufmerksamkeit","#selbstentwicklung"]),
+                  (["entscheidung","prioritaet","priorisieren","to-do","aufgabe","produktiv"], ["#produktivitaet","#klarheit","#fokus","#selbstentwicklung"]),
+                  (["vertrauen","verzeihen","beziehung","naehe","enttaeuscht"], ["#beziehungen","#selbstrespekt","#alltagspsychologie","#selbstentwicklung"]),
+                  (["abend","schlafen","feierabend","nacht","abschalten"], ["#abendroutine","#innereruhe","#mentaleklarheit","#selbstentwicklung"]),
+              ]
+              best_tags = ["#alltagspsychologie","#selbstentwicklung","#mindset","#motivation"]
+              best_score = -1
+              for keywords, tags in themes:
+                  score = sum(1 for kw in keywords if kw in t)
+                  if score > best_score:
+                      best_score = score
+                      best_tags = tags
+              return ["#motus"] + best_tags
+
+          hashtags = choose_hashtags(base_text)
+          text = base_text + "\n\n" + " ".join(hashtags) + "\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)"
 
           if not key:
               raise SystemExit("BUFFER_API_KEY secret is missing")
