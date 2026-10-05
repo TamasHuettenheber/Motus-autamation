@@ -242,7 +242,38 @@ jobs:
                       failed.append((slot,run,attempt))
 
               if waiting:
-                  print("WAIT_RENDERERS",issue_number,[(s["output_name"],r.get("status")) for s,r in waiting])
+                  # A renderer that remains active on an older workflow SHA after the
+                  # renderer has been fixed must not block the whole day indefinitely.
+                  stale_redispatched=[]
+                  for slot,run in waiting:
+                      run_sha=str(run.get("head_sha") or "")
+                      started_raw=str(run.get("run_started_at") or run.get("created_at") or "")
+                      try:
+                          started=datetime.fromisoformat(started_raw.replace("Z","+00:00"))
+                          run_age=(now-started).total_seconds()/60.0
+                      except Exception:
+                          run_age=0
+                      if main_sha and run_sha != main_sha and run_age >= 10:
+                          gh(
+                              "POST",
+                              "/actions/workflows/motus.yml/dispatches",
+                              {
+                                  "ref":"main",
+                                  "inputs":{
+                                      "audio_url":slot["audio_url"],
+                                      "text":slot["text"],
+                                      "broll_url":slot["broll_url"],
+                                      "output_name":slot["output_name"],
+                                      "force_rerender":"true",
+                                  },
+                              },
+                          )
+                          stale_redispatched.append(slot["output_name"])
+                  if stale_redispatched:
+                      comment(issue_number,"MOTUS_DAY_STALE_RENDER_RECOVERY\n\nFresh current-main render dispatched for stale slot(s): "+", ".join(stale_redispatched))
+                      print("STALE_RENDER_RECOVERY",issue_number,stale_redispatched)
+                  else:
+                      print("WAIT_RENDERERS",issue_number,[(s["output_name"],r.get("status")) for s,r in waiting])
                   continue
 
               if failed:
