@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-06T10:07:38.478462+00:00",
+  "checked_at_utc": "2026-10-06T16:45:57.673422+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -28,15 +28,15 @@
     {
       "id": "6ac416954e17d6a1b258ed46",
       "text": "Wenn du dich an einem Gedanken festbeißt, versuch nicht noch härter darüber nachzudenken. Wechsel den Ort. Geh ein paar Minuten raus, nimm einen anderen Weg oder schau bewusst in die Ferne. Manchmal braucht dein Kopf keine weitere Analyse, sondern einen neuen Blickwinkel. Bei welchem Thema würde dir heute etwas Abstand guttun? Schreib es in die Kommentare.\n\n#motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-06T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-06T16:32:21.528Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7693593260362648864",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-06-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac416954e17d6a1b258ed46_video.mp4"
         }
       ]
     },
