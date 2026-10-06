@@ -90,7 +90,36 @@ jobs:
           )"
           echo "AUDIO_DURATION=$AUDIO_DURATION" >> "$GITHUB_ENV"
           echo "VIDEO_DURATION=$VIDEO_DURATION" >> "$GITHUB_ENV"
-          MUSIC_URL="https://raw.githubusercontent.com/tannerhelland/free-music/master/mp3/Now%20or%20Never.mp3"
+          readarray -t MUSIC_SELECTION < <(python3 - <<'PY'
+          import os, re
+          from datetime import datetime
+          from urllib.parse import quote
+
+          name=os.environ.get("OUTPUT_NAME","")
+          m=re.fullmatch(r"motus-(\d{4}-\d{2}-\d{2})-(\d{4})", name)
+          pools={
+              "0700":["Daybreak","Now or Never","From Here","The Forest Awakes","Wild Waters"],
+              "1200":["Crossroads","Familiar Roads","Find You","Destiny","Syntheticity"],
+              "1830":["Home","Remember","Faith","Deserve to be Loved","A Memory Away"],
+              "2200":["The Journey (Kroc's Theme)","Lost Islands","Fate","Hidden Tears","Nevermore"],
+          }
+          if m:
+              date_part,slot=m.groups()
+              pool=pools.get(slot,["Now or Never"])
+              idx=datetime.strptime(date_part,"%Y-%m-%d").date().toordinal()%len(pool)
+              title=pool[idx]
+          else:
+              title="Now or Never"
+          url="https://raw.githubusercontent.com/tannerhelland/free-music/master/mp3/"+quote(title+".mp3")
+          print(title)
+          print(url)
+          PY
+          )
+          MUSIC_TITLE="${MUSIC_SELECTION[0]}"
+          MUSIC_URL="${MUSIC_SELECTION[1]}"
+          echo "MOTUS_MUSIC_TITLE=$MUSIC_TITLE" >> "$GITHUB_ENV"
+          echo "MOTUS_MUSIC_URL=$MUSIC_URL" >> "$GITHUB_ENV"
+          echo "MOTUS_MUSIC_SELECTED: $MUSIC_TITLE"
           curl -L --fail --retry 3 --retry-delay 2 "$MUSIC_URL" -o work/music_source.mp3
           ffmpeg -y -stream_loop -1 -i work/music_source.mp3 -t "$VIDEO_DURATION" -ar 48000 -ac 2 -b:a 192k work/music.mp3
           test -s work/music.mp3
@@ -389,7 +418,8 @@ jobs:
               return ["#motus"] + best_tags
 
           hashtags = choose_hashtags(base_text)
-          text = base_text + "\n\n" + " ".join(hashtags) + "\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)"
+          music_title = os.environ.get("MOTUS_MUSIC_TITLE", "Now or Never").strip() or "Now or Never"
+          text = base_text + "\n\n" + " ".join(hashtags) + f"\n\nMusik: Tanner Helland – {music_title} (CC BY 4.0)"
 
           if not key:
               raise SystemExit("BUFFER_API_KEY secret is missing")
