@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-06T16:45:57.673422+00:00",
+  "checked_at_utc": "2026-10-06T21:36:04.915558+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -11,17 +11,77 @@
   },
   "posts": [
     {
-      "id": "6ac417128a7578ba6c17a809",
-      "text": "Nicht alles, was abends noch auf deinem Bildschirm auftaucht, muss heute noch in deinen Kopf. Setz dir für heute eine klare Reizgrenze: eine Uhrzeit, ab der Nachrichten, Mails und Feeds warten dürfen. Du verpasst nicht dein Leben, wenn du für eine Weile nicht erreichbar bist. Was darf heute Abend bis morgen warten?\n\n#motus #motivation #morgenroutine #mindset #selbstentwicklung\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "id": "6ac564285a8d2d13237ada4e",
+      "text": "Wenn dein Kopf abends an einer offenen Sache festhängt, versuch nicht, sie im Bett fertigzudenken. Schreib in einem Satz auf, was noch offen ist und was der nächste Schritt morgen sein wird. Damit verschwindet das Problem nicht, aber dein Gehirn muss es nicht die ganze Nacht festhalten. Welche offene Sache parkst du heute bewusst bis morgen?\n\n#motus #abendroutine #innereruhe #mentaleklarheit #selbstentwicklung\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
       "status": "scheduled",
-      "dueAt": "2026-10-06T20:00:00.000Z",
+      "dueAt": "2026-10-07T20:00:00.000Z",
       "sentAt": null,
       "externalLink": null,
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-06-2200.mp4"
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-07-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac5644ab77273576dc19f93",
+      "text": "Wenn sich alles einfach nur schlecht anfühlt, benenn es genauer. Bist du enttäuscht, überfordert, wütend, unsicher oder erschöpft? Je präziser du ein Gefühl benennen kannst, desto leichter wird es, sinnvoll darauf zu reagieren. Ein diffuses Problem macht dich hilflos. Ein benanntes Problem gibt dir einen Ansatzpunkt. Was fühlst du gerade wirklich?\n\n#motus #beziehungen #selbstrespekt #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – Remember (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-07T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-07-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac564736e7abe65d13ccec2",
+      "text": "Wenn du bei einer Entscheidung nur noch nach Gründen suchst, die deine erste Meinung bestätigen, prüf dich kurz selbst. Frag: Was müsste passieren, damit ich meine Meinung ändere? Diese eine Frage schützt dich davor, nur Beweise für das zu sammeln, was du sowieso schon glauben willst. Bei welchem Thema lohnt sich das heute?\n\n#motus #produktivitaet #klarheit #fokus #selbstentwicklung\n\nMusik: Tanner Helland – Familiar Roads (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-07T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-07-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac5646c6e7abe65d13ccd69",
+      "text": "Mach deinen Morgen nicht davon abhängig, wie motiviert du dich fühlst. Koppel den ersten Schritt an etwas, das sowieso passiert: Wenn der Kaffee läuft, ziehst du die Schuhe an. Wenn du den Laptop öffnest, startest du genau eine Aufgabe. So wird aus Absicht ein Auslöser. Welche Wenn-dann-Regel setzt du morgen früh um?\n\n#motus #motivation #morgenroutine #mindset #selbstentwicklung\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-07T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-07-0700.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac417128a7578ba6c17a809",
+      "text": "Nicht alles, was abends noch auf deinem Bildschirm auftaucht, muss heute noch in deinen Kopf. Setz dir für heute eine klare Reizgrenze: eine Uhrzeit, ab der Nachrichten, Mails und Feeds warten dürfen. Du verpasst nicht dein Leben, wenn du für eine Weile nicht erreichbar bist. Was darf heute Abend bis morgen warten?\n\n#motus #motivation #morgenroutine #mindset #selbstentwicklung\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "status": "sent",
+      "dueAt": "2026-10-06T20:00:00.000Z",
+      "sentAt": "2026-10-06T20:02:13.410Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7693647411612290337",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac417128a7578ba6c17a809_video.mp4"
         }
       ]
     },
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab5344f047a2dd58cd221fc_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ab512513e964944d5346f3d",
-      "text": "Du musst einen chaotischen Tag nicht komplett reparieren. Ein bewusster Abschluss kann verändern, wie er sich im Rückblick anfühlt. #motus #alltagspsychologie #abendroutine #mentaleklarheit",
-      "status": "sent",
-      "dueAt": "2026-09-23T20:01:56.000Z",
-      "sentAt": "2026-09-23T20:01:56.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7688823528728104214?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7688823528728104214?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512513e964944d5346f41",
-      "text": "Du denkst, alle merken deinen kleinen Fehler. Meistens stimmt das nicht. Der Spotlight-Effekt erklärt, warum wir überschätzen, wie stark andere auf uns achten. #motus #alltagspsychologie #selbstentwicklung #selbstsicherheit",
-      "status": "sent",
-      "dueAt": "2026-09-23T16:31:41.000Z",
-      "sentAt": "2026-09-23T16:31:41.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7688769339863862550?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7688769339863862550?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512513e964944d5346f45",
-      "text": "Erreichbar zu sein heißt nicht, jederzeit verfügbar zu sein. Schütze deinen eigenen Rhythmus. #motus #grenzen #alltagspsychologie #aufmerksamkeit #digitalbalance",
-      "status": "sent",
-      "dueAt": "2026-09-22T20:02:08.000Z",
-      "sentAt": "2026-09-22T20:02:08.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7688452487531023638?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7688452487531023638?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab512513e964944d5346f4b",
-      "text": "Nicht jede offene Aufgabe ist dringend. Ein klarer nächster Zeitpunkt hilft deinem Kopf, loszulassen. #motus #alltagspsychologie #produktivität #mentaleload #klarheit",
-      "status": "sent",
-      "dueAt": "2026-09-22T16:31:17.000Z",
-      "sentAt": "2026-09-22T16:31:17.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7688398135764241686?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7688398135764241686?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
         }
       ]
     }
