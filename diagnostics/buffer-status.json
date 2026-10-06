@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-06T02:54:44.041557+00:00",
+  "checked_at_utc": "2026-10-06T10:07:38.478462+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -43,30 +43,30 @@
     {
       "id": "6ac4169138629554e342a290",
       "text": "Konzentriert arbeiten heißt nicht, stundenlang ohne Pause durchzuziehen. Probier heute einen klaren Rhythmus: fünfundzwanzig Minuten nur eine Aufgabe, danach fünf Minuten wirklich weg vom Bildschirm. Kein Scrollen als Pause. Steh auf, beweg dich, schau aus dem Fenster. Fokus braucht nicht nur Disziplin, sondern Erholung. Welchen Arbeitsrhythmus probierst du heute aus?\n\n#motus #fokus #digitalbalance #aufmerksamkeit #selbstentwicklung\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-06T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-06T10:02:35.729Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7693492713894726945",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-06-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac4169138629554e342a290_video.mp4"
         }
       ]
     },
     {
       "id": "6ac4192f38629554e342f2f8",
       "text": "Du musst morgens nicht darauf warten, dass du dich bereit fühlst. Triff eine kleine Entscheidung, bevor deine Stimmung mitreden kann: Schuhe an, Wasser trinken, rausgehen oder anfangen. Motivation ist wechselhaft. Eine klare Entscheidung gibt deinem Morgen Richtung, auch wenn die Energie erst später kommt. Welche Entscheidung triffst du heute, bevor du darüber diskutierst? Schreib sie in die Kommentare.\n\n#motus #motivation #morgenroutine #mindset #selbstentwicklung\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-06T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-06T05:01:57.075Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7693415199155490080",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-06-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac4192f38629554e342f2f8_video.mp4"
         }
       ]
     },
