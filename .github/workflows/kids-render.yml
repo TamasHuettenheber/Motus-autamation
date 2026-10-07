@@ -1,0 +1,241 @@
+name: Jori & Flimm Renderer
+run-name: Kids episode #${{ inputs.issue_number }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: "Issue number containing a [JORI-FLIMM-DAY] JSON payload"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg curl jq fonts-dejavu-core
+
+      - name: Load and validate episode payload
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ inputs.issue_number }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re, urllib.request
+
+          repo=os.environ["REPO"]
+          num=str(os.environ["ISSUE_NUMBER"]).strip()
+          req=urllib.request.Request(
+              f"https://api.github.com/repos/{repo}/issues/{num}",
+              headers={
+                  "Authorization": f"Bearer {os.environ['GH_TOKEN']}",
+                  "Accept":"application/vnd.github+json",
+                  "X-GitHub-Api-Version":"2022-11-28",
+                  "User-Agent":"jori-flimm-renderer"
+              }
+          )
+          with urllib.request.urlopen(req, timeout=60) as r:
+              issue=json.loads(r.read().decode("utf-8"))
+          if not str(issue.get("title","")).startswith("[JORI-FLIMM-DAY]"):
+              raise SystemExit("Issue is not a [JORI-FLIMM-DAY] payload")
+          try:
+              p=json.loads(issue.get("body") or "")
+          except json.JSONDecodeError as e:
+              raise SystemExit(f"Issue body must be pure JSON: {e}")
+
+          required=["date","episode_number","title","narration","audio_url","scenes"]
+          for k in required:
+              if k not in p:
+                  raise SystemExit(f"Missing field: {k}")
+          if not re.fullmatch(r"\d{4}-\d{2}-\d{2}",str(p["date"])):
+              raise SystemExit("Invalid date")
+          if not isinstance(p["episode_number"],int) or p["episode_number"] < 0:
+              raise SystemExit("Invalid episode_number")
+          if not str(p["audio_url"]).startswith("https://"):
+              raise SystemExit("audio_url must be https")
+          scenes=p["scenes"]
+          if not isinstance(scenes,list) or not 5 <= len(scenes) <= 10:
+              raise SystemExit("scenes must contain 5-10 items")
+          total=0.0
+          for i,s in enumerate(scenes,1):
+              if not str(s.get("image_url","")).startswith("https://"):
+                  raise SystemExit(f"Scene {i}: image_url must be https")
+              d=float(s.get("duration_seconds",0))
+              if not 4 <= d <= 20:
+                  raise SystemExit(f"Scene {i}: duration must be 4-20 seconds")
+              total += d
+          if total < 40 or total > 110:
+              raise SystemExit(f"Scene timeline out of bounds: {total}s")
+
+          safe=f"jori-flimm-{p['date']}-e{int(p['episode_number']):03d}"
+          with open(os.environ["GITHUB_ENV"],"a",encoding="utf-8") as f:
+              f.write(f"SAFE_NAME={safe}\n")
+              f.write(f"EPISODE_NUMBER={p['episode_number']}\n")
+              f.write(f"EPISODE_DATE={p['date']}\n")
+              f.write(f"AUDIO_URL={p['audio_url']}\n")
+              f.write("EPISODE_TITLE<<EOF_TITLE\n"+str(p["title"]).strip()+"\nEOF_TITLE\n")
+              f.write("NARRATION<<EOF_NARRATION\n"+str(p["narration"]).strip()+"\nEOF_NARRATION\n")
+              f.write(f"SCENE_COUNT={len(scenes)}\n")
+              f.write(f"SCENE_TOTAL={total:.3f}\n")
+          os.makedirs("work",exist_ok=True)
+          with open("work/payload.json","w",encoding="utf-8") as f:
+              json.dump(p,f,ensure_ascii=False,indent=2)
+          print(f"Validated {len(scenes)} scenes, {total:.1f}s")
+          PY
+
+      - name: Download narration and scene images
+        run: |
+          mkdir -p work/scenes published-kids
+          curl -L --fail --retry 3 --retry-delay 2 "$AUDIO_URL" -o work/audio_source
+          ffmpeg -y -i work/audio_source -vn -ar 48000 -ac 2 -b:a 192k work/narration.mp3
+          python3 - <<'PY'
+          import json, subprocess
+          p=json.load(open("work/payload.json",encoding="utf-8"))
+          for i,s in enumerate(p["scenes"],1):
+              out=f"work/scenes/{i:02d}.img"
+              subprocess.run(["curl","-L","--fail","--retry","3","--retry-delay","2",s["image_url"],"-o",out],check=True)
+          PY
+
+      - name: Build safe-zone subtitles
+        run: |
+          AUDIO_DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 work/narration.mp3)"
+          echo "AUDIO_DURATION=$AUDIO_DURATION" >> "$GITHUB_ENV"
+          python3 - <<'PY'
+          import os,re,textwrap
+          text=os.environ["NARRATION"].strip()
+          dur=float(os.environ["AUDIO_DURATION"])
+          parts=[x.strip() for x in re.split(r'(?<=[.!?])\s+|\s*[;:]\s+',text) if x.strip()]
+          chunks=[]
+          for part in parts:
+              words=part.split()
+              while len(words)>9:
+                  chunks.append(" ".join(words[:9])); words=words[9:]
+              if words: chunks.append(" ".join(words))
+          if not chunks: chunks=[text]
+          weights=[max(1,len(c.split())) for c in chunks]
+          total=sum(weights)
+          def ts(sec):
+              h=int(sec//3600); sec-=h*3600; m=int(sec//60); sec-=m*60
+              return f"{h}:{m:02d}:{sec:05.2f}"
+          ass="""[Script Info]
+          ScriptType: v4.00+
+          PlayResX: 1080
+          PlayResY: 1920
+          WrapStyle: 2
+          ScaledBorderAndShadow: yes
+
+          [V4+ Styles]
+          Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+          Style: Kids,DejaVu Sans,58,&H00FFFFFF,&H000000FF,&H00181818,&H99000000,-1,0,0,0,100,100,0,0,3,2,0,8,105,105,390,1
+
+          [Events]
+          Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+          """
+          ass="\n".join(line.strip() for line in ass.splitlines())+"\n"
+          t=0.0
+          for i,(c,w) in enumerate(zip(chunks,weights)):
+              end=dur if i==len(chunks)-1 else t+dur*w/total
+              wrapped="\\N".join(textwrap.wrap(c,width=25,break_long_words=False,break_on_hyphens=False))
+              wrapped=wrapped.replace("{","\\{").replace("}","\\}")
+              ass+=f"Dialogue: 0,{ts(t)},{ts(end)},Kids,,0,0,0,,{wrapped}\n"
+              t=end
+          open("work/captions.ass","w",encoding="utf-8").write(ass)
+          PY
+
+      - name: Render animated still-image segments
+        run: |
+          python3 - <<'PY'
+          import json, subprocess, os
+          p=json.load(open("work/payload.json",encoding="utf-8"))
+          segments=[]
+          for i,s in enumerate(p["scenes"],1):
+              d=float(s["duration_seconds"])
+              src=f"work/scenes/{i:02d}.img"
+              dst=f"work/scenes/{i:02d}.mp4"
+              frames=max(1,int(round(d*30)))
+              # Alternating zoom direction adds motion without AI video generation.
+              if i % 2:
+                  zp="zoompan=z='min(zoom+0.0008,1.10)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
+              else:
+                  zp="zoompan=z='if(lte(zoom,1.0),1.10,max(1.0,zoom-0.0008))':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
+              vf=(
+                  "scale=1080:1920:force_original_aspect_ratio=increase,"
+                  "crop=1080:1920,"
+                  +zp+f":d={frames}:s=1080x1920:fps=30,"
+                  "format=yuv420p"
+              )
+              subprocess.run([
+                  "ffmpeg","-y","-loop","1","-i",src,"-t",f"{d:.3f}",
+                  "-vf",vf,"-an","-c:v","libx264","-preset","veryfast","-crf","22",
+                  "-pix_fmt","yuv420p","-r","30",dst
+              ],check=True)
+              segments.append(dst)
+          with open("work/concat.txt","w",encoding="utf-8") as f:
+              for s in segments:
+                  f.write("file '"+os.path.abspath(s).replace("'","'\\''")+"'\n")
+          PY
+          ffmpeg -y -f concat -safe 0 -i work/concat.txt -c copy work/visuals.mp4
+
+      - name: Assemble narration and captions
+        run: |
+          VISUAL_DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 work/visuals.mp4)"
+          echo "VISUAL_DURATION=$VISUAL_DURATION" >> "$GITHUB_ENV"
+          python3 - <<'PY'
+          import os
+          a=float(os.environ["AUDIO_DURATION"])
+          v=float(os.environ["VISUAL_DURATION"])
+          if v < a-0.25:
+              raise SystemExit(f"Visual timeline ({v:.2f}s) is shorter than narration ({a:.2f}s)")
+          PY
+          ffmpeg -y -i work/visuals.mp4 -i work/narration.mp3             -filter_complex "[0:v]subtitles=work/captions.ass[v]"             -map "[v]" -map 1:a             -c:v libx264 -preset veryfast -crf 22 -pix_fmt yuv420p -r 30             -c:a aac -b:a 192k -movflags +faststart -shortest             "work/$SAFE_NAME.mp4"
+
+      - name: Quality control
+        run: |
+          VIDEO="work/$SAFE_NAME.mp4"
+          test -s "$VIDEO"
+          WIDTH="$(ffprobe -v error -select_streams v:0 -show_entries stream=width -of csv=p=0 "$VIDEO")"
+          HEIGHT="$(ffprobe -v error -select_streams v:0 -show_entries stream=height -of csv=p=0 "$VIDEO")"
+          CODEC="$(ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of csv=p=0 "$VIDEO")"
+          AUDIO_CODEC="$(ffprobe -v error -select_streams a:0 -show_entries stream=codec_name -of csv=p=0 "$VIDEO")"
+          DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$VIDEO")"
+          test "$WIDTH" = "1080"
+          test "$HEIGHT" = "1920"
+          test "$CODEC" = "h264"
+          test "$AUDIO_CODEC" = "aac"
+          python3 - <<PY
+          d=float("$DURATION")
+          if not 40 <= d <= 100:
+              raise SystemExit(f"QC failed: duration {d:.2f}s")
+          print(f"QC passed: {d:.2f}s")
+          PY
+
+      - name: Save render and episode metadata
+        env:
+          BRANCH_NAME: ${{ github.ref_name }}
+        run: |
+          mkdir -p "kids/jori-flimm/state/episodes"
+          cp "work/$SAFE_NAME.mp4" "published-kids/$SAFE_NAME.mp4"
+          cp work/payload.json "kids/jori-flimm/state/episodes/$SAFE_NAME.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "published-kids/$SAFE_NAME.mp4" "kids/jori-flimm/state/episodes/$SAFE_NAME.json"
+          if ! git diff --cached --quiet; then
+            git commit -m "Render $SAFE_NAME"
+            git pull --rebase origin "$BRANCH_NAME"
+            git push origin "HEAD:$BRANCH_NAME"
+          fi
