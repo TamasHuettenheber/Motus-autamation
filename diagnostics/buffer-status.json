@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-07T01:27:06.327087+00:00",
+  "checked_at_utc": "2026-10-07T08:33:55.469952+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -58,15 +58,15 @@
     {
       "id": "6ac5646c6e7abe65d13ccd69",
       "text": "Mach deinen Morgen nicht davon abhängig, wie motiviert du dich fühlst. Koppel den ersten Schritt an etwas, das sowieso passiert: Wenn der Kaffee läuft, ziehst du die Schuhe an. Wenn du den Laptop öffnest, startest du genau eine Aufgabe. So wird aus Absicht ein Auslöser. Welche Wenn-dann-Regel setzt du morgen früh um?\n\n#motus #motivation #morgenroutine #mindset #selbstentwicklung\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-07T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-07T05:01:57.646Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7693786317179669792",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-07-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac5646c6e7abe65d13ccd69_video.mp4"
         }
       ]
     },
