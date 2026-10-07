@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-07T08:33:55.469952+00:00",
+  "checked_at_utc": "2026-10-07T16:22:11.181944+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -43,15 +43,15 @@
     {
       "id": "6ac564736e7abe65d13ccec2",
       "text": "Wenn du bei einer Entscheidung nur noch nach Gründen suchst, die deine erste Meinung bestätigen, prüf dich kurz selbst. Frag: Was müsste passieren, damit ich meine Meinung ändere? Diese eine Frage schützt dich davor, nur Beweise für das zu sammeln, was du sowieso schon glauben willst. Bei welchem Thema lohnt sich das heute?\n\n#motus #produktivitaet #klarheit #fokus #selbstentwicklung\n\nMusik: Tanner Helland – Familiar Roads (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-07T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-07T10:01:50.098Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7693863771856489760",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-07-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac564736e7abe65d13ccec2_video.mp4"
         }
       ]
     },
