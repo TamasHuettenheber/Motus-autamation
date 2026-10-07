@@ -251,6 +251,12 @@
       "clip_id": "sunset-ocean-7975481",
       "source": "https://www.pexels.com/video/vertical-video-of-sunset-7975481/",
       "used_at_utc": "2026-10-07T20:44:32.208900+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-08-0700",
+      "clip_id": "sunrise-sea-18303443",
+      "source": "https://www.pexels.com/video/sunrise-over-the-sea-vertical-video-18303443/",
+      "used_at_utc": "2026-10-07T20:49:59.969164+00:00"
     }
   ]
 }
