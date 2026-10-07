@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JoriFlimmEpisodeState",
+  "type": "object",
+  "required": [
+    "episode_number",
+    "date",
+    "title",
+    "hook",
+    "narration",
+    "riddle",
+    "scenes",
+    "publish_time",
+    "qc"
+  ],
+  "properties": {
+    "episode_number": {"type": "integer", "minimum": 0},
+    "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "title": {"type": "string", "minLength": 3},
+    "hook": {"type": "string", "minLength": 3},
+    "narration": {"type": "string", "minLength": 30},
+    "riddle": {
+      "type": "object",
+      "required": ["type", "question", "answer", "pause_seconds"],
+      "properties": {
+        "type": {"type": "string"},
+        "question": {"type": "string", "minLength": 3},
+        "answer": {"type": "string", "minLength": 1},
+        "pause_seconds": {"type": "number", "minimum": 2, "maximum": 5}
+      }
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": ["order", "duration_seconds", "image_source"],
+        "properties": {
+          "order": {"type": "integer", "minimum": 1},
+          "duration_seconds": {"type": "number", "minimum": 4, "maximum": 20},
+          "image_source": {"type": "string", "minLength": 1},
+          "caption": {"type": "string"}
+        }
+      }
+    },
+    "publish_time": {"type": "string", "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"},
+    "qc": {
+      "type": "object",
+      "required": ["book_spoiler_check", "continuity_check", "duplicate_check"],
+      "properties": {
+        "book_spoiler_check": {"const": true},
+        "continuity_check": {"const": true},
+        "duplicate_check": {"const": true}
+      }
+    }
+  }
+}
