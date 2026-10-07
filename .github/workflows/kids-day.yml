@@ -1,0 +1,87 @@
+name: Jori & Flimm Daily Handoff
+run-name: Kids Daily ${{ github.event.issue.title || inputs.issue_number }}
+
+on:
+  issues:
+    types: [opened, reopened]
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: "Existing [JORI-FLIMM-DAY] issue number"
+        required: true
+        type: string
+
+permissions:
+  issues: write
+  actions: write
+  contents: read
+
+jobs:
+  dispatch:
+    if: >
+      (github.event_name == 'issues' && startsWith(github.event.issue.title, '[JORI-FLIMM-DAY]')) ||
+      github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Validate handoff and dispatch renderer
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          EVENT_ISSUE_NUMBER: ${{ github.event.issue.number }}
+          DISPATCH_ISSUE_NUMBER: ${{ inputs.issue_number }}
+          TARGET_REF: ${{ github.ref_name }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re, urllib.request, urllib.error
+
+          repo=os.environ["REPO"]
+          token=os.environ["GH_TOKEN"]
+          num=(os.environ.get("EVENT_ISSUE_NUMBER") or os.environ.get("DISPATCH_ISSUE_NUMBER") or "").strip()
+          if not num:
+              raise SystemExit("Missing issue number")
+          base=f"https://api.github.com/repos/{repo}"
+          headers={
+              "Authorization":f"Bearer {token}",
+              "Accept":"application/vnd.github+json",
+              "X-GitHub-Api-Version":"2022-11-28",
+              "User-Agent":"jori-flimm-daily"
+          }
+          def gh(method,path,payload=None):
+              data=None if payload is None else json.dumps(payload).encode()
+              req=urllib.request.Request(base+path,data=data,headers=headers,method=method)
+              try:
+                  with urllib.request.urlopen(req,timeout=60) as r:
+                      raw=r.read().decode()
+                      return json.loads(raw) if raw else {}
+              except urllib.error.HTTPError as e:
+                  raise RuntimeError(e.read().decode("utf-8","replace"))
+          issue=gh("GET",f"/issues/{num}")
+          if not str(issue.get("title","")).startswith("[JORI-FLIMM-DAY]"):
+              raise SystemExit("Wrong issue type")
+          try:
+              p=json.loads(issue.get("body") or "")
+          except json.JSONDecodeError as e:
+              raise SystemExit(f"Body must be pure JSON: {e}")
+          if not re.fullmatch(r"\d{4}-\d{2}-\d{2}",str(p.get("date",""))):
+              raise SystemExit("Invalid date")
+          if not isinstance(p.get("scenes"),list) or not 5 <= len(p["scenes"]) <= 10:
+              raise SystemExit("Need 5-10 scenes")
+          if not str(p.get("audio_url","")).startswith("https://"):
+              raise SystemExit("Missing audio_url")
+          qc=p.get("qc") or {}
+          for key in ["book_spoiler_check","continuity_check","duplicate_check"]:
+              if qc.get(key) is not True:
+                  raise SystemExit(f"QC gate not true: {key}")
+
+          ref=os.environ.get("TARGET_REF") or "main"
+          gh("POST","/actions/workflows/kids-render.yml/dispatches",{
+              "ref":ref,
+              "inputs":{"issue_number":str(num)}
+          })
+          gh("POST",f"/issues/{num}/comments",{
+              "body":f"JORI_FLIMM_HANDOFF_OK\n\nRenderer dispatched on ref `{ref}`."
+          })
+          print("JORI_FLIMM_HANDOFF_OK")
+          PY
