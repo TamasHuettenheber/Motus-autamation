@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-07T16:22:11.181944+00:00",
+  "checked_at_utc": "2026-10-07T21:57:08.569408+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -11,32 +11,92 @@
   },
   "posts": [
     {
-      "id": "6ac564285a8d2d13237ada4e",
-      "text": "Wenn dein Kopf abends an einer offenen Sache festhängt, versuch nicht, sie im Bett fertigzudenken. Schreib in einem Satz auf, was noch offen ist und was der nächste Schritt morgen sein wird. Damit verschwindet das Problem nicht, aber dein Gehirn muss es nicht die ganze Nacht festhalten. Welche offene Sache parkst du heute bewusst bis morgen?\n\n#motus #abendroutine #innereruhe #mentaleklarheit #selbstentwicklung\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
+      "id": "6ac6af4c4fd14839c725fce0",
+      "text": "Wenn ein Tag nicht so gelaufen ist, wie du wolltest, brauchst du abends kein Urteil über dich. Trenne Ergebnis und Identität. Etwas ist schiefgelaufen; das bedeutet nicht, dass du gescheitert bist. Frag nur: Was nehme ich daraus mit, und was lasse ich hier? Welche Sache musst du heute nicht mit ins Bett nehmen?\n\n#motus #abendroutine #innereruhe #mentaleklarheit #selbstentwicklung\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
       "status": "scheduled",
-      "dueAt": "2026-10-07T20:00:00.000Z",
+      "dueAt": "2026-10-08T20:00:00.000Z",
       "sentAt": null,
       "externalLink": null,
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-07-2200.mp4"
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-08-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac6af4a5116513c48a892e2",
+      "text": "Wenn du merkst, dass du innerlich sofort auf eine Nachricht oder Bemerkung reagieren willst, verzögere deine Antwort bewusst. Nicht als Spiel, sondern als Schutz vor einer Reaktion, die nur den ersten Impuls wiedergibt. Zehn Minuten Abstand können aus Rechtfertigung Klarheit machen. Wo würde dir heute eine spätere Antwort guttun?\n\n#motus #grenzensetzen #selbstrespekt #kommunikation #alltagspsychologie\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-08T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-08-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac6b12b4fd14839c7263f9a",
+      "text": "Wenn eine Aufgabe unangenehm ist, überschätzt dein Kopf oft den Aufwand, solange du sie nur anschaust. Stell dir deshalb keinen großen Abschluss vor. Stell einen Timer auf zehn Minuten und beginne nur. Danach darfst du neu entscheiden. Häufig ist nicht die Arbeit das Problem, sondern der Einstieg. Was startest du heute für zehn Minuten?\n\n#motus #motivation #morgenroutine #mindset #selbstentwicklung\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-08T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-08-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac6b09e2a8ddf9255ce29b7",
+      "text": "Starte morgen nicht mit der Frage, wie viel du schaffen musst. Frag dich zuerst: Was ist die eine Sache, die meinen Tag in die richtige Richtung bringt? Gib ihr zehn ungestörte Minuten, bevor Nachrichten und Erwartungen übernehmen. Ein klarer Anfang ist stärker als ein voller Plan. Was bekommt morgen deine ersten zehn Minuten?\n\n#motus #motivation #morgenroutine #mindset #selbstentwicklung\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-08T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-08-0700.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac564285a8d2d13237ada4e",
+      "text": "Wenn dein Kopf abends an einer offenen Sache festhängt, versuch nicht, sie im Bett fertigzudenken. Schreib in einem Satz auf, was noch offen ist und was der nächste Schritt morgen sein wird. Damit verschwindet das Problem nicht, aber dein Gehirn muss es nicht die ganze Nacht festhalten. Welche offene Sache parkst du heute bewusst bis morgen?\n\n#motus #abendroutine #innereruhe #mentaleklarheit #selbstentwicklung\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
+      "status": "sent",
+      "dueAt": "2026-10-07T20:00:00.000Z",
+      "sentAt": "2026-10-07T20:01:44.652Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7694018403379531040",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac564285a8d2d13237ada4e_video.mp4"
         }
       ]
     },
     {
       "id": "6ac5644ab77273576dc19f93",
       "text": "Wenn sich alles einfach nur schlecht anfühlt, benenn es genauer. Bist du enttäuscht, überfordert, wütend, unsicher oder erschöpft? Je präziser du ein Gefühl benennen kannst, desto leichter wird es, sinnvoll darauf zu reagieren. Ein diffuses Problem macht dich hilflos. Ein benanntes Problem gibt dir einen Ansatzpunkt. Was fühlst du gerade wirklich?\n\n#motus #beziehungen #selbstrespekt #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – Remember (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-07T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-07T16:31:40.579Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7693964241350561057",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-07-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac5644ab77273576dc19f93_video.mp4"
         }
       ]
     },
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab60de9cbe818dd4ffab9b9_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ab58fda7794ad3835660f25",
-      "text": "Kennst du das: Du gehst nach einem Gespräch nach Hause und plötzlich fallen dir zehn bessere Antworten ein? Dein Kopf versucht nicht, dich zu ärgern. Er sucht im Nachhinein nach Kontrolle. Das Problem beginnt, wenn aus kurzem Nachdenken eine Endlosschleife wird. Stell dir dann nur eine Frage: Gibt es etwas, das ich morgen wirklich klären oder anders machen kann? Wenn ja, notiere einen Satz dazu. Wenn nein, ist weiteres Denken keine Vorbereitung mehr, sondern Wiederholung. Du musst ein Gespräch nicht im Kopf gewinnen, nachdem es längst vorbei ist.",
-      "status": "sent",
-      "dueAt": "2026-09-25T16:30:00.000Z",
-      "sentAt": "2026-09-25T16:32:42.493Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7689511470555532577?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab58fda7794ad3835660f25_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6aba057573c74fd89db07178",
-      "text": "Ein klares Nein braucht nicht immer eine lange Erklärung. #motus #grenzen #selbstrespekt #kommunikation #alltagspsychologie",
-      "status": "sent",
-      "dueAt": "2026-09-24T20:01:51.000Z",
-      "sentAt": "2026-09-24T20:01:51.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7689194585175756054?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7689194585175756054?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6aba057573c74fd89db0718c",
-      "text": "Nicht jede Pause zwischen zwei Nachrichten bedeutet etwas. Hol dir deine Aufmerksamkeit zurück. #motus #alltagspsychologie #digitalbalance #innereruhe #aufmerksamkeit",
-      "status": "sent",
-      "dueAt": "2026-09-24T16:31:04.000Z",
-      "sentAt": "2026-09-24T16:31:04.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7689140277755284758?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7689140277755284758?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6ab5344f047a2dd58cd221fc",
-      "text": "Ein Nein wird oft erst dann schwer, wenn du anfängst, es zu erklären. Jede zusätzliche Begründung lädt dein Gegenüber dazu ein, über deine Grenze zu verhandeln. Versuch es kürzer: Heute passt es für mich nicht. Punkt. Freundlichkeit braucht keine Rechtfertigung. Eine klare Antwort kann respektvoll sein, auch wenn sie nicht jedem gefällt.",
-      "status": "sent",
-      "dueAt": "2026-09-24T14:38:00.000Z",
-      "sentAt": "2026-09-24T14:39:44.177Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7689111143360548128",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab5344f047a2dd58cd221fc_video.mp4"
         }
       ]
     }
