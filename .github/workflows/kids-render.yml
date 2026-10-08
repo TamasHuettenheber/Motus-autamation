@@ -178,12 +178,12 @@ jobs:
               subprocess.run([
                   "work/venv/bin/python","-m","piper",
                   "--model","de_DE-kerstin-low","--data-dir","work/voices",
-                  "--length-scale","1.08","--sentence-silence","0.30","--volume","0.92",
+                  "--length-scale","1.37","--sentence-silence","0.32","--volume","0.85",
                   "--input-file","work/narration.txt","--output-file","work/narration.wav"
               ],check=True)
               subprocess.run([
                   "ffmpeg","-y","-i","work/narration.wav",
-                  "-af","highpass=f=90,equalizer=f=260:t=q:w=1:g=1.4,equalizer=f=3200:t=q:w=1:g=-1.2,alimiter=limit=0.95",
+                  "-af","volume=0.82,highpass=f=90,equalizer=f=260:t=q:w=1:g=0.8,equalizer=f=3200:t=q:w=1:g=-0.8,alimiter=limit=0.95",
                   "-ar","48000","-ac","2","-b:a","192k","work/narration.mp3"
               ],check=True)
 
