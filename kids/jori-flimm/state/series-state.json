@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "series": "Jori & Flimm – Rätselwelten",
+  "last_successful_episode": null,
+  "next_episode_number": 0,
+  "continuity": {
+    "relationship_stage": "Vor Episode 000 kennen Jori und Flimm einander noch nicht.",
+    "known_facts": [
+      "Jori ist neugierig, beobachtet erst und hilft freundlich.",
+      "Flimm ist ein kleines magisches, laternenartiges Wesen mit warmem Sternenlicht im Bauch.",
+      "Flockenfels ist ein verschneiter Ort mit warmen Laternen, engen Gassen und alten Wegen."
+    ],
+    "active_threads": [
+      "Jori und Flimm begegnen sich zum ersten Mal."
+    ],
+    "recently_used_locations": [],
+    "recently_used_visual_assets": []
+  },
+  "book_boundary": {
+    "reserved_for_book": "Die 24 Missionen, Aufgaben, Lösungen, Licht-Buchstabenfolge und Schlussbotschaft bleiben exklusiv im Buch.",
+    "video_rule": "Nur neue Neben- oder Vorgeschichten; keine Buchmission nacherzählen oder lösen."
+  }
+}
