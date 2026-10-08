@@ -1,5 +1,5 @@
 name: Jori & Flimm Daily Handoff
-run-name: Kids Daily \${{ inputs.issue_number }}
+run-name: Kids Daily ${{ inputs.issue_number }}
 
 on:
   workflow_dispatch:
@@ -25,11 +25,11 @@ jobs:
     steps:
       - name: Validate handoff and dispatch renderer
         env:
-          GH_TOKEN: \${{ github.token }}
-          REPO: \${{ github.repository }}
-          ISSUE_NUMBER: \${{ inputs.issue_number }}
-          TARGET_REF: \${{ inputs.target_ref }}
-          RUN_REF: \${{ github.ref_name }}
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ inputs.issue_number }}
+          TARGET_REF: ${{ inputs.target_ref }}
+          RUN_REF: ${{ github.ref_name }}
         run: |
           python3 - <<'PY'
           import json, os, re, urllib.request, urllib.error
