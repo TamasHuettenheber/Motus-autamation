@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-08T01:49:55.587352+00:00",
+  "checked_at_utc": "2026-10-08T08:50:58.643372+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -58,15 +58,15 @@
     {
       "id": "6ac6b09e2a8ddf9255ce29b7",
       "text": "Starte morgen nicht mit der Frage, wie viel du schaffen musst. Frag dich zuerst: Was ist die eine Sache, die meinen Tag in die richtige Richtung bringt? Gib ihr zehn ungestörte Minuten, bevor Nachrichten und Erwartungen übernehmen. Ein klarer Anfang ist stärker als ein voller Plan. Was bekommt morgen deine ersten zehn Minuten?\n\n#motus #motivation #morgenroutine #mindset #selbstentwicklung\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-08T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-08T05:01:48.760Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7694157371685276960",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-08-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac6b09e2a8ddf9255ce29b7_video.mp4"
         }
       ]
     },
