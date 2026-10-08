@@ -181,9 +181,9 @@ jobs:
               frames=max(1,int(round(d*30)))
               # Alternating zoom direction adds motion without AI video generation.
               if i % 2:
-                  zp="zoompan=z='min(zoom+0.0008,1.10)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
+                  zp=f"zoompan=z='min(zoom+0.00033,1.10)':x='(iw-iw/zoom)*on/{frames}':y='(ih-ih/zoom)/2'"
               else:
-                  zp="zoompan=z='if(lte(zoom,1.0),1.10,max(1.0,zoom-0.0008))':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
+                  zp=f"zoompan=z='max(1.0,1.10-on*0.00033)':x='(iw-iw/zoom)*(1-on/{frames})':y='(ih-ih/zoom)/2'""
               vf=(
                   "scale=1080:1920:force_original_aspect_ratio=increase,"
                   "crop=1080:1920,"
@@ -248,10 +248,55 @@ jobs:
           BRANCH_NAME: ${{ github.ref_name }}
         run: |
           mkdir -p "kids/jori-flimm/state/episodes"
-          cp work/payload.json "kids/jori-flimm/state/episodes/$SAFE_NAME.json"
+          python3 - <<'PY'
+          import json, os
+
+          with open("work/payload.json", encoding="utf-8") as f:
+              payload=json.load(f)
+          ledger_path="kids/jori-flimm/state/episode-ledger.json"
+          state_path="kids/jori-flimm/state/series-state.json"
+          with open(ledger_path, encoding="utf-8") as f:
+              ledger=json.load(f)
+          with open(state_path, encoding="utf-8") as f:
+              state=json.load(f)
+
+          number=int(payload["episode_number"])
+          episodes=[e for e in ledger.get("episodes",[]) if int(e["episode_number"]) != number]
+          record={
+              "episode_number":number,
+              "date":payload["date"],
+              "title":payload["title"],
+              "hook":payload["hook"],
+              "riddle":payload["riddle"],
+              "continuity_note":payload.get("continuity_note",""),
+              "visual_assets":[s["image_url"] for s in payload["scenes"]]
+          }
+          episodes.append(record)
+          ledger["episodes"]=episodes[-50:]
+          state["last_successful_episode"]=number
+          state["next_episode_number"]=number+1
+          continuity=state.setdefault("continuity",{})
+          after=payload.get("continuity_after",{})
+          for key in ["relationship_stage","known_facts","active_threads"]:
+              if key in after:
+                  continuity[key]=after[key]
+          continuity["recently_used_locations"]=payload.get("locations",continuity.get("recently_used_locations",[]))
+          continuity["recently_used_visual_assets"]=record["visual_assets"]
+          os.makedirs(os.path.dirname(ledger_path),exist_ok=True)
+          with open(ledger_path,"w",encoding="utf-8") as f:
+              json.dump(ledger,f,ensure_ascii=False,indent=2)
+              f.write("\n")
+          with open(state_path,"w",encoding="utf-8") as f:
+              json.dump(state,f,ensure_ascii=False,indent=2)
+              f.write("\n")
+          os.makedirs("kids/jori-flimm/state/episodes",exist_ok=True)
+          with open(f"kids/jori-flimm/state/episodes/$SAFE_NAME.json","w",encoding="utf-8") as f:
+              json.dump(payload,f,ensure_ascii=False,indent=2)
+              f.write("\n")
+          PY
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "kids/jori-flimm/state/episodes/$SAFE_NAME.json"
+          git add "kids/jori-flimm/state/episodes/$SAFE_NAME.json" kids/jori-flimm/state/series-state.json kids/jori-flimm/state/episode-ledger.json
           if ! git diff --cached --quiet; then
             git commit -m "Render $SAFE_NAME"
             git pull --rebase origin "$BRANCH_NAME"
