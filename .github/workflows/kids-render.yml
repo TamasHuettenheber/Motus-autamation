@@ -81,7 +81,7 @@ jobs:
               raise SystemExit("Invalid title")
           if not isinstance(p["hook"],str) or len(p["hook"].strip()) < 3:
               raise SystemExit("Invalid hook")
-          if not re.fullmatch(r"([01]\\d|2[0-3]):[0-5]\\d",str(p["publish_time"])):
+          if not re.fullmatch(r"([01]\d|2[0-3]):[0-5]\d",str(p["publish_time"])):
               raise SystemExit("Invalid publish_time")
           riddle=p["riddle"]
           for key in ["type","question","answer","pause_seconds"]:
