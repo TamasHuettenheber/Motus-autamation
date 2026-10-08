@@ -19,11 +19,12 @@ Caption timing is estimated from word counts. It is suitable for a technical pre
 - `episode-state.schema.json`: payload contract
 - `state/series-state.json`: current character and world continuity
 - `state/episode-ledger.json`: recent titles, hooks, riddles, and visual asset usage
-- `test-payload-episode-000.json`: first-meeting technical test story
+- `test-payload-episode-000.json`: first-meeting side-story payload with six original AI-generated illustrations
+- `assets/e000/`: six 720×1280 JPEG scene illustrations used by Episode 000
 
 ## Safe test procedure
 
-A narrowly filtered `push` trigger is configured for changes to the Episode 000 test payload on `feature/jori-flimm-kids-pipeline`. It loads that fixture directly, renders with generated TTS and free placeholder stills, uploads the MP4 for seven days, and updates only the kids state files on the feature branch. The isolated render completed in GitHub Actions run #3 with technical QC passing (70.8 seconds, 1080×1920, H.264/AAC). The MP4 is kept as a seven-day artifact. A fourth run is still checking the continuity merge fix. The preview uses text placeholder stills, so it is a renderer test, not publish-ready character artwork.
+A narrowly filtered `push` trigger is configured for changes to the Episode 000 test payload on `feature/jori-flimm-kids-pipeline`. It loads that fixture directly, renders with generated German TTS, original AI-generated Jori & Flimm scene illustrations, slow zoom/pan, safe-zone captions, and technical QC, then uploads the MP4 for seven days and updates only the kids state files on the feature branch. GitHub Actions run #5 completed successfully with QC passing (1080×1920, H.264/AAC). The illustrated MP4 is available as a seven-day artifact. Pronunciation and story quality still need a human listen-through before any public release.
 
 The daily handoff remains manual. GitHub only exposes `workflow_dispatch` after its workflow exists on the default branch, so it is not enabled for the feature branch yet.
 

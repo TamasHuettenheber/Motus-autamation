@@ -2,7 +2,7 @@
 
 ## Isolation
 
-The implementation is restricted to `feature/jori-flimm-kids-pipeline`. The manual handoff and renderer reject any other ref. A separate push trigger is configured only for changes to the Episode 000 fixture on this feature branch; it enables a technical render without merging. Actions run #3 completed with technical QC passing at 70.8 seconds, 1080×1920, H.264/AAC. Its placeholder-card visuals validate layout only; character artwork, voice quality, and story fit still need human review. A fourth run is verifying the continuity merge fix. No publishing workflow, issue-open trigger, or change to the Motus master workflow is included.
+The implementation is restricted to `feature/jori-flimm-kids-pipeline`. The manual handoff and renderer reject any other ref. A separate push trigger is configured only for changes to the Episode 000 fixture on this feature branch; it enables a technical render without merging. Actions run #5 completed successfully with original AI-generated Jori & Flimm illustrations, German TTS, slow zoom/pan, subtitles, and QC passing at 1080×1920 H.264/AAC. The seven-day MP4 artifact is ready for review; pronunciation and story quality still need a human listen-through. No publishing workflow, issue-open trigger, or change to the Motus master workflow is included.
 
 The daily handoff can later receive a fifth content package from the shared 22:37 producer, but that integration must be implemented separately after the isolated renderer is proven.
 
@@ -24,7 +24,7 @@ After successful QC, the renderer stores the episode payload, updates the ledger
 
 ## Episode 000 technical fixture
 
-`test-payload-episode-000.json` is a new side story about Jori and Flimm meeting at an old bridge. It does not retell a book mission. It uses free placeholder stills and generated German TTS for an end-to-end technical preview.
+`test-payload-episode-000.json` is a new side story about Jori and Flimm meeting at an old bridge. It does not retell a book mission. It uses six original AI-generated story illustrations and generated German TTS for an end-to-end illustrated preview.
 
 A feature-branch push trigger is configured only for changes to this one test file. It uploads the result as an Actions artifact and commits state/episode metadata only on the feature branch. It does not publish.
 
