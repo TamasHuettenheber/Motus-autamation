@@ -41,7 +41,7 @@ jobs:
           sudo apt-get install -y ffmpeg curl fonts-dejavu-core python3-venv
           python3 -m venv work/venv
           work/venv/bin/python -m pip install --disable-pip-version-check --no-cache-dir piper-tts
-          work/venv/bin/python -m piper.download_voices --data-dir work/voices de_DE-kerstin-low
+          work/venv/bin/python -m piper.download_voices --data-dir work/voices de_DE-mls-medium
 
       - name: Load and validate episode payload
         env:
@@ -177,13 +177,14 @@ jobs:
                   f.write(p["narration"].strip()+"\n")
               subprocess.run([
                   "work/venv/bin/python","-m","piper",
-                  "--model","de_DE-kerstin-low","--data-dir","work/voices",
-                  "--length-scale","1.37","--sentence-silence","0.32","--volume","0.85",
+                  "--model","de_DE-mls-medium","--data-dir","work/voices",
+                  "--speaker","86","--length-scale","1.18","--sentence-silence","0.62","--volume","0.95",
+                  "--noise-scale","0.333","--noise-w-scale","0.333",
                   "--input-file","work/narration.txt","--output-file","work/narration.wav"
               ],check=True)
               subprocess.run([
                   "ffmpeg","-y","-i","work/narration.wav",
-                  "-af","volume=0.82,highpass=f=90,equalizer=f=260:t=q:w=1:g=0.8,equalizer=f=3200:t=q:w=1:g=-0.8,alimiter=limit=0.95",
+                  "-af","volume=0.95,highpass=f=75,equalizer=f=180:t=q:w=1:g=1.0,equalizer=f=3200:t=q:w=1:g=-0.7,alimiter=limit=0.95",
                   "-ar","48000","-ac","2","-b:a","192k","work/narration.mp3"
               ],check=True)
 
