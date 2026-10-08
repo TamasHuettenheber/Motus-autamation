@@ -23,7 +23,7 @@ Caption timing is estimated from word counts. It is suitable for a technical pre
 
 ## Safe test procedure
 
-A narrowly filtered `push` trigger is configured for changes to the Episode 000 test payload on `feature/jori-flimm-kids-pipeline`. It loads that fixture directly, renders with generated TTS and free placeholder stills, uploads the MP4 for seven days, and updates only the kids state files on the feature branch. This path is intended to permit an Actions render without merging to `main`. No run or check appeared in GitHub after the fixture update, so remote render completion is still unverified.
+A narrowly filtered `push` trigger is configured for changes to the Episode 000 test payload on `feature/jori-flimm-kids-pipeline`. It loads that fixture directly, renders with generated TTS and free placeholder stills, uploads the MP4 for seven days, and updates only the kids state files on the feature branch. The isolated render completed in GitHub Actions run #3 with technical QC passing (70.8 seconds, 1080×1920, H.264/AAC). The MP4 is kept as a seven-day artifact. A fourth run is still checking the continuity merge fix. The preview uses text placeholder stills, so it is a renderer test, not publish-ready character artwork.
 
 The daily handoff remains manual. GitHub only exposes `workflow_dispatch` after its workflow exists on the default branch, so it is not enabled for the feature branch yet.
 
