@@ -275,6 +275,12 @@
       "clip_id": "park-walk-8296235",
       "source": "https://www.pexels.com/video/a-man-walking-around-the-park-8296235/",
       "used_at_utc": "2026-10-08T20:54:56.315000+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-09-2200",
+      "clip_id": "rain-window-32661246",
+      "source": "https://www.pexels.com/video/rainy-window-view-with-drops-on-glass-32661246/",
+      "used_at_utc": "2026-10-08T20:55:01.177359+00:00"
     }
   ]
 }
