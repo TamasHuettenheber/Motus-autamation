@@ -39,6 +39,15 @@
       }
     },
     "cta": {"type": "string", "maxLength": 200},
+    "continuity_note": {"type": "string", "maxLength": 1000},
+    "continuity_after": {
+      "type": "object",
+      "properties": {
+        "relationship_stage": {"type": "string", "maxLength": 500},
+        "known_facts": {"type": "array", "items": {"type": "string", "maxLength": 500}},
+        "active_threads": {"type": "array", "items": {"type": "string", "maxLength": 500}}
+      }
+    },
     "publish_time": {"type": "string", "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"},
     "qc": {
       "type": "object",
