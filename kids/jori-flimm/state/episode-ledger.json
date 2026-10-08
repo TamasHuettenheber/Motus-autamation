@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "retention": {
+    "recent_title_hooks": 30,
+    "recent_riddles": 50
+  },
+  "episodes": []
+}
