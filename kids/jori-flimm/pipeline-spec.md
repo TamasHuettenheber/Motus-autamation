@@ -2,7 +2,7 @@
 
 ## Isolation
 
-The implementation is restricted to `feature/jori-flimm-kids-pipeline`. The manual handoff and renderer reject any other ref. A separate push trigger is configured only for changes to the Episode 000 fixture on this feature branch; it enables a technical render without merging. Actions run #5 completed successfully with original AI-generated Jori & Flimm illustrations, German TTS, slow zoom/pan, subtitles, and QC passing at 1080×1920 H.264/AAC. The seven-day MP4 artifact is ready for review; pronunciation and story quality still need a human listen-through. No publishing workflow, issue-open trigger, or change to the Motus master workflow is included.
+The implementation is restricted to `feature/jori-flimm-kids-pipeline`. The manual handoff and renderer reject any other ref. A separate push trigger is configured only for changes to the Episode 000 fixture on this feature branch; it enables a technical render without merging. Actions run #8 completed successfully with the same original illustrations, story text, zoom/pan, and subtitles; only the narration model/settings changed. Piper uses `de_DE-mls-medium` with female speaker ID 86, 1.18 length scale, 0.62s sentence pauses, and mild warm EQ. QC passed at 65.6s and 1080×1920 H.264/AAC. The seven-day MP4 is ready for the user's listen-through; the voice is a free candidate, not yet approved as the final voice. No publishing workflow, issue-open trigger, or change to the Motus master workflow is included.
 
 The daily handoff can later receive a fifth content package from the shared 22:37 producer, but that integration must be implemented separately after the isolated renderer is proven.
 
