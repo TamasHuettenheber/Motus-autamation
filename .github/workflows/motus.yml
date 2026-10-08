@@ -397,25 +397,30 @@ jobs:
               )
 
           def choose_hashtags(value):
+              # Score the complete topic, not incidental substrings such as
+              # 'morgen' in 'bis morgen' or 'enttaeuscht' in an emotion example.
               t = fold(value)
+              tokens = set(re.findall(r"[a-z0-9]+", t))
               themes = [
-                  (["morgen","start","energie","motivation","routine","bewegung"], ["#motivation","#morgenroutine","#mindset","#selbstentwicklung"]),
-                  (["grenze","nein","rechtfert","respekt","abstand"], ["#grenzensetzen","#selbstrespekt","#kommunikation","#alltagspsychologie"]),
-                  (["gespraech","kommunikation","nachricht","antwort","zuhören","zuhoeren"], ["#kommunikation","#alltagspsychologie","#selbstentwicklung","#mentaleklarheit"]),
-                  (["gruebel","gedanke","kopf","ruhe","stress","fehler"], ["#innereruhe","#mentaleklarheit","#alltagspsychologie","#selbstentwicklung"]),
-                  (["fokus","aufmerksamkeit","ablenkung","handy","benachrichtigung"], ["#fokus","#digitalbalance","#aufmerksamkeit","#selbstentwicklung"]),
-                  (["entscheidung","prioritaet","priorisieren","to-do","aufgabe","produktiv"], ["#produktivitaet","#klarheit","#fokus","#selbstentwicklung"]),
-                  (["vertrauen","verzeihen","beziehung","naehe","enttaeuscht"], ["#beziehungen","#selbstrespekt","#alltagspsychologie","#selbstentwicklung"]),
-                  (["abend","schlafen","feierabend","nacht","abschalten"], ["#abendroutine","#innereruhe","#mentaleklarheit","#selbstentwicklung"]),
+                  (["gefuehl", "gefuehle", "emotion", "emotionen", "benennen", "wahrnehmen", "einordnen"], ["#emotionen", "#selbstreflexion", "#mentaleklarheit", "#selbstentwicklung"]),
+                  (["grenze", "grenzen", "rechtfertigen", "respekt", "abstand", "neinsagen"], ["#grenzensetzen", "#selbstrespekt", "#kommunikation", "#alltagspsychologie"]),
+                  (["gespraech", "kommunikation", "nachricht", "antwort", "zuhoeren"], ["#kommunikation", "#alltagspsychologie", "#selbstentwicklung", "#mentaleklarheit"]),
+                  (["gruebeln", "gedanken", "ruhe", "stress", "sorgen"], ["#innereruhe", "#mentaleklarheit", "#alltagspsychologie", "#selbstentwicklung"]),
+                  (["fokus", "aufmerksamkeit", "ablenkung", "handy", "benachrichtigung"], ["#fokus", "#digitalbalance", "#aufmerksamkeit", "#selbstentwicklung"]),
+                  (["entscheidung", "prioritaet", "priorisieren", "aufgabe", "aufgaben", "produktivitaet", "anfangen"], ["#produktivitaet", "#klarheit", "#fokus", "#selbstentwicklung"]),
+                  (["vertrauen", "verzeihen", "beziehung", "beziehungen", "partnerschaft", "naehe"], ["#beziehungen", "#selbstrespekt", "#alltagspsychologie", "#selbstentwicklung"]),
+                  (["abend", "feierabend", "nacht", "abschalten", "einschlafen"], ["#abendroutine", "#innereruhe", "#mentaleklarheit", "#selbstentwicklung"]),
               ]
-              best_tags = ["#alltagspsychologie","#selbstentwicklung","#mindset","#motivation"]
-              best_score = -1
-              for keywords, tags in themes:
-                  score = sum(1 for kw in keywords if kw in t)
-                  if score > best_score:
-                      best_score = score
-                      best_tags = tags
-              return ["#motus"] + best_tags
+              ranked = sorted(
+                  ((len(tokens.intersection(keywords)), idx, tags) for idx, (keywords, tags) in enumerate(themes)),
+                  reverse=True,
+              )
+              # A single generic word must not determine the topic.
+              best_tags = ranked[0][2] if ranked[0][0] >= 2 else ["#alltagspsychologie", "#selbstentwicklung", "#mentaleklarheit", "#mindset"]
+              result = ["#motus"] + best_tags
+              if len(result) != 5 or len(set(result)) != 5 or any(x in result for x in ("#fyp", "#foryou")):
+                  raise SystemExit("HASHTAG_QC_FAILED")
+              return result
 
           hashtags = choose_hashtags(base_text)
           music_title = os.environ.get("MOTUS_MUSIC_TITLE", "Now or Never").strip() or "Now or Never"
