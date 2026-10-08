@@ -11,7 +11,7 @@ on:
 
 permissions:
   contents: write
-  issues: write
+  issues: read
 
 jobs:
   render:
@@ -24,10 +24,16 @@ jobs:
         with:
           ref: ${{ github.ref_name }}
 
+      - name: Validate isolated branch
+        env:
+          RUN_REF: ${{ github.ref_name }}
+        run: |
+          test "$RUN_REF" = "feature/jori-flimm-kids-pipeline"
+
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg curl jq fonts-dejavu-core
+          sudo apt-get install -y ffmpeg curl fonts-dejavu-core espeak-ng
 
       - name: Load and validate episode payload
         env:
@@ -58,7 +64,7 @@ jobs:
           except json.JSONDecodeError as e:
               raise SystemExit(f"Issue body must be pure JSON: {e}")
 
-          required=["date","episode_number","title","narration","audio_url","scenes"]
+          required=["date","episode_number","title","narration","scenes"]
           for k in required:
               if k not in p:
                   raise SystemExit(f"Missing field: {k}")
@@ -66,8 +72,8 @@ jobs:
               raise SystemExit("Invalid date")
           if not isinstance(p["episode_number"],int) or p["episode_number"] < 0:
               raise SystemExit("Invalid episode_number")
-          if not str(p["audio_url"]).startswith("https://"):
-              raise SystemExit("audio_url must be https")
+          if p.get("audio_url") and not str(p["audio_url"]).startswith("https://"):
+              raise SystemExit("audio_url must be https when provided")
           scenes=p["scenes"]
           if not isinstance(scenes,list) or not 5 <= len(scenes) <= 10:
               raise SystemExit("scenes must contain 5-10 items")
@@ -87,7 +93,7 @@ jobs:
               f.write(f"SAFE_NAME={safe}\n")
               f.write(f"EPISODE_NUMBER={p['episode_number']}\n")
               f.write(f"EPISODE_DATE={p['date']}\n")
-              f.write(f"AUDIO_URL={p['audio_url']}\n")
+              f.write(f"AUDIO_URL={p.get('audio_url', '')}\n")
               f.write("EPISODE_TITLE<<EOF_TITLE\n"+str(p["title"]).strip()+"\nEOF_TITLE\n")
               f.write("NARRATION<<EOF_NARRATION\n"+str(p["narration"]).strip()+"\nEOF_NARRATION\n")
               f.write(f"SCENE_COUNT={len(scenes)}\n")
@@ -101,8 +107,13 @@ jobs:
       - name: Download narration and scene images
         run: |
           mkdir -p work/scenes published-kids
-          curl -L --fail --retry 3 --retry-delay 2 "$AUDIO_URL" -o work/audio_source
-          ffmpeg -y -i work/audio_source -vn -ar 48000 -ac 2 -b:a 192k work/narration.mp3
+          if [ -n "$AUDIO_URL" ]; then
+            curl -L --fail --retry 3 --retry-delay 2 "$AUDIO_URL" -o work/audio_source
+            ffmpeg -y -i work/audio_source -vn -ar 48000 -ac 2 -b:a 192k work/narration.mp3
+          else
+            espeak-ng -v de -s 145 -w work/narration.wav "$NARRATION"
+            ffmpeg -y -i work/narration.wav -ar 48000 -ac 2 -b:a 192k work/narration.mp3
+          fi
           python3 - <<'PY'
           import json, subprocess
           p=json.load(open("work/payload.json",encoding="utf-8"))
@@ -224,16 +235,23 @@ jobs:
           print(f"QC passed: {d:.2f}s")
           PY
 
+      - name: Upload rendered preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.SAFE_NAME }}
+          path: work/${{ env.SAFE_NAME }}.mp4
+          if-no-files-found: error
+          retention-days: 7
+
       - name: Save render and episode metadata
         env:
           BRANCH_NAME: ${{ github.ref_name }}
         run: |
           mkdir -p "kids/jori-flimm/state/episodes"
-          cp "work/$SAFE_NAME.mp4" "published-kids/$SAFE_NAME.mp4"
           cp work/payload.json "kids/jori-flimm/state/episodes/$SAFE_NAME.json"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "published-kids/$SAFE_NAME.mp4" "kids/jori-flimm/state/episodes/$SAFE_NAME.json"
+          git add "kids/jori-flimm/state/episodes/$SAFE_NAME.json"
           if ! git diff --cached --quiet; then
             git commit -m "Render $SAFE_NAME"
             git pull --rebase origin "$BRANCH_NAME"
