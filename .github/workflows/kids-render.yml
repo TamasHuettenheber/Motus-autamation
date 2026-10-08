@@ -104,7 +104,7 @@ jobs:
 
           def fingerprint(value):
               value=unicodedata.normalize("NFKC",str(value)).casefold()
-              return re.sub(r"[^\\w]+"," ",value).strip()
+              return re.sub(r"[^\w]+"," ",value).strip()
           ledger_path="kids/jori-flimm/state/episode-ledger.json"
           if os.path.exists(ledger_path):
               with open(ledger_path,encoding="utf-8") as f:
@@ -122,7 +122,7 @@ jobs:
 
           safe=f"jori-flimm-{p['date']}-e{int(p['episode_number']):03d}"
           with open(os.environ["GITHUB_ENV"],"a",encoding="utf-8") as f:
-              f.write(f"SAFE_NAME={safe}\\n")
+              f.write(f"SAFE_NAME={safe}\n")
           os.makedirs("work",exist_ok=True)
           with open("work/payload.json","w",encoding="utf-8") as f:
               json.dump(p,f,ensure_ascii=False,indent=2)
@@ -176,7 +176,7 @@ jobs:
           AUDIO_DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 work/narration.mp3)"
           echo "AUDIO_DURATION=$AUDIO_DURATION" >> "$GITHUB_ENV"
           python3 - <<'PY'
-          import json,re,textwrap
+          import json,os,re,textwrap
           with open("work/payload.json",encoding="utf-8") as f:
               text=json.load(f)["narration"].strip()
           dur=float(os.environ["AUDIO_DURATION"])
