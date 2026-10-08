@@ -1,7 +1,12 @@
 name: Jori & Flimm Renderer
-run-name: Kids episode #${{ inputs.issue_number }}
+run-name: Kids episode #${{ inputs.issue_number || 'Episode 000 test' }}
 
 on:
+  push:
+    branches:
+      - feature/jori-flimm-kids-pipeline
+    paths:
+      - kids/jori-flimm/test-payload-episode-000.json
   workflow_dispatch:
     inputs:
       issue_number:
@@ -40,32 +45,37 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           REPO: ${{ github.repository }}
           ISSUE_NUMBER: ${{ inputs.issue_number }}
+          EVENT_NAME: ${{ github.event_name }}
         run: |
           python3 - <<'PY'
           import json, os, re, unicodedata, urllib.request
           from datetime import date
 
-          repo=os.environ["REPO"]
-          num=str(os.environ["ISSUE_NUMBER"]).strip()
-          if not re.fullmatch(r"\d+",num):
-              raise SystemExit("Issue number must be numeric")
-          req=urllib.request.Request(
-              f"https://api.github.com/repos/{repo}/issues/{num}",
-              headers={
-                  "Authorization": f"Bearer {os.environ['GH_TOKEN']}",
-                  "Accept":"application/vnd.github+json",
-                  "X-GitHub-Api-Version":"2022-11-28",
-                  "User-Agent":"jori-flimm-renderer"
-              }
-          )
-          with urllib.request.urlopen(req, timeout=60) as r:
-              issue=json.loads(r.read().decode("utf-8"))
-          if not str(issue.get("title","")).startswith("[JORI-FLIMM-DAY]"):
-              raise SystemExit("Issue is not a [JORI-FLIMM-DAY] payload")
-          try:
-              p=json.loads(issue.get("body") or "")
-          except json.JSONDecodeError as e:
-              raise SystemExit(f"Issue body must be pure JSON: {e}")
+          if os.environ["EVENT_NAME"] == "push":
+              with open("kids/jori-flimm/test-payload-episode-000.json",encoding="utf-8") as f:
+                  p=json.load(f)
+          else:
+              repo=os.environ["REPO"]
+              num=str(os.environ["ISSUE_NUMBER"]).strip()
+              if not re.fullmatch(r"\d+",num):
+                  raise SystemExit("Issue number must be numeric")
+              req=urllib.request.Request(
+                  f"https://api.github.com/repos/{repo}/issues/{num}",
+                  headers={
+                      "Authorization": f"Bearer {os.environ['GH_TOKEN']}",
+                      "Accept":"application/vnd.github+json",
+                      "X-GitHub-Api-Version":"2022-11-28",
+                      "User-Agent":"jori-flimm-renderer"
+                  }
+              )
+              with urllib.request.urlopen(req, timeout=60) as r:
+                  issue=json.loads(r.read().decode("utf-8"))
+              if not str(issue.get("title","")).startswith("[JORI-FLIMM-DAY]"):
+                  raise SystemExit("Issue is not a [JORI-FLIMM-DAY] payload")
+              try:
+                  p=json.loads(issue.get("body") or "")
+              except json.JSONDecodeError as e:
+                  raise SystemExit(f"Body must be pure JSON: {e}")
 
           required=["date","episode_number","title","hook","narration","riddle","scenes","publish_time","qc"]
           for k in required:
