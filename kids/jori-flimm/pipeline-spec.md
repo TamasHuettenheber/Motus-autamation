@@ -2,7 +2,7 @@
 
 ## Isolation
 
-The implementation is restricted to `feature/jori-flimm-kids-pipeline`. The manual handoff and renderer reject any other ref. A separate push trigger exists only for changes to the Episode 000 fixture on this feature branch; it enables one technical render without merging. No publishing workflow, issue-open trigger, or change to the Motus master workflow is included.
+The implementation is restricted to `feature/jori-flimm-kids-pipeline`. The manual handoff and renderer reject any other ref. A separate push trigger is configured only for changes to the Episode 000 fixture on this feature branch; it is intended to enable a technical render without merging. No run or check appeared in GitHub after the fixture update, so that path remains unverified. No publishing workflow, issue-open trigger, or change to the Motus master workflow is included.
 
 The daily handoff can later receive a fifth content package from the shared 22:37 producer, but that integration must be implemented separately after the isolated renderer is proven.
 
@@ -26,7 +26,7 @@ After successful QC, the renderer stores the episode payload, updates the ledger
 
 `test-payload-episode-000.json` is a new side story about Jori and Flimm meeting at an old bridge. It does not retell a book mission. It uses free placeholder stills and generated German TTS for an end-to-end technical preview.
 
-A feature-branch push trigger runs only when this one test file changes. It uploads the result as an Actions artifact and commits state/episode metadata only on the feature branch. It does not publish.
+A feature-branch push trigger is configured only for changes to this one test file. It uploads the result as an Actions artifact and commits state/episode metadata only on the feature branch. It does not publish.
 
 ## Publishing and rollout
 
