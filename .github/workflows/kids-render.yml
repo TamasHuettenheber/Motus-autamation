@@ -277,7 +277,7 @@ jobs:
               "ffprobe","-v","error","-show_entries","format=duration",
               "-of","default=noprint_wrappers=1:nokey=1","work/narration.mp3"
           ],text=True))
-          target_total=max(60.0,audio_duration+1.0)
+          target_total=max(60.0,audio_duration+2.2)
           if target_total-audio_duration>8.0:
               raise SystemExit(f"Narration is too short for a 60-second short: {audio_duration:.1f}s")
           if target_total>100:
@@ -319,6 +319,7 @@ jobs:
           VISUAL_DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 work/visuals.mp4)"
           export VISUAL_DURATION
           echo "VISUAL_DURATION=$VISUAL_DURATION" >> "$GITHUB_ENV"
+          FADE_START="$(python3 -c "print(max(0.0, float('$VISUAL_DURATION') - 1.2))")"
           python3 - <<'PY'
           import os
           a=float(os.environ["AUDIO_DURATION"])
@@ -327,7 +328,7 @@ jobs:
               raise SystemExit(f"Visual timeline ({v:.2f}s) is shorter than narration ({a:.2f}s)")
           PY
           ffmpeg -y -i work/visuals.mp4 -i work/narration.mp3 \
-            -filter_complex "[0:v]subtitles=work/captions.ass[v];[1:a]apad,atrim=duration=${VISUAL_DURATION}[a]" \
+            -filter_complex "[0:v]subtitles=work/captions.ass,fade=t=out:st=${FADE_START}:d=1.2[v];[1:a]apad,atrim=duration=${VISUAL_DURATION}[a]" \
             -map "[v]" -map "[a]" \
             -c:v libx264 -preset veryfast -crf 22 -pix_fmt yuv420p -r 30 \
             -c:a aac -b:a 192k -movflags +faststart -t "${VISUAL_DURATION}" \
