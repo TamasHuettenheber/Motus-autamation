@@ -1,44 +1,35 @@
 # Jori & Flimm – Kids Short-Story Pipeline
 
-Status: design/build branch. The live Motus workflows on `main` stay untouched until the kids pipeline passes an end-to-end test.
+Status: isolated build on `feature/jori-flimm-kids-pipeline`. This work does not change `main` or the live Motus workflow.
 
-## Decision
-Keep this pipeline in the existing Motus automation repository because it will share the same ChatGPT master trigger and the same GitHub infrastructure. Keep all kids content isolated below `kids/jori-flimm/` and use separate GitHub workflows and output paths.
+## Content boundary
 
-## Product rule
-The KDP book content stays exclusive to the book/e-book. The video channel must NOT retell, reveal, serialize, or solve the 24 book missions.
+The book `Die 24 verschwundenen Weihnachtslichter` is canon for character and world details only. Its 24 missions, 48 tasks, solutions, light-letter sequence, and final message stay exclusive to the book. Videos use new side stories and riddles.
 
-The video series uses the same world and characters but tells original prequel/side stories.
+## Free renderer
 
-## Canonical world
-- Series: Jori & Flimm – Rätselwelten
-- Core characters: Jori, Flimm; Murrflaum may be introduced only when story continuity makes sense
-- World: Flockenfels
-- Target age: 7–10
-- Format target: 60–90 second vertical short
-- Content: original mini-story + one age-appropriate riddle + reveal/cliffhanger
-- Publish target: 16:00 local time
-- Production target: previous evening in the 22:37 master production run
+The renderer turns 5–10 still images into a 1080×1920 H.264 slideshow with slow alternating zoom and pan, narration, safe-zone subtitles, and QC. It accepts a supplied HTTPS audio file or creates German narration with free `espeak-ng` TTS. Rendered MP4 files are retained as a short-lived Actions artifact; successful episode JSON and continuity state are committed on this feature branch.
 
-## Free-first production
-Initial format is slideshow/2.5D motion:
-- 6–9 still images
-- 8–15 seconds per image
-- slow zoom/pan (Ken Burns)
-- narration
-- low-volume background music
-- on-screen riddle and answer
-- subtitles
-- no paid AI-video generation
+The initial caption timing is estimated from narration word counts. It is suitable for a technical preview, not a final accessibility review.
 
-## Isolation
-Do not modify live Motus rendering logic until:
-1. one kids episode renders successfully,
-2. QC passes,
-3. second-channel publishing is connected,
-4. one private/unlisted or draft posting test succeeds.
+## Files
 
-See:
-- `series-bible.md`
-- `pipeline-spec.md`
-- `episode-state.schema.json`
+- `series-bible.md`: canon and episode rules
+- `pipeline-spec.md`: workflow, payload, and rollout details
+- `episode-state.schema.json`: payload contract
+- `state/series-state.json`: current character and world continuity
+- `state/episode-ledger.json`: recent titles, hooks, riddles, and visual asset usage
+- `test-payload-episode-000.json`: first-meeting test story
+
+## Safe test procedure
+
+1. Create a GitHub issue titled `[JORI-FLIMM-DAY] Episode 000 test` and paste the test JSON as the complete issue body.
+2. Dispatch `Jori & Flimm Daily Handoff` on `feature/jori-flimm-kids-pipeline` with the issue number and the same target ref.
+3. Download the `jori-flimm-2026-10-08-e000` artifact from the renderer run and review narration, captions, character visuals, and QC.
+4. Confirm the state files and episode JSON were committed on the feature branch.
+
+GitHub requires a `workflow_dispatch` workflow to exist on the repository's default branch before it can be manually dispatched. The feature-only workflow is therefore prepared but has not been run from GitHub; do not merge it merely to enable a test.
+
+## Publishing
+
+No publishing workflow or second social account is connected. Publishing stays out of scope until the user explicitly authorizes a second channel/login and a private or draft post test.
