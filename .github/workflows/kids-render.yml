@@ -115,11 +115,23 @@ jobs:
             ffmpeg -y -i work/narration.wav -ar 48000 -ac 2 -b:a 192k work/narration.mp3
           fi
           python3 - <<'PY'
-          import json, subprocess
+          import json
+          from urllib.request import Request, urlopen
           p=json.load(open("work/payload.json",encoding="utf-8"))
+          scene_files=[]
+          extensions={"image/png":".png","image/jpeg":".jpg","image/webp":".webp"}
           for i,s in enumerate(p["scenes"],1):
-              out=f"work/scenes/{i:02d}.img"
-              subprocess.run(["curl","-L","--fail","--retry","3","--retry-delay","2",s["image_url"],"-o",out],check=True)
+              req=Request(s["image_url"],headers={"User-Agent":"jori-flimm-renderer"})
+              with urlopen(req,timeout=60) as response:
+                  content_type=response.headers.get_content_type()
+                  extension=extensions.get(content_type)
+                  if not extension:
+                      raise SystemExit(f"Scene {i}: unsupported image type {content_type}")
+                  out=f"work/scenes/{i:02d}{extension}"
+                  with open(out,"wb") as image:
+                      image.write(response.read())
+              scene_files.append(out)
+          json.dump(scene_files,open("work/scene-files.json","w",encoding="utf-8"))
           PY
 
       - name: Build safe-zone subtitles
@@ -173,10 +185,11 @@ jobs:
           python3 - <<'PY'
           import json, subprocess, os
           p=json.load(open("work/payload.json",encoding="utf-8"))
+          scene_files=json.load(open("work/scene-files.json",encoding="utf-8"))
           segments=[]
           for i,s in enumerate(p["scenes"],1):
               d=float(s["duration_seconds"])
-              src=f"work/scenes/{i:02d}.img"
+              src=scene_files[i-1]
               dst=f"work/scenes/{i:02d}.mp4"
               frames=max(1,int(round(d*30)))
               # Alternating zoom direction adds motion without AI video generation.
