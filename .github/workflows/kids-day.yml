@@ -69,8 +69,8 @@ jobs:
               raise SystemExit(f"Body must be pure JSON: {e}")
           if not isinstance(p.get("scenes"),list) or not 5 <= len(p["scenes"]) <= 10:
               raise SystemExit("Need 5-10 scenes")
-          if not str(p.get("audio_url","")).startswith("https://"):
-              raise SystemExit("Missing https audio_url")
+          if p.get("audio_url") and not str(p.get("audio_url")).startswith("https://"):
+              raise SystemExit("audio_url must be https when provided")
           qc=p.get("qc") or {}
           for key in ["book_spoiler_check","continuity_check","duplicate_check"]:
               if qc.get(key) is not True:
