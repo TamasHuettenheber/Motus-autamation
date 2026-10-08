@@ -3,7 +3,7 @@
   "title": "JoriFlimmEpisodePayload",
   "type": "object",
   "additionalProperties": false,
-  "required": ["date", "episode_number", "title", "hook", "narration", "audio_url", "riddle", "scenes", "publish_time", "qc"],
+  "required": ["date", "episode_number", "title", "hook", "narration", "riddle", "scenes", "publish_time", "qc"],
   "properties": {
     "date": {"type": "string", "format": "date"},
     "episode_number": {"type": "integer", "minimum": 0},
