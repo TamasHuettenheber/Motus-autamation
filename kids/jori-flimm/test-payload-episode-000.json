@@ -54,5 +54,15 @@
     "book_spoiler_check": true,
     "continuity_check": true,
     "duplicate_check": true
+  },
+  "continuity_note": "Jori und Flimm begegnen sich am alten Brückentor und beginnen einander zu vertrauen.",
+  "continuity_after": {
+    "relationship_stage": "Jori und Flimm haben sich kennengelernt; ihr Vertrauen wächst.",
+    "known_facts": [
+      "Flimm kann mit seinem Sternenbauch kleine Lichter erkennen."
+    ],
+    "active_threads": [
+      "Hinter dem alten Brückentor erscheint ein weiteres Licht."
+    ]
   }
 }
