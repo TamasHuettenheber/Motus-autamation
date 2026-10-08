@@ -370,11 +370,19 @@ jobs:
           state["next_episode_number"]=number+1
           continuity=state.setdefault("continuity",{})
           after=payload.get("continuity_after",{})
-          for key in ["relationship_stage","known_facts","active_threads"]:
-              if key in after:
-                  continuity[key]=after[key]
+          if "relationship_stage" in after:
+              continuity["relationship_stage"]=after["relationship_stage"]
+          if "known_facts" in after:
+              facts=continuity.setdefault("known_facts",[])
+              for fact in after["known_facts"]:
+                  if fact not in facts:
+                      facts.append(fact)
+              continuity["known_facts"]=facts[-100:]
+          if "active_threads" in after:
+              continuity["active_threads"]=after["active_threads"]
           continuity["recently_used_locations"]=payload.get("locations",continuity.get("recently_used_locations",[]))
-          continuity["recently_used_visual_assets"]=record["visual_assets"]
+          visual_assets=continuity.get("recently_used_visual_assets",[])
+          continuity["recently_used_visual_assets"]=(visual_assets+record["visual_assets"])[-50:]
           os.makedirs(os.path.dirname(ledger_path),exist_ok=True)
           with open(ledger_path,"w",encoding="utf-8") as f:
               json.dump(ledger,f,ensure_ascii=False,indent=2)
