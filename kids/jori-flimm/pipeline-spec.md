@@ -1,127 +1,41 @@
 # Pipeline Specification – Jori & Flimm
 
-## Architecture decision
-Use the SAME ChatGPT master production trigger as Motus, but NOT the same GitHub render job.
+## Isolation
 
-The 22:37 run should eventually create two independent handoffs:
-- Motus daily batch: 4 existing slots
-- Jori & Flimm daily batch: 1 kids episode
+This implementation is restricted to `feature/jori-flimm-kids-pipeline`. Both manual handoff and renderer workflows reject any other ref. The daily handoff is manual for now; there is no issue-open trigger, no publishing workflow, and no change to the Motus master workflow or `main`.
 
-Reason: a failure in the kids pipeline must never block Motus, and a Motus failure must not corrupt the kids series state.
+The initial architecture can later receive a fifth content package from the shared 22:37 producer, but that integration must be implemented separately after this isolated renderer is proven.
 
-## Proposed repository layout
-```
-kids/jori-flimm/
-  README.md
-  series-bible.md
-  pipeline-spec.md
-  episode-state.schema.json
-  state/
-    series-state.json
-    episode-ledger.json
-  assets/
-    characters/
-    backgrounds/
-    scenes/
-  output/
-    YYYY-MM-DD/
-.github/workflows/
-  kids-day.yml
-  kids-render.yml
-  kids-publish.yml
-```
+## Payload and renderer
 
-## Daily content object
-The producer should create one JSON object:
+A `[JORI-FLIMM-DAY]` issue body contains one JSON object validated against `episode-state.schema.json`. The renderer requires a valid date, non-negative episode number, title, hook, narration, riddle, 5–10 HTTPS still-image URLs, 4–20 seconds per scene, and positive QC gates. An audio URL is optional.
 
-```json
-{
-  "date": "YYYY-MM-DD",
-  "episode_number": 1,
-  "title": "...",
-  "hook": "...",
-  "narration": "...",
-  "riddle": {
-    "type": "logic",
-    "question": "...",
-    "answer": "...",
-    "pause_seconds": 3
-  },
-  "scenes": [
-    {
-      "order": 1,
-      "duration_seconds": 10,
-      "image_source": "...",
-      "caption": "..."
-    }
-  ],
-  "cta": "...",
-  "publish_time": "16:00",
-  "book_spoiler_check": true,
-  "continuity_check": true,
-  "duplicate_check": true
-}
-```
+If `audio_url` is supplied, the renderer downloads it. Otherwise the free `espeak-ng` German voice reads the narration. FFmpeg creates vertical H.264/AAC output at 1080×1920 and 30 fps, applies alternating slow zoom and pan to still images, and burns word-timed subtitles in a safe area. The MP4 is uploaded as a seven-day Actions artifact instead of being committed to Git.
 
-## Render target
-- 1080x1920
-- H.264
-- AAC audio
-- 30 fps
-- target duration 60–90 seconds
-- max 100 seconds for initial testing
-- narration must finish before video end
-- safe-zone subtitles
-- music below narration
-- no text hidden by TikTok UI
+Captions are timed by word count, not forced alignment. QC checks output dimensions, codecs, audio presence, and duration; a person must still review pronunciation, caption readability, image/canon fit, and story quality.
 
-## Free-first visual method
-Phase 1 does NOT require AI video.
-Renderer uses still images and applies:
-- scale/zoom
-- pan
-- crossfade
-- optional particle/snow overlay
-- subtitle timing
+## State and continuity
 
-A unique still-image generator may be added later, but the renderer itself must work with a reusable asset library so the pipeline has a zero-paid-generation fallback.
+Before an episode, the producer should read:
+- `state/series-state.json` for relationship stage, known facts, active threads, and the book boundary
+- the most recent 30 episode titles/hooks and 50 riddles in `state/episode-ledger.json`
 
-## Quality gates
-Reject publication when any gate fails:
-- missing scene image
-- narration shorter/longer than timeline by unsafe margin
-- duplicate or near-duplicate riddle
-- duplicate title/hook
-- book mission leakage
-- wrong character names
-- wrong aspect ratio
-- missing audio
-- unreadable captions
-- episode state not committed
+After successful QC, the renderer stores the episode payload, updates the ledger with its title, hook, riddle, and scene assets, and applies an optional `continuity_after` handoff to series state. Episode numbers are replaced idempotently on reruns.
 
-## State
-Before producing an episode, load:
-- previous 30 episode titles/hooks
-- previous 50 riddle fingerprints
-- current relationship/continuity state
-- locations used recently
-- visual assets used recently
+## Episode 000 technical fixture
 
-After a successful render, commit episode metadata and asset usage to state.
+`test-payload-episode-000.json` is a new side story about Jori and Flimm meeting at an old bridge. It does not retell a book mission. It uses freely served placeholder stills and generated German TTS for an end-to-end technical preview.
 
-## Publishing
-Final publishing must target a second social account/channel, never the Motus account.
+The dispatch path requires the workflow to be present on GitHub's default branch. Since this project must not merge before approval, the current fixture is prepared and schema-checked but no remote Actions render has been started.
 
-The specific publisher connection is intentionally not wired yet. This becomes a user-action checkpoint only when:
-1. the second channel exists, and
-2. the user connects/authorizes it in the chosen publishing service.
+## Publishing and rollout
 
-## Rollout
-1. Build renderer on feature branch.
-2. Prepare reusable character/style assets.
-3. Render episode 000 as a local/GitHub test.
-4. Validate QC.
-5. Wire second publishing account.
-6. Run one draft/private test.
-7. Merge to main.
-8. Extend 22:37 master prompt to produce the fifth content package.
+A second-channel publisher is deliberately absent. The required later checkpoint is user connection/authorization for that channel, followed by a private/unlisted or draft post test. Do not merge to `main`, modify live Motus, connect another channel, or publish without the user's explicit approval.
+
+Rollout order:
+1. validate workflows, permissions, payload/schema, and feature-branch checks;
+2. run and review Episode 000 on the feature branch when a safe Actions dispatch is available;
+3. fix render/QC issues and document the result;
+4. request the user's authorization only when a second channel/login is needed;
+5. connect and test publishing privately;
+6. merge and add the shared-trigger integration only after explicit approval.
