@@ -160,7 +160,7 @@ jobs:
                   f.write(audio)
               subprocess.run(["ffmpeg","-y","-i","work/audio_source","-vn","-ar","48000","-ac","2","-b:a","192k","work/narration.mp3"],check=True)
           else:
-              subprocess.run(["espeak-ng","-v","de","-s","145","-w","work/narration.wav",p["narration"]],check=True)
+              subprocess.run(["espeak-ng","-v","de","-s","110","-w","work/narration.wav",p["narration"]],check=True)
               subprocess.run(["ffmpeg","-y","-i","work/narration.wav","-ar","48000","-ac","2","-b:a","192k","work/narration.mp3"],check=True)
 
           scene_files=[]
@@ -242,6 +242,8 @@ jobs:
               "-of","default=noprint_wrappers=1:nokey=1","work/narration.mp3"
           ],text=True))
           target_total=max(60.0,audio_duration+1.0)
+          if target_total-audio_duration>8.0:
+              raise SystemExit(f"Narration is too short for a 60-second short: {audio_duration:.1f}s")
           if target_total>100:
               raise SystemExit(f"Narration is too long: {audio_duration:.1f}s")
           scale=target_total/requested_total
