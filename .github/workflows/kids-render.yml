@@ -175,22 +175,22 @@ jobs:
               with open("work/narration.txt","w",encoding="utf-8") as f:
                   f.write(p["narration"].strip()+"\n")
               script = """
-import asyncio, json
-from edge_tts import Communicate
+          import asyncio, json
+          from edge_tts import Communicate
 
-with open("work/payload.json", encoding="utf-8") as f:
-    payload = json.load(f)
-voice = payload.get("voice", {})
-async def main():
-    communicate = Communicate(
-        payload["narration"].strip(),
-        voice=voice.get("name", "de-DE-KatjaNeural"),
-        rate=voice.get("rate", "-5%"),
-        pitch=voice.get("pitch", "+0Hz"),
-    )
-    await communicate.save("work/narration_source.mp3")
-asyncio.run(main())
-"""
+          with open("work/payload.json", encoding="utf-8") as f:
+              payload = json.load(f)
+          voice = payload.get("voice", {})
+          async def main():
+              communicate = Communicate(
+                  payload["narration"].strip(),
+                  voice=voice.get("name", "de-DE-KatjaNeural"),
+                  rate=voice.get("rate", "-5%"),
+                  pitch=voice.get("pitch", "+0Hz"),
+              )
+              await communicate.save("work/narration_source.mp3")
+          asyncio.run(main())
+          """
               subprocess.run(["work/venv/bin/python","-c",script],check=True)
               subprocess.run([
                   "ffmpeg","-y","-i","work/narration_source.mp3",
