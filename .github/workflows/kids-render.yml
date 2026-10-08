@@ -196,6 +196,7 @@ jobs:
       - name: Build safe-zone subtitles
         run: |
           AUDIO_DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 work/narration.mp3)"
+          export AUDIO_DURATION
           echo "AUDIO_DURATION=$AUDIO_DURATION" >> "$GITHUB_ENV"
           python3 - <<'PY'
           import json,os,re,textwrap
@@ -291,6 +292,7 @@ jobs:
       - name: Assemble narration and captions
         run: |
           VISUAL_DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 work/visuals.mp4)"
+          export VISUAL_DURATION
           echo "VISUAL_DURATION=$VISUAL_DURATION" >> "$GITHUB_ENV"
           python3 - <<'PY'
           import os
