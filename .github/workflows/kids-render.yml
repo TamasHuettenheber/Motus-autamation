@@ -270,7 +270,7 @@ jobs:
               if i % 2:
                   zp=f"zoompan=z='min(zoom+0.00033,1.10)':x='(iw-iw/zoom)*on/{frames}':y='(ih-ih/zoom)/2'"
               else:
-                  zp=f"zoompan=z='max(1.0,1.10-on*0.00033)':x='(iw-iw/zoom)*(1-on/{frames})':y='(ih-ih/zoom)/2'""
+                  zp=f"zoompan=z='max(1.0,1.10-on*0.00033)':x='(iw-iw/zoom)*(1-on/{frames})':y='(ih-ih/zoom)/2'"
               vf=(
                   "scale=1080:1920:force_original_aspect_ratio=increase,"
                   "crop=1080:1920,"
