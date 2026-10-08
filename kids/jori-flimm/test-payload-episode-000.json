@@ -7,7 +7,7 @@
   "voice": {
     "provider": "Microsoft Edge Neural TTS",
     "name": "de-DE-KatjaNeural",
-    "rate": "-4%",
+    "rate": "-5%",
     "pitch": "-1Hz"
   },
   "riddle": {
