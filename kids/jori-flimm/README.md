@@ -24,7 +24,7 @@ Caption timing is estimated from word counts. Captions use white bold text with 
 
 ## Safe test procedure
 
-A narrowly filtered `push` trigger is configured for changes to the Episode 000 test payload on `feature/jori-flimm-kids-pipeline`. It loads that fixture directly, renders generated German TTS with the MLS medium female-speaker profile, original AI-generated Jori & Flimm illustrations, slow zoom/pan, safe-zone captions, and technical QC. GitHub Actions run #8 succeeded: 65.6 seconds, 1080×1920, H.264/AAC. The MP4 is available as a seven-day artifact. The new voice is a free candidate for the user's listen-through; pronunciation and story quality still need a human review before public use.
+A narrowly filtered `push` trigger is configured for changes to the Episode 000 test payload on `feature/jori-flimm-kids-pipeline`. It loads that fixture directly, renders German narration with `de-DE-KatjaNeural` through Edge Read Aloud, the original AI-generated Jori & Flimm illustrations, slow zoom/pan, safe-zone captions, and technical QC. GitHub Actions run #11 succeeded: 1080×1920 H.264/AAC. The MP4 is available as a seven-day artifact. This no-paid-account test still needs a human listen-through for pronunciation, warmth, and story quality before public use.
 
 The daily handoff remains manual. GitHub only exposes `workflow_dispatch` after its workflow exists on the default branch, so it is not enabled for the feature branch yet.
 
