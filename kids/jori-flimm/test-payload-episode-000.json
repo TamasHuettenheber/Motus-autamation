@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-08",
+  "episode_number": 0,
+  "title": "Das Licht am alten Brückentor",
+  "hook": "Jori entdeckt ein Sternenlicht, das mitten im Schnee hüpft.",
+  "narration": "An einem ruhigen Abend stapfte Jori durch die schneebedeckte Gasse von Flockenfels. Da hüpfte ein goldener Lichtpunkt über das alte Brückentor. Jori folgte ihm und fand ein kleines Wesen mit einer roten und grünen Mütze. „Ich heiße Flimm“, piepste es. Gemeinsam bemerkten sie drei winzige Lichter im Schnee. Erst leuchtete eines, dann zwei, dann drei. Danach begann das Muster von vorn: eins, zwei … Was kommt als Nächstes? Denk kurz mit! Genau: drei. Flimm lachte, und sein Sternenbauch wurde warm. Die Lichter zeigten einen sicheren Weg zurück zur Gasse. Jori begleitete Flimm bis zur Laterne am Marktplatz. Zum ersten Mal gingen sie als Freunde nach Hause. Doch hinter dem Brückentor blitzte noch ein viertes Licht auf.",
+  "riddle": {
+    "type": "pattern",
+    "question": "Nach eins, zwei, drei beginnt das Muster wieder: eins, zwei … Welche Zahl kommt als Nächstes?",
+    "answer": "Drei",
+    "pause_seconds": 3
+  },
+  "scenes": [
+    {
+      "order": 1,
+      "duration_seconds": 10,
+      "image_url": "https://placehold.co/1080x1920/26364f/ffffff.png?text=Flockenfels+im+Schnee",
+      "caption": "Ein stiller Abend in Flockenfels"
+    },
+    {
+      "order": 2,
+      "duration_seconds": 10,
+      "image_url": "https://placehold.co/1080x1920/30445c/ffffff.png?text=Ein+goldenes+Licht",
+      "caption": "Ein Licht hüpft über den Schnee"
+    },
+    {
+      "order": 3,
+      "duration_seconds": 10,
+      "image_url": "https://placehold.co/1080x1920/4b3d43/ffffff.png?text=Jori+trifft+Flimm",
+      "caption": "Jori trifft Flimm am Brückentor"
+    },
+    {
+      "order": 4,
+      "duration_seconds": 10,
+      "image_url": "https://placehold.co/1080x1920/3b5260/ffffff.png?text=Das+Lichtermuster",
+      "caption": "Eins, zwei, drei … eins, zwei …"
+    },
+    {
+      "order": 5,
+      "duration_seconds": 10,
+      "image_url": "https://placehold.co/1080x1920/755d43/ffffff.png?text=Der+sichere+Weg",
+      "caption": "Die Lichter weisen den Weg"
+    },
+    {
+      "order": 6,
+      "duration_seconds": 10,
+      "image_url": "https://placehold.co/1080x1920/5a4037/ffffff.png?text=Ein+viertes+Licht",
+      "caption": "Hinter dem Tor blinkt noch eins"
+    }
+  ],
+  "cta": "",
+  "publish_time": "16:00",
+  "qc": {
+    "book_spoiler_check": true,
+    "continuity_check": true,
+    "duplicate_check": true
+  }
+}
