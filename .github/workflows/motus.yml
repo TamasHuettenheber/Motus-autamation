@@ -144,7 +144,7 @@ jobs:
               h=int(sec//3600); sec-=h*3600; m=int(sec//60); sec-=m*60
               return f'{h}:{m:02d}:{sec:05.2f}'
           def esc(s): return s.replace('{','\\{').replace('}','\\}')
-          ass='''[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\nScaledBorderAndShadow: yes\n\n[V4+ Styles]\nFormat: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding\nStyle: Motus,DejaVu Sans,62,&H00FFFFFF,&H000000FF,&H00151515,&H99000000,-1,0,0,0,100,100,0,0,3,2,0,8,115,115,420,1\n\n[Events]\nFormat: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text\n'''
+          ass='''[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\nScaledBorderAndShadow: yes\n\n[V4+ Styles]\nFormat: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding\nStyle: Motus,DejaVu Sans,62,&H00FFFFFF,&H000000FF,&H00151515,&HFF000000,-1,0,0,0,100,100,0,0,1,2,0,8,115,115,420,1\n\n[Events]\nFormat: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text\n'''
           t=0.0
           for i,(c,w) in enumerate(zip(chunks,weights)):
               end=dur if i==len(chunks)-1 else t+dur*w/total
@@ -397,25 +397,30 @@ jobs:
               )
 
           def choose_hashtags(value):
+              # Score the complete topic, not incidental substrings such as
+              # 'morgen' in 'bis morgen' or 'enttaeuscht' in an emotion example.
               t = fold(value)
+              tokens = set(re.findall(r"[a-z0-9]+", t))
               themes = [
-                  (["morgen","start","energie","motivation","routine","bewegung"], ["#motivation","#morgenroutine","#mindset","#selbstentwicklung"]),
-                  (["grenze","nein","rechtfert","respekt","abstand"], ["#grenzensetzen","#selbstrespekt","#kommunikation","#alltagspsychologie"]),
-                  (["gespraech","kommunikation","nachricht","antwort","zuhören","zuhoeren"], ["#kommunikation","#alltagspsychologie","#selbstentwicklung","#mentaleklarheit"]),
-                  (["gruebel","gedanke","kopf","ruhe","stress","fehler"], ["#innereruhe","#mentaleklarheit","#alltagspsychologie","#selbstentwicklung"]),
-                  (["fokus","aufmerksamkeit","ablenkung","handy","benachrichtigung"], ["#fokus","#digitalbalance","#aufmerksamkeit","#selbstentwicklung"]),
-                  (["entscheidung","prioritaet","priorisieren","to-do","aufgabe","produktiv"], ["#produktivitaet","#klarheit","#fokus","#selbstentwicklung"]),
-                  (["vertrauen","verzeihen","beziehung","naehe","enttaeuscht"], ["#beziehungen","#selbstrespekt","#alltagspsychologie","#selbstentwicklung"]),
-                  (["abend","schlafen","feierabend","nacht","abschalten"], ["#abendroutine","#innereruhe","#mentaleklarheit","#selbstentwicklung"]),
+                  (["gefuehl", "gefuehle", "emotion", "emotionen", "benennen", "wahrnehmen", "einordnen"], ["#emotionen", "#selbstreflexion", "#mentaleklarheit", "#selbstentwicklung"]),
+                  (["grenze", "grenzen", "rechtfertigen", "respekt", "abstand", "neinsagen"], ["#grenzensetzen", "#selbstrespekt", "#kommunikation", "#alltagspsychologie"]),
+                  (["gespraech", "kommunikation", "nachricht", "antwort", "zuhoeren"], ["#kommunikation", "#alltagspsychologie", "#selbstentwicklung", "#mentaleklarheit"]),
+                  (["gruebeln", "gedanken", "ruhe", "stress", "sorgen"], ["#innereruhe", "#mentaleklarheit", "#alltagspsychologie", "#selbstentwicklung"]),
+                  (["fokus", "aufmerksamkeit", "ablenkung", "handy", "benachrichtigung"], ["#fokus", "#digitalbalance", "#aufmerksamkeit", "#selbstentwicklung"]),
+                  (["entscheidung", "prioritaet", "priorisieren", "aufgabe", "aufgaben", "produktivitaet", "anfangen"], ["#produktivitaet", "#klarheit", "#fokus", "#selbstentwicklung"]),
+                  (["vertrauen", "verzeihen", "beziehung", "beziehungen", "partnerschaft", "naehe"], ["#beziehungen", "#selbstrespekt", "#alltagspsychologie", "#selbstentwicklung"]),
+                  (["abend", "feierabend", "nacht", "abschalten", "einschlafen"], ["#abendroutine", "#innereruhe", "#mentaleklarheit", "#selbstentwicklung"]),
               ]
-              best_tags = ["#alltagspsychologie","#selbstentwicklung","#mindset","#motivation"]
-              best_score = -1
-              for keywords, tags in themes:
-                  score = sum(1 for kw in keywords if kw in t)
-                  if score > best_score:
-                      best_score = score
-                      best_tags = tags
-              return ["#motus"] + best_tags
+              ranked = sorted(
+                  ((len(tokens.intersection(keywords)), idx, tags) for idx, (keywords, tags) in enumerate(themes)),
+                  reverse=True,
+              )
+              # A single generic word must not determine the topic.
+              best_tags = ranked[0][2] if ranked[0][0] >= 2 else ["#alltagspsychologie", "#selbstentwicklung", "#mentaleklarheit", "#mindset"]
+              result = ["#motus"] + best_tags
+              if len(result) != 5 or len(set(result)) != 5 or any(x in result for x in ("#fyp", "#foryou")):
+                  raise SystemExit("HASHTAG_QC_FAILED")
+              return result
 
           hashtags = choose_hashtags(base_text)
           music_title = os.environ.get("MOTUS_MUSIC_TITLE", "Now or Never").strip() or "Now or Never"
