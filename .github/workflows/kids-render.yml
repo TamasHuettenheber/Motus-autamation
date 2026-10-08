@@ -38,7 +38,10 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg curl fonts-dejavu-core espeak-ng
+          sudo apt-get install -y ffmpeg curl fonts-dejavu-core python3-venv
+          python3 -m venv work/venv
+          work/venv/bin/python -m pip install --disable-pip-version-check --no-cache-dir piper-tts
+          work/venv/bin/python -m piper.download_voices --data-dir work/voices de_DE-kerstin-low
 
       - name: Load and validate episode payload
         env:
@@ -170,8 +173,19 @@ jobs:
                   f.write(audio)
               subprocess.run(["ffmpeg","-y","-i","work/audio_source","-vn","-ar","48000","-ac","2","-b:a","192k","work/narration.mp3"],check=True)
           else:
-              subprocess.run(["espeak-ng","-v","de","-s","110","-w","work/narration.wav",p["narration"]],check=True)
-              subprocess.run(["ffmpeg","-y","-i","work/narration.wav","-ar","48000","-ac","2","-b:a","192k","work/narration.mp3"],check=True)
+              with open("work/narration.txt","w",encoding="utf-8") as f:
+                  f.write(p["narration"].strip()+"\n")
+              subprocess.run([
+                  "work/venv/bin/python","-m","piper",
+                  "--model","de_DE-kerstin-low","--data-dir","work/voices",
+                  "--length-scale","1.08","--sentence-silence","0.30","--volume","0.92",
+                  "--input-file","work/narration.txt","--output-file","work/narration.wav"
+              ],check=True)
+              subprocess.run([
+                  "ffmpeg","-y","-i","work/narration.wav",
+                  "-af","highpass=f=90,equalizer=f=260:t=q:w=1:g=1.4,equalizer=f=3200:t=q:w=1:g=-1.2,alimiter=limit=0.95",
+                  "-ar","48000","-ac","2","-b:a","192k","work/narration.mp3"
+              ],check=True)
 
           scene_files=[]
           extensions={"image/png":".png","image/jpeg":".jpg","image/webp":".webp"}
@@ -225,7 +239,7 @@ jobs:
 
           [V4+ Styles]
           Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
-          Style: Kids,DejaVu Sans,58,&H00FFFFFF,&H000000FF,&H00181818,&H99000000,-1,0,0,0,100,100,0,0,3,2,0,8,105,105,390,1
+          Style: Kids,DejaVu Sans,56,&H00FFFFFF,&H000000FF,&H80131B28,&H00000000,-1,0,0,0,100,100,0,0,1,4,2,2,90,90,250,1
 
           [Events]
           Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text

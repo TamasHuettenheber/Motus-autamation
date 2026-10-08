@@ -8,9 +8,9 @@ The book `Die 24 verschwundenen Weihnachtslichter` is canon for character and wo
 
 ## Free renderer
 
-The renderer turns 5–10 still images into a 1080×1920 H.264 slideshow with slow alternating zoom and pan, narration, safe-zone subtitles, and technical QC. It accepts a supplied HTTPS audio file or creates German narration with free `espeak-ng` TTS. Scene timing scales to the narration; clips target 60 seconds or more and reject long silent gaps. Rendered MP4 files are retained as a seven-day Actions artifact; successful episode JSON and continuity state are committed on this feature branch.
+The renderer turns 5–10 still images into a 1080×1920 H.264 slideshow with slow alternating zoom and pan, narration, safe-zone subtitles without an opaque box, and technical QC. It accepts a supplied HTTPS audio file or creates a gentler, slower German female voiceover with Piper's `de_DE-kerstin-low` model (CC0 voice dataset). Scene timing scales to the narration; clips target 60 seconds or more and reject long silent gaps. Rendered MP4 files are retained as a seven-day Actions artifact; successful episode JSON and continuity state are committed on this feature branch.
 
-Caption timing is estimated from word counts. It is suitable for a technical preview, not a final accessibility review.
+Caption timing is estimated from word counts. Captions use white bold text with a dark outline and shadow instead of a black panel. Timing and mobile safe-area placement still need a final viewing review.
 
 ## Files
 
