@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-08T08:50:58.643372+00:00",
+  "checked_at_utc": "2026-10-08T16:24:11.307397+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -43,15 +43,15 @@
     {
       "id": "6ac6b12b4fd14839c7263f9a",
       "text": "Wenn eine Aufgabe unangenehm ist, überschätzt dein Kopf oft den Aufwand, solange du sie nur anschaust. Stell dir deshalb keinen großen Abschluss vor. Stell einen Timer auf zehn Minuten und beginne nur. Danach darfst du neu entscheiden. Häufig ist nicht die Arbeit das Problem, sondern der Einstieg. Was startest du heute für zehn Minuten?\n\n#motus #motivation #morgenroutine #mindset #selbstentwicklung\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-08T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-08T10:04:34.591Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7694235374528351520",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-08-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac6b12b4fd14839c7263f9a_video.mp4"
         }
       ]
     },
