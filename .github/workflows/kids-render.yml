@@ -290,7 +290,8 @@ jobs:
               json.dump(state,f,ensure_ascii=False,indent=2)
               f.write("\n")
           os.makedirs("kids/jori-flimm/state/episodes",exist_ok=True)
-          with open(f"kids/jori-flimm/state/episodes/$SAFE_NAME.json","w",encoding="utf-8") as f:
+          safe_name=os.environ["SAFE_NAME"]
+          with open(f"kids/jori-flimm/state/episodes/{safe_name}.json","w",encoding="utf-8") as f:
               json.dump(payload,f,ensure_ascii=False,indent=2)
               f.write("\n")
           PY
