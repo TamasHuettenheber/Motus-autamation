@@ -42,10 +42,13 @@ jobs:
           ISSUE_NUMBER: ${{ inputs.issue_number }}
         run: |
           python3 - <<'PY'
-          import json, os, re, urllib.request
+          import json, os, re, unicodedata, urllib.request
+          from datetime import date
 
           repo=os.environ["REPO"]
           num=str(os.environ["ISSUE_NUMBER"]).strip()
+          if not re.fullmatch(r"\d+",num):
+              raise SystemExit("Issue number must be numeric")
           req=urllib.request.Request(
               f"https://api.github.com/repos/{repo}/issues/{num}",
               headers={
@@ -68,7 +71,9 @@ jobs:
           for k in required:
               if k not in p:
                   raise SystemExit(f"Missing field: {k}")
-          if not re.fullmatch(r"\d{4}-\d{2}-\d{2}",str(p["date"])):
+          try:
+              date.fromisoformat(str(p["date"]))
+          except ValueError:
               raise SystemExit("Invalid date")
           if not isinstance(p["episode_number"],int) or p["episode_number"] < 0:
               raise SystemExit("Invalid episode_number")
@@ -88,50 +93,82 @@ jobs:
           if total < 40 or total > 110:
               raise SystemExit(f"Scene timeline out of bounds: {total}s")
 
+          if not isinstance(p.get("narration"),str) or len(p["narration"].strip()) < 30:
+              raise SystemExit("Narration must contain at least 30 characters")
+          if not isinstance(p.get("riddle"),dict):
+              raise SystemExit("Missing riddle")
+          qc=p.get("qc") or {}
+          for key in ["book_spoiler_check","continuity_check","duplicate_check"]:
+              if qc.get(key) is not True:
+                  raise SystemExit(f"QC gate not true: {key}")
+
+          def fingerprint(value):
+              value=unicodedata.normalize("NFKC",str(value)).casefold()
+              return re.sub(r"[^\\w]+"," ",value).strip()
+          ledger_path="kids/jori-flimm/state/episode-ledger.json"
+          if os.path.exists(ledger_path):
+              with open(ledger_path,encoding="utf-8") as f:
+                  previous=json.load(f).get("episodes",[])
+              for old in previous:
+                  if int(old.get("episode_number",-1)) == int(p["episode_number"]):
+                      continue
+                  old_riddle=old.get("riddle") or {}
+                  if fingerprint(old.get("title","")) == fingerprint(p["title"]):
+                      raise SystemExit("Duplicate episode title")
+                  if fingerprint(old.get("hook","")) == fingerprint(p.get("hook","")):
+                      raise SystemExit("Duplicate episode hook")
+                  if fingerprint(old_riddle.get("question","")) == fingerprint(p["riddle"].get("question","")):
+                      raise SystemExit("Duplicate riddle question")
+
           safe=f"jori-flimm-{p['date']}-e{int(p['episode_number']):03d}"
           with open(os.environ["GITHUB_ENV"],"a",encoding="utf-8") as f:
-              f.write(f"SAFE_NAME={safe}\n")
-              f.write(f"EPISODE_NUMBER={p['episode_number']}\n")
-              f.write(f"EPISODE_DATE={p['date']}\n")
-              f.write(f"AUDIO_URL={p.get('audio_url', '')}\n")
-              f.write("EPISODE_TITLE<<EOF_TITLE\n"+str(p["title"]).strip()+"\nEOF_TITLE\n")
-              f.write("NARRATION<<EOF_NARRATION\n"+str(p["narration"]).strip()+"\nEOF_NARRATION\n")
-              f.write(f"SCENE_COUNT={len(scenes)}\n")
-              f.write(f"SCENE_TOTAL={total:.3f}\n")
+              f.write(f"SAFE_NAME={safe}\\n")
           os.makedirs("work",exist_ok=True)
           with open("work/payload.json","w",encoding="utf-8") as f:
               json.dump(p,f,ensure_ascii=False,indent=2)
           print(f"Validated {len(scenes)} scenes, {total:.1f}s")
           PY
 
-      - name: Download narration and scene images
+      - name: Generate narration and download stills
         run: |
-          mkdir -p work/scenes published-kids
-          if [ -n "$AUDIO_URL" ]; then
-            curl -L --fail --retry 3 --retry-delay 2 "$AUDIO_URL" -o work/audio_source
-            ffmpeg -y -i work/audio_source -vn -ar 48000 -ac 2 -b:a 192k work/narration.mp3
-          else
-            espeak-ng -v de -s 145 -w work/narration.wav "$NARRATION"
-            ffmpeg -y -i work/narration.wav -ar 48000 -ac 2 -b:a 192k work/narration.mp3
-          fi
+          mkdir -p work/scenes
           python3 - <<'PY'
-          import json
+          import json, subprocess
           from urllib.request import Request, urlopen
-          p=json.load(open("work/payload.json",encoding="utf-8"))
+
+          with open("work/payload.json",encoding="utf-8") as f:
+              p=json.load(f)
+          if p.get("audio_url"):
+              req=Request(p["audio_url"],headers={"User-Agent":"jori-flimm-renderer"})
+              with urlopen(req,timeout=60) as response:
+                  audio=response.read(25*1024*1024+1)
+              if len(audio)>25*1024*1024:
+                  raise SystemExit("Narration audio exceeds 25 MiB")
+              with open("work/audio_source","wb") as f:
+                  f.write(audio)
+              subprocess.run(["ffmpeg","-y","-i","work/audio_source","-vn","-ar","48000","-ac","2","-b:a","192k","work/narration.mp3"],check=True)
+          else:
+              subprocess.run(["espeak-ng","-v","de","-s","145","-w","work/narration.wav",p["narration"]],check=True)
+              subprocess.run(["ffmpeg","-y","-i","work/narration.wav","-ar","48000","-ac","2","-b:a","192k","work/narration.mp3"],check=True)
+
           scene_files=[]
           extensions={"image/png":".png","image/jpeg":".jpg","image/webp":".webp"}
-          for i,s in enumerate(p["scenes"],1):
-              req=Request(s["image_url"],headers={"User-Agent":"jori-flimm-renderer"})
+          for i,scene in enumerate(p["scenes"],1):
+              req=Request(scene["image_url"],headers={"User-Agent":"jori-flimm-renderer"})
               with urlopen(req,timeout=60) as response:
                   content_type=response.headers.get_content_type()
                   extension=extensions.get(content_type)
                   if not extension:
                       raise SystemExit(f"Scene {i}: unsupported image type {content_type}")
-                  out=f"work/scenes/{i:02d}{extension}"
-                  with open(out,"wb") as image:
-                      image.write(response.read())
+                  image=response.read(20*1024*1024+1)
+              if len(image)>20*1024*1024:
+                  raise SystemExit(f"Scene {i}: image exceeds 20 MiB")
+              out=f"work/scenes/{i:02d}{extension}"
+              with open(out,"wb") as f:
+                  f.write(image)
               scene_files.append(out)
-          json.dump(scene_files,open("work/scene-files.json","w",encoding="utf-8"))
+          with open("work/scene-files.json","w",encoding="utf-8") as f:
+              json.dump(scene_files,f)
           PY
 
       - name: Build safe-zone subtitles
@@ -139,8 +176,9 @@ jobs:
           AUDIO_DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 work/narration.mp3)"
           echo "AUDIO_DURATION=$AUDIO_DURATION" >> "$GITHUB_ENV"
           python3 - <<'PY'
-          import os,re,textwrap
-          text=os.environ["NARRATION"].strip()
+          import json,re,textwrap
+          with open("work/payload.json",encoding="utf-8") as f:
+              text=json.load(f)["narration"].strip()
           dur=float(os.environ["AUDIO_DURATION"])
           parts=[x.strip() for x in re.split(r'(?<=[.!?])\s+|\s*[;:]\s+',text) if x.strip()]
           chunks=[]
