@@ -236,9 +236,20 @@ jobs:
           import json, subprocess, os
           p=json.load(open("work/payload.json",encoding="utf-8"))
           scene_files=json.load(open("work/scene-files.json",encoding="utf-8"))
+          requested_total=sum(float(s["duration_seconds"]) for s in p["scenes"])
+          audio_duration=float(subprocess.check_output([
+              "ffprobe","-v","error","-show_entries","format=duration",
+              "-of","default=noprint_wrappers=1:nokey=1","work/narration.mp3"
+          ],text=True))
+          target_total=max(60.0,audio_duration+1.0)
+          if target_total>100:
+              raise SystemExit(f"Narration is too long: {audio_duration:.1f}s")
+          scale=target_total/requested_total
           segments=[]
           for i,s in enumerate(p["scenes"],1):
-              d=float(s["duration_seconds"])
+              d=float(s["duration_seconds"])*scale
+              if not 4 <= d <= 20:
+                  raise SystemExit(f"Scaled scene {i} duration out of range: {d:.1f}s")
               src=scene_files[i-1]
               dst=f"work/scenes/{i:02d}.mp4"
               frames=max(1,int(round(d*30)))
@@ -273,10 +284,15 @@ jobs:
           import os
           a=float(os.environ["AUDIO_DURATION"])
           v=float(os.environ["VISUAL_DURATION"])
-          if v < a-0.25:
+          if v < a+0.25:
               raise SystemExit(f"Visual timeline ({v:.2f}s) is shorter than narration ({a:.2f}s)")
           PY
-          ffmpeg -y -i work/visuals.mp4 -i work/narration.mp3             -filter_complex "[0:v]subtitles=work/captions.ass[v]"             -map "[v]" -map 1:a             -c:v libx264 -preset veryfast -crf 22 -pix_fmt yuv420p -r 30             -c:a aac -b:a 192k -movflags +faststart -shortest             "work/$SAFE_NAME.mp4"
+          ffmpeg -y -i work/visuals.mp4 -i work/narration.mp3 \
+            -filter_complex "[0:v]subtitles=work/captions.ass[v];[1:a]apad,atrim=duration=${VISUAL_DURATION}[a]" \
+            -map "[v]" -map "[a]" \
+            -c:v libx264 -preset veryfast -crf 22 -pix_fmt yuv420p -r 30 \
+            -c:a aac -b:a 192k -movflags +faststart -t "${VISUAL_DURATION}" \
+            "work/$SAFE_NAME.mp4"
 
       - name: Quality control
         run: |
@@ -293,7 +309,7 @@ jobs:
           test "$AUDIO_CODEC" = "aac"
           python3 - <<PY
           d=float("$DURATION")
-          if not 40 <= d <= 100:
+          if not 60 <= d <= 100:
               raise SystemExit(f"QC failed: duration {d:.2f}s")
           print(f"QC passed: {d:.2f}s")
           PY
