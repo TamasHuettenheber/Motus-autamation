@@ -11,6 +11,15 @@
     "hook": {"type": "string", "minLength": 3, "maxLength": 180},
     "narration": {"type": "string", "minLength": 30, "maxLength": 12000},
     "audio_url": {"type": "string", "format": "uri", "pattern": "^https://"},
+    "voice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model", "speaker_id"],
+      "properties": {
+        "model": {"const": "de_DE-mls-medium"},
+        "speaker_id": {"const": 86}
+      }
+    },
     "riddle": {
       "type": "object",
       "additionalProperties": false,
