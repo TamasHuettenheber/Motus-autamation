@@ -277,9 +277,9 @@ jobs:
               "ffprobe","-v","error","-show_entries","format=duration",
               "-of","default=noprint_wrappers=1:nokey=1","work/narration.mp3"
           ],text=True))
-          target_total=max(60.0,audio_duration+2.2)
+          target_total=max(45.0,audio_duration+2.2)
           if target_total-audio_duration>8.0:
-              raise SystemExit(f"Narration is too short for a 60-second short: {audio_duration:.1f}s")
+              raise SystemExit(f"Narration is too short for a 45-second short: {audio_duration:.1f}s")
           if target_total>100:
               raise SystemExit(f"Narration is too long: {audio_duration:.1f}s")
           scale=target_total/requested_total
@@ -349,7 +349,7 @@ jobs:
           test "$AUDIO_CODEC" = "aac"
           python3 - <<PY
           d=float("$DURATION")
-          if not 60 <= d <= 100:
+          if not 45 <= d <= 100:
               raise SystemExit(f"QC failed: duration {d:.2f}s")
           print(f"QC passed: {d:.2f}s")
           PY
