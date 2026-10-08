@@ -14,37 +14,37 @@
     {
       "order": 1,
       "duration_seconds": 10,
-      "image_url": "https://placehold.co/1080x1920/26364f/ffffff.png?text=Flockenfels+im+Schnee",
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-01.jpg",
       "caption": "Ein Sternenlicht weist Jori den Weg zum Brückentor."
     },
     {
       "order": 2,
       "duration_seconds": 10,
-      "image_url": "https://placehold.co/1080x1920/30445c/ffffff.png?text=Ein+goldenes+Licht",
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-02.jpg",
       "caption": "Ein Licht hüpft über den Schnee"
     },
     {
       "order": 3,
       "duration_seconds": 10,
-      "image_url": "https://placehold.co/1080x1920/4b3d43/ffffff.png?text=Jori+trifft+Flimm",
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-03.jpg",
       "caption": "Jori trifft Flimm am Brückentor"
     },
     {
       "order": 4,
       "duration_seconds": 10,
-      "image_url": "https://placehold.co/1080x1920/3b5260/ffffff.png?text=Das+Lichtermuster",
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-04.jpg",
       "caption": "Eins, zwei, drei … eins, zwei …"
     },
     {
       "order": 5,
       "duration_seconds": 10,
-      "image_url": "https://placehold.co/1080x1920/755d43/ffffff.png?text=Der+sichere+Weg",
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-05.jpg",
       "caption": "Die Lichter weisen den Weg"
     },
     {
       "order": 6,
       "duration_seconds": 10,
-      "image_url": "https://placehold.co/1080x1920/5a4037/ffffff.png?text=Ein+viertes+Licht",
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-06.jpg",
       "caption": "Hinter dem Tor blinkt noch eins"
     }
   ],
