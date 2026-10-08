@@ -4,5 +4,27 @@
     "recent_title_hooks": 30,
     "recent_riddles": 50
   },
-  "episodes": []
+  "episodes": [
+    {
+      "episode_number": 0,
+      "date": "2026-10-08",
+      "title": "Das Licht am alten Brückentor",
+      "hook": "Jori entdeckt ein Sternenlicht, das mitten im Schnee hüpft.",
+      "riddle": {
+        "type": "pattern",
+        "question": "Nach eins, zwei, drei beginnt das Muster wieder: eins, zwei … Welche Zahl kommt als Nächstes?",
+        "answer": "Drei",
+        "pause_seconds": 3
+      },
+      "continuity_note": "Jori und Flimm begegnen sich am alten Brückentor und beginnen einander zu vertrauen.",
+      "visual_assets": [
+        "https://placehold.co/1080x1920/26364f/ffffff.png?text=Flockenfels+im+Schnee",
+        "https://placehold.co/1080x1920/30445c/ffffff.png?text=Ein+goldenes+Licht",
+        "https://placehold.co/1080x1920/4b3d43/ffffff.png?text=Jori+trifft+Flimm",
+        "https://placehold.co/1080x1920/3b5260/ffffff.png?text=Das+Lichtermuster",
+        "https://placehold.co/1080x1920/755d43/ffffff.png?text=Der+sichere+Weg",
+        "https://placehold.co/1080x1920/5a4037/ffffff.png?text=Ein+viertes+Licht"
+      ]
+    }
+  ]
 }
