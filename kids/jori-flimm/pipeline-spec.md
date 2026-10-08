@@ -2,7 +2,7 @@
 
 ## Isolation
 
-The implementation is restricted to `feature/jori-flimm-kids-pipeline`. The manual handoff and renderer reject any other ref. A separate push trigger is configured only for changes to the Episode 000 fixture on this feature branch; it is intended to enable a technical render without merging. No run or check appeared in GitHub after the fixture update, so that path remains unverified. No publishing workflow, issue-open trigger, or change to the Motus master workflow is included.
+The implementation is restricted to `feature/jori-flimm-kids-pipeline`. The manual handoff and renderer reject any other ref. A separate push trigger is configured only for changes to the Episode 000 fixture on this feature branch; it enables a technical render without merging. Actions run #3 completed with technical QC passing at 70.8 seconds, 1080×1920, H.264/AAC. Its placeholder-card visuals validate layout only; character artwork, voice quality, and story fit still need human review. A fourth run is verifying the continuity merge fix. No publishing workflow, issue-open trigger, or change to the Motus master workflow is included.
 
 The daily handoff can later receive a fifth content package from the shared 22:37 producer, but that integration must be implemented separately after the isolated renderer is proven.
 
