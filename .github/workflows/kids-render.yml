@@ -67,7 +67,7 @@ jobs:
           except json.JSONDecodeError as e:
               raise SystemExit(f"Issue body must be pure JSON: {e}")
 
-          required=["date","episode_number","title","narration","scenes"]
+          required=["date","episode_number","title","hook","narration","riddle","scenes","publish_time","qc"]
           for k in required:
               if k not in p:
                   raise SystemExit(f"Missing field: {k}")
@@ -77,6 +77,18 @@ jobs:
               raise SystemExit("Invalid date")
           if not isinstance(p["episode_number"],int) or p["episode_number"] < 0:
               raise SystemExit("Invalid episode_number")
+          if not isinstance(p["title"],str) or len(p["title"].strip()) < 3:
+              raise SystemExit("Invalid title")
+          if not isinstance(p["hook"],str) or len(p["hook"].strip()) < 3:
+              raise SystemExit("Invalid hook")
+          if not re.fullmatch(r"([01]\\d|2[0-3]):[0-5]\\d",str(p["publish_time"])):
+              raise SystemExit("Invalid publish_time")
+          riddle=p["riddle"]
+          for key in ["type","question","answer","pause_seconds"]:
+              if key not in riddle:
+                  raise SystemExit(f"Missing riddle field: {key}")
+          if not 2 <= float(riddle["pause_seconds"]) <= 5:
+              raise SystemExit("Invalid riddle pause")
           if p.get("audio_url") and not str(p["audio_url"]).startswith("https://"):
               raise SystemExit("audio_url must be https when provided")
           scenes=p["scenes"]
