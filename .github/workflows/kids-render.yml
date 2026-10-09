@@ -39,8 +39,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg curl fonts-dejavu-core python3-venv
-          python3 -m venv work/venv
-          work/venv/bin/python -m pip install --disable-pip-version-check --no-cache-dir gradio_client==1.12.1 soundfile==0.13.1 numpy==2.2.6
+          mkdir -p work
 
       - name: Load and validate episode payload
         env:
@@ -175,7 +174,7 @@ jobs:
               with open("work/narration.txt","w",encoding="utf-8") as f:
                   f.write(p["narration"].strip()+"\n")
               subprocess.run(
-                  ["work/venv/bin/python","kids/jori-flimm/scripts/generate_voice.py"],
+                  ["python3","kids/jori-flimm/scripts/generate_voice.py"],
                   check=True
               )
               subprocess.run([
