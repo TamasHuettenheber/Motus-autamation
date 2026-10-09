@@ -24,7 +24,7 @@ Caption timing is estimated from word counts. Captions use white bold text with 
 
 ## Safe test procedure
 
-A narrowly filtered `push` trigger is configured for changes to the Episode 000 test payload on `feature/jori-flimm-kids-pipeline`. It loads that fixture directly, renders German narration with `de-DE-KatjaNeural` through Edge Read Aloud, the original AI-generated Jori & Flimm illustrations, slow zoom/pan, safe-zone captions, and technical QC. The ending now includes Flimm and Jori's reaction, their plan to follow the light tomorrow, and a final quiet beat with a gentle fade. GitHub Actions run #14 succeeded: 77.2 seconds, 1080×1920 H.264/AAC. The MP4 is available as a seven-day artifact. This no-paid-account test still needs a human listen-through for pronunciation, warmth, and story quality before public use.
+A narrowly filtered `push` trigger is configured for changes to the Episode 000 test payload on `feature/jori-flimm-kids-pipeline`. It loads that fixture directly, renders the German Victoria narration through the Hugging Face CPU demo, the original AI-generated Jori & Flimm illustrations, slow zoom/pan, safe-zone captions, and technical QC. The ending now includes Flimm and Jori's reaction, their plan to follow the light tomorrow, and a final quiet beat with a gentle fade. GitHub Actions run #14 succeeded: 77.2 seconds, 1080×1920 H.264/AAC. The MP4 is available as a seven-day artifact. This no-paid-account test still needs a human listen-through for pronunciation, warmth, and story quality before public use.
 
 The daily handoff remains manual. GitHub only exposes `workflow_dispatch` after its workflow exists on the default branch, so it is not enabled for the feature branch yet.
 
