@@ -81,7 +81,7 @@ Every episode should contain:
 2. A concrete mini-problem.
 3. Jori and Flimm investigate.
 4. One visual or verbal riddle.
-5. 2–4 second thinking pause.
+5. 5–10 second thinking pause; encode the wait as an explicit silence and hold the riddle caption until the answer.
 6. Answer or partial answer.
 7. Story payoff.
 8. Small cliffhanger or forward link.

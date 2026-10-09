@@ -112,7 +112,7 @@ jobs:
           for key in ["type","question","answer","pause_seconds"]:
               if key not in riddle:
                   raise SystemExit(f"Missing riddle field: {key}")
-          if not 2 <= float(riddle["pause_seconds"]) <= 5:
+          if not 2 <= float(riddle["pause_seconds"]) <= 10:
               raise SystemExit("Invalid riddle pause")
           if p.get("audio_url") and not str(p["audio_url"]).startswith("https://"):
               raise SystemExit("audio_url must be https when provided")
@@ -134,6 +134,13 @@ jobs:
               raise SystemExit("Narration must contain at least 30 characters")
           if not isinstance(p.get("riddle"),dict):
               raise SystemExit("Missing riddle")
+          pause_markers=re.findall(r"\\[\\[PAUSE:([0-9]+(?:\\.[0-9]+)?)\\]\\]",p["narration"])
+          if len(pause_markers)>1:
+              raise SystemExit("Only one explicit pause marker is supported")
+          if pause_markers and abs(float(pause_markers[0])-float(p["riddle"]["pause_seconds"]))>0.01:
+              raise SystemExit("Pause marker must match riddle.pause_seconds")
+          if float(p["riddle"]["pause_seconds"])>=5 and not p.get("audio_url") and len(pause_markers)!=1:
+              raise SystemExit("A 5-10 second riddle pause needs an explicit narration marker")
           qc=p.get("qc") or {}
           for key in ["book_spoiler_check","continuity_check","duplicate_check"]:
               if qc.get(key) is not True:
@@ -219,27 +226,52 @@ jobs:
 
       - name: Build safe-zone subtitles
         run: |
-          AUDIO_DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 work/narration.mp3)"
-          export AUDIO_DURATION
-          echo "AUDIO_DURATION=$AUDIO_DURATION" >> "$GITHUB_ENV"
           python3 - <<'PY'
           import json,os,re,textwrap
-          with open("work/payload.json",encoding="utf-8") as f:
-              text=json.load(f)["narration"].strip()
-          dur=float(os.environ["AUDIO_DURATION"])
-          parts=[x.strip() for x in re.split(r'(?<=[.!?])\s+|\s*[;:]\s+',text) if x.strip()]
-          chunks=[]
-          for part in parts:
-              words=part.split()
-              while len(words)>9:
-                  chunks.append(" ".join(words[:9])); words=words[9:]
-              if words: chunks.append(" ".join(words))
-          if not chunks: chunks=[text]
-          weights=[max(1,len(c.split())) for c in chunks]
-          total=sum(weights)
+          timeline_path="work/voice-timeline.json"
+          dialogue=[]
           def ts(sec):
               h=int(sec//3600); sec-=h*3600; m=int(sec//60); sec-=m*60
               return f"{h}:{m:02d}:{sec:05.2f}"
+          if os.path.exists(timeline_path):
+              timeline=json.load(open(timeline_path,encoding="utf-8"))["items"]
+              for item in timeline:
+                  if item["kind"]=="pause":
+                      if float(item["duration"])>=5 and dialogue:
+                          dialogue[-1]["end"]=float(item["end"])
+                      continue
+                  words=item["text"].split()
+                  chunks=[]
+                  while len(words)>9:
+                      chunks.append(words[:9]); words=words[9:]
+                  if words: chunks.append(words)
+                  weights=[max(1,len(c)) for c in chunks]
+                  total=sum(weights)
+                  elapsed=0.0
+                  for chunk,weight in zip(chunks,weights):
+                      start=float(item["start"])+float(item["duration"])*elapsed/total
+                      elapsed+=weight
+                      finish=float(item["start"])+float(item["duration"])*elapsed/total
+                      dialogue.append({"text":" ".join(chunk),"start":start,"end":finish})
+          else:
+              with open("work/payload.json",encoding="utf-8") as f:
+                  narration=json.load(f)["narration"]
+              narration=re.sub(r"\\[\\[PAUSE:[0-9]+(?:\\.[0-9]+)?\\]\\]","",narration).strip()
+              dur=float(os.environ["AUDIO_DURATION"])
+              parts=[x.strip() for x in re.split(r'(?<=[.!?])\\s+|\\s*[;:]\\s+',narration) if x.strip()]
+              chunks=[]
+              for part in parts:
+                  words=part.split()
+                  while len(words)>9:
+                      chunks.append(" ".join(words[:9])); words=words[9:]
+                  if words: chunks.append(" ".join(words))
+              if not chunks: chunks=[narration]
+              weights=[max(1,len(c.split())) for c in chunks]
+              total=sum(weights)
+              elapsed=0.0
+              for chunk,weight in zip(chunks,weights):
+                  start=dur*elapsed/total; elapsed+=weight; finish=dur*elapsed/total
+                  dialogue.append({"text":chunk,"start":start,"end":finish})
           ass="""[Script Info]
           ScriptType: v4.00+
           PlayResX: 1080
@@ -254,14 +286,11 @@ jobs:
           [Events]
           Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
           """
-          ass="\n".join(line.strip() for line in ass.splitlines())+"\n"
-          t=0.0
-          for i,(c,w) in enumerate(zip(chunks,weights)):
-              end=dur if i==len(chunks)-1 else t+dur*w/total
-              wrapped="\\N".join(textwrap.wrap(c,width=25,break_long_words=False,break_on_hyphens=False))
-              wrapped=wrapped.replace("{","\\{").replace("}","\\}")
-              ass+=f"Dialogue: 0,{ts(t)},{ts(end)},Kids,,0,0,0,,{wrapped}\n"
-              t=end
+          ass="\\n".join(line.strip() for line in ass.splitlines())+"\\n"
+          for cue in dialogue:
+              wrapped="\\\\N".join(textwrap.wrap(cue["text"],width=25,break_long_words=False,break_on_hyphens=False))
+              wrapped=wrapped.replace("{","\\\\{").replace("}","\\\\}")
+              ass+=f"Dialogue: 0,{ts(cue['start'])},{ts(cue['end'])},Kids,,0,0,0,,{wrapped}\\n"
           open("work/captions.ass","w",encoding="utf-8").write(ass)
           PY
 

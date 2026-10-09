@@ -20,6 +20,7 @@ MAX_GUEST_CHARS = 280  # The Space currently truncates anonymous text at 300 cha
 VOICE_ID = "df_victoria"
 SPEED = 0.92
 PAUSE_SECONDS = 0.22
+PAUSE_MARKER = re.compile(r"\\[\\[PAUSE:([0-9]+(?:\\.[0-9]+)?)\\]\\]")
 MAX_AUDIO_BYTES = 25 * 1024 * 1024
 
 
@@ -95,51 +96,105 @@ def main() -> None:
     if voice.get("model") != "kikiri-tts/kikiri-german-victoria" or voice.get("speaker_id") != VOICE_ID:
         raise SystemExit("Episode voice configuration does not match the licensed Victoria model.")
 
-    chunks = split_text(payload["narration"].strip())
+    narration = payload["narration"].strip()
+    segments = []
+    cursor = 0
+    for match in PAUSE_MARKER.finditer(narration):
+        speech = narration[cursor:match.start()].strip()
+        if speech:
+            segments.append({"kind": "speech", "text": speech})
+        seconds = float(match.group(1))
+        if not 5 <= seconds <= 10:
+            raise SystemExit("Explicit riddle pauses must be 5-10 seconds.")
+        segments.append({"kind": "pause", "duration": seconds})
+        cursor = match.end()
+    remainder = narration[cursor:].strip()
+    if remainder:
+        segments.append({"kind": "speech", "text": remainder})
+    if not segments or any(item["kind"] == "speech" and "[[PAUSE:" in item["text"] for item in segments):
+        raise SystemExit("Narration pause marker is malformed.")
+    marker_count = len(PAUSE_MARKER.findall(narration))
+    if marker_count != int(float(payload.get("riddle", {}).get("pause_seconds", 0)) >= 5):
+        raise SystemExit("Narration pause marker must match the configured riddle pause.")
+
     out_dir = Path("work/tts-chunks")
     out_dir.mkdir(parents=True, exist_ok=True)
-    normalized = []
+    sequence = []
+    chunk_number = 0
+    for segment in segments:
+        if segment["kind"] == "pause":
+            sequence.append({"kind": "pause", "duration": segment["duration"]})
+            continue
+        chunks = split_text(segment["text"])
+        for index, chunk in enumerate(chunks):
+            chunk_number += 1
+            print(f"Generating Victoria narration chunk {chunk_number} ({len(chunk)} chars)", flush=True)
+            try:
+                audio_url = call_space(chunk)
+                req = Request(audio_url, headers={"User-Agent": "jori-flimm-renderer"})
+                with urlopen(req, timeout=60) as response:
+                    raw = response.read(MAX_AUDIO_BYTES + 1)
+                if len(raw) > MAX_AUDIO_BYTES:
+                    raise SystemExit("A narration chunk exceeded 25 MiB.")
+                raw_path = out_dir / f"{chunk_number:02d}-raw.wav"
+                raw_path.write_bytes(raw)
+                wav_path = out_dir / f"{chunk_number:02d}.wav"
+                subprocess.run(
+                    ["ffmpeg", "-y", "-v", "error", "-i", str(raw_path), "-ar", "24000", "-ac", "1", str(wav_path)],
+                    check=True,
+                )
+                duration = float(subprocess.check_output([
+                    "ffprobe", "-v", "error", "-show_entries", "format=duration",
+                    "-of", "default=noprint_wrappers=1:nokey=1", str(wav_path)
+                ], text=True))
+                sequence.append({"kind": "speech", "text": chunk, "file": str(wav_path), "duration": duration})
+                if index < len(chunks) - 1:
+                    sequence.append({"kind": "pause", "duration": PAUSE_SECONDS})
+            except (HTTPError, URLError, TimeoutError) as exc:
+                raise SystemExit(f"Voice service request failed for chunk {chunk_number}: {exc}") from exc
+            if chunk_number < len(split_text(narration.replace(PAUSE_MARKER.pattern, ""))):
+                time.sleep(0.5)
 
-    for index, chunk in enumerate(chunks, start=1):
-        print(f"Generating Victoria narration chunk {index}/{len(chunks)} ({len(chunk)} chars)", flush=True)
-        try:
-            audio_url = call_space(chunk)
-            req = Request(audio_url, headers={"User-Agent": "jori-flimm-renderer"})
-            with urlopen(req, timeout=60) as response:
-                raw = response.read(MAX_AUDIO_BYTES + 1)
-            if len(raw) > MAX_AUDIO_BYTES:
-                raise SystemExit("A narration chunk exceeded 25 MiB.")
-            raw_path = out_dir / f"{index:02d}-raw.wav"
-            raw_path.write_bytes(raw)
-            wav_path = out_dir / f"{index:02d}.wav"
-            subprocess.run(
-                ["ffmpeg", "-y", "-v", "error", "-i", str(raw_path), "-ar", "24000", "-ac", "1", str(wav_path)],
-                check=True,
-            )
-            normalized.append(wav_path)
-        except (HTTPError, URLError, TimeoutError) as exc:
-            raise SystemExit(f"Voice service request failed for chunk {index}: {exc}") from exc
-        if index < len(chunks):
-            time.sleep(0.5)
+    silence_cache = {}
+    for item in sequence:
+        if item["kind"] == "pause":
+            key = f"{float(item['duration']):.2f}"
+            if key not in silence_cache:
+                silence = out_dir / f"pause-{key.replace('.', '-')}.wav"
+                subprocess.run([
+                    "ffmpeg", "-y", "-v", "error", "-f", "lavfi",
+                    "-i", "anullsrc=r=24000:cl=mono", "-t", key,
+                    "-c:a", "pcm_s16le", str(silence),
+                ], check=True)
+                silence_cache[key] = silence
+            item["file"] = str(silence_cache[key])
 
-    silence = out_dir / "pause.wav"
-    subprocess.run([
-        "ffmpeg", "-y", "-v", "error", "-f", "lavfi",
-        "-i", "anullsrc=r=24000:cl=mono", "-t", str(PAUSE_SECONDS),
-        "-c:a", "pcm_s16le", str(silence),
-    ], check=True)
     concat_file = out_dir / "concat.txt"
+    timeline = []
+    cursor = 0.0
     with concat_file.open("w", encoding="utf-8") as f:
-        for index, wav_path in enumerate(normalized):
-            f.write(f"file '{wav_path.resolve().as_posix()}'\n")
-            if index < len(normalized) - 1:
-                f.write(f"file '{silence.resolve().as_posix()}'\n")
+        for item in sequence:
+            path = Path(item["file"]).resolve()
+            f.write(f"file '{path.as_posix()}'\\n")
+            start = cursor
+            cursor += float(item["duration"])
+            timeline.append({
+                "kind": item["kind"],
+                "text": item.get("text", ""),
+                "start": round(start, 3),
+                "end": round(cursor, 3),
+                "duration": round(float(item["duration"]), 3),
+            })
     subprocess.run([
         "ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0",
         "-i", str(concat_file), "-c", "copy", "work/narration_source.wav",
     ], check=True)
-    print(f"Generated {len(chunks)} Victoria narration chunks.", flush=True)
-
+    Path("work/voice-timeline.json").write_text(
+        json.dumps({"items": timeline, "duration": round(cursor, 3)}, ensure_ascii=False, indent=2) + "\\n",
+        encoding="utf-8",
+    )
+    explicit = sum(float(item["duration"]) for item in sequence if item["kind"] == "pause" and float(item["duration"]) >= 5)
+    print(f"Generated {chunk_number} Victoria narration chunks; explicit riddle silence={explicit:.1f}s.", flush=True)
 
 if __name__ == "__main__":
     main()
