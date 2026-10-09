@@ -288,7 +288,7 @@ jobs:
           [Events]
           Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
           """
-          ass="\\n".join(line.strip() for line in ass.splitlines())+"\\n"
+          ass="\n".join(line.strip() for line in ass.splitlines())+"\n"
           for cue in dialogue:
               wrapped="\\\\N".join(textwrap.wrap(cue["text"],width=25,break_long_words=False,break_on_hyphens=False))
               wrapped=wrapped.replace("{","\\{").replace("}","\\}")
