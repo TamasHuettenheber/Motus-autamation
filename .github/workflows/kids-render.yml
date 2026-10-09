@@ -224,6 +224,8 @@ jobs:
               json.dump(scene_files,f)
           PY
 
+          AUDIO_DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 work/narration.mp3)"
+          echo "AUDIO_DURATION=$AUDIO_DURATION" >> "$GITHUB_ENV"
       - name: Build safe-zone subtitles
         run: |
           python3 - <<'PY'
