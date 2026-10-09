@@ -14,10 +14,12 @@
     "voice": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["model", "speaker_id"],
+      "required": ["provider", "model", "speaker_id", "speed"],
       "properties": {
-        "model": {"const": "de_DE-mls-medium"},
-        "speaker_id": {"const": 86}
+        "provider": {"const": "Hugging Face Spaces CPU TTS"},
+        "model": {"const": "kikiri-tts/kikiri-german-victoria"},
+        "speaker_id": {"const": "df_victoria"},
+        "speed": {"type": "number", "minimum": 0.8, "maximum": 1.1}
       }
     },
     "riddle": {
