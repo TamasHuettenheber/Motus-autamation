@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-09T16:07:20.984226+00:00",
+  "checked_at_utc": "2026-10-09T20:51:11.017088+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -11,42 +11,102 @@
   },
   "posts": [
     {
-      "id": "6ac8034f53e023600019583d",
-      "text": "Nicht jeder ruhige Abend muss produktiv sein. Du darfst etwas Schönes tun, ohne dass es dich verbessert, weiterbringt oder auf irgendeiner Liste steht. Freude braucht keine Rechtfertigung. Was machst du heute einfach nur, weil du es magst?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Hidden Tears (CC BY 4.0)",
+      "id": "6ac9527cbba9419ccbde36fb",
+      "text": "Der Erfolg anderer ist kein Urteil über dein Leben. Wenn du heute durch Beiträge scrollst und denkst: Warum bin ich noch nicht so weit? Halt kurz an. Du siehst einen Ausschnitt, nicht den ganzen Weg. Frag dich lieber: Was wünsche ich mir wirklich, unabhängig davon, was andere zeigen? Was wäre mein eigener nächster Schritt?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Nevermore (CC BY 4.0)",
       "status": "scheduled",
-      "dueAt": "2026-10-09T20:00:00.000Z",
+      "dueAt": "2026-10-10T20:00:00.000Z",
       "sentAt": null,
       "externalLink": null,
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-09-2200.mp4"
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-10-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac95272bba9419ccbde365c",
+      "text": "Drei Worte können mehr verändern als zehn Erklärungen: Ich lag falsch. Ohne ein Aber dahinter. Ohne Schuldverschiebung. Wenn du heute jemanden verletzt oder falsch eingeschätzt hast, übernimm deinen Teil. Eine ehrliche Entschuldigung macht dich nicht kleiner. Sie macht Vertrauen wieder möglich. Wem schuldest du noch einen klaren Satz?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – A Memory Away (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-10T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-10-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac9528bbba9419ccbde3a39",
+      "text": "Du musst nicht alles allein herausfinden. Wenn du heute bei etwas feststeckst, frag jemanden nach seinem Blick darauf. Nicht nach einer fertigen Lösung. Nach einer Perspektive. Hilfe zu holen zeigt, dass dir das Ergebnis wichtiger ist als dein Stolz. Wen könntest du heute um einen ehrlichen Rat bitten? Teile diesen Gedanken mit jemandem, der alles allein tragen will.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Syntheticity (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-10T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-10-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac9526abba9419ccbde3533",
+      "text": "Heute ist Samstag. Mach ihn nicht zur Kopie von gestern. Nimm einen Weg, den du noch nie gegangen bist. Frag jemanden etwas, das du wirklich wissen willst. Probier etwas aus, ohne vorher gut darin sein zu müssen. Neugier macht aus einem gewöhnlichen Tag eine neue Geschichte. Was entdeckst du heute? Schreib es in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Wild Waters (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-10T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-10-0700.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac8034f53e023600019583d",
+      "text": "Nicht jeder ruhige Abend muss produktiv sein. Du darfst etwas Schönes tun, ohne dass es dich verbessert, weiterbringt oder auf irgendeiner Liste steht. Freude braucht keine Rechtfertigung. Was machst du heute einfach nur, weil du es magst?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Hidden Tears (CC BY 4.0)",
+      "status": "sent",
+      "dueAt": "2026-10-09T20:00:00.000Z",
+      "sentAt": "2026-10-09T20:02:29.471Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7694760725536918816",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac8034f53e023600019583d_video.mp4"
         }
       ]
     },
     {
       "id": "6ac8038b62435c1f1fe2221a",
-      "text": "Ein echtes Kompliment kostet dich fast nichts und kann einen ganzen Tag verändern. Sag heute jemandem konkret, was du an seiner Arbeit, seiner Haltung oder seinem Mut schätzt. Nicht einfach gut gemacht, sondern warum. Wen möchtest du heute bewusst stärken? Teile das Video mit dieser Person.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Deserve to be Loved (CC BY 4.0)",
-      "status": "scheduled",
+      "text": "Ein echtes Kompliment kostet dich fast nichts und kann einen ganzen Tag verändern. Sag heute jemandem konkret, was du an seiner Arbeit, seiner Haltung oder seinem Mut schätzt. Nicht einfach gut gemacht, sondern warum. Wen möchtest du heute bewusst stärken? Teile das Video mit dieser Person. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Deserve to be Loved (CC BY 4.0)",
+      "status": "sent",
       "dueAt": "2026-10-09T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-09T16:31:55.948Z",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7694706523280280864?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-09-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac8038b62435c1f1fe2221a_video.mp4"
         }
       ]
     },
     {
       "id": "6ac8034462435c1f1fe21d32",
-      "text": "Du musst nicht auf jede Frage sofort eine Antwort haben. Ein klares: Ich prüfe das und melde mich, ist keine Schwäche. Es schützt deine Zeit und macht Zusagen verlässlich. Probier es heute bei der nächsten spontanen Anfrage aus. Fällt es dir leicht, dir Bedenkzeit zu nehmen?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Destiny (CC BY 4.0)",
+      "text": "Du musst nicht auf jede Frage sofort eine Antwort haben. Ein klares: Ich prüfe das und melde mich, ist keine Schwäche. Es schützt deine Zeit und macht Zusagen verlässlich. Probier es heute bei der nächsten spontanen Anfrage aus. Fällt es dir leicht, dir Bedenkzeit zu nehmen? #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Destiny (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-10-09T10:00:00.000Z",
       "sentAt": "2026-10-09T10:01:39.262Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7694605923691580704",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7694605923691580704?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -57,11 +117,11 @@
     },
     {
       "id": "6ac8034574384ca756dad7de",
-      "text": "Dein Morgen braucht heute keinen weiteren Vorsatz. Er braucht eine Entscheidung: Was wirst du heute bewusst nicht tun? Vielleicht nicht sofort zum Handy greifen. Vielleicht nicht jede Bitte annehmen. Wer Platz für das Wichtige schafft, gewinnt Energie für den eigenen Weg. Welche Ablenkung streichst du heute? Folge Motus für neue Impulse.\n\n#motus #fokus #digitalbalance #aufmerksamkeit #selbstentwicklung\n\nMusik: Tanner Helland – The Forest Awakes (CC BY 4.0)",
+      "text": "Dein Morgen braucht heute keinen weiteren Vorsatz. Er braucht eine Entscheidung: Was wirst du heute bewusst nicht tun? Vielleicht nicht sofort zum Handy greifen. Vielleicht nicht jede Bitte annehmen. Wer Platz für das Wichtige schafft, gewinnt Energie für den eigenen Weg. Welche Ablenkung streichst du heute? Folge Motus für neue Impulse. #motus #fokus #digitalbalance #aufmerksamkeit #selbstentwicklung Musik: Tanner Helland – The Forest Awakes (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-10-09T05:00:00.000Z",
       "sentAt": "2026-10-09T05:01:51.690Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7694528481031507232",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7694528481031507232?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -72,11 +132,11 @@
     },
     {
       "id": "6ac6af4c4fd14839c725fce0",
-      "text": "Wenn ein Tag nicht so gelaufen ist, wie du wolltest, brauchst du abends kein Urteil über dich. Trenne Ergebnis und Identität. Etwas ist schiefgelaufen; das bedeutet nicht, dass du gescheitert bist. Frag nur: Was nehme ich daraus mit, und was lasse ich hier? Welche Sache musst du heute nicht mit ins Bett nehmen?\n\n#motus #abendroutine #innereruhe #mentaleklarheit #selbstentwicklung\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
+      "text": "Wenn ein Tag nicht so gelaufen ist, wie du wolltest, brauchst du abends kein Urteil über dich. Trenne Ergebnis und Identität. Etwas ist schiefgelaufen; das bedeutet nicht, dass du gescheitert bist. Frag nur: Was nehme ich daraus mit, und was lasse ich hier? Welche Sache musst du heute nicht mit ins Bett nehmen? #motus #abendroutine #innereruhe #mentaleklarheit #selbstentwicklung Musik: Tanner Helland – Fate (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-10-08T20:00:00.000Z",
       "sentAt": "2026-10-08T20:03:05.059Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7694389699598683424",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7694389699598683424?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -87,11 +147,11 @@
     },
     {
       "id": "6ac6af4a5116513c48a892e2",
-      "text": "Wenn du merkst, dass du innerlich sofort auf eine Nachricht oder Bemerkung reagieren willst, verzögere deine Antwort bewusst. Nicht als Spiel, sondern als Schutz vor einer Reaktion, die nur den ersten Impuls wiedergibt. Zehn Minuten Abstand können aus Rechtfertigung Klarheit machen. Wo würde dir heute eine spätere Antwort guttun?\n\n#motus #grenzensetzen #selbstrespekt #kommunikation #alltagspsychologie\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
+      "text": "Wenn du merkst, dass du innerlich sofort auf eine Nachricht oder Bemerkung reagieren willst, verzögere deine Antwort bewusst. Nicht als Spiel, sondern als Schutz vor einer Reaktion, die nur den ersten Impuls wiedergibt. Zehn Minuten Abstand können aus Rechtfertigung Klarheit machen. Wo würde dir heute eine spätere Antwort guttun? #motus #grenzensetzen #selbstrespekt #kommunikation #alltagspsychologie Musik: Tanner Helland – Faith (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-10-08T16:30:00.000Z",
       "sentAt": "2026-10-08T16:32:08.247Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7694335402311716129",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7694335402311716129?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -102,11 +162,11 @@
     },
     {
       "id": "6ac6b12b4fd14839c7263f9a",
-      "text": "Wenn eine Aufgabe unangenehm ist, überschätzt dein Kopf oft den Aufwand, solange du sie nur anschaust. Stell dir deshalb keinen großen Abschluss vor. Stell einen Timer auf zehn Minuten und beginne nur. Danach darfst du neu entscheiden. Häufig ist nicht die Arbeit das Problem, sondern der Einstieg. Was startest du heute für zehn Minuten?\n\n#motus #motivation #morgenroutine #mindset #selbstentwicklung\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
+      "text": "Wenn eine Aufgabe unangenehm ist, überschätzt dein Kopf oft den Aufwand, solange du sie nur anschaust. Stell dir deshalb keinen großen Abschluss vor. Stell einen Timer auf zehn Minuten und beginne nur. Danach darfst du neu entscheiden. Häufig ist nicht die Arbeit das Problem, sondern der Einstieg. Was startest du heute für zehn Minuten? #motus #motivation #morgenroutine #mindset #selbstentwicklung Musik: Tanner Helland – Find You (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-10-08T10:00:00.000Z",
       "sentAt": "2026-10-08T10:04:34.591Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7694235374528351520",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7694235374528351520?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -117,11 +177,11 @@
     },
     {
       "id": "6ac6b09e2a8ddf9255ce29b7",
-      "text": "Starte morgen nicht mit der Frage, wie viel du schaffen musst. Frag dich zuerst: Was ist die eine Sache, die meinen Tag in die richtige Richtung bringt? Gib ihr zehn ungestörte Minuten, bevor Nachrichten und Erwartungen übernehmen. Ein klarer Anfang ist stärker als ein voller Plan. Was bekommt morgen deine ersten zehn Minuten?\n\n#motus #motivation #morgenroutine #mindset #selbstentwicklung\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
+      "text": "Starte morgen nicht mit der Frage, wie viel du schaffen musst. Frag dich zuerst: Was ist die eine Sache, die meinen Tag in die richtige Richtung bringt? Gib ihr zehn ungestörte Minuten, bevor Nachrichten und Erwartungen übernehmen. Ein klarer Anfang ist stärker als ein voller Plan. Was bekommt morgen deine ersten zehn Minuten? #motus #motivation #morgenroutine #mindset #selbstentwicklung Musik: Tanner Helland – From Here (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-10-08T05:00:00.000Z",
       "sentAt": "2026-10-08T05:01:48.760Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7694157371685276960",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7694157371685276960?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -132,11 +192,11 @@
     },
     {
       "id": "6ac564285a8d2d13237ada4e",
-      "text": "Wenn dein Kopf abends an einer offenen Sache festhängt, versuch nicht, sie im Bett fertigzudenken. Schreib in einem Satz auf, was noch offen ist und was der nächste Schritt morgen sein wird. Damit verschwindet das Problem nicht, aber dein Gehirn muss es nicht die ganze Nacht festhalten. Welche offene Sache parkst du heute bewusst bis morgen?\n\n#motus #abendroutine #innereruhe #mentaleklarheit #selbstentwicklung\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
+      "text": "Wenn dein Kopf abends an einer offenen Sache festhängt, versuch nicht, sie im Bett fertigzudenken. Schreib in einem Satz auf, was noch offen ist und was der nächste Schritt morgen sein wird. Damit verschwindet das Problem nicht, aber dein Gehirn muss es nicht die ganze Nacht festhalten. Welche offene Sache parkst du heute bewusst bis morgen? #motus #abendroutine #innereruhe #mentaleklarheit #selbstentwicklung Musik: Tanner Helland – Lost Islands (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-10-07T20:00:00.000Z",
       "sentAt": "2026-10-07T20:01:44.652Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7694018403379531040",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7694018403379531040?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -147,11 +207,11 @@
     },
     {
       "id": "6ac5644ab77273576dc19f93",
-      "text": "Wenn sich alles einfach nur schlecht anfühlt, benenn es genauer. Bist du enttäuscht, überfordert, wütend, unsicher oder erschöpft? Je präziser du ein Gefühl benennen kannst, desto leichter wird es, sinnvoll darauf zu reagieren. Ein diffuses Problem macht dich hilflos. Ein benanntes Problem gibt dir einen Ansatzpunkt. Was fühlst du gerade wirklich?\n\n#motus #beziehungen #selbstrespekt #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – Remember (CC BY 4.0)",
+      "text": "Wenn sich alles einfach nur schlecht anfühlt, benenn es genauer. Bist du enttäuscht, überfordert, wütend, unsicher oder erschöpft? Je präziser du ein Gefühl benennen kannst, desto leichter wird es, sinnvoll darauf zu reagieren. Ein diffuses Problem macht dich hilflos. Ein benanntes Problem gibt dir einen Ansatzpunkt. Was fühlst du gerade wirklich? #motus #beziehungen #selbstrespekt #alltagspsychologie #selbstentwicklung Musik: Tanner Helland – Remember (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-10-07T16:30:00.000Z",
       "sentAt": "2026-10-07T16:31:40.579Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7693964241350561057",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7693964241350561057?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -162,11 +222,11 @@
     },
     {
       "id": "6ac564736e7abe65d13ccec2",
-      "text": "Wenn du bei einer Entscheidung nur noch nach Gründen suchst, die deine erste Meinung bestätigen, prüf dich kurz selbst. Frag: Was müsste passieren, damit ich meine Meinung ändere? Diese eine Frage schützt dich davor, nur Beweise für das zu sammeln, was du sowieso schon glauben willst. Bei welchem Thema lohnt sich das heute?\n\n#motus #produktivitaet #klarheit #fokus #selbstentwicklung\n\nMusik: Tanner Helland – Familiar Roads (CC BY 4.0)",
+      "text": "Wenn du bei einer Entscheidung nur noch nach Gründen suchst, die deine erste Meinung bestätigen, prüf dich kurz selbst. Frag: Was müsste passieren, damit ich meine Meinung ändere? Diese eine Frage schützt dich davor, nur Beweise für das zu sammeln, was du sowieso schon glauben willst. Bei welchem Thema lohnt sich das heute? #motus #produktivitaet #klarheit #fokus #selbstentwicklung Musik: Tanner Helland – Familiar Roads (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-10-07T10:00:00.000Z",
       "sentAt": "2026-10-07T10:01:50.098Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7693863771856489760",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7693863771856489760?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -177,11 +237,11 @@
     },
     {
       "id": "6ac5646c6e7abe65d13ccd69",
-      "text": "Mach deinen Morgen nicht davon abhängig, wie motiviert du dich fühlst. Koppel den ersten Schritt an etwas, das sowieso passiert: Wenn der Kaffee läuft, ziehst du die Schuhe an. Wenn du den Laptop öffnest, startest du genau eine Aufgabe. So wird aus Absicht ein Auslöser. Welche Wenn-dann-Regel setzt du morgen früh um?\n\n#motus #motivation #morgenroutine #mindset #selbstentwicklung\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "text": "Mach deinen Morgen nicht davon abhängig, wie motiviert du dich fühlst. Koppel den ersten Schritt an etwas, das sowieso passiert: Wenn der Kaffee läuft, ziehst du die Schuhe an. Wenn du den Laptop öffnest, startest du genau eine Aufgabe. So wird aus Absicht ein Auslöser. Welche Wenn-dann-Regel setzt du morgen früh um? #motus #motivation #morgenroutine #mindset #selbstentwicklung Musik: Tanner Helland – Now or Never (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-10-07T05:00:00.000Z",
       "sentAt": "2026-10-07T05:01:57.646Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7693786317179669792",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7693786317179669792?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -192,11 +252,11 @@
     },
     {
       "id": "6ac417128a7578ba6c17a809",
-      "text": "Nicht alles, was abends noch auf deinem Bildschirm auftaucht, muss heute noch in deinen Kopf. Setz dir für heute eine klare Reizgrenze: eine Uhrzeit, ab der Nachrichten, Mails und Feeds warten dürfen. Du verpasst nicht dein Leben, wenn du für eine Weile nicht erreichbar bist. Was darf heute Abend bis morgen warten?\n\n#motus #motivation #morgenroutine #mindset #selbstentwicklung\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "text": "Nicht alles, was abends noch auf deinem Bildschirm auftaucht, muss heute noch in deinen Kopf. Setz dir für heute eine klare Reizgrenze: eine Uhrzeit, ab der Nachrichten, Mails und Feeds warten dürfen. Du verpasst nicht dein Leben, wenn du für eine Weile nicht erreichbar bist. Was darf heute Abend bis morgen warten? #motus #motivation #morgenroutine #mindset #selbstentwicklung Musik: Tanner Helland – Now or Never (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-10-06T20:00:00.000Z",
       "sentAt": "2026-10-06T20:02:13.410Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7693647411612290337",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7693647411612290337?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -207,11 +267,11 @@
     },
     {
       "id": "6ac416954e17d6a1b258ed46",
-      "text": "Wenn du dich an einem Gedanken festbeißt, versuch nicht noch härter darüber nachzudenken. Wechsel den Ort. Geh ein paar Minuten raus, nimm einen anderen Weg oder schau bewusst in die Ferne. Manchmal braucht dein Kopf keine weitere Analyse, sondern einen neuen Blickwinkel. Bei welchem Thema würde dir heute etwas Abstand guttun? Schreib es in die Kommentare.\n\n#motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "text": "Wenn du dich an einem Gedanken festbeißt, versuch nicht noch härter darüber nachzudenken. Wechsel den Ort. Geh ein paar Minuten raus, nimm einen anderen Weg oder schau bewusst in die Ferne. Manchmal braucht dein Kopf keine weitere Analyse, sondern einen neuen Blickwinkel. Bei welchem Thema würde dir heute etwas Abstand guttun? Schreib es in die Kommentare. #motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung Musik: Tanner Helland – Now or Never (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-10-06T16:30:00.000Z",
       "sentAt": "2026-10-06T16:32:21.528Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7693593260362648864",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7693593260362648864?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -222,11 +282,11 @@
     },
     {
       "id": "6ac4169138629554e342a290",
-      "text": "Konzentriert arbeiten heißt nicht, stundenlang ohne Pause durchzuziehen. Probier heute einen klaren Rhythmus: fünfundzwanzig Minuten nur eine Aufgabe, danach fünf Minuten wirklich weg vom Bildschirm. Kein Scrollen als Pause. Steh auf, beweg dich, schau aus dem Fenster. Fokus braucht nicht nur Disziplin, sondern Erholung. Welchen Arbeitsrhythmus probierst du heute aus?\n\n#motus #fokus #digitalbalance #aufmerksamkeit #selbstentwicklung\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "text": "Konzentriert arbeiten heißt nicht, stundenlang ohne Pause durchzuziehen. Probier heute einen klaren Rhythmus: fünfundzwanzig Minuten nur eine Aufgabe, danach fünf Minuten wirklich weg vom Bildschirm. Kein Scrollen als Pause. Steh auf, beweg dich, schau aus dem Fenster. Fokus braucht nicht nur Disziplin, sondern Erholung. Welchen Arbeitsrhythmus probierst du heute aus? #motus #fokus #digitalbalance #aufmerksamkeit #selbstentwicklung Musik: Tanner Helland – Now or Never (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-10-06T10:00:00.000Z",
       "sentAt": "2026-10-06T10:02:35.729Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7693492713894726945",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7693492713894726945?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -237,11 +297,11 @@
     },
     {
       "id": "6ac4192f38629554e342f2f8",
-      "text": "Du musst morgens nicht darauf warten, dass du dich bereit fühlst. Triff eine kleine Entscheidung, bevor deine Stimmung mitreden kann: Schuhe an, Wasser trinken, rausgehen oder anfangen. Motivation ist wechselhaft. Eine klare Entscheidung gibt deinem Morgen Richtung, auch wenn die Energie erst später kommt. Welche Entscheidung triffst du heute, bevor du darüber diskutierst? Schreib sie in die Kommentare.\n\n#motus #motivation #morgenroutine #mindset #selbstentwicklung\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "text": "Du musst morgens nicht darauf warten, dass du dich bereit fühlst. Triff eine kleine Entscheidung, bevor deine Stimmung mitreden kann: Schuhe an, Wasser trinken, rausgehen oder anfangen. Motivation ist wechselhaft. Eine klare Entscheidung gibt deinem Morgen Richtung, auch wenn die Energie erst später kommt. Welche Entscheidung triffst du heute, bevor du darüber diskutierst? Schreib sie in die Kommentare. #motus #motivation #morgenroutine #mindset #selbstentwicklung Musik: Tanner Helland – Now or Never (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-10-06T05:00:00.000Z",
       "sentAt": "2026-10-06T05:01:57.075Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7693415199155490080",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7693415199155490080?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab9886d70ec211d1d28511a_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ab9c55536a0dcfcb3ebb1cb",
-      "text": "Dein Kopf braucht nicht für jede Aufgabe Motivation. Oft reicht ein klarer Startpunkt. Wähle heute Mittag genau eine Sache, die du in den nächsten zehn Minuten wirklich abschließt. Nicht planen, nicht optimieren, anfangen. Ein sichtbarer kleiner Fortschritt gibt deinem Nachmittag mehr Energie als zehn offene Gedanken.",
-      "status": "sent",
-      "dueAt": "2026-09-28T10:00:00.000Z",
-      "sentAt": "2026-09-28T10:02:54.261Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7690524145544596768?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab9c55536a0dcfcb3ebb1cb_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ab9c4ee82dee5c85bd1c3ee",
-      "text": "Du brauchst heute Morgen nicht erst Motivation. Du brauchst einen Anfang. Stell die Füße auf den Boden, trink einen Schluck Wasser und mach die erste kleine Sache sofort. Nicht den ganzen Tag planen. Nicht auf das richtige Gefühl warten. Ein guter Morgen beginnt mit Bewegung. Der erste Schritt erzeugt Energie – nicht umgekehrt. Also: aufstehen, anfangen und dem Tag zeigen, wer entscheidet.",
-      "status": "sent",
-      "dueAt": "2026-09-28T05:00:00.000Z",
-      "sentAt": "2026-09-28T05:01:53.413Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7690446548710280481?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab9c4ee82dee5c85bd1c3ee_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ab847330f79a37c5d3cfde0",
-      "text": "Manchmal brauchst du keine neue Antwort. Du brauchst Abstand. Geh raus, lass das Handy in der Tasche und bewege dich zehn Minuten ohne etwas lösen zu wollen. Dein Kopf arbeitet trotzdem weiter. Oft merkst du erst unterwegs, was wirklich wichtig ist und was nur laut war.",
-      "status": "sent",
-      "dueAt": "2026-09-27T20:00:00.000Z",
-      "sentAt": "2026-09-27T20:03:21.481Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7690307609764597024?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab847330f79a37c5d3cfde0_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ab845ba3d66d464e5bee3ac",
-      "text": "Du musst nicht jede Entscheidung sofort treffen. Manchmal entsteht Klarheit erst, wenn du aufhörst, dieselbe Frage immer wieder zu drehen. Geh einen Schritt zurück. Schlaf eine Nacht darüber. Was morgen noch wichtig ist, verdient deine Energie. Was kleiner geworden ist, brauchte wahrscheinlich nur Abstand.",
-      "status": "sent",
-      "dueAt": "2026-09-27T16:30:00.000Z",
-      "sentAt": "2026-09-27T16:33:09.638Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7690253748282641697?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab845ba3d66d464e5bee3ac_video.mp4"
         }
       ]
     }
