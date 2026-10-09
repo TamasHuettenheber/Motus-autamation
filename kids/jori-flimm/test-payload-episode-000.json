@@ -8,7 +8,7 @@
     "provider": "Hugging Face Spaces CPU TTS",
     "model": "kikiri-tts/kikiri-german-victoria",
     "speaker_id": "df_victoria",
-    "speed": 0.92
+    "speed": 0.9
   },
   "riddle": {
     "type": "pattern",
