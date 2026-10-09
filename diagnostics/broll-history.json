@@ -293,6 +293,12 @@
       "clip_id": "waiting-phone-7339414",
       "source": "https://www.pexels.com/video/a-man-using-his-phone-while-waiting-7339414/",
       "used_at_utc": "2026-10-09T20:45:11.289931+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-10-1830",
+      "clip_id": "desk-thinking-5704904",
+      "source": "https://www.pexels.com/video/woman-working-on-the-desk-5704904/",
+      "used_at_utc": "2026-10-09T20:45:19.494472+00:00"
     }
   ]
 }
