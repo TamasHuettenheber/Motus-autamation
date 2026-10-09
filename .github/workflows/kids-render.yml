@@ -29,6 +29,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.ref_name }}
+          fetch-depth: 2
 
       - name: Validate isolated branch
         env:
@@ -54,13 +55,18 @@ jobs:
           from datetime import date
 
           if os.environ["EVENT_NAME"] == "push":
-              event=json.load(open(os.environ["GITHUB_EVENT_PATH"],encoding="utf-8"))
-              candidates=[]
-              for commit in event.get("commits",[]):
-                  changed=commit.get("added",[])+commit.get("modified",[])
-                  candidates.extend(path for path in changed if path.startswith("kids/jori-flimm/episodes/") and path.endswith(".json"))
+              import subprocess
+              changed=subprocess.check_output(
+                  ["git","diff-tree","--no-commit-id","--name-only","-r","HEAD^","HEAD"],
+                  text=True
+              ).splitlines()
+              candidates=[
+                  path for path in changed
+                  if path == "kids/jori-flimm/test-payload-episode-000.json"
+                  or (path.startswith("kids/jori-flimm/episodes/") and path.endswith(".json"))
+              ]
               if len(candidates)!=1:
-                  raise SystemExit(f"Expected one episode JSON in push, found {len(candidates)}")
+                  raise SystemExit(f"Expected one episode payload in commit, found {len(candidates)}")
               with open(candidates[0],encoding="utf-8") as f:
                   p=json.load(f)
           else:
