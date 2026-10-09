@@ -291,8 +291,10 @@ jobs:
           ass="\\n".join(line.strip() for line in ass.splitlines())+"\\n"
           for cue in dialogue:
               wrapped="\\\\N".join(textwrap.wrap(cue["text"],width=25,break_long_words=False,break_on_hyphens=False))
-              wrapped=wrapped.replace("{","\\\\{").replace("}","\\\\}")
-              ass+=f"Dialogue: 0,{ts(cue['start'])},{ts(cue['end'])},Kids,,0,0,0,,{wrapped}\\n"
+              wrapped=wrapped.replace("{","\\{").replace("}","\\}")
+              ass+=f"Dialogue: 0,{ts(cue['start'])},{ts(cue['end'])},Kids,,0,0,0,,{wrapped}\n"
+          if not dialogue or "[Events]" not in ass:
+              raise SystemExit("Subtitle track is empty or malformed")
           open("work/captions.ass","w",encoding="utf-8").write(ass)
           PY
 
