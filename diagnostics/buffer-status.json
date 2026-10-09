@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-09T08:54:11.135467+00:00",
+  "checked_at_utc": "2026-10-09T16:07:20.984226+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -43,15 +43,15 @@
     {
       "id": "6ac8034462435c1f1fe21d32",
       "text": "Du musst nicht auf jede Frage sofort eine Antwort haben. Ein klares: Ich prüfe das und melde mich, ist keine Schwäche. Es schützt deine Zeit und macht Zusagen verlässlich. Probier es heute bei der nächsten spontanen Anfrage aus. Fällt es dir leicht, dir Bedenkzeit zu nehmen?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Destiny (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-09T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-09T10:01:39.262Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7694605923691580704",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-09-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac8034462435c1f1fe21d32_video.mp4"
         }
       ]
     },
