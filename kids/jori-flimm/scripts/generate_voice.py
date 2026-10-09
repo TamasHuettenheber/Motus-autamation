@@ -175,7 +175,7 @@ def main() -> None:
     with concat_file.open("w", encoding="utf-8") as f:
         for item in sequence:
             path = Path(item["file"]).resolve()
-            f.write(f"file '{path.as_posix()}'\\n")
+            f.write(f"file '{path.as_posix()}'\n")
             start = cursor
             cursor += float(item["duration"])
             timeline.append({
@@ -190,7 +190,7 @@ def main() -> None:
         "-i", str(concat_file), "-c", "copy", "work/narration_source.wav",
     ], check=True)
     Path("work/voice-timeline.json").write_text(
-        json.dumps({"items": timeline, "duration": round(cursor, 3)}, ensure_ascii=False, indent=2) + "\\n",
+        json.dumps({"items": timeline, "duration": round(cursor, 3)}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
     explicit = sum(float(item["duration"]) for item in sequence if item["kind"] == "pause" and float(item["duration"]) >= 5)
