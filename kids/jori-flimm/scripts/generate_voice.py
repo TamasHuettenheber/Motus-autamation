@@ -16,7 +16,7 @@ import soundfile as sf
 from gradio_client import Client
 
 SPACE = "nam194/KokoroTTS-HF-CPU"
-SPACE_URL = f"https://huggingface.co/spaces/{SPACE}"
+SPACE_URL = "https://nam194-kokorotts-hf-cpu.hf.space"
 MAX_GUEST_CHARS = 280  # Space currently truncates anonymous requests at 300.
 VOICE_ID = "df_victoria"
 PAUSE_SECONDS = 0.22
