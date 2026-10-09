@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-09",
+  "episode_number": 1,
+  "title": "Das Geheimnis des vierten Lichts",
+  "hook": "Am Morgen blinkt das vierte Licht noch immer – dann verschwindet es.",
+  "narration": "Willkommen zurück bei Jori und Flimm! Am nächsten Morgen standen sie wieder vor dem alten Brückentor. Das vierte Licht blinkte noch immer im Bogen. Als sie näher kamen, verschwand es. Doch auf dem Schnee glitzerte eine goldene Spur. Sie führte um das Tor herum bis zu einer kleinen, gefrorenen Pfütze. Unter dem klaren Eis funkelte ein winziger Sternenkristall. Jori dachte nach: „Ich liege flach am Boden, zeige dir den Himmel und bin im Winter hart und kalt. Was bin ich?“ Denk kurz mit. Genau: eine gefrorene Pfütze! Die Morgensonne traf den Kristall und warf sein Licht durch den Torbogen. Darum hatten sie das vierte Licht gesehen. Flimm wärmte vorsichtig den Rand mit seinem Sternenbauch, und Jori hob den Kristall heraus. Über dem Tor entdeckten sie eine leere Sternenfassung. Gemeinsam setzten sie den Kristall hinein. Da leuchteten alle vier Sterne sanft und golden. Flimm kuschelte sich an Joris Schal. Das Brückentor funkelte wieder. Flimm lächelte: „Jetzt wissen wir, woher das vierte Licht kam.“",
+  "voice": {
+    "provider": "Hugging Face Spaces CPU TTS",
+    "model": "kikiri-tts/kikiri-german-victoria",
+    "speaker_id": "df_victoria",
+    "speed": 0.9
+  },
+  "riddle": {
+    "type": "logic",
+    "question": "Ich liege flach am Boden, zeige dir den Himmel und bin im Winter hart und kalt. Was bin ich?",
+    "answer": "Eine gefrorene Pfütze.",
+    "pause_seconds": 3
+  },
+  "scenes": [
+    {
+      "order": 1,
+      "duration_seconds": 10,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-01.png",
+      "caption": "Das vierte Licht blinkt noch immer im Torbogen."
+    },
+    {
+      "order": 2,
+      "duration_seconds": 10,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-02.png",
+      "caption": "Eine goldene Spur führt um das Tor herum."
+    },
+    {
+      "order": 3,
+      "duration_seconds": 10,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-03.png",
+      "caption": "Unter dem Eis glitzert ein winziger Sternenkristall."
+    },
+    {
+      "order": 4,
+      "duration_seconds": 10,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-04.png",
+      "caption": "Jori erkennt: Das Eis zeigt den Himmel."
+    },
+    {
+      "order": 5,
+      "duration_seconds": 10,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-05.png",
+      "caption": "Gemeinsam setzen sie den Kristall in die leere Fassung."
+    },
+    {
+      "order": 6,
+      "duration_seconds": 10,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-06.png",
+      "caption": "Alle vier Lichter leuchten sanft und golden."
+    }
+  ],
+  "cta": "",
+  "publish_time": "16:00",
+  "qc": {
+    "book_spoiler_check": true,
+    "continuity_check": true,
+    "duplicate_check": true
+  },
+  "continuity_note": "Direkte Fortsetzung von Episode 000: Jori und Flimm kehren am Morgen zum Brückentor zurück und lösen gemeinsam das Geheimnis des vierten Lichts. Das vierte Sternenlicht wird eingesetzt; die Begegnung am Tor ist abgeschlossen.",
+  "continuity_after": {
+    "relationship_stage": "Jori und Flimm handeln als vertrauensvolles Team und lösen ihr erstes gemeinsames Mysterium.",
+    "known_facts": [
+      "Das alte Brückentor besitzt eine Fassung mit vier Sternenlichtern.",
+      "Der vierte Sternenkristall fing Sonnenlicht im Eis ein."
+    ],
+    "active_threads": []
+  }
+}

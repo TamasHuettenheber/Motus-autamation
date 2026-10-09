@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "series": "Jori & Flimm – Rätselwelten",
-  "last_successful_episode": 0,
-  "next_episode_number": 1,
+  "last_successful_episode": 1,
+  "next_episode_number": 2,
   "continuity": {
-    "relationship_stage": "Jori und Flimm haben sich kennengelernt; ihr Vertrauen wächst.",
+    "relationship_stage": "Jori und Flimm handeln als vertrauensvolles Team und lösen ihr erstes gemeinsames Mysterium.",
     "known_facts": [
       "Jori ist neugierig, beobachtet erst und hilft freundlich.",
       "Flimm ist ein kleines magisches, laternenartiges Wesen mit warmem Sternenlicht im Bauch.",
       "Flockenfels ist ein verschneiter Ort mit warmen Laternen, engen Gassen und alten Wegen.",
-      "Flimm kann mit seinem Sternenbauch kleine Lichter erkennen."
+      "Flimm kann mit seinem Sternenbauch kleine Lichter erkennen.",
+      "Das alte Brückentor besitzt eine Fassung mit vier Sternenlichtern.",
+      "Der vierte Sternenkristall fing Sonnenlicht im Eis ein."
     ],
-    "active_threads": [
-      "Hinter dem alten Brückentor erscheint ein weiteres Licht."
-    ],
+    "active_threads": [],
     "recently_used_locations": [],
     "recently_used_visual_assets": [
       "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-01.jpg",
@@ -51,7 +51,13 @@
       "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-03.jpg",
       "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-04.jpg",
       "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-05.jpg",
-      "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-06.jpg"
+      "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-06.jpg",
+      "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-01.png",
+      "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-02.png",
+      "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-03.png",
+      "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-04.png",
+      "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-05.png",
+      "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-06.png"
     ]
   },
   "book_boundary": {

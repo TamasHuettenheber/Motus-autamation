@@ -25,6 +25,27 @@
         "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-05.jpg",
         "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-06.jpg"
       ]
+    },
+    {
+      "episode_number": 1,
+      "date": "2026-10-09",
+      "title": "Das Geheimnis des vierten Lichts",
+      "hook": "Am Morgen blinkt das vierte Licht noch immer – dann verschwindet es.",
+      "riddle": {
+        "type": "logic",
+        "question": "Ich liege flach am Boden, zeige dir den Himmel und bin im Winter hart und kalt. Was bin ich?",
+        "answer": "Eine gefrorene Pfütze.",
+        "pause_seconds": 3
+      },
+      "continuity_note": "Direkte Fortsetzung von Episode 000: Jori und Flimm kehren am Morgen zum Brückentor zurück und lösen gemeinsam das Geheimnis des vierten Lichts. Das vierte Sternenlicht wird eingesetzt; die Begegnung am Tor ist abgeschlossen.",
+      "visual_assets": [
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-01.png",
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-02.png",
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-03.png",
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-04.png",
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-05.png",
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-06.png"
+      ]
     }
   ]
 }
