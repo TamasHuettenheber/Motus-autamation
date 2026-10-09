@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-10",
+  "slots": [
+    {
+      "slot": "0700",
+      "time": "07:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/abd099ad-e594-4bb2-bdc4-9280a047f7c2.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/5838174/5838174-uhd_2160_4096_30fps.mp4",
+      "text": "Heute ist Samstag. Mach ihn nicht zur Kopie von gestern. Nimm einen Weg, den du noch nie gegangen bist. Frag jemanden etwas, das du wirklich wissen willst. Probier etwas aus, ohne vorher gut darin sein zu müssen. Neugier macht aus einem gewöhnlichen Tag eine neue Geschichte. Was entdeckst du heute? Schreib es in die Kommentare."
+    },
+    {
+      "slot": "1200",
+      "time": "12:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/b7e0c174-385e-44ad-8f48-db6cfc2ed77b.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/36620147/15526034_1440_2218_30fps.mp4",
+      "text": "Du musst nicht alles allein herausfinden. Wenn du heute bei etwas feststeckst, frag jemanden nach seinem Blick darauf. Nicht nach einer fertigen Lösung. Nach einer Perspektive. Hilfe zu holen zeigt, dass dir das Ergebnis wichtiger ist als dein Stolz. Wen könntest du heute um einen ehrlichen Rat bitten? Teile diesen Gedanken mit jemandem, der alles allein tragen will."
+    },
+    {
+      "slot": "1830",
+      "time": "18:30",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/794c78f3-4cb9-46ba-9ab4-c89b2a239d25.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/5704904/5704904-uhd_2160_3840_24fps.mp4",
+      "text": "Drei Worte können mehr verändern als zehn Erklärungen: Ich lag falsch. Ohne ein Aber dahinter. Ohne Schuldverschiebung. Wenn du heute jemanden verletzt oder falsch eingeschätzt hast, übernimm deinen Teil. Eine ehrliche Entschuldigung macht dich nicht kleiner. Sie macht Vertrauen wieder möglich. Wem schuldest du noch einen klaren Satz?"
+    },
+    {
+      "slot": "2200",
+      "time": "22:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/443505b0-9003-4ebd-9ad9-eb6aa55c98fa.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/7339414/7339414-uhd_2160_4096_25fps.mp4",
+      "text": "Der Erfolg anderer ist kein Urteil über dein Leben. Wenn du heute durch Beiträge scrollst und denkst: Warum bin ich noch nicht so weit? Halt kurz an. Du siehst einen Ausschnitt, nicht den ganzen Weg. Frag dich lieber: Was wünsche ich mir wirklich, unabhängig davon, was andere zeigen? Was wäre mein eigener nächster Schritt?"
+    }
+  ]
+}
