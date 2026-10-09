@@ -290,7 +290,7 @@ jobs:
           """
           ass="\n".join(line.strip() for line in ass.splitlines())+"\n"
           for cue in dialogue:
-              wrapped="\\\\N".join(textwrap.wrap(cue["text"],width=25,break_long_words=False,break_on_hyphens=False))
+              wrapped="\\N".join(textwrap.wrap(cue["text"],width=25,break_long_words=False,break_on_hyphens=False))
               wrapped=wrapped.replace("{","\\{").replace("}","\\}")
               ass+=f"Dialogue: 0,{ts(cue['start'])},{ts(cue['end'])},Kids,,0,0,0,,{wrapped}\n"
           if not dialogue or "[Events]" not in ass:
