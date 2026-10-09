@@ -21,7 +21,7 @@ permissions:
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 30
 
     steps:
       - name: Checkout repository
@@ -40,7 +40,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg curl fonts-dejavu-core python3-venv
           python3 -m venv work/venv
-          work/venv/bin/python -m pip install --disable-pip-version-check --no-cache-dir edge-tts==7.2.8
+          work/venv/bin/python -m pip install --disable-pip-version-check --no-cache-dir gradio_client==1.12.1 soundfile==0.13.1 numpy==2.2.6
 
       - name: Load and validate episode payload
         env:
@@ -174,26 +174,12 @@ jobs:
           else:
               with open("work/narration.txt","w",encoding="utf-8") as f:
                   f.write(p["narration"].strip()+"\n")
-              script = """
-          import asyncio, json
-          from edge_tts import Communicate
-
-          with open("work/payload.json", encoding="utf-8") as f:
-              payload = json.load(f)
-          voice = payload.get("voice", {})
-          async def main():
-              communicate = Communicate(
-                  payload["narration"].strip(),
-                  voice=voice.get("name", "de-DE-KatjaNeural"),
-                  rate=voice.get("rate", "-5%"),
-                  pitch=voice.get("pitch", "+0Hz"),
+              subprocess.run(
+                  ["work/venv/bin/python","kids/jori-flimm/scripts/generate_voice.py"],
+                  check=True
               )
-              await communicate.save("work/narration_source.mp3")
-          asyncio.run(main())
-          """
-              subprocess.run(["work/venv/bin/python","-c",script],check=True)
               subprocess.run([
-                  "ffmpeg","-y","-i","work/narration_source.mp3",
+                  "ffmpeg","-y","-i","work/narration_source.wav",
                   "-af","volume=0.95,highpass=f=75,equalizer=f=180:t=q:w=1:g=0.5,equalizer=f=3200:t=q:w=1:g=-0.4,alimiter=limit=0.95",
                   "-ar","48000","-ac","2","-b:a","192k","work/narration.mp3"
               ],check=True)
