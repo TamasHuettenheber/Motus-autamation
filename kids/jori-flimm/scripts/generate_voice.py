@@ -20,7 +20,7 @@ MAX_GUEST_CHARS = 280  # The Space currently truncates anonymous text at 300 cha
 VOICE_ID = "df_victoria"
 SPEED = 0.92
 PAUSE_SECONDS = 0.22
-PAUSE_MARKER = re.compile(r"\\[\\[PAUSE:([0-9]+(?:\\.[0-9]+)?)\\]\\]")
+PAUSE_MARKER = re.compile(r"\[\[PAUSE:([0-9]+(?:\.[0-9]+)?)\]\]")
 MAX_AUDIO_BYTES = 25 * 1024 * 1024
 
 
