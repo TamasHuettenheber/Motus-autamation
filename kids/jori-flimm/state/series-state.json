@@ -13,7 +13,9 @@
       "Das alte Brückentor besitzt eine Fassung mit vier Sternenlichtern.",
       "Der vierte Sternenkristall fing Sonnenlicht im Eis ein."
     ],
-    "active_threads": [],
+    "active_threads": [
+      "Eine kleine Stimme hinter dem geöffneten Brückentor bittet um Hilfe, bevor es dunkel wird; Jori und Flimm wollen gemeinsam hinein."
+    ],
     "recently_used_locations": [],
     "recently_used_visual_assets": [
       "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-01.jpg",
@@ -52,6 +54,12 @@
       "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-04.jpg",
       "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-05.jpg",
       "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-06.jpg",
+      "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-01.png",
+      "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-02.png",
+      "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-03.png",
+      "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-04.png",
+      "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-05.png",
+      "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-06.png",
       "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-01.png",
       "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-02.png",
       "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-03.png",

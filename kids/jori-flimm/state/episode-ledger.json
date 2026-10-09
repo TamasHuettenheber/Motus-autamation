@@ -35,9 +35,9 @@
         "type": "logic",
         "question": "Ich liege flach am Boden, zeige dir den Himmel und bin im Winter hart und kalt. Was bin ich?",
         "answer": "Eine gefrorene Pfütze.",
-        "pause_seconds": 3
+        "pause_seconds": 7
       },
-      "continuity_note": "Direkte Fortsetzung von Episode 000: Jori und Flimm kehren am Morgen zum Brückentor zurück und lösen gemeinsam das Geheimnis des vierten Lichts. Das vierte Sternenlicht wird eingesetzt; die Begegnung am Tor ist abgeschlossen.",
+      "continuity_note": "Direkte Fortsetzung von Episode 000: Jori und Flimm finden den Sternenkristall und lösen das Geheimnis des vierten Lichts. Das Tor öffnet sich, eine Stimme bittet aus dem dunklen Weg um Hilfe und kündigt an, dass es bald dunkel wird. Episode 003 beginnt unmittelbar mit dem Betreten des Weges.",
       "visual_assets": [
         "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-01.png",
         "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-02.png",
