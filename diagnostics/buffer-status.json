@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-09T02:02:18.557979+00:00",
+  "checked_at_utc": "2026-10-09T08:54:11.135467+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -58,15 +58,15 @@
     {
       "id": "6ac8034574384ca756dad7de",
       "text": "Dein Morgen braucht heute keinen weiteren Vorsatz. Er braucht eine Entscheidung: Was wirst du heute bewusst nicht tun? Vielleicht nicht sofort zum Handy greifen. Vielleicht nicht jede Bitte annehmen. Wer Platz für das Wichtige schafft, gewinnt Energie für den eigenen Weg. Welche Ablenkung streichst du heute? Folge Motus für neue Impulse.\n\n#motus #fokus #digitalbalance #aufmerksamkeit #selbstentwicklung\n\nMusik: Tanner Helland – The Forest Awakes (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-09T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-09T05:01:51.690Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7694528481031507232",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-09-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac8034574384ca756dad7de_video.mp4"
         }
       ]
     },
