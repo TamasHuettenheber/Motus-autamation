@@ -134,7 +134,7 @@ jobs:
               raise SystemExit("Narration must contain at least 30 characters")
           if not isinstance(p.get("riddle"),dict):
               raise SystemExit("Missing riddle")
-          pause_markers=re.findall(r"\\[\\[PAUSE:([0-9]+(?:\\.[0-9]+)?)\\]\\]",p["narration"])
+          pause_markers=re.findall(r"\[\[PAUSE:([0-9]+(?:\.[0-9]+)?)\]\]",p["narration"])
           if len(pause_markers)>1:
               raise SystemExit("Only one explicit pause marker is supported")
           if pause_markers and abs(float(pause_markers[0])-float(p["riddle"]["pause_seconds"]))>0.01:
@@ -256,9 +256,9 @@ jobs:
           else:
               with open("work/payload.json",encoding="utf-8") as f:
                   narration=json.load(f)["narration"]
-              narration=re.sub(r"\\[\\[PAUSE:[0-9]+(?:\\.[0-9]+)?\\]\\]","",narration).strip()
+      narration=re.sub(r"\[\[PAUSE:[0-9]+(?:\.[0-9]+)?\]\]","",narration).strip()
               dur=float(os.environ["AUDIO_DURATION"])
-              parts=[x.strip() for x in re.split(r'(?<=[.!?])\\s+|\\s*[;:]\\s+',narration) if x.strip()]
+      parts=[x.strip() for x in re.split(r"(?<=[.!?])\s+|\s*[;:]\s+",narration) if x.strip()]
               chunks=[]
               for part in parts:
                   words=part.split()
