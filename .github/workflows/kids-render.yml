@@ -295,6 +295,8 @@ jobs:
               ass+=f"Dialogue: 0,{ts(cue['start'])},{ts(cue['end'])},Kids,,0,0,0,,{wrapped}\n"
           if not dialogue or "[Events]" not in ass:
               raise SystemExit("Subtitle track is empty or malformed")
+          if ass.count("\n") < len(dialogue) + 8:
+              raise SystemExit("Subtitle file does not contain real event line breaks")
           open("work/captions.ass","w",encoding="utf-8").write(ass)
           PY
 
