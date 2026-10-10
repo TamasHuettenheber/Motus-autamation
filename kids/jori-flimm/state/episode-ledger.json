@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "retention": {
+    "recent_title_hooks": 30,
+    "recent_riddles": 50
+  },
+  "episodes": [
+    {
+      "episode_number": 0,
+      "date": "2026-10-08",
+      "title": "Das Licht am alten Brückentor",
+      "hook": "Jori entdeckt ein Sternenlicht, das mitten im Schnee hüpft.",
+      "riddle": {
+        "type": "pattern",
+        "question": "Nach eins, zwei, drei beginnt das Muster wieder: eins, zwei … Welche Zahl kommt als Nächstes?",
+        "answer": "Drei",
+        "pause_seconds": 3
+      },
+      "continuity_note": "Jori und Flimm begegnen sich am alten Brückentor und beginnen einander zu vertrauen.",
+      "visual_assets": [
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-01.jpg",
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-02.jpg",
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-03.jpg",
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-04.jpg",
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-05.jpg",
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-06.jpg"
+      ]
+    },
+    {
+      "episode_number": 1,
+      "date": "2026-10-09",
+      "title": "Das Geheimnis des vierten Lichts",
+      "hook": "Am Morgen blinkt das vierte Licht noch immer – dann verschwindet es.",
+      "riddle": {
+        "type": "logic",
+        "question": "Ich liege flach am Boden, zeige dir den Himmel und bin im Winter hart und kalt. Was bin ich?",
+        "answer": "Eine gefrorene Pfütze.",
+        "pause_seconds": 7
+      },
+      "continuity_note": "Direkte Fortsetzung von Episode 000: Jori und Flimm finden den Sternenkristall und lösen das Geheimnis des vierten Lichts. Das Tor öffnet sich, eine Stimme bittet aus dem dunklen Weg um Hilfe und kündigt an, dass es bald dunkel wird. Episode 003 beginnt unmittelbar mit dem Betreten des Weges. Untertitel halten das Rätsel während der stillen Denkpause sichtbar; der Denkhinweis wird nicht gesprochen. Die Rätsel-Frage bleibt während der sieben Sekunden stiller Denkzeit eingeblendet. Der gesprochene Denkimpuls endet vor der stillen Pause; die Lösung folgt erst danach.",
+      "visual_assets": [
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-01.png",
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-02.png",
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-03.png",
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-04.png",
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-05.png",
+        "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-06.png"
+      ]
+    }
+  ]
+}
