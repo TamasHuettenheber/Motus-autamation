@@ -323,6 +323,12 @@
       "clip_id": "sunrise-sea-11382155",
       "source": "https://www.pexels.com/video/vertical-shot-of-sunrise-over-sea-11382155/",
       "used_at_utc": "2026-10-10T21:34:28.545780+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-11-2200",
+      "clip_id": "night-walk-4121893",
+      "source": "https://www.pexels.com/video/a-person-walking-in-the-street-at-night-4121893/",
+      "used_at_utc": "2026-10-10T21:34:34.076325+00:00"
     }
   ]
 }
