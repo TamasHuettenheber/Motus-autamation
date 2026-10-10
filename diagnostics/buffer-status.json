@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-10T18:28:53.678126+00:00",
+  "checked_at_utc": "2026-10-10T22:26:30.284207+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -11,17 +11,77 @@
   },
   "posts": [
     {
-      "id": "6ac9527cbba9419ccbde36fb",
-      "text": "Der Erfolg anderer ist kein Urteil über dein Leben. Wenn du heute durch Beiträge scrollst und denkst: Warum bin ich noch nicht so weit? Halt kurz an. Du siehst einen Ausschnitt, nicht den ganzen Weg. Frag dich lieber: Was wünsche ich mir wirklich, unabhängig davon, was andere zeigen? Was wäre mein eigener nächster Schritt?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Nevermore (CC BY 4.0)",
+      "id": "6acaaf8fd9cab260a7d9f9cb",
+      "text": "Morgen beginnt eine neue Woche. Du musst heute Abend nicht alles durchplanen. Schreib nur die eine Sache auf, die morgen wirklich zählt. Dann leg den Stift weg und gönn dir Ruhe. Klarheit schlägt eine endlose To-do-Liste. Was ist dein wichtigster Schritt am Montag?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
       "status": "scheduled",
-      "dueAt": "2026-10-10T20:00:00.000Z",
+      "dueAt": "2026-10-11T20:00:00.000Z",
       "sentAt": null,
       "externalLink": null,
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-10-2200.mp4"
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-11-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6acaafb9b07d37ac9788582d",
+      "text": "Manchmal bemerkst du deinen Fortschritt erst, wenn du zurückblickst. Denk an etwas, das dir vor einem Jahr schwerfiel und heute selbstverständlich ist. Das hast du gelernt, nicht geschenkt bekommen. Worauf bist du inzwischen stolz? Teile diesen Gedanken mit jemandem, der gerade zweifelt.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Home (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-11T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-11-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6acaaf65b07d37ac97884dc3",
+      "text": "Sonntag heißt nicht, dass du alle Erwartungen erfüllen musst. Sag bewusst Ja zu einer Sache, die dir Energie gibt, und Nein zu etwas, das dich nur beschäftigt. Ein freier Tag ist nicht automatisch erholsam. Was gibt dir heute wirklich Kraft?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Crossroads (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-11T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-11-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6acaaf8ad9cab260a7d9f922",
+      "text": "Du wartest auf den perfekten Moment? Der kommt selten. Geh heute den ersten kleinen Schritt, bevor du dich bereit fühlst. Ein Anruf, zehn Minuten Bewegung oder der Anfang einer Idee. Mut entsteht oft erst unterwegs. Was beginnst du heute? Schreib es in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Daybreak (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-11T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-11-0700.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ac9527cbba9419ccbde36fb",
+      "text": "Der Erfolg anderer ist kein Urteil über dein Leben. Wenn du heute durch Beiträge scrollst und denkst: Warum bin ich noch nicht so weit? Halt kurz an. Du siehst einen Ausschnitt, nicht den ganzen Weg. Frag dich lieber: Was wünsche ich mir wirklich, unabhängig davon, was andere zeigen? Was wäre mein eigener nächster Schritt?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Nevermore (CC BY 4.0)",
+      "status": "sent",
+      "dueAt": "2026-10-10T20:00:00.000Z",
+      "sentAt": "2026-10-10T20:02:29.576Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7695131660521573665",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac9527cbba9419ccbde36fb_video.mp4"
         }
       ]
     },
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abb4798b6b2614895906bdd_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6abb478c93a81b612b5c6f65",
-      "text": "Nur weil du schon Zeit in etwas gesteckt hast, musst du nicht noch mehr hineinstecken. Vergangene Mühe ist kein Vertrag mit deiner Zukunft. Frag dich heute Mittag: Würde ich diese Sache jetzt noch einmal anfangen, wenn ich erst heute entscheiden müsste? Wenn die Antwort Nein ist, darf ein Kurswechsel vernünftig sein – nicht schwach.",
-      "status": "sent",
-      "dueAt": "2026-09-29T10:00:00.000Z",
-      "sentAt": "2026-09-29T10:03:47.275Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7690895055359446304?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abb478c93a81b612b5c6f65_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6abb4798320ca548b4daa51f",
-      "text": "Bevor heute irgendjemand deine Aufmerksamkeit bekommt, entscheide selbst, wofür dieser Morgen steht. Öffne nicht sofort Nachrichten. Stell dir eine einzige Frage: Was soll bis neun Uhr erledigt sein, damit sich der Tag nach dir anfühlt und nicht nach den Erwartungen anderer? Schreib genau eine Sache auf. Dann fang damit an. Wer den ersten Fokus setzt, startet nicht nur früher – sondern klarer.",
-      "status": "sent",
-      "dueAt": "2026-09-29T05:15:00.000Z",
-      "sentAt": "2026-09-29T05:16:49.376Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7690821476668214561?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abb4798320ca548b4daa51f_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ab98e0070ec211d1d28e207",
-      "text": "Ein schlechter Morgen muss nicht deinen ganzen Tag bekommen. Unser Kopf liebt den Gedanken: Jetzt ist es sowieso gelaufen. Genau da hilft ein Neustartpunkt. Nimm die nächste volle Stunde und entscheide nur, wie diese eine Stunde aussehen soll. Du musst den Tag nicht retten. Du musst nur verhindern, dass ein schlechter Moment automatisch der nächste wird.",
-      "status": "sent",
-      "dueAt": "2026-09-28T20:00:00.000Z",
-      "sentAt": "2026-09-28T20:05:53.873Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7690678826329836832?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab98e0070ec211d1d28e207_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ab9886d70ec211d1d28511a",
-      "text": "Du wartest auf Motivation, obwohl dein Umfeld längst für dich entscheidet. Liegt das Handy neben dir, greifst du hin. Stehen die Schuhe an der Tür, gehst du eher los. Mach die gewünschte Handlung sichtbar und die Ablenkung unbequem. Gute Gewohnheiten brauchen nicht immer mehr Disziplin. Oft brauchen sie einfach weniger Reibung.",
-      "status": "sent",
-      "dueAt": "2026-09-28T16:30:00.000Z",
-      "sentAt": "2026-09-28T16:33:14.641Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7690624826431589665?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ab9886d70ec211d1d28511a_video.mp4"
         }
       ]
     }
