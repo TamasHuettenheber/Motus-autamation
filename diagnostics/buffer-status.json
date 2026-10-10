@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-10T00:43:13.355725+00:00",
+  "checked_at_utc": "2026-10-10T06:58:26.912408+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -58,15 +58,15 @@
     {
       "id": "6ac9526abba9419ccbde3533",
       "text": "Heute ist Samstag. Mach ihn nicht zur Kopie von gestern. Nimm einen Weg, den du noch nie gegangen bist. Frag jemanden etwas, das du wirklich wissen willst. Probier etwas aus, ohne vorher gut darin sein zu müssen. Neugier macht aus einem gewöhnlichen Tag eine neue Geschichte. Was entdeckst du heute? Schreib es in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Wild Waters (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-10T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-10T05:01:50.907Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7694899443044338977",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-10-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac9526abba9419ccbde3533_video.mp4"
         }
       ]
     },
