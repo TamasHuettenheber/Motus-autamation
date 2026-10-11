@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-11T01:48:35.588618+00:00",
+  "checked_at_utc": "2026-10-11T08:41:42.410189+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "id": "6acaaf65b07d37ac97884dc3",
+      "id": "6acb3c55ed92ed8fa5f5ebb0",
       "text": "Sonntag heißt nicht, dass du alle Erwartungen erfüllen musst. Sag bewusst Ja zu einer Sache, die dir Energie gibt, und Nein zu etwas, das dich nur beschäftigt. Ein freier Tag ist nicht automatisch erholsam. Was gibt dir heute wirklich Kraft?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Crossroads (CC BY 4.0)",
       "status": "scheduled",
       "dueAt": "2026-10-11T10:00:00.000Z",
@@ -58,15 +58,15 @@
     {
       "id": "6acaaf8ad9cab260a7d9f922",
       "text": "Du wartest auf den perfekten Moment? Der kommt selten. Geh heute den ersten kleinen Schritt, bevor du dich bereit fühlst. Ein Anruf, zehn Minuten Bewegung oder der Anfang einer Idee. Mut entsteht oft erst unterwegs. Was beginnst du heute? Schreib es in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Daybreak (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-11T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-11T05:01:52.856Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7695270541946637600",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-11-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acaaf8ad9cab260a7d9f922_video.mp4"
         }
       ]
     },
