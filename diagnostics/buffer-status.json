@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-11T15:35:25.843859+00:00",
+  "checked_at_utc": "2026-10-11T20:11:48.728219+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -13,30 +13,30 @@
     {
       "id": "6acaaf8fd9cab260a7d9f9cb",
       "text": "Morgen beginnt eine neue Woche. Du musst heute Abend nicht alles durchplanen. Schreib nur die eine Sache auf, die morgen wirklich zählt. Dann leg den Stift weg und gönn dir Ruhe. Klarheit schlägt eine endlose To-do-Liste. Was ist dein wichtigster Schritt am Montag?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-11T20:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-11T20:02:17.855Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7695502702557629728",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-11-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acaaf8fd9cab260a7d9f9cb_video.mp4"
         }
       ]
     },
     {
       "id": "6acaafb9b07d37ac9788582d",
       "text": "Manchmal bemerkst du deinen Fortschritt erst, wenn du zurückblickst. Denk an etwas, das dir vor einem Jahr schwerfiel und heute selbstverständlich ist. Das hast du gelernt, nicht geschenkt bekommen. Worauf bist du inzwischen stolz? Teile diesen Gedanken mit jemandem, der gerade zweifelt.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Home (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-11T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-11T16:31:20.554Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7695448527958314272",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-11-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acaafb9b07d37ac9788582d_video.mp4"
         }
       ]
     },
