@@ -1,0 +1,39 @@
+name: Motus targeted audio repair
+on:
+  issues:
+    types: [opened]
+permissions:
+  actions: write
+  issues: write
+jobs:
+  repair:
+    if: github.event.issue.title == '[MOTUS-AUDIO-REPAIR] 2026-10-11 12:00'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch existing renderer for one slot only
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          python3 - <<'PY'
+          import json,os,urllib.request
+          repo=os.environ['REPO']; token=os.environ['GH_TOKEN']
+          headers={'Authorization':f'Bearer {token}','Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}
+          def req(path,method='GET',data=None):
+              r=urllib.request.Request('https://api.github.com/repos/'+repo+path,headers=headers,method=method,data=json.dumps(data).encode() if data is not None else None)
+              with urllib.request.urlopen(r,timeout=45) as x:
+                  b=x.read(); return json.loads(b) if b else {}
+          issue=req('/issues/70')
+          slots=json.loads(issue['body'])['slots']
+          slot=next(x for x in slots if x['slot']=='1200')
+          # Never dispatch a new render if scheduled time is already past.
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          now=datetime.now(ZoneInfo('Europe/Berlin'))
+          if now.date().isoformat()!='2026-10-11' or now.hour>=12:
+              raise SystemExit('SAFETY_STOP: 12:00 slot already due; do not repost')
+          payload={'ref':'main','inputs':{'audio_url':slot['audio_url'],'text':slot['text'],'broll_url':slot['broll_url'],'output_name':'motus-2026-10-11-1200','force_rerender':'true'}}
+          req('/actions/workflows/motus.yml/dispatches','POST',payload)
+          print('AUDIO_REPAIR_DISPATCHED: only 2026-10-11-1200')
+          PY
