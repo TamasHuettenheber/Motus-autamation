@@ -7,7 +7,7 @@ permissions:
   issues: write
 jobs:
   repair:
-    if: github.event.issue.title == '[MOTUS-AUDIO-REPAIR] 2026-10-11 12:00'
+    if: github.event.issue.title == '[MOTUS-AUDIO-REPAIR-EXECUTE] 2026-10-11 12:00' && github.event.issue.number == 72
     runs-on: ubuntu-latest
     steps:
       - name: Dispatch existing renderer for one slot only
