@@ -262,10 +262,32 @@ jobs:
             echo "REUSE_EXISTING=false" >> "$GITHUB_ENV"
           fi
 
+      - name: Calibrate music under speech
+        if: env.REUSE_EXISTING != 'true'
+        run: |
+          python3 - <<'PY'
+          import math, os, re, subprocess
+          def mean_db(path):
+              p=subprocess.run(["ffmpeg","-hide_banner","-nostats","-i",path,"-af","volumedetect","-f","null","-"],capture_output=True,text=True,check=True)
+              m=re.search(r"mean_volume:\\s*(-?[0-9.]+) dB",p.stderr)
+              if not m: raise SystemExit("AUDIO_QC_BLOCK: unable to measure "+path)
+              return float(m.group(1))
+          voice=mean_db("work/audio.mp3")
+          music=mean_db("work/music.mp3")
+          if voice < -38: raise SystemExit(f"AUDIO_QC_BLOCK: voice unusually quiet ({voice:.1f} dBFS)")
+          # Keep music at least 18 dB below voice in average loudness.
+          gain=min(0.12,10**((voice-music-18)/20))
+          if not 0.005 <= gain <= 0.12: raise SystemExit(f"AUDIO_QC_BLOCK: gain out of range {gain}")
+          separation=voice-(music+20*math.log10(gain))
+          if separation < 17.5: raise SystemExit(f"AUDIO_QC_BLOCK: separation {separation:.1f} dB")
+          with open(os.environ["GITHUB_ENV"],"a") as out: out.write(f"MOTUS_MUSIC_GAIN={gain:.5f}\\n")
+          print(f"AUDIO_QC_PASS: voice={voice:.1f}dBFS music={music:.1f}dBFS gain={gain:.5f} separation={separation:.1f}dB")
+          PY
+
       - name: Render with B-roll
         if: env.REUSE_EXISTING != 'true' && env.BROLL_READY == 'true'
         run: |
-          timeout 180 ffmpeg -y -stream_loop -1 -i work/broll.mp4 -i work/audio.mp3 -stream_loop -1 -i work/music.mp3 -t "$VIDEO_DURATION" -filter_complex "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,eq=brightness=-0.08:saturation=0.90,drawbox=x=0:y=0:w=iw:h=ih:color=black@0.12:t=fill,subtitles=work/captions.ass[v];[1:a]volume=1.0[voice];[2:a]volume=0.12,afade=t=in:st=0:d=0.6[music];[voice][music]amix=inputs=2:duration=first:dropout_transition=0[a]" -map "[v]" -map "[a]" -c:v libx264 -preset veryfast -crf 22 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -movflags +faststart -shortest "work/$SAFE_NAME.mp4"
+          timeout 180 ffmpeg -y -stream_loop -1 -i work/broll.mp4 -i work/audio.mp3 -stream_loop -1 -i work/music.mp3 -t "$VIDEO_DURATION" -filter_complex "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,eq=brightness=-0.08:saturation=0.90,drawbox=x=0:y=0:w=iw:h=ih:color=black@0.12:t=fill,subtitles=work/captions.ass[v];[1:a]volume=1.0[voice];[2:a]volume=${MOTUS_MUSIC_GAIN},afade=t=in:st=0:d=0.6[music];[voice][music]amix=inputs=2:duration=first:dropout_transition=0[a]" -map "[v]" -map "[a]" -c:v libx264 -preset veryfast -crf 22 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -movflags +faststart -shortest "work/$SAFE_NAME.mp4"
 
       - name: Reject missing moving B-roll
         if: env.REUSE_EXISTING != 'true' && env.BROLL_READY != 'true'
