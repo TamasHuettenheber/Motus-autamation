@@ -19,7 +19,7 @@ permissions:
 jobs:
   dispatch:
     if: >
-      (github.event_name == 'issues' && startsWith(github.event.issue.title, '[MOTUS-DAY]')) ||
+      (github.event_name == 'issues' && (startsWith(github.event.issue.title, '[MOTUS-DAY]') || github.event.issue.title == '[MOTUS-AUDIO-REPAIR-EXECUTE] 2026-10-11 12:00')) ||
       github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -63,6 +63,31 @@ jobs:
               except urllib.error.HTTPError as exc:
                   body = exc.read().decode("utf-8","replace")
                   raise RuntimeError(f"GitHub {method} {path} -> HTTP {exc.code}: {body[:1500]}")
+
+          if issue_number == "72":
+              from datetime import datetime
+              from zoneinfo import ZoneInfo
+              now = datetime.now(ZoneInfo("Europe/Berlin"))
+              if now.date().isoformat() != "2026-10-11" or (now.hour, now.minute) >= (12, 0):
+                  raise SystemExit("SAFETY_STOP: scheduled slot already due")
+              repair_issue = gh("GET", "/issues/72")
+              if repair_issue.get("title") != "[MOTUS-AUDIO-REPAIR-EXECUTE] 2026-10-11 12:00":
+                  raise SystemExit("SAFETY_STOP: unexpected repair issue")
+              batch = json.loads(gh("GET", "/issues/70").get("body") or "{}")
+              slot = next(x for x in batch["slots"] if x["slot"] == "1200")
+              gh("POST", "/actions/workflows/motus.yml/dispatches", {
+                  "ref": "main",
+                  "inputs": {
+                      "audio_url": slot["audio_url"],
+                      "text": slot["text"],
+                      "broll_url": slot["broll_url"],
+                      "output_name": "motus-2026-10-11-1200",
+                      "force_rerender": "true"
+                  }
+              })
+              gh("POST", "/issues/72/comments", {"body": "MOTUS_AUDIO_REPAIR_DISPATCHED: renderer started for 12:00 only. Await renderer audio QC and Buffer confirmation."})
+              print("MOTUS_AUDIO_REPAIR_DISPATCHED")
+              raise SystemExit(0)
 
           issue = gh("GET", f"/issues/{issue_number}")
           if not str(issue.get("title","")).startswith("[MOTUS-DAY]"):
