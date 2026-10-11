@@ -269,7 +269,7 @@ jobs:
           import math, os, re, subprocess
           def mean_db(path):
               p=subprocess.run(["ffmpeg","-hide_banner","-nostats","-i",path,"-af","volumedetect","-f","null","-"],capture_output=True,text=True,check=True)
-              m=re.search(r"mean_volume:\\s*(-?[0-9.]+) dB",p.stderr)
+              m=re.search(r"mean_volume:\s*(-?[0-9.]+) dB",p.stderr)
               if not m: raise SystemExit("AUDIO_QC_BLOCK: unable to measure "+path)
               return float(m.group(1))
           voice=mean_db("work/audio.mp3")
@@ -280,7 +280,7 @@ jobs:
           if not 0.005 <= gain <= 0.12: raise SystemExit(f"AUDIO_QC_BLOCK: gain out of range {gain}")
           separation=voice-(music+20*math.log10(gain))
           if separation < 17.5: raise SystemExit(f"AUDIO_QC_BLOCK: separation {separation:.1f} dB")
-          with open(os.environ["GITHUB_ENV"],"a") as out: out.write(f"MOTUS_MUSIC_GAIN={gain:.5f}\\n")
+          with open(os.environ["GITHUB_ENV"],"a") as out: out.write(f"MOTUS_MUSIC_GAIN={gain:.5f}\n")
           print(f"AUDIO_QC_PASS: voice={voice:.1f}dBFS music={music:.1f}dBFS gain={gain:.5f} separation={separation:.1f}dB")
           PY
 
