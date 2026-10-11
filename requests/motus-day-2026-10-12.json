@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-12",
+  "slots": [
+    {
+      "slot": "0700",
+      "time": "07:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/65bf2447-1dc0-43a6-b2c8-dbcdb3ba69f3.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/8296235/8296235-hd_1080_1920_25fps.mp4",
+      "text": "Montag ist kein Test, den du bestehen musst. Es ist ein neuer Anfang. Wähle heute eine Sache, die wirklich zählt, und mach den ersten kleinen Schritt, bevor dein Kopf Ausreden findet. Zehn Minuten reichen für den Anfang. Was packst du heute an?"
+    },
+    {
+      "slot": "1200",
+      "time": "12:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/3df0f44a-8d28-48b2-a18c-89c03efcd164.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/5075207/5075207-uhd_2160_4096_25fps.mp4",
+      "text": "Du musst nicht auf jede Nachricht sofort reagieren. Aufmerksamkeit ist begrenzt. Schenk heute einer wichtigen Aufgabe zwanzig ungestörte Minuten. Schalte Ablenkungen aus und beobachte, was möglich wird. Wofür reservierst du deinen Fokus?"
+    },
+    {
+      "slot": "1830",
+      "time": "18:30",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/dca63422-a01a-4fa7-b52c-30a148fae009.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/8479274/8479274-hd_1080_1920_25fps.mp4",
+      "text": "Manchmal ist Fortschritt unsichtbar. Du hast Grenzen gesetzt, etwas gelernt oder trotz Zweifel weitergemacht. Auch das zählt. Vergleiche dich heute nicht mit anderen, sondern mit deinem früheren Ich. Was gelingt dir inzwischen leichter?"
+    },
+    {
+      "slot": "2200",
+      "time": "22:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/dfe40860-2522-4719-9c62-48c3bf9015e9.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/7260657/7260657-hd_1920_1080_24fps.mp4",
+      "text": "Bevor dieser Montag endet, such nicht nach allem, was offen geblieben ist. Erinnere dich an einen Moment, in dem du heute bewusst gehandelt hast. Nimm diesen kleinen Erfolg mit in die Nacht. Was war heute dein guter Schritt?"
+    }
+  ]
+}
