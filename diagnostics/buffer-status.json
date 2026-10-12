@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-11T20:11:48.728219+00:00",
+  "checked_at_utc": "2026-10-12T00:27:47.534342+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6acbff098e8dd50ffc57de19",
+      "text": "Bevor dieser Montag endet, such nicht nach allem, was offen geblieben ist. Erinnere dich an einen Moment, in dem du heute bewusst gehandelt hast. Nimm diesen kleinen Erfolg mit in die Nacht. Was war heute dein guter Schritt?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-12T20:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-12-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6acbfee3a9411fbcc55ce8e5",
+      "text": "Manchmal ist Fortschritt unsichtbar. Du hast Grenzen gesetzt, etwas gelernt oder trotz Zweifel weitergemacht. Auch das zählt. Vergleiche dich heute nicht mit anderen, sondern mit deinem früheren Ich. Was gelingt dir inzwischen leichter?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Remember (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-12T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-12-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6acbff0bea568e911a409a32",
+      "text": "Du musst nicht auf jede Nachricht sofort reagieren. Aufmerksamkeit ist begrenzt. Schenk heute einer wichtigen Aufgabe zwanzig ungestörte Minuten. Schalte Ablenkungen aus und beobachte, was möglich wird. Wofür reservierst du deinen Fokus?\n\n#motus #fokus #digitalbalance #aufmerksamkeit #selbstentwicklung\n\nMusik: Tanner Helland – Familiar Roads (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-12T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-12-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6acbff32ea568e911a409ff8",
+      "text": "Montag ist kein Test, den du bestehen musst. Es ist ein neuer Anfang. Wähle heute eine Sache, die wirklich zählt, und mach den ersten kleinen Schritt, bevor dein Kopf Ausreden findet. Zehn Minuten reichen für den Anfang. Was packst du heute an?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-12T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-12-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6acaaf8fd9cab260a7d9f9cb",
       "text": "Morgen beginnt eine neue Woche. Du musst heute Abend nicht alles durchplanen. Schreib nur die eine Sache auf, die morgen wirklich zählt. Dann leg den Stift weg und gönn dir Ruhe. Klarheit schlägt eine endlose To-do-Liste. Was ist dein wichtigster Schritt am Montag?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abc70a05df9296bd8db9a0b_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6abc70875df9296bd8db9683",
-      "text": "Wenn dein Vormittag chaotisch war, musst du den Rest des Tages nicht abschreiben. Zieh mittags eine klare Grenze: Was ist wirklich noch wichtig, was kann warten und was darf komplett weg? Ein schlechter Start ist keine Verpflichtung für einen schlechten Tag. Du kannst jederzeit neu priorisieren. Nicht alles retten. Nur das Richtige als Nächstes tun.",
-      "status": "sent",
-      "dueAt": "2026-09-30T10:00:00.000Z",
-      "sentAt": "2026-09-30T10:01:44.432Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7691266152596557089?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abc70875df9296bd8db9683_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6abc707f28074da804bc51e3",
-      "text": "Heute Morgen brauchst du keinen perfekten Plan. Wähle eine Sache, die du seit Tagen vor dir herschiebst, und gib ihr zehn konzentrierte Minuten. Kein Handy, kein Nebenbei, kein Verhandeln mit dir selbst. Zehn Minuten reichen, um aus Widerstand Bewegung zu machen. Starte klein, aber starte bewusst. Dein Tag muss nicht spektakulär beginnen. Er muss dir gehören.",
-      "status": "sent",
-      "dueAt": "2026-09-30T05:00:00.000Z",
-      "sentAt": "2026-09-30T05:02:06.468Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7691188766500785440?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abc707f28074da804bc51e3_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6abb47b193a81b612b5c73f1",
-      "text": "Du kannst jemandem verzeihen und trotzdem Abstand behalten. Verzeihen beantwortet die Frage, ob du den Groll weitertragen willst. Vertrauen beantwortet eine andere: Hat sich genug verändert, damit Nähe wieder sicher ist? Diese beiden Entscheidungen müssen nicht am selben Tag fallen. Frieden bedeutet nicht automatisch, dass alles wieder wie vorher sein muss.",
-      "status": "sent",
-      "dueAt": "2026-09-29T20:00:00.000Z",
-      "sentAt": "2026-09-29T20:02:26.768Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7691049672705641760?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abb47b193a81b612b5c73f1_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6abb4798b6b2614895906bdd",
-      "text": "Jemand ist kurz angebunden, antwortet spät oder wirkt gereizt – und dein Kopf macht daraus sofort eine Geschichte über dich. Mach einen Gegencheck: Welche drei Gründe gäbe es, die nichts mit mir zu tun haben? Du musst fremdes Verhalten nicht schönreden. Aber du musst es auch nicht automatisch persönlich nehmen. Ein bisschen Unsicherheit ist oft ehrlicher als eine schnelle Erklärung.",
-      "status": "sent",
-      "dueAt": "2026-09-29T16:30:00.000Z",
-      "sentAt": "2026-09-29T16:33:08.687Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7690995851367370017?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abb4798b6b2614895906bdd_video.mp4"
         }
       ]
     }
