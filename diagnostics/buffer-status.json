@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-12T00:27:47.534342+00:00",
+  "checked_at_utc": "2026-10-12T07:17:01.955998+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -58,15 +58,15 @@
     {
       "id": "6acbff32ea568e911a409ff8",
       "text": "Montag ist kein Test, den du bestehen musst. Es ist ein neuer Anfang. Wähle heute eine Sache, die wirklich zählt, und mach den ersten kleinen Schritt, bevor dein Kopf Ausreden findet. Zehn Minuten reichen für den Anfang. Was packst du heute an?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-12T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-12T05:02:04.808Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7695641790514203937",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-12-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acbff32ea568e911a409ff8_video.mp4"
         }
       ]
     },
