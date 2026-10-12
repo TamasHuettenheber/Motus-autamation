@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-13",
+  "slots": [
+    {
+      "slot": "0700",
+      "time": "07:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/07eaa3a5-1a36-44a5-b9c2-b6f48b45d4d9.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/5838469/5838469-uhd_2160_4096_30fps.mp4",
+      "text": "Dieser Dienstag muss nicht sofort auf Höchsttempo laufen. Geh die ersten fünf Minuten bewusst langsamer. Atme durch, schau hin und entscheide erst dann, was wirklich dringend ist. Du bestimmst dein Tempo, nicht dein Posteingang. Was hilft dir heute, ruhig zu starten? Folge Motus für neue Impulse."
+    },
+    {
+      "slot": "1200",
+      "time": "12:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/867cc34a-2549-4c62-afe8-115b3175f17e.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/8873099/8873099-hd_1080_1920_25fps.mp4",
+      "text": "Wann hast du zuletzt wirklich zugehört, ohne im Kopf schon deine Antwort zu bauen? Versuch es heute in einem Gespräch. Lass den anderen ausreden, frag einmal nach und hör zu. Du musst nicht sofort eine Lösung anbieten. Wem möchtest du heute mehr Aufmerksamkeit schenken? Schreib es in die Kommentare."
+    },
+    {
+      "slot": "1830",
+      "time": "18:30",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/885dcdfd-85ba-4d9d-acfb-d2345595730b.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/12908973/12908973-uhd_2160_3840_24fps.mp4",
+      "text": "Du hast eine Idee, aber sie ist noch nicht perfekt? Zeig jemandem eine unfertige Version. Eine Skizze, einen Entwurf, einen ersten Versuch. Echtes Feedback bringt dich oft weiter als endloses Feilen im Stillen. Was könntest du heute schon teilen, obwohl es noch nicht fertig ist?"
+    },
+    {
+      "slot": "2200",
+      "time": "22:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/419502e4-59ac-4d95-b263-060fd26832d2.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/32661246/13925574_2160_3840_25fps.mp4",
+      "text": "Nicht alles, was heute liegen geblieben ist, muss dich in die Nacht begleiten. Wähle eine offene Sache und entscheide bewusst: morgen, später oder gar nicht. Eine klare Entscheidung schafft mehr Ruhe als stilles Grübeln. Was darf für heute wirklich warten? Speichere dir diesen Gedanken für den nächsten vollen Abend."
+    }
+  ]
+}
