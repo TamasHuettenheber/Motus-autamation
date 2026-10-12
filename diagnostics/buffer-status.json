@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-12T07:17:01.955998+00:00",
+  "checked_at_utc": "2026-10-12T17:46:39.549750+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -28,30 +28,30 @@
     {
       "id": "6acbfee3a9411fbcc55ce8e5",
       "text": "Manchmal ist Fortschritt unsichtbar. Du hast Grenzen gesetzt, etwas gelernt oder trotz Zweifel weitergemacht. Auch das zählt. Vergleiche dich heute nicht mit anderen, sondern mit deinem früheren Ich. Was gelingt dir inzwischen leichter?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Remember (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-12T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-12T16:32:45.111Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7695819705562500384",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-12-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acbfee3a9411fbcc55ce8e5_video.mp4"
         }
       ]
     },
     {
       "id": "6acbff0bea568e911a409a32",
       "text": "Du musst nicht auf jede Nachricht sofort reagieren. Aufmerksamkeit ist begrenzt. Schenk heute einer wichtigen Aufgabe zwanzig ungestörte Minuten. Schalte Ablenkungen aus und beobachte, was möglich wird. Wofür reservierst du deinen Fokus?\n\n#motus #fokus #digitalbalance #aufmerksamkeit #selbstentwicklung\n\nMusik: Tanner Helland – Familiar Roads (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-12T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-12T10:02:41.163Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7695719275784424737",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-12-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acbff0bea568e911a409a32_video.mp4"
         }
       ]
     },
