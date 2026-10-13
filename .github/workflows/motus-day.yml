@@ -11,6 +11,10 @@ on:
         required: true
         type: string
 
+concurrency:
+  group: motus-day-${{ github.event.issue.number || inputs.issue_number }}
+  cancel-in-progress: false
+
 permissions:
   contents: read
   issues: write
@@ -36,6 +40,8 @@ jobs:
           import json
           import os
           import re
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
           import urllib.error
           import urllib.request
 
@@ -90,6 +96,9 @@ jobs:
               raise SystemExit(0)
 
           issue = gh("GET", f"/issues/{issue_number}")
+          if issue.get("state") != "open":
+              print("SKIP_CLOSED_ISSUE:", issue_number)
+              raise SystemExit(0)
           if not str(issue.get("title","")).startswith("[MOTUS-DAY]"):
               raise SystemExit(f"Issue #{issue_number} is not a [MOTUS-DAY] batch")
 
@@ -104,6 +113,9 @@ jobs:
           force_rerender = bool(batch.get("force_rerender", False))
           if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
               raise SystemExit("Invalid or missing date")
+          if date < datetime.now(ZoneInfo("Europe/Berlin")).date().isoformat():
+              print("SKIP_EXPIRED_BATCH:", date)
+              raise SystemExit(0)
           if not isinstance(slots, list) or len(slots) != 4:
               raise SystemExit("Exactly four slots are required")
 
