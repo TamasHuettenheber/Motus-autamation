@@ -401,6 +401,12 @@
       "clip_id": "city-phone-13802094",
       "source": "https://www.pexels.com/video/a-man-in-a-suit-looking-at-his-phone-while-walking-in-the-city-13802094/",
       "used_at_utc": "2026-10-13T20:45:55.383674+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-14-2200",
+      "clip_id": "sunset-ocean-7975481",
+      "source": "https://www.pexels.com/video/vertical-video-of-sunset-7975481/",
+      "used_at_utc": "2026-10-13T21:11:19.182955+00:00"
     }
   ]
 }
