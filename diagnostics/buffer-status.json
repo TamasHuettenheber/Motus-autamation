@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-13T00:33:01.167856+00:00",
+  "checked_at_utc": "2026-10-13T07:38:46.401784+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -58,15 +58,15 @@
     {
       "id": "6acd45e0a36dd851812e8ca9",
       "text": "Dieser Dienstag muss nicht sofort auf Höchsttempo laufen. Geh die ersten fünf Minuten bewusst langsamer. Atme durch, schau hin und entscheide erst dann, was wirklich dringend ist. Du bestimmst dein Tempo, nicht dein Posteingang. Was hilft dir heute, ruhig zu starten? Folge Motus für neue Impulse.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-13T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-13T05:01:59.602Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7696012859305626913",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-13-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acd45e0a36dd851812e8ca9_video.mp4"
         }
       ]
     },
