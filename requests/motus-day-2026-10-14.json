@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-14",
+  "slots": [
+    {
+      "slot": "0700",
+      "time": "07:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/fa11a75f-e385-421a-8490-73c54a387fed.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/18303443/18303443-hd_1080_1920_60fps.mp4",
+      "text": "Heute ist Mittwoch. Du musst nicht alles gleichzeitig lösen. Wähle morgens eine Aufgabe, die dir wichtig ist, und gib ihr deine ungeteilte Aufmerksamkeit. Ein klarer Anfang verändert oft den ganzen Tag. Was steht heute ganz oben? Folge Motus für deinen nächsten Impuls."
+    },
+    {
+      "slot": "1200",
+      "time": "12:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/1fd9e23e-37c4-4d75-8052-786ce3e64616.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/13736547/13736547-uhd_2160_3840_24fps.mp4",
+      "text": "Eine Pause ist keine verlorene Zeit. Wenn du mittags merkst, dass dein Kopf voll ist, steh kurz auf, trink Wasser und schau bewusst weg vom Bildschirm. Danach entscheidest du neu, was wirklich zählt. Wann gönnst du dir heute fünf Minuten Ruhe?"
+    },
+    {
+      "slot": "1830",
+      "time": "18:30",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/1576f8a1-bf54-48bf-8abc-553d0d0f4b4a.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/13802094/13802094-uhd_2160_3840_24fps.mp4",
+      "text": "Ein Nein kann Platz für ein wichtiges Ja schaffen. Du musst nicht jede Bitte erfüllen, nur weil du es könntest. Prüfe heute einmal ehrlich, wofür du Zeit und Energie hast. Welche Grenze möchtest du klarer setzen? Schreib es in die Kommentare."
+    },
+    {
+      "slot": "2200",
+      "time": "22:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/c9f0baa9-e6f2-4113-9caa-9dcc3d28275c.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/7975481/7975481-hd_1080_1920_30fps.mp4",
+      "text": "Heute Abend zählt nicht nur, was du geschafft hast. Vielleicht hast du jemandem geholfen, etwas Neues verstanden oder bewusst innegehalten. Auch das ist Fortschritt. Nimm einen guten Moment mit in die Nacht. Welcher war es bei dir?"
+    }
+  ]
+}
