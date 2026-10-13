@@ -395,6 +395,12 @@
       "clip_id": "sunrise-sea-18303443",
       "source": "https://www.pexels.com/video/sunrise-over-the-sea-vertical-video-18303443/",
       "used_at_utc": "2026-10-13T20:45:47.111308+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-14-1830",
+      "clip_id": "city-phone-13802094",
+      "source": "https://www.pexels.com/video/a-man-in-a-suit-looking-at-his-phone-while-walking-in-the-city-13802094/",
+      "used_at_utc": "2026-10-13T20:45:55.383674+00:00"
     }
   ]
 }
