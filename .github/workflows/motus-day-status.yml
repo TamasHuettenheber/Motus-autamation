@@ -170,7 +170,16 @@ jobs:
 
           # Current renderer runs are enough for one day of batches; exact run-name binds them.
           renderer_runs = gh("GET","/actions/workflows/motus.yml/runs?event=workflow_dispatch&per_page=100").get("workflow_runs",[])
-          main_sha = str(gh("GET","/commits/main").get("sha",""))
+          # Publishing an MP4 changes main HEAD, not the renderer workflow itself.
+          workflow_sha_cache = {}
+          def renderer_workflow_sha(ref):
+              if not ref:
+                  return ""
+              if ref not in workflow_sha_cache:
+                  path = f"/contents/.github/workflows/motus.yml?ref={ref}"
+                  workflow_sha_cache[ref] = str(gh("GET",path).get("sha",""))
+              return workflow_sha_cache[ref]
+          main_sha = renderer_workflow_sha("main")
           now=datetime.now(timezone.utc)
 
           for issue in parents:
@@ -181,6 +190,9 @@ jobs:
                       comment(issue_number,"MOTUS_DAY_FAILED_FINAL\n\nParent issue JSON is invalid and cannot be reconciled automatically.")
                   continue
               if batch["dry_run"]:
+                  continue
+              if batch["date"] < datetime.now(ZoneInfo("Europe/Berlin")).date().isoformat():
+                  print("SKIP_EXPIRED_BATCH",issue_number,batch["date"])
                   continue
               if has_marker(issue_number,"MOTUS_DAY_COMPLETE"):
                   continue
@@ -261,7 +273,7 @@ jobs:
                       if target in active_titles:
                           print("FAILED_RECOVERY_SUPPRESSED_ACTIVE_RUN",slot["output_name"])
                           continue
-                      run_sha=str(run.get("head_sha") or "")
+                      run_sha=renderer_workflow_sha(str(run.get("head_sha") or ""))
                       if main_sha and run_sha != main_sha:
                           gh(
                               "POST",
@@ -284,7 +296,7 @@ jobs:
                   # renderer has been fixed must not block the whole day indefinitely.
                   stale_redispatched=[]
                   for slot,run in waiting:
-                      run_sha=str(run.get("head_sha") or "")
+                      run_sha=renderer_workflow_sha(str(run.get("head_sha") or ""))
                       started_raw=str(run.get("run_started_at") or run.get("created_at") or "")
                       try:
                           started=datetime.fromisoformat(started_raw.replace("Z","+00:00"))
@@ -339,7 +351,7 @@ jobs:
                       if target in active_titles:
                           print("RETRY_SUPPRESSED_ACTIVE_RUN",slot["output_name"])
                           continue
-                      run_sha=str(run.get("head_sha") or "")
+                      run_sha=renderer_workflow_sha(str(run.get("head_sha") or ""))
                       if main_sha and run_sha != main_sha:
                           # Workflow code changed after this renderer started. Re-running the
                           # old run would reuse the old workflow definition, so dispatch exactly
@@ -440,7 +452,7 @@ jobs:
                           continue
                       run=latest[name]
                       attempt=int(run.get("run_attempt") or 1)
-                      run_sha=str(run.get("head_sha") or "")
+                      run_sha=renderer_workflow_sha(str(run.get("head_sha") or ""))
                       slot=slot_by_name[name]
                       if main_sha and run_sha != main_sha:
                           gh(
