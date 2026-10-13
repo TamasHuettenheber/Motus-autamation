@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-12T17:46:39.549750+00:00",
+  "checked_at_utc": "2026-10-13T00:33:01.167856+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -11,17 +11,77 @@
   },
   "posts": [
     {
-      "id": "6acbff098e8dd50ffc57de19",
-      "text": "Bevor dieser Montag endet, such nicht nach allem, was offen geblieben ist. Erinnere dich an einen Moment, in dem du heute bewusst gehandelt hast. Nimm diesen kleinen Erfolg mit in die Nacht. Was war heute dein guter Schritt?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
+      "id": "6acd45cb0fd81940c1c6cbe1",
+      "text": "Nicht alles, was heute liegen geblieben ist, muss dich in die Nacht begleiten. Wähle eine offene Sache und entscheide bewusst: morgen, später oder gar nicht. Eine klare Entscheidung schafft mehr Ruhe als stilles Grübeln. Was darf für heute wirklich warten? Speichere dir diesen Gedanken für den nächsten vollen Abend.\n\n#motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
       "status": "scheduled",
-      "dueAt": "2026-10-12T20:00:00.000Z",
+      "dueAt": "2026-10-13T20:00:00.000Z",
       "sentAt": null,
       "externalLink": null,
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-12-2200.mp4"
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-13-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6acd45b8a36dd851812e870d",
+      "text": "Du hast eine Idee, aber sie ist noch nicht perfekt? Zeig jemandem eine unfertige Version. Eine Skizze, einen Entwurf, einen ersten Versuch. Echtes Feedback bringt dich oft weiter als endloses Feilen im Stillen. Was könntest du heute schon teilen, obwohl es noch nicht fertig ist?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-13T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-13-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6acd45d0e9da05d4097d4a29",
+      "text": "Wann hast du zuletzt wirklich zugehört, ohne im Kopf schon deine Antwort zu bauen? Versuch es heute in einem Gespräch. Lass den anderen ausreden, frag einmal nach und hör zu. Du musst nicht sofort eine Lösung anbieten. Wem möchtest du heute mehr Aufmerksamkeit schenken? Schreib es in die Kommentare.\n\n#motus #kommunikation #alltagspsychologie #selbstentwicklung #mentaleklarheit\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-13T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-13-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6acd45e0a36dd851812e8ca9",
+      "text": "Dieser Dienstag muss nicht sofort auf Höchsttempo laufen. Geh die ersten fünf Minuten bewusst langsamer. Atme durch, schau hin und entscheide erst dann, was wirklich dringend ist. Du bestimmst dein Tempo, nicht dein Posteingang. Was hilft dir heute, ruhig zu starten? Folge Motus für neue Impulse.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-13T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-13-0700.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6acbff098e8dd50ffc57de19",
+      "text": "Bevor dieser Montag endet, such nicht nach allem, was offen geblieben ist. Erinnere dich an einen Moment, in dem du heute bewusst gehandelt hast. Nimm diesen kleinen Erfolg mit in die Nacht. Was war heute dein guter Schritt?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
+      "status": "sent",
+      "dueAt": "2026-10-12T20:00:00.000Z",
+      "sentAt": "2026-10-12T20:02:11.106Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7695873905977871649",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acbff098e8dd50ffc57de19_video.mp4"
         }
       ]
     },
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abd83b8f245fa4cd5333d9f_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6abd83c6f245fa4cd5333f5d",
-      "text": "Vergleiche deinen Fortschritt nicht mit dem fertigen Ergebnis anderer. Du siehst bei ihnen meistens die sichtbare Oberfläche und bei dir jeden Umweg. Frag dich heute Mittag nur: Was kann ich heute besser als vor vier Wochen? Fortschritt wird fairer, wenn du ihn an deiner eigenen Strecke misst.",
-      "status": "sent",
-      "dueAt": "2026-10-01T10:00:00.000Z",
-      "sentAt": "2026-10-01T10:02:18.270Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7691637236613270817?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abd83c6f245fa4cd5333f5d_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6abd84cd9b58fd09c05a5236",
-      "text": "Heute Morgen musst du nicht schneller werden. Du musst klarer werden. Bevor der Tag dich zieht, entscheide bewusst, was heute nicht deine Energie bekommt. Eine Sache weniger kann dir mehr Fokus geben als fünf neue Vorsätze. Starte nicht mit mehr. Starte mit weniger Ablenkung.",
-      "status": "sent",
-      "dueAt": "2026-10-01T05:00:00.000Z",
-      "sentAt": "2026-10-01T05:02:06.431Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7691559829168524576?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abd84cd9b58fd09c05a5236_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6abc70853b1eb12e6e3fa6b4",
-      "text": "Du musst heute Nacht nicht jede offene Frage lösen. Manche Gedanken wirken um zweiundzwanzig Uhr dringend, obwohl sie morgen mit Abstand viel kleiner aussehen. Schreib auf, was dich beschäftigt, und entscheide bewusst, wann du dich darum kümmerst. Aufschieben aus Angst ist etwas anderes als Vertagen mit Plan. Dein Kopf darf Feierabend bekommen.",
-      "status": "sent",
-      "dueAt": "2026-09-30T20:00:00.000Z",
-      "sentAt": "2026-09-30T20:02:52.523Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7691420932224634144?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abc70853b1eb12e6e3fa6b4_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6abc70a05df9296bd8db9a0b",
-      "text": "Nicht jede Müdigkeit bedeutet, dass du aufgeben solltest. Manchmal bedeutet sie nur, dass du zu lange ohne echte Pause funktioniert hast. Bevor du heute Abend an dir zweifelst, prüfe zuerst das Offensichtliche: Hast du gegessen, getrunken, dich bewegt und fünf Minuten nichts geleistet? Erschöpfung ist ein schlechter Berater für große Urteile über dein Leben.",
-      "status": "sent",
-      "dueAt": "2026-09-30T16:30:00.000Z",
-      "sentAt": "2026-09-30T16:33:44.824Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7691367063310454049?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abc70a05df9296bd8db9a0b_video.mp4"
         }
       ]
     }
