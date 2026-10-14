@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-14T13:37:25.835456+00:00",
+  "checked_at_utc": "2026-10-14T18:31:11.317453+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -28,15 +28,15 @@
     {
       "id": "6ace989f48ff980feab2ef68",
       "text": "Ein Nein kann Platz für ein wichtiges Ja schaffen. Du musst nicht jede Bitte erfüllen, nur weil du es könntest. Prüfe heute einmal ehrlich, wofür du Zeit und Energie hast. Welche Grenze möchtest du klarer setzen? Schreib es in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Deserve to be Loved (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-14T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-14T16:33:09.111Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7696561970106862881",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-14-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ace989f48ff980feab2ef68_video.mp4"
         }
       ]
     },
