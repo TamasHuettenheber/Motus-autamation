@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-14T18:31:11.317453+00:00",
+  "checked_at_utc": "2026-10-14T22:14:29.347311+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -11,17 +11,77 @@
   },
   "posts": [
     {
-      "id": "6ace9ee0bd46a7db7a027ebe",
-      "text": "Heute Abend zählt nicht nur, was du geschafft hast. Vielleicht hast du jemandem geholfen, etwas Neues verstanden oder bewusst innegehalten. Auch das ist Fortschritt. Nimm einen guten Moment mit in die Nacht. Welcher war es bei dir?\n\n#motus #abendroutine #innereruhe #mentaleklarheit #selbstentwicklung\n\nMusik: Tanner Helland – Hidden Tears (CC BY 4.0)",
+      "id": "6acfea8a102b7fd4a48e9551",
+      "text": "Bevor du diesen Donnerstag abschließt, denk an einen Moment, in dem du freundlich mit dir oder jemand anderem warst. Solche Momente gehen im Alltag leicht unter. Gib ihnen heute bewusst Platz. Was möchtest du von diesem Tag behalten?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Nevermore (CC BY 4.0)",
       "status": "scheduled",
-      "dueAt": "2026-10-14T20:00:00.000Z",
+      "dueAt": "2026-10-15T20:00:00.000Z",
       "sentAt": null,
       "externalLink": null,
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-14-2200.mp4"
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-15-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6acfeab4ad454aea56cdafae",
+      "text": "Mut fühlt sich nicht immer groß an. Manchmal ist es nur die Nachricht, die du endlich abschickst, oder eine Frage, die du bisher nicht gestellt hast. Ein kleiner ehrlicher Schritt kann viel bewegen. Welchen Schritt wagst du heute?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – A Memory Away (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-15T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-15-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6acfeaa9384901ac08404d18",
+      "text": "Wenn dein Kopf mittags zwischen zehn Dingen springt, schreib die drei wichtigsten auf. Streiche bewusst zwei und konzentriere dich für eine Viertelstunde auf das eine, das heute wirklich Wirkung hat. Was bekommt jetzt deine Aufmerksamkeit?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Syntheticity (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-15T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-15-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6acfea9d102b7fd4a48e98a2",
+      "text": "Donnerstag beginnt nicht mit Perfektion, sondern mit einer Entscheidung. Such dir heute eine kleine Aufgabe, die du lange vor dir herschiebst, und gib ihr zehn Minuten. Nicht alles muss fertig werden. Der Anfang zählt. Was gehst du heute an? Folge Motus für neue Impulse.\n\n#motus #produktivitaet #klarheit #fokus #selbstentwicklung\n\nMusik: Tanner Helland – Wild Waters (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-15T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-15-0700.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ace9ee0bd46a7db7a027ebe",
+      "text": "Heute Abend zählt nicht nur, was du geschafft hast. Vielleicht hast du jemandem geholfen, etwas Neues verstanden oder bewusst innegehalten. Auch das ist Fortschritt. Nimm einen guten Moment mit in die Nacht. Welcher war es bei dir?\n\n#motus #abendroutine #innereruhe #mentaleklarheit #selbstentwicklung\n\nMusik: Tanner Helland – Hidden Tears (CC BY 4.0)",
+      "status": "sent",
+      "dueAt": "2026-10-14T20:00:00.000Z",
+      "sentAt": "2026-10-14T20:02:38.079Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7696616032315641121",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ace9ee0bd46a7db7a027ebe_video.mp4"
         }
       ]
     },
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac053ee724c7034229c58af_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac053f5ad2f47bd7d4de9d6",
-      "text": "Perfektion hält dich oft länger auf als die Aufgabe selbst. Frag dich heute Mittag: Reichen achtzig Prozent, damit ich weitermachen kann? Wenn ja, dann hör auf zu polieren und bring es raus. Fertig schafft Bewegung, perfekt oft nur Verzögerung. Wo könntest du heute mit achtzig Prozent weiterkommen? Schreib es in die Kommentare.",
-      "status": "sent",
-      "dueAt": "2026-10-03T10:00:00.000Z",
-      "sentAt": "2026-10-03T10:02:46.622Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7692379341908479264?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac053f5ad2f47bd7d4de9d6_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac053f5ad2f47bd7d4dea31",
-      "text": "Starte heute mit einem Mini-Sieg. Nimm dir genau die kleine nervende Aufgabe vor, die du seit Tagen wegschiebst, und erledige sie zuerst. Nicht weil sie groß ist, sondern weil sie Platz im Kopf frisst. Ein kleiner Haken am Morgen kann mehr Energie geben als zehn neue Pläne. Welche Kleinigkeit willst du heute endlich abhaken? Schreib sie in die Kommentare.",
-      "status": "sent",
-      "dueAt": "2026-10-03T05:00:00.000Z",
-      "sentAt": "2026-10-03T05:01:57.887Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7692301928931314976?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac053f5ad2f47bd7d4dea31_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6abef11045400a0e30005a5f",
-      "text": "Wenn dir heute ein Fehler im Kopf hängen bleibt, mach daraus keine Endlosschleife. Frag dich stattdessen: Was würde ich morgen konkret anders machen? Eine brauchbare Antwort reicht. Reflexion hilft dir weiter, Selbstbestrafung nicht. Du musst den Fehler nicht hundertmal denken, um aus ihm zu lernen. Nimm die Lektion mit und lass den Rest für heute liegen.",
-      "status": "sent",
-      "dueAt": "2026-10-02T20:00:00.000Z",
-      "sentAt": "2026-10-02T20:02:21.706Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7692162953126202657?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abef11045400a0e30005a5f_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6abef127b435ee01190649a7",
-      "text": "Ein Nein braucht nicht immer eine lange Rechtfertigung. Wenn du etwas nicht willst, nicht kannst oder heute nicht mehr schaffst, darf eine klare Grenze kurz sein. Erklärungen sind sinnvoll, wenn sie etwas klären. Aber wenn du dich nur rechtfertigst, damit niemand enttäuscht ist, zahlst oft du den Preis. Klarheit ist nicht unhöflich.",
-      "status": "sent",
-      "dueAt": "2026-10-02T16:30:00.000Z",
-      "sentAt": "2026-10-02T16:32:40.242Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7692108884906872097?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6abef127b435ee01190649a7_video.mp4"
         }
       ]
     }
