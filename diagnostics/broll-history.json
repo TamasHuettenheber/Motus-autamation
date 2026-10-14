@@ -425,6 +425,12 @@
       "clip_id": "park-walk-8296235",
       "source": "https://www.pexels.com/video/a-man-walking-around-the-park-8296235/",
       "used_at_utc": "2026-10-14T20:48:01.717060+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-15-1830",
+      "clip_id": "notebook-standing-7189828",
+      "source": "https://www.pexels.com/video/woman-standing-while-writing-on-notebook-7189828/",
+      "used_at_utc": "2026-10-14T20:48:09.810796+00:00"
     }
   ]
 }
