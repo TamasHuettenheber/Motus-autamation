@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-15",
+  "slots": [
+    {
+      "slot": "0700",
+      "time": "07:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/b8cd8245-eb74-4420-8f67-83ff6c3a3a4a.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/5387028/5387028-hd_1080_1920_30fps.mp4",
+      "text": "Donnerstag beginnt nicht mit Perfektion, sondern mit einer Entscheidung. Such dir heute eine kleine Aufgabe, die du lange vor dir herschiebst, und gib ihr zehn Minuten. Nicht alles muss fertig werden. Der Anfang zählt. Was gehst du heute an? Folge Motus für neue Impulse."
+    },
+    {
+      "slot": "1200",
+      "time": "12:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/984ed030-dbc1-41ed-884b-41ecfcb06892.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/9198715/9198715-hd_1080_1920_25fps.mp4",
+      "text": "Wenn dein Kopf mittags zwischen zehn Dingen springt, schreib die drei wichtigsten auf. Streiche bewusst zwei und konzentriere dich für eine Viertelstunde auf das eine, das heute wirklich Wirkung hat. Was bekommt jetzt deine Aufmerksamkeit?"
+    },
+    {
+      "slot": "1830",
+      "time": "18:30",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/cfa764c9-5539-45a4-b61a-ec35db23a9b2.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/7189828/7189828-uhd_2160_3840_25fps.mp4",
+      "text": "Mut fühlt sich nicht immer groß an. Manchmal ist es nur die Nachricht, die du endlich abschickst, oder eine Frage, die du bisher nicht gestellt hast. Ein kleiner ehrlicher Schritt kann viel bewegen. Welchen Schritt wagst du heute?"
+    },
+    {
+      "slot": "2200",
+      "time": "22:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/88d4956a-901a-4e47-b439-da96d6766ec4.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/7975481/7975481-hd_1080_1920_30fps.mp4",
+      "text": "Bevor du diesen Donnerstag abschließt, denk an einen Moment, in dem du freundlich mit dir oder jemand anderem warst. Solche Momente gehen im Alltag leicht unter. Gib ihnen heute bewusst Platz. Was möchtest du von diesem Tag behalten?"
+    }
+  ]
+}
