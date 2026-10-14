@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-14T01:08:59.176207+00:00",
+  "checked_at_utc": "2026-10-14T07:29:19.559547+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -58,15 +58,15 @@
     {
       "id": "6ace988af0aaa6342e1255a9",
       "text": "Heute ist Mittwoch. Du musst nicht alles gleichzeitig lösen. Wähle morgens eine Aufgabe, die dir wichtig ist, und gib ihr deine ungeteilte Aufmerksamkeit. Ein klarer Anfang verändert oft den ganzen Tag. Was steht heute ganz oben? Folge Motus für deinen nächsten Impuls.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Forest Awakes (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-14T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-14T05:02:07.132Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7696383940105342241",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-14-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ace988af0aaa6342e1255a9_video.mp4"
         }
       ]
     },
