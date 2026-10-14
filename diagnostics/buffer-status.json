@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-14T07:29:19.559547+00:00",
+  "checked_at_utc": "2026-10-14T13:37:25.835456+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -43,15 +43,15 @@
     {
       "id": "6ace989f48ff980feab2ef8b",
       "text": "Eine Pause ist keine verlorene Zeit. Wenn du mittags merkst, dass dein Kopf voll ist, steh kurz auf, trink Wasser und schau bewusst weg vom Bildschirm. Danach entscheidest du neu, was wirklich zählt. Wann gönnst du dir heute fünf Minuten Ruhe?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Destiny (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-14T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-14T10:03:13.651Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7696461462167948577",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-14-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ace989f48ff980feab2ef8b_video.mp4"
         }
       ]
     },
