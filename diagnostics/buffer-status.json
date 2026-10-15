@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-15T13:20:40.505602+00:00",
+  "checked_at_utc": "2026-10-15T18:13:06.107316+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -28,15 +28,15 @@
     {
       "id": "6acfeab4ad454aea56cdafae",
       "text": "Mut fühlt sich nicht immer groß an. Manchmal ist es nur die Nachricht, die du endlich abschickst, oder eine Frage, die du bisher nicht gestellt hast. Ein kleiner ehrlicher Schritt kann viel bewegen. Welchen Schritt wagst du heute?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – A Memory Away (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-15T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-15T16:32:52.213Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7696933045487570208",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-15-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acfeab4ad454aea56cdafae_video.mp4"
         }
       ]
     },
