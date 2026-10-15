@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-16",
+  "slots": [
+    {
+      "slot": "0700",
+      "time": "07:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/a817e654-c039-49ef-b5da-f5ce8b9a138b.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/8085706/8085706-hd_1080_1920_24fps.mp4",
+      "text": "Freitagmorgen. Du brauchst keinen perfekten Plan, um anzufangen. Wähle eine Sache, die heute wirklich zählt, und mach jetzt den ersten kleinen Schritt. Fünf konzentrierte Minuten sind mehr wert als eine Stunde Grübeln. Was packst du heute an? Folge Motus für deinen nächsten Impuls."
+    },
+    {
+      "slot": "1200",
+      "time": "12:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/973b56c1-41d3-48fa-b2b9-385754e0e7e6.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/5704904/5704904-uhd_2160_3840_24fps.mp4",
+      "text": "Wenn dein Freitagmittag hektisch wird, halte kurz inne. Frag dich: Was ist jetzt wirklich wichtig? Nicht jede Nachricht braucht sofort eine Antwort. Setze eine klare Priorität und gib ihr deine volle Aufmerksamkeit. Welche Aufgabe bringst du heute zu Ende?"
+    },
+    {
+      "slot": "1830",
+      "time": "18:30",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/5e55dee3-2beb-4adb-a1b6-db410b68e88c.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/5838174/5838174-uhd_2160_4096_30fps.mp4",
+      "text": "Du musst nicht warten, bis du dich mutig fühlst. Oft entsteht Mut erst, wenn du handelst. Sag heute ehrlich, was du brauchst, oder probiere etwas aus, das du bisher aufgeschoben hast. Welcher kleine Schritt könnte deinen Abend verändern?"
+    },
+    {
+      "slot": "2200",
+      "time": "22:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/afed81ab-820b-47da-be64-339078f95a5f.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/13658220/13658220-hd_1920_1080_25fps.mp4",
+      "text": "Bevor dieser Freitag endet, denk nicht nur daran, was offen geblieben ist. Schau auf das, was du trotz allem geschafft hast. Vielleicht war es nur ein Gespräch oder ein kleiner Fortschritt. Auch das zählt. Was nimmst du heute Positives mit?"
+    }
+  ]
+}
