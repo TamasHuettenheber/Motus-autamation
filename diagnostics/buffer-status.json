@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-15T18:13:06.107316+00:00",
+  "checked_at_utc": "2026-10-15T22:09:57.429590+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -11,17 +11,77 @@
   },
   "posts": [
     {
-      "id": "6acfea8a102b7fd4a48e9551",
-      "text": "Bevor du diesen Donnerstag abschließt, denk an einen Moment, in dem du freundlich mit dir oder jemand anderem warst. Solche Momente gehen im Alltag leicht unter. Gib ihnen heute bewusst Platz. Was möchtest du von diesem Tag behalten?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Nevermore (CC BY 4.0)",
+      "id": "6ad13efc7998c185a61a7448",
+      "text": "Bevor dieser Freitag endet, denk nicht nur daran, was offen geblieben ist. Schau auf das, was du trotz allem geschafft hast. Vielleicht war es nur ein Gespräch oder ein kleiner Fortschritt. Auch das zählt. Was nimmst du heute Positives mit?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
       "status": "scheduled",
-      "dueAt": "2026-10-15T20:00:00.000Z",
+      "dueAt": "2026-10-16T20:00:00.000Z",
       "sentAt": null,
       "externalLink": null,
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-15-2200.mp4"
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-16-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad13f21c26e1a071758bf42",
+      "text": "Du musst nicht warten, bis du dich mutig fühlst. Oft entsteht Mut erst, wenn du handelst. Sag heute ehrlich, was du brauchst, oder probiere etwas aus, das du bisher aufgeschoben hast. Welcher kleine Schritt könnte deinen Abend verändern?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Home (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-16T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-16-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad13eee5533140b41c8d1c4",
+      "text": "Wenn dein Freitagmittag hektisch wird, halte kurz inne. Frag dich: Was ist jetzt wirklich wichtig? Nicht jede Nachricht braucht sofort eine Antwort. Setze eine klare Priorität und gib ihr deine volle Aufmerksamkeit. Welche Aufgabe bringst du heute zu Ende?\n\n#motus #produktivitaet #klarheit #fokus #selbstentwicklung\n\nMusik: Tanner Helland – Crossroads (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-16T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-16-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad13eeb2aec0f0a6da7a349",
+      "text": "Freitagmorgen. Du brauchst keinen perfekten Plan, um anzufangen. Wähle eine Sache, die heute wirklich zählt, und mach jetzt den ersten kleinen Schritt. Fünf konzentrierte Minuten sind mehr wert als eine Stunde Grübeln. Was packst du heute an? Folge Motus für deinen nächsten Impuls.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Daybreak (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-16T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-16-0700.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6acfea8a102b7fd4a48e9551",
+      "text": "Bevor du diesen Donnerstag abschließt, denk an einen Moment, in dem du freundlich mit dir oder jemand anderem warst. Solche Momente gehen im Alltag leicht unter. Gib ihnen heute bewusst Platz. Was möchtest du von diesem Tag behalten?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Nevermore (CC BY 4.0)",
+      "status": "sent",
+      "dueAt": "2026-10-15T20:00:00.000Z",
+      "sentAt": "2026-10-15T20:02:56.739Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7696987169877003552",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acfea8a102b7fd4a48e9551_video.mp4"
         }
       ]
     },
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac170227ff895d757bc06b7_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac1703daa79e514b9ffc68d",
-      "text": "Wenn du bei einer Aufgabe festhängst, brauchst du nicht immer mehr Motivation. Manchmal ist der nächste Schritt einfach noch zu groß formuliert. Mach ihn kleiner, bis er fast lächerlich leicht wird: Datei öffnen, zwei Sätze schreiben, einen Anruf machen. Bewegung erzeugt oft erst die Motivation. Welchen nächsten Schritt kannst du heute kleiner machen? Schreib ihn in die Kommentare.",
-      "status": "sent",
-      "dueAt": "2026-10-04T10:00:00.000Z",
-      "sentAt": "2026-10-04T10:02:29.207Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7692750456698768673?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac1703daa79e514b9ffc68d_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac1700fad7fd83bc503f51c",
-      "text": "Bevor du heute auf Nachrichten, Termine und Erwartungen reagierst, setz selbst den ersten Punkt. Wähle eine Sache, die heute wirklich zählt, und gib ihr die ersten zehn konzentrierten Minuten. So startet dein Tag nicht mit Fremdsteuerung, sondern mit Richtung. Was bekommt heute deine ersten zehn Minuten? Schreib es in die Kommentare.",
-      "status": "sent",
-      "dueAt": "2026-10-04T05:00:00.000Z",
-      "sentAt": "2026-10-04T05:01:51.668Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7692672949043678497?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac1700fad7fd83bc503f51c_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac053fb5831428806ab48dd",
-      "text": "Du darfst heute bewusst Schluss machen. Nicht jede freie Minute muss noch produktiv werden. Erholung beginnt oft erst dann, wenn du aufhörst, innerlich weiterzuarbeiten. Leg für heute fest: Das reicht. Morgen ist wieder Zeit für den Rest. Wenn jemand in deinem Umfeld das gerade hören muss, schick ihm dieses Video weiter.",
-      "status": "sent",
-      "dueAt": "2026-10-03T20:00:00.000Z",
-      "sentAt": "2026-10-03T20:02:14.205Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7692534014984408352?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac053fb5831428806ab48dd_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac053ee724c7034229c58af",
-      "text": "Offene Schleifen ziehen Aufmerksamkeit, auch wenn du gerade gar nicht daran arbeitest. Bevor dein Abend beginnt, schließe heute bewusst eine davon: beantworten, entscheiden, absagen oder auf einen festen Termin setzen. Du musst nicht alles erledigen. Aber eine offene Sache weniger macht den Kopf leichter. Welche Schleife schließt du heute? Schreib es in die Kommentare.",
-      "status": "sent",
-      "dueAt": "2026-10-03T16:30:00.000Z",
-      "sentAt": "2026-10-03T16:32:25.953Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7692479876133063969?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac053ee724c7034229c58af_video.mp4"
         }
       ]
     }
