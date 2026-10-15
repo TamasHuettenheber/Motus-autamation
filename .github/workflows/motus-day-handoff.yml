@@ -1,0 +1,64 @@
+name: MOTUS Request Handoff
+on:
+  push:
+    paths:
+      - 'requests/motus-day-*.json'
+      - '.github/workflows/motus-day-handoff.yml'
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+concurrency:
+  group: motus-request-handoff
+  cancel-in-progress: false
+jobs:
+  handoff:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Handoff validated day request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          python3 - <<'PY'
+          import base64,json,os,urllib.request,urllib.error
+          from datetime import datetime,timedelta
+          from zoneinfo import ZoneInfo
+          now=datetime.now(ZoneInfo("Europe/Berlin"))
+          if os.environ["EVENT"]=="schedule" and now.hour<22:
+              print("WAIT_FOR_EVENING")
+              raise SystemExit(0)
+          target=(now.date()+timedelta(days=1)).isoformat() if now.hour>=22 else now.date().isoformat()
+          repo=os.environ["REPO"]
+          headers={"Authorization":"Bearer "+os.environ["GH_TOKEN"],"Accept":"application/vnd.github+json","User-Agent":"motus-handoff"}
+          def api(method,path,data=None):
+              request=urllib.request.Request(f"https://api.github.com/repos/{repo}{path}",headers=headers,method=method,data=None if data is None else json.dumps(data).encode())
+              try:
+                  with urllib.request.urlopen(request,timeout=40) as response:
+                      return json.loads(response.read())
+              except urllib.error.HTTPError as error:
+                  if method=="GET" and error.code==404:return None
+                  raise
+          file=api("GET",f"/contents/requests/motus-day-{target}.json")
+          if not file:
+              print("NO_DAY_REQUEST",target)
+              raise SystemExit(0)
+          batch=json.loads(base64.b64decode(file["content"]))
+          if batch.get("date")!=target:raise SystemExit("BAD_DATE")
+          slots=batch.get("slots",[])
+          if len(slots)!=4 or {str(s.get("time","")).replace(":","") for s in slots}!={"0700","1200","1830","2200"}:raise SystemExit("BAD_SLOTS")
+          for s in slots:
+              audio=str(s.get("audio_url",""))
+              if not audio.startswith("https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/") or not audio.endswith(".mp3") or not s.get("text") or not str(s.get("broll_url","")).startswith("https://"):raise SystemExit("BAD_MEDIA")
+          title=f"[MOTUS-DAY] {target}"
+          issues=api("GET","/issues?state=all&per_page=100&sort=created&direction=desc")
+          if any(i.get("title")==title for i in issues):
+              print("EXISTING_PARENT",title)
+              raise SystemExit(0)
+          result=api("POST","/issues",{"title":title,"body":json.dumps(batch,ensure_ascii=False)})
+          print("PARENT_CREATED",result["number"])
+          PY
