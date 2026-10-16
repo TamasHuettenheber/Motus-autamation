@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-16T07:03:36.429360+00:00",
+  "checked_at_utc": "2026-10-16T12:19:30.867130+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -43,15 +43,15 @@
     {
       "id": "6ad13eee5533140b41c8d1c4",
       "text": "Wenn dein Freitagmittag hektisch wird, halte kurz inne. Frag dich: Was ist jetzt wirklich wichtig? Nicht jede Nachricht braucht sofort eine Antwort. Setze eine klare Priorität und gib ihr deine volle Aufmerksamkeit. Welche Aufgabe bringst du heute zu Ende?\n\n#motus #produktivitaet #klarheit #fokus #selbstentwicklung\n\nMusik: Tanner Helland – Crossroads (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-16T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-16T10:02:06.616Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7697203579223903521",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-16-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad13eee5533140b41c8d1c4_video.mp4"
         }
       ]
     },
