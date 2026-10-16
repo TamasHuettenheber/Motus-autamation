@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-16T17:20:57.952742+00:00",
+  "checked_at_utc": "2026-10-16T20:58:29.697853+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -11,17 +11,77 @@
   },
   "posts": [
     {
-      "id": "6ad13efc7998c185a61a7448",
-      "text": "Bevor dieser Freitag endet, denk nicht nur daran, was offen geblieben ist. Schau auf das, was du trotz allem geschafft hast. Vielleicht war es nur ein Gespräch oder ein kleiner Fortschritt. Auch das zählt. Was nimmst du heute Positives mit?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
+      "id": "6ad28e621694d771d5070ce7",
+      "text": "Wenn es am Samstagabend still wird, werden Gedanken manchmal besonders laut. Aber nicht jede offene Frage muss heute noch beantwortet werden. Schreib auf, was dich beschäftigt, und erlaube dir, es bis morgen liegen zu lassen. Erholung ist kein Rückstand. Was darf für heute ruhen?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
       "status": "scheduled",
-      "dueAt": "2026-10-16T20:00:00.000Z",
+      "dueAt": "2026-10-17T20:00:00.000Z",
       "sentAt": null,
       "externalLink": null,
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-16-2200.mp4"
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-17-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad28e6587c4935770997d3a",
+      "text": "Du sitzt mit Freunden zusammen, und plötzlich greifst du zum Handy. Dabei passiert das Beste vielleicht genau vor dir. Leg es für eine Weile weg. Hör das Lachen, sieh die Gesichter, sei wirklich dabei. Nicht jeder schöne Moment braucht ein Foto, um in Erinnerung zu bleiben.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Remember (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-17T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-17-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad28e7c52adf2bfae5fd813",
+      "text": "Kennst du das? Jemand erzählt dir etwas, und in deinem Kopf entsteht schon die Antwort. Versuch heute das Gegenteil: Hör erst zu, ohne sofort zu bewerten oder einen Rat zu geben. Manchmal ist echtes Interesse wertvoller als jede Lösung. Wem schenkst du heute deine volle Aufmerksamkeit?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Familiar Roads (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-17T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-17-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad28e55c34368e4b0929a43",
+      "text": "Samstagmorgen. Stell dir vor, du würdest mit dir selbst so sprechen wie mit einem Menschen, an den du glaubst. Nicht jede Unsicherheit ist ein Beweis, dass du etwas nicht kannst. Erinner dich heute an eine Herausforderung, die du schon gemeistert hast. Dieses Vertrauen darfst du mit in den Samstag nehmen.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-17T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-17-0700.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad13efc7998c185a61a7448",
+      "text": "Bevor dieser Freitag endet, denk nicht nur daran, was offen geblieben ist. Schau auf das, was du trotz allem geschafft hast. Vielleicht war es nur ein Gespräch oder ein kleiner Fortschritt. Auch das zählt. Was nimmst du heute Positives mit?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
+      "status": "sent",
+      "dueAt": "2026-10-16T20:00:00.000Z",
+      "sentAt": "2026-10-16T20:02:22.471Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7697358162495573281",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad13efc7998c185a61a7448_video.mp4"
         }
       ]
     },
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac354eeca1380ada84d2327_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac35bc2d467abe8cfde909a",
-      "text": "Wenn deine To-do-Liste heute immer länger wird, sortiere nicht nach dem, was am lautesten ruft. Frag dich: Welche eine Aufgabe macht den Rest leichter oder sogar überflüssig? Genau dort setzt du an. Wirkung ist wichtiger als eine volle Liste mit Haken. Welche Aufgabe hat heute den größten Hebel? Schreib sie in die Kommentare. Musik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-05T10:00:00.000Z",
-      "sentAt": "2026-10-05T10:02:27.095Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7693121502958423329?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac35bc2d467abe8cfde909a_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac35d3569a169193a634131",
-      "text": "Du brauchst heute Morgen keinen perfekten Plan. Gib deinem Körper zuerst ein klares Startsignal: steh auf, richte dich auf und geh für fünf Minuten bewusst in Bewegung, bevor du dich irgendwo festscrollst. Energie kommt nicht immer vor dem Start. Oft entsteht sie erst, wenn du losgehst. Was ist dein erstes Startsignal heute? Schreib es in die Kommentare. Musik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-05T08:20:00.000Z",
-      "sentAt": "2026-10-05T08:21:45.312Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7693095656025525537?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac35d3569a169193a634131_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac170607ff895d757bc0e32",
-      "text": "Du musst heute nicht schon den ganzen morgigen Tag lösen. Schreib dir vor dem Schlafen genau den ersten Schritt für morgen auf und lass den Rest liegen. Damit gibst du deinem Kopf einen klaren Startpunkt, ohne die Nacht zur Planungsrunde zu machen. Wenn du jemanden kennst, der abends nie abschalten kann, schick ihm dieses Video weiter.",
-      "status": "sent",
-      "dueAt": "2026-10-04T20:00:00.000Z",
-      "sentAt": "2026-10-04T20:02:21.010Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7692905093351476513?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac170607ff895d757bc0e32_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac170227ff895d757bc06b7",
-      "text": "Nicht jede Nachricht verdient sofort deine Aufmerksamkeit. Wenn du ständig auf jedes Signal reagierst, entscheidet dein Handy, worauf du dich konzentrierst. Leg heute für eine Weile einen festen Zeitraum ohne Benachrichtigungen fest und beobachte, was mit deinem Kopf passiert. Welche App unterbrichst du heute bewusst? Schreib sie in die Kommentare.",
-      "status": "sent",
-      "dueAt": "2026-10-04T16:30:00.000Z",
-      "sentAt": "2026-10-04T16:31:05.845Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7692850895570128161?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac170227ff895d757bc06b7_video.mp4"
         }
       ]
     }
