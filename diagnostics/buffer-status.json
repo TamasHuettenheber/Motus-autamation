@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-16T12:19:30.867130+00:00",
+  "checked_at_utc": "2026-10-16T17:20:57.952742+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -28,15 +28,15 @@
     {
       "id": "6ad13f21c26e1a071758bf42",
       "text": "Du musst nicht warten, bis du dich mutig fühlst. Oft entsteht Mut erst, wenn du handelst. Sag heute ehrlich, was du brauchst, oder probiere etwas aus, das du bisher aufgeschoben hast. Welcher kleine Schritt könnte deinen Abend verändern?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Home (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-16T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-16T16:32:44.711Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7697304038160846113",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-16-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad13f21c26e1a071758bf42_video.mp4"
         }
       ]
     },
