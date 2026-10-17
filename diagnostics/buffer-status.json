@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-17T19:16:23.694178+00:00",
+  "checked_at_utc": "2026-10-17T22:13:03.719657+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -11,17 +11,77 @@
   },
   "posts": [
     {
-      "id": "6ad28e621694d771d5070ce7",
-      "text": "Wenn es am Samstagabend still wird, werden Gedanken manchmal besonders laut. Aber nicht jede offene Frage muss heute noch beantwortet werden. Schreib auf, was dich beschäftigt, und erlaube dir, es bis morgen liegen zu lassen. Erholung ist kein Rückstand. Was darf für heute ruhen?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
+      "id": "6ad3e5870a208cb32339e00f",
+      "text": "Der Sonntagabend ist kein Countdown für neue Pflichten. Vielleicht gibt es in der kommenden Woche einen Menschen, einen Ort oder einen Moment, auf den du dich freuen kannst. Gib diesem Gedanken Raum. Vorfreude ist auch eine Form von Energie.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
       "status": "scheduled",
-      "dueAt": "2026-10-17T20:00:00.000Z",
+      "dueAt": "2026-10-18T20:00:00.000Z",
       "sentAt": null,
       "externalLink": null,
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-17-2200.mp4"
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-18-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad3e5a0e272c4918fa07407",
+      "text": "Du willst jemandem sagen, was dich stört? Versuch es ohne Angriff. Beschreibe die Situation, sag, was sie bei dir auslöst, und hör dir die andere Sicht an. Kritik kann eine Tür öffnen oder zuschlagen. Deine Wortwahl entscheidet mit.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-18T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-18-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad3e5840b0d72757af4b8ba",
+      "text": "Eine Zusage klingt oft klein. Für den Menschen, der darauf vertraut, kann sie viel bedeuten. Wenn du heute etwas versprochen hast, steh dazu. Und wenn du es nicht halten kannst, sag rechtzeitig ehrlich Bescheid. Verlässlichkeit zeigt sich nicht in großen Worten.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-18T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-18-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad3e573e272c4918fa06d02",
+      "text": "Sonntagmorgen. Nicht jeder Plan überlebt die Wirklichkeit. Vielleicht ändert sich heute etwas, auf das du dich gefreut hast. Das muss den Tag nicht ruinieren. Manchmal entsteht gerade aus einer unerwarteten Wendung etwas Gutes. Bleib offen für das, was tatsächlich möglich ist.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-18T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-18-0700.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad28e621694d771d5070ce7",
+      "text": "Wenn es am Samstagabend still wird, werden Gedanken manchmal besonders laut. Aber nicht jede offene Frage muss heute noch beantwortet werden. Schreib auf, was dich beschäftigt, und erlaube dir, es bis morgen liegen zu lassen. Erholung ist kein Rückstand. Was darf für heute ruhen?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
+      "status": "sent",
+      "dueAt": "2026-10-17T20:00:00.000Z",
+      "sentAt": "2026-10-17T20:02:40.465Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7697729262664650016",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad28e621694d771d5070ce7_video.mp4"
         }
       ]
     },
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac416954e17d6a1b258ed46_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac4169138629554e342a290",
-      "text": "Konzentriert arbeiten heißt nicht, stundenlang ohne Pause durchzuziehen. Probier heute einen klaren Rhythmus: fünfundzwanzig Minuten nur eine Aufgabe, danach fünf Minuten wirklich weg vom Bildschirm. Kein Scrollen als Pause. Steh auf, beweg dich, schau aus dem Fenster. Fokus braucht nicht nur Disziplin, sondern Erholung. Welchen Arbeitsrhythmus probierst du heute aus? #motus #fokus #digitalbalance #aufmerksamkeit #selbstentwicklung Musik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-06T10:00:00.000Z",
-      "sentAt": "2026-10-06T10:02:35.729Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7693492713894726945?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac4169138629554e342a290_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac4192f38629554e342f2f8",
-      "text": "Du musst morgens nicht darauf warten, dass du dich bereit fühlst. Triff eine kleine Entscheidung, bevor deine Stimmung mitreden kann: Schuhe an, Wasser trinken, rausgehen oder anfangen. Motivation ist wechselhaft. Eine klare Entscheidung gibt deinem Morgen Richtung, auch wenn die Energie erst später kommt. Welche Entscheidung triffst du heute, bevor du darüber diskutierst? Schreib sie in die Kommentare. #motus #motivation #morgenroutine #mindset #selbstentwicklung Musik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-06T05:00:00.000Z",
-      "sentAt": "2026-10-06T05:01:57.075Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7693415199155490080?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac4192f38629554e342f2f8_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac354e85de5ee424c2d07b9",
-      "text": "Bevor du heute schlafen gehst, such nicht nach allem, was noch fehlt. Nenn dir einen Moment des Tages, den du behalten möchtest: etwas, das gut war, ruhig war oder dich kurz gefreut hat. Dein Tag besteht nicht nur aus Aufgaben und Problemen. Worauf möchtest du heute mit einem guten Gefühl zurückblicken? Musik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-05T20:00:00.000Z",
-      "sentAt": "2026-10-05T20:02:34.649Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7693276263934397729?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac354e85de5ee424c2d07b9_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac354eeca1380ada84d2327",
-      "text": "Ein schwieriges Gespräch wird selten leichter, nur weil du es länger im Kopf führst. Wenn etwas geklärt werden muss, formuliere heute einen einzigen ehrlichen Satz, mit dem du das Gespräch eröffnen kannst. Du musst nicht den ganzen Verlauf kontrollieren. Du brauchst nur einen klaren Anfang. Welches Gespräch schiebst du gerade vor dir her? Musik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-05T16:30:00.000Z",
-      "sentAt": "2026-10-05T16:35:38.032Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7693222229953301793?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac354eeca1380ada84d2327_video.mp4"
         }
       ]
     }
