@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-17T09:13:19.282368+00:00",
+  "checked_at_utc": "2026-10-17T13:39:11.591937+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -43,15 +43,15 @@
     {
       "id": "6ad28e7c52adf2bfae5fd813",
       "text": "Kennst du das? Jemand erzählt dir etwas, und in deinem Kopf entsteht schon die Antwort. Versuch heute das Gegenteil: Hör erst zu, ohne sofort zu bewerten oder einen Rat zu geben. Manchmal ist echtes Interesse wertvoller als jede Lösung. Wem schenkst du heute deine volle Aufmerksamkeit?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Familiar Roads (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-17T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-17T10:02:08.299Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7697574602444229920",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-17-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad28e7c52adf2bfae5fd813_video.mp4"
         }
       ]
     },
