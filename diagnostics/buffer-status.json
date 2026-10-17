@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-17T13:39:11.591937+00:00",
+  "checked_at_utc": "2026-10-17T17:02:52.975212+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -28,15 +28,15 @@
     {
       "id": "6ad28e6587c4935770997d3a",
       "text": "Du sitzt mit Freunden zusammen, und plötzlich greifst du zum Handy. Dabei passiert das Beste vielleicht genau vor dir. Leg es für eine Weile weg. Hör das Lachen, sieh die Gesichter, sei wirklich dabei. Nicht jeder schöne Moment braucht ein Foto, um in Erinnerung zu bleiben.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Remember (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-17T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-17T16:32:49.640Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7697675150925335840",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-17-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad28e6587c4935770997d3a_video.mp4"
         }
       ]
     },
