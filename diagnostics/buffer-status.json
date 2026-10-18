@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-18T14:31:05.286763+00:00",
+  "checked_at_utc": "2026-10-18T18:02:04.534055+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -28,15 +28,15 @@
     {
       "id": "6ad3e5a0e272c4918fa07407",
       "text": "Du willst jemandem sagen, was dich stört? Versuch es ohne Angriff. Beschreibe die Situation, sag, was sie bei dir auslöst, und hör dir die andere Sicht an. Kritik kann eine Tür öffnen oder zuschlagen. Deine Wortwahl entscheidet mit.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-18T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-18T16:31:08.024Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7698046085473914145",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-18-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad3e5a0e272c4918fa07407_video.mp4"
         }
       ]
     },
