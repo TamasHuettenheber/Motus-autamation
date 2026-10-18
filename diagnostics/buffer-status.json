@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-18T18:02:04.534055+00:00",
+  "checked_at_utc": "2026-10-18T20:33:16.981983+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -13,15 +13,15 @@
     {
       "id": "6ad3e5870a208cb32339e00f",
       "text": "Der Sonntagabend ist kein Countdown für neue Pflichten. Vielleicht gibt es in der kommenden Woche einen Menschen, einen Ort oder einen Moment, auf den du dich freuen kannst. Gib diesem Gedanken Raum. Vorfreude ist auch eine Form von Energie.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-18T20:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-18T20:01:41.230Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7698100260358393121",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-18-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad3e5870a208cb32339e00f_video.mp4"
         }
       ]
     },
