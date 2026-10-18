@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-18T00:53:48.202126+00:00",
+  "checked_at_utc": "2026-10-18T05:46:42.750547+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -58,15 +58,15 @@
     {
       "id": "6ad3e573e272c4918fa06d02",
       "text": "Sonntagmorgen. Nicht jeder Plan überlebt die Wirklichkeit. Vielleicht ändert sich heute etwas, auf das du dich gefreut hast. Das muss den Tag nicht ruinieren. Manchmal entsteht gerade aus einer unerwarteten Wendung etwas Gutes. Bleib offen für das, was tatsächlich möglich ist.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-18T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-18T05:01:51.341Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7697868216952966432",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-18-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad3e573e272c4918fa06d02_video.mp4"
         }
       ]
     },
