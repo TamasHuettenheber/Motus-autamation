@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-19",
+  "slots": [
+    {
+      "slot": "0700",
+      "time": "07:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/52ee19fe-7e53-422b-a90f-889f5ced5443.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/8296235/8296235-hd_1080_1920_25fps.mp4",
+      "text": "Montagmorgen. Vielleicht ist dein Ziel größer, als andere es für vernünftig halten. Du musst deinen Ehrgeiz nicht kleinreden, um niemanden zu irritieren. Frag dich heute nicht, ob dein Wunsch zu groß ist, sondern ob er wirklich deiner ist. Wenn ja, darfst du ihn ernst nehmen. Auch an einem ganz normalen Montag."
+    },
+    {
+      "slot": "1200",
+      "time": "12:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/0cf3b418-3863-4c71-9658-f2c2c816248e.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/8873099/8873099-hd_1080_1920_25fps.mp4",
+      "text": "Eine Geschichte macht die Runde. Jemand soll etwas gesagt oder getan haben. Bevor du sie weitererzählst, frag nach der Quelle. Ist es eine Tatsache, eine Vermutung oder nur Hörensagen? Fairness beginnt manchmal damit, ein Gerücht nicht weiterzutragen. Wem würdest du dieselbe Sorgfalt wünschen?"
+    },
+    {
+      "slot": "1830",
+      "time": "18:30",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/264a6cf6-5af0-4bd3-a79c-9177ee8dc84c.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/13658220/13658220-hd_1920_1080_25fps.mp4",
+      "text": "Am Tisch sind sich plötzlich alle einig. Nur du siehst es anders. Schweigen wäre bequem, aber deine Meinung zählt trotzdem. Sag ruhig, was du denkst, ohne die anderen abzuwerten. Haltung zeigt sich nicht darin, am lautesten zu sein, sondern auch bei Gegenwind respektvoll zu bleiben."
+    },
+    {
+      "slot": "2200",
+      "time": "22:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/2e48a4d4-6a80-4563-8e53-ba93e667688c.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/7975481/7975481-hd_1080_1920_30fps.mp4",
+      "text": "Das Licht an einer Hauswand. Der Geruch nach Regen. Ein Satz, der dich zum Lächeln gebracht hat. Nicht jeder wertvolle Moment ist ein großes Ereignis. Bevor dieser Montag endet, denk an etwas Unscheinbares, das du sonst übersehen hättest. Manchmal steckt genau dort das Schöne."
+    }
+  ]
+}
