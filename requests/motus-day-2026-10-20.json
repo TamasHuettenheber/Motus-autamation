@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-20",
+  "slots": [
+    {
+      "slot": "0700",
+      "time": "07:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/e070e380-3ff1-440a-97d7-552d281d777d.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/9198715/9198715-hd_1080_1920_25fps.mp4",
+      "text": "Nicht alles, was du noch nicht kannst, ist ein Beweis gegen dich. Vielleicht ist es einfach etwas, das du noch lernen darfst. Neugier beginnt mit einer ehrlichen Frage: Wie funktioniert das eigentlich? Du musst heute niemandem beweisen, dass du schon alles weißt. Hör aufmerksam zu, probiere etwas aus und erlaube dir, Anfänger zu sein. Wer neugierig bleibt, entdeckt Möglichkeiten, die anderen entgehen."
+    },
+    {
+      "slot": "1200",
+      "time": "12:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/d538d789-8c93-4166-b867-446508dafe7d.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/13802094/13802094-uhd_2160_3840_24fps.mp4",
+      "text": "In einer Gruppe fällt oft schnell eine Entscheidung. Die Lautesten haben gesprochen, und alle nicken. Aber vielleicht sitzt da jemand, dessen Perspektive noch fehlt. Eine einzige Frage kann das ändern: Wie siehst du das? Andere einzubeziehen heißt nicht, immer einer Meinung zu sein. Es heißt, Menschen ernst zu nehmen, bevor das Ergebnis feststeht. Denk heute an die Person, die selten als Erste spricht."
+    },
+    {
+      "slot": "1830",
+      "time": "18:30",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/beba65c2-38fb-4663-a08f-b03c9e73377b.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/8448889/8448889-uhd_3840_2160_25fps.mp4",
+      "text": "Manchmal läuft etwas gut, weil jemand im Hintergrund mitgedacht hat. Die Kollegin, die vorbereitet. Der Freund, der nachfragt. Der Mensch, der still Verantwortung übernimmt. Solche Beiträge verschwinden leicht im Alltag. Wenn dir heute jemand geholfen hat, sag nicht nur schnell Danke. Sag, was du konkret gesehen und geschätzt hast. Anerkennung wird besonders wertvoll, wenn sie ehrlich und genau ist."
+    },
+    {
+      "slot": "2200",
+      "time": "22:00",
+      "timezone": "Europe/Berlin",
+      "audio_url": "https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/7572fa99-0d18-4a85-9a60-69c938d4dad7.mp3",
+      "broll_url": "https://videos.pexels.com/video-files/5838469/5838469-uhd_2160_4096_30fps.mp4",
+      "text": "Du darfst über etwas verärgert sein und trotzdem entscheiden, den Ärger nicht mit in die Nacht zu nehmen. Loslassen bedeutet nicht, dass das Verhalten anderer in Ordnung war. Und es bedeutet auch nicht, deine Grenzen aufzugeben. Du kannst klar wissen, was du morgen ansprechen willst, ohne es heute hundertmal im Kopf zu wiederholen. Die Grenze bleibt. Nur die innere Dauerschleife darf enden."
+    }
+  ]
+}
