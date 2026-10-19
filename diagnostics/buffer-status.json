@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-19T06:08:46.841167+00:00",
+  "checked_at_utc": "2026-10-19T14:36:46.552316+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -43,15 +43,15 @@
     {
       "id": "6ad52fbeae173d6e00194bf4",
       "text": "Eine Geschichte macht die Runde. Jemand soll etwas gesagt oder getan haben. Bevor du sie weitererzählst, frag nach der Quelle. Ist es eine Tatsache, eine Vermutung oder nur Hörensagen? Fairness beginnt manchmal damit, ein Gerücht nicht weiterzutragen. Wem würdest du dieselbe Sorgfalt wünschen?\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Destiny (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-19T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-19T10:02:52.977Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7698316961767279904",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-19-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad52fbeae173d6e00194bf4_video.mp4"
         }
       ]
     },
