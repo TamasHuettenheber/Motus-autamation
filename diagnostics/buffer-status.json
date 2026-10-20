@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-20T11:25:48.600311+00:00",
+  "checked_at_utc": "2026-10-20T16:52:03.052350+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -28,15 +28,15 @@
     {
       "id": "6ad6915d6c850f9ae367354b",
       "text": "Manchmal läuft etwas gut, weil jemand im Hintergrund mitgedacht hat. Die Kollegin, die vorbereitet. Der Freund, der nachfragt. Der Mensch, der still Verantwortung übernimmt. Solche Beiträge verschwinden leicht im Alltag. Wenn dir heute jemand geholfen hat, sag nicht nur schnell Danke. Sag, was du konkret gesehen und geschätzt hast. Anerkennung wird besonders wertvoll, wenn sie ehrlich und genau ist.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – A Memory Away (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-20T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-20T16:33:05.304Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7698788463239367969",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-20-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad6915d6c850f9ae367354b_video.mp4"
         }
       ]
     },
