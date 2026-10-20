@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-20T16:52:03.052350+00:00",
+  "checked_at_utc": "2026-10-20T20:29:26.204448+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -13,15 +13,15 @@
     {
       "id": "6ad69167fb737fdba8f0ef01",
       "text": "Du darfst über etwas verärgert sein und trotzdem entscheiden, den Ärger nicht mit in die Nacht zu nehmen. Loslassen bedeutet nicht, dass das Verhalten anderer in Ordnung war. Und es bedeutet auch nicht, deine Grenzen aufzugeben. Du kannst klar wissen, was du morgen ansprechen willst, ohne es heute hundertmal im Kopf zu wiederholen. Die Grenze bleibt. Nur die innere Dauerschleife darf enden.\n\n#motus #grenzensetzen #selbstrespekt #kommunikation #alltagspsychologie\n\nMusik: Tanner Helland – Nevermore (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-20T20:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-20T20:02:49.907Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7698842516027673888",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-20-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad69167fb737fdba8f0ef01_video.mp4"
         }
       ]
     },
