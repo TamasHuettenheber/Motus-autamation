@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-20T00:15:40.846350+00:00",
+  "checked_at_utc": "2026-10-20T05:56:05.073244+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -58,15 +58,15 @@
     {
       "id": "6ad691704d4b93887a02c705",
       "text": "Nicht alles, was du noch nicht kannst, ist ein Beweis gegen dich. Vielleicht ist es einfach etwas, das du noch lernen darfst. Neugier beginnt mit einer ehrlichen Frage: Wie funktioniert das eigentlich? Du musst heute niemandem beweisen, dass du schon alles weißt. Hör aufmerksam zu, probiere etwas aus und erlaube dir, Anfänger zu sein. Wer neugierig bleibt, entdeckt Möglichkeiten, die anderen entgehen.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Wild Waters (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-20T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-20T05:01:51.943Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7698610376467942689",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-20-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad691704d4b93887a02c705_video.mp4"
         }
       ]
     },
