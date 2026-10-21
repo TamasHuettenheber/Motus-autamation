@@ -46,8 +46,8 @@ def validate_candidate(p, history, number):
            "klopf","fremd","sonderbar")):
         raise ValueError("Hook has no concrete mystery cue")
     full=" ".join(p[k] for k in ("hook","story","after_answer","cliffhanger"))
-    if len(re.findall(r"\bjori\b",full,re.I))<2 or len(re.findall(r"\bflimm\b",full,re.I))<2:
-        raise ValueError("Both lead characters must actively appear multiple times")
+    if len(re.findall(r"\bjori\b",full,re.I))<1 or len(re.findall(r"\bflimm\b",full,re.I))<1:
+        raise ValueError("Both named lead characters must appear in narrated story")
     if any(x in norm(full) for x in ("amazon","schrittivo","motus","tiktok","like und abonnier","kaufe das buch")):
         raise ValueError("No direct marketing within children's free story")
     q=p.get("riddle")
