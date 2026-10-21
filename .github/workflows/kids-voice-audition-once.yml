@@ -1,0 +1,42 @@
+name: Jori & Flimm Omi Voice Audition (one-time, no publishing)
+on:
+  push:
+    branches:
+      - feature/jori-flimm-kids-pipeline
+    paths:
+      - .github/workflows/kids-voice-audition-once.yml
+
+permissions:
+  contents: read
+
+jobs:
+  voice-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout Jori-only source
+        uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-kids-pipeline
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            kids/jori-flimm
+      - name: Verify ffmpeg installed and free key exists
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+        run: |
+          command -v ffmpeg
+          command -v ffprobe
+          test -n "$JORI_GEMINI_API_KEY" || { echo 'Free-tier key absent'; exit 1; }
+      - name: Generate three short audio-only auditions (no social post)
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+        run: python3 kids/jori-flimm/scripts/voice_audition_gemini.py
+      - name: Archive the user-listenable German samples
+        uses: actions/upload-artifact@v4
+        with:
+          name: Jori-Flimm-Omi-Erzaehlstimmen-LAUT-PROBEN
+          path: voice_auditions/
+          retention-days: 7
+          if-no-files-found: error
