@@ -1,0 +1,47 @@
+name: Jori Flimm – five Sulafat narrations (private pilots)
+
+on:
+  push:
+    branches:
+      - feature/jori-flimm-neustart-folge001
+    paths:
+      - .github/workflows/jori-relaunch-five-audio-once.yml
+
+permissions:
+  contents: read
+
+jobs:
+  audio-preview:
+    name: Voice ${{ matrix.episode }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        episode: [1,2,3,4,5]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            kids/jori-flimm
+      - name: Install FFmpeg
+        run: |
+          sudo timeout 180s apt-get update -qq
+          sudo timeout 180s apt-get install -y -qq ffmpeg
+      - name: Narrate with user-approved Sulafat (no social publishing)
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+        run: |
+          test -n "$JORI_GEMINI_API_KEY" || { echo "Gemini key not connected"; exit 1; }
+          python3 kids/jori-flimm/relaunch-v2/scripts/render_audio_for_episode.py --episode ${{ matrix.episode }}
+      - name: Save private TTS preview artifacts only
+        uses: actions/upload-artifact@v4
+        with:
+          name: Jori-Folge-${{ matrix.episode }}-Sulafat-Audio-Pilot
+          path: out/audio/
+          retention-days: 7
+          if-no-files-found: error
