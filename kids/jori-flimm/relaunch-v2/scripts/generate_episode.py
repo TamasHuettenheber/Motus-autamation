@@ -60,6 +60,8 @@ def validate_candidate(p, history, number):
             raise ValueError(f"Missing or invalid riddle {key}")
     if q.get("pause_seconds") != 7:
         raise ValueError("Riddle must contain exactly seven seconds of thinking time")
+    if norm(q["evidence_in_story"]) not in norm(p["story"]):
+        raise ValueError("Clue not literally present in the story before the riddle")
     if norm(q["answer"]) in norm(p["hook"]+" "+p["story"]):
         # Only reject multiword / unambiguous answers, avoid incidental common-word false positives
         if len(norm(q["answer"]))>=13:
@@ -197,6 +199,8 @@ def main():
         "mit Mond/Stern/Schneeflocke erwähnt sind müssen ALLE DREI Zeichen "
         "gut sichtbar im Bildmotiv beschrieben werden. Bildunterschriften "
         "dürfen fehlende Bildobjekte nicht ersetzen. "
+        "Das Feld riddle.evidence_in_story MUSS ein wörtliches Zitat der "
+        "entscheidenden Rätselhinweise aus dem Feld story sein. "
         "In Folge 001 begegnen sich Jori und Flimm erstmalig und lernen "
         "einander in einem eigenen einfachen Lichtabenteuer kennen; "
         "keine Erinnerung an die alten Testfolgen oder das Buch."
