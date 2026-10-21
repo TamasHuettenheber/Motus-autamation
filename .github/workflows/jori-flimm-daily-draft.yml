@@ -7,6 +7,7 @@ on:
     paths:
       - kids/jori-flimm/scripts/generate_daily_story.py
       - kids/jori-flimm/scripts/test_generate_daily_story.py
+      - kids/jori-flimm/scripts/test_episode002_feedback.py
       - kids/jori-flimm/scripts/test_build_storyboard.py
       - kids/jori-flimm/scripts/build_storyboard.py
       - kids/jori-flimm/scripts/compile_preview_episode.py
