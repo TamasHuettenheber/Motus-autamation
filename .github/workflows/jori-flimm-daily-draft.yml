@@ -12,6 +12,7 @@ on:
       - kids/jori-flimm/scripts/build_storyboard.py
       - kids/jori-flimm/scripts/compile_preview_episode.py
       - kids/jori-flimm/scripts/test_compile_preview_episode.py
+      - kids/jori-flimm/scripts/generate_voice_gemini.py
       - .github/workflows/jori-flimm-daily-draft.yml
   workflow_dispatch:
     inputs:
@@ -51,7 +52,7 @@ jobs:
         run: python -m pip install 'Pillow>=11,<13'
       - name: Syntax, narrative tests and image preview tests (no API key)
         run: |
-          python -m py_compile kids/jori-flimm/scripts/generate_daily_story.py kids/jori-flimm/scripts/build_storyboard.py kids/jori-flimm/scripts/compile_preview_episode.py
+          python -m py_compile kids/jori-flimm/scripts/generate_daily_story.py kids/jori-flimm/scripts/build_storyboard.py kids/jori-flimm/scripts/compile_preview_episode.py kids/jori-flimm/scripts/generate_voice_gemini.py
           python -m unittest discover -s kids/jori-flimm/scripts -p 'test_*.py' -v
           python kids/jori-flimm/scripts/generate_daily_story.py --dry-run
           python kids/jori-flimm/scripts/build_storyboard.py \
