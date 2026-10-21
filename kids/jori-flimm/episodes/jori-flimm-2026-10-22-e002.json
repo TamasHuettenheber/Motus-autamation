@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-22",
+  "episode_number": 2,
+  "title": "Die Glocke hinter dem Brückentor",
+  "hook": "Hinter dem alten Brückentor bittet eine kleine Stimme um Hilfe.",
+  "narration": "Kaum hatten Jori und Flimm das alte Brückentor geöffnet, hörten sie ein leises Klingen. Auf einem Stein saß ein kleiner Igel mit einer viel zu großen Mütze. „Gut, dass ihr da seid!“, piepste er. „Ich soll die richtige Glocke finden, aber alle sehen ähnlich aus.“ An der Wand hingen drei Glocken. Die erste trug einen Mond, die zweite einen Stern und die dritte eine Schneeflocke. Daneben stand: „Suche das Zeichen, das auch Flimms Bauch zum Leuchten bringt.“ Jori beugte sich zu Flimm hinunter. In seinem runden Bauch strahlte ein goldener Stern. Jori zeigte auf die Glocken und fragte: Welche Glocke hat das Zeichen, das auch auf Flimms Bauch leuchtet? [[PAUSE:7]] Die Glocke mit dem Stern! Vorsichtig zog der Igel an ihrem Band. Ding! Sofort leuchtete ein schmaler Weg zwischen den Bäumen auf. „Das ist der Weg zur Lichtwerkstatt“, flüsterte der Igel. Hinter der nächsten Biegung raschelte etwas im Schnee.",
+  "riddle": {
+    "type": "logic",
+    "question": "Welche Glocke hat das Zeichen, das auch auf Flimms Bauch leuchtet?",
+    "answer": "Die Glocke mit dem Stern",
+    "pause_seconds": 7
+  },
+  "scenes": [
+    {
+      "order": 1,
+      "duration_seconds": 11,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-01.png",
+      "caption": "Jori und Flimm stehen hinter dem geöffneten verschneiten Brückentor in Flockenfels, warmes goldenes Licht fällt auf den Waldweg, vertraute F"
+    },
+    {
+      "order": 2,
+      "duration_seconds": 11,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-02.png",
+      "caption": "Ein kleiner freundlicher Igel mit einer großen gestrickten Mütze sitzt auf einem Stein und bittet Jori und Flimm um Hilfe, sichere gemütlich"
+    },
+    {
+      "order": 3,
+      "duration_seconds": 11,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-03.jpg",
+      "caption": "Drei unterschiedliche Glocken hängen an einer Holzwand im verschneiten Park, gut erkennbare Symbole Mond, Stern und Schneeflocke, Jori beoba"
+    },
+    {
+      "order": 4,
+      "duration_seconds": 11,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-04.jpg",
+      "caption": "Großaufnahme von Flimms rundem goldenem Laternenkörper: Im Bauch strahlt gut sichtbar ein Stern, Jori denkt über das freundliche Rätsel nach"
+    },
+    {
+      "order": 5,
+      "duration_seconds": 11,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-05.png",
+      "caption": "Der Igel zieht vorsichtig am Band der Glocke mit Stern, ein warmer Lichtstrahl beginnt einen schmalen Waldweg zu beleuchten, Jori und Flimm "
+    },
+    {
+      "order": 6,
+      "duration_seconds": 11,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-06.png",
+      "caption": "Ein verschneiter Pfad führt in Richtung Lichtwerkstatt, im Vordergrund Jori, Flimm und der Igel, hinter der Biegung raschelt es geheimnisvol"
+    }
+  ],
+  "publish_time": "14:00",
+  "qc": {
+    "book_spoiler_check": false,
+    "continuity_check": false,
+    "duplicate_check": false
+  },
+  "preview_only": true,
+  "continuity_note": "Jori und Flimm begegnen hinter dem Brückentor einem Igel, helfen ihm das Sternzeichen zu erkennen und entdecken einen beleuchteten Weg zur Lichtwerkstatt.",
+  "cta": "Fortsetzung morgen auf dem eigenen Jori-&-Flimm-Kanal."
+}
