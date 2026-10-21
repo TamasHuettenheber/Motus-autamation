@@ -140,6 +140,22 @@ def generate_with_one_repair(prompt,model,history,number):
         validate_candidate(p2,history,number)
         return p2
 
+def preexisting_season_history():
+    """Episodes 001–005 are written; never regenerate or renumber them."""
+    source=BASE/"staffel1_folgen_001_005.json"
+    data=json.loads(source.read_text(encoding="utf-8"))
+    items=data["episodes"]
+    if [int(p["episode_number"]) for p in items] != [1,2,3,4,5]:
+        raise RuntimeError("Initial episodes not ordered 001–005")
+    return [{
+        "episode_number":int(p["episode_number"]),
+        "title":p["title"],"hook":p["hook"],
+        "date":(dt.date(2026,10,23)+dt.timedelta(days=int(p["episode_number"])-1)).isoformat(),
+        "riddle":{"type":p.get("clue_mode","logic"),"question":p["question"],
+                  "answer":p["answer"]},
+        "cliffhanger":p["cliff"],"continuity_note":p.get("continuity","")
+    } for p in items]
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--date",default="")
@@ -158,12 +174,21 @@ def main():
     folder=BASE/"drafts"
     pending=sorted((json.loads(x.read_text(encoding="utf-8"))
                    for x in folder.glob("*.json")),key=lambda d:int(d["episode_number"])) if folder.exists() else []
-    if any(d.get("date")==target for d in pending):
-        print(f"ALREADY_EXISTS_REBOOT_DRAFT {target}")
+    initial=preexisting_season_history()
+    if any(d.get("date")==target for d in pending+initial):
+        print(f"ALREADY_EXISTS_REBOOT_DRAFT_OR_PLANNED_EPISODE {target}")
         return
-    if len(pending)>=7:
-        raise RuntimeError("Seven drafts without final visual/audio QC: stop")
-    history=ledger.get("episodes",[])+pending
+    reserved_after_five=[d for d in pending if int(d["episode_number"])>5]
+    # Episode 001 exists twice as a pilot story and a season synopsis, but it
+    # is one episode, not a duplicate reservation.
+    for p in pending:
+        if int(p["episode_number"])<=5:
+            parent=initial[int(p["episode_number"])-1]
+            if p.get("title")!=parent["title"]:
+                raise RuntimeError("Conflicting initial episode drafts")
+    if len(reserved_after_five)>=7:
+        raise RuntimeError("Seven additional drafts awaiting artwork/QC; stop")
+    history=ledger.get("episodes",[])+initial+reserved_after_five
     numbers=[int(x["episode_number"]) for x in history]
     if len(numbers)!=len(set(numbers)):
         raise RuntimeError("Duplicate episode reservations")
@@ -187,7 +212,7 @@ def main():
         "Kein langes Hallo, keine langweilige Lehrerstimme, keine Wiederholungen. "
         "Geschichte gemütlich-magisch, etwas witzig. "
         "Im Feld hook 30–150 Zeichen mit ungewöhnlichem Ereignis, "
-        "story 270–820 Zeichen, after_answer 60–330 Zeichen, "
+        "story 185–820 Zeichen, after_answer 60–330 Zeichen, "
         "cliffhanger 35–200 Zeichen. "
         "Antworte ausschließlich mit einem JSON-OBJEKT mit Feldern: "
         "title, hook, story, after_answer, cliffhanger, "
@@ -202,9 +227,10 @@ def main():
         "dürfen fehlende Bildobjekte nicht ersetzen. "
         "Das Feld riddle.evidence_in_story MUSS ein wörtliches Zitat der "
         "entscheidenden Rätselhinweise aus dem Feld story sein. "
-        "In Folge 001 begegnen sich Jori und Flimm erstmalig und lernen "
-        "einander in einem eigenen einfachen Lichtabenteuer kennen; "
-        "keine Erinnerung an die alten Testfolgen oder das Buch."
+        "Setze ab Folge 006 die neuen Folgen 001 bis 005 logisch fort; "
+        "NIEMALS noch einmal das erste Kennenlernen erzählen. Beginne unmittelbar "
+        "mit dem zuletzt offenen Cliffhanger, bringe neues Rätsel und am Ende "
+        "einen NEUEN offenen Cliffhanger, niemals Buchmissionen."
         "\nFIGUREN-BIBEL:\n"+(CANON/"series-bible.md").read_text(encoding="utf-8")[:8500]+
         "\nNEUSTART-REGELWERK:\n"+(BASE/"REGELWERK.md").read_text(encoding="utf-8")[:7000]+
         "\nKONTINUITÄT DER NEUEN STAFFEL:\n"+
