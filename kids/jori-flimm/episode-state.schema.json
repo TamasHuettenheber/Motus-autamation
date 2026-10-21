@@ -185,15 +185,67 @@
       ],
       "properties": {
         "book_spoiler_check": {
-          "const": true
+          "type": "boolean"
         },
         "continuity_check": {
-          "const": true
+          "type": "boolean"
         },
         "duplicate_check": {
-          "const": true
+          "type": "boolean"
+        }
+      }
+    },
+    "preview_only": {
+      "type": "boolean",
+      "description": "True means strictly unapproved draft render; no ledger/state changes or public publishing"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "preview_only": {
+            "const": true
+          }
+        },
+        "required": [
+          "preview_only"
+        ]
+      },
+      "then": {
+        "properties": {
+          "qc": {
+            "properties": {
+              "book_spoiler_check": {
+                "const": false
+              },
+              "continuity_check": {
+                "const": false
+              },
+              "duplicate_check": {
+                "const": false
+              }
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "qc": {
+            "properties": {
+              "book_spoiler_check": {
+                "const": true
+              },
+              "continuity_check": {
+                "const": true
+              },
+              "duplicate_check": {
+                "const": true
+              }
+            }
+          }
         }
       }
     }
-  }
+  ]
 }
