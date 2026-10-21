@@ -94,15 +94,23 @@ def main():
     dt.date.fromisoformat(target)
     state = read_json("state/series-state.json")
     ledger = read_json("state/episode-ledger.json")
-    number = int(state["next_episode_number"])
     folder = BASE / "drafts"
-    destination = folder / f"jori-flimm-{target}-e{number:03d}.json"
-    if destination.exists():
-        print(f"ALREADY_EXISTS {destination}")
+    pending = sorted(
+        [json.loads(p.read_text(encoding="utf-8")) for p in folder.glob("*.json")],
+        key=lambda item: int(item["episode_number"])
+    ) if folder.exists() else []
+    if any(p.get("date") == target for p in pending):
+        print(f"ALREADY_EXISTS draft for {target}; no duplicate")
         return
-    # Stop rather than write incompatible E002 drafts on consecutive days.
-    if any(folder.glob("*.json")) if folder.exists() else False:
-        raise RuntimeError("An earlier draft awaits illustrations/QC; continuity not yet advanced")
+    # A bounded seven-story pilot may be drafted without modifying approved continuity.
+    # Publishing and full renderer QC remain disabled for every pending draft.
+    if len(pending) >= 7:
+        raise RuntimeError("Seven unpublished drafts pending; review required before more drafts")
+    number = max(
+        [int(state["next_episode_number"])] +
+        [int(p["episode_number"]) + 1 for p in pending]
+    )
+    destination = folder / f"jori-flimm-{target}-e{number:03d}.json"
     bible = (BASE / "series-bible.md").read_text(encoding="utf-8")
     context = {
         "next_episode_number": number, "date": target,
@@ -110,7 +118,15 @@ def main():
         "prior_episodes": [{
             "episode_number": e.get("episode_number"), "title": e.get("title"),
             "hook": e.get("hook"), "riddle": e.get("riddle")
-        } for e in ledger.get("episodes", [])[-30:]]
+        } for e in ledger.get("episodes", [])[-30:]],
+        "unpublished_draft_continuity": [{
+            "episode_number": e.get("episode_number"),
+            "title": e.get("title"),
+            "hook": e.get("hook"),
+            "riddle": e.get("riddle"),
+            "continuity_note": e.get("continuity_note"),
+            "next_cliffhanger": e.get("next_cliffhanger")
+        } for e in pending]
     }
     prompt = (
         f"Schreibe die neue eigenständige Folge {number:03d} von Jori & Flimm "
@@ -132,7 +148,7 @@ def main():
         print(f"DRY_RUN_OK {target} e{number:03d}; no AI call, no cost, no publication")
         return
     data = generate(prompt, a.model)
-    validate(data, ledger.get("episodes", []), number)
+    validate(data, ledger.get("episodes", []) + pending, number)
     draft = {
         "schema_version": 1, "status": "draft_requires_illustration_and_qc",
         "approved_for_publish": False, "episode_number": number,
