@@ -159,11 +159,15 @@ def preexisting_season_history():
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--date",default="")
+    parser.add_argument("--lead-days",type=int,default=3,
+                        help="Publishing date offset, not draft creation date")
     parser.add_argument("--model",default="gemini-3.5-flash-lite")
     parser.add_argument("--dry-run",action="store_true")
     args=parser.parse_args()
+    if not 1 <= args.lead_days <= 7:
+        raise ValueError("Production lead must be 1..7 days")
     target=args.date or (dt.datetime.now(ZoneInfo("Europe/Berlin")).date()+
-                         dt.timedelta(days=1)).isoformat()
+                         dt.timedelta(days=args.lead_days)).isoformat()
     dt.date.fromisoformat(target)
     st=json.loads((BASE/"state/series-state.json").read_text(encoding="utf-8"))
     ledger=json.loads((BASE/"state/episode-ledger.json").read_text(encoding="utf-8"))
