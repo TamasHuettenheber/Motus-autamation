@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-21T04:33:53.903268+00:00",
+  "checked_at_utc": "2026-10-21T07:05:50.215239+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6ad861ead894396f66ce72dc",
+      "text": "Du musst nicht jeden Abend mit dem Gefühl beenden, alles geschafft zu haben. Manche Tage bleiben unordentlich, obwohl du dein Bestes gegeben hast. Erlaube dir, Unfertiges für heute stehen zu lassen. Das ist kein Aufgeben. Es ist die Entscheidung, deine Kraft nicht bis zum letzten Rest aufzubrauchen. Morgen braucht dich nicht erschöpft, sondern aufmerksam.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-22T20:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-22-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad861fa50009d9e9512e415",
+      "text": "Nicht jede volle Stunde bedeutet einen guten Tag. Manchmal bleibt ein einziges Gespräch länger in Erinnerung als zehn erledigte Aufgaben. Schau heute auf die Momente, die wirklich etwas verändert haben. Vielleicht hast du jemanden unterstützt oder etwas Neues verstanden. Das sind Erfolge, auch wenn sie auf keiner Aufgabenliste stehen. Ein Tag darf wertvoll sein, ohne bis zur letzten Minute verplant zu sein.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Remember (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-22T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-22-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad8621fa9967de0497c66ba",
+      "text": "Kennst du diesen Moment, in dem eine Nachricht sofort eine Reaktion auslöst? Vielleicht liest du Kritik und willst direkt zurückschreiben. Doch zwischen Reiz und Antwort liegt eine Entscheidung. Lies die Nachricht ein zweites Mal. Frag dich, was tatsächlich gesagt wurde und was du hineininterpretierst. Eine ruhige Antwort kann ein Gespräch retten, das eine impulsive Reaktion unnötig schwierig gemacht hätte.\n\n#motus #kommunikation #alltagspsychologie #selbstentwicklung #mentaleklarheit\n\nMusik: Tanner Helland – Familiar Roads (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-22T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-22-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad86204d894396f66ce761e",
+      "text": "Manchmal unterschätzt du, wie viel Mut schon darin steckt, zu deiner Meinung zu stehen. Nicht jeder wird deine Entscheidung verstehen. Das muss er auch nicht. Wenn du heute etwas vertrittst, das dir wichtig ist, sprich klar und respektvoll. Du darfst zuhören, ohne dich selbst aufzugeben. Selbstvertrauen entsteht nicht dadurch, dass alle zustimmen. Es wächst, wenn du dir selbst treu bleibst.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-22T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-22-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6ad83a3750009d9e9509744a",
       "text": "Nicht jeder offene Gedanke braucht heute noch eine Lösung. Manche Fragen werden klarer, wenn du ihnen Abstand gibst. Du kannst etwas Wichtiges notieren, den nächsten Schritt festhalten und dann bewusst aufhören, daran zu arbeiten. Ruhe ist kein verlorener Fortschritt. Sie gibt deinem Kopf die Gelegenheit, wieder Ordnung zu finden. Morgen kannst du mit frischer Aufmerksamkeit entscheiden, was wirklich dran ist.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
@@ -58,15 +118,15 @@
     {
       "id": "6ad83a4350009d9e950975ca",
       "text": "Ein neuer Tag bringt nicht automatisch eine neue Richtung. Die entsteht, wenn du erkennst, was dir wirklich wichtig ist. Vielleicht hast du gestern etwas aufgeschoben, weil die Entscheidung unbequem war. Heute darfst du genauer hinsehen: Was gewinnst du, wenn du dich festlegst? Und was kostet es dich, weiter zu warten? Klarheit muss nicht laut sein. Manchmal beginnt sie mit einem ehrlichen Entschluss.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Daybreak (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-21T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-21T05:00:58.446Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7698981482823552289",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-21-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad83a4350009d9e950975ca_video.mp4"
         }
       ]
     },
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac9527cbba9419ccbde36fb_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac95272bba9419ccbde365c",
-      "text": "Drei Worte können mehr verändern als zehn Erklärungen: Ich lag falsch. Ohne ein Aber dahinter. Ohne Schuldverschiebung. Wenn du heute jemanden verletzt oder falsch eingeschätzt hast, übernimm deinen Teil. Eine ehrliche Entschuldigung macht dich nicht kleiner. Sie macht Vertrauen wieder möglich. Wem schuldest du noch einen klaren Satz? #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – A Memory Away (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-10T16:30:00.000Z",
-      "sentAt": "2026-10-10T16:32:31.873Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7695077498878479648?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac95272bba9419ccbde365c_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac9528bbba9419ccbde3a39",
-      "text": "Du musst nicht alles allein herausfinden. Wenn du heute bei etwas feststeckst, frag jemanden nach seinem Blick darauf. Nicht nach einer fertigen Lösung. Nach einer Perspektive. Hilfe zu holen zeigt, dass dir das Ergebnis wichtiger ist als dein Stolz. Wen könntest du heute um einen ehrlichen Rat bitten? Teile diesen Gedanken mit jemandem, der alles allein tragen will. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Syntheticity (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-10T10:00:00.000Z",
-      "sentAt": "2026-10-10T10:01:37.457Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7694977019599129888?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac9528bbba9419ccbde3a39_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac9526abba9419ccbde3533",
-      "text": "Heute ist Samstag. Mach ihn nicht zur Kopie von gestern. Nimm einen Weg, den du noch nie gegangen bist. Frag jemanden etwas, das du wirklich wissen willst. Probier etwas aus, ohne vorher gut darin sein zu müssen. Neugier macht aus einem gewöhnlichen Tag eine neue Geschichte. Was entdeckst du heute? Schreib es in die Kommentare. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Wild Waters (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-10T05:00:00.000Z",
-      "sentAt": "2026-10-10T05:01:50.907Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7694899443044338977?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac9526abba9419ccbde3533_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac8034f53e023600019583d",
-      "text": "Nicht jeder ruhige Abend muss produktiv sein. Du darfst etwas Schönes tun, ohne dass es dich verbessert, weiterbringt oder auf irgendeiner Liste steht. Freude braucht keine Rechtfertigung. Was machst du heute einfach nur, weil du es magst? #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Hidden Tears (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-09T20:00:00.000Z",
-      "sentAt": "2026-10-09T20:02:29.471Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7694760725536918816?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac8034f53e023600019583d_video.mp4"
         }
       ]
     }
