@@ -56,7 +56,7 @@ def validate(d, previous, number):
             raise ValueError("Duplicate riddle")
     return True
 
-def generate(prompt, model):
+def generate(prompt, model, temperature=0.85):
     key = os.environ.get("JORI_GEMINI_API_KEY")
     if not key:
         raise RuntimeError("Missing GitHub secret JORI_GEMINI_API_KEY")
@@ -68,7 +68,7 @@ def generate(prompt, model):
             "contents": [{"role": "user", "parts": [{"text": prompt}]}],
             "generationConfig": {
                 "responseMimeType": "application/json",
-                "temperature": 0.85,
+                "temperature": temperature,
                 "maxOutputTokens": 2600
             }
         }).encode()
@@ -84,11 +84,39 @@ def generate(prompt, model):
     except (KeyError, ValueError, TypeError, IndexError) as exc:
         raise RuntimeError("Invalid generator JSON; no draft saved") from exc
 
+def generate_and_validate(prompt, model, previous, episode_number):
+    """One bounded correction attempt; never save content that fails QC."""
+    candidate = generate(prompt, model)
+    try:
+        validate(candidate, previous, episode_number)
+        return candidate
+    except (ValueError, TypeError, KeyError) as first_error:
+        print(f"STORY_QC_REPAIR_REQUESTED: {first_error}", flush=True)
+        correction_prompt = (
+            "Du bearbeitest einen bereits erzeugten, aber nicht freigegebenen "
+            "deutschen Kinderstory-Entwurf. Behebe den Qualitätsfehler "
+            "ohne neue Buchrätsel oder Brüche der Erzählung. "
+            "Antworte NUR als vollständig gültiges JSON-Objekt mit denselben "
+            "Pflichtfeldern wie der Entwurf. "
+            "Die wortwörtliche Zeichenfolge von riddle.question (inklusive "
+            "Satzzeichen) MUSS in narration VOR der einzigen Denkpause "
+            "[[PAUSE:7]] stehen. Die wortwörtliche Zeichenfolge "
+            "riddle.answer MUSS in narration DANACH stehen. "
+            "Behalte genau sechs bildgeeignete scene_briefs. "
+            "Korrigiere den genannten Fehler, niemals einfach QC-Gates "
+            "auf true setzen.\n\n"
+            f"FEHLER: {str(first_error)}\n\n"
+            f"ENTWURF: {json.dumps(candidate, ensure_ascii=False)}"
+        )
+        corrected = generate(correction_prompt, model, temperature=0.2)
+        validate(corrected, previous, episode_number)
+        return corrected
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--date", default="")
     parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--model", default="gemini-2.5-flash-lite")
+    parser.add_argument("--model", default="gemini-3.5-flash-lite")
     a = parser.parse_args()
     target = a.date or (dt.datetime.now(ZoneInfo("Europe/Berlin")).date() +
                         dt.timedelta(days=1)).isoformat()
@@ -151,8 +179,10 @@ def main():
         f"als unmittelbare Fortsetzung. Deutsch, kindgerecht 7-10 Jahre, "
         f"fröhlich, logisch, keine bezahlten Buchmissionen, Buchlösungen oder Werbung. "
         f"Ein originelles, aus dem Video lösbares Rätsel. "
-        f"Die wörtliche Rätselfrage muss im Sprechertext unmittelbar VOR [[PAUSE:7]] "
-        f"stehen, die wörtliche Lösung NACH der Pause. "
+        f"Die Zeichenfolge riddle.question muss wortwörtlich inklusive Satzzeichen "
+        f"in narration vor der EINZIGEN Markierung [[PAUSE:7]] vorkommen; "
+        f"riddle.answer muss wortwörtlich danach vorkommen. Beide dürfen "
+        f"keinesfalls nur sinngemäß paraphrasiert werden. "
         f"Ca. 650-950 Zeichen zusammenhängender Sprechertext. "
         f"Erzeuge NUR ein JSON-Objekt mit title, hook, narration, "
         f"riddle {{type,question,answer,pause_seconds:7}}, "
@@ -165,8 +195,7 @@ def main():
     if a.dry_run:
         print(f"DRY_RUN_OK {target} e{number:03d}; no AI call, no cost, no publication")
         return
-    data = generate(prompt, a.model)
-    validate(data, ledger.get("episodes", []) + pending, number)
+    data = generate_and_validate(prompt, a.model, ledger.get("episodes", []) + pending, number)
     draft = {
         "schema_version": 1, "status": "draft_requires_illustration_and_qc",
         "approved_for_publish": False, "episode_number": number,
