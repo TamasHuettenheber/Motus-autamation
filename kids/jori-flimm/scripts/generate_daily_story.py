@@ -26,6 +26,11 @@ def validate(d, previous, number):
             raise ValueError(f"Invalid story field: {name}")
     if len(d["narration"]) > 1900:
         raise ValueError("Narration too long")
+    spoken=normalized(d["narration"])
+    if spoken.count("jori") < 2 or spoken.count("flimm") < 2:
+        raise ValueError("Jori and Flimm must BOTH remain active protagonists")
+    # Main characters must be named in the clip, not merely in title metadata.
+
     if len(d.get("scene_briefs", [])) != 6 or any(
         not isinstance(s, str) or len(s) < 25 for s in d["scene_briefs"]
     ):
@@ -178,6 +183,10 @@ def main():
         f"Schreibe die neue eigenständige Folge {number:03d} von Jori & Flimm "
         f"als unmittelbare Fortsetzung. Deutsch, kindgerecht 7-10 Jahre, "
         f"fröhlich, logisch, keine bezahlten Buchmissionen, Buchlösungen oder Werbung. "
+        f"JORI und FLIMM sind die beiden aktiven Hauptfiguren; mindestens zweimal "
+        f"beide Namen im Sprechertext erwähnen. FLIMM muss selbst denken oder handeln, "
+        f"nicht nur eine Nebenfigur beobachten. Neue Figuren dürfen die beiden nie "
+        f"verdrängen; keine Geschichte fast ausschließlich über Igel oder Fremde. "
         f"Ein originelles, aus dem Video lösbares Rätsel. "
         f"Die Zeichenfolge riddle.question muss wortwörtlich inklusive Satzzeichen "
         f"in narration vor der EINZIGEN Markierung [[PAUSE:7]] vorkommen; "
