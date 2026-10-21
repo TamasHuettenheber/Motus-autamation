@@ -112,9 +112,14 @@ def main():
     )
     destination = folder / f"jori-flimm-{target}-e{number:03d}.json"
     bible = (BASE / "series-bible.md").read_text(encoding="utf-8")
+    continuity = dict(state.get("continuity", {}))
+    if "recently_used_visual_assets" in continuity:
+        continuity["recently_used_visual_assets"] = list(
+            dict.fromkeys(continuity["recently_used_visual_assets"][-24:])
+        )[-12:]
     context = {
         "next_episode_number": number, "date": target,
-        "continuity": state.get("continuity", {}),
+        "continuity": continuity,
         "prior_episodes": [{
             "episode_number": e.get("episode_number"), "title": e.get("title"),
             "hook": e.get("hook"), "riddle": e.get("riddle")
