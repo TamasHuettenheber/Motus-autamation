@@ -142,9 +142,17 @@ jobs:
           if float(p["riddle"]["pause_seconds"])>=5 and not p.get("audio_url") and len(pause_markers)!=1:
               raise SystemExit("A 5-10 second riddle pause needs an explicit narration marker")
           qc=p.get("qc") or {}
-          for key in ["book_spoiler_check","continuity_check","duplicate_check"]:
-              if qc.get(key) is not True:
-                  raise SystemExit(f"QC gate not true: {key}")
+          preview_only = p.get("preview_only") is True
+          if preview_only:
+              # Explicit, non-publishing visual+audio preview: no approval assertions,
+              # no ledger mutation, and no user-facing public posting.
+              if any(qc.get(k) is not False for k in
+                     ["book_spoiler_check","continuity_check","duplicate_check"]):
+                  raise SystemExit("Preview QC must explicitly remain false")
+          else:
+              for key in ["book_spoiler_check","continuity_check","duplicate_check"]:
+                  if qc.get(key) is not True:
+                      raise SystemExit(f"QC gate not true: {key}")
 
           def fingerprint(value):
               value=unicodedata.normalize("NFKC",str(value)).casefold()
@@ -167,6 +175,7 @@ jobs:
           safe=f"jori-flimm-{p['date']}-e{int(p['episode_number']):03d}"
           with open(os.environ["GITHUB_ENV"],"a",encoding="utf-8") as f:
               f.write(f"SAFE_NAME={safe}\n")
+              f.write(f"EPISODE_PREVIEW_ONLY={'true' if preview_only else 'false'}\n")
           os.makedirs("work",exist_ok=True)
           with open("work/payload.json","w",encoding="utf-8") as f:
               json.dump(p,f,ensure_ascii=False,indent=2)
@@ -397,6 +406,7 @@ jobs:
           retention-days: 7
 
       - name: Save render and episode metadata
+        if: env.EPISODE_PREVIEW_ONLY != 'true'
         env:
           BRANCH_NAME: ${{ github.ref_name }}
         run: |
