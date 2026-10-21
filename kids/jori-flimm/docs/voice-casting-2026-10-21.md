@@ -33,3 +33,10 @@
 
 ## Nächster Schritt
 Die Nutzerpräferenz zur Sprecherin und die Abspielbarkeit von MP3 versus MP4 auswerten. Anschließend die gewählte Stimme als feste Serienidentität konfigurieren und einen vollständigen, technisch und redaktionell kontrollierten Testfilm rendern.
+
+## Verbindliche Entscheidung des Nutzers (nach Hörproben)
+- **Stimme Nr. 3: Sulafat** ist vom Nutzer ausdrücklich ausgewählt und mit „passt optimal“ bewertet.
+- Sie ist die **fest eingestellte Erzählerin für Jori & Flimm**, nicht die frühere Victoria oder Kerstin.
+- Jori-&-Flimm-Story-Preview-Compiler setzt ab sofort Gemini TTS 3.8, `speaker_id: Sulafat`.
+- Vollständiger Episoden-002-Sulafat-Test: [GitHub Actions Run 39685764672](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/39685764672); Ergebnis und mobile tatsächliche Hörbarkeit erst nach Prüfung bestätigen.
+- Nicht mit MOTUS vermischen. Keine Veröffentlichung ohne separate Kanalanbindung und erfolgreiche menschliche/technische Qualitätsprüfung.
