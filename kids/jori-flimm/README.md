@@ -4,7 +4,7 @@ Status: isolated build on `feature/jori-flimm-kids-pipeline`. This work does not
 
 ## Content boundary
 
-The book `Die 24 verschwundenen Weihnachtslichter` is canon for character and world details only. Its 24 missions, 48 tasks, solutions, light-letter sequence, and final message stay exclusive to the book. Videos use new side stories and riddles.
+The book `Jori & Flimm und der Code des Herzlichts` is canon for character and world details only. Its 24 missions, 48 tasks, solutions, light-letter sequence, and final message stay exclusive to the book. Videos use new side stories and riddles.
 
 ## Free renderer
 
