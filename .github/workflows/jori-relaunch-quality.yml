@@ -1,0 +1,49 @@
+name: Jori & Flimm Neustart – Story und Freigabepruefung
+
+on:
+  push:
+    branches:
+      - feature/jori-flimm-neustart-folge001
+    paths:
+      - kids/jori-flimm/relaunch-v2/**
+      - .github/workflows/jori-relaunch-quality.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  episode-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            kids/jori-flimm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run creative story, real scene requirements and fail-closed video QA tests
+        run: |
+          python3 -m compileall -q kids/jori-flimm/relaunch-v2/scripts
+          python3 -m unittest discover -s kids/jori-flimm/relaunch-v2/scripts -p 'test_*.py' -v
+          python3 kids/jori-flimm/relaunch-v2/scripts/generate_episode.py --dry-run
+      - name: Check clean 001 state and mandatory narrator
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('kids/jori-flimm/relaunch-v2')
+          st=json.loads((p/'state/series-state.json').read_text(encoding='utf-8'))
+          assert st['series_version']=='relaunch-v2'
+          assert st['next_episode_number']==1
+          assert st['last_successful_episode']==0
+          assert st['voice']['speaker_id']=='Sulafat'
+          assert st['release_authorized'] is False
+          assert st['public_tiktok_connected'] is False
+          print('RELAUNCH_CI_OK: episode 001 first; publishing locked')
+          PY
