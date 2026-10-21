@@ -54,6 +54,7 @@ def validate(d, previous, number):
                 raise ValueError(f"Duplicate {field}")
         if normalized((old.get("riddle") or {}).get("question", "")) == normalized(r["question"]):
             raise ValueError("Duplicate riddle")
+    return True
 
 def generate(prompt, model):
     key = os.environ.get("JORI_GEMINI_API_KEY")
