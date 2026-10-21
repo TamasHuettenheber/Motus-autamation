@@ -16,7 +16,7 @@ class CompilePreviewEpisodeTests(unittest.TestCase):
             payload=compile_preview(FIXTURE,folder)
             self.assertTrue(payload["preview_only"])
             self.assertEqual(payload["publish_time"],"14:00")
-            self.assertEqual(payload["voice"]["speaker_id"],"df_victoria")
+            self.assertEqual(payload["voice"]["speaker_id"],"kerstin")
             self.assertTrue(all(v is False for v in payload["qc"].values()))
             self.assertEqual(len(payload["scenes"]),6)
             self.assertEqual(len(set(s["image_url"] for s in payload["scenes"])),6)
