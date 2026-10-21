@@ -66,9 +66,9 @@ def compile_preview(draft_path, preview_folder):
         "riddle": riddle,
         "scenes": out_scenes,
         "voice": {
-            "provider": "Piper local TTS",
-            "model": "de_DE-kerstin-low",
-            "speaker_id": "kerstin",
+            "provider": "Gemini TTS 3.8",
+            "model": "gemini-3.8-flash-tts",
+            "speaker_id": "Sulafat",
             "speed": 1.0
         },
         "publish_time": "14:00",
