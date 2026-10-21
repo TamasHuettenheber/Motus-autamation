@@ -21,6 +21,7 @@ def main():
         raise ValueError("Wrong narrator or wrong riddle pause")
     work=Path("work")
     work.mkdir(exist_ok=True)
+    epi["voice"]["model"]=__import__("os").environ.get("JORI_TTS_MODEL","gemini-3.8-flash-tts")
     (work/"payload.json").write_text(json.dumps({
        "narration":epi["narration"],
        "voice":epi["voice"]
