@@ -2,11 +2,11 @@
   "date": "2026-10-22",
   "episode_number": 2,
   "title": "Die Glocke hinter dem Brückentor",
-  "hook": "Hinter dem alten Brückentor bittet eine kleine Stimme um Hilfe.",
-  "narration": "Kaum hatten Jori und Flimm das alte Brückentor geöffnet, hörten sie ein leises Klingen. Auf einem Stein saß ein kleiner Igel mit einer viel zu großen Mütze. „Gut, dass ihr da seid!“, piepste er. „Ich soll die richtige Glocke finden, aber alle sehen ähnlich aus.“ An der Wand hingen drei Glocken. Die erste trug einen Mond, die zweite einen Stern und die dritte eine Schneeflocke. Daneben stand: „Suche das Zeichen, das auch Flimms Bauch zum Leuchten bringt.“ Jori beugte sich zu Flimm hinunter. In seinem runden Bauch strahlte ein goldener Stern. Jori zeigte auf die Glocken und fragte: Welche Glocke hat das Zeichen, das auch auf Flimms Bauch leuchtet? [[PAUSE:7]] Die Glocke mit dem Stern! Vorsichtig zog der Igel an ihrem Band. Ding! Sofort leuchtete ein schmaler Weg zwischen den Bäumen auf. „Das ist der Weg zur Lichtwerkstatt“, flüsterte der Igel. Hinter der nächsten Biegung raschelte etwas im Schnee.",
+  "hook": "Jori und Flimm hören ein Klingeln, obwohl niemand da ist.",
+  "narration": "Jori und Flimm schauten vorsichtig hinter das alte Brückentor. Ein helles Klingeln war zu hören, obwohl weit und breit niemand zu sehen war. „Flimm, hast du das gehört?“, fragte Jori. Flimm nickte aufgeregt. Sein Sternenbauch begann golden zu leuchten. „Vielleicht ist das ein Gruß an uns!“, flüsterte Flimm. An einer Holzwand entdeckten die beiden drei kleine Glocken. Die erste trug einen Mond, die zweite einen Stern und die dritte eine Schneeflocke. Flimm zeigte stolz auf seinen leuchtenden Bauch. „Jori, mein Stern sieht genauso aus wie eines dieser Zeichen!“ Jori lächelte: „Dann bist heute du unser Lichtdetektiv, Flimm.“ Gemeinsam schauten sie noch einmal ganz genau hin. Jori stellte die Rätselfrage: Welche Glocke trägt das Zeichen, das auch auf Flimms Bauch leuchtet? [[PAUSE:7]] Die Glocke mit dem Stern! „Richtig erkannt, Flimm!“, jubelte Jori. Flimm berührte vorsichtig die Sternenglocke. Ding! Sofort erschienen kleine Lichtpunkte auf dem verschneiten Weg. „Wir haben den Weg gefunden!“, rief Flimm. Hand in Hand folgten Jori und Flimm den Lichtern. Hinter der nächsten Biegung wartete eine glitzernde Überraschung.",
   "riddle": {
     "type": "logic",
-    "question": "Welche Glocke hat das Zeichen, das auch auf Flimms Bauch leuchtet?",
+    "question": "Welche Glocke trägt das Zeichen, das auch auf Flimms Bauch leuchtet?",
     "answer": "Die Glocke mit dem Stern",
     "pause_seconds": 7
   },
@@ -15,37 +15,37 @@
       "order": 1,
       "duration_seconds": 11,
       "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-01.png",
-      "caption": "Jori und Flimm stehen hinter dem geöffneten verschneiten Brückentor in Flockenfels, warmes goldenes Licht fällt auf den Waldweg, vertraute F"
+      "caption": "Jori mit roter Wintermütze und Flimm, das kleine goldene Laternenwesen, sehen hinter das verschneite Brückentor; keine Nebenfiguren."
     },
     {
       "order": 2,
       "duration_seconds": 11,
       "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-02.png",
-      "caption": "Ein kleiner freundlicher Igel mit einer großen gestrickten Mütze sitzt auf einem Stein und bittet Jori und Flimm um Hilfe, sichere gemütlich"
+      "caption": "Flimm mit strahlendem goldenen Sternenbauch hört ein rätselhaftes Klingeln auf einem winterlichen Weg; Jori hört zu."
     },
     {
       "order": 3,
       "duration_seconds": 11,
       "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-03.jpg",
-      "caption": "Drei unterschiedliche Glocken hängen an einer Holzwand im verschneiten Park, gut erkennbare Symbole Mond, Stern und Schneeflocke, Jori beoba"
+      "caption": "Jori und Flimm entdecken drei kleine Glocken mit Mond, Stern und Schneeflocke an einer Holzwand; deutliche Symbole."
     },
     {
       "order": 4,
       "duration_seconds": 11,
       "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-04.jpg",
-      "caption": "Großaufnahme von Flimms rundem goldenem Laternenkörper: Im Bauch strahlt gut sichtbar ein Stern, Jori denkt über das freundliche Rätsel nach"
+      "caption": "Flimms Sternenbauch leuchtet nahe der Sternenglocke; Jori und Flimm überlegen gemeinsam das Rätsel."
     },
     {
       "order": 5,
       "duration_seconds": 11,
       "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-05.png",
-      "caption": "Der Igel zieht vorsichtig am Band der Glocke mit Stern, ein warmer Lichtstrahl beginnt einen schmalen Waldweg zu beleuchten, Jori und Flimm "
+      "caption": "Flimm berührt selbst die Sternenglocke und Jori freut sich über seine Lösung; goldenes Leuchten."
     },
     {
       "order": 6,
       "duration_seconds": 11,
       "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-06.png",
-      "caption": "Ein verschneiter Pfad führt in Richtung Lichtwerkstatt, im Vordergrund Jori, Flimm und der Igel, hinter der Biegung raschelt es geheimnisvol"
+      "caption": "Jori und Flimm folgen gemeinsam den hellen Sternenpunkten im Schnee in Richtung Lichtwerkstatt; keine anderen Figuren."
     }
   ],
   "publish_time": "14:00",
@@ -55,12 +55,12 @@
     "duplicate_check": false
   },
   "preview_only": true,
-  "continuity_note": "Jori und Flimm begegnen hinter dem Brückentor einem Igel, helfen ihm das Sternzeichen zu erkennen und entdecken einen beleuchteten Weg zur Lichtwerkstatt.",
+  "continuity_note": "Jori und Flimm lösen gemeinsam das Sternenglockenrätsel. Flimm erkennt den Stern mit seinem Bauchlicht und aktiviert selbst den erleuchteten Weg zur Lichtwerkstatt.",
   "cta": "Fortsetzung morgen auf dem eigenen Jori-&-Flimm-Kanal.",
   "voice": {
-    "provider": "Hugging Face Spaces CPU TTS",
-    "model": "kikiri-tts/kikiri-german-victoria",
-    "speaker_id": "df_victoria",
-    "speed": 0.92
+    "provider": "Piper local TTS",
+    "model": "de_DE-kerstin-low",
+    "speaker_id": "kerstin",
+    "speed": 1
   }
 }
