@@ -1,7 +1,7 @@
 # Series Bible – Jori & Flimm
 
 ## Non-negotiable boundary
-The published book "Die 24 verschwundenen Weihnachtslichter" contains 24 connected missions and 48 tasks. Those plots, tasks, answers, light-letter sequence and final message are reserved for the paid book/e-book.
+The published book "Jori & Flimm und der Code des Herzlichts" contains 24 connected missions and 48 tasks. Those plots, tasks, answers, light-letter sequence and final message are reserved for the paid book/e-book.
 
 Video episodes must be newly written and must not reproduce or summarize a book mission.
 
