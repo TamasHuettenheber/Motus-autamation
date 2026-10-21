@@ -1,0 +1,57 @@
+name: Jori & Flimm relaunch – write first original episode once
+
+on:
+  push:
+    branches:
+      - feature/jori-flimm-neustart-folge001
+    paths:
+      - .github/workflows/jori-relaunch-first-story-once.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jori-relaunch-first-story-exactly-once
+  cancel-in-progress: false
+
+jobs:
+  first-story:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            kids/jori-flimm
+      - name: Generate new 001, not old story and never publish
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+        run: |
+          test -n "$JORI_GEMINI_API_KEY" || { echo 'AI key missing'; exit 1; }
+          python3 kids/jori-flimm/relaunch-v2/scripts/generate_episode.py --date 2026-10-23
+      - name: Verify valid brand-new story and reserve it
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('kids/jori-flimm/relaunch-v2/drafts/jori-flimm-restart-2026-10-23-e001.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert d['episode_number']==1 and d['series_version']=='relaunch-v2'
+          assert d['status']=='STORY_DRAFT_NOT_READY'
+          assert d['approved_for_publish'] is False
+          assert d['voice']['speaker_id']=='Sulafat'
+          assert d['narration'].count('[[PAUSE:7]]')==1
+          assert d['narration'].endswith(d['cliffhanger'])
+          assert all(v is False for k,v in d['qc'].items() if k!='story_structure')
+          print('NEW_EPISODE_001_STORY_ONLY; requires original images, TTS/ASR and final QC')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add kids/jori-flimm/relaunch-v2/drafts/
+          if ! git diff --cached --quiet; then
+            git commit -m 'kids: store fully new original episode 001, unpublished'
+            git push origin HEAD:feature/jori-flimm-neustart-folge001
+          fi
