@@ -44,30 +44,60 @@
       "pattern": "^https://"
     },
     "voice": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "provider",
-        "model",
-        "speaker_id",
-        "speed"
-      ],
-      "properties": {
-        "provider": {
-          "const": "Hugging Face Spaces CPU TTS"
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "provider",
+            "model",
+            "speaker_id",
+            "speed"
+          ],
+          "properties": {
+            "provider": {
+              "const": "Hugging Face Spaces CPU TTS"
+            },
+            "model": {
+              "const": "kikiri-tts/kikiri-german-victoria"
+            },
+            "speaker_id": {
+              "const": "df_victoria"
+            },
+            "speed": {
+              "type": "number",
+              "minimum": 0.8,
+              "maximum": 1.1
+            }
+          }
         },
-        "model": {
-          "const": "kikiri-tts/kikiri-german-victoria"
-        },
-        "speaker_id": {
-          "const": "df_victoria"
-        },
-        "speed": {
-          "type": "number",
-          "minimum": 0.8,
-          "maximum": 1.1
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "provider",
+            "model",
+            "speaker_id",
+            "speed"
+          ],
+          "properties": {
+            "provider": {
+              "const": "Piper local TTS"
+            },
+            "model": {
+              "const": "de_DE-kerstin-low"
+            },
+            "speaker_id": {
+              "const": "kerstin"
+            },
+            "speed": {
+              "type": "number",
+              "minimum": 0.8,
+              "maximum": 1.1
+            }
+          }
         }
-      }
+      ]
     },
     "riddle": {
       "type": "object",
