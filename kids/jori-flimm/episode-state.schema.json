@@ -96,6 +96,36 @@
               "maximum": 1.1
             }
           }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "provider",
+            "model",
+            "speaker_id",
+            "speed"
+          ],
+          "properties": {
+            "provider": {
+              "const": "Gemini TTS 3.8"
+            },
+            "model": {
+              "const": "gemini-3.8-flash-tts"
+            },
+            "speaker_id": {
+              "enum": [
+                "Gacrux",
+                "Vindemiatrix",
+                "Sulafat"
+              ]
+            },
+            "speed": {
+              "type": "number",
+              "minimum": 0.8,
+              "maximum": 1.1
+            }
+          }
         }
       ]
     },
