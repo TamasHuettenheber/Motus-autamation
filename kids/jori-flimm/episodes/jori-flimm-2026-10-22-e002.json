@@ -56,5 +56,11 @@
   },
   "preview_only": true,
   "continuity_note": "Jori und Flimm begegnen hinter dem Brückentor einem Igel, helfen ihm das Sternzeichen zu erkennen und entdecken einen beleuchteten Weg zur Lichtwerkstatt.",
-  "cta": "Fortsetzung morgen auf dem eigenen Jori-&-Flimm-Kanal."
+  "cta": "Fortsetzung morgen auf dem eigenen Jori-&-Flimm-Kanal.",
+  "voice": {
+    "provider": "Hugging Face Spaces CPU TTS",
+    "model": "kikiri-tts/kikiri-german-victoria",
+    "speaker_id": "df_victoria",
+    "speed": 0.92
+  }
 }
