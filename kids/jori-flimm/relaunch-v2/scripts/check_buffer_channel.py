@@ -53,15 +53,35 @@ def main():
     if not orgs:
         raise RuntimeError("BUFFER_HAS_NO_ORGANIZATIONS")
     collected=[]
+    owning_org_by_channel={}
     for org in orgs:
         oid=org.get("id")
         if not oid: continue
         query="query($id: OrganizationId!) { channels(input: {organizationId:$id}) { id name displayName service } }"
         res=gql(query,{"id":oid})
-        collected.extend(res.get("channels") or [])
+        for channel in (res.get("channels") or []):
+            collected.append(channel)
+            if channel.get('id'):
+                owning_org_by_channel[str(channel['id'])]=str(oid)
     validate_channels(collected,expected)
-    print("JORI_BUFFER_TIKTOK_CHANNEL_VERIFIED_READ_ONLY; expected @"+expected+
-          "; no MOTUS actions, no drafts, no published posts.")
+    target=next(x for x in collected if str(x.get("service","")).casefold()=="tiktok"
+                and expected in {canonical_handle(x.get("name")),canonical_handle(x.get("displayName"))})
+    org_id=owning_org_by_channel.get(str(target["id"]))
+    if not org_id:
+        raise RuntimeError("Buffer organization for target channel missing")
+    # Separate account check; never read MOTUS's queue or create Buffer posts.
+    query=("query { posts(input:{organizationId:"+json.dumps(org_id)+
+           ",filter:{status:[scheduled],channelIds:["+json.dumps(str(target["id"]))+
+           "]}}) { edges { node { id channelId dueAt } } pageInfo { hasNextPage } } }")
+    posts=(gql(query).get("posts") or {})
+    rows=[edge.get("node",{}) for edge in posts.get("edges",[])]
+    if posts.get("pageInfo",{}).get("hasNextPage"):
+        raise RuntimeError("More queued posts than one page; manual queue verification needed")
+    print("JORI_BUFFER_TIKTOK_CHANNEL_VERIFIED_READ_ONLY; expected @"+expected)
+    print("JORI_BUFFER_QUEUED_POSTS="+str(len(rows))+"; no MOTUS actions")
+    for post in rows:
+        print("JORI_QUEUED="+str(post.get("dueAt",""))+" id="+str(post.get("id","")))
+    print("VERIFICATION_ONLY: no posts were created, scheduled or published")
 
 if __name__=="__main__":
     try:main()
