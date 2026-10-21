@@ -1,0 +1,108 @@
+{
+  "project": "Jori & Flimm",
+  "tool": "Buffer",
+  "status": "UNPUBLISHED_DRAFTS",
+  "rules": "Do not create Buffer posts before final per-episode QC; never touch MOTUS; use only @jori.flimm and Automatic mode. Time set to Europe/Berlin 14:00 after approval.",
+  "posts": [
+    {
+      "folge": 1,
+      "title": "Das Licht, das Joris Namen kannte",
+      "text": "Ein geheimnisvolles Licht flüstert Joris Namen – und plötzlich begegnet er Flimm. Gemeinsam lösen sie ihr erstes Rätsel. Was klopft wohl in der Laterne? ✨\n\n#JoriUndFlimm #Kindergeschichten #Raetselgeschichte #Familienzeit #FortsetzungFolgt",
+      "status": "DRAFT_ONLY_DO_NOT_SCHEDULE",
+      "target_channel": "Jori & Flimm (verify exact Buffer connected handle)",
+      "planned_local_time": "14:00",
+      "timezone": "Europe/Berlin",
+      "date": null,
+      "video_asset_file": "Jori_Flimm_Folge_001_Sulafat_Arbeitsfassung.mp4",
+      "release_blockers": [
+        "original scene-perfect illustrations",
+        "accurate audio-to-caption timing",
+        "full listened/watch QC",
+        "phone playback QC",
+        "Buffer channel & Automatic publishing verified"
+      ],
+      "scheduled_in_buffer": false,
+      "published_on_tiktok": false
+    },
+    {
+      "folge": 2,
+      "title": "Drei Klopfzeichen im Laternenlicht",
+      "text": "Aus der geheimnisvollen Laterne klopft es wieder! Jori und Flimm entdecken eine blinkende Lichtfolge – und ein neues Geheimnis. Was zeigt ihnen die Karte? ✨\n\n#JoriUndFlimm #Geschichtenzeit #MitRaetseln #Familienzeit #FortsetzungFolgt",
+      "status": "DRAFT_ONLY_DO_NOT_SCHEDULE",
+      "target_channel": "Jori & Flimm (verify exact Buffer connected handle)",
+      "planned_local_time": "14:00",
+      "timezone": "Europe/Berlin",
+      "date": null,
+      "video_asset_file": "Jori_Flimm_Folge_002_Sulafat_Arbeitsfassung.mp4",
+      "release_blockers": [
+        "original scene-perfect illustrations",
+        "accurate audio-to-caption timing",
+        "full listened/watch QC",
+        "phone playback QC",
+        "Buffer channel & Automatic publishing verified"
+      ],
+      "scheduled_in_buffer": false,
+      "published_on_tiktok": false
+    },
+    {
+      "folge": 3,
+      "title": "Die Tür, die niemand sehen konnte",
+      "text": "Eine Mauer flüstert, obwohl nirgends eine Tür zu sehen ist. Jori und Flimm müssen ein Zahlenrätsel lösen, um ihren Weg fortzusetzen. Was wartet dahinter? ✨\n\n#JoriUndFlimm #Raetselspass #Kindergeschichte #Geschichtenzeit #FortsetzungFolgt",
+      "status": "DRAFT_ONLY_DO_NOT_SCHEDULE",
+      "target_channel": "Jori & Flimm (verify exact Buffer connected handle)",
+      "planned_local_time": "14:00",
+      "timezone": "Europe/Berlin",
+      "date": null,
+      "video_asset_file": "Jori_Flimm_Folge_003_Sulafat_Arbeitsfassung.mp4",
+      "release_blockers": [
+        "original scene-perfect illustrations",
+        "accurate audio-to-caption timing",
+        "full listened/watch QC",
+        "phone playback QC",
+        "Buffer channel & Automatic publishing verified"
+      ],
+      "scheduled_in_buffer": false,
+      "published_on_tiktok": false
+    },
+    {
+      "folge": 4,
+      "title": "Das falsche Schloss",
+      "text": "Drei Schlösser, ein schwebender Schlüssel – und nur eines passt. Jori und Flimm entdecken ein Geheimnis in der Lichtwerkstatt. Wen sehen sie gleich am Fenster? ✨\n\n#JoriUndFlimm #Raetselgeschichte #Geschichtenzeit #Familienzeit #FortsetzungFolgt",
+      "status": "DRAFT_ONLY_DO_NOT_SCHEDULE",
+      "target_channel": "Jori & Flimm (verify exact Buffer connected handle)",
+      "planned_local_time": "14:00",
+      "timezone": "Europe/Berlin",
+      "date": null,
+      "video_asset_file": "Jori_Flimm_Folge_004_Sulafat_Arbeitsfassung.mp4",
+      "release_blockers": [
+        "original scene-perfect illustrations",
+        "accurate audio-to-caption timing",
+        "full listened/watch QC",
+        "phone playback QC",
+        "Buffer channel & Automatic publishing verified"
+      ],
+      "scheduled_in_buffer": false,
+      "published_on_tiktok": false
+    },
+    {
+      "folge": 5,
+      "title": "Die Gestalt im Schneesturm",
+      "text": "Im Schneesturm taucht eine geheimnisvolle Gestalt auf. Vier Laternen verraten Jori und Flimm den nächsten Weg. Doch ein riesiger Fußabdruck wirft neue Fragen auf … ✨\n\n#JoriUndFlimm #Kindergeschichten #MitRaetseln #Geschichtenzeit #FortsetzungFolgt",
+      "status": "DRAFT_ONLY_DO_NOT_SCHEDULE",
+      "target_channel": "Jori & Flimm (verify exact Buffer connected handle)",
+      "planned_local_time": "14:00",
+      "timezone": "Europe/Berlin",
+      "date": null,
+      "video_asset_file": "Jori_Flimm_Folge_005_Sulafat_Arbeitsfassung.mp4",
+      "release_blockers": [
+        "original scene-perfect illustrations",
+        "accurate audio-to-caption timing",
+        "full listened/watch QC",
+        "phone playback QC",
+        "Buffer channel & Automatic publishing verified"
+      ],
+      "scheduled_in_buffer": false,
+      "published_on_tiktok": false
+    }
+  ]
+}
