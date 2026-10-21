@@ -56,11 +56,11 @@
   },
   "preview_only": true,
   "continuity_note": "Jori und Flimm lösen gemeinsam das Sternenglockenrätsel. Flimm erkennt den Stern mit seinem Bauchlicht und aktiviert selbst den erleuchteten Weg zur Lichtwerkstatt.",
-  "cta": "Interne neue Hörprobe – deutsches Piper-Stimmprofil, verbesserte Lautstärke, Jori und Flimm im Mittelpunkt. Nicht veröffentlichen.",
+  "cta": "Interne Testfolge mit der vom Nutzer ausgewählten warmen Sulafat-Erzählerin. Nicht veröffentlichen.",
   "voice": {
-    "provider": "Piper local TTS",
-    "model": "de_DE-kerstin-low",
-    "speaker_id": "kerstin",
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-tts",
+    "speaker_id": "Sulafat",
     "speed": 1
   }
 }
