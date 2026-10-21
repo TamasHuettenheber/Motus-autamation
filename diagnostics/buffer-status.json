@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-21T19:17:35.984035+00:00",
+  "checked_at_utc": "2026-10-21T20:53:36.578065+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -73,15 +73,15 @@
     {
       "id": "6ad83a3750009d9e9509744a",
       "text": "Nicht jeder offene Gedanke braucht heute noch eine Lösung. Manche Fragen werden klarer, wenn du ihnen Abstand gibst. Du kannst etwas Wichtiges notieren, den nächsten Schritt festhalten und dann bewusst aufhören, daran zu arbeiten. Ruhe ist kein verlorener Fortschritt. Sie gibt deinem Kopf die Gelegenheit, wieder Ordnung zu finden. Morgen kannst du mit frischer Aufmerksamkeit entscheiden, was wirklich dran ist.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-21T20:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-21T20:02:55.658Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7699213657439243553",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-21-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad83a3750009d9e9509744a_video.mp4"
         }
       ]
     },
