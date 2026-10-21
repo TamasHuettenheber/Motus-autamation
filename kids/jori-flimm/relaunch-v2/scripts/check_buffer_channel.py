@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 """Read-only verification of Jori & Flimm's connected Buffer TikTok channel.
 
-Required env: JORI_BUFFER_API_KEY (GitHub Actions secret), JORI_EXPECTED_TIKTOK_HANDLE.
+Required env: BUFFER_API_KEY (existing MOTUS GitHub Actions secret), JORI_EXPECTED_TIKTOK_HANDLE.
+The same API key may read multiple channels, but only the exact Jori & Flimm handle is accepted.
 Does not change queues, create posts, or touch MOTUS.
 """
 import json, os, re, sys, urllib.error, urllib.request
 
 API = "https://api.buffer.com"
 def gql(query,variables=None):
-    token=os.environ.get("JORI_BUFFER_API_KEY","")
+    token=os.environ.get("BUFFER_API_KEY","")
     if not token:
-        raise RuntimeError("JORI_BUFFER_API_KEY_NOT_SET - no external request")
+        raise RuntimeError("BUFFER_API_KEY_NOT_SET - existing MOTUS secret unavailable")
     data=json.dumps({"query":query,"variables":variables or {}}).encode()
     req=urllib.request.Request(API,method="POST",data=data,headers={
         "Authorization":"Bearer "+token,
@@ -35,7 +36,7 @@ def validate_channels(channels,expected):
     if not expected or expected == "motus614":
         raise ValueError("Expected isolated Jori & Flimm handle missing")
     valid=[x for x in channels if (str(x.get("service","")).lower()=="tiktok"
-          and canonical_handle(x.get("name"))==expected)]
+          and expected in {canonical_handle(x.get("name")),canonical_handle(x.get("displayName"))})]
     if len(valid)!=1:
         raise RuntimeError("TARGET_TIKTOK_NOT_VERIFIED in Buffer (no posts created)")
     match=valid[0]
@@ -55,7 +56,7 @@ def main():
     for org in orgs:
         oid=org.get("id")
         if not oid: continue
-        query="query($id: OrganizationId!) { channels(input: {organizationId:$id}) { id name displayName service isQueuePaused } }"
+        query="query($id: OrganizationId!) { channels(input: {organizationId:$id}) { id name displayName service } }"
         res=gql(query,{"id":oid})
         collected.extend(res.get("channels") or [])
     validate_channels(collected,expected)
