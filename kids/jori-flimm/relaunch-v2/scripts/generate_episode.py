@@ -31,7 +31,7 @@ def validate_candidate(p, history, number):
         if not isinstance(p.get(k),str) or not p[k].strip():
             raise ValueError(f"Missing story section {k}")
     limits={
-        "title":(8,100),"hook":(30,150),"story":(270,820),
+        "title":(8,100),"hook":(30,150),"story":(185,820),
         "after_answer":(60,330),"cliffhanger":(35,200)
     }
     for k,(low,high) in limits.items():
@@ -177,6 +177,7 @@ def main():
     prompt=(
         f"Erstelle Folge {number:03d} der NEUEN Staffel Jori & Flimm. "
         "Hauptfiguren Jori und Flimm (beide aktiv), keine Werbung. "
+        "WICHTIG: Die Handlung muss mindestens drei konkrete Ereignisse enthalten. "
         "Gesamtstruktur GENAU: HOOK als starker, ungewöhnlicher Einstieg "
         "in den ersten 2–4 Sekunden; STORY mit spannender kindgerechter Handlung "
         "und VOLLSTÄNDIGEN Rätselhinweisen; EINE klare Rätselfrage, danach "
