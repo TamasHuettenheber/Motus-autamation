@@ -569,6 +569,12 @@
       "clip_id": "work-laptop-8479274",
       "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
       "used_at_utc": "2026-10-21T04:05:46.140237+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-21-0700",
+      "clip_id": "train-window-36620147",
+      "source": "https://www.pexels.com/video/scenic-views-through-train-window-36620147/",
+      "used_at_utc": "2026-10-21T04:06:00.189563+00:00"
     }
   ]
 }
