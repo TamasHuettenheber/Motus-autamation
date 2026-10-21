@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "draft_requires_illustration_and_qc",
+  "approved_for_publish": false,
+  "episode_number": 2,
+  "date": "2026-10-22",
+  "generated_by": "manual_pilot_story_v1",
+  "title": "Die Glocke hinter dem Brückentor",
+  "hook": "Hinter dem alten Brückentor bittet eine kleine Stimme um Hilfe.",
+  "narration": "Kaum hatten Jori und Flimm das alte Brückentor geöffnet, hörten sie ein leises Klingen. Auf einem Stein saß ein kleiner Igel mit einer viel zu großen Mütze. „Gut, dass ihr da seid!“, piepste er. „Ich soll die richtige Glocke finden, aber alle sehen ähnlich aus.“ An der Wand hingen drei Glocken. Die erste trug einen Mond, die zweite einen Stern und die dritte eine Schneeflocke. Daneben stand: „Suche das Zeichen, das auch Flimms Bauch zum Leuchten bringt.“ Jori beugte sich zu Flimm hinunter. In seinem runden Bauch strahlte ein goldener Stern. Jori zeigte auf die Glocken und fragte: Welche Glocke hat das Zeichen, das auch auf Flimms Bauch leuchtet? [[PAUSE:7]] Die Glocke mit dem Stern! Vorsichtig zog der Igel an ihrem Band. Ding! Sofort leuchtete ein schmaler Weg zwischen den Bäumen auf. „Das ist der Weg zur Lichtwerkstatt“, flüsterte der Igel. Hinter der nächsten Biegung raschelte etwas im Schnee.",
+  "riddle": {
+    "type": "logic",
+    "question": "Welche Glocke hat das Zeichen, das auch auf Flimms Bauch leuchtet?",
+    "answer": "Die Glocke mit dem Stern",
+    "pause_seconds": 7
+  },
+  "scene_briefs": [
+    "Jori und Flimm stehen hinter dem geöffneten verschneiten Brückentor in Flockenfels, warmes goldenes Licht fällt auf den Waldweg, vertraute Figuren.",
+    "Ein kleiner freundlicher Igel mit einer großen gestrickten Mütze sitzt auf einem Stein und bittet Jori und Flimm um Hilfe, sichere gemütliche Winterstimmung.",
+    "Drei unterschiedliche Glocken hängen an einer Holzwand im verschneiten Park, gut erkennbare Symbole Mond, Stern und Schneeflocke, Jori beobachtet sie.",
+    "Großaufnahme von Flimms rundem goldenem Laternenkörper: Im Bauch strahlt gut sichtbar ein Stern, Jori denkt über das freundliche Rätsel nach.",
+    "Der Igel zieht vorsichtig am Band der Glocke mit Stern, ein warmer Lichtstrahl beginnt einen schmalen Waldweg zu beleuchten, Jori und Flimm freuen sich.",
+    "Ein verschneiter Pfad führt in Richtung Lichtwerkstatt, im Vordergrund Jori, Flimm und der Igel, hinter der Biegung raschelt es geheimnisvoll aber freundlich."
+  ],
+  "continuity_note": "Jori und Flimm begegnen hinter dem Brückentor einem Igel, helfen ihm das Sternzeichen zu erkennen und entdecken einen beleuchteten Weg zur Lichtwerkstatt.",
+  "next_cliffhanger": "Hinter der nächsten Biegung raschelt etwas im Schnee."
+}
