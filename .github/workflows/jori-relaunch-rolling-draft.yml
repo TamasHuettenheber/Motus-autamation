@@ -1,0 +1,62 @@
+name: Jori & Flimm – rolling next episode story draft (NO PUBLICATION)
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: Optional scheduled publication date YYYY-MM-DD
+        required: false
+        type: string
+  schedule:
+    # Runs ONLY once this workflow is on default main and the repo variable is enabled.
+    # All generated drafts remain on the isolated Jori restart branch.
+    - cron: '0 20 * * *'
+      timezone: Europe/Berlin
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jori-flimm-relaunch-story-writer
+  cancel-in-progress: false
+
+jobs:
+  write-next-story:
+    # Disabled until manual run-through and final QC/publishing pipeline are stable.
+    if: vars.JORI_RELAUNCH_AUTO_DRAFTS == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout Jori isolated development branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            kids/jori-flimm
+      - name: Create an original new story for three days later (no video/post)
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+          TARGET_DATE: ${{ inputs.target_date }}
+        run: |
+          test -n "$JORI_GEMINI_API_KEY" || { echo 'Gemini key missing, safe stop'; exit 1; }
+          if [ -n "$TARGET_DATE" ]; then
+            python3 kids/jori-flimm/relaunch-v2/scripts/generate_episode.py --date "$TARGET_DATE"
+          else
+            python3 kids/jori-flimm/relaunch-v2/scripts/generate_episode.py --lead-days 3
+          fi
+      - name: Store unapproved story only on Jori branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add kids/jori-flimm/relaunch-v2/drafts/
+          if git diff --cached --quiet; then
+            echo 'No new draft; existing episode preserved'
+          else
+            git commit -m 'kids: next original unpublished Jori & Flimm story three days early'
+            git push origin HEAD:feature/jori-flimm-neustart-folge001
+          fi
+      - name: Confirm this workflow cannot create Buffer or TikTok posts
+        run: |
+          echo 'STORY_DRAFT_ONLY: no video creation or publishing performed by this workflow.'
