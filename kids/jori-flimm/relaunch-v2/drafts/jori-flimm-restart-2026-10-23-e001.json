@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "series_version": "relaunch-v2",
+  "status": "STORY_DRAFT_NOT_READY",
+  "approved_for_publish": false,
+  "episode_number": 1,
+  "date": "2026-10-23",
+  "generated_by": "editorial_first_episode_after_three_AI_QC_rejections",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-tts",
+    "speaker_id": "Sulafat"
+  },
+  "title": "Das Licht, das Joris Namen kannte",
+  "hook": "Plötzlich flackerte ein Licht unter dem Schnee – und flüsterte Joris Namen!",
+  "story": "Jori blieb mitten in der verschneiten Gasse stehen. Wer hatte da gesprochen? Vorsichtig schob er den Schnee beiseite. Darunter saß ein winziges, rundes Laternenwesen mit einer viel zu großen Mütze. Sein Bauch leuchtete wie ein Stern. „Ich bin Flimm“, sagte es leise. „Und ich habe etwas Wichtiges verloren!“ Jori setzte sich neben Flimm. Gemeinsam entdeckten sie an einem alten Zaun drei Holzschilder: links einen Mond, in der Mitte eine Sonne und rechts einen Stern. Darunter stand: „Suche das Licht, das in der Nacht am Himmel funkelt.“",
+  "riddle": {
+    "type": "logic",
+    "question": "Welches der drei Zeichen zeigt das Licht, das nachts am Himmel funkelt?",
+    "answer": "Der Stern!",
+    "evidence_in_story": "Suche das Licht, das in der Nacht am Himmel funkelt.",
+    "pause_seconds": 7
+  },
+  "after_answer": "Jori zeigte auf das Sternzeichen. Flimm streckte seinen kleinen Arm aus und berührte es. Da schmolz der Schnee vor ihren Füßen, und eine alte Laterne kam zum Vorschein. „Du hast mir geholfen!“, rief Flimm. Jori lächelte: „Dann suchen wir ab jetzt gemeinsam!“",
+  "cliffhanger": "Doch plötzlich klopfte es dreimal aus dem Inneren der Laterne. Jori und Flimm sahen einander erschrocken an. Wer konnte dort drin sein?",
+  "scene_briefs": [
+    "Eröffnung im verschneiten Flockenfels: Jori mit roten Strickmütze, dunkelblauem Mantel und gestreiftem Schal steht erschrocken vor einem goldenen Licht unter dem Schnee; sofortiges Geheimnis.",
+    "Jori kniet nieder und begegnet erstmals Flimm, einem kleinen runden goldbraunen Laternenwesen mit gestrickter Mütze und strahlendem Sternenbauch. Jori und Flimm sind deutlich zu erkennen.",
+    "An einem alten verschneiten Zaun befinden sich exakt drei Holzschilder, alle im selben Bild und eindeutig: links Mond-Symbol, mittig Sonne-Symbol, rechts Stern-Symbol; Jori und Flimm schauen hin.",
+    "Für die Mitratepause stehen dieselben drei Holzschilder gut sichtbar im Bild: Mond links, Sonne mittig, Stern rechts; keine Lösung hervorheben, keine falschen oder verdeckten Zeichen.",
+    "Flimm berührt selbst das rechte Schild mit dem Stern, Jori schaut freudig zu. Im Schnee darunter taucht eine alte goldene Laterne auf. Beide handeln als gleichberechtigte Hauptfiguren.",
+    "Cliffhanger: Jori und Flimm stehen dicht bei der gefundenen alten Laterne; aus ihrem Inneren strahlen drei geheimnisvolle Lichtpunkte als Hinweis auf ein Klopfen. Gesichtsausdrücke neugierig und überrascht."
+  ],
+  "critical_visual_objects": [
+    "drei Holzschilder",
+    "Mond",
+    "Sonne",
+    "Stern",
+    "alte Laterne"
+  ],
+  "continuity_note": "Jori und Flimm begegnen sich zum ersten Mal, finden gemeinsam eine verlorene Laterne mithilfe von drei Symbolen. Am Ende klopft es rätselhaft aus ihrem Inneren. Folge 002 muss direkt beim Klopfen ansetzen.",
+  "qc": {
+    "story_structure": true,
+    "audio_transcript": false,
+    "subtitle_alignment": false,
+    "visual_story_alignment": false,
+    "visible_riddle_clues": false,
+    "final_audio": false,
+    "video_integrity": false,
+    "human_review": false
+  },
+  "tiktok_publication": false,
+  "narration": "Plötzlich flackerte ein Licht unter dem Schnee – und flüsterte Joris Namen! Jori blieb mitten in der verschneiten Gasse stehen. Wer hatte da gesprochen? Vorsichtig schob er den Schnee beiseite. Darunter saß ein winziges, rundes Laternenwesen mit einer viel zu großen Mütze. Sein Bauch leuchtete wie ein Stern. „Ich bin Flimm“, sagte es leise. „Und ich habe etwas Wichtiges verloren!“ Jori setzte sich neben Flimm. Gemeinsam entdeckten sie an einem alten Zaun drei Holzschilder: links einen Mond, in der Mitte eine Sonne und rechts einen Stern. Darunter stand: „Suche das Licht, das in der Nacht am Himmel funkelt.“ Welches der drei Zeichen zeigt das Licht, das nachts am Himmel funkelt? [[PAUSE:7]] Der Stern! Jori zeigte auf das Sternzeichen. Flimm streckte seinen kleinen Arm aus und berührte es. Da schmolz der Schnee vor ihren Füßen, und eine alte Laterne kam zum Vorschein. „Du hast mir geholfen!“, rief Flimm. Jori lächelte: „Dann suchen wir ab jetzt gemeinsam!“ Doch plötzlich klopfte es dreimal aus dem Inneren der Laterne. Jori und Flimm sahen einander erschrocken an. Wer konnte dort drin sein?"
+}
