@@ -32,7 +32,7 @@ jobs:
           if os.environ["EVENT"]=="schedule" and now.hour<22:
               print("WAIT_FOR_EVENING")
               raise SystemExit(0)
-          target=(now.date()+timedelta(days=1)).isoformat() if now.hour>=22 else now.date().isoformat()
+          target=(now.date()+timedelta(days=2)).isoformat() if now.hour>=22 else (now.date()+timedelta(days=1)).isoformat()
           repo=os.environ["REPO"]
           headers={"Authorization":"Bearer "+os.environ["GH_TOKEN"],"Accept":"application/vnd.github+json","User-Agent":"motus-handoff"}
           def api(method,path,data=None):
