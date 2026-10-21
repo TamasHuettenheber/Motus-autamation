@@ -40,3 +40,12 @@ Die Nutzerpräferenz zur Sprecherin und die Abspielbarkeit von MP3 versus MP4 au
 - Jori-&-Flimm-Story-Preview-Compiler setzt ab sofort Gemini TTS 3.8, `speaker_id: Sulafat`.
 - Vollständiger Episoden-002-Sulafat-Test: [GitHub Actions Run 39685764672](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/39685764672); Ergebnis und mobile tatsächliche Hörbarkeit erst nach Prüfung bestätigen.
 - Nicht mit MOTUS vermischen. Keine Veröffentlichung ohne separate Kanalanbindung und erfolgreiche menschliche/technische Qualitätsprüfung.
+
+## Sulafat Full-Episode Verification
+- Explicit user selection: **voice 3 / Sulafat** is the desired warm storyteller voice for this project.
+- Selected in `scripts/compile_preview_episode.py` and CI test, and assigned to Episode 002 preview payload.
+- GitHub Actions rendering: [Run 39685764672](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/39685764672), **success**; TTS generated using Gemini 3.8 Flash TTS / Sulafat, subtitles, 1080x1920 H.264 + AAC.
+- Real QC: **98.61 seconds**, final-audio loudness **-14.12 LUFS**, true peak **-2.93 dBTP**. Measured on final deliverable.
+- Direct playback deliverables generated and verified: `Jori_Flimm_Folge_002_Sulafat_Omi_iPhone.mp4` (720x1280, H.264/AAC, 11.4 MB) and `Jori_Flimm_Folge_002_Sulafat_Nur_Ton.mp3` (mono, 1.9 MB). These are ChatGPT conversation artifacts, not persisted GitHub media.
+- This is a **PREVIEW_ONLY** video using reused artworks, not verified new scene-specific illustrations. Its publishing flags are false; no TikTok post; no MOTUS change.
+- The user still must judge practical handset loudness of the full MP4; a loudness measurement cannot guarantee local playback volume.
