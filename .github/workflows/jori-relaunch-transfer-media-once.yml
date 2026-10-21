@@ -1,0 +1,36 @@
+name: Jori Flimm – transfer five scripts and owned character art
+on:
+  push:
+    branches:
+      - feature/jori-flimm-neustart-folge001
+    paths:
+      - .github/workflows/jori-relaunch-transfer-media-once.yml
+permissions:
+  contents: read
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            kids/jori-flimm/relaunch-v2/staffel1_folgen_001_005.json
+            kids/jori-flimm/assets
+      - name: Confirm exact source files
+        run: |
+          test -s kids/jori-flimm/relaunch-v2/staffel1_folgen_001_005.json
+          test -s kids/jori-flimm/assets/e000/scene-01.jpg
+          test -s kids/jori-flimm/assets/e001/scene-01.png
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Jori-Fuenf-Drehbuecher-und-Bildquellen
+          path: |
+            kids/jori-flimm/relaunch-v2/staffel1_folgen_001_005.json
+            kids/jori-flimm/assets/e000/
+            kids/jori-flimm/assets/e001/
+          retention-days: 7
+          if-no-files-found: error
