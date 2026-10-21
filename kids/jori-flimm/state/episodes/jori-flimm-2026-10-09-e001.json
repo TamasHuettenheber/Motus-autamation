@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-09",
+  "episode_number": 1,
+  "title": "Das Geheimnis des vierten Lichts",
+  "hook": "Am Morgen blinkt das vierte Licht noch immer – dann verschwindet es.",
+  "narration": "Willkommen zurück bei Jori und Flimm! Am nächsten Morgen blinkte das vierte Licht wieder im Brückentor. Als sie näher kamen, verschwand es. Eine goldene Spur führte um den Bogen zu einer gefrorenen Pfütze. Unter dem klaren Eis funkelte ein Sternenkristall. Jori fragte: „Ich liege flach am Boden, zeige dir den Himmel und bin im Winter hart und kalt. Was bin ich?“ Denk nach und sag, was es sein könnte! [[PAUSE:7]] Genau: eine gefrorene Pfütze! Die Morgensonne traf den Kristall und warf sein Licht durch den Torbogen. Flimm wärmte vorsichtig das Eis, und Jori hob den Kristall heraus. Über dem Tor entdeckten sie eine leere Sternenfassung. Gemeinsam setzten sie ihn hinein. Alle vier Sterne leuchteten golden. Tief im Tor knackte ein Schloss. Der Bogen öffnete sich und gab einen schmalen, unbekannten Weg frei. Aus der Dunkelheit klingelte es leise. Eine kleine Stimme flüsterte: „Psst! Könnt ihr mir helfen?“ Flimm rückte dicht an Jori. „Morgen gehen wir gemeinsam hinein“, versprach Jori. Da hauchte die Stimme: „Beeilt euch … es wird bald dunkel!“",
+  "voice": {
+    "provider": "Hugging Face Spaces CPU TTS",
+    "model": "kikiri-tts/kikiri-german-victoria",
+    "speaker_id": "df_victoria",
+    "speed": 0.9
+  },
+  "riddle": {
+    "type": "logic",
+    "question": "Ich liege flach am Boden, zeige dir den Himmel und bin im Winter hart und kalt. Was bin ich?",
+    "answer": "Eine gefrorene Pfütze.",
+    "pause_seconds": 7
+  },
+  "scenes": [
+    {
+      "order": 1,
+      "duration_seconds": 10,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-01.png",
+      "caption": "Das vierte Licht blinkt noch immer im Torbogen."
+    },
+    {
+      "order": 2,
+      "duration_seconds": 10,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-02.png",
+      "caption": "Eine goldene Spur führt um das Tor herum."
+    },
+    {
+      "order": 3,
+      "duration_seconds": 10,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-03.png",
+      "caption": "Unter dem Eis glitzert ein winziger Sternenkristall."
+    },
+    {
+      "order": 4,
+      "duration_seconds": 10,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-04.png",
+      "caption": "Jori erkennt: Das Eis zeigt den Himmel."
+    },
+    {
+      "order": 5,
+      "duration_seconds": 10,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-05.png",
+      "caption": "Gemeinsam setzen sie den Kristall in die leere Fassung."
+    },
+    {
+      "order": 6,
+      "duration_seconds": 10,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-06.png",
+      "caption": "Das Tor öffnet einen Weg – eine Stimme bittet um Hilfe."
+    }
+  ],
+  "cta": "",
+  "publish_time": "16:00",
+  "qc": {
+    "book_spoiler_check": true,
+    "continuity_check": true,
+    "duplicate_check": true
+  },
+  "continuity_note": "Direkte Fortsetzung von Episode 000: Jori und Flimm finden den Sternenkristall und lösen das Geheimnis des vierten Lichts. Das Tor öffnet sich, eine Stimme bittet aus dem dunklen Weg um Hilfe und kündigt an, dass es bald dunkel wird. Episode 003 beginnt unmittelbar mit dem Betreten des Weges. Untertitel halten das Rätsel während der stillen Denkpause sichtbar; der Denkhinweis wird nicht gesprochen. Die Rätsel-Frage bleibt während der sieben Sekunden stiller Denkzeit eingeblendet. Der gesprochene Denkimpuls endet vor der stillen Pause; die Lösung folgt erst danach.",
+  "continuity_after": {
+    "relationship_stage": "Jori und Flimm handeln als vertrauensvolles Team und lösen ihr erstes gemeinsames Mysterium.",
+    "known_facts": [
+      "Das alte Brückentor besitzt eine Fassung mit vier Sternenlichtern.",
+      "Der vierte Sternenkristall fing Sonnenlicht im Eis ein."
+    ],
+    "active_threads": [
+      "Eine kleine Stimme hinter dem geöffneten Brückentor bittet um Hilfe, bevor es dunkel wird; Jori und Flimm wollen gemeinsam hinein."
+    ]
+  }
+}
