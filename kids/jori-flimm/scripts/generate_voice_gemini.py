@@ -19,7 +19,7 @@ from pathlib import Path
 WORK=Path("work")
 MARKER=re.compile(r"\[\[PAUSE:([0-9]+(?:\.[0-9]+)?)\]\]")
 ALLOW={"Gacrux","Vindemiatrix","Sulafat"}
-MODEL="gemini-3.8-flash-tts"
+MODEL=os.environ.get("JORI_TTS_MODEL","gemini-3.8-flash-tts")
 STYLE=(
     "Deutsch (Deutschland); warmes natürliches Geschichtenerzählen wie eine "
     "liebevolle Großmutter, nicht lehrerhaft, nicht blechern, nicht mechanisch, "
