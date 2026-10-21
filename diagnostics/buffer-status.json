@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-21T10:02:41.985626+00:00",
+  "checked_at_utc": "2026-10-21T15:07:32.906041+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -97,6 +97,21 @@
         {
           "mimeType": "video/mp4",
           "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-21-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad83a3b9fdbc474fbfcf719",
+      "text": "Eine gute Frage kann mehr verändern als zehn schnelle Antworten. Wenn du im Gespräch etwas nicht verstehst, tu nicht so, als wäre alles klar. Frag nach dem Warum. Bitte um ein Beispiel. Wiederhole, was du verstanden hast. Das ist kein Zeichen von Schwäche. Es zeigt, dass dir das Ergebnis wichtig ist. Präzise Fragen sparen später oft mehr Zeit als vorschnelle Zustimmung.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Crossroads (CC BY 4.0)",
+      "status": "sent",
+      "dueAt": "2026-10-21T10:00:00.000Z",
+      "sentAt": "2026-10-21T10:03:01.107Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7699059010602798368",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad83a3b9fdbc474fbfcf719_video.mp4"
         }
       ]
     },
@@ -742,21 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac9527cbba9419ccbde36fb_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac95272bba9419ccbde365c",
-      "text": "Drei Worte können mehr verändern als zehn Erklärungen: Ich lag falsch. Ohne ein Aber dahinter. Ohne Schuldverschiebung. Wenn du heute jemanden verletzt oder falsch eingeschätzt hast, übernimm deinen Teil. Eine ehrliche Entschuldigung macht dich nicht kleiner. Sie macht Vertrauen wieder möglich. Wem schuldest du noch einen klaren Satz? #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – A Memory Away (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-10T16:30:00.000Z",
-      "sentAt": "2026-10-10T16:32:31.873Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7695077498878479648?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac95272bba9419ccbde365c_video.mp4"
         }
       ]
     }
