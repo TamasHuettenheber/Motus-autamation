@@ -1,0 +1,77 @@
+name: Jori & Flimm – isolated daily story drafting
+
+on:
+  push:
+    branches:
+      - feature/jori-flimm-kids-pipeline
+    paths:
+      - kids/jori-flimm/scripts/generate_daily_story.py
+      - .github/workflows/jori-flimm-daily-draft.yml
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: Optional next story date YYYY-MM-DD
+        required: false
+        type: string
+  schedule:
+    # Runs only from the repository DEFAULT branch, not this test branch.
+    # At 22:17 Berlin time, create tomorrow's story draft.
+    - cron: '17 22 * * *'
+      timezone: Europe/Berlin
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jori-flimm-daily-story
+  cancel-in-progress: false
+
+jobs:
+  offline-check:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Syntax and dry-run without secrets
+        run: |
+          python3 -m py_compile kids/jori-flimm/scripts/generate_daily_story.py
+          python3 kids/jori-flimm/scripts/generate_daily_story.py --dry-run
+
+  story-draft:
+    # Deliberately disabled until a separate key and safe rollout are arranged.
+    # No MOTUS production, renderer or publisher is changed.
+    if: (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && vars.JORI_STORY_DRAFTS_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Check out separate story branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-kids-pipeline
+          fetch-depth: 0
+      - name: Write tomorrow's story, but never publish
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+          TARGET_DATE: ${{ inputs.target_date }}
+        run: |
+          if [ -z "$JORI_GEMINI_API_KEY" ]; then
+            echo 'Missing JORI_GEMINI_API_KEY. No external request was made.'
+            exit 1
+          fi
+          if [ -n "$TARGET_DATE" ]; then
+            python3 kids/jori-flimm/scripts/generate_daily_story.py --date "$TARGET_DATE"
+          else
+            python3 kids/jori-flimm/scripts/generate_daily_story.py
+          fi
+      - name: Save draft on separate branch only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add kids/jori-flimm/drafts/
+          if git diff --cached --quiet; then
+            echo 'Existing draft; no duplicate commit.'
+            exit 0
+          fi
+          git commit -m 'kids: store Jori and Flimm draft pending illustration and QC'
+          git push origin HEAD:feature/jori-flimm-kids-pipeline
