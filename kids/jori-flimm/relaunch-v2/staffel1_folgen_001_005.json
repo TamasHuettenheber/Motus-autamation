@@ -1,0 +1,154 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episodes": [
+    {
+      "title": "Das Licht, das Joris Namen kannte",
+      "hook": "Plötzlich flackerte ein Licht unter dem Schnee – und flüsterte Joris Namen!",
+      "story": "Jori hielt den Atem an. Zwischen den Schneeflocken kauerte ein winziges, goldenes Wesen mit roter Mütze. In seinem Bauch glühte ein Stern. „Ich bin Flimm“, sagte es. „Meine Laterne ist verschwunden!“ Jori bot seine Hilfe an. Am alten Zaun entdeckten sie drei Wegweiser. Links war ein Mond, in der Mitte eine Sonne, rechts ein Stern. Darunter stand: „Nur das Licht, das nachts am Himmel funkelt, zeigt den richtigen Weg.“ Flimm leuchtete vor Aufregung.",
+      "question": "Welches Zeichen zeigt ihnen den Weg: Mond, Sonne oder Stern?",
+      "answer": "Der Stern!",
+      "after": "Jori deutete auf den Stern. Flimm berührte vorsichtig das Schild. Der Schnee wirbelte zur Seite und gab eine kleine goldene Laterne frei. „Gemeinsam sind wir richtig gut!“, rief Flimm.",
+      "cliff": "Doch da klopfte es dreimal aus dem Inneren der Laterne. Wer konnte darin verborgen sein?",
+      "clue_mode": "symbols",
+      "clues": [
+        "MOND",
+        "SONNE",
+        "STERN"
+      ],
+      "correct": 2,
+      "clue_label": "DREI WEGWEISER",
+      "continuity": "Erste Begegnung; kleine goldene Laterne klopft von innen. Folgeteil beginnt beim Klopfen.",
+      "episode_number": 1,
+      "series_version": "relaunch-v2",
+      "status": "PREVIEW_ONLY_REQUIRES_FULL_REVIEW",
+      "approved_for_publish": false,
+      "voice": {
+        "provider": "Gemini TTS 3.8",
+        "model": "gemini-3.8-flash-tts",
+        "speaker_id": "Sulafat"
+      },
+      "narration": "Plötzlich flackerte ein Licht unter dem Schnee – und flüsterte Joris Namen! Jori hielt den Atem an. Zwischen den Schneeflocken kauerte ein winziges, goldenes Wesen mit roter Mütze. In seinem Bauch glühte ein Stern. „Ich bin Flimm“, sagte es. „Meine Laterne ist verschwunden!“ Jori bot seine Hilfe an. Am alten Zaun entdeckten sie drei Wegweiser. Links war ein Mond, in der Mitte eine Sonne, rechts ein Stern. Darunter stand: „Nur das Licht, das nachts am Himmel funkelt, zeigt den richtigen Weg.“ Flimm leuchtete vor Aufregung. Welches Zeichen zeigt ihnen den Weg: Mond, Sonne oder Stern? [[PAUSE:7]] Der Stern! Jori deutete auf den Stern. Flimm berührte vorsichtig das Schild. Der Schnee wirbelte zur Seite und gab eine kleine goldene Laterne frei. „Gemeinsam sind wir richtig gut!“, rief Flimm. Doch da klopfte es dreimal aus dem Inneren der Laterne. Wer konnte darin verborgen sein?",
+      "story_hash_key": "1-Das Licht, das Joris Namen kannte"
+    },
+    {
+      "title": "Drei Klopfzeichen im Laternenlicht",
+      "hook": "Ding, ding, ding! Aus der gefundenen Laterne klopfte es schon wieder!",
+      "story": "Jori hielt die Laterne näher an Flimm. „Vielleicht möchte uns jemand etwas sagen“, flüsterte er. Im Glas schwebten vier Lichtpunkte. Immer abwechselnd blinkten sie blau und golden. Flimm zählte mit: „Blau, Gold, Blau ...“ Auf dem Griff erschien eine winzige Nachricht: „Nur wer das letzte Licht richtig nennt, darf das Türchen öffnen.“ Jori betrachtete die Punkte, während Flimm vorsichtig die Laterne festhielt.",
+      "question": "Welche Farbe muss als viertes Licht erscheinen: Blau oder Gold?",
+      "answer": "Gold!",
+      "after": "Sofort leuchtete der vierte Punkt golden auf. Flimm lachte erleichtert. Ein winziges Türchen sprang auf, und heraus flatterte eine Papierkarte mit dem Bild eines Hauses. Jori entfaltete sie vorsichtig.",
+      "cliff": "Auf der Karte bewegte sich plötzlich ein roter Pfeil, ganz von allein – direkt zu einer Wand ohne Tür!",
+      "clue_mode": "sequence",
+      "clues": [
+        "BLAU",
+        "GOLD",
+        "BLAU",
+        "?"
+      ],
+      "correct": 3,
+      "clue_label": "LICHTFOLGE",
+      "continuity": "Laterne öffnet Türchen durch blau-gold-Muster. Papierkarte zeigt Wand ohne Tür.",
+      "episode_number": 2,
+      "series_version": "relaunch-v2",
+      "status": "PREVIEW_ONLY_REQUIRES_FULL_REVIEW",
+      "approved_for_publish": false,
+      "voice": {
+        "provider": "Gemini TTS 3.8",
+        "model": "gemini-3.8-flash-tts",
+        "speaker_id": "Sulafat"
+      },
+      "narration": "Ding, ding, ding! Aus der gefundenen Laterne klopfte es schon wieder! Jori hielt die Laterne näher an Flimm. „Vielleicht möchte uns jemand etwas sagen“, flüsterte er. Im Glas schwebten vier Lichtpunkte. Immer abwechselnd blinkten sie blau und golden. Flimm zählte mit: „Blau, Gold, Blau ...“ Auf dem Griff erschien eine winzige Nachricht: „Nur wer das letzte Licht richtig nennt, darf das Türchen öffnen.“ Jori betrachtete die Punkte, während Flimm vorsichtig die Laterne festhielt. Welche Farbe muss als viertes Licht erscheinen: Blau oder Gold? [[PAUSE:7]] Gold! Sofort leuchtete der vierte Punkt golden auf. Flimm lachte erleichtert. Ein winziges Türchen sprang auf, und heraus flatterte eine Papierkarte mit dem Bild eines Hauses. Jori entfaltete sie vorsichtig. Auf der Karte bewegte sich plötzlich ein roter Pfeil, ganz von allein – direkt zu einer Wand ohne Tür!",
+      "story_hash_key": "2-Drei Klopfzeichen im Laternenlicht"
+    },
+    {
+      "title": "Die Tür, die niemand sehen konnte",
+      "hook": "Der rote Pfeil zeigte auf eine Mauer. Und dann flüsterte die Mauer: „Sucht mich!“",
+      "story": "Jori und Flimm liefen zur verschneiten Steinwand. Kein Griff, kein Schloss, nicht einmal ein Spalt war zu entdecken. Doch im Schnee lagen vier kleine Steine mit Zahlen. Auf dreien stand zwei, vier und sechs. Der vierte war leer. „Die Zahlen machen immer denselben Sprung“, überlegte Jori. Flimm hüpfte aufgeregt und zeigte auf den freien Stein. Hinter der Mauer summte es leise, als würde dort jemand singen.",
+      "question": "Welche Zahl fehlt nach zwei, vier und sechs?",
+      "answer": "Die Acht!",
+      "after": "Flimm zeichnete mit seinem Sternenlicht eine Acht auf den letzten Stein. Die Mauer glitt lautlos auseinander. Dahinter funkelte eine kleine Werkstatt voller schwebender Lichter. Jori staunte.",
+      "cliff": "Mitten in der Werkstatt drehte sich plötzlich ein Schlüssel in der Luft – doch welches Schloss gehörte dazu?",
+      "clue_mode": "numbers",
+      "clues": [
+        "2",
+        "4",
+        "6",
+        "?"
+      ],
+      "correct": 3,
+      "clue_label": "ZAHLEN AUF STEINEN",
+      "continuity": "Unsichtbare Mauer öffnet sich mit Zahlenfolge 2-4-6-8; hinter ihr eine Lichtwerkstatt mit schwebendem Schlüssel.",
+      "episode_number": 3,
+      "series_version": "relaunch-v2",
+      "status": "PREVIEW_ONLY_REQUIRES_FULL_REVIEW",
+      "approved_for_publish": false,
+      "voice": {
+        "provider": "Gemini TTS 3.8",
+        "model": "gemini-3.8-flash-tts",
+        "speaker_id": "Sulafat"
+      },
+      "narration": "Der rote Pfeil zeigte auf eine Mauer. Und dann flüsterte die Mauer: „Sucht mich!“ Jori und Flimm liefen zur verschneiten Steinwand. Kein Griff, kein Schloss, nicht einmal ein Spalt war zu entdecken. Doch im Schnee lagen vier kleine Steine mit Zahlen. Auf dreien stand zwei, vier und sechs. Der vierte war leer. „Die Zahlen machen immer denselben Sprung“, überlegte Jori. Flimm hüpfte aufgeregt und zeigte auf den freien Stein. Hinter der Mauer summte es leise, als würde dort jemand singen. Welche Zahl fehlt nach zwei, vier und sechs? [[PAUSE:7]] Die Acht! Flimm zeichnete mit seinem Sternenlicht eine Acht auf den letzten Stein. Die Mauer glitt lautlos auseinander. Dahinter funkelte eine kleine Werkstatt voller schwebender Lichter. Jori staunte. Mitten in der Werkstatt drehte sich plötzlich ein Schlüssel in der Luft – doch welches Schloss gehörte dazu?",
+      "story_hash_key": "3-Die Tür, die niemand sehen konnte"
+    },
+    {
+      "title": "Das falsche Schloss",
+      "hook": "Ein Schlüssel schwebte vor Joris Nase – und drei Schlösser begannen gleichzeitig zu leuchten!",
+      "story": "Flimm folgte dem Schlüssel mit großen Augen. An einer hölzernen Truhe hingen drei Schlösser. Das erste hatte ein rundes Loch, das zweite ein dreieckiges und das dritte ein viereckiges. Am schwebenden Schlüssel war deutlich eine dreieckige Spitze zu erkennen. Jori wollte ihn nicht einfach irgendwo hineinstecken. „Wir müssen genau hinsehen“, sagte er. Flimm hielt seinen hellen Sternenbauch darüber, damit die Formen gut sichtbar wurden.",
+      "question": "Zu welchem Schloss passt der Schlüssel mit der dreieckigen Spitze?",
+      "answer": "Zum Schloss mit dem Dreieck!",
+      "after": "Ganz vorsichtig führte Flimm den Schlüssel ins mittlere Schloss. Klick! Der Deckel hob sich, und darin lag ein winziger Kompass. Seine Nadel zeigte jedoch nicht nach Norden, sondern auf ein Fenster.",
+      "cliff": "Draußen hinter dem Fenster stand auf einmal eine leuchtende Gestalt im Schneesturm – und winkte den beiden zu!",
+      "clue_mode": "shapes",
+      "clues": [
+        "KREIS",
+        "DREIECK",
+        "QUADRAT"
+      ],
+      "correct": 1,
+      "clue_label": "DREI SCHLÖSSER",
+      "continuity": "Schwebender Schlüssel öffnet dreieckiges Schloss; Truhe enthält Lichtkompass, der zum Fenster weist; dahinter Gestalt.",
+      "episode_number": 4,
+      "series_version": "relaunch-v2",
+      "status": "PREVIEW_ONLY_REQUIRES_FULL_REVIEW",
+      "approved_for_publish": false,
+      "voice": {
+        "provider": "Gemini TTS 3.8",
+        "model": "gemini-3.8-flash-tts",
+        "speaker_id": "Sulafat"
+      },
+      "narration": "Ein Schlüssel schwebte vor Joris Nase – und drei Schlösser begannen gleichzeitig zu leuchten! Flimm folgte dem Schlüssel mit großen Augen. An einer hölzernen Truhe hingen drei Schlösser. Das erste hatte ein rundes Loch, das zweite ein dreieckiges und das dritte ein viereckiges. Am schwebenden Schlüssel war deutlich eine dreieckige Spitze zu erkennen. Jori wollte ihn nicht einfach irgendwo hineinstecken. „Wir müssen genau hinsehen“, sagte er. Flimm hielt seinen hellen Sternenbauch darüber, damit die Formen gut sichtbar wurden. Zu welchem Schloss passt der Schlüssel mit der dreieckigen Spitze? [[PAUSE:7]] Zum Schloss mit dem Dreieck! Ganz vorsichtig führte Flimm den Schlüssel ins mittlere Schloss. Klick! Der Deckel hob sich, und darin lag ein winziger Kompass. Seine Nadel zeigte jedoch nicht nach Norden, sondern auf ein Fenster. Draußen hinter dem Fenster stand auf einmal eine leuchtende Gestalt im Schneesturm – und winkte den beiden zu!",
+      "story_hash_key": "4-Das falsche Schloss"
+    },
+    {
+      "title": "Die Gestalt im Schneesturm",
+      "hook": "Hinter dem Fenster winkte jemand. Doch als Jori blinzelte, war die Gestalt spurlos verschwunden!",
+      "story": "Jori öffnete das Fenster nur einen Spalt. Der Schnee tanzte herein, und Flimms Bauch leuchtete besonders hell. Draußen lagen vier kleine Laternen nebeneinander. Drei strahlten golden, eine war erloschen. Daneben befand sich ein Zettel: „Zähle nur die Lichter, die noch brennen. Dann findest du meinen Weg.“ Der Lichtkompass aus der Truhe zuckte bei jedem hellen Licht. Jori und Flimm sahen die Laternen ganz genau an.",
+      "question": "Wie viele der vier Laternen leuchten noch?",
+      "answer": "Drei!",
+      "after": "Flimm berührte die drei leuchtenden Laternen nacheinander. Aus ihrem Licht entstand eine sichere Spur durch den Schnee. Jori nahm Flimm an die Hand und folgte ihr. Endlich sahen sie einen Fußabdruck.",
+      "cliff": "Der Abdruck war riesig – und daneben stand im Schnee eine Nachricht: „Ich kenne das Geheimnis eures Sterns.“",
+      "clue_mode": "count",
+      "clues": [
+        "AN",
+        "AN",
+        "AUS",
+        "AN"
+      ],
+      "correct": 3,
+      "clue_label": "VIER LATERNEN",
+      "continuity": "Die Gestalt weist über Laternenzählrätsel sicheren Weg in Schneesturm; riesiger Abdruck und Hinweis auf Sterngeheimnis.",
+      "episode_number": 5,
+      "series_version": "relaunch-v2",
+      "status": "PREVIEW_ONLY_REQUIRES_FULL_REVIEW",
+      "approved_for_publish": false,
+      "voice": {
+        "provider": "Gemini TTS 3.8",
+        "model": "gemini-3.8-flash-tts",
+        "speaker_id": "Sulafat"
+      },
+      "narration": "Hinter dem Fenster winkte jemand. Doch als Jori blinzelte, war die Gestalt spurlos verschwunden! Jori öffnete das Fenster nur einen Spalt. Der Schnee tanzte herein, und Flimms Bauch leuchtete besonders hell. Draußen lagen vier kleine Laternen nebeneinander. Drei strahlten golden, eine war erloschen. Daneben befand sich ein Zettel: „Zähle nur die Lichter, die noch brennen. Dann findest du meinen Weg.“ Der Lichtkompass aus der Truhe zuckte bei jedem hellen Licht. Jori und Flimm sahen die Laternen ganz genau an. Wie viele der vier Laternen leuchten noch? [[PAUSE:7]] Drei! Flimm berührte die drei leuchtenden Laternen nacheinander. Aus ihrem Licht entstand eine sichere Spur durch den Schnee. Jori nahm Flimm an die Hand und folgte ihr. Endlich sahen sie einen Fußabdruck. Der Abdruck war riesig – und daneben stand im Schnee eine Nachricht: „Ich kenne das Geheimnis eures Sterns.“",
+      "story_hash_key": "5-Die Gestalt im Schneesturm"
+    }
+  ]
+}
