@@ -31,7 +31,8 @@ jobs:
         run: |
           python3 -m compileall -q kids/jori-flimm/relaunch-v2/scripts
           python3 -m unittest discover -s kids/jori-flimm/relaunch-v2/scripts -p 'test_*.py' -v
-          python3 kids/jori-flimm/relaunch-v2/scripts/generate_episode.py --dry-run
+          python3 kids/jori-flimm/relaunch-v2/scripts/generate_episode.py --date 2026-10-28 --dry-run | tee /tmp/jori-next-draft.log
+          grep "REBOOT_DRY_RUN_OK e006 2026-10-28" /tmp/jori-next-draft.log
           PYTHONPATH=kids/jori-flimm/relaunch-v2/scripts python3 - <<'PY'
           import json
           from pathlib import Path
