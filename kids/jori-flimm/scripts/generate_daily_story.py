@@ -96,10 +96,22 @@ def main():
     state = read_json("state/series-state.json")
     ledger = read_json("state/episode-ledger.json")
     folder = BASE / "drafts"
+    draft_entries = [
+        json.loads(p.read_text(encoding="utf-8")) for p in folder.glob("*.json")
+    ] if folder.exists() else []
+    # Unapproved video previews also reserve their episode number. This prevents
+    # the nightly writer from replacing the already-tested episode 002.
+    preview_entries = []
+    for p in (BASE / "episodes").glob("*.json"):
+        item = json.loads(p.read_text(encoding="utf-8"))
+        if item.get("preview_only") is True and int(item.get("episode_number", -1)) >= int(state["next_episode_number"]):
+            preview_entries.append(item)
     pending = sorted(
-        [json.loads(p.read_text(encoding="utf-8")) for p in folder.glob("*.json")],
-        key=lambda item: int(item["episode_number"])
-    ) if folder.exists() else []
+        draft_entries + preview_entries, key=lambda item: int(item["episode_number"])
+    )
+    numbers = [int(p["episode_number"]) for p in pending]
+    if len(numbers) != len(set(numbers)):
+        raise RuntimeError("Conflicting reserved episode numbers; no new draft")
     if any(p.get("date") == target for p in pending):
         print(f"ALREADY_EXISTS draft for {target}; no duplicate")
         return
