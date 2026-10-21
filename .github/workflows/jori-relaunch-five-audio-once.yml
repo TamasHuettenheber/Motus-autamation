@@ -1,4 +1,4 @@
-name: Jori Flimm – five Sulafat narrations (private pilots)
+name: Jori Flimm – retry remaining voices sequentially
 
 on:
   push:
@@ -17,9 +17,9 @@ jobs:
     timeout-minutes: 15
     strategy:
       fail-fast: false
-      max-parallel: 5
+      max-parallel: 1
       matrix:
-        episode: [1,2,3,4,5]
+        episode: [2,3,5]
     steps:
       - uses: actions/checkout@v4
         with:
