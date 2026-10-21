@@ -1,0 +1,42 @@
+name: Jori Flimm – check separate Buffer TikTok channel (READ ONLY)
+
+on:
+  push:
+    branches:
+      - feature/jori-flimm-neustart-folge001
+    paths:
+      - .github/workflows/jori-buffer-read-only-check.yml
+      - kids/jori-flimm/relaunch-v2/scripts/check_buffer_channel.py
+      - kids/jori-flimm/relaunch-v2/scripts/test_buffer_channel.py
+
+permissions:
+  contents: read
+
+jobs:
+  buffer-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          filter: blob:none
+          sparse-checkout: |
+            kids/jori-flimm/relaunch-v2/scripts
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test that MOTUS cannot be selected
+        run: |
+          python -m unittest discover -s kids/jori-flimm/relaunch-v2/scripts -p 'test_buffer_channel.py' -v
+      - name: Read Buffer channel only; no upload or social publishing
+        env:
+          JORI_BUFFER_API_KEY: ${{ secrets.JORI_BUFFER_API_KEY }}
+          JORI_EXPECTED_TIKTOK_HANDLE: "jori.flimm"
+        run: |
+          if [ -z "$JORI_BUFFER_API_KEY" ]; then
+            echo "JORI_BUFFER_API_KEY_ABSENT - connection cannot be independently checked yet."
+            echo "No Buffer API call made; no post created or scheduled."
+            exit 0
+          fi
+          python kids/jori-flimm/relaunch-v2/scripts/check_buffer_channel.py
