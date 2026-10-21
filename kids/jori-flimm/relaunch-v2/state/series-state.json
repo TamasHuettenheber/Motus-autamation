@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "series_version": "relaunch-v2",
+  "series": "Jori & Flimm – Rätselwelten / Neustart",
+  "last_successful_episode": 0,
+  "next_episode_number": 1,
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "speaker_id": "Sulafat",
+    "model": "gemini-3.8-flash-tts"
+  },
+  "continuity": {
+    "relationship_stage": "Jori und Flimm begegnen sich zum ersten Mal; es gibt noch keine gemeinsam erlebten Rätsel.",
+    "known_facts": [
+      "Jori: Kind mit dunklen Locken, roter Strickmütze, dunkelblauem Mantel.",
+      "Flimm: kleines warmes goldenes Laternenwesen mit leuchtendem Stern im Bauch.",
+      "Flockenfels ist eine freundliche, verschneite Stadt voller kleiner Lichtgeheimnisse."
+    ],
+    "active_threads": [
+      "Der erste Funke ihrer gemeinsamen Abenteuer steht noch bevor."
+    ],
+    "recently_used_locations": []
+  },
+  "release_authorized": false,
+  "public_tiktok_connected": false
+}
