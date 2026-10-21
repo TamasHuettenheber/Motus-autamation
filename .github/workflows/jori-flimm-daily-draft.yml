@@ -6,6 +6,7 @@ on:
       - feature/jori-flimm-kids-pipeline
     paths:
       - kids/jori-flimm/scripts/generate_daily_story.py
+      - kids/jori-flimm/scripts/test_generate_daily_story.py
       - .github/workflows/jori-flimm-daily-draft.yml
   workflow_dispatch:
     inputs:
@@ -41,6 +42,7 @@ jobs:
       - name: Syntax and dry-run without secrets
         run: |
           python3 -m py_compile kids/jori-flimm/scripts/generate_daily_story.py
+          python3 -m unittest discover -s kids/jori-flimm/scripts -p 'test_*.py' -v
           python3 kids/jori-flimm/scripts/generate_daily_story.py --dry-run
 
   story-draft:
