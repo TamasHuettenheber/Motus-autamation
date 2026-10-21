@@ -186,6 +186,8 @@ jobs:
           PY
 
       - name: Generate narration and download stills
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
         run: |
           mkdir -p work/scenes
           python3 - <<'PY'
@@ -218,6 +220,9 @@ jobs:
               elif provider == "Hugging Face Spaces CPU TTS":
                   subprocess.run(["python3","kids/jori-flimm/scripts/generate_voice.py"],
                                   check=True,timeout=300)
+              elif provider == "Gemini TTS 3.8":
+                  subprocess.run(["python3","kids/jori-flimm/scripts/generate_voice_gemini.py"],
+                                  check=True,timeout=350)
               else:
                   raise SystemExit("Unsupported or undeclared voice provider")
               subprocess.run([
@@ -384,7 +389,7 @@ jobs:
               raise SystemExit(f"Visual timeline ({v:.2f}s) is shorter than narration ({a:.2f}s)")
           PY
           ffmpeg -y -i work/visuals.mp4 -i work/narration.mp3 \
-            -filter_complex "[0:v]subtitles=work/captions.ass,fade=t=out:st=${FADE_START}:d=1.2[v];[1:a]loudnorm=I=-16:TP=-1.5:LRA=7,aresample=48000,apad,atrim=duration=${VISUAL_DURATION}[a]" \
+            -filter_complex "[0:v]subtitles=work/captions.ass,fade=t=out:st=${FADE_START}:d=1.2[v];[1:a]highpass=f=130,equalizer=f=2800:t=q:w=1:g=1.3,acompressor=threshold=0.075:ratio=3:attack=7:release=130:makeup=1,loudnorm=I=-13.5:TP=-3:LRA=4,aresample=48000,apad,atrim=duration=${VISUAL_DURATION}[a]" \
             -map "[v]" -map "[a]" \
             -c:v libx264 -preset veryfast -crf 22 -pix_fmt yuv420p -r 30 \
             -c:a aac -b:a 192k -movflags +faststart -t "${VISUAL_DURATION}" \
@@ -411,7 +416,7 @@ jobs:
           PY
           # Measure loudness on the DELIVERABLE, not on the TTS intermediate.
           ffmpeg -nostdin -hide_banner -i "$VIDEO" -vn \
-            -af loudnorm=I=-16:TP=-1.5:LRA=7:print_format=json \
+            -af loudnorm=I=-13:TP=-1:LRA=4:print_format=json \
             -f null - 2>work/voice-loudness.log
           python3 - <<'PY'
           import json,re
@@ -423,8 +428,8 @@ jobs:
           level=float(m["input_i"])
           peak=float(m["input_tp"])
           print(f"MEASURED_AUDIO_LOUDNESS={level:.2f}LUFS TRUE_PEAK={peak:.2f}dBTP")
-          if not -18.0 <= level <= -13.5 or peak > -0.9:
-              raise SystemExit("Audio loudness outside safe conversational range")
+          if not -15.5 <= level <= -11.0 or peak > -0.4:
+              raise SystemExit("Audio loudness too quiet or true peak too high for mobile; do not publish")
           PY
 
       - name: Upload rendered preview
