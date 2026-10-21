@@ -1,4 +1,4 @@
-name: Jori Flimm – one-time AI key and story test
+name: Jori Flimm – one-time AI key and story test (QC repair)
 
 on:
   push:
@@ -36,7 +36,7 @@ jobs:
             exit 1
           fi
           echo "JORI_KEY_PRESENT"
-      - name: Generate exactly one unpublished episode 003
+      - name: Generate exactly one unpublished episode 003 with bounded QC repair
         env:
           JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
         run: |
