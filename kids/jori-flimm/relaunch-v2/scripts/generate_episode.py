@@ -150,7 +150,7 @@ def preexisting_season_history():
     return [{
         "episode_number":int(p["episode_number"]),
         "title":p["title"],"hook":p["hook"],
-        "date":(dt.date(2026,10,23)+dt.timedelta(days=int(p["episode_number"])-1)).isoformat(),
+        "date":(dt.date(2026,10,22)+dt.timedelta(days=int(p["episode_number"])-1)).isoformat(),
         "riddle":{"type":p.get("clue_mode","logic"),"question":p["question"],
                   "answer":p["answer"]},
         "cliffhanger":p["cliff"],"continuity_note":p.get("continuity","")
