@@ -22,8 +22,11 @@ jobs:
           fetch-depth: 1
           sparse-checkout: |
             kids/jori-flimm
+            published
             .github/workflows/jori-followups-fast.yml
       - name: Install GitHub video tools when a render is missing
+        env:
+          JORI_REFRESH_ART: ${{ github.event_name == 'push' && github.event.head_commit.message == 'Jori unique art refresh' }}
         run: |
           needs_tools=0
           for ep in 2 3 4 5; do
@@ -32,6 +35,7 @@ jobs:
               needs_tools=1
             fi
           done
+          if [ "$JORI_REFRESH_ART" = "true" ]; then needs_tools=1; fi
           if [ "$needs_tools" = "1" ]; then
             command -v ffmpeg || sudo apt-get install -y ffmpeg
             test -f /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf || sudo apt-get install -y fonts-dejavu-core
@@ -50,10 +54,29 @@ jobs:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GH_TOKEN: ${{ github.token }}
+          JORI_REFRESH_ART: ${{ github.event_name == 'push' && github.event.head_commit.message == 'Jori unique art refresh' }}
         run: |
           set -euo pipefail
           test -n "$JORI_GEMINI_API_KEY" || { echo "Missing Jori TTS key"; exit 1; }
           test -n "$BUFFER_API_KEY" || { echo "Missing Buffer API key"; exit 1; }
+          if [ "$JORI_REFRESH_ART" = "true" ]; then
+            for ep in 2 3 4 5; do
+              echo "::group::JORI_ART_REFRESH_00$ep"
+              file=$(printf "published/jori-flimm-2026-10-%02d-e%03d.mp4" "$((22+ep-1))" "$ep")
+              python3 kids/jori-flimm/relaunch-v2/scripts/github_restore_audio_from_existing_video.py --episode "$ep"
+              python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer.py --episode "$ep"
+              ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 "$file"
+              git add --sparse "$file"
+              if ! git diff --cached --quiet; then
+                git commit -m "kids: refresh Jori episode $(printf "%03d" "$ep") with unique art"
+                git pull --rebase origin feature/jori-flimm-neustart-folge001
+                git push origin HEAD:feature/jori-flimm-neustart-folge001
+              fi
+              python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_buffer.py --episode "$ep" --replace-existing
+              echo "::endgroup::"
+            done
+            exit 0
+          fi
           for ep in 2 3 4 5; do
             echo "::group::JORI_FOLGE_00$ep"
             file=$(printf "published/jori-flimm-2026-10-%02d-e%03d.mp4" "$((22+ep-1))" "$ep")
