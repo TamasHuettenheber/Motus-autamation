@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-test-safety-7",
-      "clip_id": "sunrise-sea-11382155",
-      "source": "https://www.pexels.com/video/vertical-shot-of-sunrise-over-sea-11382155/",
-      "used_at_utc": "2026-09-29T04:57:57.478035+00:00"
-    },
-    {
       "output_name": "motus-2026-09-29-0715",
       "clip_id": "morning-writing-8085706",
       "source": "https://www.pexels.com/video/a-person-writing-in-a-notebook-8085706/",
@@ -599,6 +593,12 @@
       "clip_id": "planner-writing-7744197",
       "source": "https://www.pexels.com/video/woman-writing-on-a-notebook-at-the-office-7744197/",
       "used_at_utc": "2026-10-22T06:50:50.832188+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-24-1200",
+      "clip_id": "train-window-36620147",
+      "source": "https://www.pexels.com/video/scenic-views-through-train-window-36620147/",
+      "used_at_utc": "2026-10-22T22:37:33.969073+00:00"
     }
   ]
 }
