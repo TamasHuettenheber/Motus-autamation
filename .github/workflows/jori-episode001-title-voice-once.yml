@@ -41,6 +41,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: Jori-Folge001-Sulafat-Prolog
-          path: out/Jori_001_Sulafat_Serienauftakt.wav
+          path: out/Jori_001_Sulafat_Prolog.wav
           retention-days: 7
           if-no-files-found: error
