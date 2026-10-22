@@ -5,7 +5,7 @@ from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont,ImageFilter
 ROOT=Path.cwd()
 BASE=ROOT/"kids/jori-flimm/relaunch-v2"
-ART=ROOT/"kids/jori-flimm/assets/e000"
+ART=ROOT/f"kids/jori-flimm/assets/e{n:03d}"
 parser=argparse.ArgumentParser();parser.add_argument("--episode",type=int,required=True,choices=[2,3,4,5]);args=parser.parse_args()
 n=args.episode
 episode=next(e for e in json.loads((BASE/"staffel1_folgen_001_005.json").read_text())["episodes"] if e["episode_number"]==n)
@@ -20,10 +20,7 @@ F2="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 font=lambda size,bold=True:ImageFont.truetype(F if bold else F2,size)
 def cmd(*args):subprocess.run(list(map(str,args)),check=True,timeout=500)
 def draw_scene(name,section):
- source={"hook":"scene-06.jpg","story":"scene-03.jpg","puzzle":"scene-04.jpg","answer":"scene-05.jpg","cliff":"scene-06.jpg"}[section]
- if n==3:source={"hook":"scene-05.jpg","story":"scene-06.jpg","puzzle":"scene-05.jpg","answer":"scene-06.jpg","cliff":"scene-06.jpg"}[section]
- if n==4:source={"hook":"scene-03.jpg","story":"scene-04.jpg","puzzle":"scene-04.jpg","answer":"scene-05.jpg","cliff":"scene-06.jpg"}[section]
- im=Image.open(ART/source).convert("RGB").resize((720,1280))
+ im=Image.open(ART/"scene.jpg").convert("RGB").resize((720,1280))
  overlay=Image.new("RGBA",(720,1280),(0,0,0,0));d=ImageDraw.Draw(overlay)
  d.rounded_rectangle((34,38,683,102),radius=17,fill=(15,37,67,196))
  d.text((55,57),f"JORI & FLIMM   ·   FOLGE {n:03d}",font=font(23),fill="#fff2cf")
