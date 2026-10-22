@@ -3,7 +3,7 @@
 import argparse,json,os,time,urllib.request,urllib.error
 from datetime import datetime
 from zoneinfo import ZoneInfo
-p=argparse.ArgumentParser();p.add_argument("--episode",type=int,required=True,choices=[2,3,4,5]);a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument("--episode",type=int,required=True,choices=[2,3,4,5]);p.add_argument("--replace-existing",action="store_true");a=p.parse_args()
 n=a.episode
 key=os.environ.get("BUFFER_API_KEY","").strip()
 assert key,"BUFFER_API_KEY_MISSING"
@@ -37,11 +37,28 @@ oid,channel=matches[0]
 query="query{posts(input:{organizationId:"+json.dumps(oid)+",filter:{status:[scheduled],channelIds:["+json.dumps(channel)+"]}}){edges{node{id text dueAt channelId}}pageInfo{hasNextPage}}}"
 posts=gql(query)["posts"]
 assert not posts["pageInfo"]["hasNextPage"],"Cannot check all scheduled posts"
+existing=[]
 for edge in posts["edges"]:
  old=edge["node"]
  if f"Jori & Flimm | Folge {n:03d}" in (old.get("text") or ""):
-  print("JORI_EPISODE_ALREADY_SCHEDULED",n,old["id"],old["dueAt"])
-  raise SystemExit(0)
+  existing.append(old)
+if a.replace_existing:
+ assert len(existing)==1,"Scheduled episode post is not unique; refusing replacement"
+ old=existing[0]
+ mutation="""mutation($input:EditPostInput!){editPost(input:$input){__typename ... on PostActionSuccess{post{id status dueAt channelId assets{mimeType source}}} ... on MutationError{message}}}"""
+ edited=gql(mutation,{"input":{"id":old["id"],"assets":[{"video":{"url":media,"metadata":{"thumbnailOffset":1000}}}]}})["editPost"]
+ assert edited.get("__typename")=="PostActionSuccess",edited
+ post=edited["post"]
+ assert post.get("id")==old["id"] and post.get("status")=="scheduled" and post.get("channelId")==channel,post
+ assert post.get("dueAt")==old.get("dueAt"),{"before":old.get("dueAt"),"after":post.get("dueAt")}
+ assert any(x.get("source")==media for x in post.get("assets",[])),post
+ print("JORI_BUFFER_POST_UPDATED_IN_PLACE",n,json.dumps(post,ensure_ascii=False))
+ raise SystemExit(0)
+if existing:
+ assert len(existing)==1,"Duplicate scheduled episode posts detected"
+ old=existing[0]
+ print("JORI_EPISODE_ALREADY_SCHEDULED",n,old["id"],old["dueAt"])
+ raise SystemExit(0)
 data=json.loads(open("kids/jori-flimm/relaunch-v2/staffel1_folgen_001_005.json",encoding="utf-8").read())
 e=next(x for x in data["episodes"] if x["episode_number"]==n)
 caption=f"Jori & Flimm | Folge {n:03d}: {e['title']}. Die Geschichte geht weiter – mit einem neuen Rätsel! #JoriUndFlimm #Kindergeschichte #Rätsel #GeschichtenFürKinder"
