@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 """Recover current Sulafat audio from the scheduled MP4 without new TTS."""
-import argparse,json,re,subprocess
+import argparse,json,re,subprocess,urllib.request,zipfile,io,os
 from pathlib import Path
 p=argparse.ArgumentParser();p.add_argument("--episode",type=int,required=True,choices=[2,3,4,5]);n=p.parse_args().episode
-root=Path.cwd();d=22+n-1;source=root/f"published/jori-flimm-2026-10-{d:02d}-e{n:03d}.mp4"
-assert source.exists(),f"Scheduled source MP4 missing: {source}"
-work=root/f"work/episode_{n:03d}";work.mkdir(parents=True,exist_ok=True);raw=work/"source-audio.wav";audio=work/"narration_source.wav";timeline=work/"voice-timeline.json"
+root=Path.cwd();d=22+n-1;source=root/f"work/episode_{n:03d}/original-scheduled.mp4"
+work=source.parent;work.mkdir(parents=True,exist_ok=True);raw=work/"source-audio.wav";audio=work/"narration_source.wav";timeline=work/"voice-timeline.json"
+token=os.environ["GH_TOKEN"];artifact=12414976364
+request=urllib.request.Request(f"https://api.github.com/repos/{os.environ['GITHUB_REPOSITORY']}/actions/artifacts/{artifact}/zip",headers={"Authorization":"Bearer "+token,"Accept":"application/vnd.github+json"})
+with urllib.request.urlopen(request,timeout=90) as response:archive=zipfile.ZipFile(io.BytesIO(response.read()))
+name=next((x for x in archive.namelist() if x.endswith(f"jori-flimm-2026-10-{d:02d}-e{n:03d}.mp4")),None)
+assert name,f"Original production MP4 missing from artifact {artifact}"
+source.write_bytes(archive.read(name))
 def run(*args):return subprocess.run(list(map(str,args)),check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,timeout=180)
 run("ffmpeg","-nostdin","-y","-loglevel","error","-i",source,"-vn","-ac","1","-ar","24000","-c:a","pcm_s16le",raw)
 dur=float(json.loads(run("ffprobe","-v","error","-show_entries","format=duration","-of","json",raw).stdout)["format"]["duration"])
@@ -22,7 +27,7 @@ ep=next(x for x in data["episodes"] if x["episode_number"]==n);narr=ep["narratio
 before,after=narr.split("[[PAUSE:7]]")
 fix=lambda x:x.replace("flüsterte er.","flüsterte sie.").replace("sagte er.","sagte sie.").replace("Jori bot seine Hilfe an","Jori bot ihre Hilfe an")
 before,after=fix(before),fix(after);cut=s+7
-run("ffmpeg","-nostdin","-y","-loglevel","error","-i",raw,"-filter_complex",f"[0:a]atrim=start=0:end={s:.6f},asetpts=PTS-STARTPTS[a];[0:a]atrim=start={cut:.6f}:end={dur:.6f},asetpts=PTS-STARTPTS[b];[a][b]concat=n=2:v=0:a=1[out]","-map","[out]","-c:a","pcm_s16le",audio)
+run("ffmpeg","-nostdin","-y","-loglevel","error","-i",raw,"-filter_complex",f"[0:a]atrim=start=0:end={s:.6f},asetpts=PTS-STARTPTS[a];anullsrc=r=24000:cl=mono,atrim=duration=7,asetpts=PTS-STARTPTS[p];[0:a]atrim=start={e:.6f}:end={dur:.6f},asetpts=PTS-STARTPTS[b];[a][p][b]concat=n=3:v=0:a=1[out]","-map","[out]","-c:a","pcm_s16le",audio)
 total=s+7+(dur-e);items=[{"kind":"speech","text":before.strip(),"start":0.0,"end":s,"duration":s},{"kind":"pause","text":"","start":s,"end":s+7,"duration":7.0},{"kind":"speech","text":after.strip(),"start":s+7,"end":total,"duration":dur-e}]
 timeline.write_text(json.dumps({"duration":total,"items":items,"voice":"Sulafat","source":"existing scheduled MP4; no TTS regeneration"},ensure_ascii=False),encoding="utf-8")
 print(f"JORI_EXISTING_SULAFAT_AUDIO_REUSED episode={n} detected_pause={e-s:.3f}s normalized=7.000s duration={total:.3f}s")

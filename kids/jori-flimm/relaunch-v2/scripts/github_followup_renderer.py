@@ -114,4 +114,6 @@ sub=W/"captions.ass";sub.write_text(header)
 output=ROOT/f"published/jori-flimm-2026-10-{22+n-1:02d}-e{n:03d}.mp4";output.parent.mkdir(exist_ok=True)
 cmd("ffmpeg","-nostdin","-y","-loglevel","error","-i",video,"-i",audio,"-filter_complex",f"[0:v]ass={sub}[v]","-map","[v]","-map","1:a","-c:v","libx264","-preset","veryfast","-crf","21","-pix_fmt","yuv420p","-r","24","-c:a","aac","-b:a","192k","-movflags","+faststart","-shortest",output)
 assert output.stat().st_size>1_000_000
-print(f"JORI_EPISODE_RENDER_OK episode={n} duration={D} bytes={output.stat().st_size}")
+rendered=float(subprocess.check_output(["ffprobe","-v","error","-show_entries","format=duration","-of","default=noprint_wrappers=1:nokey=1",str(output)],text=True).strip())
+assert abs(rendered-D)<0.25,f"Rendered duration mismatch: expected {D}, got {rendered}"
+print(f"JORI_EPISODE_RENDER_OK episode={n} duration={rendered} bytes={output.stat().st_size}")
