@@ -49,6 +49,29 @@ visual=W/"visual.mp4"
 run("ffmpeg","-nostdin","-y","-loglevel","error","-f","concat","-safe","0","-i",lst,"-c","copy",visual)
 audio=W/"audio.wav"
 run("ffmpeg","-nostdin","-y","-loglevel","error","-i",voice,"-i",story,"-filter_complex","[0:a]aresample=48000,aformat=sample_fmts=fltp:channel_layouts=mono[a0];[1:a]aresample=48000,aformat=sample_fmts=fltp:channel_layouts=mono[a1];[a0][a1]concat=n=2:v=0:a=1,loudnorm=I=-14:TP=-1.5:LRA=5[a]","-map","[a]","-c:a","pcm_s16le",audio)
-run("ffmpeg","-nostdin","-y","-loglevel","error","-i",visual,"-i",audio,"-map","0:v","-map","1:a","-c:v","libx264","-preset","veryfast","-crf","21","-pix_fmt","yuv420p","-r","24","-c:a","aac","-b:a","192k","-movflags","+faststart","-shortest",P)
+# Restore original timed V7 captions at their V10-shifted positions.
+def stamp(t):
+ h=int(t//3600);m=int(t%3600//60);return f"{h}:{m:02d}:{t%60:05.2f}"
+header="""[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+ScaledBorderAndShadow: yes
+WrapStyle: 2
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Child,DejaVu Sans,36,&H00FFFFFF,&H00FFFFFF,&HDD04203C,&H00000000,1,0,0,0,100,100,0,0,1,3.8,0.6,2,38,38,282,1
+[Events]
+Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+"""
+rows=(R/"kids/jori-flimm/relaunch-v2/episode001_v10_caption_timeline.txt").read_text().splitlines()
+assert len(rows)>25
+for row in rows:
+ a,b,txt=row.split("|",2)
+ a=float(a)+D-3.75;b=float(b)+D-3.75
+ assert 0<a<b<D+90
+ header+=f"Dialogue: 0,{stamp(a)},{stamp(b)},Child,,0,0,0,,{txt}\\n"
+captions=W/"captions.ass";captions.write_text(header,encoding="utf-8")
+run("ffmpeg","-nostdin","-y","-loglevel","error","-i",visual,"-i",audio, "-filter_complex",f"[0:v]ass={captions}[v]","-map","[v]","-map","1:a","-c:v","libx264","-preset","veryfast","-crf","21","-pix_fmt","yuv420p","-r","24","-c:a","aac","-b:a","192k","-movflags","+faststart","-shortest",P)
 assert P.stat().st_size>1_000_000 and 90<duration(P)<115
 print("GITHUB_RENDER_DONE",P,duration(P),P.stat().st_size)
