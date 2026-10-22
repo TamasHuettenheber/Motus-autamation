@@ -27,6 +27,7 @@ jobs:
       - name: Install GitHub video tools for rendering or art refresh
         env:
           JORI_REFRESH_ART: ${{ github.event_name == 'push' && github.event.head_commit.message == 'Jori unique art refresh v5' }}
+          JORI_REPAIR_E4_VOICE: ${{ github.event_name == 'push' && github.event.head_commit.message == 'Jori female voice correction E4' }}
         run: |
           needs_tools=0
           for ep in 2 3 4 5; do
@@ -35,7 +36,7 @@ jobs:
               needs_tools=1
             fi
           done
-          if [ "$JORI_REFRESH_ART" = "true" ]; then needs_tools=1; fi
+          if [ "$JORI_REFRESH_ART" = "true" ] || [ "$JORI_REPAIR_E4_VOICE" = "true" ]; then needs_tools=1; fi
           if [ "$needs_tools" = "1" ]; then
             if [ -f /etc/apt/apt-mirrors.txt ]; then
               sudo sed -i 's#azure.archive.ubuntu.com#archive.ubuntu.com#g' /etc/apt/apt-mirrors.txt
@@ -57,10 +58,25 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           GH_TOKEN: ${{ github.token }}
           JORI_REFRESH_ART: ${{ github.event_name == 'push' && github.event.head_commit.message == 'Jori unique art refresh v5' }}
+          JORI_REPAIR_E4_VOICE: ${{ github.event_name == 'push' && github.event.head_commit.message == 'Jori female voice correction E4' }}
         run: |
           set -euo pipefail
           test -n "$JORI_GEMINI_API_KEY" || { echo "Missing Jori TTS key"; exit 1; }
           test -n "$BUFFER_API_KEY" || { echo "Missing Buffer API key"; exit 1; }
+          if [ "$JORI_REPAIR_E4_VOICE" = "true" ]; then
+            echo "::group::JORI_VOICE_REPAIR_004"
+            file="published/jori-flimm-2026-10-25-e004.mp4"
+            python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_voice.py --episode 4
+            python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer.py --episode 4
+            ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 "$file"
+            git add --sparse "$file"
+            git commit -m "kids: regenerate Jori episode 004 voice with feminine pronoun"
+            git pull --rebase origin feature/jori-flimm-neustart-folge001
+            git push origin HEAD:feature/jori-flimm-neustart-folge001
+            python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_buffer.py --episode 4 --replace-existing
+            echo "::endgroup::"
+            exit 0
+          fi
           if [ "$JORI_REFRESH_ART" = "true" ]; then
             for ep in 2 3 4 5; do
               echo "::group::JORI_ART_REFRESH_00$ep"
