@@ -215,7 +215,7 @@ def main():
         "unaufgelöster CLIFFHANGER, damit Kinder Folge 2 unbedingt sehen wollen. "
         "Kein langes Hallo, keine langweilige Lehrerstimme, keine Wiederholungen. "
         "Geschichte gemütlich-magisch, etwas witzig. "
-        "SERIENBIBEL: Jori ist ein neugieriges Kind mit roter Wintermütze; "
+        "SERIENBIBEL: Jori ist ein neugieriges MÄDCHEN mit roter Wintermütze; für Jori konsequent SIE/IHR (niemals ER/IHN/SEIN); "
         "Flimm ist das kleine goldene Lichtwesen mit Stern im Bauch. "
         "Die erste Begegnung geschieht AUSSCHLIESSLICH in Folge 001. "
         "Ab Folge 006 beginnt die Handlung beim riesigen Fußabdruck und dem Geheimnis von Flimms Stern. "
