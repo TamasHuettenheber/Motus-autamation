@@ -113,3 +113,4 @@ jobs:
           retention-days: 14
           if-no-files-found: warn
 # Refresh only the Jori follow-up visual scenes; MOTUS workflows are not involved.
+# Retry the Jori-only visual refresh after correcting the multi-scene render loop.

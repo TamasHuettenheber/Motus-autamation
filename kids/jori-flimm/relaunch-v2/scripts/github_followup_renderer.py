@@ -69,7 +69,7 @@ def draw_scene(name,section):
   d.rounded_rectangle((40,178,680,254),radius=16,fill=(13,31,61,218))
   d.text((360,213),"WIE GEHT ES WEITER?",font=font(27),anchor="mm",fill="#ffebbc")
  return Image.alpha_composite(im.convert("RGBA"),overlay).convert("RGB")
-for section in ["hook","story","puzzle","answer","cliff"]:
+for section in ["hook","story_a","story_b","puzzle","answer","cliff"]:
  draw_scene(n,section).save(W/f"{section}.png")
 before=items[0]["duration"];pause=items[1]["duration"];after=items[2]["duration"]
 # Five distinct illustrations; the final story beat shares its close-up with the seven-second puzzle pause.
