@@ -1,5 +1,15 @@
 # Jori & Flimm – verbindliche Serienbibel, ab Neustartfolge 001
 
+## Verbindliche Nutzerfreigabe vom 22.10.2026: EINE fortlaufende Geschichte
+- **Folge 001, Video V10** ist vom Nutzer als perfekte Grundversion **inhaltlich und zur Veröffentlichung freigegeben**. Exakte Datei: `Jori_Flimm_Folge_001_V10_Ihren_Namen_Prueffassung.mp4`. Das heißt noch nicht, dass die Datei tatsächlich auf TikTok veröffentlicht oder in Buffer geplant wurde.
+- **Jede Folge beginnt unmittelbar beim offenen Ereignis (Cliffhanger) der vorherigen Folge.** Keine eigenständigen unverbundenen Geschichten und kein neuer Serienstart bei jeder Folge.
+- Jori und Flimm bleiben durchgehend dieselben Figuren mit unverändertem Aussehen und gewachsenem Wissen. **Jori ist ein Mädchen (sie/ihr).**
+- Abwechslungsreiche Rätsel und Orte sind **Etappen EINER durchgehenden Handlung**, keine unabhängigen Abenteuer. Die Auflösung eines Rätsels bewirkt die nächste konkrete Handlung, und das Ende eröffnet die nächste Folge.
+- Beim Schreiben von Folge N muss die letzte Handlung und der genaue Cliffhanger von Folge N−1 als verbindlicher Einstieg verwendet werden. Folgennummern niemals vertauschen, Wiederholungen/Retcons verbieten.
+- Staffel 001–005 ist bereits als lückenlose Kette konzipiert: dreifaches Klopfen (001→002) → rote Karte/Mauer ohne Tür (002→003) → schwebender Schlüssel (003→004) → Gestalt im Schneesturm (004→005) → riesiger Fußabdruck/Sterngeheimnis (005→006).
+- Jede veröffentlichte Folge: genau ein Video pro Tag 14:00 Europe/Berlin auf @jori.flimm, **nur nach erfolgreicher tatsächlicher Buchung/Publikation bestätigen**. MOTUS unberührt.
+
+
 ## Dramaturgie und Figuren
 - **Jori ist ein Mädchen** mit roter Wintermütze. Für Jori konsequent **sie/ihr** verwenden; niemals er/ihn/sein als Pronomen für Jori. Jori ist nicht bereits vor Folge 001 mit Flimm befreundet.
 - **Flimm** ist ein kleines goldenes, warm leuchtendes Wesen mit einem Stern am Bauch, keine Eule, kein Igel. Sein Licht hilft, aber ersetzt nicht Joris eigenes Nachdenken.
@@ -9,7 +19,7 @@
 - Pro Folge: ein spannender Anfang → charakterbezogene Geschichte → **ein** klar im Bild sichtbares Rätsel → **7 Sekunden** tatsächliche Stille und Frage im Bild → gesprochene Lösung und Konsequenz → neuer Cliffhanger.
 - Rätselhinweise und Figuren müssen **gleichzeitig** sichtbar bleiben. Rätselgrafik maximal ein klar abgegrenzter Bildbereich, kein großflächiges Überdecken.
 - Untertitel als kleine, weiß umrandete Zeilen in sicherem Bereich, ohne schwarze Vollflächen; **vollständig mit tatsächlich gesprochenen Worten übereinstimmen**. Keine heuristischen falschen Zeitmarken als release-ready deklarieren.
-- Pro Folge **ein eigener Handlungsfokus und Rätseltyp**. Keine Serien von fünf gleichartigen Glocken/Laternen/Schilder-Rätseln. Ein verbindender Gegenstand (die Laterne) darf wiederkehren, ist aber nicht der Plot jeder Folge.
+- Pro Folge **ein neuer Handlungsabschnitt und Rätseltyp**. Keine Serien von fünf gleichartigen Glocken/Laternen/Schilder-Rätseln. Ein verbindender Gegenstand (die Laterne) darf wiederkehren, ist aber nicht der Plot jeder Folge.
 
 ## Fünf eigenständige Abenteuer – verbindliche Abgrenzung
 | Folge | Was sich entwickelt | Rätseltyp | Einzigartiger Ort/Gegenstand | Cliffhanger |
