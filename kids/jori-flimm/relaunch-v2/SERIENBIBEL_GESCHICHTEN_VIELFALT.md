@@ -1,7 +1,7 @@
 # Jori & Flimm – verbindliche Serienbibel, ab Neustartfolge 001
 
 ## Dramaturgie und Figuren
-- **Jori** ist ein neugieriges Kind mit roter Wintermütze. Jori ist nicht bereits vor Folge 001 mit Flimm befreundet.
+- **Jori ist ein Mädchen** mit roter Wintermütze. Für Jori konsequent **sie/ihr** verwenden; niemals er/ihn/sein als Pronomen für Jori. Jori ist nicht bereits vor Folge 001 mit Flimm befreundet.
 - **Flimm** ist ein kleines goldenes, warm leuchtendes Wesen mit einem Stern am Bauch, keine Eule, kein Igel. Sein Licht hilft, aber ersetzt nicht Joris eigenes Nachdenken.
 - **Sulafat** erzählt lebendig, warm und kindgerecht; keine trockene Lehrerstimme. Jede Episode beginnt mit einem konkreten spannenden Ereignis, nicht nur mit dem Titel.
 - **Folge 001 benötigt eine echte Einführung**, in der Jori als Figur und das verschneite Dorf vorgestellt werden, *bevor* die erste Begegnung mit Flimm erzählt wird. Ein bloßes „Jori und Flimm. Folge eins.“ mit anschließendem Sprung in die Mitte ist NICHT zulässig.
