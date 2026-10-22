@@ -38,13 +38,18 @@ jobs:
           JORI_TTS_MODEL: gemini-3.8-flash-lite-tts
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           GITHUB_REPOSITORY: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           test -n "$JORI_GEMINI_API_KEY" || { echo "Missing Jori TTS key"; exit 1; }
           test -n "$BUFFER_API_KEY" || { echo "Missing Buffer API key"; exit 1; }
-          for ep in 2 3 4 5; do
+          for ep in 3 5 4; do
             echo "::group::JORI_FOLGE_00$ep"
-            python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_voice.py --episode "$ep"
+            if [ "$ep" = "3" ] || [ "$ep" = "5" ]; then
+              python3 kids/jori-flimm/relaunch-v2/scripts/github_restore_followup_audio.py --episode "$ep"
+            else
+              python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_voice.py --episode "$ep"
+            fi
             python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer.py --episode "$ep"
             file=$(printf "published/jori-flimm-2026-10-%02d-e%03d.mp4" "$((22+ep-1))" "$ep")
             ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 "$file"
