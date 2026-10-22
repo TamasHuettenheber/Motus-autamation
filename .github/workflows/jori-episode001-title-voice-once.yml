@@ -1,4 +1,4 @@
-name: Jori Folge 001 – Sulafat spricht sanften Serienauftakt
+name: Jori Folge 001 – Sulafat erzählt echten Prolog
 
 on:
   push:
@@ -33,14 +33,14 @@ jobs:
           src="kids/jori-flimm/scripts/generate_voice_gemini.py"
           spec=importlib.util.spec_from_file_location("jori_voice",src)
           lib=importlib.util.module_from_spec(spec);spec.loader.exec_module(lib)
-          script="Jori und Flimm. Folge eins: Das Licht, das Joris Namen kannte."
+          script="In einem verschneiten Dorf lebte ein Kind namens Jori. Jori liebte die Sterne und wollte jedes Geheimnis entdecken. Doch an diesem Abend wartete im Schnee etwas ganz Besonderes. Ein kleines Licht, das seinen Namen kannte. Hier beginnt die Geschichte von Jori und Flimm. Folge eins: Das Licht, das Joris Namen kannte."
           wav=lib.tts_segment(script,"Sulafat",os.environ["JORI_GEMINI_API_KEY"])
-          pathlib.Path("out/Jori_001_Sulafat_Serienauftakt.wav").write_bytes(wav)
+          pathlib.Path("out/Jori_001_Sulafat_Prolog.wav").write_bytes(wav)
           print("INTRO_WITH_SULAFAT_GENERATED",len(wav),"bytes")
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: Jori-Folge001-Sulafat-Serienauftakt
+          name: Jori-Folge001-Sulafat-Prolog
           path: out/Jori_001_Sulafat_Serienauftakt.wav
           retention-days: 7
           if-no-files-found: error
