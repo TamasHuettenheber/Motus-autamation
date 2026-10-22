@@ -99,7 +99,9 @@ def emit(a,b,txt):
  weights=[max(1,len(" ".join(g))) for g in groups];total=sum(weights);start=a
  for i,(group,weight) in enumerate(zip(groups,weights)):
   end=b if i==len(groups)-1 else start+(b-a)*weight/sum(weights[i:])
-  if end-start>.08:header+=f"Dialogue: 0,{ts(start)},{ts(end)},Child,,0,0,0,,{'\\N'.join(group)}\n"
+  if end-start>.08:
+   rendered="\\N".join(group)
+   header+=f"Dialogue: 0,{ts(start)},{ts(end)},Child,,0,0,0,,{rendered}\n"
   start=end
 for item in [items[0],items[2]]:
  txt=item["text"].strip()
