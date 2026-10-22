@@ -14,7 +14,7 @@ from zoneinfo import ZoneInfo
 ZONE=ZoneInfo("Europe/Berlin")
 UTC=dt.timezone.utc
 ROOT=Path(__file__).resolve().parents[1]
-FIRST=dt.date(2026,10,23)
+FIRST=dt.date(2026,10,22)
 INTERVAL=dt.timedelta(days=1)
 INITIAL=5
 
