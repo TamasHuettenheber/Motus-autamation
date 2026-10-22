@@ -27,3 +27,9 @@ Alle Buffer-Post-IDs stammen aus tatsächlichen `JORI_BUFFER_SCHEDULED_CONFIRMED
 - **Folge 006 und danach**: Noch keine vollautomatische fortlaufende Render-/Buffer-Pipeline. Bisher sind 001–005 eingeplant.
 - Die Folgen 002–005 verwenden bestehende Jori-/Flimm-Illustrationen mit jeweils speziell gerenderten Rätselmotiven; eine eigenständige Bildgeneration je Folge ist noch nicht integriert.
 - Der ursprüngliche langsame Ubuntu-apt-Workflow wurde aus dem Branch entfernt; der erfolgreiche schnelle Workflow bleibt.
+
+### Nachkontrolle und Wiederherstellung
+- Ein überholter paralleler GitHub-Lauf erzeugte erneut Folge 002 und scheiterte anschließend an Gemini HTTP 429. Es wurden dabei **keine zusätzlichen Buffer-Posts** angelegt (Duplikatschutz).
+- Die vier **exakt beim erfolgreichen Buffer-Lauf gerenderten MP4s** wurden aus GitHub-Actions-Artefakt `12414976364` wiederhergestellt. Wiederherstellungslauf: https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/39753936627 – erfolgreich.
+- Verifizierte Dateigrößen im GitHub-Branch: E002 2.952.531 Bytes, E003 2.813.129 Bytes, E004 2.878.230 Bytes, E005 2.770.101 Bytes. Buffer-URLs und Buchungen blieben unverändert.
+- Überholter Workflow und temporäre Reparatur-Workflows entfernt; produktiver Folgen-002–005-Workflow ist `jori-followups-fast.yml`.
