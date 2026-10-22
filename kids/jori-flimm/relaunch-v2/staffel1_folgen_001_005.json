@@ -34,7 +34,7 @@
     {
       "title": "Drei Klopfzeichen im Laternenlicht",
       "hook": "Ding, ding, ding! Aus der gefundenen Laterne klopfte es schon wieder!",
-      "story": "Jori hielt die Laterne näher an Flimm. „Vielleicht möchte uns jemand etwas sagen“, flüsterte er. Im Glas schwebten vier Lichtpunkte. Immer abwechselnd blinkten sie blau und golden. Flimm zählte mit: „Blau, Gold, Blau ...“ Auf dem Griff erschien eine winzige Nachricht: „Nur wer das letzte Licht richtig nennt, darf das Türchen öffnen.“ Jori betrachtete die Punkte, während Flimm vorsichtig die Laterne festhielt.",
+      "story": "Jori hielt die Laterne näher an Flimm. „Vielleicht möchte uns jemand etwas sagen“, flüsterte sie. Im Glas schwebten vier Lichtpunkte. Immer abwechselnd blinkten sie blau und golden. Flimm zählte mit: „Blau, Gold, Blau ...“ Auf dem Griff erschien eine winzige Nachricht: „Nur wer das letzte Licht richtig nennt, darf das Türchen öffnen.“ Jori betrachtete die Punkte, während Flimm vorsichtig die Laterne festhielt.",
       "question": "Welche Farbe muss als viertes Licht erscheinen: Blau oder Gold?",
       "answer": "Gold!",
       "after": "Sofort leuchtete der vierte Punkt golden auf. Flimm lachte erleichtert. Ein winziges Türchen sprang auf, und heraus flatterte eine Papierkarte mit dem Bild eines Hauses. Jori entfaltete sie vorsichtig.",
@@ -58,7 +58,7 @@
         "model": "gemini-3.8-flash-tts",
         "speaker_id": "Sulafat"
       },
-      "narration": "Ding, ding, ding! Aus der gefundenen Laterne klopfte es schon wieder! Jori hielt die Laterne näher an Flimm. „Vielleicht möchte uns jemand etwas sagen“, flüsterte er. Im Glas schwebten vier Lichtpunkte. Immer abwechselnd blinkten sie blau und golden. Flimm zählte mit: „Blau, Gold, Blau ...“ Auf dem Griff erschien eine winzige Nachricht: „Nur wer das letzte Licht richtig nennt, darf das Türchen öffnen.“ Jori betrachtete die Punkte, während Flimm vorsichtig die Laterne festhielt. Welche Farbe muss als viertes Licht erscheinen: Blau oder Gold? [[PAUSE:7]] Gold! Sofort leuchtete der vierte Punkt golden auf. Flimm lachte erleichtert. Ein winziges Türchen sprang auf, und heraus flatterte eine Papierkarte mit dem Bild eines Hauses. Jori entfaltete sie vorsichtig. Auf der Karte bewegte sich plötzlich ein roter Pfeil, ganz von allein – direkt zu einer Wand ohne Tür!",
+      "narration": "Ding, ding, ding! Aus der gefundenen Laterne klopfte es schon wieder! Jori hielt die Laterne näher an Flimm. „Vielleicht möchte uns jemand etwas sagen“, flüsterte sie. Im Glas schwebten vier Lichtpunkte. Immer abwechselnd blinkten sie blau und golden. Flimm zählte mit: „Blau, Gold, Blau ...“ Auf dem Griff erschien eine winzige Nachricht: „Nur wer das letzte Licht richtig nennt, darf das Türchen öffnen.“ Jori betrachtete die Punkte, während Flimm vorsichtig die Laterne festhielt. Welche Farbe muss als viertes Licht erscheinen: Blau oder Gold? [[PAUSE:7]] Gold! Sofort leuchtete der vierte Punkt golden auf. Flimm lachte erleichtert. Ein winziges Türchen sprang auf, und heraus flatterte eine Papierkarte mit dem Bild eines Hauses. Jori entfaltete sie vorsichtig. Auf der Karte bewegte sich plötzlich ein roter Pfeil, ganz von allein – direkt zu einer Wand ohne Tür!",
       "story_hash_key": "2-Drei Klopfzeichen im Laternenlicht"
     },
     {
