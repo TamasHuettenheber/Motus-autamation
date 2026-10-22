@@ -5,9 +5,9 @@ from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont,ImageFilter
 ROOT=Path.cwd()
 BASE=ROOT/"kids/jori-flimm/relaunch-v2"
-ART=ROOT/f"kids/jori-flimm/assets/e{n:03d}"
 parser=argparse.ArgumentParser();parser.add_argument("--episode",type=int,required=True,choices=[2,3,4,5]);args=parser.parse_args()
 n=args.episode
+ART=ROOT/f"kids/jori-flimm/assets/e{n:03d}"
 episode=next(e for e in json.loads((BASE/"staffel1_folgen_001_005.json").read_text())["episodes"] if e["episode_number"]==n)
 W=ROOT/f"work/episode_{n:03d}";W.mkdir(parents=True,exist_ok=True)
 audio=W/"narration_source.wav";timeline=W/"voice-timeline.json"

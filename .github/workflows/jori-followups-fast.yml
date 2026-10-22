@@ -24,7 +24,7 @@ jobs:
             kids/jori-flimm
             published
             .github/workflows/jori-followups-fast.yml
-      - name: Install GitHub video tools when a render is missing
+      - name: Install GitHub video tools for rendering or art refresh
         env:
           JORI_REFRESH_ART: ${{ github.event_name == 'push' && github.event.head_commit.message == 'Jori unique art refresh' }}
         run: |
