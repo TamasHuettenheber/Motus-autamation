@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Rebuild Jori & Flimm episode 001 from versioned GitHub art and Sulafat audio."""
+import math
 from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
 import subprocess
@@ -34,13 +35,32 @@ names=["scene-01.jpg","scene-03.jpg","scene-04.jpg","scene-05.jpg","scene-05.jpg
 previous=0
 for i,(end,img) in enumerate(zip(ends,names)):
  t=end-previous;previous=end
- im=Image.open(A/img).convert("RGB").resize((720,1280));d=ImageDraw.Draw(im)
+ im=Image.open((R/"kids/jori-flimm/assets/e001/scene-01.png") if i in (3,4) else (A/img)).convert("RGB").resize((720,1280));d=ImageDraw.Draw(im)
  d.rounded_rectangle((30,30,382,79),radius=15,fill="#11284e")
  d.text((48,43),"JORI & FLIMM  •  FOLGE 001",font=ImageFont.truetype(font,20),fill="#fff1d0")
  if i in (3,4):
-  for x,label in [(137,"MOND"),(360,"SONNE"),(582,"STERN")]:
-   d.rounded_rectangle((x-88,500,x+88,614),radius=17,fill="#ad7548",outline="#5a3929",width=6)
-   d.text((x,560),label,font=ImageFont.truetype(font,20),anchor="mm",fill="#fff1ca")
+  # Faithful illustrated wooden moon/sun/star puzzle used in approved V10.
+  for n,(x,label) in enumerate([(135,"MOND"),(359,"SONNE"),(583,"STERN")]):
+   y=525
+   d.rounded_rectangle((x-11,y+42,x+11,y+176),radius=5,fill=(115,76,45))
+   d.rounded_rectangle((x-89,y-73,x+89,y+50),radius=16,fill=(57,34,26))
+   d.rounded_rectangle((x-83,y-67,x+83,y+43),radius=12,fill=(175,116,68))
+   if i==4 and n==2:d.rounded_rectangle((x-89,y-73,x+89,y+50),radius=15,outline=(255,239,146),width=7)
+   if n==0:
+    d.ellipse((x-29,y-49,x+26,y+8),fill=(255,232,141))
+    d.ellipse((x-9,y-59,x+38,y-5),fill=(175,116,68))
+   elif n==1:
+    d.ellipse((x-22,y-39,x+22,y+5),fill=(255,232,141))
+    for k in range(12):
+     a=k*2*math.pi/12
+     d.line((x+math.cos(a)*31,y-17+math.sin(a)*31,x+math.cos(a)*40,y-17+math.sin(a)*40),fill=(255,232,141),width=4)
+   else:
+    xy=[]
+    for k in range(10):
+     a=-math.pi/2+k*math.pi/5;rr=33 if k%2==0 else 15.51
+     xy.append((x+math.cos(a)*rr,y-16+math.sin(a)*rr))
+    d.polygon(xy,fill=(255,232,141))
+   d.text((x,y+15),label,font=ImageFont.truetype(font,16),anchor="mm",fill="#fff0d8",stroke_width=1,stroke_fill="#5a3929")
  pic=W/f"scene{i}.png";im.save(pic);clip=W/f"scene{i}.mp4"
  run("ffmpeg","-nostdin","-y","-loglevel","error","-loop","1","-framerate","24","-i",pic,"-t",f"{t:.3f}","-vf","zoompan=z='min(zoom+0.00018,1.045)':d=1:fps=24:s=720x1280,format=yuv420p","-c:v","libx264","-preset","ultrafast","-crf","23","-r","24",clip)
  clips.append(clip)
