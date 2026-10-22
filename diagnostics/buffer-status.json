@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-22T15:08:59.171565+00:00",
+  "checked_at_utc": "2026-10-22T17:54:10.603777+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6ad861fa50009d9e9512e415",
       "text": "Nicht jede volle Stunde bedeutet einen guten Tag. Manchmal bleibt ein einziges Gespräch länger in Erinnerung als zehn erledigte Aufgaben. Schau heute auf die Momente, die wirklich etwas verändert haben. Vielleicht hast du jemanden unterstützt oder etwas Neues verstanden. Das sind Erfolge, auch wenn sie auf keiner Aufgabenliste stehen. Ein Tag darf wertvoll sein, ohne bis zur letzten Minute verplant zu sein.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Remember (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-22T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-22T16:32:44.653Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7699530733706022176",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-22-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad861fa50009d9e9512e415_video.mp4"
         }
       ]
     },
