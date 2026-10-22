@@ -37,9 +37,10 @@ jobs:
           done
           if [ "$JORI_REFRESH_ART" = "true" ]; then needs_tools=1; fi
           if [ "$needs_tools" = "1" ]; then
-            command -v ffmpeg || sudo apt-get install -y ffmpeg
-            test -f /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf || sudo apt-get install -y fonts-dejavu-core
-            python3 -c 'from PIL import Image, ImageDraw, ImageFont' || python3 -m pip install --user --break-system-packages Pillow
+            command -v ffmpeg || sudo apt-get install -y --no-install-recommends ffmpeg
+            test -f /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf || sudo apt-get install -y --no-install-recommends fonts-dejavu-core
+            /usr/bin/python3 -c 'from PIL import Image, ImageDraw, ImageFont' || sudo apt-get install -y --no-install-recommends python3-pil
+            echo /usr/bin >> "$GITHUB_PATH"
           else
             echo "JORI_ALL_RENDERS_REUSED; skip video tool installation"
           fi
