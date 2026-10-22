@@ -70,7 +70,7 @@ for row in rows:
  a,b,txt=row.split("|",2)
  a=float(a)+D-3.75;b=float(b)+D-3.75
  assert 0<a<b<D+90
- header+=f"Dialogue: 0,{stamp(a)},{stamp(b)},Child,,0,0,0,,{txt}\\n"
+ header+=f"Dialogue: 0,{stamp(a)},{stamp(b)},Child,,0,0,0,,{txt}\n"
 captions=W/"captions.ass";captions.write_text(header,encoding="utf-8")
 run("ffmpeg","-nostdin","-y","-loglevel","error","-i",visual,"-i",audio, "-filter_complex",f"[0:v]ass={captions}[v]","-map","[v]","-map","1:a","-c:v","libx264","-preset","veryfast","-crf","21","-pix_fmt","yuv420p","-r","24","-c:a","aac","-b:a","192k","-movflags","+faststart","-shortest",P)
 assert P.stat().st_size>1_000_000 and 90<duration(P)<115
