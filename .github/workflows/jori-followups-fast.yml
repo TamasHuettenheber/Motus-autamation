@@ -112,3 +112,4 @@ jobs:
           path: published/jori-flimm-2026-10-*.mp4
           retention-days: 14
           if-no-files-found: warn
+# Refresh only the Jori follow-up visual scenes; MOTUS workflows are not involved.
