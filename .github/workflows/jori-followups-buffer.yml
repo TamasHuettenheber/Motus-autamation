@@ -1,0 +1,66 @@
+name: Jori & Flimm – episodes 002 to 005 render and Buffer
+on:
+  push:
+    branches:
+      - feature/jori-flimm-neustart-folge001
+    paths:
+      - .github/workflows/jori-followups-buffer.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: jori-followups-002-005
+  cancel-in-progress: false
+jobs:
+  episodes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          fetch-depth: 1
+          sparse-checkout: |
+            kids/jori-flimm
+            .github/workflows/jori-followups-buffer.yml
+      - name: Install GitHub video tools
+        run: |
+          sudo timeout 180s apt-get update -qq
+          sudo timeout 180s apt-get install -y -qq ffmpeg python3-pil fonts-dejavu-core
+      - name: Prepare Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Render and schedule four consecutive story episodes
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+          JORI_TTS_MODEL: gemini-3.8-flash-lite-tts
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          test -n "$JORI_GEMINI_API_KEY" || { echo "Missing Jori TTS key"; exit 1; }
+          test -n "$BUFFER_API_KEY" || { echo "Missing Buffer API key"; exit 1; }
+          for ep in 2 3 4 5; do
+            echo "::group::JORI_FOLGE_00$ep"
+            python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_voice.py --episode "$ep"
+            python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer.py --episode "$ep"
+            file=$(printf "published/jori-flimm-2026-10-%02d-e%03d.mp4" "$((22+ep-1))" "$ep")
+            ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 "$file"
+            git add --sparse "$file"
+            if ! git diff --cached --quiet; then
+              git commit -m "kids: render Jori episode $(printf '%03d' "$ep") in GitHub"
+              git pull --rebase origin feature/jori-flimm-neustart-folge001
+              git push origin HEAD:feature/jori-flimm-neustart-folge001
+            fi
+            python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_buffer.py --episode "$ep"
+            echo "::endgroup::"
+          done
+      - name: Save production render samples
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Jori-Episodes-002-005-GitHub-Production
+          path: published/jori-flimm-2026-10-*.mp4
+          retention-days: 14
+          if-no-files-found: warn
