@@ -33,14 +33,14 @@ jobs:
           src="kids/jori-flimm/scripts/generate_voice_gemini.py"
           spec=importlib.util.spec_from_file_location("jori_voice",src)
           lib=importlib.util.module_from_spec(spec);spec.loader.exec_module(lib)
-          script="Mitten in einer Winternacht hörte Jori plötzlich seinen Namen. Aber niemand war zu sehen. Noch wusste sie nicht, dass sie gleich Flimm kennenlernen würde. Hier beginnt ihre Geschichte: Jori und Flimm. Folge eins."
+          script="Mitten in einer Winternacht hörte Jori plötzlich ihren Namen. Aber niemand war zu sehen. Noch wusste sie nicht, dass sie gleich Flimm kennenlernen würde. Hier beginnt ihre Geschichte: Jori und Flimm. Folge eins."
           wav=lib.tts_segment(script,"Sulafat",os.environ["JORI_GEMINI_API_KEY"])
-          pathlib.Path("out/Jori_001_Sulafat_Prolog_Maedchen_Korrigiert.wav").write_bytes(wav)
+          pathlib.Path("out/Jori_001_Sulafat_Prolog_V10_Ihren_Namen.wav").write_bytes(wav)
           print("INTRO_WITH_SULAFAT_GENERATED",len(wav),"bytes")
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: Jori-Folge001-Sulafat-Prolog-Maedchen-Korrigiert
-          path: out/Jori_001_Sulafat_Prolog_Maedchen_Korrigiert.wav
+          name: Jori-Folge001-Sulafat-Prolog-V10-Ihren-Namen
+          path: out/Jori_001_Sulafat_Prolog_V10_Ihren_Namen.wav
           retention-days: 7
           if-no-files-found: error
