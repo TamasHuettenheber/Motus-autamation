@@ -26,7 +26,7 @@ jobs:
             .github/workflows/jori-followups-fast.yml
       - name: Install GitHub video tools for rendering or art refresh
         env:
-          JORI_REFRESH_ART: ${{ github.event_name == 'push' && github.event.head_commit.message == 'Jori unique art refresh v3' }}
+          JORI_REFRESH_ART: ${{ github.event_name == 'push' && github.event.head_commit.message == 'Jori unique art refresh v4' }}
         run: |
           needs_tools=0
           for ep in 2 3 4 5; do
@@ -56,7 +56,7 @@ jobs:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GH_TOKEN: ${{ github.token }}
-          JORI_REFRESH_ART: ${{ github.event_name == 'push' && github.event.head_commit.message == 'Jori unique art refresh' }}
+          JORI_REFRESH_ART: ${{ github.event_name == 'push' && github.event.head_commit.message == 'Jori unique art refresh v4' }}
         run: |
           set -euo pipefail
           test -n "$JORI_GEMINI_API_KEY" || { echo "Missing Jori TTS key"; exit 1; }
