@@ -1,3 +1,9 @@
+# OBSOLET – ersetzt am 22.10.2026
+
+Der Nutzer hat den Start ausdrücklich vom 23. Oktober auf **22. Oktober 2026 um 14:00 Uhr** vorgezogen. Der nachfolgende alte Plan ist historisch, NICHT für Buffer verwenden. Gültig ist ausschließlich [der neue Plan vom 22.10.](VEROEFFENTLICHUNGSPLAN_AB_2026-10-22.md). Keine Videos sind durch diese Planänderung automatisch in Buffer gebucht.
+
+---
+
 # Jori & Flimm – verbindlicher Tagesrhythmus und Veröffentlichungsvorbereitung
 Stand 22. Oktober 2026
 
