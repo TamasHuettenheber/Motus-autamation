@@ -112,7 +112,10 @@ jobs:
           for edge in posts["edges"]:
               p=edge["node"]
               if "Jori & Flimm | Folge 001" in (p.get("text") or ""):
-                  print("BUFFER_ALREADY_SCHEDULED",p["id"],p["dueAt"]);raise SystemExit(0)
+                  delete=gql("mutation($input:DeletePostInput!){deletePost(input:$input){__typename ... on DeletePostSuccess{id} ... on MutationError{message}}}",{"input":{"id":p["id"]}})["deletePost"]
+                  if delete.get("__typename")!="DeletePostSuccess":
+                      raise RuntimeError("Could not replace prior Jori scheduled post: "+str(delete))
+                  print("JORI_PREVIOUS_SCHEDULE_REPLACED",p["id"])
           caption="Jori & Flimm | Folge 001: Das Licht, das Joris Namen kannte. Ein Rätsel, ein geheimnisvolles Klopfen – morgen geht die Geschichte weiter. #JoriUndFlimm #Kindergeschichte #Rätsel #GeschichtenFürKinder"
           mutation="""mutation($input:CreatePostInput!){createPost(input:$input){__typename ... on PostActionSuccess{post{id status dueAt channelId assets{mimeType source}}} ... on MutationError{message}}}"""
           result=gql(mutation,{"input":{"text":caption,"channelId":channel["id"],"schedulingType":"automatic","mode":"customScheduled","dueAt":due.isoformat(timespec="milliseconds"),"aiAssisted":True,"metadata":{"tiktok":{"isAiGenerated":True}},"assets":[{"video":{"url":media,"metadata":{"thumbnailOffset":1000}}}]}})["createPost"]
