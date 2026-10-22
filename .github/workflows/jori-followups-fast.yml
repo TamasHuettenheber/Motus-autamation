@@ -23,11 +23,22 @@ jobs:
           sparse-checkout: |
             kids/jori-flimm
             .github/workflows/jori-followups-fast.yml
-      - name: Install GitHub video tools
+      - name: Install GitHub video tools when a render is missing
         run: |
-          command -v ffmpeg || sudo apt-get install -y ffmpeg
-          test -f /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf || sudo apt-get install -y fonts-dejavu-core
-          python3 -c 'from PIL import Image, ImageDraw, ImageFont' || python3 -m pip install --user --break-system-packages Pillow
+          needs_tools=0
+          for ep in 2 3 4 5; do
+            file=$(printf "published/jori-flimm-2026-10-%02d-e%03d.mp4" "$((22+ep-1))" "$ep")
+            if ! git ls-tree -r --name-only HEAD -- "$file" | grep -Fxq "$file"; then
+              needs_tools=1
+            fi
+          done
+          if [ "$needs_tools" = "1" ]; then
+            command -v ffmpeg || sudo apt-get install -y ffmpeg
+            test -f /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf || sudo apt-get install -y fonts-dejavu-core
+            python3 -c 'from PIL import Image, ImageDraw, ImageFont' || python3 -m pip install --user --break-system-packages Pillow
+          else
+            echo "JORI_ALL_RENDERS_REUSED; skip video tool installation"
+          fi
       - name: Prepare Git identity
         run: |
           git config user.name "github-actions[bot]"
