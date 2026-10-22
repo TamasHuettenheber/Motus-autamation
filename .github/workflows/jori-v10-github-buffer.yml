@@ -1,0 +1,124 @@
+name: Jori & Flimm – GitHub render V10 and schedule Buffer
+on:
+  push:
+    branches:
+      - feature/jori-flimm-neustart-folge001
+    paths:
+      - .github/workflows/jori-v10-github-buffer.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: jori-episode001-v10-publish
+  cancel-in-progress: false
+jobs:
+  render-and-queue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Checkout isolated Jori branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          fetch-depth: 1
+          sparse-checkout: |
+            kids/jori-flimm/assets
+            kids/jori-flimm/relaunch-v2
+            .github/workflows/jori-v10-github-buffer.yml
+      - name: Install video renderer
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg unzip fonts-dejavu-core python3-pil
+      - name: Restore original Sulafat narration from prior GitHub artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          mkdir -p work/jori_v10
+          for entry in "12410426717 intro" "12387428355 story"; do
+            set -- $entry
+            curl -fsSL --retry 4 -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/$REPO/actions/artifacts/$1/zip" -o "work/jori_v10/$2.zip"
+            unzip -o "work/jori_v10/$2.zip" -d work/jori_v10
+          done
+          test -s work/jori_v10/Jori_001_Sulafat_Prolog_V10_Ihren_Namen.wav
+          test -s work/jori_v10/folge_001.wav
+      - name: Render Jori MP4 in GitHub Actions
+        run: |
+          python3 kids/jori-flimm/relaunch-v2/scripts/github_v10_pipeline.py
+          ffprobe -v error published/jori-flimm-2026-10-22-e001.mp4
+      - name: Upload render artifact for independent review
+        uses: actions/upload-artifact@v4
+        with:
+          name: Jori-Folge001-GitHub-Render-V10
+          path: published/jori-flimm-2026-10-22-e001.mp4
+          retention-days: 14
+          if-no-files-found: error
+      - name: Commit MP4 on isolated Jori branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add published/jori-flimm-2026-10-22-e001.mp4
+          git diff --cached --quiet || {
+            git commit -m "kids: GitHub-rendered Jori episode 001 V10 for Buffer"
+            git pull --rebase origin feature/jori-flimm-neustart-folge001
+            git push origin HEAD:feature/jori-flimm-neustart-folge001
+          }
+      - name: Schedule 14:00 on Buffer Jori TikTok only
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import json,os,time,urllib.request,urllib.error
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          key=os.environ.get("BUFFER_API_KEY","").strip()
+          if not key: raise SystemExit("BUFFER_API_KEY_MISSING: no post created")
+          due=datetime(2026,10,22,14,0,tzinfo=ZoneInfo("Europe/Berlin"))
+          if datetime.now(ZoneInfo("Europe/Berlin"))>=due:
+              raise SystemExit("14:00 slot already passed; no invented posting")
+          media=f"https://raw.githubusercontent.com/{os.environ['REPO']}/feature/jori-flimm-neustart-folge001/published/jori-flimm-2026-10-22-e001.mp4"
+          def gql(query,variables=None):
+              req=urllib.request.Request("https://api.buffer.com",data=json.dumps({"query":query,"variables":variables or {}}).encode(),method="POST",headers={"Authorization":"Bearer "+key,"Content-Type":"application/json"})
+              try:
+                  with urllib.request.urlopen(req,timeout=60) as r: answer=json.load(r)
+              except urllib.error.HTTPError as e:
+                  raise RuntimeError(f"Buffer HTTP {e.code}: {e.read()[:500]!r}")
+              if answer.get("errors"): raise RuntimeError("Buffer GraphQL: "+str(answer["errors"]))
+              return answer["data"]
+          for attempt in range(15):
+              try:
+                  with urllib.request.urlopen(urllib.request.Request(media,method="HEAD"),timeout=20) as r:
+                      if r.status==200 and int(r.headers.get("Content-Length","0"))>1000000:break
+              except Exception:pass
+              time.sleep(5)
+          else:raise SystemExit("GitHub public video URL not ready; Buffer not scheduled")
+          orgs=gql("query {account {organizations {id name}}}")["account"]["organizations"]
+          matches=[]
+          for org in orgs:
+              ch=gql("query($id:OrganizationId!){channels(input:{organizationId:$id}){id name displayName service}}",{"id":org["id"]})["channels"]
+              for c in ch:
+                  handles={str(c.get("name","")).lower().lstrip("@"),str(c.get("displayName","")).lower().lstrip("@")}
+                  if str(c.get("service","")).lower()=="tiktok" and "jori.flimm" in handles:
+                      matches.append((org["id"],c))
+          if len(matches)!=1:raise SystemExit("JORI_TIKTOK_CHANNEL_NOT_VERIFIED: never use MOTUS")
+          oid,channel=matches[0]
+          query="query { posts(input:{organizationId:"+json.dumps(oid)+",filter:{status:[scheduled],channelIds:["+json.dumps(channel["id"])+"]}}){edges{node{id text dueAt channelId}}pageInfo{hasNextPage}}}"
+          posts=gql(query)["posts"]
+          if posts["pageInfo"]["hasNextPage"]:raise SystemExit("Cannot exhaustively check duplicate posts")
+          for edge in posts["edges"]:
+              p=edge["node"]
+              if "Jori & Flimm | Folge 001" in (p.get("text") or ""):
+                  print("BUFFER_ALREADY_SCHEDULED",p["id"],p["dueAt"]);raise SystemExit(0)
+          caption="Jori & Flimm | Folge 001: Das Licht, das Joris Namen kannte. Ein Rätsel, ein geheimnisvolles Klopfen – morgen geht die Geschichte weiter. #JoriUndFlimm #Kindergeschichte #Rätsel #GeschichtenFürKinder"
+          mutation="""mutation($input:CreatePostInput!){createPost(input:$input){__typename ... on PostActionSuccess{post{id status dueAt channelId assets{mimeType source}}} ... on MutationError{message}}}"""
+          result=gql(mutation,{"input":{"text":caption,"channelId":channel["id"],"schedulingType":"automatic","mode":"customScheduled","dueAt":due.isoformat(timespec="milliseconds"),"aiAssisted":True,"metadata":{"tiktok":{"isAiGenerated":True}},"assets":[{"video":{"url":media,"metadata":{"thumbnailOffset":1000}}}]}})["createPost"]
+          if result.get("__typename")!="PostActionSuccess":raise RuntimeError("Buffer rejected post "+str(result))
+          p=result["post"]
+          if p.get("status")!="scheduled" or p.get("channelId")!=channel["id"]:
+              raise RuntimeError("Buffer post not confirmed as scheduled "+str(p))
+          print("JORI_BUFFER_SCHEDULED_CONFIRMED",json.dumps(p,ensure_ascii=False))
+          PY
