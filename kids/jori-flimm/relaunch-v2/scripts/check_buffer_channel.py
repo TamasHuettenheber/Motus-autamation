@@ -81,6 +81,28 @@ def main():
     print("JORI_BUFFER_QUEUED_POSTS="+str(len(rows))+"; no MOTUS actions")
     for post in rows:
         print("JORI_QUEUED="+str(post.get("dueAt",""))+" id="+str(post.get("id","")))
+    # Read all statuses from this Jori channel only, including today's first post.
+    query=("query { posts(input:{organizationId:"+json.dumps(org_id)+
+           ",filter:{channelIds:["+json.dumps(str(target["id"]))+
+           "]}}) { edges { node { id channelId status dueAt sentAt externalLink text } } "
+           "pageInfo { hasNextPage } } }")
+    all_posts=(gql(query).get("posts") or {})
+    channel_posts=[edge.get("node",{}) for edge in all_posts.get("edges",[])]
+    first=[post for post in channel_posts
+           if post.get("id")=="6ad9ce4baefa17e341f96c3f"
+           or "Folge 001: Das Licht, das Joris Namen kannte" in (post.get("text") or "")]
+    if len(first)==1:
+        post=first[0]
+        print("JORI_EPISODE001_BUFFER_STATUS="+str(post.get("status","unknown"))
+              +" id="+str(post.get("id",""))
+              +" dueAt="+str(post.get("dueAt",""))
+              +" sentAt="+str(post.get("sentAt",""))
+              +" externalLink="+str(post.get("externalLink","")))
+    elif len(first)>1:
+        print("JORI_EPISODE001_DUPLICATE_BUFFER_RECORDS="+str(len(first)))
+    else:
+        print("JORI_EPISODE001_NOT_FOUND_IN_BUFFER_CHANNEL"
+              +" hasNextPage="+str(all_posts.get("pageInfo",{}).get("hasNextPage")))
     print("VERIFICATION_ONLY: no posts were created, scheduled or published")
 
 if __name__=="__main__":
