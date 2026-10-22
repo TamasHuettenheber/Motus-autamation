@@ -43,22 +43,28 @@ jobs:
           set -euo pipefail
           test -n "$JORI_GEMINI_API_KEY" || { echo "Missing Jori TTS key"; exit 1; }
           test -n "$BUFFER_API_KEY" || { echo "Missing Buffer API key"; exit 1; }
-          for ep in 3 5 4; do
+          for ep in 2 3 4 5; do
             echo "::group::JORI_FOLGE_00$ep"
-            if [ "$ep" = "3" ] || [ "$ep" = "5" ]; then
-              python3 kids/jori-flimm/relaunch-v2/scripts/github_restore_followup_audio.py --episode "$ep"
-            else
-              python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_voice.py --episode "$ep"
-            fi
-            python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer.py --episode "$ep"
             file=$(printf "published/jori-flimm-2026-10-%02d-e%03d.mp4" "$((22+ep-1))" "$ep")
-            ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 "$file"
-            git add --sparse "$file"
-            if ! git diff --cached --quiet; then
-              git commit -m "kids: render Jori episode $(printf '%03d' "$ep") in GitHub"
-              git pull --rebase origin feature/jori-flimm-neustart-folge001
-              git push origin HEAD:feature/jori-flimm-neustart-folge001
+            # Reuse branch MP4s. This keeps retries idempotent and avoids repeated TTS/API usage.
+            if git ls-tree HEAD -- "$file" | grep -Fq "$file"; then
+              echo "JORI_EXISTING_RENDER_REUSED episode=$ep path=$file"
+            else
+              if [ "$ep" = "3" ] || [ "$ep" = "5" ]; then
+                python3 kids/jori-flimm/relaunch-v2/scripts/github_restore_followup_audio.py --episode "$ep"
+              else
+                python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_voice.py --episode "$ep"
+              fi
+              python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer.py --episode "$ep"
+              ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 "$file"
+              git add --sparse "$file"
+              if ! git diff --cached --quiet; then
+                git commit -m "kids: render Jori episode $(printf '%03d' "$ep") in GitHub"
+                git pull --rebase origin feature/jori-flimm-neustart-folge001
+                git push origin HEAD:feature/jori-flimm-neustart-folge001
+              fi
             fi
+            # The Buffer helper checks for an existing scheduled episode before creating a post.
             python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_buffer.py --episode "$ep"
             echo "::endgroup::"
           done
