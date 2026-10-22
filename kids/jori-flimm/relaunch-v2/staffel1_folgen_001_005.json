@@ -94,7 +94,7 @@
     {
       "title": "Das falsche Schloss",
       "hook": "Ein Schlüssel schwebte vor Joris Nase – und drei Schlösser begannen gleichzeitig zu leuchten!",
-      "story": "Flimm folgte dem Schlüssel mit großen Augen. An einer hölzernen Truhe hingen drei Schlösser. Das erste hatte ein rundes Loch, das zweite ein dreieckiges und das dritte ein viereckiges. Am schwebenden Schlüssel war deutlich eine dreieckige Spitze zu erkennen. Jori wollte ihn nicht einfach irgendwo hineinstecken. „Wir müssen genau hinsehen“, sagte er. Flimm hielt seinen hellen Sternenbauch darüber, damit die Formen gut sichtbar wurden.",
+      "story": "Flimm folgte dem Schlüssel mit großen Augen. An einer hölzernen Truhe hingen drei Schlösser. Das erste hatte ein rundes Loch, das zweite ein dreieckiges und das dritte ein viereckiges. Am schwebenden Schlüssel war deutlich eine dreieckige Spitze zu erkennen. Jori wollte ihn nicht einfach irgendwo hineinstecken. „Wir müssen genau hinsehen“, sagte sie. Flimm hielt seinen hellen Sternenbauch darüber, damit die Formen gut sichtbar wurden.",
       "question": "Zu welchem Schloss passt der Schlüssel mit der dreieckigen Spitze?",
       "answer": "Zum Schloss mit dem Dreieck!",
       "after": "Ganz vorsichtig führte Flimm den Schlüssel ins mittlere Schloss. Klick! Der Deckel hob sich, und darin lag ein winziger Kompass. Seine Nadel zeigte jedoch nicht nach Norden, sondern auf ein Fenster.",
@@ -117,7 +117,7 @@
         "model": "gemini-3.8-flash-tts",
         "speaker_id": "Sulafat"
       },
-      "narration": "Ein Schlüssel schwebte vor Joris Nase – und drei Schlösser begannen gleichzeitig zu leuchten! Flimm folgte dem Schlüssel mit großen Augen. An einer hölzernen Truhe hingen drei Schlösser. Das erste hatte ein rundes Loch, das zweite ein dreieckiges und das dritte ein viereckiges. Am schwebenden Schlüssel war deutlich eine dreieckige Spitze zu erkennen. Jori wollte ihn nicht einfach irgendwo hineinstecken. „Wir müssen genau hinsehen“, sagte er. Flimm hielt seinen hellen Sternenbauch darüber, damit die Formen gut sichtbar wurden. Zu welchem Schloss passt der Schlüssel mit der dreieckigen Spitze? [[PAUSE:7]] Zum Schloss mit dem Dreieck! Ganz vorsichtig führte Flimm den Schlüssel ins mittlere Schloss. Klick! Der Deckel hob sich, und darin lag ein winziger Kompass. Seine Nadel zeigte jedoch nicht nach Norden, sondern auf ein Fenster. Draußen hinter dem Fenster stand auf einmal eine leuchtende Gestalt im Schneesturm – und winkte den beiden zu!",
+      "narration": "Ein Schlüssel schwebte vor Joris Nase – und drei Schlösser begannen gleichzeitig zu leuchten! Flimm folgte dem Schlüssel mit großen Augen. An einer hölzernen Truhe hingen drei Schlösser. Das erste hatte ein rundes Loch, das zweite ein dreieckiges und das dritte ein viereckiges. Am schwebenden Schlüssel war deutlich eine dreieckige Spitze zu erkennen. Jori wollte ihn nicht einfach irgendwo hineinstecken. „Wir müssen genau hinsehen“, sagte sie. Flimm hielt seinen hellen Sternenbauch darüber, damit die Formen gut sichtbar wurden. Zu welchem Schloss passt der Schlüssel mit der dreieckigen Spitze? [[PAUSE:7]] Zum Schloss mit dem Dreieck! Ganz vorsichtig führte Flimm den Schlüssel ins mittlere Schloss. Klick! Der Deckel hob sich, und darin lag ein winziger Kompass. Seine Nadel zeigte jedoch nicht nach Norden, sondern auf ein Fenster. Draußen hinter dem Fenster stand auf einmal eine leuchtende Gestalt im Schneesturm – und winkte den beiden zu!",
       "story_hash_key": "4-Das falsche Schloss"
     },
     {
