@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-09-29-1200",
-      "clip_id": "phone-cafe-5075207",
-      "source": "https://www.pexels.com/video/a-woman-is-using-her-phone-to-take-a-picture-of-her-coffee-5075207/",
-      "used_at_utc": "2026-09-29T05:07:11.165632+00:00"
-    },
-    {
       "output_name": "motus-2026-09-29-1830",
       "clip_id": "phone-cafe-5075207",
       "source": "https://www.pexels.com/video/a-woman-is-using-her-phone-to-take-a-picture-of-her-coffee-5075207/",
@@ -599,6 +593,12 @@
       "clip_id": "rain-window-32661246",
       "source": "https://www.pexels.com/video/rainy-window-view-with-drops-on-glass-32661246/",
       "used_at_utc": "2026-10-22T22:37:38.706756+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-24-0700",
+      "clip_id": "man-thinking-8448889",
+      "source": "https://www.pexels.com/video/man-thinking-and-writing-8448889/",
+      "used_at_utc": "2026-10-22T23:06:48.608353+00:00"
     }
   ]
 }
