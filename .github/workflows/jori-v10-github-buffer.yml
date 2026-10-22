@@ -60,7 +60,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add published/jori-flimm-2026-10-22-e001.mp4
+          git add --sparse published/jori-flimm-2026-10-22-e001.mp4
           git diff --cached --quiet || {
             git commit -m "kids: GitHub-rendered Jori episode 001 V10 for Buffer"
             git pull --rebase origin feature/jori-flimm-neustart-folge001
