@@ -1,0 +1,46 @@
+name: Jori Folge 001 – Sulafat spricht sanften Serienauftakt
+
+on:
+  push:
+    branches:
+      - feature/jori-flimm-neustart-folge001
+    paths:
+      - .github/workflows/jori-episode001-title-voice-once.yml
+
+permissions:
+  contents: read
+
+jobs:
+  narrated-intro:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          filter: blob:none
+          sparse-checkout: |
+            kids/jori-flimm/scripts/generate_voice_gemini.py
+      - name: Generate warm short spoken episode introduction
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+          JORI_TTS_MODEL: gemini-3.8-flash-tts
+        run: |
+          test -n "$JORI_GEMINI_API_KEY"
+          mkdir -p out
+          python3 - <<'PY'
+          import importlib.util,os,pathlib
+          src="kids/jori-flimm/scripts/generate_voice_gemini.py"
+          spec=importlib.util.spec_from_file_location("jori_voice",src)
+          lib=importlib.util.module_from_spec(spec);spec.loader.exec_module(lib)
+          script="Jori und Flimm. Folge eins: Das Licht, das Joris Namen kannte."
+          wav=lib.tts_segment(script,"Sulafat",os.environ["JORI_GEMINI_API_KEY"])
+          pathlib.Path("out/Jori_001_Sulafat_Serienauftakt.wav").write_bytes(wav)
+          print("INTRO_WITH_SULAFAT_GENERATED",len(wav),"bytes")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Jori-Folge001-Sulafat-Serienauftakt
+          path: out/Jori_001_Sulafat_Serienauftakt.wav
+          retention-days: 7
+          if-no-files-found: error
