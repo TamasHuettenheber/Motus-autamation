@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-09-29-0715",
-      "clip_id": "morning-writing-8085706",
-      "source": "https://www.pexels.com/video/a-person-writing-in-a-notebook-8085706/",
-      "used_at_utc": "2026-09-29T05:07:03.787475+00:00"
-    },
-    {
       "output_name": "motus-2026-09-29-1200",
       "clip_id": "phone-cafe-5075207",
       "source": "https://www.pexels.com/video/a-woman-is-using-her-phone-to-take-a-picture-of-her-coffee-5075207/",
@@ -599,6 +593,12 @@
       "clip_id": "train-window-36620147",
       "source": "https://www.pexels.com/video/scenic-views-through-train-window-36620147/",
       "used_at_utc": "2026-10-22T22:37:33.969073+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-24-1830",
+      "clip_id": "rain-window-32661246",
+      "source": "https://www.pexels.com/video/rainy-window-view-with-drops-on-glass-32661246/",
+      "used_at_utc": "2026-10-22T22:37:38.706756+00:00"
     }
   ]
 }
