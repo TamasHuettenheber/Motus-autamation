@@ -1,0 +1,95 @@
+name: Jori & Flimm standalone book promo voice
+run-name: Jori & Flimm Christmas book ad — Sulafat voice only
+
+on:
+  push:
+    branches:
+      - codex/jori-buchwerbespot-2026-10
+    paths:
+      - kids/jori-flimm/ad/winter-book-promo.txt
+
+permissions:
+  contents: read
+
+jobs:
+  render-sulafat-voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout isolated ad branch
+        uses: actions/checkout@v4
+      - name: Install audio tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          mkdir -p out
+      - name: Generate the existing Sulafat Gemini TTS voice (no paid fallback)
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import base64, json, os, urllib.request, wave
+          from pathlib import Path
+          text = Path("kids/jori-flimm/ad/winter-book-promo.txt").read_text(encoding="utf-8").strip()
+          if len(text) > 2500:
+              raise SystemExit("Promo narration exceeds the existing voice generator limit")
+          secret = os.environ.get("JORI_GEMINI_API_KEY")
+          if not secret:
+              raise SystemExit("Existing Jori Gemini key is unavailable; no paid fallback")
+          payload = {
+              "model": "gemini-3.8-flash-tts",
+              "input": [{
+                  "type": "user_input",
+                  "content": [{
+                      "type": "text",
+                      "text": text,
+                      "annotations": [{
+                          "type": "speech_metadata",
+                          "style": (
+                              "Deutsch (Deutschland); warmes natürliches Geschichtenerzählen wie eine "
+                              "liebevolle Großmutter, nicht lehrerhaft, nicht blechern, nicht mechanisch, "
+                              "nicht österreichisch, deutlich und lebendig mit freundlichem Schmunzeln. "
+                              "Am Vorlesesessel im Wohnzimmer, gut hörbar, nicht flüstern."
+                          )
+                      }]
+                  }]
+              }],
+              "response_format": {"type": "audio"},
+              "generation_config": {"speech_config": [{"voice": "Sulafat"}]}
+          }
+          req = urllib.request.Request(
+              "https://generativelanguage.googleapis.com/v1beta/interactions",
+              method="POST",
+              data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+              headers={"Content-Type":"application/json", "x-goog-api-key":secret,
+                       "User-Agent":"Jori-Flimm-BookPromo/1.0"}
+          )
+          with urllib.request.urlopen(req, timeout=120) as response:
+              result = json.load(response)
+          audio = [p["data"] for step in result.get("steps", [])
+                   for p in step.get("content", [])
+                   if p.get("type") == "audio" and p.get("data")]
+          if not audio:
+              raise SystemExit("Gemini TTS returned no audio")
+          raw = base64.b64decode(audio[-1], validate=True)
+          if len(raw) < 5000 or len(raw) > 30000000 or raw[:4] != b"RIFF":
+              raise SystemExit("Gemini TTS did not return a valid WAV")
+          Path("out/Sulafat_book_promo.wav").write_bytes(raw)
+          with wave.open("out/Sulafat_book_promo.wav", "rb") as wav:
+              duration = wav.getnframes() / wav.getframerate()
+          print(f"SULAFAT_PROMO_AUDIO_OK duration={duration:.2f}s")
+          PY
+      - name: Create mobile-ready voice track using the series audio processing
+        run: |
+          ffmpeg -nostdin -hide_banner -v error -y -i out/Sulafat_book_promo.wav \
+            -af "highpass=f=110,acompressor=threshold=0.08:ratio=2.5:attack=10:release=170,loudnorm=I=-13:TP=-1.5:LRA=4" \
+            -ar 48000 -ac 1 -c:a libmp3lame -b:a 160k out/Sulafat_book_promo.mp3
+          ffprobe -v error -show_entries format=duration:stream=codec_name,sample_rate,channels \
+            -of json out/Sulafat_book_promo.mp3
+      - name: Archive voice files for the local standalone video
+        uses: actions/upload-artifact@v4
+        with:
+          name: Jori-Flimm-Weihnachtsbuch-Werbung-Sulafat-Audio
+          path: out/Sulafat_book_promo.*
+          retention-days: 7
+          if-no-files-found: error
