@@ -26,7 +26,7 @@ jobs:
             .github/workflows/jori-followups-fast.yml
       - name: Install GitHub video tools for rendering or art refresh
         env:
-          JORI_REFRESH_ART: ${{ github.event_name == 'push' && github.event.head_commit.message == 'Jori unique art refresh v2' }}
+          JORI_REFRESH_ART: ${{ github.event_name == 'push' && github.event.head_commit.message == 'Jori unique art refresh v3' }}
         run: |
           needs_tools=0
           for ep in 2 3 4 5; do
@@ -37,9 +37,10 @@ jobs:
           done
           if [ "$JORI_REFRESH_ART" = "true" ]; then needs_tools=1; fi
           if [ "$needs_tools" = "1" ]; then
-            command -v ffmpeg || sudo apt-get install -y --no-install-recommends ffmpeg
-            test -f /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf || sudo apt-get install -y --no-install-recommends fonts-dejavu-core
-            /usr/bin/python3 -c 'from PIL import Image, ImageDraw, ImageFont' || sudo apt-get install -y --no-install-recommends python3-pil
+            if [ -f /etc/apt/apt-mirrors.txt ]; then
+              sudo sed -i 's#azure.archive.ubuntu.com#archive.ubuntu.com#g' /etc/apt/apt-mirrors.txt
+            fi
+            sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core python3-pil
             echo /usr/bin >> "$GITHUB_PATH"
           else
             echo "JORI_ALL_RENDERS_REUSED; skip video tool installation"
