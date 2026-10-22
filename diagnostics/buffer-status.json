@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-22T04:32:13.557440+00:00",
+  "checked_at_utc": "2026-10-22T06:54:35.464652+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6ad9b1d8282deeeeb2d241b9",
+      "text": "Alleinsein und Einsamkeit sind nicht dasselbe. Ein Abend nur für dich kann Raum schaffen, in dem niemand etwas erwartet. Du musst die Stille nicht sofort mit Musik, Nachrichten oder einem Bildschirm füllen. Vielleicht merkst du erst dann, welche Gedanken wirklich deine eigenen sind. Zeit mit dir selbst ist kein Lückenfüller. Sie darf ein bewusster Teil deines Lebens sein.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-23T20:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-23-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad9b1eddeacf5d253339aa9",
+      "text": "Ein Missgeschick kann sich im ersten Moment riesig anfühlen. Du verschüttest Kaffee, verwechselst einen Namen oder stolperst über deine eigenen Worte. Vielleicht musst du nicht sofort alles perfekt erklären. Manchmal reicht es, den Fehler zu korrigieren und über die Situation zu schmunzeln. Humor macht einen Fehler nicht ungeschehen. Aber er nimmt ihm die Macht, deinen ganzen Tag zu bestimmen.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-23T16:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-23-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad9b2a87dadc432f74312c7",
+      "text": "Unklare Absprachen kosten oft mehr Zeit als die Aufgabe selbst. Zwei Menschen nicken und stellen später fest, dass sie etwas völlig Unterschiedliches verstanden haben. Frag deshalb konkret nach: Wer übernimmt was? Bis wann? Und woran erkennen wir, dass es erledigt ist? Diese drei Fragen sind kein Misstrauen. Sie machen Zusammenarbeit leichter und verhindern unnötigen Ärger.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-23T10:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-23-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6ad9b1f1deacf5d253339b85",
+      "text": "Du wartest darauf, dass jemand den Anfang macht? Vielleicht bist heute genau du diese Person. Eigeninitiative heißt nicht, alles allein zu tragen. Es heißt, eine Möglichkeit zu erkennen und Verantwortung für deinen Teil zu übernehmen. Sprich eine Idee aus, biete Hilfe an oder triff eine Entscheidung, die du bisher aufgeschoben hast. Du darfst etwas bewegen, ohne auf eine Einladung zu warten.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-23T05:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-23-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6ad861ead894396f66ce72dc",
       "text": "Du musst nicht jeden Abend mit dem Gefühl beenden, alles geschafft zu haben. Manche Tage bleiben unordentlich, obwohl du dein Bestes gegeben hast. Erlaube dir, Unfertiges für heute stehen zu lassen. Das ist kein Aufgeben. Es ist die Entscheidung, deine Kraft nicht bis zum letzten Rest aufzubrauchen. Morgen braucht dich nicht erschöpft, sondern aufmerksam.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
@@ -58,15 +118,15 @@
     {
       "id": "6ad86204d894396f66ce761e",
       "text": "Manchmal unterschätzt du, wie viel Mut schon darin steckt, zu deiner Meinung zu stehen. Nicht jeder wird deine Entscheidung verstehen. Das muss er auch nicht. Wenn du heute etwas vertrittst, das dir wichtig ist, sprich klar und respektvoll. Du darfst zuhören, ohne dich selbst aufzugeben. Selbstvertrauen entsteht nicht dadurch, dass alle zustimmen. Es wächst, wenn du dir selbst treu bleibst.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-22T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-22T05:02:17.319Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7699352669332278560",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-22-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad86204d894396f66ce761e_video.mp4"
         }
       ]
     },
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acaaf8fd9cab260a7d9f9cb_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6acaafb9b07d37ac9788582d",
-      "text": "Manchmal bemerkst du deinen Fortschritt erst, wenn du zurückblickst. Denk an etwas, das dir vor einem Jahr schwerfiel und heute selbstverständlich ist. Das hast du gelernt, nicht geschenkt bekommen. Worauf bist du inzwischen stolz? Teile diesen Gedanken mit jemandem, der gerade zweifelt. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Home (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-11T16:30:00.000Z",
-      "sentAt": "2026-10-11T16:31:20.554Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7695448527958314272?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acaafb9b07d37ac9788582d_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6acb3c55ed92ed8fa5f5ebb0",
-      "text": "Sonntag heißt nicht, dass du alle Erwartungen erfüllen musst. Sag bewusst Ja zu einer Sache, die dir Energie gibt, und Nein zu etwas, das dich nur beschäftigt. Ein freier Tag ist nicht automatisch erholsam. Was gibt dir heute wirklich Kraft? #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Crossroads (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-11T10:48:30.233Z",
-      "sentAt": "2026-10-11T10:50:13.016Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7695360452552838432?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acb3c55ed92ed8fa5f5ebb0_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6acaaf8ad9cab260a7d9f922",
-      "text": "Du wartest auf den perfekten Moment? Der kommt selten. Geh heute den ersten kleinen Schritt, bevor du dich bereit fühlst. Ein Anruf, zehn Minuten Bewegung oder der Anfang einer Idee. Mut entsteht oft erst unterwegs. Was beginnst du heute? Schreib es in die Kommentare. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Daybreak (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-11T05:00:00.000Z",
-      "sentAt": "2026-10-11T05:01:52.856Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7695270541946637600?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acaaf8ad9cab260a7d9f922_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ac9527cbba9419ccbde36fb",
-      "text": "Der Erfolg anderer ist kein Urteil über dein Leben. Wenn du heute durch Beiträge scrollst und denkst: Warum bin ich noch nicht so weit? Halt kurz an. Du siehst einen Ausschnitt, nicht den ganzen Weg. Frag dich lieber: Was wünsche ich mir wirklich, unabhängig davon, was andere zeigen? Was wäre mein eigener nächster Schritt? #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Nevermore (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-10T20:00:00.000Z",
-      "sentAt": "2026-10-10T20:02:29.576Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7695131660521573665?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ac9527cbba9419ccbde36fb_video.mp4"
         }
       ]
     }
