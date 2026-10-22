@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-09-29-1830",
-      "clip_id": "phone-cafe-5075207",
-      "source": "https://www.pexels.com/video/a-woman-is-using-her-phone-to-take-a-picture-of-her-coffee-5075207/",
-      "used_at_utc": "2026-09-29T05:07:18.838387+00:00"
-    },
-    {
       "output_name": "motus-2026-09-29-2200",
       "clip_id": "night-walk-4121893",
       "source": "https://www.pexels.com/video/a-person-walking-in-the-street-at-night-4121893/",
@@ -599,6 +593,12 @@
       "clip_id": "man-thinking-8448889",
       "source": "https://www.pexels.com/video/man-thinking-and-writing-8448889/",
       "used_at_utc": "2026-10-22T23:06:48.608353+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-24-2200",
+      "clip_id": "rain-city-13961930",
+      "source": "https://www.pexels.com/video/people-walking-in-city-under-rainfall-13961930/",
+      "used_at_utc": "2026-10-22T23:07:47.930248+00:00"
     }
   ]
 }
