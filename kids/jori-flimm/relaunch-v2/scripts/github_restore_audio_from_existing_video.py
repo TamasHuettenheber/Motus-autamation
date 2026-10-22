@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """Recover current Sulafat audio from the scheduled MP4 without new TTS."""
-import argparse,json,re,subprocess,urllib.request,zipfile,io,os
+import argparse,json,re,subprocess
 from pathlib import Path
 p=argparse.ArgumentParser();p.add_argument("--episode",type=int,required=True,choices=[2,3,4,5]);n=p.parse_args().episode
 root=Path.cwd();d=22+n-1;source=root/f"work/episode_{n:03d}/original-scheduled.mp4"
 work=source.parent;work.mkdir(parents=True,exist_ok=True);raw=work/"source-audio.wav";audio=work/"narration_source.wav";timeline=work/"voice-timeline.json"
-token=os.environ["GH_TOKEN"];artifact=12414976364
-request=urllib.request.Request(f"https://api.github.com/repos/{os.environ['GITHUB_REPOSITORY']}/actions/artifacts/{artifact}/zip",headers={"Authorization":"Bearer "+token,"Accept":"application/vnd.github+json"})
-with urllib.request.urlopen(request,timeout=90) as response:archive=zipfile.ZipFile(io.BytesIO(response.read()))
-name=next((x for x in archive.namelist() if x.endswith(f"jori-flimm-2026-10-{d:02d}-e{n:03d}.mp4")),None)
-assert name,f"Original production MP4 missing from artifact {artifact}"
-source.write_bytes(archive.read(name))
+original="dbcbe1cc8c648bf8cbdf9bfcd9d28ac15128ef50"
+subprocess.run(["git","fetch","--depth=1","origin",original],check=True,timeout=90)
+old_path=f"published/jori-flimm-2026-10-{d:02d}-e{n:03d}.mp4"
+old_video=subprocess.run(["git","show",f"{original}:{old_path}"],check=True,stdout=subprocess.PIPE,timeout=60).stdout
+assert len(old_video)>1_000_000,f"Original production MP4 missing in {original}:{old_path}"
+source.write_bytes(old_video)
 def run(*args):return subprocess.run(list(map(str,args)),check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,timeout=180)
 run("ffmpeg","-nostdin","-y","-loglevel","error","-i",source,"-vn","-ac","1","-ar","24000","-c:a","pcm_s16le",raw)
 dur=float(json.loads(run("ffprobe","-v","error","-show_entries","format=duration","-of","json",raw).stdout)["format"]["duration"])
