@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-09-30-2200",
-      "clip_id": "sunset-ocean-7975481",
-      "source": "https://www.pexels.com/video/vertical-video-of-sunset-7975481/",
-      "used_at_utc": "2026-09-30T02:14:20.549062+00:00"
-    },
-    {
       "output_name": "motus-2026-09-30-1830",
       "clip_id": "city-phone-13802094",
       "source": "https://www.pexels.com/video/a-man-in-a-suit-looking-at-his-phone-while-walking-in-the-city-13802094/",
@@ -599,6 +593,12 @@
       "clip_id": "work-laptop-8479274",
       "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
       "used_at_utc": "2026-10-23T22:00:20.643396+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-25-2200",
+      "clip_id": "forest-walk-5838469",
+      "source": "https://www.pexels.com/video/vertical-video-of-a-woman-walking-through-the-woods-5838469/",
+      "used_at_utc": "2026-10-23T22:16:56.310501+00:00"
     }
   ]
 }
