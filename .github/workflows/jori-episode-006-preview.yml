@@ -1,0 +1,118 @@
+name: Jori & Flimm – episode 006 production preview
+on:
+  push:
+    branches:
+      - feature/jori-flimm-neustart-folge001
+    paths:
+      - .github/workflows/jori-episode-006-preview.yml
+permissions:
+  contents: write
+concurrency:
+  group: jori-episode-006-preview
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          fetch-depth: 1
+          sparse-checkout: |
+            kids/jori-flimm
+            published
+            .github/workflows/jori-episode-006-preview.yml
+      - name: Install local render tools
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then sudo sed -i 's#azure.archive.ubuntu.com#archive.ubuntu.com#g' /etc/apt/apt-mirrors.txt; fi
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core python3-pil
+      - name: Validate episode continuity, pronouns, and new art
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, re
+          from pathlib import Path
+          from PIL import Image
+          p=Path('kids/jori-flimm/relaunch-v2/episode_006_story_draft.json')
+          e=json.loads(p.read_text(encoding='utf-8'))
+          assert e['episode_number']==6 and e['title']=='Der Ton im Glashaus'
+          assert e['story'].startswith('Jori kniete sich neben den Abdruck.')
+          assert 'Ich kenne das Geheimnis eures Sterns.' in e['story']
+          assert e['narration'].count('[[PAUSE:7]]')==1
+          assert e['cliff'] and e['answer']=='Die lange Röhre!'
+          assert not re.search(r'\bJori\s+(?:sagte|flüsterte)\s+er\b|\bJori\s+(?:gab|bot)\s+ihn\b',e['narration'],re.I)
+          paths=[Path(v['path']) for v in e['visuals']]
+          assert len(paths)==5 and len(set(paths))==5
+          dims=[]; hashes=[]
+          for path in paths:
+              assert path.is_file(), path
+              with Image.open(path) as im:
+                  dims.append(im.size)
+                  assert abs(im.width/im.height-9/16)<0.01, (path,im.size)
+              hashes.append(hashlib.sha256(path.read_bytes()).hexdigest())
+          assert len(set(hashes))==5, 'episode art files are not five distinct assets'
+          print('JORI_E006_STORY_ART_QC_OK', json.dumps({'title':e['title'],'images':dims},ensure_ascii=False))
+          PY
+      - name: Generate Sulafat voice using the existing Free Tier model
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+          JORI_TTS_MODEL: gemini-3.8-flash-lite-tts
+        run: |
+          set -euo pipefail
+          test -n "$JORI_GEMINI_API_KEY" || { echo 'Missing Jori TTS key; no fallback'; exit 1; }
+          python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_voice.py --episode 6
+      - name: Render and QC the actual MP4
+        run: |
+          set -euo pipefail
+          python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer.py --episode 6
+          python3 - <<'PY'
+          import json, re, subprocess, wave
+          from pathlib import Path
+          base=Path('work/episode_006')
+          t=json.loads((base/'voice-timeline.json').read_text(encoding='utf-8'))
+          items=t['items']; assert len(items)==3
+          assert items[0]['kind']=='speech' and items[1]['kind']=='pause' and items[2]['kind']=='speech'
+          assert abs(items[1]['duration']-7.0)<0.001
+          audio=base/'narration_source.wav'
+          with wave.open(str(audio),'rb') as w:
+              assert w.getframerate()==24000 and w.getsampwidth()==2
+              w.setpos(round(items[1]['start']*w.getframerate()))
+              silence=w.readframes(round(7*w.getframerate()))
+              assert len(silence)==7*24000*2 and not any(silence), 'pause is not exactly seven seconds of silence'
+          ass=(base/'captions.ass').read_text(encoding='utf-8')
+          def sec(s):
+              h,m,x=s.split(':'); return int(h)*3600+int(m)*60+float(x)
+          p0,p1=items[1]['start'],items[1]['end']
+          for row in ass.splitlines():
+              if row.startswith('Dialogue:'):
+                  cols=row.split(',',9); a,b=sec(cols[1]),sec(cols[2])
+                  assert b<=p0+0.01 or a>=p1-0.01, f'subtitles cover the silent pause: {row}'
+          mp4=Path('published/jori-flimm-2026-10-27-e006.mp4')
+          probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','stream=codec_type,codec_name,width,height','-show_entries','format=duration,size','-of','json',str(mp4)],text=True))
+          streams=probe['streams']; assert len(streams)==2, streams
+          v=next(s for s in streams if s['codec_type']=='video'); a=next(s for s in streams if s['codec_type']=='audio')
+          assert (v['codec_name'],v['width'],v['height'])==('h264',720,1280), v
+          assert a['codec_name']=='aac', a
+          assert abs(float(probe['format']['duration'])-float(t['duration']))<0.25, (probe,t)
+          assert int(probe['format']['size'])>1_000_000
+          print('JORI_E006_MP4_QC_OK',json.dumps({'path':str(mp4),'duration':probe['format']['duration'],'bytes':probe['format']['size'],'video':'720x1280 H.264','audio':'AAC','pause_silence_seconds':7},ensure_ascii=False))
+          PY
+          ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 published/jori-flimm-2026-10-27-e006.mp4
+      - name: Commit the QC preview to the Jori branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse published/jori-flimm-2026-10-27-e006.mp4
+          git commit -m 'kids: render Jori episode 006 production preview'
+          git push origin HEAD:feature/jori-flimm-neustart-folge001
+      - name: Keep actual production preview for inspection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Jori-Episode-006-Preview
+          path: |
+            published/jori-flimm-2026-10-27-e006.mp4
+            work/episode_006/
+          retention-days: 14
+          if-no-files-found: warn
