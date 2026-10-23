@@ -10,18 +10,19 @@ if not key:
 text = os.environ["MOTUS_TEXT"].strip()
 if not text:
     raise SystemExit("Empty narration")
-response = genai.Client(api_key=key).models.generate_content(
-    model="gemini-2.5-flash-preview-tts",
-    contents="Sprich auf Deutsch mit einer tiefen, markanten männlichen Stimme. Warm, glaubwürdig, motivierend, ohne Musik oder zusätzliche Wörter. Text: " + text,
-    config=types.GenerateContentConfig(
-        response_modalities=["AUDIO"],
-        speech_config=types.SpeechConfig(
-            voice_config=types.VoiceConfig(
-                prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name="Algenib")
-            )
+with genai.Client(api_key=key) as client:
+    response = client.models.generate_content(
+        model="gemini-2.5-flash-preview-tts",
+        contents="Sprich auf Deutsch mit einer tiefen, markanten männlichen Stimme. Warm, glaubwürdig, motivierend, ohne Musik oder zusätzliche Wörter. Text: " + text,
+        config=types.GenerateContentConfig(
+            response_modalities=["AUDIO"],
+            speech_config=types.SpeechConfig(
+                voice_config=types.VoiceConfig(
+                    prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name="Algenib")
+                )
+            ),
         ),
-    ),
-)
+    )
 audio = response.candidates[0].content.parts[0].inline_data.data
 with wave.open("work/audio_source", "wb") as wav:
     wav.setnchannels(1)
