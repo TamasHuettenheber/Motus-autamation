@@ -44,7 +44,7 @@ jobs:
           # Query the exact issue title server-side; avoid the 500-item listing limit.
           from urllib.parse import quote
           issues=[]
-          query=quote(f'repo:{repo} in:title "[MOTUS-DAY]" "{target}"',safe="")
+          query=quote(f'repo:{repo} is:issue in:title "{target}"',safe="")
           found=gh("GET",f"/search/issues?q={query}&per_page=100").get("items",[])
           issues=[i for i in found if not i.get("pull_request") and i.get("title")==title]
           existing=next(iter(issues),None)
