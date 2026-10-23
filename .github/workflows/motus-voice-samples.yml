@@ -1,0 +1,59 @@
+name: MOTUS Google voice samples
+on:
+  push:
+    branches: [feature/jori-flimm-neustart-folge001]
+    paths: [.github/workflows/motus-voice-samples.yml]
+  workflow_dispatch:
+jobs:
+  samples:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install google-genai
+      - name: Generate three German MOTUS voice samples
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os, wave, pathlib
+          from google import genai
+          from google.genai import types
+          key = os.getenv("GEMINI_API_KEY")
+          if not key:
+              raise RuntimeError("JORI_GEMINI_API_KEY secret not available")
+          client = genai.Client(api_key=key)
+          text = "Du musst nicht darauf warten, dass dir jemand den Weg zeigt. Du weißt längst, was du erreichen willst. Vertrau dir selbst. Triff deine Entscheidung. Und geh deinen Weg."
+          pathlib.Path("voice-samples").mkdir(exist_ok=True)
+          for voice in ("Algenib", "Alnilam", "Charon"):
+              prompt = f"Sprich den folgenden deutschen MOTUS-Motivationstext mit einer tiefen, natürlichen, männlichen Stimme. Ruhig, kraftvoll, warm, selbstbewusst und authentisch. Keine Musik. Keine zusätzlichen Wörter. Text: {text}"
+              response = client.models.generate_content(
+                  model="gemini-2.5-flash-preview-tts",
+                  contents=prompt,
+                  config=types.GenerateContentConfig(
+                      response_modalities=["AUDIO"],
+                      speech_config=types.SpeechConfig(
+                          voice_config=types.VoiceConfig(
+                              prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name=voice)
+                          )
+                      )
+                  )
+              )
+              data = response.candidates[0].content.parts[0].inline_data.data
+              with wave.open(f"voice-samples/{voice}.wav", "wb") as f:
+                  f.setnchannels(1)
+                  f.setsampwidth(2)
+                  f.setframerate(24000)
+                  f.writeframes(data)
+              print("Generated", voice, len(data), "bytes")
+          PY
+          for f in voice-samples/*.wav; do ffmpeg -hide_banner -loglevel error -y -i "$f" -codec:a libmp3lame -q:a 2 "${f%.wav}.mp3"; done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: motus-google-stimmen-algenib-alnilam-charon
+          path: voice-samples/*.mp3
+          retention-days: 7
