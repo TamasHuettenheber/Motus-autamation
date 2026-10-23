@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-09-30-1200",
-      "clip_id": "man-thinking-8448889",
-      "source": "https://www.pexels.com/video/man-thinking-and-writing-8448889/",
-      "used_at_utc": "2026-09-30T02:14:08.115064+00:00"
-    },
-    {
       "output_name": "motus-2026-09-30-2200",
       "clip_id": "sunset-ocean-7975481",
       "source": "https://www.pexels.com/video/vertical-video-of-sunset-7975481/",
@@ -599,6 +593,12 @@
       "clip_id": "train-phone-12908973",
       "source": "https://www.pexels.com/video/woman-waiting-for-a-train-and-using-her-phone-12908973/",
       "used_at_utc": "2026-10-23T21:58:52.154613+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-25-1830",
+      "clip_id": "work-laptop-8479274",
+      "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
+      "used_at_utc": "2026-10-23T22:00:20.643396+00:00"
     }
   ]
 }
