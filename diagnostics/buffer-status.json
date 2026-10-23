@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-23T04:37:23.066395+00:00",
+  "checked_at_utc": "2026-10-23T06:44:47.061117+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6ad9b1f1deacf5d253339b85",
       "text": "Du wartest darauf, dass jemand den Anfang macht? Vielleicht bist heute genau du diese Person. Eigeninitiative heißt nicht, alles allein zu tragen. Es heißt, eine Möglichkeit zu erkennen und Verantwortung für deinen Teil zu übernehmen. Sprich eine Idee aus, biete Hilfe an oder triff eine Entscheidung, die du bisher aufgeschoben hast. Du darfst etwas bewegen, ohne auf eine Einladung zu warten.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-23T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-23T05:02:14.680Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7699723722982231328",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-23-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad9b1f1deacf5d253339b85_video.mp4"
         }
       ]
     },
