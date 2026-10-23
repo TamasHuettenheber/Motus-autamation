@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-09-30-0700",
-      "clip_id": "hallway-phone-6585106",
-      "source": "https://www.pexels.com/video/person-walking-while-using-smartphone-6585106/",
-      "used_at_utc": "2026-09-30T02:13:45.583098+00:00"
-    },
-    {
       "output_name": "motus-2026-09-30-1200",
       "clip_id": "man-thinking-8448889",
       "source": "https://www.pexels.com/video/man-thinking-and-writing-8448889/",
@@ -599,6 +593,12 @@
       "clip_id": "work-laptop-8479274",
       "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
       "used_at_utc": "2026-10-23T21:58:35.502183+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-25-1200",
+      "clip_id": "train-phone-12908973",
+      "source": "https://www.pexels.com/video/woman-waiting-for-a-train-and-using-her-phone-12908973/",
+      "used_at_utc": "2026-10-23T21:58:52.154613+00:00"
     }
   ]
 }
