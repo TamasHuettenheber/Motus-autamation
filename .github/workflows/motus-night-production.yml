@@ -73,10 +73,12 @@ jobs:
           key=os.environ.get("GEMINI_KEY","")
           if not key:raise SystemExit("GEMINI_KEY_MISSING")
           prompt=("Erstelle vier unterschiedliche, originelle kurze deutsche MOTUS-Motivationstexte "
-                  "fuer "+target+". Slots 07:00,12:00,18:30,22:00. Jeweils 60 bis 85 Woerter, "
+                  "fuer einen einzelnen Tagesplan mit den Slots 07:00,12:00,18:30,22:00. Jeweils 60 bis 85 Woerter, "
                   "direkte Du-Ansprache, konkrete und abwechslungsreiche Gedanken, kein Clickbait, "
                   "keine Wiederholung von Floskeln. Morgens aktivierend, mittags praktisch, "
-                  "abends reflektierend, nachts beruhigend. Antworte ausschliesslich als JSON "
+                  "abends reflektierend, nachts beruhigend. Erwaehne keine Wochentage, Datumsangaben, "
+                  "Uhrzeiten, konkretes Wetter oder kalendarische Behauptungen. Achte auf korrekte "
+                  "deutsche Rechtschreibung und Grammatik. Antworte ausschliesslich als JSON "
                   "mit Schluessel slots, Array von vier Objekten mit time und text.")
           payload={"contents":[{"parts":[{"text":prompt}]}],"generationConfig":{"responseMimeType":"application/json","temperature":0.9}}
           import time
@@ -129,7 +131,14 @@ jobs:
           if len(slots)!=4:raise SystemExit("BAD_SLOT_COUNT")
           times=["07:00","12:00","18:30","22:00"]
           if [s.get("time") for s in slots]!=times:raise SystemExit("BAD_SLOT_TIMES")
-          if any(len(s.get("text","").split())<45 for s in slots):raise SystemExit("TEXT_TOO_SHORT")
+          import re
+          weekday_re=re.compile(r"\\b(?:montag|dienstag|mittwoch|donnerstag|freitag|samstag|sonntag)\\b",re.IGNORECASE)
+          date_re=re.compile(r"\\b\\d{4}-\\d{2}-\\d{2}\\b|\\b\\d{1,2}\\.\\s*(?:januar|februar|maerz|april|mai|juni|juli|august|september|oktober|november|dezember)\\b",re.IGNORECASE)
+          for slot in slots:
+              text=slot.get("text","").strip()
+              word_count=len(text.split())
+              if not 60<=word_count<=85:raise SystemExit("TEXT_WORD_COUNT "+str(word_count))
+              if weekday_re.search(text) or date_re.search(text):raise SystemExit("CALENDAR_REFERENCE "+slot.get("time",""))
           batch={"date":target,"slots":[{"slot":t.replace(":",""),"time":t,"timezone":"Europe/Berlin","audio_url":"","broll_url":"","text":s["text"]} for t,s in zip(times,slots)]}
           issue=gh("POST","/issues",{"title":title,"body":json.dumps(batch,ensure_ascii=False)})
           number=issue["number"]
