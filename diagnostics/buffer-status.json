@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-23T21:41:26.928334+00:00",
+  "checked_at_utc": "2026-10-23T22:05:12.188013+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,51 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6adbd9163d5b27036b53aa19",
+      "text": "Schau auf das zurück, was du heute versucht hast, nicht nur auf das, was fertig geworden ist. Vielleicht hast du eine Grenze gesetzt, eine Frage gestellt oder trotz Zweifel angefangen. Solche kleinen Entscheidungen zählen, auch wenn niemand sie bemerkt. Nimm dir einen Moment, um daraus eine hilfreiche Erkenntnis mitzunehmen. Was möchtest du beim nächsten Mal wieder so machen? Du darfst den Rest des Tages mit einem freundlicheren Blick auf dich beenden.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – A Memory Away (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-25T17:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-25-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6adbd8b7bd33ce99c3f0c6ad",
+      "text": "Wenn du merkst, dass dein Kopf von einer Sache zur nächsten springt, halte kurz an. Schreib auf, was gerade offen ist, und markiere nur den nächsten konkreten Schritt. Ein Glas Wasser, ein tiefer Atemzug und fünf Minuten ohne Bildschirm können schon reichen, um wieder klarer zu sehen. Du musst nicht jede Aufgabe sofort lösen. Bring zuerst eine Sache in Bewegung und entscheide danach neu, was deine Aufmerksamkeit verdient.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Syntheticity (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-25T11:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-25-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6adbd88ebd33ce99c3f0c075",
+      "text": "Du brauchst heute keinen perfekten Plan, sondern einen ersten Schritt, der wirklich in deinen Tag passt. Wähle eine Aufgabe, die dir wichtig ist, und mach den Einstieg klein genug, dass du sofort anfangen kannst. Leg das Handy kurz beiseite, richte deinen Blick auf das Nächste und gib dir zehn ungestörte Minuten. Oft kommt die Energie erst beim Tun. Du musst nicht alles schaffen, um stolz auf deinen Anfang zu sein.\n\n#motus #produktivitaet #klarheit #fokus #selbstentwicklung\n\nMusik: Tanner Helland – Wild Waters (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-25T06:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-25-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6ada97479ef33e7811a8fe2d",
       "text": "Am Abend fallen uns häufig die Dinge ein, die nicht gelungen sind. Dabei übersieht unser Blick leicht, was wir trotzdem geschafft haben. Denk an einen Moment, in dem du heute aufmerksam, mutig oder freundlich warst. Er muss nicht groß gewesen sein. Ein Tag besteht aus mehr als seinen offenen Aufgaben. Du darfst ihn auch mit Anerkennung für dich selbst beenden.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Hidden Tears (CC BY 4.0)",
@@ -712,51 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acd45cb0fd81940c1c6cbe1_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6acd45b8a36dd851812e870d",
-      "text": "Du hast eine Idee, aber sie ist noch nicht perfekt? Zeig jemandem eine unfertige Version. Eine Skizze, einen Entwurf, einen ersten Versuch. Echtes Feedback bringt dich oft weiter als endloses Feilen im Stillen. Was könntest du heute schon teilen, obwohl es noch nicht fertig ist? #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Faith (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-13T16:30:00.000Z",
-      "sentAt": "2026-10-13T16:32:40.961Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7696190791781190944?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acd45b8a36dd851812e870d_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6acd45d0e9da05d4097d4a29",
-      "text": "Wann hast du zuletzt wirklich zugehört, ohne im Kopf schon deine Antwort zu bauen? Versuch es heute in einem Gespräch. Lass den anderen ausreden, frag einmal nach und hör zu. Du musst nicht sofort eine Lösung anbieten. Wem möchtest du heute mehr Aufmerksamkeit schenken? Schreib es in die Kommentare. #motus #kommunikation #alltagspsychologie #selbstentwicklung #mentaleklarheit Musik: Tanner Helland – Find You (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-13T10:00:00.000Z",
-      "sentAt": "2026-10-13T10:03:00.671Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7696090411986701601?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acd45d0e9da05d4097d4a29_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6acd45e0a36dd851812e8ca9",
-      "text": "Dieser Dienstag muss nicht sofort auf Höchsttempo laufen. Geh die ersten fünf Minuten bewusst langsamer. Atme durch, schau hin und entscheide erst dann, was wirklich dringend ist. Du bestimmst dein Tempo, nicht dein Posteingang. Was hilft dir heute, ruhig zu starten? Folge Motus für neue Impulse. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – From Here (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-13T05:00:00.000Z",
-      "sentAt": "2026-10-13T05:01:59.602Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7696012859305626913?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acd45e0a36dd851812e8ca9_video.mp4"
         }
       ]
     }
