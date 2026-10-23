@@ -49,7 +49,16 @@ jobs:
                   complete=any(str(c.get("body","")).startswith("MOTUS_DAY_COMPLETE") for c in notes)
                   print("DAY_COMPLETION_VERIFIED",complete,"ISSUE",existing["number"])
                   if not complete:
-                      print("RECONCILIATION_ACTIVE_EVERY_15_MINUTES_IN_MOTUS_DAY_STATUS")
+                      # Recover a lost initial handoff: status workflow repairs missing renderer slots,
+                      # while the day workflow validates and dispatches the batch idempotently.
+                      runs=gh("GET","/actions/workflows/motus-day.yml/runs?per_page=100").get("workflow_runs",[])
+                      title_match=f"Daily Motus {existing['number']}"
+                      matched=[run for run in runs if str(run.get("display_title",""))==title_match]
+                      if not matched:
+                          gh("POST","/actions/workflows/motus-day.yml/dispatches",{"ref":"main","inputs":{"issue_number":str(existing["number"])}})
+                          print("RECOVERED_MISSING_DAY_HANDOFF",existing["number"])
+                      else:
+                          print("RECONCILIATION_ACTIVE_EVERY_15_MINUTES_IN_MOTUS_DAY_STATUS")
               raise SystemExit(0)
           key=os.environ.get("GEMINI_KEY","")
           if not key:raise SystemExit("GEMINI_KEY_MISSING")
