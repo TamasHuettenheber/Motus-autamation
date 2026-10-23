@@ -87,7 +87,12 @@ def main():
            "]}}) { edges { node { id channelId status dueAt sentAt externalLink text } } "
            "pageInfo { hasNextPage } } }")
     all_posts=(gql(query).get("posts") or {})
+    if all_posts.get("pageInfo",{}).get("hasNextPage"):
+        raise RuntimeError("More Jori channel posts than one page; complete status verification required")
     channel_posts=[edge.get("node",{}) for edge in all_posts.get("edges",[])]
+    for post in channel_posts:
+        fields={k:post.get(k) for k in ("id","status","dueAt","sentAt","externalLink","text")}
+        print("JORI_POST_STATUS="+json.dumps(fields,ensure_ascii=False,separators=(",",":")))
     first=[post for post in channel_posts
            if post.get("id")=="6ad9ce4baefa17e341f96c3f"
            or "Folge 001: Das Licht, das Joris Namen kannte" in (post.get("text") or "")]
