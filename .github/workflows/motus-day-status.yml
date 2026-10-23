@@ -432,10 +432,16 @@ jobs:
                       if not has_video:
                           continue
                       sources={str(a.get("source") or "") for a in assets}
-                      if is_past:
-                          if media_url in sources:
+                      # Buffer replaces GitHub asset URLs with its own S3 URLs
+                      # after publishing. Require the original dueAt before
+                      # accepting a sent post to prevent duplicate recovery.
+                      if p.get("dueAt") != due:
+                          continue
+                      if p.get("status") == "sent":
+                          link=str(p.get("externalLink") or "")
+                          if link.startswith(("https://tiktok.com/","https://www.tiktok.com/")):
                               matches.append(p)
-                      elif p.get("dueAt")==due:
+                      elif media_url in sources:
                           matches.append(p)
                   if matches:
                       verified[slot["output_name"]]=matches[0]
