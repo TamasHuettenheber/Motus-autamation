@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
     inputs:
       audio_url:
-        description: "Direkte Deep-Audio MP3 URL"
-        required: true
+        description: "MP3 URL or blank for Gemini Algenib"
+        required: false
         type: string
       text:
         description: "Gesprochener und eingeblendeter Text"
