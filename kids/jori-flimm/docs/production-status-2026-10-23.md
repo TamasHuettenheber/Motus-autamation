@@ -19,6 +19,7 @@
 - Sichtprüfung am 23.10.: alle fünf tatsächlichen PNGs geöffnet; je eigenes Motiv und folgenspezifischer Hintergrund, Jori/Flimm konsistent, Reihenfolge passt zur Handlung. Die Rätselhinweis-Karten müssen im Renderer als lesbarer Overlay eingeblendet werden; sie sind nicht in die Bilder eingebrannt.
 - Live-Zugriffsprüfung: Google AI Studio `/api-keys` leitete im verfügbaren Browser auf die Google-Kontoauswahl weiter; kein angemeldeter AI-Studio-Zugriff und daher dort keine Billing-Tier-Anzeige sichtbar. Es wurde kein TTS-Aufruf ausgelöst.
 - Render-QC, Untertitel-Timing, Sulafat-Audio, MP4-Spuren/Dauer und sieben Sekunden Stille: offen, weil noch keine Folge-006-MP4 erzeugt wurde.
+- Produktionsweg-Prüfung am 23.10.: vorhandener `github_followup_renderer.py` und `github_followup_buffer.py` akzeptieren fest nur Folgen 002–005 und lesen deren alte JSON-/JPG-Pfade. Folge 006 braucht daher eine gezielte Jori-only-Erweiterung von Voice-Wrapper, Renderer (PNG-Motive + Klanghinweise) und Buffer-Helfer, bevor ein kontrollierter GitHub-Lauf möglich ist. Die MOTUS-Dateien bleiben unberührt.
 - Buffer: kein neuer Post; Post-ID/Status/Termin nicht vorhanden. Der nächste Termin nach den bisher belegten Folgen 001–005 wäre vorläufig 27.10.2026, 14:00 Europe/Berlin; vor einer Buchung ist der Live-Buffer-Stand erneut zu prüfen.
 
 MOTUS-Dateien und -Workflows wurden nicht verändert.
