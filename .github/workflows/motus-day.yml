@@ -134,8 +134,8 @@ jobs:
               if hh > 23 or mm > 59 or hm in seen:
                   raise SystemExit(f"Slot {n}: invalid/duplicate time {hm}")
               seen.add(hm)
-              if not audio.startswith("https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/") or not audio.endswith(".mp3"):
-                  raise SystemExit(f"Slot {hm}: AUDIO_URL must be a direct AI Voice Generator preview MP3")
+              if audio and (not audio.startswith("https://storage.googleapis.com/adm--audio-playback--7d--public/mcp-preview/") or not audio.endswith(".mp3")):
+                  raise SystemExit(f"Slot {hm}: AUDIO_URL must be empty (Gemini Algenib) or a valid legacy preview MP3")
               if not text:
                   raise SystemExit(f"Slot {hm}: text is missing")
               normalized.append({
