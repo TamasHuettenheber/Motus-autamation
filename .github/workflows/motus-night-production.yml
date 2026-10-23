@@ -79,14 +79,25 @@ jobs:
                   "abends reflektierend, nachts beruhigend. Antworte ausschliesslich als JSON "
                   "mit Schluessel slots, Array von vier Objekten mit time und text.")
           payload={"contents":[{"parts":[{"text":prompt}]}],"generationConfig":{"responseMimeType":"application/json","temperature":0.9}}
-          req=urllib.request.Request("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+          model="gemini-3.8-flash"
+          req=urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
               data=json.dumps(payload).encode(),headers={"Content-Type":"application/json","x-goog-api-key":key},method="POST")
           import time
           for attempt in range(3):
               try:
                   with urllib.request.urlopen(req,timeout=110) as response: generated=json.load(response)
                   break
-              except (urllib.error.HTTPError,urllib.error.URLError,TimeoutError) as exc:
+              except urllib.error.HTTPError as exc:
+                  body=exc.read().decode("utf-8","replace")
+                  try:
+                      detail=json.loads(body).get("error",{}).get("message","")
+                  except (json.JSONDecodeError,AttributeError,TypeError):
+                      detail=body[:500]
+                  print("GEMINI_HTTP_ERROR",model,exc.code,str(detail)[:400])
+                  if exc.code not in (408,429,500,502,503,504) or attempt==2:raise
+                  print("GEMINI_RETRY",attempt+1,"HTTP",exc.code)
+                  time.sleep(10*(attempt+1))
+              except (urllib.error.URLError,TimeoutError) as exc:
                   if attempt==2:raise
                   print("GEMINI_RETRY",attempt+1,type(exc).__name__)
                   time.sleep(10*(attempt+1))
