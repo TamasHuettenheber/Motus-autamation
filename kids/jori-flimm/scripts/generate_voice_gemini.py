@@ -47,7 +47,22 @@ def tts_segment(text,voice,secret):
         with urllib.request.urlopen(req,timeout=130) as response:
             result=json.load(response)
     except urllib.error.HTTPError as e:
-        raise RuntimeError(f"Gemini TTS failed HTTP {e.code}") from e
+        # Google uses HTTP 429 for several distinct quota/rate-limit conditions.
+        # Preserve only structured error fields; never log request headers or API keys.
+        try:
+            response=json.loads(e.read().decode("utf-8",errors="replace"))
+            api_error=response.get("error",{}) if isinstance(response,dict) else {}
+            diagnostic={
+                "status":api_error.get("status"),
+                "message":api_error.get("message"),
+                "details":api_error.get("details"),
+            }
+            diagnostic={k:v for k,v in diagnostic.items() if v is not None}
+            detail=json.dumps(diagnostic,ensure_ascii=False)[:1800]
+        except Exception:
+            detail=""
+        suffix=f": {detail}" if detail else ""
+        raise RuntimeError(f"Gemini TTS failed HTTP {e.code}{suffix}") from e
     audio=[part["data"] for step in result.get("steps",[])
            for part in step.get("content",[])
            if part.get("type")=="audio" and part.get("data")]
