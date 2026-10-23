@@ -132,8 +132,8 @@ jobs:
           times=["07:00","12:00","18:30","22:00"]
           if [s.get("time") for s in slots]!=times:raise SystemExit("BAD_SLOT_TIMES")
           import re
-          weekday_re=re.compile(r"\\b(?:montag|dienstag|mittwoch|donnerstag|freitag|samstag|sonntag)\\b",re.IGNORECASE)
-          date_re=re.compile(r"\\b\\d{4}-\\d{2}-\\d{2}\\b|\\b\\d{1,2}\\.\\s*(?:januar|februar|maerz|april|mai|juni|juli|august|september|oktober|november|dezember)\\b",re.IGNORECASE)
+          weekday_re=re.compile(r"\b(?:montag|dienstag|mittwoch|donnerstag|freitag|samstag|sonntag)\b",re.IGNORECASE)
+          date_re=re.compile(r"\b\d{4}-\d{2}-\d{2}\b|\b\d{1,2}\.\s*(?:januar|februar|maerz|april|mai|juni|juli|august|september|oktober|november|dezember)\b",re.IGNORECASE)
           for slot in slots:
               text=slot.get("text","").strip()
               word_count=len(text.split())
