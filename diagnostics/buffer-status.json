@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-23T19:07:05.843006+00:00",
+  "checked_at_utc": "2026-10-23T21:41:26.928334+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -73,15 +73,15 @@
     {
       "id": "6ad9b1d8282deeeeb2d241b9",
       "text": "Alleinsein und Einsamkeit sind nicht dasselbe. Ein Abend nur für dich kann Raum schaffen, in dem niemand etwas erwartet. Du musst die Stille nicht sofort mit Musik, Nachrichten oder einem Bildschirm füllen. Vielleicht merkst du erst dann, welche Gedanken wirklich deine eigenen sind. Zeit mit dir selbst ist kein Lückenfüller. Sie darf ein bewusster Teil deines Lebens sein.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-23T20:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-23T20:03:23.955Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7699955997309226273",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-23-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad9b1d8282deeeeb2d241b9_video.mp4"
         }
       ]
     },
