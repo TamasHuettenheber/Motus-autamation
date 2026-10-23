@@ -16,6 +16,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install google-genai
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - name: Generate three German MOTUS voice samples
         shell: bash
         run: |
