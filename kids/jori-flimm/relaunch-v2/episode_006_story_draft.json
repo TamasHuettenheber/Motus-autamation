@@ -1,0 +1,63 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 6,
+  "series_version": "relaunch-v2",
+  "title": "Der Ton im Glashaus",
+  "hook": "Der riesige Fußabdruck begann zu brummen – und Flimms Stern antwortete!",
+  "story": "Jori kniete sich neben den Abdruck. Die Nachricht im Schnee stand noch da: „Ich kenne das Geheimnis eures Sterns.“ Flimm legte seine kleine Hand auf den Stern an seinem Bauch. Tief unter dem Schnee antwortete ein „Dumm-dumm“. Ein silbriger Lichtfaden zog vom Fußabdruck über den Hang zu einem verlassenen Glashaus. Jori und Flimm traten hinein. Zwischen hohen, beschlagenen Scheiben hing ein Windspiel aus drei Glasröhren: eine kurze, eine mittlere und eine lange. Der Wind strich hindurch. Die kurze sang hell „ting“, die mittlere machte „tok“, die lange brummte zweimal tief: „duuum-duuum“. Genau so hatte der Fels am riesigen Abdruck geantwortet. Jori lauschte noch einmal, und Flimm hielt seinen Stern ganz ruhig, damit sie den Ton vergleichen konnte.",
+  "question": "Welche Glasröhre klingt wie der tiefe Doppelton vom Fußabdruck: die kurze, die mittlere oder die lange?",
+  "answer": "Die lange Röhre!",
+  "after": "Jori berührte sie. „Duuum-duuum!“ Die gläsernen Ranken schoben sich auseinander und enthüllten ein winziges Teleskop. Es war auf eine Sternkarte gerichtet. In der Mitte fehlte ein Stern. Flimms Bauchstern leuchtete auf und passte genau in die Lücke. „Dein Stern gehört zu dieser Karte“, sagte Jori. Das Teleskop drehte sich von selbst zum Himmel, doch seine Linse zeigte einen dunklen Ort, an dem keine Sterne sein sollten.",
+  "cliff": "Da erschien im Glas eine winzige Gestalt, die auf Flimms Stern deutete und einen zweiten, passenden Stern emporhob. Wer war sie – und warum besaß sie den gleichen Stern?",
+  "clue_mode": "sound_echo",
+  "clue_label": "DREI GLASRÖHREN",
+  "target_sound": "FUSSABDRUCK: DUUM-DUUM",
+  "clues": [
+    "KURZ: TING",
+    "MITTEL: TOK",
+    "LANG: DUUM-DUUM"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Während der sieben Sekunden Frage und Klanghinweise gemeinsam sichtbar halten: Zielklang DUUM-DUUM sowie die drei Optionen KURZ: TING, MITTEL: TOK, LANG: DUUM-DUUM. Lesbare kleine Klangkarten, keine SFX und kein weiterlaufender Untertitel.",
+  "continuity": "Setzt direkt an Folge 005 beim riesigen Fußabdruck und der Nachricht über Flimms Stern an. Neues Klang-/Echo-Rätsel im Glashaus; der Stern passt in eine unvollständige Karte. Die unbekannte Gestalt hält einen zweiten passenden Stern hoch.",
+  "narration": "Der riesige Fußabdruck begann zu brummen – und Flimms Stern antwortete! Jori kniete sich neben den Abdruck. Die Nachricht im Schnee stand noch da: „Ich kenne das Geheimnis eures Sterns.“ Flimm legte seine kleine Hand auf den Stern an seinem Bauch. Tief unter dem Schnee antwortete ein „Dumm-dumm“. Ein silbriger Lichtfaden zog vom Fußabdruck über den Hang zu einem verlassenen Glashaus. Jori und Flimm traten hinein. Zwischen hohen, beschlagenen Scheiben hing ein Windspiel aus drei Glasröhren: eine kurze, eine mittlere und eine lange. Der Wind strich hindurch. Die kurze sang hell „ting“, die mittlere machte „tok“, die lange brummte zweimal tief: „duuum-duuum“. Genau so hatte der Fels am riesigen Abdruck geantwortet. Jori lauschte noch einmal, und Flimm hielt seinen Stern ganz ruhig, damit sie den Ton vergleichen konnte. Welche Glasröhre klingt wie der tiefe Doppelton vom Fußabdruck: die kurze, die mittlere oder die lange? [[PAUSE:7]] Die lange Röhre! Jori berührte sie. „Duuum-duuum!“ Die gläsernen Ranken schoben sich auseinander und enthüllten ein winziges Teleskop. Es war auf eine Sternkarte gerichtet. In der Mitte fehlte ein Stern. Flimms Bauchstern leuchtete auf und passte genau in die Lücke. „Dein Stern gehört zu dieser Karte“, sagte Jori. Das Teleskop drehte sich von selbst zum Himmel, doch seine Linse zeigte einen dunklen Ort, an dem keine Sterne sein sollten. Da erschien im Glas eine winzige Gestalt, die auf Flimms Stern deutete und einen zweiten, passenden Stern emporhob. Wer war sie – und warum besaß sie den gleichen Stern?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "visuals": [
+    {
+      "scene": 1,
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-006/scene-01.png",
+      "description": "Der leuchtende Riesenabdruck am Berghang; unmittelbarer Anschluss an Folge 005."
+    },
+    {
+      "scene": 2,
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-006/scene-02.png",
+      "description": "Jori und Flimm folgen dem silbrigen Faden zum Glashaus."
+    },
+    {
+      "scene": 3,
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-006/scene-03.png",
+      "description": "Die drei unterschiedlich langen Klangröhren im Glashaus."
+    },
+    {
+      "scene": 4,
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-006/scene-04.png",
+      "description": "Jori berührt die lange Röhre; dahinter öffnet sich der Weg zum Teleskop."
+    },
+    {
+      "scene": 5,
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-006/scene-05.png",
+      "description": "Sternkarte, Flimms Stern und die geheimnisvolle Gestalt mit einem zweiten Stern."
+    }
+  ],
+  "status": "STORY_AND_ART_DRAFT_ONLY",
+  "approved_for_publish": false,
+  "release_blockers": [
+    "Projekt-Tarif des API-Keys nicht verifiziert; kein TTS-Aufruf, bis Free Tier nachgewiesen ist.",
+    "Folge-006-Render-/Buffer-Pipeline noch nicht ausgeführt; keine fertige MP4 oder Buchung nachgewiesen."
+  ]
+}
