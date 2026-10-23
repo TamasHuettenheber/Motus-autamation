@@ -75,12 +75,19 @@ jobs:
           PY
 
       - name: Prepare files and audio
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
         run: |
           mkdir -p work published
           SAFE_NAME="$(echo "$OUTPUT_NAME" | tr -cd 'A-Za-z0-9._-')"; [ -n "$SAFE_NAME" ] || SAFE_NAME="motus-video"
           echo "SAFE_NAME=$SAFE_NAME" >> "$GITHUB_ENV"
           printf '%s\n' "$MOTUS_TEXT" > work/raw_text.txt
-          curl -L --fail --retry 3 --retry-delay 2 "$AUDIO_URL" -o work/audio_source
+          if [ -n "$AUDIO_URL" ]; then
+            curl -L --fail --retry 3 --retry-delay 2 "$AUDIO_URL" -o work/audio_source
+          else
+            python3 -m pip install --quiet google-genai
+            python3 scripts/motus_algenib_tts.py
+          fi
           test -s work/audio_source
           ffmpeg -y -i work/audio_source -vn -ar 48000 -ac 2 -b:a 192k work/audio.mp3
           AUDIO_DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 work/audio.mp3)"
