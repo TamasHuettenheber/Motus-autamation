@@ -374,7 +374,9 @@ jobs:
                           gh("POST",f"/actions/runs/{run['id']}/rerun-failed-jobs")
                           retrying.append(f"{slot['output_name']} run={run['id']} attempt={attempt+1}")
                       else:
-                          exhausted.append(f"{slot['output_name']} run={run['id']} conclusion={run.get('conclusion')} attempt={attempt}")
+                          # Rerun limits are per GitHub run; start a fresh run on main.
+                          gh("POST","/actions/workflows/motus.yml/dispatches",{"ref":"main","inputs":{"audio_url":slot["audio_url"],"text":slot["text"],"broll_url":slot["broll_url"],"output_name":slot["output_name"],"force_rerender":"true"}})
+                          retrying.append(f"{slot['output_name']} fresh-dispatch after run={run['id']} attempt={attempt}")
                   if retrying:
                       comment(issue_number,"MOTUS_DAY_RETRY\n\nGitHub is retrying failed renderer(s):\n- "+"\n- ".join(retrying))
                   if exhausted and not has_marker(issue_number,"MOTUS_DAY_FAILED_FINAL"):
@@ -473,7 +475,8 @@ jobs:
                           gh("POST",f"/actions/runs/{run['id']}/rerun")
                           repair.append(f"{name} run={run['id']} attempt={attempt+1}")
                       else:
-                          exhausted.append(f"{name} run={run['id']} attempt={attempt}")
+                          gh("POST","/actions/workflows/motus.yml/dispatches",{"ref":"main","inputs":{"audio_url":slot["audio_url"],"text":slot["text"],"broll_url":slot["broll_url"],"output_name":slot["output_name"]}})
+                          repair.append(f"{name} fresh-dispatch after Buffer verification run={run['id']} attempt={attempt}")
                   if repair:
                       comment(issue_number,"MOTUS_DAY_BUFFER_REPAIR\n\nBuffer confirmation missing; reusing published QC MP4 and retrying only affected slot(s):\n- "+"\n- ".join(repair))
                   if exhausted and not has_marker(issue_number,"MOTUS_DAY_FAILED_FINAL"):
