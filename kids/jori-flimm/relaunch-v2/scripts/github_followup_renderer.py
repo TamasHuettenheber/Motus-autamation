@@ -32,7 +32,7 @@ def draw_scene(name,section):
  if section=="hook":
   d.rounded_rectangle((40,155,680,253),radius=20,fill=(16,37,62,200))
   d.text((360,202),episode["title"],font=font(25),anchor="mm",fill="white",stroke_width=1,stroke_fill="#1e354f")
- if section=="puzzle" or section=="answer":
+ if section=="puzzle":
   d.rounded_rectangle((38,388,682,780),radius=23,fill=(18,37,63,224),outline=(242,205,119,240),width=4)
   d.text((360,411),"DAS RÄTSEL",font=font(26),anchor="mt",fill="#ffe4a3")
   qfont=font(21,False);q_lines=[];q_line=""
