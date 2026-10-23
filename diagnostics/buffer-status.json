@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-23T09:58:07.290570+00:00",
+  "checked_at_utc": "2026-10-23T14:58:01.839466+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6ad9b2a87dadc432f74312c7",
       "text": "Unklare Absprachen kosten oft mehr Zeit als die Aufgabe selbst. Zwei Menschen nicken und stellen später fest, dass sie etwas völlig Unterschiedliches verstanden haben. Frag deshalb konkret nach: Wer übernimmt was? Bis wann? Und woran erkennen wir, dass es erledigt ist? Diese drei Fragen sind kein Misstrauen. Sie machen Zusammenarbeit leichter und verhindern unnötigen Ärger.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-23T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-23T10:03:08.375Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7699801395020451104",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-23-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad9b2a87dadc432f74312c7_video.mp4"
         }
       ]
     },
