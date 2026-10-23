@@ -1,0 +1,73 @@
+name: MOTUS Night Production
+on:
+  schedule:
+    - cron: '37 20 * * *'
+    - cron: '37 21 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+  actions: write
+concurrency:
+  group: motus-night-production
+  cancel-in-progress: false
+jobs:
+  produce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Generate next MOTUS day and dispatch exactly once
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GEMINI_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+          REPO: ${{ github.repository }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          python3 - <<'PY'
+          import json,os,urllib.request,urllib.error
+          from datetime import datetime,timedelta
+          from zoneinfo import ZoneInfo
+          now=datetime.now(ZoneInfo("Europe/Berlin"))
+          if os.environ["EVENT"]=="schedule" and (now.hour,now.minute)!=(22,37):
+              print("DST_CRON_SKIP",now.isoformat());raise SystemExit(0)
+          target=(now.date()+timedelta(days=2)).isoformat()
+          repo=os.environ["REPO"]; token=os.environ["GH_TOKEN"]
+          headers={"Authorization":"Bearer "+token,"Accept":"application/vnd.github+json","User-Agent":"motus-night-producer"}
+          def gh(method,path,payload=None):
+              data=None if payload is None else json.dumps(payload,ensure_ascii=False).encode()
+              req=urllib.request.Request("https://api.github.com/repos/"+repo+path,data=data,headers=headers,method=method)
+              with urllib.request.urlopen(req,timeout=50) as response:
+                  raw=response.read();return json.loads(raw) if raw else {}
+          title="[MOTUS-DAY] "+target
+          issues=gh("GET","/issues?state=all&per_page=100&sort=created&direction=desc")
+          existing=next((i for i in issues if i.get("title")==title),None)
+          if existing:
+              print("ALREADY_EXISTS",existing["number"],existing["state"])
+              if existing["state"]=="open":
+                  gh("POST","/actions/workflows/motus-day.yml/dispatches",{"ref":"main","inputs":{"issue_number":str(existing["number"])}})
+              raise SystemExit(0)
+          key=os.environ.get("GEMINI_KEY","")
+          if not key:raise SystemExit("GEMINI_KEY_MISSING")
+          prompt=("Erstelle vier unterschiedliche, originelle kurze deutsche MOTUS-Motivationstexte "
+                  "fuer "+target+". Slots 07:00,12:00,18:30,22:00. Jeweils 60 bis 85 Woerter, "
+                  "direkte Du-Ansprache, konkrete und abwechslungsreiche Gedanken, kein Clickbait, "
+                  "keine Wiederholung von Floskeln. Morgens aktivierend, mittags praktisch, "
+                  "abends reflektierend, nachts beruhigend. Antworte ausschliesslich als JSON "
+                  "mit Schluessel slots, Array von vier Objekten mit time und text.")
+          payload={"contents":[{"parts":[{"text":prompt}]}],"generationConfig":{"responseMimeType":"application/json","temperature":0.9}}
+          req=urllib.request.Request("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+              data=json.dumps(payload).encode(),headers={"Content-Type":"application/json","x-goog-api-key":key},method="POST")
+          with urllib.request.urlopen(req,timeout=110) as response: generated=json.load(response)
+          raw=generated["candidates"][0]["content"]["parts"][0]["text"]
+          slots=json.loads(raw)["slots"]
+          if len(slots)!=4:raise SystemExit("BAD_SLOT_COUNT")
+          times=["07:00","12:00","18:30","22:00"]
+          if [s.get("time") for s in slots]!=times:raise SystemExit("BAD_SLOT_TIMES")
+          if any(len(s.get("text","").split())<45 for s in slots):raise SystemExit("TEXT_TOO_SHORT")
+          batch={"date":target,"slots":[{"slot":t.replace(":",""),"time":t,"timezone":"Europe/Berlin","audio_url":"","broll_url":"","text":s["text"]} for t,s in zip(times,slots)]}
+          issue=gh("POST","/issues",{"title":title,"body":json.dumps(batch,ensure_ascii=False)})
+          number=issue["number"]
+          print("CREATED_DAY",target,"ISSUE",number)
+          gh("POST","/actions/workflows/motus-day.yml/dispatches",{"ref":"main","inputs":{"issue_number":str(number)}})
+          print("DISPATCHED_DAY",number)
+          PY
