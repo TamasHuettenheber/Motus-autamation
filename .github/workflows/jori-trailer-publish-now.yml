@@ -1,0 +1,77 @@
+name: Jori & Flimm | Trailer render + Buffer publish now (isolated)
+on:
+  push:
+    branches:
+      - feature/jori-flimm-neustart-folge001
+    paths:
+      - .github/workflows/jori-trailer-publish-now.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: jori-flimm-trailer-2026-10-23
+  cancel-in-progress: false
+jobs:
+  trailer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout Jori only
+        uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          fetch-depth: 1
+          sparse-checkout: |
+            kids/jori-flimm
+            published
+            .github/workflows/jori-trailer-publish-now.yml
+      - name: Install renderer dependencies
+        run: |
+          set -euo pipefail
+          if ! command -v ffmpeg >/dev/null 2>&1 || ! python3 -c 'from PIL import Image' >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends ffmpeg python3-pil fonts-dejavu-core
+          fi
+          test -e /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
+      - name: Render and quality-check 28-second MP4 inside GitHub
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+          JORI_TTS_MODEL: gemini-3.8-flash-lite-tts
+        run: |
+          set -euo pipefail
+          test -n "$JORI_GEMINI_API_KEY" || { echo "JORI_GEMINI_API_KEY missing, no post"; exit 1; }
+          if [ ! -s published/jori-flimm-trailer-2026-10-23.mp4 ]; then
+            python3 kids/jori-flimm/relaunch-v2/scripts/github_trailer_20261023.py
+          else
+            echo "JORI_TRAILER_EXISTING_RENDER_REUSED"
+          fi
+          ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_name,width,height -of json published/jori-flimm-trailer-2026-10-23.mp4
+          test "$(stat -c %s published/jori-flimm-trailer-2026-10-23.mp4)" -gt 1000000
+      - name: Upload preview for traceability
+        uses: actions/upload-artifact@v4
+        with:
+          name: Jori-Flimm-Trailer-2026-10-23-28seconds
+          path: published/jori-flimm-trailer-2026-10-23.mp4
+          if-no-files-found: error
+          retention-days: 14
+      - name: Commit video to Jori branch for public media loading
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse published/jori-flimm-trailer-2026-10-23.mp4
+          if ! git diff --cached --quiet; then
+            git commit -m 'kids: publish rendered Jori and Flimm intro trailer MP4'
+            git pull --rebase origin feature/jori-flimm-neustart-folge001
+            git push origin HEAD:feature/jori-flimm-neustart-folge001
+          else
+            echo 'JORI_TRAILER_VIDEO_ALREADY_COMMITTED'
+          fi
+      - name: Buffer share now ONLY for @jori.flimm
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          set -euo pipefail
+          test -n "$BUFFER_API_KEY" || { echo "BUFFER_API_KEY missing; no post"; exit 1; }
+          python3 kids/jori-flimm/relaunch-v2/scripts/github_trailer_buffer_20261023.py
