@@ -44,6 +44,12 @@ jobs:
           existing=next((i for i in issues if i.get("title")==title),None)
           if existing:
               print("ALREADY_EXISTS",existing["number"],existing["state"])
+              if existing["state"]=="open":
+                  notes=gh("GET",f"/issues/{existing['number']}/comments?per_page=100")
+                  complete=any(str(c.get("body","")).startswith("MOTUS_DAY_COMPLETE") for c in notes)
+                  print("DAY_COMPLETION_VERIFIED",complete,"ISSUE",existing["number"])
+                  if not complete:
+                      print("RECONCILIATION_ACTIVE_EVERY_15_MINUTES_IN_MOTUS_DAY_STATUS")
               raise SystemExit(0)
           key=os.environ.get("GEMINI_KEY","")
           if not key:raise SystemExit("GEMINI_KEY_MISSING")
@@ -75,5 +81,8 @@ jobs:
           issue=gh("POST","/issues",{"title":title,"body":json.dumps(batch,ensure_ascii=False)})
           number=issue["number"]
           print("CREATED_DAY",target,"ISSUE",number)
-          print("DAY_ISSUE_OPENED_AUTO_EVENT",number)
+          # Events emitted using GITHUB_TOKEN do not trigger other GitHub Actions.
+          # Explicitly dispatch the day workflow once for the newly created issue.
+          gh("POST","/actions/workflows/motus-day.yml/dispatches",{"ref":"main","inputs":{"issue_number":str(number)}})
+          print("DAY_WORKFLOW_DISPATCHED",number)
           PY
