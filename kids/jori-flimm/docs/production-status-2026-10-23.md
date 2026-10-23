@@ -16,6 +16,8 @@
 - Neues Klang-/Echo-Rätsel mit drei unterschiedlich langen Glasröhren; eine Frage, ein Marker `[[PAUSE:7]]), Auflösung, Handlungsfortschritt und neuer Cliffhanger.
 - Story-QC: Jori ist durchgehend weiblich referenziert; Rätseltyp unterscheidet sich von 001–005. Die sieben Sekunden sind im Text markiert, aber ohne TTS/MP4 noch nicht als echte Audiostille geprüft.
 - Fünf neue Szenenbilder: [assets/episode-006](../relaunch-v2/assets/episode-006/): Fußabdruck am Berghang, Glashaus außen, Klangröhren, Lösung/Teleskop, Sternkarten-Cliffhanger. Alle sind 941×1672 px (nahe 9:16) und visuell unterschiedliche Kompositionen.
+- Sichtprüfung am 23.10.: alle fünf tatsächlichen PNGs geöffnet; je eigenes Motiv und folgenspezifischer Hintergrund, Jori/Flimm konsistent, Reihenfolge passt zur Handlung. Die Rätselhinweis-Karten müssen im Renderer als lesbarer Overlay eingeblendet werden; sie sind nicht in die Bilder eingebrannt.
+- Live-Zugriffsprüfung: Google AI Studio `/api-keys` leitete im verfügbaren Browser auf die Google-Kontoauswahl weiter; kein angemeldeter AI-Studio-Zugriff und daher dort keine Billing-Tier-Anzeige sichtbar. Es wurde kein TTS-Aufruf ausgelöst.
 - Render-QC, Untertitel-Timing, Sulafat-Audio, MP4-Spuren/Dauer und sieben Sekunden Stille: offen, weil noch keine Folge-006-MP4 erzeugt wurde.
 - Buffer: kein neuer Post; Post-ID/Status/Termin nicht vorhanden. Der nächste Termin nach den bisher belegten Folgen 001–005 wäre vorläufig 27.10.2026, 14:00 Europe/Berlin; vor einer Buchung ist der Live-Buffer-Stand erneut zu prüfen.
 
