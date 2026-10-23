@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-23T14:58:01.839466+00:00",
+  "checked_at_utc": "2026-10-23T19:07:05.843006+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6ad9b1eddeacf5d253339aa9",
       "text": "Ein Missgeschick kann sich im ersten Moment riesig anfühlen. Du verschüttest Kaffee, verwechselst einen Namen oder stolperst über deine eigenen Worte. Vielleicht musst du nicht sofort alles perfekt erklären. Manchmal reicht es, den Fehler zu korrigieren und über die Situation zu schmunzeln. Humor macht einen Fehler nicht ungeschehen. Aber er nimmt ihm die Macht, deinen ganzen Tag zu bestimmen.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-23T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-23T16:33:07.916Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7699901736076496160",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-23-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad9b1eddeacf5d253339aa9_video.mp4"
         }
       ]
     },
