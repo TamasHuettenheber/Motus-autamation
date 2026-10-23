@@ -13,6 +13,10 @@ permissions:
   issues: write
   actions: write
 
+concurrency:
+  group: motus-day-status
+  cancel-in-progress: false
+
 jobs:
   reconcile:
     runs-on: ubuntu-latest
@@ -196,6 +200,8 @@ jobs:
                   continue
               if has_marker(issue_number,"MOTUS_DAY_COMPLETE"):
                   continue
+              # Avoid duplicate repairs when two reconciliation runs overlap.
+
               # A previous failure marker is historical, not a permanent lock.
               # A corrected JSON batch must be reconciled normally on later runs.
 
