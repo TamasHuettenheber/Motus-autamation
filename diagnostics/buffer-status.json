@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-23T06:44:47.061117+00:00",
+  "checked_at_utc": "2026-10-23T09:58:07.290570+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -112,6 +112,21 @@
         {
           "mimeType": "video/mp4",
           "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-23-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6adb1bcce2b536ff313d8b1b",
+      "text": "Du wartest darauf, dass jemand den Anfang macht? Vielleicht bist heute genau du diese Person. Eigeninitiative heißt nicht, alles allein zu tragen. Es heißt, eine Möglichkeit zu erkennen und Verantwortung für deinen Teil zu übernehmen. Sprich eine Idee aus, biete Hilfe an oder triff eine Entscheidung, die du bisher aufgeschoben hast. Du darfst etwas bewegen, ohne auf eine Einladung zu warten.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
+      "status": "sent",
+      "dueAt": "2026-10-23T08:36:00.000Z",
+      "sentAt": "2026-10-23T08:37:44.491Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7699779287628516641",
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6adb1bcce2b536ff313d8b1b_video.mp4"
         }
       ]
     },
@@ -742,21 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acd45e0a36dd851812e8ca9_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6acbff098e8dd50ffc57de19",
-      "text": "Bevor dieser Montag endet, such nicht nach allem, was offen geblieben ist. Erinnere dich an einen Moment, in dem du heute bewusst gehandelt hast. Nimm diesen kleinen Erfolg mit in die Nacht. Was war heute dein guter Schritt? #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Lost Islands (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-12T20:00:00.000Z",
-      "sentAt": "2026-10-12T20:02:11.106Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7695873905977871649?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6acbff098e8dd50ffc57de19_video.mp4"
         }
       ]
     }
