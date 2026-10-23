@@ -3,7 +3,7 @@
 import argparse,json,os,time,urllib.request,urllib.error
 from datetime import datetime
 from zoneinfo import ZoneInfo
-p=argparse.ArgumentParser();p.add_argument("--episode",type=int,required=True,choices=[2,3,4,5]);p.add_argument("--replace-existing",action="store_true");a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument("--episode",type=int,required=True,choices=[2,3,4,5,6]);p.add_argument("--replace-existing",action="store_true");a=p.parse_args()
 n=a.episode
 key=os.environ.get("BUFFER_API_KEY","").strip()
 assert key,"BUFFER_API_KEY_MISSING"
@@ -59,8 +59,11 @@ if existing:
  old=existing[0]
  print("JORI_EPISODE_ALREADY_SCHEDULED",n,old["id"],old["dueAt"])
  raise SystemExit(0)
-data=json.loads(open("kids/jori-flimm/relaunch-v2/staffel1_folgen_001_005.json",encoding="utf-8").read())
-e=next(x for x in data["episodes"] if x["episode_number"]==n)
+if n==6:
+ e=json.loads(open("kids/jori-flimm/relaunch-v2/episode_006_story_draft.json",encoding="utf-8").read())
+else:
+ data=json.loads(open("kids/jori-flimm/relaunch-v2/staffel1_folgen_001_005.json",encoding="utf-8").read())
+ e=next(x for x in data["episodes"] if x["episode_number"]==n)
 caption=f"Jori & Flimm | Folge {n:03d}: {e['title']}. Die Geschichte geht weiter – mit einem neuen Rätsel! #JoriUndFlimm #Kindergeschichte #Rätsel #GeschichtenFürKinder"
 mutation="""mutation($input:CreatePostInput!){createPost(input:$input){__typename ... on PostActionSuccess{post{id status dueAt channelId assets{mimeType source}}} ... on MutationError{message}}}"""
 result=gql(mutation,{"input":{"text":caption,"channelId":channel,"schedulingType":"automatic","mode":"customScheduled","dueAt":due.isoformat(timespec="milliseconds"),"aiAssisted":True,"metadata":{"tiktok":{"isAiGenerated":True}},"assets":[{"video":{"url":media,"metadata":{"thumbnailOffset":1000}}}]}})["createPost"]

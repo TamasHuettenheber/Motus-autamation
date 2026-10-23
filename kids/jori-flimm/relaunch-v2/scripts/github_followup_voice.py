@@ -2,9 +2,12 @@
 """Generate corrected female-Jori Sulafat audio; no edits to canonical story JSON."""
 import argparse,json,os,subprocess,sys,shutil
 from pathlib import Path
-p=argparse.ArgumentParser();p.add_argument("--episode",type=int,required=True,choices=[2,3,4,5]);a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument("--episode",type=int,required=True,choices=[2,3,4,5,6]);a=p.parse_args()
 root=Path.cwd();base=root/"kids/jori-flimm/relaunch-v2"
-e=next(x for x in json.loads((base/"staffel1_folgen_001_005.json").read_text())["episodes"] if x["episode_number"]==a.episode)
+if a.episode==6:
+    e=json.loads((base/"episode_006_story_draft.json").read_text(encoding="utf-8"))
+else:
+    e=next(x for x in json.loads((base/"staffel1_folgen_001_005.json").read_text(encoding="utf-8"))["episodes"] if x["episode_number"]==a.episode)
 n=e["narration"]
 if a.episode==2:n=n.replace("flüsterte er.","flüsterte sie.")
 if a.episode==4:n=n.replace("sagte er.","sagte sie.")

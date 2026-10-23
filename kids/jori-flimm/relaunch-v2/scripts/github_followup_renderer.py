@@ -5,14 +5,15 @@ from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont,ImageFilter
 ROOT=Path.cwd()
 BASE=ROOT/"kids/jori-flimm/relaunch-v2"
-parser=argparse.ArgumentParser();parser.add_argument("--episode",type=int,required=True,choices=[2,3,4,5]);args=parser.parse_args()
+parser=argparse.ArgumentParser();parser.add_argument("--episode",type=int,required=True,choices=[2,3,4,5,6]);args=parser.parse_args()
 n=args.episode
-ART=ROOT/f"kids/jori-flimm/assets/e{n:03d}"
+ART=(ROOT/"kids/jori-flimm/relaunch-v2/assets/episode-006") if n==6 else ROOT/f"kids/jori-flimm/assets/e{n:03d}"
+SCENE_EXT=".png" if n==6 else ".jpg"
 SCENE_INDEX={"hook":1,"story_a":2,"story_b":3,"puzzle":3,"answer":4,"cliff":5}
-scene_files=[ART/f"scene-{i:02d}.jpg" for i in range(1,6)]
+scene_files=[ART/f"scene-{i:02d}{SCENE_EXT}" for i in range(1,6)]
 assert all(p.is_file() for p in scene_files), "Missing episode-specific scene art"
 print(f"JORI_SCENE_ART_READY episode={n} unique_scenes=5")
-episode=next(e for e in json.loads((BASE/"staffel1_folgen_001_005.json").read_text())["episodes"] if e["episode_number"]==n)
+episode=(json.loads((BASE/"episode_006_story_draft.json").read_text(encoding="utf-8")) if n==6 else next(e for e in json.loads((BASE/"staffel1_folgen_001_005.json").read_text(encoding="utf-8"))["episodes"] if e["episode_number"]==n))
 W=ROOT/f"work/episode_{n:03d}";W.mkdir(parents=True,exist_ok=True)
 audio=W/"narration_source.wav";timeline=W/"voice-timeline.json"
 assert audio.exists() and timeline.exists(),"No validated Sulafat narration"
@@ -24,7 +25,7 @@ F2="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 font=lambda size,bold=True:ImageFont.truetype(F if bold else F2,size)
 def cmd(*args):subprocess.run(list(map(str,args)),check=True,timeout=500)
 def draw_scene(name,section):
- im=Image.open(ART/f"scene-{SCENE_INDEX[section]:02d}.jpg").convert("RGB").resize((720,1280),Image.Resampling.LANCZOS)
+ im=Image.open(ART/f"scene-{SCENE_INDEX[section]:02d}{SCENE_EXT}").convert("RGB").resize((720,1280),Image.Resampling.LANCZOS)
  overlay=Image.new("RGBA",(720,1280),(0,0,0,0));d=ImageDraw.Draw(overlay)
  d.rounded_rectangle((34,38,683,102),radius=17,fill=(15,37,67,196))
  d.text((55,57),f"JORI & FLIMM   ·   FOLGE {n:03d}",font=font(23),fill="#fff2cf")
@@ -58,6 +59,17 @@ def draw_scene(name,section):
     if i==2:d.rectangle((x-21,606,x+21,648),fill="#ffdc88")
     if section=="answer" and i==1:d.rounded_rectangle((x-77,570,x+77,705),radius=19,outline="#fff29a",width=7)
    d.text((360,719),"KREIS     DREIECK     QUADRAT",font=font(19),anchor="mm",fill="white")
+  elif n==6:
+   d.rounded_rectangle((92,536,628,590),radius=15,fill=(37,54,82,255),outline="#ffe09a",width=2)
+   d.text((360,563),"ZIELKLANG: DUUM-DUUM",font=font(21),anchor="mm",fill="#fff0bd")
+   choices=[("KURZ","TING"),("MITTEL","TOK"),("LANG","DUUM-DUUM")]
+   for i,(label,sound) in enumerate(choices):
+    y=606+i*57
+    edge="#fff29a" if section=="answer" and i==2 else "#e8e2ce"
+    width=5 if section=="answer" and i==2 else 2
+    d.rounded_rectangle((90,y,630,y+48),radius=13,fill=(42,60,84,245),outline=edge,width=width)
+    d.text((116,y+24),label,font=font(19),anchor="lm",fill="#ffe4a3")
+    d.text((602,y+24),sound,font=font(19),anchor="rm",fill="white")
   else:
    for i,x in enumerate([155,295,435,575]):
     if i<3:
