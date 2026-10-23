@@ -28,7 +28,7 @@ jobs:
           from datetime import datetime,timedelta
           from zoneinfo import ZoneInfo
           now=datetime.now(ZoneInfo("Europe/Berlin"))
-          if os.environ["EVENT"]=="schedule" and (now.hour,now.minute)!=(22,37):
+          if os.environ["EVENT"]=="schedule" and now.hour!=22:
               print("DST_CRON_SKIP",now.isoformat());raise SystemExit(0)
           target=(now.date()+timedelta(days=2)).isoformat()
           repo=os.environ["REPO"]; token=os.environ["GH_TOKEN"]
@@ -68,6 +68,5 @@ jobs:
           issue=gh("POST","/issues",{"title":title,"body":json.dumps(batch,ensure_ascii=False)})
           number=issue["number"]
           print("CREATED_DAY",target,"ISSUE",number)
-          gh("POST","/actions/workflows/motus-day.yml/dispatches",{"ref":"main","inputs":{"issue_number":str(number)}})
-          print("DISPATCHED_DAY",number)
+          print("DAY_ISSUE_OPENED_AUTO_EVENT",number)
           PY
