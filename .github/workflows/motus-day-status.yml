@@ -196,8 +196,8 @@ jobs:
                   continue
               if has_marker(issue_number,"MOTUS_DAY_COMPLETE"):
                   continue
-              if has_marker(issue_number,"MOTUS_DAY_FAILED_FINAL"):
-                  continue
+              # A previous failure marker is historical, not a permanent lock.
+              # A corrected JSON batch must be reconciled normally on later runs.
 
               created=datetime.fromisoformat(str(issue["created_at"]).replace("Z","+00:00"))
               age_minutes=(now-created).total_seconds()/60.0
