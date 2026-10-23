@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-09-29-2200",
-      "clip_id": "night-walk-4121893",
-      "source": "https://www.pexels.com/video/a-person-walking-in-the-street-at-night-4121893/",
-      "used_at_utc": "2026-09-29T05:07:42.916685+00:00"
-    },
-    {
       "output_name": "motus-2026-09-30-0700",
       "clip_id": "hallway-phone-6585106",
       "source": "https://www.pexels.com/video/person-walking-while-using-smartphone-6585106/",
@@ -599,6 +593,12 @@
       "clip_id": "rain-city-13961930",
       "source": "https://www.pexels.com/video/people-walking-in-city-under-rainfall-13961930/",
       "used_at_utc": "2026-10-22T23:07:47.930248+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-25-0700",
+      "clip_id": "work-laptop-8479274",
+      "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
+      "used_at_utc": "2026-10-23T21:58:35.502183+00:00"
     }
   ]
 }
