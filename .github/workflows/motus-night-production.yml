@@ -3,6 +3,7 @@ on:
   schedule:
     - cron: '37 20 * * *'
     - cron: '37 21 * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 permissions:
   contents: read
@@ -28,9 +29,9 @@ jobs:
           from datetime import datetime,timedelta
           from zoneinfo import ZoneInfo
           now=datetime.now(ZoneInfo("Europe/Berlin"))
-          if os.environ["EVENT"]=="schedule" and now.hour!=22:
-              print("DST_CRON_SKIP",now.isoformat());raise SystemExit(0)
-          target=(now.date()+timedelta(days=2)).isoformat()
+          if os.environ["EVENT"]=="schedule" and not ((now.hour==22 and now.minute>=37) or now.hour==23 or 0<=now.hour<7):
+              print("OUTSIDE_NIGHT_WINDOW",now.isoformat());raise SystemExit(0)
+          target=(now.date()+timedelta(days=2 if now.hour>=22 else 1)).isoformat()
           repo=os.environ["REPO"]; token=os.environ["GH_TOKEN"]
           headers={"Authorization":"Bearer "+token,"Accept":"application/vnd.github+json","User-Agent":"motus-night-producer"}
           def gh(method,path,payload=None):
@@ -43,8 +44,6 @@ jobs:
           existing=next((i for i in issues if i.get("title")==title),None)
           if existing:
               print("ALREADY_EXISTS",existing["number"],existing["state"])
-              if existing["state"]=="open":
-                  gh("POST","/actions/workflows/motus-day.yml/dispatches",{"ref":"main","inputs":{"issue_number":str(existing["number"])}})
               raise SystemExit(0)
           key=os.environ.get("GEMINI_KEY","")
           if not key:raise SystemExit("GEMINI_KEY_MISSING")
