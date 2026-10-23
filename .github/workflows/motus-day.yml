@@ -162,7 +162,12 @@ jobs:
 
           # Idempotency: if the batch workflow is re-opened or re-run, only dispatch
           # renderer slots for which no workflow_dispatch run exists yet.
-          runs = gh("GET", "/actions/workflows/motus.yml/runs?event=workflow_dispatch&per_page=100").get("workflow_runs", [])
+          runs = []
+          for page in range(1,6):
+              chunk = gh("GET", f"/actions/workflows/motus.yml/runs?event=workflow_dispatch&per_page=100&page={page}").get("workflow_runs", [])
+              runs.extend(chunk)
+              if len(chunk) < 100:
+                  break
           existing_titles = {str(r.get("display_title","")) for r in runs}
           dispatched = []
           reused = []
