@@ -36,7 +36,8 @@ jobs:
           headers={"Authorization":"Bearer "+token,"Accept":"application/vnd.github+json","User-Agent":"motus-night-producer"}
           def gh(method,path,payload=None):
               data=None if payload is None else json.dumps(payload,ensure_ascii=False).encode()
-              req=urllib.request.Request("https://api.github.com/repos/"+repo+path,data=data,headers=headers,method=method)
+              url=("https://api.github.com"+path if path.startswith("/search/") else "https://api.github.com/repos/"+repo+path)
+              req=urllib.request.Request(url,data=data,headers=headers,method=method)
               with urllib.request.urlopen(req,timeout=50) as response:
                   raw=response.read();return json.loads(raw) if raw else {}
           title="[MOTUS-DAY] "+target
