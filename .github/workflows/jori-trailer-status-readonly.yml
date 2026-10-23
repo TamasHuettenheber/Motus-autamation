@@ -1,0 +1,25 @@
+name: Jori & Flimm | Trailer publication verification (read only)
+on:
+  push:
+    branches:
+      - feature/jori-flimm-neustart-folge001
+    paths:
+      - .github/workflows/jori-trailer-status-readonly.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          sparse-checkout: |
+            kids/jori-flimm/relaunch-v2/scripts
+      - name: Verify Buffer channel and trailer post without any writes
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          python3 kids/jori-flimm/relaunch-v2/scripts/check_buffer_channel.py
