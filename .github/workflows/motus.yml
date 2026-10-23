@@ -86,7 +86,7 @@ jobs:
             curl -L --fail --retry 3 --retry-delay 2 "$AUDIO_URL" -o work/audio_source
           else
             python3 -m pip install --quiet google-genai
-            python3 scripts/motus_algenib_tts.py
+            python3 -u scripts/motus_algenib_tts.py
           fi
           test -s work/audio_source
           ffmpeg -y -i work/audio_source -vn -ar 48000 -ac 2 -b:a 192k work/audio.mp3
