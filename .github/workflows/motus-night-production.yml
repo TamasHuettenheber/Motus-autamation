@@ -54,9 +54,9 @@ jobs:
                       runs=gh("GET","/actions/workflows/motus-day.yml/runs?per_page=100").get("workflow_runs",[])
                       title_match=f"Daily Motus {existing['number']}"
                       matched=[run for run in runs if str(run.get("display_title",""))==title_match]
-                      if not matched:
+                      if not matched or (matched[0].get("status")=="completed" and matched[0].get("conclusion")!="success"):
                           gh("POST","/actions/workflows/motus-day.yml/dispatches",{"ref":"main","inputs":{"issue_number":str(existing["number"])}})
-                          print("RECOVERED_MISSING_DAY_HANDOFF",existing["number"])
+                          print("RECOVERED_MISSING_OR_FAILED_DAY_HANDOFF",existing["number"])
                       else:
                           print("RECONCILIATION_ACTIVE_EVERY_15_MINUTES_IN_MOTUS_DAY_STATUS")
               raise SystemExit(0)
