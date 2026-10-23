@@ -5,6 +5,7 @@ on:
       - feature/jori-flimm-neustart-folge001
     paths:
       - .github/workflows/jori-episode-006-preview.yml
+      - kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer.py
 permissions:
   contents: write
 concurrency:
