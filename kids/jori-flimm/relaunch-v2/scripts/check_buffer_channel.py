@@ -72,7 +72,7 @@ def main():
     # Separate account check; never read MOTUS's queue or create Buffer posts.
     query=("query { posts(input:{organizationId:"+json.dumps(org_id)+
            ",filter:{status:[scheduled],channelIds:["+json.dumps(str(target["id"]))+
-           "]}}) { edges { node { id channelId dueAt } } pageInfo { hasNextPage } } }")
+           "]}}) { edges { node { id channelId dueAt text } } pageInfo { hasNextPage } } }")
     posts=(gql(query).get("posts") or {})
     rows=[edge.get("node",{}) for edge in posts.get("edges",[])]
     if posts.get("pageInfo",{}).get("hasNextPage"):
@@ -80,7 +80,7 @@ def main():
     print("JORI_BUFFER_TIKTOK_CHANNEL_VERIFIED_READ_ONLY; expected @"+expected)
     print("JORI_BUFFER_QUEUED_POSTS="+str(len(rows))+"; no MOTUS actions")
     for post in rows:
-        print("JORI_QUEUED="+str(post.get("dueAt",""))+" id="+str(post.get("id","")))
+        print("JORI_QUEUED="+str(post.get("dueAt",""))+" id="+str(post.get("id",""))+" text="+json.dumps(post.get("text",""),ensure_ascii=False))
     # Read all statuses from this Jori channel only, including today's first post.
     query=("query { posts(input:{organizationId:"+json.dumps(org_id)+
            ",filter:{channelIds:["+json.dumps(str(target["id"]))+
