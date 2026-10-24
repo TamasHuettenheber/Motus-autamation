@@ -10,5 +10,10 @@
   "target_channel": "@jori.flimm",
   "target_due_at": "2026-10-27T14:00:00+01:00",
   "queue_check_run_id": 40136219719,
-  "status": "APPROVED_TO_SCHEDULE"
+  "status": "SCHEDULED",
+  "buffer_post_id": "6add2bd3e4be8a4d867c532c",
+  "buffer_status": "scheduled",
+  "buffer_channel_id": "6ad948ea778b240e2f839607",
+  "buffer_due_at": "2026-10-27T13:00:00.000Z",
+  "buffer_release_run_id": 40137063992
 }
