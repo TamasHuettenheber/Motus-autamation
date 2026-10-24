@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-24T14:28:06.175436+00:00",
+  "checked_at_utc": "2026-10-24T18:04:59.990289+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6ada9057cc1b7cdc08bc8cfe",
       "text": "Du musst in einem Gespräch nicht sofort eine Lösung anbieten. Manchmal braucht dein Gegenüber zuerst das Gefühl, wirklich verstanden zu werden. Hör zu, frag nach und lass einen Gedanken zu Ende sprechen. Eine gute Frage kann mehr verändern als ein schneller Ratschlag. Zuhören ist keine Pause vom Helfen. Es ist oft der Anfang davon.\n\n#motus #kommunikation #alltagspsychologie #selbstentwicklung #mentaleklarheit\n\nMusik: Tanner Helland – Deserve to be Loved (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-24T16:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-24T16:33:26.084Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7700272899403435296",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-24-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ada9057cc1b7cdc08bc8cfe_video.mp4"
         }
       ]
     },
