@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-01-2200",
-      "clip_id": "explicit",
-      "source": "issue",
-      "used_at_utc": "2026-09-30T21:49:00.751151+00:00"
-    },
-    {
       "output_name": "motus-2026-10-01-0700",
       "clip_id": "explicit",
       "source": "issue",
@@ -599,6 +593,12 @@
       "clip_id": "sunrise-sea-18303443",
       "source": "https://www.pexels.com/video/sunrise-over-the-sea-vertical-video-18303443/",
       "used_at_utc": "2026-10-24T21:38:16.156576+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-26-0700",
+      "clip_id": "desk-thinking-5704904",
+      "source": "https://www.pexels.com/video/woman-working-on-the-desk-5704904/",
+      "used_at_utc": "2026-10-24T21:38:25.570296+00:00"
     }
   ]
 }
