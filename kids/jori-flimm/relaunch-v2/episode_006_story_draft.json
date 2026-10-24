@@ -59,9 +59,11 @@
       "description": "Cliffhanger: eine winzige Gestalt hebt im Teleskopbild einen zweiten passenden Stern empor."
     }
   ],
-  "status": "STORY_ART_AND_RENDER_V2_PENDING_QC",
+  "status": "PREVIEW_ONLY_REQUIRES_SUBTITLE_ALIGNMENT_AND_PHONE_QC",
   "approved_for_publish": false,
   "release_blockers": [
-    "Neuer Render und vollständige Untertitel-/Video-QC laufen noch; kein Buffer-Post bis zur Freigabe."
+    "Untertitel-Zeitmarken sind proportional geschätzt und noch nicht sprachbasiert am Sulafat-Audio ausgerichtet.",
+    "Ein iPhone-Abspieltest liegt nicht vor.",
+    "Keine Buffer-Buchung vor Abschluss der redaktionellen und technischen Freigabe."
   ]
 }
