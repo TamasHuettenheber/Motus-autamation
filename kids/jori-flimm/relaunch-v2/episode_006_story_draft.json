@@ -30,34 +30,38 @@
   "visuals": [
     {
       "scene": 1,
-      "path": "kids/jori-flimm/relaunch-v2/assets/episode-006/scene-01.png",
-      "description": "Der leuchtende Riesenabdruck am Berghang; unmittelbarer Anschluss an Folge 005."
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-006-v2/scene-01.jpg",
+      "description": "Direkte Fortsetzung am riesigen Fußabdruck; Flimm rund, mit vertrauter Nase, grüner Mütze und sichtbarem Bauchstern."
     },
     {
       "scene": 2,
-      "path": "kids/jori-flimm/relaunch-v2/assets/episode-006/scene-02.png",
-      "description": "Jori und Flimm folgen dem silbrigen Faden zum Glashaus."
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-006-v2/scene-02.jpg",
+      "description": "Am Fußabdruck liest Jori die Sternnachricht; Flimm berührt seinen leuchtenden Bauchstern."
     },
     {
       "scene": 3,
-      "path": "kids/jori-flimm/relaunch-v2/assets/episode-006/scene-03.png",
-      "description": "Die drei unterschiedlich langen Klangröhren im Glashaus."
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-006-v2/scene-03.jpg",
+      "description": "Erst nach dem silbernen Faden erscheint das Glashaus in der Ferne."
     },
     {
       "scene": 4,
-      "path": "kids/jori-flimm/relaunch-v2/assets/episode-006/scene-04.png",
-      "description": "Jori berührt die lange Röhre; dahinter öffnet sich der Weg zum Teleskop."
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-006-v2/scene-04.jpg",
+      "description": "Im Glashaus: drei Glasröhren unterschiedlicher Länge; Jori lauscht, Flimm hält seinen Stern ruhig."
     },
     {
       "scene": 5,
-      "path": "kids/jori-flimm/relaunch-v2/assets/episode-006/scene-05.png",
-      "description": "Sternkarte, Flimms Stern und die geheimnisvolle Gestalt mit einem zweiten Stern."
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-006-v2/scene-05.jpg",
+      "description": "Die lange Röhre öffnet den Weg zu Teleskop und Sternkarte."
+    },
+    {
+      "scene": 6,
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-006-v2/scene-06.jpg",
+      "description": "Cliffhanger: eine winzige Gestalt hebt im Teleskopbild einen zweiten passenden Stern empor."
     }
   ],
-  "status": "STORY_AND_ART_DRAFT_ONLY",
+  "status": "STORY_ART_AND_RENDER_V2_PENDING_QC",
   "approved_for_publish": false,
   "release_blockers": [
-    "Projekt-Tarif des API-Keys nicht verifiziert; kein TTS-Aufruf, bis Free Tier nachgewiesen ist.",
-    "Folge-006-Render-/Buffer-Pipeline noch nicht ausgeführt; keine fertige MP4 oder Buchung nachgewiesen."
+    "Neuer Render und vollständige Untertitel-/Video-QC laufen noch; kein Buffer-Post bis zur Freigabe."
   ]
 }

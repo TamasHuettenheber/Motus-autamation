@@ -6,6 +6,8 @@ on:
     paths:
       - .github/workflows/jori-episode-006-preview.yml
       - kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer.py
+      - kids/jori-flimm/relaunch-v2/episode_006_story_draft.json
+      - kids/jori-flimm/relaunch-v2/assets/episode-006-v2/**
 permissions:
   contents: write
 concurrency:
@@ -44,7 +46,7 @@ jobs:
           assert e['cliff'] and e['answer']=='Die lange Röhre!'
           assert not re.search(r'\bJori\s+(?:sagte|flüsterte)\s+er\b|\bJori\s+(?:gab|bot)\s+ihn\b',e['narration'],re.I)
           paths=[Path(v['path']) for v in e['visuals']]
-          assert len(paths)==5 and len(set(paths))==5
+          assert len(paths)==6 and len(set(paths))==6
           dims=[]; hashes=[]
           for path in paths:
               assert path.is_file(), path
@@ -52,7 +54,7 @@ jobs:
                   dims.append(im.size)
                   assert abs(im.width/im.height-9/16)<0.01, (path,im.size)
               hashes.append(hashlib.sha256(path.read_bytes()).hexdigest())
-          assert len(set(hashes))==5, 'episode art files are not five distinct assets'
+          assert len(set(hashes))==6, 'episode art files are not six distinct assets'
           print('JORI_E006_STORY_ART_QC_OK', json.dumps({'title':e['title'],'images':dims},ensure_ascii=False))
           PY
       - name: Generate Sulafat voice using the existing Free Tier model
@@ -89,7 +91,7 @@ jobs:
               if row.startswith('Dialogue:'):
                   cols=row.split(',',9); a,b=sec(cols[1]),sec(cols[2])
                   assert b<=p0+0.01 or a>=p1-0.01, f'subtitles cover the silent pause: {row}'
-          mp4=Path('published/jori-flimm-2026-10-27-e006.mp4')
+          mp4=Path('published/jori-flimm-2026-10-27-e006-v2.mp4')
           probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','stream=codec_type,codec_name,width,height','-show_entries','format=duration,size','-of','json',str(mp4)],text=True))
           streams=probe['streams']; assert len(streams)==2, streams
           v=next(s for s in streams if s['codec_type']=='video'); a=next(s for s in streams if s['codec_type']=='audio')
@@ -99,12 +101,12 @@ jobs:
           assert int(probe['format']['size'])>1_000_000
           print('JORI_E006_MP4_QC_OK',json.dumps({'path':str(mp4),'duration':probe['format']['duration'],'bytes':probe['format']['size'],'video':'720x1280 H.264','audio':'AAC','pause_silence_seconds':7},ensure_ascii=False))
           PY
-          ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 published/jori-flimm-2026-10-27-e006.mp4
+          ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 published/jori-flimm-2026-10-27-e006-v2.mp4
       - name: Commit the QC preview to the Jori branch
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add --sparse published/jori-flimm-2026-10-27-e006.mp4
+          git add --sparse published/jori-flimm-2026-10-27-e006-v2.mp4 kids/jori-flimm/relaunch-v2/assets/episode-006-v2
           git commit -m 'kids: render Jori episode 006 production preview'
           git push origin HEAD:feature/jori-flimm-neustart-folge001
       - name: Keep actual production preview for inspection
@@ -113,7 +115,7 @@ jobs:
         with:
           name: Jori-Episode-006-Preview
           path: |
-            published/jori-flimm-2026-10-27-e006.mp4
+            published/jori-flimm-2026-10-27-e006-v2.mp4
             work/episode_006/
           retention-days: 14
           if-no-files-found: warn

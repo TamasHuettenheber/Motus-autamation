@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render episodes 002–005 on GitHub, using story-specific puzzles and original illustrated characters."""
+"""Render Jori & Flimm follow-up episodes with story-matched, episode-specific art."""
 import argparse,json,math,re,subprocess,os,textwrap
 from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont,ImageFilter
@@ -7,12 +7,13 @@ ROOT=Path.cwd()
 BASE=ROOT/"kids/jori-flimm/relaunch-v2"
 parser=argparse.ArgumentParser();parser.add_argument("--episode",type=int,required=True,choices=[2,3,4,5,6]);args=parser.parse_args()
 n=args.episode
-ART=(ROOT/"kids/jori-flimm/relaunch-v2/assets/episode-006") if n==6 else ROOT/f"kids/jori-flimm/assets/e{n:03d}"
-SCENE_EXT=".png" if n==6 else ".jpg"
-SCENE_INDEX={"hook":1,"story_a":2,"story_b":3,"puzzle":3,"answer":4,"cliff":5}
-scene_files=[ART/f"scene-{i:02d}{SCENE_EXT}" for i in range(1,6)]
+ART=(ROOT/"kids/jori-flimm/relaunch-v2/assets/episode-006-v2") if n==6 else ROOT/f"kids/jori-flimm/assets/e{n:03d}"
+SCENE_EXT=".jpg"
+SCENE_INDEX=({"hook":1,"story_footprint":2,"story_path":3,"story_glasshouse":4,"puzzle":4,"answer":5,"cliff":6} if n==6 else {"hook":1,"story_a":2,"story_b":3,"puzzle":3,"answer":4,"cliff":5})
+SCENE_COUNT=6 if n==6 else 5
+scene_files=[ART/f"scene-{i:02d}{SCENE_EXT}" for i in range(1,SCENE_COUNT+1)]
 assert all(p.is_file() for p in scene_files), "Missing episode-specific scene art"
-print(f"JORI_SCENE_ART_READY episode={n} unique_scenes=5")
+print(f"JORI_SCENE_ART_READY episode={n} unique_scenes={SCENE_COUNT}")
 episode=(json.loads((BASE/"episode_006_story_draft.json").read_text(encoding="utf-8")) if n==6 else next(e for e in json.loads((BASE/"staffel1_folgen_001_005.json").read_text(encoding="utf-8"))["episodes"] if e["episode_number"]==n))
 W=ROOT/f"work/episode_{n:03d}";W.mkdir(parents=True,exist_ok=True)
 audio=W/"narration_source.wav";timeline=W/"voice-timeline.json"
@@ -81,12 +82,19 @@ def draw_scene(name,section):
   d.rounded_rectangle((40,178,680,254),radius=16,fill=(13,31,61,218))
   d.text((360,213),"WIE GEHT ES WEITER?",font=font(27),anchor="mm",fill="#ffebbc")
  return Image.alpha_composite(im.convert("RGBA"),overlay).convert("RGB")
-for section in ["hook","story_a","story_b","puzzle","answer","cliff"]:
+section_names=(["hook","story_footprint","story_path","story_glasshouse","puzzle","answer","cliff"] if n==6 else ["hook","story_a","story_b","puzzle","answer","cliff"])
+for section in section_names:
  draw_scene(n,section).save(W/f"{section}.png")
 before=items[0]["duration"];pause=items[1]["duration"];after=items[2]["duration"]
-# Five distinct illustrations; the final story beat shares its close-up with the seven-second puzzle pause.
+# Split E006 at the footprint, trail, glasshouse, riddle, answer and cliffhanger beats.
 hook=min(7,before*.15);story=before-hook
-segments=[("hook",hook),("story_a",story*.48),("story_b",story*.52),("puzzle",pause),("answer",after*.68),("cliff",after*.32)]
+if n==6:
+ footprint=min(18.5,story*.32)
+ path=min(7.5,max(0.0,story-footprint))
+ glasshouse=max(0.0,story-footprint-path)
+ segments=[("hook",hook),("story_footprint",footprint),("story_path",path),("story_glasshouse",glasshouse),("puzzle",pause),("answer",after*.64),("cliff",after*.36)]
+else:
+ segments=[("hook",hook),("story_a",story*.48),("story_b",story*.52),("puzzle",pause),("answer",after*.68),("cliff",after*.32)]
 clips=[]
 for i,(name,dur) in enumerate(segments):
  clip=W/f"seg_{i}.mp4"
@@ -109,7 +117,6 @@ Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
 """
 cues=[]
 def emit(a,b,txt):
- global cues
  txt=txt.replace("\n"," ").strip()
  if not txt:return
  words=txt.split()
@@ -120,30 +127,33 @@ def emit(a,b,txt):
   else:line=trial
  if line:lines.append(line)
  groups=[lines[i:i+2] for i in range(0,len(lines),2)]
- weights=[max(1,len(" ".join(g))) for g in groups];total=sum(weights);start=a
+ weights=[max(1,len(" ".join(g))) for g in groups];start=a
  for i,(group,weight) in enumerate(zip(groups,weights)):
-  end=b if i==len(groups)-1 else start+(b-a)*weight/sum(weights[i:])
-  if end-start>.08:
-   rendered="\\N".join(group)
-   cues.append((start,end,rendered))
+  end=b if i==len(groups)-1 else start+(b-start)*weight/sum(weights[i:])
+  cues.append((start,end,"\\N".join(group)))
   start=end
 for item in [items[0],items[2]]:
  txt=item["text"].strip()
- # sentence-aware captions; use the exact TTS segment transcript, not stale story JSON.
- pieces=re.split(r"(?<=[.!?])\s+(?=[A-ZÄÖÜ„])",txt)
+ pieces=re.split(r'(?<=[.!?])["»”]?\s+(?=[A-ZÄÖÜ„])',txt)
  pieces=[p for p in pieces if p.strip()]
- weights=[max(2,len(p)) for p in pieces];total=sum(weights);cur=item["start"]
+ weights=[max(2,len(p)) for p in pieces];cur=item["start"]
  for i,(p,w) in enumerate(zip(pieces,weights)):
   end=item["end"] if i==len(pieces)-1 else cur+(item["end"]-cur)*w/sum(weights[i:])
   emit(cur,end,p);cur=end
 cues.sort(key=lambda item:(item[0],item[1]))
 pause_start=items[1]["start"]
+expected_words=re.findall(r"\w+"," ".join(item["text"] for item in items if item["kind"]=="speech").lower())
+visible_words=[]
 for i,(start,end,rendered) in enumerate(cues):
  if start<pause_start:end=min(end,pause_start)
  if i+1<len(cues):end=min(end,cues[i+1][0])
- if end-start>.08:header+=f"Dialogue: 0,{ts(start)},{ts(end)},Child,,0,0,0,,{rendered}\n"
+ if end-start>.08:
+  header+=f"Dialogue: 0,{ts(start)},{ts(end)},Child,,0,0,0,,{rendered}\n"
+  visible_words.extend(re.findall(r"\w+",rendered.replace("\\N"," ").lower()))
+assert visible_words==expected_words, "Rendered subtitles omit, repeat, or reorder spoken words"
 sub=W/"captions.ass";sub.write_text(header)
-output=ROOT/f"published/jori-flimm-2026-10-{22+n-1:02d}-e{n:03d}.mp4";output.parent.mkdir(exist_ok=True)
+version_suffix="-v2" if n==6 else ""
+output=ROOT/f"published/jori-flimm-2026-10-{22+n-1:02d}-e{n:03d}{version_suffix}.mp4";output.parent.mkdir(exist_ok=True)
 cmd("ffmpeg","-nostdin","-y","-loglevel","error","-i",video,"-i",audio,"-filter_complex",f"[0:v]ass={sub}[v]","-map","[v]","-map","1:a","-c:v","libx264","-preset","veryfast","-crf","21","-pix_fmt","yuv420p","-r","24","-c:a","aac","-b:a","192k","-movflags","+faststart","-shortest",output)
 assert output.stat().st_size>1_000_000
 rendered=float(subprocess.check_output(["ffprobe","-v","error","-show_entries","format=duration","-of","default=noprint_wrappers=1:nokey=1",str(output)],text=True).strip())
