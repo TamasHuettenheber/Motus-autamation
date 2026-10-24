@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-24T05:43:23.518753+00:00",
+  "checked_at_utc": "2026-10-24T10:50:11.312412+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6ada904f986f204cd250a274",
       "text": "Wenn eine Aufgabe stockt, liegt es nicht immer an fehlender Motivation. Manchmal ist der nächste Schritt einfach zu unklar. Formuliere ihn so konkret, dass du ihn in wenigen Minuten beginnen könntest. Statt: Ich muss Ordnung schaffen, sag: Ich räume jetzt die Unterlagen auf dem Tisch weg. Klarheit macht Handeln leichter.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Destiny (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-24T10:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-24T10:03:06.132Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7700172509252947233",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-24-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ada904f986f204cd250a274_video.mp4"
         }
       ]
     },
