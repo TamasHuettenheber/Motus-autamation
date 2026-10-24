@@ -17,7 +17,7 @@ import wave
 from pathlib import Path
 
 WORK=Path("work")
-MARKER=re.compile(r"\[\[PAUSE:([0-9]+(?:\.[0-9]+)?)\]\]")
+MARKER=re.compile(r"\[\[PAUSE:([0-9]+(?:\.[0-9]+)?)\]\]|\[\[SEGMENT\]\]")
 ALLOW={"Gacrux","Vindemiatrix","Sulafat"}
 MODEL=os.environ.get("JORI_TTS_MODEL","gemini-3.8-flash-tts")
 STYLE=(
@@ -88,10 +88,11 @@ def main():
     for marker in MARKER.finditer(narration):
         left=narration[cursor:marker.start()].strip()
         if left:sequence.append(("speech",left))
-        pause=float(marker.group(1))
-        if pause<5 or pause>10:
-            raise ValueError("Riddle pause must be 5-10 seconds")
-        sequence.append(("pause",pause))
+        if marker.group(1) is not None:
+            pause=float(marker.group(1))
+            if pause<5 or pause>10:
+                raise ValueError("Riddle pause must be 5-10 seconds")
+            sequence.append(("pause",pause))
         cursor=marker.end()
     rest=narration[cursor:].strip()
     if rest: sequence.append(("speech",rest))

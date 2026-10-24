@@ -1,0 +1,180 @@
+#!/usr/bin/env python3
+"""Render Jori & Flimm follow-up episodes with story-matched, episode-specific art."""
+import argparse,json,math,re,subprocess,os,textwrap
+from pathlib import Path
+from PIL import Image,ImageDraw,ImageFont,ImageFilter
+ROOT=Path.cwd()
+BASE=ROOT/"kids/jori-flimm/relaunch-v2"
+parser=argparse.ArgumentParser();parser.add_argument("--episode",type=int,required=True,choices=[7]);args=parser.parse_args()
+n=args.episode
+ART=ROOT/"kids/jori-flimm/relaunch-v2/assets/episode-007-v1"
+SCENE_EXT=".jpg"
+SCENE_INDEX={"hook":1,"story_a":2,"story_b":3,"puzzle":4,"answer":5,"cliff":6}
+SCENE_COUNT=6
+scene_files=[ART/f"scene-{i:02d}{SCENE_EXT}" for i in range(1,SCENE_COUNT+1)]
+assert all(p.is_file() for p in scene_files), "Missing episode-specific scene art"
+print(f"JORI_SCENE_ART_READY episode={n} unique_scenes={SCENE_COUNT}")
+episode=json.loads((BASE/"episode_007_story_draft.json").read_text(encoding="utf-8"))
+W=ROOT/f"work/episode_{n:03d}";W.mkdir(parents=True,exist_ok=True)
+audio=W/"narration_source.wav";timeline=W/"voice-timeline.json"
+assert audio.exists() and timeline.exists(),"No validated Sulafat narration"
+t=json.loads(timeline.read_text());items=t["items"]
+pause_indices=[i for i,item in enumerate(items) if item["kind"]=="pause"]
+assert len(pause_indices)==1 and abs(items[pause_indices[0]]["duration"]-7)<0.12
+pause_index=pause_indices[0]
+assert len(items)==6 and [item["kind"] for item in items]==["speech","speech","speech","pause","speech","speech"]
+D=t["duration"];assert 45<D<150
+F="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+F2="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+font=lambda size,bold=True:ImageFont.truetype(F if bold else F2,size)
+def cmd(*args):subprocess.run(list(map(str,args)),check=True,timeout=500)
+def draw_position_options(d,top,centers=None,half=82,label_size=16):
+ centers=centers or [148,360,572]
+ labels=["LINKS","MITTE","RECHTS"]
+ for i,(x,label) in enumerate(zip(centers,labels)):
+  d.rounded_rectangle((x-half,top,x+half,top+240),radius=18,fill=(43,62,88,250),outline=(230,218,185,245),width=3)
+  if i==0: moon=(x,top+68); star=(x,top+157)
+  elif i==1: star=(x-31,top+112); moon=(x+35,top+112)
+  else: star=(x,top+68); moon=(x,top+157)
+  moon_r=21 if half>70 else 16
+  mx,my=moon;d.ellipse((mx-moon_r,my-moon_r,mx+moon_r,my+moon_r),fill="#ffe19a",outline="#fff7da",width=2)
+  d.ellipse((mx-6,my-moon_r-4,mx+moon_r+5,my+moon_r-12),fill=(43,62,88,255))
+  sx,sy=star;pts=[]
+  for k in range(10):
+   radius=(29 if half>70 else 21) if k%2==0 else (13 if half>70 else 9)
+   angle=-math.pi/2+k*math.pi/5
+   pts.append((sx+math.cos(angle)*radius,sy+math.sin(angle)*radius))
+  d.polygon(pts,fill="#ffd76e",outline="#fff7da")
+  d.text((x,top+218),label,font=font(label_size),anchor="mm",fill="white")
+def draw_scene(name,section):
+ im=Image.open(ART/f"scene-{SCENE_INDEX[section]:02d}{SCENE_EXT}").convert("RGB").resize((720,1280),Image.Resampling.LANCZOS)
+ overlay=Image.new("RGBA",(720,1280),(0,0,0,0));d=ImageDraw.Draw(overlay)
+ d.rounded_rectangle((34,38,683,102),radius=17,fill=(15,37,67,196))
+ d.text((55,57),f"JORI & FLIMM   ·   FOLGE {n:03d}",font=font(23),fill="#fff2cf")
+ if section=="hook":
+  d.rounded_rectangle((40,155,680,253),radius=20,fill=(16,37,62,200))
+  d.text((360,202),episode["title"],font=font(25),anchor="mm",fill="white",stroke_width=1,stroke_fill="#1e354f")
+ if n==7 and section=="story_b":
+  d.rounded_rectangle((355,580,710,910),radius=22,fill=(18,37,63,238),outline=(242,205,119,230),width=3)
+  d.text((532,600),"IM TELESKOP",font=font(17),anchor="mt",fill="#ffe4a3")
+  draw_position_options(d,622,centers=[418,532,646],half=52,label_size=12)
+ if section=="puzzle":
+  puzzle_bottom=930 if n==7 else 780
+  puzzle_top=370 if n==7 else 388
+  d.rounded_rectangle((38,puzzle_top,682,puzzle_bottom),radius=23,fill=(18,37,63,242 if n==7 else 224),outline=(242,205,119,240),width=4)
+  d.text((360,387 if n==7 else 411),"DAS RÄTSEL",font=font(26),anchor="mt",fill="#ffe4a3")
+  qfont=font(21,False);q_lines=[];q_line=""
+  for word in episode["question"].split():
+   candidate=(q_line+" "+word).strip()
+   if q_line and qfont.getlength(candidate)>592:q_lines.append(q_line);q_line=word
+   else:q_line=candidate
+  if q_line:q_lines.append(q_line)
+  question_y=427 if n==7 else 451
+  for qi,line in enumerate(q_lines[:2]):d.text((360,question_y+qi*28),line,font=qfont,anchor="mt",fill="#fff7e6")
+  if n==2:
+   colors=["#78c9ff","#ffd36a","#78c9ff","#ffd36a" if section=="answer" else "#ffffff"]
+   for i,x in enumerate([150,290,430,570]):
+    d.ellipse((x-41,578,x+41,660),fill=colors[i],outline="#e9f3ff",width=4)
+    d.text((x,687),["BLAU","GOLD","BLAU","GOLD" if section=="answer" else "?"][i],font=font(17),anchor="mt",fill="white")
+  elif n==3:
+   for i,x in enumerate([150,290,430,570]):
+    d.rounded_rectangle((x-49,578,x+49,667),radius=16,fill=(126,153,173,255),outline="#d5ebfc",width=3)
+    d.text((x,619),["2","4","6","8" if section=="answer" else "?"][i],font=font(47),anchor="mm",fill="#fff5cc")
+  elif n==4:
+   for i,x in enumerate([150,360,570]):
+    d.rounded_rectangle((x-71,575,x+71,698),radius=18,fill="#996c44",outline="#ffe6a6",width=3)
+    if i==0:d.ellipse((x-21,606,x+21,648),fill="#ffdc88")
+    if i==1:d.polygon([(x,601),(x-26,649),(x+26,649)],fill="#ffdc88")
+    if i==2:d.rectangle((x-21,606,x+21,648),fill="#ffdc88")
+    if section=="answer" and i==1:d.rounded_rectangle((x-77,570,x+77,705),radius=19,outline="#fff29a",width=7)
+   d.text((360,719),"KREIS     DREIECK     QUADRAT",font=font(19),anchor="mm",fill="white")
+  elif n==7:
+   d.text((360,512),"ZIELBILD: MOND ÜBER STERN",font=font(19),anchor="mm",fill="#fff0bd")
+   draw_position_options(d,556)
+  else:
+   for i,x in enumerate([155,295,435,575]):
+    if i<3:
+     d.ellipse((x-29,584,x+29,642),fill="#ffe09a",outline="#fff8dc",width=5)
+     if section=="answer":d.ellipse((x-38,575,x+38,651),outline="#fff29a",width=4)
+    else:d.ellipse((x-29,584,x+29,642),outline="#fff8dc",width=5)
+   d.text((360,694),"WIE VIELE LEUCHTEN?",font=font(23),anchor="mm",fill="white")
+ if section=="answer":
+  d.rounded_rectangle((76,420,644,500),radius=20,fill=(17,46,70,222),outline=(255,225,156,220),width=3)
+  d.text((360,460),"DIE LINKE TAFEL!",font=font(29),anchor="mm",fill="#fff0bd")
+ if section=="cliff":
+  d.rounded_rectangle((40,178,680,254),radius=16,fill=(13,31,61,218))
+  d.text((360,213),"WIE GEHT ES WEITER?",font=font(27),anchor="mm",fill="#ffebbc")
+ return Image.alpha_composite(im.convert("RGBA"),overlay).convert("RGB")
+section_names=["hook","story_a","story_b","puzzle","answer","cliff"]
+for section in section_names:
+ draw_scene(n,section).save(W/f"{section}.png")
+before=sum(item["duration"] for item in items[:pause_index] if item["kind"]=="speech")
+pause=items[pause_index]["duration"]
+after=sum(item["duration"] for item in items[pause_index+1:] if item["kind"]=="speech")
+pre=items[:pause_index];post=items[pause_index+1:]
+assert len(pre)==3 and len(post)==2
+segments=[("hook",pre[0]["duration"]),("story_a",pre[1]["duration"]),("story_b",pre[2]["duration"]),("puzzle",pause),("answer",post[0]["duration"]),("cliff",post[1]["duration"])]
+clips=[]
+for i,(name,dur) in enumerate(segments):
+ clip=W/f"seg_{i}.mp4"
+ cmd("ffmpeg","-nostdin","-y","-loglevel","error","-loop","1","-framerate","24","-i",W/f"{name}.png","-t",f"{dur:.3f}","-vf","zoompan=z='min(zoom+0.00018,1.045)':d=1:fps=24:s=720x1280,format=yuv420p","-c:v","libx264","-preset","ultrafast","-crf","23","-r","24",clip)
+ clips.append(clip)
+concat=W/"concat.txt";concat.write_text("".join("file '"+str(p.resolve())+"'\n" for p in clips))
+video=W/"video.mp4";cmd("ffmpeg","-nostdin","-y","-loglevel","error","-f","concat","-safe","0","-i",concat,"-c","copy",video)
+def ts(t):return f"{int(t//3600)}:{int(t%3600//60):02d}:{t%60:05.2f}"
+header="""[Script Info]
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+ScaledBorderAndShadow: yes
+WrapStyle: 2
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Child,DejaVu Sans,35,&H00FFFFFF,&H00FFFFFF,&HDD04203C,&H00000000,1,0,0,0,100,100,0,0,1,3.8,0.6,2,38,38,277,1
+[Events]
+Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+"""
+cues=[]
+def emit(a,b,txt):
+ txt=txt.replace("\n"," ").strip()
+ if not txt:return
+ words=txt.split()
+ lines=[];line=""
+ for word in words:
+  trial=(line+" "+word).strip()
+  if line and font(35).getlength(trial)>610:lines.append(line);line=word
+  else:line=trial
+ if line:lines.append(line)
+ groups=[lines[i:i+2] for i in range(0,len(lines),2)]
+ weights=[max(1,len(" ".join(g))) for g in groups];start=a
+ for i,(group,weight) in enumerate(zip(groups,weights)):
+  end=b if i==len(groups)-1 else start+(b-start)*weight/sum(weights[i:])
+  cues.append((start,end,"\\N".join(group)))
+  start=end
+for item in [item for item in items if item["kind"]=="speech"]:
+ txt=item["text"].strip()
+ pieces=re.split(r'(?<=[.!?])["»”]?\s+(?=[A-ZÄÖÜ„])',txt)
+ pieces=[p for p in pieces if p.strip()]
+ weights=[max(2,len(p)) for p in pieces];cur=item["start"]
+ for i,(p,w) in enumerate(zip(pieces,weights)):
+  end=item["end"] if i==len(pieces)-1 else cur+(item["end"]-cur)*w/sum(weights[i:])
+  emit(cur,end,p);cur=end
+cues.sort(key=lambda item:(item[0],item[1]))
+pause_start=items[pause_index]["start"]
+expected_words=re.findall(r"\w+"," ".join(item["text"] for item in items if item["kind"]=="speech").lower())
+visible_words=[]
+for i,(start,end,rendered) in enumerate(cues):
+ if start<pause_start:end=min(end,pause_start)
+ if i+1<len(cues):end=min(end,cues[i+1][0])
+ if end-start>.08:
+  header+=f"Dialogue: 0,{ts(start)},{ts(end)},Child,,0,0,0,,{rendered}\n"
+  visible_words.extend(re.findall(r"\w+",rendered.replace("\\N"," ").lower()))
+assert visible_words==expected_words, "Rendered subtitles omit, repeat, or reorder spoken words"
+sub=W/"captions.ass";sub.write_text(header)
+version_suffix="-v1"
+output=ROOT/f"published/jori-flimm-2026-10-{22+n-1:02d}-e{n:03d}{version_suffix}.mp4";output.parent.mkdir(exist_ok=True)
+cmd("ffmpeg","-nostdin","-y","-loglevel","error","-i",video,"-i",audio,"-filter_complex",f"[0:v]ass={sub}[v]","-map","[v]","-map","1:a","-c:v","libx264","-preset","veryfast","-crf","21","-pix_fmt","yuv420p","-r","24","-c:a","aac","-b:a","192k","-movflags","+faststart","-shortest",output)
+assert output.stat().st_size>1_000_000
+rendered=float(subprocess.check_output(["ffprobe","-v","error","-show_entries","format=duration","-of","default=noprint_wrappers=1:nokey=1",str(output)],text=True).strip())
+assert abs(rendered-D)<0.25,f"Rendered duration mismatch: expected {D}, got {rendered}"
+print(f"JORI_EPISODE_RENDER_OK episode={n} duration={rendered} bytes={output.stat().st_size}")

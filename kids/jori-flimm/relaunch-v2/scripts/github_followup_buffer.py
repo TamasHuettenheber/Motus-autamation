@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Schedule only validated Jori episodes 002–005; never touch MOTUS."""
+"""Schedule only validated Jori episodes 002–006; never touch MOTUS."""
 import argparse,json,os,time,urllib.request,urllib.error
-from datetime import datetime
+from datetime import datetime,timezone
 from zoneinfo import ZoneInfo
 p=argparse.ArgumentParser();p.add_argument("--episode",type=int,required=True,choices=[2,3,4,5,6]);p.add_argument("--replace-existing",action="store_true");a=p.parse_args()
 n=a.episode
@@ -9,8 +9,15 @@ key=os.environ.get("BUFFER_API_KEY","").strip()
 assert key,"BUFFER_API_KEY_MISSING"
 due=datetime(2026,10,22+n-1,14,0,tzinfo=ZoneInfo("Europe/Berlin"))
 assert datetime.now(ZoneInfo("Europe/Berlin"))<due,"Requested publishing time passed"
+expected_due_utc=due.astimezone(timezone.utc)
+if n==6:
+    release=json.loads(open("kids/jori-flimm/relaunch-v2/episode_006_release_record.json",encoding="utf-8").read())
+    assert release.get("user_approved_for_publication") is True,"Episode 006 has no explicit user release approval"
+    assert release.get("speech_caption_offset_accepted") is True,"Episode 006's accepted ending offset is not recorded"
+    assert datetime.fromisoformat(release.get("target_due_at","")).astimezone(timezone.utc)==expected_due_utc,"Episode 006 release target differs from the fixed 14:00 slot"
 repo=os.environ["GITHUB_REPOSITORY"]
-media=f"https://raw.githubusercontent.com/{repo}/feature/jori-flimm-neustart-folge001/published/jori-flimm-2026-10-{22+n-1:02d}-e{n:03d}.mp4"
+version_suffix="-v2" if n==6 else ""
+media=f"https://raw.githubusercontent.com/{repo}/feature/jori-flimm-neustart-folge001/published/jori-flimm-2026-10-{22+n-1:02d}-e{n:03d}{version_suffix}.mp4"
 def gql(query,variables=None):
  req=urllib.request.Request("https://api.buffer.com",method="POST",data=json.dumps({"query":query,"variables":variables or {}}).encode(),headers={"Authorization":"Bearer "+key,"Content-Type":"application/json"})
  try:
@@ -57,6 +64,7 @@ if a.replace_existing:
 if existing:
  assert len(existing)==1,"Duplicate scheduled episode posts detected"
  old=existing[0]
+ assert datetime.fromisoformat(old["dueAt"].replace("Z","+00:00")).astimezone(timezone.utc)==expected_due_utc,{"actual_dueAt":old.get("dueAt"),"expected_dueAt":due.isoformat()}
  print("JORI_EPISODE_ALREADY_SCHEDULED",n,old["id"],old["dueAt"])
  raise SystemExit(0)
 if n==6:
@@ -70,4 +78,5 @@ result=gql(mutation,{"input":{"text":caption,"channelId":channel,"schedulingType
 assert result.get("__typename")=="PostActionSuccess",result
 post=result["post"]
 assert post.get("status")=="scheduled" and post.get("channelId")==channel,post
+assert datetime.fromisoformat(post["dueAt"].replace("Z","+00:00")).astimezone(timezone.utc)==expected_due_utc,{"actual_dueAt":post.get("dueAt"),"expected_dueAt":due.isoformat()}
 print("JORI_BUFFER_SCHEDULED_CONFIRMED",n,json.dumps(post,ensure_ascii=False))

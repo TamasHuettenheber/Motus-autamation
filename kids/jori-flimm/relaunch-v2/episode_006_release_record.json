@@ -1,0 +1,14 @@
+{
+  "series": "Jori & Flimm",
+  "episode_number": 6,
+  "user_approved_for_publication": true,
+  "approval_date": "2026-10-24",
+  "accepted_quality_note": "Tamás hat die Folge geprüft und die etwa 2–3 Sekunden vor der Stimme liegenden Schlussuntertitel ausdrücklich akzeptiert; Folge 006 darf in dieser Fassung veröffentlicht werden.",
+  "speech_caption_offset_accepted": true,
+  "video_path": "published/jori-flimm-2026-10-27-e006-v2.mp4",
+  "render_qc_run_id": 40120500381,
+  "target_channel": "@jori.flimm",
+  "target_due_at": "2026-10-27T14:00:00+01:00",
+  "queue_check_run_id": 40136219719,
+  "status": "APPROVED_TO_SCHEDULE"
+}

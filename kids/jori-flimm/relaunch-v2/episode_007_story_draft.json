@@ -1,0 +1,67 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 7,
+  "series_version": "relaunch-v2",
+  "title": "Der zweite Stern am Spiegelsee",
+  "hook": "Der zweite Stern blinkte dreimal – und Flimms Bauchstern antwortete!",
+  "story": "Jori blickte noch einmal durch das Teleskop. Am Rand des sternlosen Himmels stand eine winzige Gestalt an einem dunklen See und hob einen goldenen Stern hoch. Da begann die Sternkarte zu leuchten. Ein silberner Faden führte aus dem Glashaus den Hügel hinunter bis ans Seeufer. Jori nahm Flimm an der Hand, und gemeinsam folgten sie dem Licht. Am Ufer warteten drei schmale Spiegeltafeln aus Eisglas. Die winzige Gestalt stand auf der anderen Seite und hob ihren Stern erneut. Neben dem zweiten Stern schwebte ein kleiner Halbmond direkt darüber. Auch die drei Tafeln zeigten einen Stern und einen Halbmond. Links stand der Halbmond über dem Stern. In der Mitte lag er rechts daneben. Rechts schwebte er darunter.",
+  "question": "Welche Tafel zeigt die gleiche Anordnung wie im Teleskop: links, in der Mitte oder rechts?",
+  "answer": "Die linke Tafel!",
+  "after": "Jori deutete auf die linke Tafel. Das Eisglas drehte sich lautlos auf und wurde zu einer Brücke aus Licht. Die Gestalt trat herüber, nahm die Kapuze ab und lächelte. „Ich heiße Mira. Mein Stern ist der Zwillingsstern zu Flimms Zeichen. Zusammen zeigen sie den Weg zum verlorenen Sternbild.“ Flimm und Mira hielten ihre Sterne nebeneinander über die Karte. Zwei Punkte leuchteten auf – doch ein dritter blieb dunkel.",
+  "cliff": "Da pochte es dreimal unter dem Eis. Ein dritter goldener Stern leuchtete auf und glitt tiefer hinab. Ein Schatten huschte im Wasser an ihm vorbei. Wer bewegte sich dort unten?",
+  "clue_mode": "spatial_position",
+  "clue_label": "DREI SPIEGELTAFELN",
+  "clues": [
+    "LINKS: MOND ÜBER STERN",
+    "MITTE: MOND RECHTS VOM STERN",
+    "RECHTS: MOND UNTER STERN"
+  ],
+  "correct": 0,
+  "puzzle_visual": "Während Frage und genau sieben Sekunden Denkpause alle drei Tafeln gemeinsam sichtbar halten: links Mond direkt über Stern, Mitte Mond rechts neben Stern, rechts Mond darunter; dazu den Zielsatz „Mond direkt über Stern“. Nur während Frage und Pause einblenden; mit Beginn der Lösung sofort vollständig entfernen.",
+  "continuity": "Setzt in derselben Sekunde beim zweiten passenden Stern aus Folge 006 ein. Jori und Flimm folgen dem silbernen Faden aus dem Glashaus zum Spiegelsee. Das neue Rätsel prüft räumliche Anordnung, nicht Echo, Zählen oder Farbfolge. Die Lösung bringt Mira über eine Lichtbrücke zu ihnen; ihre beiden Sterne zeigen gemeinsam ein unvollständiges Sternbild. Ein dritter Stern bewegt sich unter dem See und eröffnet den Cliffhanger für Folge 008.",
+  "narration": "Der zweite Stern blinkte dreimal – und Flimms Bauchstern antwortete! Jori blickte noch einmal durch das Teleskop. Am Rand des sternlosen Himmels stand eine winzige Gestalt an einem dunklen See und hob einen goldenen Stern hoch. Da begann die Sternkarte zu leuchten. Ein silberner Faden führte aus dem Glashaus den Hügel hinunter bis ans Seeufer. Jori nahm Flimm an der Hand, und gemeinsam folgten sie dem Licht. Am Ufer warteten drei schmale Spiegeltafeln aus Eisglas. Die winzige Gestalt stand auf der anderen Seite und hob ihren Stern erneut. Neben dem zweiten Stern schwebte ein kleiner Halbmond direkt darüber. Auch die drei Tafeln zeigten einen Stern und einen Halbmond. Links stand der Halbmond über dem Stern. In der Mitte lag er rechts daneben. Rechts schwebte er darunter. Welche Tafel zeigt die gleiche Anordnung wie im Teleskop: links, in der Mitte oder rechts? [[PAUSE:7]] Die linke Tafel! Jori deutete auf die linke Tafel. Das Eisglas drehte sich lautlos auf und wurde zu einer Brücke aus Licht. Die Gestalt trat herüber, nahm die Kapuze ab und lächelte. „Ich heiße Mira. Mein Stern ist der Zwillingsstern zu Flimms Zeichen. Zusammen zeigen sie den Weg zum verlorenen Sternbild.“ Flimm und Mira hielten ihre Sterne nebeneinander über die Karte. Zwei Punkte leuchteten auf – doch ein dritter blieb dunkel. Da pochte es dreimal unter dem Eis. Ein dritter goldener Stern leuchtete auf und glitt tiefer hinab. Ein Schatten huschte im Wasser an ihm vorbei. Wer bewegte sich dort unten?",
+  "narration_tts": "Der zweite Stern blinkte dreimal – und Flimms Bauchstern antwortete! Jori blickte noch einmal durch das Teleskop. Am Rand des sternlosen Himmels stand eine winzige Gestalt an einem dunklen See und hob einen goldenen Stern hoch. Da begann die Sternkarte zu leuchten. [[SEGMENT]] Ein silberner Faden führte aus dem Glashaus den Hügel hinunter bis ans Seeufer. Jori nahm Flimm an der Hand, und gemeinsam folgten sie dem Licht. [[SEGMENT]] Am Ufer warteten drei schmale Spiegeltafeln aus Eisglas. Die winzige Gestalt stand auf der anderen Seite und hob ihren Stern erneut. Neben dem zweiten Stern schwebte ein kleiner Halbmond direkt darüber. Auch die drei Tafeln zeigten einen Stern und einen Halbmond. Links stand der Halbmond über dem Stern. In der Mitte lag er rechts daneben. Rechts schwebte er darunter. Welche Tafel zeigt die gleiche Anordnung wie im Teleskop: links, in der Mitte oder rechts? [[PAUSE:7]] Die linke Tafel! Jori deutete auf die linke Tafel. Das Eisglas drehte sich lautlos auf und wurde zu einer Brücke aus Licht. Die Gestalt trat herüber, nahm die Kapuze ab und lächelte. „Ich heiße Mira. Mein Stern ist der Zwillingsstern zu Flimms Zeichen. Zusammen zeigen sie den Weg zum verlorenen Sternbild.“ Flimm und Mira hielten ihre Sterne nebeneinander über die Karte. Zwei Punkte leuchteten auf – doch ein dritter blieb dunkel. [[SEGMENT]] Da pochte es dreimal unter dem Eis. Ein dritter goldener Stern leuchtete auf und glitt tiefer hinab. Ein Schatten huschte im Wasser an ihm vorbei. Wer bewegte sich dort unten?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "visuals": [
+    {
+      "scene": 1,
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-007-v1/scene-01.jpg",
+      "description": "Direkt nach Folge 006: Jori blickt durch das Teleskop; die winzige Gestalt hebt den passenden zweiten Stern."
+    },
+    {
+      "scene": 2,
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-007-v1/scene-02.jpg",
+      "description": "Jori und Flimm folgen dem silbernen Lichtfaden vom Glashaus zum Spiegelsee."
+    },
+    {
+      "scene": 3,
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-007-v1/scene-03.jpg",
+      "description": "Am Ufer sehen sie die Gestalt und drei Eisglastafeln; der Halbmond steht im Zielbild über dem Stern."
+    },
+    {
+      "scene": 4,
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-007-v1/scene-04.jpg",
+      "description": "Rätselszene am See mit drei Tafeln; die eingezeichneten Programmhinweise zeigen oben, rechts und unten."
+    },
+    {
+      "scene": 5,
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-007-v1/scene-05.jpg",
+      "description": "Die linke Tafel wird zur Lichtbrücke; Mira zeigt den zweiten Stern."
+    },
+    {
+      "scene": 6,
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-007-v1/scene-06.jpg",
+      "description": "Cliffhanger: Ein dritter Stern leuchtet unter dem durchsichtigen Eis und bewegt sich fort."
+    }
+  ],
+  "status": "DRAFT_READY_FOR_RENDER",
+  "approved_for_publish": false,
+  "release_blockers": [
+    "Folge 007 ist erst nach Prüfung der fertigen MP4, tatsächlichen Stimme, Untertitel, Pause und Szene-für-Szene-Kontinuität freigabefähig."
+  ]
+}
