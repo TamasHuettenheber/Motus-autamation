@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-09-30-1830",
-      "clip_id": "city-phone-13802094",
-      "source": "https://www.pexels.com/video/a-man-in-a-suit-looking-at-his-phone-while-walking-in-the-city-13802094/",
-      "used_at_utc": "2026-09-30T02:14:42.229425+00:00"
-    },
-    {
       "output_name": "motus-2026-10-01-1830",
       "clip_id": "explicit",
       "source": "issue",
@@ -599,6 +593,12 @@
       "clip_id": "forest-walk-5838469",
       "source": "https://www.pexels.com/video/vertical-video-of-a-woman-walking-through-the-woods-5838469/",
       "used_at_utc": "2026-10-23T22:16:56.310501+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-26-1830",
+      "clip_id": "city-phone-13802094",
+      "source": "https://www.pexels.com/video/a-man-in-a-suit-looking-at-his-phone-while-walking-in-the-city-13802094/",
+      "used_at_utc": "2026-10-24T21:37:59.004323+00:00"
     }
   ]
 }
