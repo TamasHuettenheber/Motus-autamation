@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-24T00:35:26.358364+00:00",
+  "checked_at_utc": "2026-10-24T05:43:23.518753+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6ada970b535235087b6ebb79",
       "text": "Du brauchst nicht erst den perfekten Morgen, um gut in den Tag zu starten. Ein klarer Gedanke kann reichen: Was verdient heute wirklich deine Aufmerksamkeit? Nicht zehn Vorsätze, sondern eine Entscheidung. Wähle etwas, das du beeinflussen kannst, und beginne damit. So entsteht Orientierung, selbst wenn um dich herum noch vieles offen ist.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Forest Awakes (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-24T05:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-24T05:02:29.301Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7700094833288809760",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-24-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ada970b535235087b6ebb79_video.mp4"
         }
       ]
     },
