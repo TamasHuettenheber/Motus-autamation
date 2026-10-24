@@ -1,28 +1,31 @@
 # Jori & Flimm – Produktionsstand 24.10.2026
 
-Geprüft am 24.10.2026 um 20:27 Europe/Berlin auf Branch `feature/jori-flimm-neustart-folge001`.
+Branch: `feature/jori-flimm-neustart-folge001`
 
-## Veröffentlichungen und Queue
+## Veröffentlichungen und Planung
 
-Die schreibgeschützte Buffer-Prüfung [GitHub Action 40119088145](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40119088145) bestätigte den TikTok-Kanal `@jori.flimm` und las die tatsächlichen Posts, ohne etwas zu ändern.
+| Folge | Stand | Nachweis |
+| --- | --- | --- |
+| 001–003 | Buffer meldet veröffentlicht (`sent`) | [Live-Check, Run 40136219719](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40136219719) |
+| 004 | `scheduled`, 25.10.2026, 14:00 Europe/Berlin | Buffer-Post `6ad9d34aaefa17e341fad444` |
+| 005 | `scheduled`, 26.10.2026, 14:00 Europe/Berlin | Buffer-Post `6ad9d373e6aee73a2b15d107` |
+| 006 – Der Ton im Glashaus | `scheduled`, 27.10.2026, 14:00 Europe/Berlin | Buffer-Post `6add2bd3e4be8a4d867c532c`; tatsächliche Buffer-Antwort: `status=scheduled`, `channelId=6ad948ea778b240e2f839607`, `dueAt=2026-10-27T13:00:00.000Z` (14:00 CET) |
 
-| Folge | Titel | Buffer-Nachweis | Termin Europe/Berlin |
-|---|---|---|---|
-| 003 | Die Tür, die niemand sehen konnte | `sent`, Post `6ad9d321a013397d932908dc`; TikTok [Folge 003](https://tiktok.com/@jori.flimm/video/7700203623124389152) | 24.10.2026, 14:00; Buffer meldet Versand 14:04:17 |
-| 004 | Das falsche Schloss | `scheduled`, Post `6ad9d34aaefa17e341fad444` | 25.10.2026, 14:00 |
-| 005 | Die Gestalt im Schneesturm | `scheduled`, Post `6ad9d373e6aee73a2b15d107` | 26.10.2026, 14:00 |
-| 006 | Der Ton im Glashaus | Nicht in Buffer vorhanden | Nächster freier Tag: 27.10.2026, 14:00; nicht gebucht |
+Der Buffer-Read-only-Check bestätigte vor der Buchung den Kanal `@jori.flimm`, die unveränderten Termine für 004/005 und den freien 27.10.-Slot. Der separate Release-Lauf prüfte danach die echte MP4 und protokollierte die obigen Felder aus der Buffer-Antwort: [Folge-006-Release, Run 40137063992](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40137063992). Die Planung ist bestätigt; eine spätere TikTok-Veröffentlichung wird erst mit tatsächlichem Buffer-/TikTok-Nachweis als erfolgt gemeldet.
 
-## Folge 006 – „Der Ton im Glashaus“, korrigierte Vorschau v2
+Folge 006 blieb unverändert. Tamás hat den etwa 2–3 Sekunden vorauseilenden Schlussuntertitel geprüft und ausdrücklich für die Veröffentlichung akzeptiert.
 
-Tamás meldete, dass die Glashausbilder erschienen, während die Erzählung noch am Fußabdruck war, und dass Flimm anders aussah. **Er hat nichts verpasst:** In v1 waren breite Erzählteile zu wenigen Standbildern zusammengefasst; die neu erzeugten Bilder waren nicht ausreichend an Folge 005 als Figurenreferenz gebunden. Dadurch drifteten Szenenreihenfolge und Flimms Aussehen.
+## Folge 007 – Der zweite Stern am Spiegelsee
 
-- **Korrektur:** sechs neue, unterschiedliche Szenenbilder nach Folge 005 als Referenz erzeugt und im Jori-Branch unter `relaunch-v2/assets/episode-006-v2/` abgelegt. Flimm ist wieder rund, golden, mit der kleinen Nase, grüner Mütze und sichtbarem Stern am Bauch. Jori bleibt dieselbe Figur mit roter Mütze.
-- **Szenenfolge geprüft:** 12 s – Fußabdruck/Nachricht; 26 s – der silberne Faden führt zum Glashaus; 33 s – Eintritt und Innenraum mit den Glasröhren. Lösung/Teleskop und Gestalt mit zweitem Stern folgen anschließend. Die Rätselkarte ist nur während Frage und Denkpause eingeblendet.
-- **Story-/Bild- und Render-Action** [40120500381](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40120500381) erfolgreich; Story-/Pronomen-QC und sechs unterschiedliche 720×1280 Bilder bestanden. Sulafat-TTS lief im vorhandenen bestätigten Standard-Free-Tier; kein Paid-/Batch-/Flex-/Priority-Modus und keine Tarifänderung.
-- **Fertige MP4 v2:** [Folge 006 ansehen](https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-neustart-folge001/published/jori-flimm-2026-10-27-e006-v2.mp4). Tatsächliche MP4: H.264/AAC, 720×1280, 133,16 s, 6.046.272 Bytes. FFmpeg misst 7,105 s Stille in der AAC-Datei; das liegt innerhalb der erlaubten ±0,2 s.
-- **Untertitel:** Wortlautabgleich mit der tatsächlichen Sulafat-Textspur bestanden (243/243 Wörter); kein Untertitel läuft in die Rätselpause hinein. Die Satz-/Zeilenzeitmarken werden aber weiterhin proportional nach Textlänge geschätzt statt sprachbasiert ausgerichtet. Deshalb bleibt v2 eine **Vorschau**, ohne Buffer-Buchung. Ein physischer iPhone-Abspieltest liegt nicht vor.
+- Die Geschichte setzt am zweiten passenden Stern aus Folge 006 ein und führt Jori und Flimm vom Glashaus zum Spiegelsee.
+- Sechs eigens für diese Folge erzeugte, unterschiedliche 9:16-Szenenbilder liegen unter `kids/jori-flimm/relaunch-v2/assets/episode-007-v1/`. Jori behält ihre roten Mütze/Schal und den grünen Mantel; Flimm bleibt das runde goldene Wesen mit kleiner brauner Nase, grüner Mütze samt rotem Bommel und Stern auf dem Bauch.
+- Sulafat-TTS lief mit dem freigegebenen Free-Tier-Modell `gemini-3.8-flash-lite-tts`; kein Paid-/Batch-/Flex-/Priority-Tarif und keine Bild-API wurden verwendet.
+- Die echte MP4 ist 134,32 Sekunden lang, 720×1280 (9:16), H.264/AAC, 6.311.429 Bytes. Die sechs Bilddateien waren im Render-Workflow SHA-256-eindeutig.
+- Der Rätselabschnitt zeigt Frage, Zielanordnung und alle drei Tafeln während der Denkpause. Der Audiotrack enthält dort genau 7,000 Sekunden digitale Stille; FFmpeg maß in der AAC-MP4 7,100 Sekunden. Währenddessen liegt kein Untertitel über der Stille; Lösung und neuer Cliffhanger folgen direkt danach.
+- Untertitel-Wortfolge stimmt vollständig mit den fünf gesprochenen Sulafat-Segmenten überein. Die Bildwechsel sitzen an den tatsächlichen Segmentgrenzen: Teleskopbeobachtung, Weg zum See, Rätsel am Ufer, Lösung/Mira und dritter Stern.
 
-## Nächster Freigabeschritt
+**MP4 zur Sichtprüfung:** [Folge 007 auf GitHub](https://github.com/TamasHuettenheber/Motus-autamation/blob/feature/jori-flimm-neustart-folge001/published/jori-flimm-2026-10-28-e007-v1.mp4)
 
-Die korrigierte Vorschau ansehen; vor jeder Buchung die Untertitel zeitlich am Sulafat-Audio ausrichten, die MP4 erneut prüfen und Buffer live read-only auf Kanal, Folge und Termin kontrollieren. MOTUS-Dateien und -Workflows blieben unberührt.
+**Action-Nachweis:** [Folge-007-Render und MP4-QC, Run 40137063904](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40137063904) – erfolgreich; die QC-Ausgabe enthält Dauer, Codecs, Bildformat, Caption-Token-Abgleich und gemessene Stille.
+
+Folge 007 bleibt eine Vorschau und wurde nicht zu Buffer geschickt. Veröffentlichung erst nach Tamás' Sichtprüfung/Freigabe.
