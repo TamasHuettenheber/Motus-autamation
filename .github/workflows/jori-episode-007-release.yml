@@ -1,0 +1,63 @@
+name: Jori & Flimm — Folge 007 Buffer release
+
+on:
+  push:
+    branches:
+      - feature/jori-flimm-neustart-folge001
+    paths:
+      - .github/workflows/jori-episode-007-release.yml
+      - kids/jori-flimm/relaunch-v2/episode_007_release_record.json
+
+permissions:
+  contents: read
+concurrency:
+  group: jori-episode-007-buffer-release
+  cancel-in-progress: false
+
+jobs:
+  validate-and-schedule:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          fetch-depth: 1
+          sparse-checkout: |
+            kids/jori-flimm/relaunch-v2/episode_007_release_record.json
+            kids/jori-flimm/relaunch-v2/episode_007_story_draft.json
+            kids/jori-flimm/relaunch-v2/scripts/github_followup_buffer.py
+            published
+      - name: Install FFmpeg probe tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg
+      - name: Verify explicit approval and the actual reviewed MP4
+        run: |
+          python3 - <<'PY'
+          import json,re,subprocess
+          from pathlib import Path
+          from datetime import datetime
+          r=json.loads(Path('kids/jori-flimm/relaunch-v2/episode_007_release_record.json').read_text(encoding='utf-8'))
+          assert r['episode_number']==7 and r['user_approved_for_publication'] is True
+          assert r['render_qc_passed'] is True and r['render_qc_run_id']==40137063904
+          assert r['target_channel']=='@jori.flimm'
+          assert datetime.fromisoformat(r['target_due_at']).isoformat(timespec='minutes')=='2026-10-28T14:00+01:00'
+          p=Path(r['video_path']); assert p.is_file() and p.stat().st_size>1_000_000
+          probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','stream=codec_type,codec_name,width,height','-show_entries','format=duration,size','-of','json',str(p)],text=True))
+          streams=probe['streams'];assert len(streams)==2,streams
+          v=next(x for x in streams if x['codec_type']=='video');a=next(x for x in streams if x['codec_type']=='audio')
+          assert (v['codec_name'],v['width'],v['height'])==('h264',720,1280),v
+          assert a['codec_name']=='aac',a
+          assert abs(float(probe['format']['duration'])-134.32)<0.25,probe['format']
+          proc=subprocess.run(['ffmpeg','-hide_banner','-i',str(p),'-af','silencedetect=noise=-60dB:d=6.5','-f','null','-'],capture_output=True,text=True,check=True)
+          durations=[float(x) for x in re.findall(r'silence_duration:\\s*([0-9.]+)',proc.stderr)]
+          assert any(abs(x-7.0)<=0.2 for x in durations),durations
+          print('JORI_E007_RELEASE_MP4_OK',json.dumps({'video':str(p),'duration':probe['format']['duration'],'video_codec':'H.264 720x1280','audio_codec':'AAC','measured_pause_seconds':durations},ensure_ascii=False))
+          print('JORI_E007_APPROVAL_RECORDED',r['approval_note'])
+          PY
+      - name: Schedule approved episode on the verified Jori TikTok channel
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_buffer.py --episode 7

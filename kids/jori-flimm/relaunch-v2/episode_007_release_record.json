@@ -1,0 +1,16 @@
+{
+  "series": "Jori & Flimm",
+  "episode_number": 7,
+  "user_approved_for_publication": true,
+  "approval_date": "2026-10-25",
+  "approval_note": "Tamás hat Folge 007 angesehen und freigegeben.",
+  "target_channel": "@jori.flimm",
+  "target_due_at": "2026-10-28T14:00:00+01:00",
+  "video_path": "published/jori-flimm-2026-10-28-e007-v1.mp4",
+  "render_qc_passed": true,
+  "render_qc_run_id": 40137063904,
+  "queue_check_run_id": 40175221956,
+  "duration_seconds": 134.32,
+  "measured_mp4_silence_seconds": 7.100208,
+  "status": "APPROVED_TO_SCHEDULE"
+}
