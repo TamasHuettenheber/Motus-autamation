@@ -51,7 +51,7 @@ jobs:
           assert a['codec_name']=='aac',a
           assert abs(float(probe['format']['duration'])-134.32)<0.25,probe['format']
           proc=subprocess.run(['ffmpeg','-hide_banner','-i',str(p),'-af','silencedetect=noise=-60dB:d=6.5','-f','null','-'],capture_output=True,text=True,check=True)
-          durations=[float(x) for x in re.findall(r'silence_duration:\\s*([0-9.]+)',proc.stderr)]
+          durations=[float(x) for x in re.findall(r'silence_duration:\s*([0-9.]+)',proc.stderr)]
           assert any(abs(x-7.0)<=0.2 for x in durations),durations
           print('JORI_E007_RELEASE_MP4_OK',json.dumps({'video':str(p),'duration':probe['format']['duration'],'video_codec':'H.264 720x1280','audio_codec':'AAC','measured_pause_seconds':durations},ensure_ascii=False))
           print('JORI_E007_APPROVAL_RECORDED',r['approval_note'])
