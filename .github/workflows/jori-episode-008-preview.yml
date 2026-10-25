@@ -52,7 +52,7 @@ jobs:
           assert 'Schatten' in previous['cliff']
           assert e['hook'].startswith('Der dritte goldene Stern sank tiefer')
           assert e['story'].startswith('Im selben Augenblick, in dem der dritte goldene Stern tiefer sank')
-          assert 'dunkle Schatten' in e['story'] and 'gläserne Glocke und lange Tentakel' in e['story']
+          assert 'dunkle Schatten' in e['story'] and 'gläsernen Glocke' in e['story'] and 'Lange durchsichtige Tentakel' in e['story']
           assert e['narration'].count('[[PAUSE:7]]')==1
           assert not re.search(r'\bJori\b.{0,70}\b(?:er|ihn|sein|ihm)\b',e['narration'],re.I)
           strip=lambda s:re.sub(r'\[\[(?:PAUSE:[0-9.]+|SEGMENT)\]\]',' ',s)
