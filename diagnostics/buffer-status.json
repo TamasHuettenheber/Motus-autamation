@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-25T06:02:17.888392+00:00",
+  "checked_at_utc": "2026-10-25T11:16:06.371896+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6adbd8b7bd33ce99c3f0c6ad",
       "text": "Wenn du merkst, dass dein Kopf von einer Sache zur nächsten springt, halte kurz an. Schreib auf, was gerade offen ist, und markiere nur den nächsten konkreten Schritt. Ein Glas Wasser, ein tiefer Atemzug und fünf Minuten ohne Bildschirm können schon reichen, um wieder klarer zu sehen. Du musst nicht jede Aufgabe sofort lösen. Bring zuerst eine Sache in Bewegung und entscheide danach neu, was deine Aufmerksamkeit verdient.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Syntheticity (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-25T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-25T11:03:28.638Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7700559119102659872",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-25-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6adbd8b7bd33ce99c3f0c6ad_video.mp4"
         }
       ]
     },
