@@ -1,0 +1,21 @@
+{
+  "series": "Jori & Flimm",
+  "episode_number": 8,
+  "user_approved_for_publication": true,
+  "approval_date": "2026-10-25",
+  "approval_note": "Vorab autorisierte tägliche Automation: vollständig geprüfte Folgen auf dem nächsten freien 14:00-Uhr-Slot einplanen.",
+  "target_channel": "@jori.flimm",
+  "target_due_at": "2026-10-29T14:00:00+01:00",
+  "video_path": "published/jori-flimm-2026-10-29-e008-v1.mp4",
+  "render_qc_passed": true,
+  "render_qc_run_id": 40242318584,
+  "queue_check_run_id": 40242649128,
+  "duration_seconds": 133.833333,
+  "measured_mp4_silence_seconds": 7.052917,
+  "status": "READY_FOR_RELEASE",
+  "buffer_post_id": null,
+  "buffer_status": null,
+  "buffer_channel_id": null,
+  "buffer_due_at": null,
+  "buffer_release_run_id": null
+}
