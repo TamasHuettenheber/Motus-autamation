@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-02-2200",
-      "clip_id": "journal-7260657",
-      "source": "https://www.pexels.com/video/a-woman-writing-on-a-journal-7260657/",
-      "used_at_utc": "2026-10-01T23:47:25.103304+00:00"
-    },
-    {
       "output_name": "motus-2026-10-02-1830",
       "clip_id": "night-city-13658220",
       "source": "https://www.pexels.com/video/people-walking-in-city-at-night-13658220/",
@@ -599,6 +593,12 @@
       "clip_id": "study-writing-9198715",
       "source": "https://www.pexels.com/video/woman-thinking-and-writing-in-notebook-9198715/",
       "used_at_utc": "2026-10-25T21:46:16.083779+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-27-1830",
+      "clip_id": "train-window-36620147",
+      "source": "https://www.pexels.com/video/scenic-views-through-train-window-36620147/",
+      "used_at_utc": "2026-10-25T21:46:23.940499+00:00"
     }
   ]
 }
