@@ -78,9 +78,6 @@ def draw_scene(name,section):
   d.line((x-30,974,x+30,1015),fill="#ff8a7b",width=5)
   d.line((x+30,974,x-30,1015),fill="#ff8a7b",width=5)
   d.text((x,1052),"KEIN PANZER",font=font(17,False),anchor="mm",fill="white")
- if section=="answer":d.ellipse((x-38,575,x+38,651),outline="#fff29a",width=4)
-    else:d.ellipse((x-29,584,x+29,642),outline="#fff8dc",width=5)
-   d.text((360,694),"WIE VIELE LEUCHTEN?",font=font(23),anchor="mm",fill="white")
  if section=="answer":
   d.rounded_rectangle((76,420,644,500),radius=20,fill=(17,46,70,222),outline=(255,225,156,220),width=3)
   d.text((360,460),"DIE MONDQUALLE!",font=font(29),anchor="mm",fill="#fff0bd")
