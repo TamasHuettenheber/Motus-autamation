@@ -54,7 +54,7 @@ def draw_scene(name,section):
  if section=="hook":
   d.rounded_rectangle((40,155,680,253),radius=20,fill=(16,37,62,200))
   d.text((360,202),episode["title"],font=font(25),anchor="mm",fill="white",stroke_width=1,stroke_fill="#1e354f")
-  if section=="puzzle":
+ if section=="puzzle":
   puzzle_bottom=780
   puzzle_top=300
   d.rounded_rectangle((38,puzzle_top,682,puzzle_bottom),radius=23,fill=(18,37,63,232),outline=(242,205,119,240),width=4)
