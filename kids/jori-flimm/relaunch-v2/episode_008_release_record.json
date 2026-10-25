@@ -9,13 +9,13 @@
   "video_path": "published/jori-flimm-2026-10-29-e008-v1.mp4",
   "render_qc_passed": true,
   "render_qc_run_id": 40242318584,
-  "queue_check_run_id": 40242649128,
+  "queue_check_run_id": 40242892798,
   "duration_seconds": 133.833333,
   "measured_mp4_silence_seconds": 7.052917,
-  "status": "READY_FOR_RELEASE",
-  "buffer_post_id": null,
-  "buffer_status": null,
-  "buffer_channel_id": null,
-  "buffer_due_at": null,
-  "buffer_release_run_id": null
+  "status": "SCHEDULED",
+  "buffer_post_id": "6ade8a490b5343d070f6b831",
+  "buffer_status": "scheduled",
+  "buffer_channel_id": "6ad948ea778b240e2f839607",
+  "buffer_due_at": "2026-10-29T13:00:00.000Z",
+  "buffer_release_run_id": 40242786784
 }
