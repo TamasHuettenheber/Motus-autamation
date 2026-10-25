@@ -23,7 +23,7 @@ assert story["answer"] == "Die Mondqualle!"
 assert story["riddle"]["answer"] == story["answer"]
 assert story["riddle"]["evidence_in_story"] in story["story"]
 assert "dritter goldener Stern" in prev["cliff"]
-assert "dritter goldener Stern" in story["hook"]
+assert "dritte goldene Stern" in story["hook"]
 assert "Schatten" in story["hook"] and "Schatten" in prev["cliff"]
 assert len(story["scene_briefs"]) >= 5
 assert len(story["visuals"]) >= 5

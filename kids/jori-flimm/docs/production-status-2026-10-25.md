@@ -30,3 +30,10 @@ Tamás hat die etwa 2–3 Sekunden vorauseilenden Schlussuntertitel ausdrücklic
 - [MP4 Folge 007](https://github.com/TamasHuettenheber/Motus-autamation/blob/feature/jori-flimm-neustart-folge001/published/jori-flimm-2026-10-28-e007-v1.mp4) · [Render- und MP4-QC, Run 40137063904](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40137063904)
 
 Die erste Release-Ausführung wurde beim Stillecheck gestoppt, bevor Buffer aufgerufen wurde. Nach Korrektur des Prüfskripts bestand die tatsächliche MP4 den erneuten Check; nur der erfolgreiche Lauf 40175332068 legte den Post an. Es entstand kein zusätzlicher Buffer-Post.
+
+## Folge 008 – Die Hüterin des dritten Sterns (Vorproduktion)
+
+- Story und sechs neue, unterschiedliche 9:16-Szenenbilder liegen im Branch unter `relaunch-v2/episode_008_story_draft.json` und `assets/episode-008-v1/scene-01.png` bis `scene-06.png`. Der Einstieg greift den sinkenden dritten Stern und den Schatten aus Folge 007 direkt auf; das neue Rätsel führt zur Mondqualle und zum Gang in die versunkene Sternwarte.
+- Veröffentlichung ist ausdrücklich gesperrt. Sulafat-TTS ist nicht erzeugt: in dieser Laufumgebung ließ sich der konkrete kostenlose Google-TTS-Tarif für das Projekt nicht nachweisen. Es gibt daher weder fertige MP4 noch geprüfte Audio-/Untertitel-Synchronität.
+- Die neue Folge-008-Story-/Bild-Action wurde ergänzt. Der erste Lauf fand einen zu strengen Wortlaut im eigenen Kontinuitätstest; dieser wurde korrigiert und erneut gestartet. [Action-Lauf](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40237173474).
+- Der tatsächliche Buffer-Read-only-Check am 25.10.2026 bestätigt @jori.flimm, Folge 007 geplant für 28.10.2026 14:00 MEZ (Post `6addb8ddbd33ce99c3602edf`) und keinen Folge-008-Post. Der nächste freie Tages-Slot ist 29.10.2026, 14:00 MEZ; [Live-Check](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40237173440). Folge 008 wurde nicht an Buffer übergeben.
