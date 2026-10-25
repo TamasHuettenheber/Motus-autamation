@@ -24,7 +24,7 @@ assert story["riddle"]["answer"] == story["answer"]
 assert story["riddle"]["evidence_in_story"] in story["story"]
 assert "dritter goldener Stern" in prev["cliff"]
 assert "dritte goldene Stern" in story["hook"]
-assert "Schatten" in story["hook"] and "Schatten" in prev["cliff"]
+assert "schatten" in story["story"][:220].casefold() and "schatten" in prev["cliff"].casefold()\nassert "im selben augenblick" in story["story"].casefold()
 assert len(story["scene_briefs"]) >= 5
 assert len(story["visuals"]) >= 5
 
