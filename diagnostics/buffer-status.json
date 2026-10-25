@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-25T16:03:49.837450+00:00",
+  "checked_at_utc": "2026-10-25T18:57:55.735101+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6adbd9163d5b27036b53aa19",
       "text": "Schau auf das zurück, was du heute versucht hast, nicht nur auf das, was fertig geworden ist. Vielleicht hast du eine Grenze gesetzt, eine Frage gestellt oder trotz Zweifel angefangen. Solche kleinen Entscheidungen zählen, auch wenn niemand sie bemerkt. Nimm dir einen Moment, um daraus eine hilfreiche Erkenntnis mitzunehmen. Was möchtest du beim nächsten Mal wieder so machen? Du darfst den Rest des Tages mit einem freundlicheren Blick auf dich beenden.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – A Memory Away (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-25T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-25T17:32:21.748Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7700659276410342688",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-25-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6adbd9163d5b27036b53aa19_video.mp4"
         }
       ]
     },
