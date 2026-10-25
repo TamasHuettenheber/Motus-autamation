@@ -55,50 +55,30 @@ def draw_scene(name,section):
   d.rounded_rectangle((40,155,680,253),radius=20,fill=(16,37,62,200))
   d.text((360,202),episode["title"],font=font(25),anchor="mm",fill="white",stroke_width=1,stroke_fill="#1e354f")
  if section=="puzzle":
-  puzzle_bottom=780
-  puzzle_top=300
-  d.rounded_rectangle((38,puzzle_top,682,puzzle_bottom),radius=23,fill=(18,37,63,232),outline=(242,205,119,240),width=4)
-  d.text((360,321),"DAS RÄTSEL",font=font(26),anchor="mt",fill="#ffe4a3")
-  qfont=font(19,False);q_lines=[];q_line=""
-  for word in episode["question"].split():
-   candidate=(q_line+" "+word).strip()
-   if q_line and qfont.getlength(candidate)>592:q_lines.append(q_line);q_line=word
-   else:q_line=candidate
-  if q_line:q_lines.append(q_line)
-  question_y=368
-  for qi,line in enumerate(q_lines[:4]):d.text((360,question_y+qi*26),line,font=qfont,anchor="mt",fill="#fff7e6")
-  if n==2:
-   colors=["#78c9ff","#ffd36a","#78c9ff","#ffd36a" if section=="answer" else "#ffffff"]
-   for i,x in enumerate([150,290,430,570]):
-    d.ellipse((x-41,578,x+41,660),fill=colors[i],outline="#e9f3ff",width=4)
-    d.text((x,687),["BLAU","GOLD","BLAU","GOLD" if section=="answer" else "?"][i],font=font(17),anchor="mt",fill="white")
-  elif n==3:
-   for i,x in enumerate([150,290,430,570]):
-    d.rounded_rectangle((x-49,578,x+49,667),radius=16,fill=(126,153,173,255),outline="#d5ebfc",width=3)
-    d.text((x,619),["2","4","6","8" if section=="answer" else "?"][i],font=font(47),anchor="mm",fill="#fff5cc")
-  elif n==4:
-   for i,x in enumerate([150,360,570]):
-    d.rounded_rectangle((x-71,575,x+71,698),radius=18,fill="#996c44",outline="#ffe6a6",width=3)
-    if i==0:d.ellipse((x-21,606,x+21,648),fill="#ffdc88")
-    if i==1:d.polygon([(x,601),(x-26,649),(x+26,649)],fill="#ffdc88")
-    if i==2:d.rectangle((x-21,606,x+21,648),fill="#ffdc88")
-    if section=="answer" and i==1:d.rounded_rectangle((x-77,570,x+77,705),radius=19,outline="#fff29a",width=7)
-   d.text((360,719),"KREIS     DREIECK     QUADRAT",font=font(19),anchor="mm",fill="white")
-  elif n==8:
-   clues=[
-    "BLAUER FISCH: zwei feste Flossen; kein Silberfleck",
-    "SCHILDKRÖTE: grüner Panzer",
-    "GESUCHT: vier durchsichtige Flossen",
-    "GENAU ein silberner Fleck; KEIN Panzer"
-   ]
-   assert len(q_lines)<=4, q_lines
-   for ci,line in enumerate(clues):
-    d.text((72,500+ci*54),line,font=font(20,False),anchor="lt",fill="white")
-  else:
-   for i,x in enumerate([155,295,435,575]):
-    if i<3:
-     d.ellipse((x-29,584,x+29,642),fill="#ffe09a",outline="#fff8dc",width=5)
-     if section=="answer":d.ellipse((x-38,575,x+38,651),outline="#fff29a",width=4)
+  d.rounded_rectangle((28,900,692,1218),radius=22,fill=(18,37,63,220),outline=(242,205,119,240),width=4)
+  d.text((360,925),"WER IST DER SCHATTEN?",font=font(24),anchor="mt",fill="#ffe4a3")
+  centers=[140,360,580]
+  # Glass bell with trailing tentacles.
+  x=centers[0]
+  d.arc((x-26,974,x+26,1010),180,360,fill="#dff7ff",width=4)
+  d.line((x-26,992,x+26,992),fill="#dff7ff",width=3)
+  for dx in (-18,-6,6,18):
+   d.line((x+dx,992,x+dx-3,1004,x+dx+2,1012),fill="#bdeeff",width=3)
+  d.text((x,1052),"GLOCKE + TENTAKEL",font=font(15,False),anchor="mm",fill="white")
+  # One silver spot.
+  x=centers[1]
+  d.ellipse((x-17,977,x+17,1011),fill="#d9efff",outline="#fff9df",width=3)
+  d.ellipse((x-7,985,x+7,999),fill="#fffdf1")
+  d.text((x,1052),"1 SILBERFLECK",font=font(17,False),anchor="mm",fill="white")
+  # A crossed-out shell.
+  x=centers[2]
+  d.ellipse((x-25,977,x+25,1010),fill="#947657",outline="#fff0d0",width=3)
+  for dx in (-12,0,12):
+   d.line((x+dx,980,x+dx,1008),fill="#ead3a9",width=2)
+  d.line((x-30,974,x+30,1015),fill="#ff8a7b",width=5)
+  d.line((x+30,974,x-30,1015),fill="#ff8a7b",width=5)
+  d.text((x,1052),"KEIN PANZER",font=font(17,False),anchor="mm",fill="white")
+ if section=="answer":d.ellipse((x-38,575,x+38,651),outline="#fff29a",width=4)
     else:d.ellipse((x-29,584,x+29,642),outline="#fff8dc",width=5)
    d.text((360,694),"WIE VIELE LEUCHTEN?",font=font(23),anchor="mm",fill="white")
  if section=="answer":
@@ -174,7 +154,7 @@ for i,(start,end,rendered) in enumerate(cues):
   visible_words.extend(re.findall(r"\w+",rendered.replace("\\N"," ").lower()))
 assert visible_words==expected_words, "Rendered subtitles omit, repeat, or reorder spoken words"
 sub=W/"captions.ass";sub.write_text(header)
-version_suffix="-v1"
+version_suffix="-v2"
 output=ROOT/f"published/jori-flimm-2026-10-{22+n-1:02d}-e{n:03d}{version_suffix}.mp4";output.parent.mkdir(exist_ok=True)
 cmd("ffmpeg","-nostdin","-y","-loglevel","error","-i",video,"-i",audio,"-filter_complex",f"[0:v]ass={sub}[v]","-map","[v]","-map","1:a","-c:v","libx264","-preset","veryfast","-crf","21","-pix_fmt","yuv420p","-r","24","-c:a","aac","-b:a","192k","-movflags","+faststart","-shortest",output)
 assert output.stat().st_size>1_000_000
