@@ -12,5 +12,10 @@
   "queue_check_run_id": 40175221956,
   "duration_seconds": 134.32,
   "measured_mp4_silence_seconds": 7.100208,
-  "status": "APPROVED_TO_SCHEDULE"
+  "status": "SCHEDULED",
+  "buffer_post_id": "6addb8ddbd33ce99c3602edf",
+  "buffer_status": "scheduled",
+  "buffer_channel_id": "6ad948ea778b240e2f839607",
+  "buffer_due_at": "2026-10-28T13:00:00.000Z",
+  "buffer_release_run_id": 40175332068
 }
