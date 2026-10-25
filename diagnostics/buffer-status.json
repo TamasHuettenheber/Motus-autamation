@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-25T01:06:33.902976+00:00",
+  "checked_at_utc": "2026-10-25T06:02:17.888392+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6adbd88ebd33ce99c3f0c075",
       "text": "Du brauchst heute keinen perfekten Plan, sondern einen ersten Schritt, der wirklich in deinen Tag passt. Wähle eine Aufgabe, die dir wichtig ist, und mach den Einstieg klein genug, dass du sofort anfangen kannst. Leg das Handy kurz beiseite, richte deinen Blick auf das Nächste und gib dir zehn ungestörte Minuten. Oft kommt die Energie erst beim Tun. Du musst nicht alles schaffen, um stolz auf deinen Anfang zu sein.\n\n#motus #produktivitaet #klarheit #fokus #selbstentwicklung\n\nMusik: Tanner Helland – Wild Waters (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-25T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-25T06:02:14.847Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7700481365719960865",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-25-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6adbd88ebd33ce99c3f0c075_video.mp4"
         }
       ]
     },
