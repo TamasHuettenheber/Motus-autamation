@@ -43,3 +43,5 @@ jobs:
 # Queue state recheck after the 2026-10-24 episode slot; read-only workflow.
 
 # Refresh the actual Jori queue immediately before the next approved booking; read only.
+
+# Queue snapshot requested before scheduling approved episode 007; read only.
