@@ -45,3 +45,5 @@ jobs:
 # Refresh the actual Jori queue immediately before the next approved booking; read only.
 
 # Queue snapshot requested before scheduling approved episode 007; read only.
+
+# Refresh live channel and scheduled queue after Episode 008 preproduction; read only.

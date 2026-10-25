@@ -27,27 +27,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Run creative story, real scene requirements and fail-closed video QA tests
+      - name: Run Jori story tests and Episode 008 story-art gate
         run: |
           python3 -m compileall -q kids/jori-flimm/relaunch-v2/scripts
           python3 -m unittest discover -s kids/jori-flimm/relaunch-v2/scripts -p 'test_*.py' -v
-          python3 kids/jori-flimm/relaunch-v2/scripts/generate_episode.py --date 2026-10-27 --dry-run | tee /tmp/jori-next-draft.log
-          grep "REBOOT_DRY_RUN_OK e006 2026-10-27" /tmp/jori-next-draft.log
-          PYTHONPATH=kids/jori-flimm/relaunch-v2/scripts python3 - <<'PY'
-          import json
-          from pathlib import Path
-          from generate_episode import validate_candidate, assemble_narration
-          root=Path("kids/jori-flimm/relaunch-v2/drafts")
-          for p in root.glob("*.json"):
-              d=json.loads(p.read_text(encoding="utf-8"))
-              assert d["series_version"]=="relaunch-v2"
-              assert validate_candidate(d, [],d["episode_number"])
-              assert d["narration"]==assemble_narration(d)
-              assert d["approved_for_publish"] is False
-              assert d["voice"]["speaker_id"]=="Sulafat"
-              print("RELAUNCH_ORIGINAL_DRAFT_STORY_FORMULA_PASS",p.name)
-          PY
-      - name: Check clean 001 state and mandatory narrator
+          python3 kids/jori-flimm/relaunch-v2/scripts/episode_008_quality_gate.py
+      - name: Check series safeguards
         run: |
           python3 - <<'PY'
           import json
@@ -55,10 +40,8 @@ jobs:
           p=Path('kids/jori-flimm/relaunch-v2')
           st=json.loads((p/'state/series-state.json').read_text(encoding='utf-8'))
           assert st['series_version']=='relaunch-v2'
-          assert st['next_episode_number']==1
-          assert st['last_successful_episode']==0
           assert st['voice']['speaker_id']=='Sulafat'
           assert st['release_authorized'] is False
           assert st['public_tiktok_connected'] is False
-          print('RELAUNCH_CI_OK: episode 001 first; publishing locked')
+          print('JORI_SERIES_SAFEGUARDS_OK: release remains locked')
           PY
