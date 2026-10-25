@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-02-0700",
-      "clip_id": "morning-writing-8085706",
-      "source": "https://www.pexels.com/video/a-person-writing-in-a-notebook-8085706/",
-      "used_at_utc": "2026-10-01T23:47:17.993802+00:00"
-    },
-    {
       "output_name": "motus-2026-10-02-2200",
       "clip_id": "journal-7260657",
       "source": "https://www.pexels.com/video/a-woman-writing-on-a-journal-7260657/",
@@ -599,6 +593,12 @@
       "clip_id": "rain-window-32661246",
       "source": "https://www.pexels.com/video/rainy-window-view-with-drops-on-glass-32661246/",
       "used_at_utc": "2026-10-25T21:46:05.449942+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-27-0700",
+      "clip_id": "study-writing-9198715",
+      "source": "https://www.pexels.com/video/woman-thinking-and-writing-in-notebook-9198715/",
+      "used_at_utc": "2026-10-25T21:46:16.083779+00:00"
     }
   ]
 }
