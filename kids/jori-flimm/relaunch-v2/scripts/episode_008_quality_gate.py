@@ -39,7 +39,7 @@ assert "Jori schob sich" in story["story"] and "legte ein Ohr" in story["story"]
 assert "[[PAUSE:7]]" in story["narration"]
 assert "[[PAUSE:7]]" in story["narration_tts"]
 def plain(s):
-    return s.replace("[[PAUSE:7]]", "").strip()
+    return s.replace("[[PAUSE:7]]", "").replace("[[SEGMENT]]", "").strip()
 assert plain(story["narration"]) == plain(story["narration_tts"])
 
 paths = [BASE / f"assets/episode-008-v1/scene-{i:02d}.png" for i in range(1, 7)]
