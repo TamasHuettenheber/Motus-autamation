@@ -15,7 +15,7 @@ prev = json.loads((BASE / "episode_007_story_draft.json").read_text(encoding="ut
 assert story["episode_number"] == 8
 assert story["series_version"] == "relaunch-v2"
 assert story["approved_for_publish"] is False
-assert story["status"] == "DRAFT_STORY_AND_ART_READY_AUDIO_BLOCKED"
+assert story["status"] == "REVISION_PENDING_RENDER_QC"
 assert story["voice"]["speaker_id"] == "Sulafat"
 assert story["riddle"]["pause_seconds"] == 7
 assert story["riddle"]["type"] == "visual"
@@ -33,7 +33,7 @@ full = " ".join(story[k] for k in ("hook", "story", "question", "after_answer", 
 assert re.search(r"\bJori\b", full)
 # No masculine pronouns used as Jori's subject or possessive in the narration.
 assert not re.search(r"\b(?:er|ihm|sein|seinen|seinem)\b.{0,30}\bJori\b", full, re.I)
-assert "Jori schob sich" in story["story"] and "legte ein Ohr" in story["story"]
+assert "Jori legte ein Ohr aufs Eis" in story["story"]
 
 # The pause marker belongs in narration input; prose sequence must match.
 assert "[[PAUSE:7]]" in story["narration"]
