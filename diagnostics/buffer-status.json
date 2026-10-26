@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-26T06:02:30.002258+00:00",
+  "checked_at_utc": "2026-10-26T12:49:54.405601+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6add25653d5b27036ba38e70",
       "text": "Halbzeit. Lass die Hektik der letzten Stunden kurz hinter dir und gönn dir eine echte Pause. Nimm dir etwas Vernünftiges zu essen und schau aus dem Fenster, um deinen Blick zu weiten. Das ist kein Stillstand, sondern die notwendige Wartung für deinen Motor. Sammle deine Gedanken, sortiere die verbleibenden Aufgaben und geh die nächsten Stunden mit neuer, ruhiger Konzentration an.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Crossroads (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-26T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-26T11:03:21.976Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7700930189743656224",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-26-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6add25653d5b27036ba38e70_video.mp4"
         }
       ]
     },
