@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-26T12:49:54.405601+00:00",
+  "checked_at_utc": "2026-10-26T19:12:47.483915+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6add253a0b5343d070a2a18f",
       "text": "Der Tag neigt sich dem Ende zu und die To-Do-Liste hat sich verändert. Egal, was heute alles passiert ist, du hast deinen Weg gemacht. Betrachte deine erledigten Aufgaben ohne strenge Bewertung. Was gut lief, nimmst du mit; den Rest lässt du einfach hier zurück. Jetzt geht es darum, den Schalter umzulegen. Schließe die Arbeit ab und bereite dich darauf vor, die Anspannung abzustreifen.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Home (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-26T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-26T17:31:46.112Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7701030371026144544",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-26-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6add253a0b5343d070a2a18f_video.mp4"
         }
       ]
     },
