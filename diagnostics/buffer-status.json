@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-26T00:10:59.084291+00:00",
+  "checked_at_utc": "2026-10-26T06:02:30.002258+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6add256c8b3d437ddcdbdec8",
       "text": "Der Raum ist अभी still, bevor der Lärm des Tages beginnt. Nutze diese ersten Minuten für dich. Atme tief ein und spüre die Energie, die in deinen Muskeln liegt. Du brauchst keinen großen Startschuss, sondern nur den ersten bewussten Schritt. Bring deinen Kreislauf in Schwung, trinke ein Glas kaltes Wasser und richte deinen Blick nach vorn. Heute entstehen die kleinen Erfolge durch deinen klaren Fokus.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Daybreak (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-26T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-26T06:02:15.479Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7700852440991550753",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-26-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6add256c8b3d437ddcdbdec8_video.mp4"
         }
       ]
     },
