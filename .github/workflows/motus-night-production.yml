@@ -75,7 +75,8 @@ jobs:
           # Quality experiment for future (not yet generated) days only.
           # Keep word count, slots, music and renderer unchanged to isolate the effect.
           prompt=("Erstelle vier originelle, voneinander klar verschiedene deutsche MOTUS-Kurztexte "
-                  "fuer einen Tagesplan mit den Slots 07:00,12:00,18:30,22:00. Jeweils 60 bis 85 Woerter. "
+                  "fuer einen Tagesplan mit den Slots 07:00,12:00,18:30,22:00. Jeweils 65 bis 75 Woerter, "
+                  "strikt niemals mehr als 85 Woerter pro Text. "
                   "Beginne JEDEN Text sofort mit einem anderen konkreten Hook: einer beobachtbaren "
                   "Alltagssituation, einer spannenden Frage oder einem nachvollziehbaren Konflikt. "
                   "Die ersten zwei Sekunden duerfen keine allgemeinen Floskeln ueber Energie, "
