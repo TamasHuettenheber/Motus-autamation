@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-27T10:27:03.816195+00:00",
+  "checked_at_utc": "2026-10-27T16:31:09.794110+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6ade78c3e4be8a4d86ca9567",
       "text": "Nutze die Mitte des Tages für eine bewusste Atempause, um neue Kraft zu tanken und deinen bisherigen Weg kurz zu überprüfen. Schließe kurz die Augen, lass den Vormittag hinter dir und ordne deine Gedanken neu, bevor die nächsten Aufgaben anstehen. Eine kluge Prioritätensetzung hilft dir jetzt enorm, unnötigen Stress zu vermeiden und die verbleibende Zeit effizient zu nutzen. Mit frischer Energie gehst du die anstehenden Herausforderungen an und behältst dabei stets die Übersicht.\n\n#motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – Familiar Roads (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-27T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-27T11:03:36.965Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7701301241564990752",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-27-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ade78c3e4be8a4d86ca9567_video.mp4"
         }
       ]
     },
