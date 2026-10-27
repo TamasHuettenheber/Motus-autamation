@@ -1,0 +1,99 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 9,
+  "series_version": "relaunch-v2",
+  "title": "Das Sternbild ohne Anfang",
+  "hook": "Die Sternwarte drehte sich gegen die Strömung – und unter Jori erschien ein Sternenrätsel.",
+  "story": "Die Sternwarte drehte sich gegen die Strömung. Jori hielt sich am Geländer fest, während Flimm wieder golden aufleuchtete. Unter ihnen öffnete sich eine runde Karte aus Sternen.  Mira entdeckte drei Sternenwege. Links führte eine Linie zu einem anderen Stern. Rechts endete sie mitten im Dunkel. Nur der mittlere Weg bildete einen geschlossenen Kreis ohne Abzweigung und kehrte genau zu seinem Anfang zurück. Jori beugte sich über die Karte. Flimm leuchtete auf die drei Wege, sagte aber nichts.",
+  "question": "Welcher Sternenweg schließt sich zum Kreis: A, B oder C?",
+  "answer": "Der geschlossene Sternenkreis!",
+  "after": "Jori zeigte auf den mittleren Weg. „Der geschlossene Sternenkreis!“ Da rasteten die Zahnräder ein. Die Sternwarte richtete ihr Teleskop auf eine verborgene Tür im Seeboden. Mira fand dahinter ein Mosaik mit dem fehlenden Stern. Flimm strahlte, als sein Bauchstern darauf antwortete.",
+  "after_answer": "Jori zeigte auf den mittleren Weg. „Der geschlossene Sternenkreis!“ Da rasteten die Zahnräder ein. Die Sternwarte richtete ihr Teleskop auf eine verborgene Tür im Seeboden. Mira fand dahinter ein Mosaik mit dem fehlenden Stern. Flimm strahlte, als sein Bauchstern darauf antwortete.",
+  "cliff": "Doch die Tür öffnete sich nur einen Spalt. Aus der Dunkelheit glitt ein Licht, das genauso aussah wie Flimm – bis es plötzlich rückwärts zu leuchten begann. Wer war dieses zweite Flimm?",
+  "cliffhanger": "Doch die Tür öffnete sich nur einen Spalt. Aus der Dunkelheit glitt ein Licht, das genauso aussah wie Flimm – bis es plötzlich rückwärts zu leuchten begann. Wer war dieses zweite Flimm?",
+  "riddle": {
+    "type": "visual_path",
+    "question": "Welcher Sternenweg schließt sich zum Kreis: A, B oder C?",
+    "answer": "Der mittlere Weg, also B: der geschlossene Sternenkreis.",
+    "evidence_in_story": "Nur der mittlere Weg bildete einen geschlossenen Kreis ohne Abzweigung und kehrte genau zu seinem Anfang zurück.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "closed_path",
+  "clue_label": "WELCHER WEG SCHLIESST SICH?",
+  "clues": [
+    "LINKS: OFFEN",
+    "MITTE: ZURÜCK ZUM ANFANG",
+    "RECHTS: OFFEN"
+  ],
+  "correct": 1,
+  "puzzle_visual": "Im Bild drei gut getrennte Sternenwege A, B, C: A und C sichtbar offen, B eine einfache geschlossene Schleife ohne Kreuzungen. Während der Stille nur die kurze Frage „Welcher Weg schließt sich?“ und die drei Wege samt Buchstaben sichtbar. Keine weiteren erklärenden Textblöcke; Rätselgrafik mit Beginn der Lösung vollständig ausblenden.",
+  "continuity": "Setzt direkt beim Ende von Folge 008 ein: der verschlossene Turm schlägt ohne Glocke, und die Sternwarte dreht sich gegen die Strömung. Jori, Flimm und Mira bleiben gemeinsam in der versunkenen Sternwarte. Das neue Rätsel ist ein visueller Linienweg, nicht Kreaturenmerkmale, Spiegelposition oder Zählen. Nach der Lösung stoppt Jori die Sternwarte und entdeckt eine verborgene Tür. Der Cliffhanger zeigt ein lichtähnliches Doppel von Flimm.",
+  "narration": "Die Sternwarte drehte sich gegen die Strömung. Jori hielt sich am Geländer fest, während Flimm wieder golden aufleuchtete. Unter ihnen öffnete sich eine runde Karte aus Sternen.  Mira entdeckte drei Sternenwege. Links führte eine Linie zu einem anderen Stern. Rechts endete sie mitten im Dunkel. Nur der mittlere Weg bildete einen geschlossenen Kreis ohne Abzweigung und kehrte genau zu seinem Anfang zurück. Jori beugte sich über die Karte. Flimm leuchtete auf die drei Wege, sagte aber nichts. Welcher Sternenweg schließt sich zum Kreis: A, B oder C? [[PAUSE:7]] Jori zeigte auf den mittleren Weg. „Der geschlossene Sternenkreis!“ Da rasteten die Zahnräder ein. Die Sternwarte richtete ihr Teleskop auf eine verborgene Tür im Seeboden. Mira fand dahinter ein Mosaik mit dem fehlenden Stern. Flimm strahlte, als sein Bauchstern darauf antwortete. Doch die Tür öffnete sich nur einen Spalt. Aus der Dunkelheit glitt ein Licht, das genauso aussah wie Flimm – bis es plötzlich rückwärts zu leuchten begann. Wer war dieses zweite Flimm?",
+  "narration_tts": "Die Sternwarte drehte sich gegen die Strömung. Jori hielt sich am Geländer fest, während Flimm wieder golden aufleuchtete. Unter ihnen öffnete sich eine runde Karte aus Sternen.  Mira entdeckte drei Sternenwege. Links führte eine Linie zu einem anderen Stern. Rechts endete sie mitten im Dunkel. Nur der mittlere Weg bildete einen geschlossenen Kreis ohne Abzweigung und kehrte genau zu seinem Anfang zurück. Jori beugte sich über die Karte. Flimm leuchtete auf die drei Wege, sagte aber nichts. [[SEGMENT]] Welcher Sternenweg schließt sich zum Kreis: A, B oder C? [[PAUSE:7]] Jori zeigte auf den mittleren Weg. „Der geschlossene Sternenkreis!“ Da rasteten die Zahnräder ein. Die Sternwarte richtete ihr Teleskop auf eine verborgene Tür im Seeboden. Mira fand dahinter ein Mosaik mit dem fehlenden Stern. Flimm strahlte, als sein Bauchstern darauf antwortete. [[SEGMENT]] Doch die Tür öffnete sich nur einen Spalt. Aus der Dunkelheit glitt ein Licht, das genauso aussah wie Flimm – bis es plötzlich rückwärts zu leuchten begann. Wer war dieses zweite Flimm?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "render_pending",
+  "scene_briefs": [
+    "Auf dem Startbild rotiert die versunkene Sternwarte unter dem See, während Jori (Mädchen mit roter Mütze), Flimm (kleines goldenes Wesen mit sternförmigem Bauchzeichen und grüner Strickmütze) und Mira am Geländer stehen; geen text.",
+    "Jori und Mira schauen durch das große Messingfenster in die wirbelnde Sternenkarte, Flimm leuchtet am Geländer; neuer blauer Kuppelraum.",
+    "Drei Sternenwege schweben als klare Lichtlinien vor der Karte: links offener Pfad, Mitte geschlossene einfache Schleife, rechts offener Pfad; Jori zeigt auf die Karte, Flimm unverändert.",
+    "Rätselansicht: drei klare getrennte Sternenlinien A B C; nur mittlere Linie ist geschlossener Kreis ohne Abzweigung; knapper Bildaufbau, keine erklärenden Fließtexte.",
+    "Jori zeigt auf den geschlossenen mittleren Weg, Zahnräder kommen zum Stillstand, Teleskop richtet sich aus; Flimm und Mira sichtbar.",
+    "Verborgenes Türblatt im Seeboden öffnet sich einen Spalt; dahinter leuchtet ein Flimm-ähnlicher Doppelgänger rückwärts; kindgerecht geheimnisvoll."
+  ],
+  "critical_visual_objects": [
+    "rotierende Unterwassersternwarte",
+    "drei unterscheidbare Sternenwege",
+    "mittlerer geschlossener Pfad",
+    "verborgene Steintür",
+    "Flimm bleibt klein, goldgelb, mit grünem Strickhut und sternförmigem Bauchzeichen"
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-009-v1/scene-01.jpg",
+      "scene": 1,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-009-v1/scene-02.jpg",
+      "scene": 2,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-009-v1/scene-03.jpg",
+      "scene": 3,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-009-v1/scene-04.jpg",
+      "scene": 4,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-009-v1/scene-05.jpg",
+      "scene": 5,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-009-v1/scene-06.jpg",
+      "scene": 6,
+      "generated": true,
+      "brief": null
+    }
+  ],
+  "status": "REVISION_PENDING_RENDER_QC",
+  "approved_for_publish": false,
+  "release_blockers": [
+    "Fertigen GitHub-Render und QC abwarten",
+    "Nutzerprüfung der MP4"
+  ]
+}
