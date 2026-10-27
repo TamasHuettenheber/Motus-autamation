@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-26T23:47:42.152317+00:00",
+  "checked_at_utc": "2026-10-27T04:54:23.846820+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6adfe747f266a5f7e103f807",
+      "text": "Die Dunkelheit bringt eine wohlverdiente Stille, die deinen Geist umhüllt. Schließe die Augen und lass die Erlebnisse der letzten Stunden sanft von dir abgleiten. Du musst jetzt nichts mehr lösen, entscheiden oder vorbereiten. Dein Körper verlangt nach tiefer, ungestörter Ruhe, um sich für morgen neu zu formen. Gib dich dem Schlaf hin im vollen Vertrauen, dass alles gut ist, genau so wie es jetzt gerade ist. Gute Nacht und lass los.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-28T21:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-28-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6adfe6d73bff354cec678d7d",
+      "text": "Der Lärm des Tages legt sich langsam und gibt den Blick frei auf das Wesentliche. Blicke ohne Urteil auf das zurück, was du getan hast, und auf das, was heute eben unerledigt blieb. Jede Erfahrung, ob leicht oder schwer, hat dich um eine Facette reicher gemacht. Lass den Leistungsdruck draußen vor der Tür. Du hast heute dein Bestes gegeben im Rahmen deiner Möglichkeiten. Jetzt ist der Moment, die Anspannung abzustreifen und den Abend friedlich zu begrüßen.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-28T17:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-28-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6adfec9b0565644c94809a98",
+      "text": "Halte kurz inne mitten im Trubel und schau dir an, was du bisher bewegt hast. Oft verlieren wir uns in Details, statt den Fortschritt zu sehen. Nimm dir die Zeit für eine echte Pause, die deinen Kopf frei pustet. Ernähre deinen Körper bewusst und gib deinen Gedanken Raum zum Durchatmen. Es geht jetzt nicht um Perfektion, sondern um die richtige Balance zwischen Einsatz und Erholung. Nutze diese Mitte des Tages als klaren Wendepunkt für frische Konzentration.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-28T11:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-28-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6adfe73d14a7789a82f7ee61",
+      "text": "Der Tag beginnt nicht mit dem ersten Schritt, sondern mit deiner Entschlossenheit. Atme tief ein und spüre die Energie, die in deinen Muskeln liegt. Du brauchst keinen großen Plan für die kommenden Stunden, sondern nur den Mut, das anzufangen, was dir wirklich wichtig ist. Lass Ablenkungen hinter dir und richte deinen Fokus auf das, was heute möglich wird. Deine Ideen haben Gewicht und verdienen es, umgesetzt zu werden. Geh hinaus und mach diesen Vormorgen zu deinem Werk.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-10-28T06:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-28-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6ade78c36887a2efc1273a3c",
       "text": "Der Tag neigt sich dem Ende zu und es wird Zeit, alle Gedanken und Erlebnisse sanft zur Ruhe kommen zu lassen. Lass die Anspannung des Tages von dir abfallen und bereite deinen Geist auf einen tiefen, erholsamen Schlaf vor. Du hast heute dein Bestes gegeben, und mehr konnte niemand von dir verlangen. Schließe mit den Ereignissen ab, atme ruhig aus und vertraue darauf, dass sich morgen neue Wege öffnen werden. Gute Nacht.\n\n#motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad28e7c52adf2bfae5fd813_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ad28e55c34368e4b0929a43",
-      "text": "Samstagmorgen. Stell dir vor, du würdest mit dir selbst so sprechen wie mit einem Menschen, an den du glaubst. Nicht jede Unsicherheit ist ein Beweis, dass du etwas nicht kannst. Erinner dich heute an eine Herausforderung, die du schon gemeistert hast. Dieses Vertrauen darfst du mit in den Samstag nehmen. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-17T05:00:00.000Z",
-      "sentAt": "2026-10-17T05:02:04.537Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7697497105060957472?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad28e55c34368e4b0929a43_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ad13efc7998c185a61a7448",
-      "text": "Bevor dieser Freitag endet, denk nicht nur daran, was offen geblieben ist. Schau auf das, was du trotz allem geschafft hast. Vielleicht war es nur ein Gespräch oder ein kleiner Fortschritt. Auch das zählt. Was nimmst du heute Positives mit? #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-16T20:00:00.000Z",
-      "sentAt": "2026-10-16T20:02:22.471Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7697358162495573281?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad13efc7998c185a61a7448_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ad13f21c26e1a071758bf42",
-      "text": "Du musst nicht warten, bis du dich mutig fühlst. Oft entsteht Mut erst, wenn du handelst. Sag heute ehrlich, was du brauchst, oder probiere etwas aus, das du bisher aufgeschoben hast. Welcher kleine Schritt könnte deinen Abend verändern? #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Home (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-16T16:30:00.000Z",
-      "sentAt": "2026-10-16T16:32:44.711Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7697304038160846113?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad13f21c26e1a071758bf42_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ad13eee5533140b41c8d1c4",
-      "text": "Wenn dein Freitagmittag hektisch wird, halte kurz inne. Frag dich: Was ist jetzt wirklich wichtig? Nicht jede Nachricht braucht sofort eine Antwort. Setze eine klare Priorität und gib ihr deine volle Aufmerksamkeit. Welche Aufgabe bringst du heute zu Ende? #motus #produktivitaet #klarheit #fokus #selbstentwicklung Musik: Tanner Helland – Crossroads (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-16T10:00:00.000Z",
-      "sentAt": "2026-10-16T10:02:06.616Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7697203579223903521?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ad13eee5533140b41c8d1c4_video.mp4"
         }
       ]
     }
