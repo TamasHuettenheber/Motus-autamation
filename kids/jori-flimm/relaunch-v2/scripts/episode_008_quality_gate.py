@@ -21,7 +21,7 @@ assert story["riddle"]["pause_seconds"] == 7
 assert story["riddle"]["type"] == "visual"
 assert story["answer"] == "Die Mondqualle!"
 assert story["riddle"]["answer"] == story["answer"]
-assert all(term in story["story"] for term in ("gläsernen Glocke", "lange durchsichtige Tentakel", "silbernen Fleck", "Einen Panzer hatte es nicht"))
+assert all(term in story["story"] for term in ("gläsernen Glocke", "lange durchsichtige Tentakel", "silberner Fleck", "Einen Panzer hatte es nicht"))
 assert "dritter goldener Stern" in prev["cliff"]
 assert "dritte goldene Stern" in story["hook"]
 assert "schatten" in story["story"][:220].casefold() and "schatten" in prev["cliff"].casefold()
