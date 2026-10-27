@@ -72,14 +72,27 @@ jobs:
               raise SystemExit(0)
           key=os.environ.get("GEMINI_KEY","")
           if not key:raise SystemExit("GEMINI_KEY_MISSING")
-          prompt=("Erstelle vier unterschiedliche, originelle kurze deutsche MOTUS-Motivationstexte "
-                  "fuer einen einzelnen Tagesplan mit den Slots 07:00,12:00,18:30,22:00. Jeweils 60 bis 85 Woerter, "
-                  "direkte Du-Ansprache, konkrete und abwechslungsreiche Gedanken, kein Clickbait, "
-                  "keine Wiederholung von Floskeln. Morgens aktivierend, mittags praktisch, "
-                  "abends reflektierend, nachts beruhigend. Erwaehne keine Wochentage, Datumsangaben, "
-                  "Uhrzeiten, konkretes Wetter oder kalendarische Behauptungen. Achte auf korrekte "
-                  "deutsche Rechtschreibung und Grammatik. Antworte ausschliesslich als JSON "
-                  "mit Schluessel slots, Array von vier Objekten mit time und text.")
+          # Quality experiment for future (not yet generated) days only.
+          # Keep word count, slots, music and renderer unchanged to isolate the effect.
+          prompt=("Erstelle vier originelle, voneinander klar verschiedene deutsche MOTUS-Kurztexte "
+                  "fuer einen Tagesplan mit den Slots 07:00,12:00,18:30,22:00. Jeweils 60 bis 85 Woerter. "
+                  "Beginne JEDEN Text sofort mit einem anderen konkreten Hook: einer beobachtbaren "
+                  "Alltagssituation, einer spannenden Frage oder einem nachvollziehbaren Konflikt. "
+                  "Die ersten zwei Sekunden duerfen keine allgemeinen Floskeln ueber Energie, "
+                  "Fokus, Motivation oder den Tagesbeginn enthalten. "
+                  "Baue in jeden Text eine anschauliche, realistische Alltagsszene ein. "
+                  "Vermeide austauschbare Phrasen, Kunstwoerter und unnatuerliche Formulierungen. "
+                  "Morgens geht es um eine konkrete Gewohnheit oder Entscheidung, mittags um ein "
+                  "praktisches Hindernis, abends um eine soziale Situation oder Grenze, nachts um "
+                  "den Umgang mit Grübeln oder Erholung. Die vier Themen muessen sich unterscheiden. "
+                  "Nutze in mindestens drei Texten unterschiedliche, natuerlich eingebettete "
+                  "Handlungsimpulse: Kommentarfrage, Speichern, Teilen oder Folgen. "
+                  "Keine mechanisch angehaengte Standard-CTA und keine privaten Daten erfragen. "
+                  "Direkte Du-Ansprache, idiomatisches korrektes Deutsch ausschliesslich in "
+                  "lateinischer Schrift, keine fremdsprachigen Einschuebe, kein Clickbait. "
+                  "Erwaehne keine Wochentage, Datumsangaben, Uhrzeiten, konkretes Wetter oder "
+                  "kalendarische Behauptungen. Antworte ausschliesslich als JSON mit Schluessel "
+                  "slots, Array von vier Objekten mit time und text.")
           payload={"contents":[{"parts":[{"text":prompt}]}],"generationConfig":{"responseMimeType":"application/json","temperature":0.9}}
           import time
           models=["gemini-3.5-flash-lite","gemini-3.8-flash"]
@@ -134,11 +147,14 @@ jobs:
           import re
           weekday_re=re.compile(r"(?:montag|dienstag|mittwoch|donnerstag|freitag|samstag|sonntag)",re.IGNORECASE)
           date_re=re.compile(r"\b\d{1,2}[./-]\d{1,2}(?:[./-]\d{2,4})?\b|\b\d{4}-\d{2}-\d{2}\b|\b\d{1,2}\.\s*(?:januar|februar|maerz|märz|april|mai|juni|juli|august|september|oktober|november|dezember)\b",re.IGNORECASE)
+          import unicodedata
           for slot in slots:
               text=slot.get("text","").strip()
               word_count=len(text.split())
               if not 60<=word_count<=85:raise SystemExit("TEXT_WORD_COUNT "+str(word_count))
               if weekday_re.search(text) or date_re.search(text):raise SystemExit("CALENDAR_REFERENCE "+slot.get("time",""))
+              if any(ch.isalpha() and "LATIN" not in unicodedata.name(ch,"") for ch in text):
+                  raise SystemExit("NON_LATIN_LETTERS "+slot.get("time",""))
           batch={"date":target,"slots":[{"slot":t.replace(":",""),"time":t,"timezone":"Europe/Berlin","audio_url":"","broll_url":"","text":s["text"]} for t,s in zip(times,slots)]}
           issue=gh("POST","/issues",{"title":title,"body":json.dumps(batch,ensure_ascii=False)})
           number=issue["number"]
