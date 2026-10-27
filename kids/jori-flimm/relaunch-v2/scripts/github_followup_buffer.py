@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Schedule validated Jori episodes 002–008; never touch MOTUS."""
+"""Schedule validated Jori episodes 002–009; never touch MOTUS."""
 import argparse,json,os,time,urllib.request,urllib.error
 from datetime import datetime,timezone
 from zoneinfo import ZoneInfo
-p=argparse.ArgumentParser();p.add_argument("--episode",type=int,required=True,choices=[2,3,4,5,6,7,8]);p.add_argument("--replace-existing",action="store_true");a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument("--episode",type=int,required=True,choices=[2,3,4,5,6,7,8,9]);p.add_argument("--replace-existing",action="store_true");a=p.parse_args()
 n=a.episode
 key=os.environ.get("BUFFER_API_KEY","").strip()
 assert key,"BUFFER_API_KEY_MISSING"
 due=datetime(2026,10,22+n-1,14,0,tzinfo=ZoneInfo("Europe/Berlin"))
 assert datetime.now(ZoneInfo("Europe/Berlin"))<due,"Requested publishing time passed"
 expected_due_utc=due.astimezone(timezone.utc)
-if n in (6,7,8):
+if n in (6,7,8,9):
     release_path=f"kids/jori-flimm/relaunch-v2/episode_{n:03d}_release_record.json"
     release=json.loads(open(release_path,encoding="utf-8").read())
     assert release.get("user_approved_for_publication") is True,f"Episode {n:03d} has no explicit user release approval"
@@ -21,8 +21,10 @@ if n in (6,7,8):
         assert release.get("render_qc_passed") is True and release.get("video_path")=="published/jori-flimm-2026-10-28-e007-v1.mp4","Episode 007 has no passing render QC record"
     if n==8:
         assert release.get("render_qc_passed") is True and release.get("video_path")=="published/jori-flimm-2026-10-29-e008-v2.mp4","Episode 008 has no passing render QC record"
+    if n==9:
+        assert release.get("render_qc_passed") is True and release.get("video_path")=="published/jori-flimm-2026-10-30-e009-v2.mp4","Episode 009 has no passing render QC record"
 repo=os.environ["GITHUB_REPOSITORY"]
-version_suffix={6:"-v2",7:"-v1",8:"-v2"}.get(n,"")
+version_suffix={6:"-v2",7:"-v1",8:"-v2",9:"-v2"}.get(n,"")
 media=f"https://raw.githubusercontent.com/{repo}/feature/jori-flimm-neustart-folge001/published/jori-flimm-2026-10-{22+n-1:02d}-e{n:03d}{version_suffix}.mp4"
 def gql(query,variables=None):
  req=urllib.request.Request("https://api.buffer.com",method="POST",data=json.dumps({"query":query,"variables":variables or {}}).encode(),headers={"Authorization":"Bearer "+key,"Content-Type":"application/json"})
@@ -78,7 +80,7 @@ if existing:
  assert datetime.fromisoformat(old["dueAt"].replace("Z","+00:00")).astimezone(timezone.utc)==expected_due_utc,{"actual_dueAt":old.get("dueAt"),"expected_dueAt":due.isoformat()}
  print("JORI_EPISODE_ALREADY_SCHEDULED",n,old["id"],old["dueAt"])
  raise SystemExit(0)
-if n in (6,7,8):
+if n in (6,7,8,9):
  e=json.loads(open(f"kids/jori-flimm/relaunch-v2/episode_{n:03d}_story_draft.json",encoding="utf-8").read())
 else:
  data=json.loads(open("kids/jori-flimm/relaunch-v2/staffel1_folgen_001_005.json",encoding="utf-8").read())
