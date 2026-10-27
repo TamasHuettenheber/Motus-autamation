@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-27T04:54:23.846820+00:00",
+  "checked_at_utc": "2026-10-27T10:27:03.816195+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6ade78c88b3d437ddc2bfd31",
       "text": "Der Morgen bietet dir die einmalige Chance, den Grundstein für deine heutigen Vorhaben zu legen, ohne dass Ablenkungen deinen Fokus stören. Atme tief durch, spüre die Energie in deinem Körper und richte deine Aufmerksamkeit gezielt auf das, was dir wirklich wichtig ist. Jeder bewusste Schritt, den du jetzt machst, bringt dich deinen persönlichen Zielen näher. Starte diesen Tag mit klarem Kopf, fester Entschlossenheit und dem unerschütterlichen Willen, das Beste aus jeder Stunde herauszuholen.\n\n#motus #fokus #digitalbalance #aufmerksamkeit #selbstentwicklung\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-27T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-27T06:02:30.447Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7701223605945879841",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-27-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ade78c88b3d437ddc2bfd31_video.mp4"
         }
       ]
     },
