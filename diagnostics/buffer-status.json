@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-27T16:31:09.794110+00:00",
+  "checked_at_utc": "2026-10-27T21:15:17.103164+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -73,30 +73,30 @@
     {
       "id": "6ade78c36887a2efc1273a3c",
       "text": "Der Tag neigt sich dem Ende zu und es wird Zeit, alle Gedanken und Erlebnisse sanft zur Ruhe kommen zu lassen. Lass die Anspannung des Tages von dir abfallen und bereite deinen Geist auf einen tiefen, erholsamen Schlaf vor. Du hast heute dein Bestes gegeben, und mehr konnte niemand von dir verlangen. Schließe mit den Ereignissen ab, atme ruhig aus und vertraue darauf, dass sich morgen neue Wege öffnen werden. Gute Nacht.\n\n#motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-27T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-27T21:03:57.824Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7701455902951345441",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-27-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ade78c36887a2efc1273a3c_video.mp4"
         }
       ]
     },
     {
       "id": "6ade78bc6887a2efc12739ab",
       "text": "Betrachte rückblickend die Erlebnisse und Taten der vergangenen Stunden und erkenne an, was du heute alles bewegt hast. Nicht jede Minute lief perfekt, aber jede Erfahrung hat dir wertvolle Erkenntnisse und neue Perspektiven gebracht. Lass den Leistungsdruck jetzt bewusst los und schalte um auf Feierabendmodus. Du darfst stolz auf deinen Einsatz sein und dich nun auf die Dinge konzentrieren, die dir echten Ausgleich schenken und deine innere Balance stärken.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Remember (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-27T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-27T17:32:45.670Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7701401547057548576",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-27-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ade78bc6887a2efc12739ab_video.mp4"
         }
       ]
     },
