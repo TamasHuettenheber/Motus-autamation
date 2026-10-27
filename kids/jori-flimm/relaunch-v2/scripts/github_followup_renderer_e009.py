@@ -61,8 +61,7 @@ def draw_scene(name,section):
    d.ellipse((x-20,635,x+20,675),fill=(43,62,88,225),outline=(255,225,156,255),width=2)
    d.text((x,655),label,font=font(19),anchor="mm",fill="white")
  if section=="answer":
-  d.rounded_rectangle((76,420,644,500),radius=20,fill=(17,46,70,222),outline=(255,225,156,220),width=3)
-  d.text((360,460),"DER STERNENKREIS!",font=font(29),anchor="mm",fill="#fff0bd")
+  pass
  if section=="cliff":
   d.rounded_rectangle((40,178,680,254),radius=16,fill=(13,31,61,218))
   d.text((360,213),"WIE GEHT ES WEITER?",font=font(27),anchor="mm",fill="#ffebbc")
@@ -133,7 +132,7 @@ for i,(start,end,rendered) in enumerate(cues):
   visible_words.extend(re.findall(r"\w+",rendered.replace("\\N"," ").lower()))
 assert visible_words==expected_words, "Rendered subtitles omit, repeat, or reorder spoken words"
 sub=W/"captions.ass";sub.write_text(header)
-version_suffix="-v1"
+version_suffix="-v2"
 output=ROOT/f"published/jori-flimm-2026-10-{22+n-1:02d}-e{n:03d}{version_suffix}.mp4";output.parent.mkdir(exist_ok=True)
 cmd("ffmpeg","-nostdin","-y","-loglevel","error","-i",video,"-i",audio,"-filter_complex",f"[0:v]ass={sub}[v]","-map","[v]","-map","1:a","-c:v","libx264","-preset","veryfast","-crf","21","-pix_fmt","yuv420p","-r","24","-c:a","aac","-b:a","192k","-movflags","+faststart","-shortest",output)
 assert output.stat().st_size>1_000_000
