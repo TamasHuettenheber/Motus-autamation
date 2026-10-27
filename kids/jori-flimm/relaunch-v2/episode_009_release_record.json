@@ -27,10 +27,10 @@
     93
   ],
   "answer_overlay_removed": true,
-  "status": "READY_TO_SCHEDULE",
-  "buffer_post_id": null,
-  "buffer_status": null,
-  "buffer_channel_id": null,
-  "buffer_due_at": null,
-  "buffer_release_run_id": null
+  "status": "SCHEDULED",
+  "buffer_post_id": "6ae05359da2ca338b1513bea",
+  "buffer_status": "scheduled",
+  "buffer_channel_id": "6ad948ea778b240e2f839607",
+  "buffer_due_at": "2026-10-30T13:00:00.000Z",
+  "buffer_release_run_id": 40467527989
 }
