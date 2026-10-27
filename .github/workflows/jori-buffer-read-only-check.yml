@@ -53,3 +53,5 @@ jobs:
 # Verify the actual scheduled Episode 008 post after the release response; read only.
 
 # Refresh live Jori queue before any Episode 009 booking after final MP4 QC.
+
+# Verify Episode 009 scheduled result and queue after Buffer mutation; read only.
