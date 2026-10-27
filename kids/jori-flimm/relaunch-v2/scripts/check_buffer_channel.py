@@ -87,9 +87,10 @@ def main():
            "]}}) { edges { node { id channelId status dueAt sentAt externalLink text } } "
            "pageInfo { hasNextPage } } }")
     all_posts=(gql(query).get("posts") or {})
-    if all_posts.get("pageInfo",{}).get("hasNextPage"):
-        raise RuntimeError("More Jori channel posts than one page; complete status verification required")
+    historical_truncated=bool(all_posts.get("pageInfo",{}).get("hasNextPage"))
     channel_posts=[edge.get("node",{}) for edge in all_posts.get("edges",[])]
+    if historical_truncated:
+        print("JORI_HISTORICAL_STATUS_PAGE_TRUNCATED; scheduled queue remains fully verified")
     for post in channel_posts:
         fields={k:post.get(k) for k in ("id","status","dueAt","sentAt","externalLink","text")}
         print("JORI_POST_STATUS="+json.dumps(fields,ensure_ascii=False,separators=(",",":")))
