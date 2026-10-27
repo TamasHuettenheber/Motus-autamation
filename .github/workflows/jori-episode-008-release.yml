@@ -40,7 +40,7 @@ jobs:
           from datetime import datetime
           r=json.loads(Path('kids/jori-flimm/relaunch-v2/episode_008_release_record.json').read_text(encoding='utf-8'))
           assert r['episode_number']==8 and r['user_approved_for_publication'] is True
-          assert r['render_qc_passed'] is True and r['render_qc_run_id']==40242318584
+          assert r['render_qc_passed'] is True and r['render_qc_run_id']==40245336647
           assert r['target_channel']=='@jori.flimm'
           assert datetime.fromisoformat(r['target_due_at']).isoformat(timespec='minutes')=='2026-10-29T14:00+01:00'
           p=Path(r['video_path']); assert p.is_file() and p.stat().st_size>1_000_000
@@ -49,7 +49,7 @@ jobs:
           v=next(x for x in streams if x['codec_type']=='video');a=next(x for x in streams if x['codec_type']=='audio')
           assert (v['codec_name'],v['width'],v['height'])==('h264',720,1280),v
           assert a['codec_name']=='aac',a
-          assert abs(float(probe['format']['duration'])-133.833333)<0.25,probe['format']
+          assert abs(float(probe['format']['duration'])-134.208333)<0.25,probe['format']
           proc=subprocess.run(['ffmpeg','-hide_banner','-i',str(p),'-af','silencedetect=noise=-60dB:d=6.5','-f','null','-'],capture_output=True,text=True,check=True)
           durations=[float(x) for x in re.findall(r'silence_duration:\s*([0-9.]+)',proc.stderr)]
           assert any(abs(x-7.0)<=0.2 for x in durations),durations
@@ -60,4 +60,4 @@ jobs:
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-        run: python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_buffer.py --episode 8
+        run: python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_buffer.py --episode 8 --replace-existing

@@ -22,7 +22,7 @@ if n in (6,7,8):
     if n==8:
         assert release.get("render_qc_passed") is True and release.get("video_path")=="published/jori-flimm-2026-10-29-e008-v1.mp4","Episode 008 has no passing render QC record"
 repo=os.environ["GITHUB_REPOSITORY"]
-version_suffix={6:"-v2",7:"-v1",8:"-v1"}.get(n,"")
+version_suffix={6:"-v2",7:"-v1",8:"-v2"}.get(n,"")
 media=f"https://raw.githubusercontent.com/{repo}/feature/jori-flimm-neustart-folge001/published/jori-flimm-2026-10-{22+n-1:02d}-e{n:03d}{version_suffix}.mp4"
 def gql(query,variables=None):
  req=urllib.request.Request("https://api.buffer.com",method="POST",data=json.dumps({"query":query,"variables":variables or {}}).encode(),headers={"Authorization":"Bearer "+key,"Content-Type":"application/json"})
