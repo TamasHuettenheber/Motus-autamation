@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-05-2200",
-      "clip_id": "notebook-sunlight-6541157",
-      "source": "https://www.pexels.com/video/person-writing-on-notebook-6541157/",
-      "used_at_utc": "2026-10-05T07:42:28.984296+00:00"
-    },
-    {
       "output_name": "motus-2026-10-05-1200",
       "clip_id": "desk-thinking-5704904",
       "source": "https://www.pexels.com/video/woman-working-on-the-desk-5704904/",
@@ -599,6 +593,12 @@
       "clip_id": "work-laptop-8479274",
       "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
       "used_at_utc": "2026-10-28T23:47:13.704656+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-30-1830",
+      "clip_id": "planner-writing-7744197",
+      "source": "https://www.pexels.com/video/woman-writing-on-a-notebook-at-the-office-7744197/",
+      "used_at_utc": "2026-10-28T23:47:27.374537+00:00"
     }
   ]
 }
