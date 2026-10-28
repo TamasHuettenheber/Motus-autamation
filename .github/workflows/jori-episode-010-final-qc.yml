@@ -1,0 +1,68 @@
+name: Jori & Flimm — Folge 010 final MP4 QC
+
+on:
+  push:
+    branches:
+      - feature/jori-flimm-neustart-folge001
+    paths:
+      - .github/workflows/jori-episode-010-final-qc.yml
+      - published/jori-flimm-2026-10-31-e010-v2.mp4
+
+permissions:
+  contents: read
+
+jobs:
+  final-qc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          fetch-depth: 1
+          sparse-checkout: |
+            kids/jori-flimm/relaunch-v2
+            published/jori-flimm-2026-10-31-e010-v2.mp4
+      - name: Install QC tools
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then sudo sed -i 's#azure.archive.ubuntu.com#archive.ubuntu.com#g' /etc/apt/apt-mirrors.txt; fi
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg python3-pil
+      - name: Validate story, six generated scenes and actual final MP4
+        run: |
+          set -euo pipefail
+          python3 -m py_compile kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer_e010.py kids/jori-flimm/relaunch-v2/scripts/github_followup_voice_e010.py kids/jori-flimm/relaunch-v2/scripts/generate_voice_gemini_e010.py
+          python3 - <<'PY'
+          import hashlib,json,re,subprocess
+          from pathlib import Path
+          from PIL import Image
+          base=Path('kids/jori-flimm/relaunch-v2')
+          e=json.loads((base/'episode_010_story_draft.json').read_text(encoding='utf-8'))
+          prev=json.loads((base/'episode_009_story_draft.json').read_text(encoding='utf-8'))
+          assert e['episode_number']==10 and e['title']=='Das rückwärts leuchtende Echo'
+          assert 'rückwärts zu leuchten' in prev['cliff'] and 'zweite Flimm' in prev['cliff']
+          assert e['hook'].startswith('Das Licht hinter der Tür glitt rückwärts')
+          assert e['narration'].count('[[PAUSE:7]]')==1
+          assert e['voice']=={'provider':'Gemini TTS 3.8','model':'gemini-3.8-flash-lite-tts','speaker_id':'Sulafat'}
+          assert not re.search(r'\bJori\b.{0,70}\b(?:er|ihn|sein|ihm)\b',e['narration'],re.I)
+          paths=[Path(v['path']) for v in e['visuals']]
+          assert len(paths)==6 and len(set(paths))==6
+          hashes=[]
+          for p in paths:
+              assert p.is_file(),p
+              with Image.open(p) as im: assert abs(im.width/im.height-9/16)<=0.002,(p,im.size)
+              hashes.append(hashlib.sha256(p.read_bytes()).hexdigest())
+          assert len(set(hashes))==6,'six genuinely distinct episode images required'
+          media=Path('published/jori-flimm-2026-10-31-e010-v2.mp4')
+          assert media.is_file() and media.stat().st_size>1_000_000
+          p=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','stream=codec_type,codec_name,width,height','-show_entries','format=duration,size','-of','json',str(media)],text=True))
+          assert len(p['streams'])==2,p['streams']
+          v=next(x for x in p['streams'] if x['codec_type']=='video');a=next(x for x in p['streams'] if x['codec_type']=='audio')
+          assert (v['codec_name'],v['width'],v['height'])==('h264',720,1280),v
+          assert a['codec_name']=='aac',a
+          assert 130<float(p['format']['duration'])<150,p['format']
+          proc=subprocess.run(['ffmpeg','-hide_banner','-i',str(media),'-af','silencedetect=noise=-60dB:d=6.5','-f','null','-'],capture_output=True,text=True,check=True)
+          measured=[float(x) for x in re.findall(r'silence_duration:\s*([0-9.]+)',proc.stderr)]
+          assert any(abs(x-7.0)<=0.2 for x in measured),measured
+          print('JORI_E010_FINAL_MP4_QC_OK',json.dumps({'path':str(media),'duration':p['format']['duration'],'bytes':p['format']['size'],'video':'720x1280 H.264','audio':'AAC Sulafat','unique_new_scenes':6,'measured_mp4_silence_seconds':measured,'visual_review_samples_seconds':[2,15,34,36,39,63,72,76,80,82,100,110,112,130,141]},ensure_ascii=False))
+          PY
