@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-05-0900",
-      "clip_id": "park-walk-8296235",
-      "source": "https://www.pexels.com/video/a-man-walking-around-the-park-8296235/",
-      "used_at_utc": "2026-10-05T08:12:06.337852+00:00"
-    },
-    {
       "output_name": "motus-2026-10-06-1200",
       "clip_id": "planner-writing-7744197",
       "source": "https://www.pexels.com/video/woman-writing-on-a-notebook-at-the-office-7744197/",
@@ -599,6 +593,12 @@
       "clip_id": "night-walk-4121893",
       "source": "https://www.pexels.com/video/a-person-walking-in-the-street-at-night-4121893/",
       "used_at_utc": "2026-10-28T23:47:54.406662+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-30-0700",
+      "clip_id": "sunrise-sea-11382155",
+      "source": "https://www.pexels.com/video/vertical-shot-of-sunrise-over-sea-11382155/",
+      "used_at_utc": "2026-10-28T23:48:43.289330+00:00"
     }
   ]
 }
