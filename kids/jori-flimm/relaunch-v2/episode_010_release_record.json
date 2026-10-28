@@ -17,6 +17,28 @@
   "story_continuity_checked": true,
   "subtitle_scene_timing_checked": true,
   "flimm_visual_consistency_checked": true,
-  "visual_qc_samples_seconds": [2, 15, 34, 36, 39, 63, 72, 76, 80, 82, 100, 110, 112, 130, 141],
-  "answer_overlay_removed": true
+  "visual_qc_samples_seconds": [
+    2,
+    15,
+    34,
+    36,
+    39,
+    63,
+    72,
+    76,
+    80,
+    82,
+    100,
+    110,
+    112,
+    130,
+    141
+  ],
+  "answer_overlay_removed": true,
+  "status": "SCHEDULED",
+  "buffer_post_id": "6ae1a823f94c111d6ec185a7",
+  "buffer_status": "scheduled",
+  "buffer_channel_id": "6ad948ea778b240e2f839607",
+  "buffer_due_at": "2026-10-31T13:00:00.000Z",
+  "buffer_release_run_id": 40652037112
 }

@@ -59,3 +59,5 @@ jobs:
 # Refresh actual Jori queue before the Episode 010 slot check on 2026-10-28; read only.
 
 # Refresh live channel and queue immediately before the Episode 010 booking; read only.
+
+# Verify Episode 010's scheduled Buffer post after the release response; read only.
