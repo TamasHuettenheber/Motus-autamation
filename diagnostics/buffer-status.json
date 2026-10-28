@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-28T15:59:47.398829+00:00",
+  "checked_at_utc": "2026-10-28T21:03:48.850750+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -73,30 +73,30 @@
     {
       "id": "6adfe747f266a5f7e103f807",
       "text": "Die Dunkelheit bringt eine wohlverdiente Stille, die deinen Geist umhüllt. Schließe die Augen und lass die Erlebnisse der letzten Stunden sanft von dir abgleiten. Du musst jetzt nichts mehr lösen, entscheiden oder vorbereiten. Dein Körper verlangt nach tiefer, ungestörter Ruhe, um sich für morgen neu zu formen. Gib dich dem Schlaf hin im vollen Vertrauen, dass alles gut ist, genau so wie es jetzt gerade ist. Gute Nacht und lass los.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-28T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-28T21:03:21.049Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7701826956710399265",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-28-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6adfe747f266a5f7e103f807_video.mp4"
         }
       ]
     },
     {
       "id": "6adfe6d73bff354cec678d7d",
       "text": "Der Lärm des Tages legt sich langsam und gibt den Blick frei auf das Wesentliche. Blicke ohne Urteil auf das zurück, was du getan hast, und auf das, was heute eben unerledigt blieb. Jede Erfahrung, ob leicht oder schwer, hat dich um eine Facette reicher gemacht. Lass den Leistungsdruck draußen vor der Tür. Du hast heute dein Bestes gegeben im Rahmen deiner Möglichkeiten. Jetzt ist der Moment, die Anspannung abzustreifen und den Abend friedlich zu begrüßen.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-28T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-28T17:32:22.672Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7701772598492826912",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-28-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6adfe6d73bff354cec678d7d_video.mp4"
         }
       ]
     },
