@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-04-1830",
-      "clip_id": "city-phone-13802094",
-      "source": "https://www.pexels.com/video/a-man-in-a-suit-looking-at-his-phone-while-walking-in-the-city-13802094/",
-      "used_at_utc": "2026-10-03T21:14:02.775721+00:00"
-    },
-    {
       "output_name": "motus-2026-10-04-1200",
       "clip_id": "study-writing-9198715",
       "source": "https://www.pexels.com/video/woman-thinking-and-writing-in-notebook-9198715/",
@@ -599,6 +593,12 @@
       "clip_id": "coffee-phone-13736547",
       "source": "https://www.pexels.com/video/a-woman-using-her-phone-and-drinking-a-cup-of-coffee-13736547/",
       "used_at_utc": "2026-10-28T00:00:39.540515+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-29-2200",
+      "clip_id": "sunset-ocean-7975481",
+      "source": "https://www.pexels.com/video/vertical-video-of-sunset-7975481/",
+      "used_at_utc": "2026-10-28T00:00:49.125951+00:00"
     }
   ]
 }
