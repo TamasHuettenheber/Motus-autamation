@@ -1,0 +1,22 @@
+{
+  "series": "Jori & Flimm",
+  "episode_number": 10,
+  "title": "Das rückwärts leuchtende Echo",
+  "user_approved_for_publication": true,
+  "approval_date": "2026-10-28",
+  "approval_note": "Vorab autorisierte tägliche Automation: vollständig geprüfte Folgen ausschließlich auf dem nächsten freien 14:00-Uhr-Slot einplanen.",
+  "target_channel": "@jori.flimm",
+  "target_due_at": "2026-10-31T14:00:00+01:00",
+  "video_path": "published/jori-flimm-2026-10-31-e010-v2.mp4",
+  "render_qc_passed": true,
+  "final_qc_run_id": 40651869403,
+  "queue_check_run_id": 40651869130,
+  "duration_seconds": 144.325,
+  "measured_mp4_silence_seconds": 7.01162,
+  "six_unique_new_scenes": true,
+  "story_continuity_checked": true,
+  "subtitle_scene_timing_checked": true,
+  "flimm_visual_consistency_checked": true,
+  "visual_qc_samples_seconds": [2, 15, 34, 36, 39, 63, 72, 76, 80, 82, 100, 110, 112, 130, 141],
+  "answer_overlay_removed": true
+}
