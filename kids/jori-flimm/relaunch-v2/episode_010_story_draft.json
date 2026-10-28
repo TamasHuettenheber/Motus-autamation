@@ -1,0 +1,99 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 10,
+  "series_version": "relaunch-v2",
+  "title": "Das rückwärts leuchtende Echo",
+  "hook": "Das Licht hinter der Tür glitt rückwärts in die Dunkelheit – und Flimms Bauchstern wurde ganz blass!",
+  "story": "Jori hielt sich am steinernen Türrahmen fest. Vor ihr schwebte ein Licht, das Flimm verblüffend ähnlich sah. Doch als Flimm winkte, winkte das fremde Licht erst danach – rückwärts, wie ein Spiegel, der zu spät erwachte. „Das ist kein zweiter Flimm“, flüsterte Jori. „Es ist ein Echo.“ Jori entdeckte an der Tür drei Glaskugeln. Sie leuchteten blau, silbern und gold. Nacheinander erloschen sie: zuerst die blaue, dann die silberne, zuletzt die goldene. Das Echo zog die Lichtspur wieder zurück, als wollte es die Folge rückwärts abspielen. Jori verstand: Um die Tür zu öffnen, mussten sie herausfinden, welche Kugel zuerst wieder leuchten würde.",
+  "question": "Wenn die Lichtfolge rückwärts zurückkehrt: Welche Kugel leuchtet zuerst wieder auf – blau, silbern oder gold?",
+  "answer": "Die goldene Kugel!",
+  "after": "Jori berührte die goldene Kugel. Sie strahlte auf, dann die silberne, dann die blaue. Die Tür öffnete sich. Das fremde Licht wurde zu einer kleinen Erinnerung in der Steinwand. „Ich bin ein Licht-Echo der alten Sternwarte“, wisperte es. „Ich bewahre, was verschwunden ist.“ Flimm leuchtete wieder warm und hell. Jori schob die Tür weiter auf und entdeckte eine Treppe, die tiefer unter den See führte.",
+  "cliff": "An der Treppe lag ein Mosaik mit vielen Sternbildern. Eines hatte ein schwarzes Loch, genau in Sternform. Flimms Bauchstern flackerte. Ganz unten antwortete ein winziges Licht – aber es leuchtete nicht golden, sondern tiefblau. Da begann die ganze Treppe zu beben. Was wartete dort unten?",
+  "cliffhanger": "An der Treppe lag ein Mosaik mit vielen Sternbildern. Eines hatte ein schwarzes Loch, genau in Sternform. Flimms Bauchstern flackerte. Ganz unten antwortete ein winziges Licht – aber es leuchtete nicht golden, sondern tiefblau. Da begann die ganze Treppe zu beben. Was wartete dort unten?",
+  "riddle": {
+    "type": "reverse_sequence",
+    "question": "Wenn die Lichtfolge rückwärts zurückkehrt: Welche Kugel leuchtet zuerst wieder auf – blau, silbern oder gold?",
+    "answer": "Gold",
+    "evidence_in_story": "Die drei Glaskugeln erlöschen in der sicht- und hörbaren Reihenfolge blau, silbern, gold. Rückwärts beginnt die Folge mit dem zuletzt erloschenen Licht.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "reverse_order",
+  "clue_label": "BLAU → SILBERN → GOLD",
+  "clues": [
+    "BLAU",
+    "SILBERN",
+    "GOLD"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Drei klare Glaskugeln und die kurze Reihenfolge BLAU → SILBERN → GOLD. Während der sieben Sekunden Stille nur die kurze Frage und die drei Kugeln samt Reihenfolge zeigen. Keine weiteren Textblöcke; die Rätselgrafik mit Beginn der Lösung sofort ausblenden.",
+  "continuity": "Setzt unmittelbar beim schmal geöffneten Türspalt und dem rückwärts leuchtenden Flimm-ähnlichen Licht aus Folge 009 ein. Jori, Flimm und Mira bleiben im Seebodenbereich der Sternwarte. Das fremde Licht wird als gespeichertes Licht-Echo aufgelöst, nicht als zweiter Flimm. Jori löst ein neues Rückwärtsfolgen-Rätsel; dadurch öffnet sich die Tür. Dahinter führt eine Treppe zu einem Mosaik mit einem fehlenden Stern und einem tiefblauen Licht.",
+  "narration": "Das Licht hinter der Tür glitt rückwärts in die Dunkelheit – und Flimms Bauchstern wurde ganz blass! [[SEGMENT]] Jori hielt sich am steinernen Türrahmen fest. Vor ihr schwebte ein Licht, das Flimm verblüffend ähnlich sah. Doch als Flimm winkte, winkte das fremde Licht erst danach – rückwärts, wie ein Spiegel, der zu spät erwachte. „Das ist kein zweiter Flimm“, flüsterte Jori. „Es ist ein Echo.“ Jori entdeckte an der Tür drei Glaskugeln. Sie leuchteten blau, silbern und gold. Nacheinander erloschen sie: zuerst die blaue, dann die silberne, zuletzt die goldene. Das Echo zog die Lichtspur wieder zurück, als wollte es die Folge rückwärts abspielen. Jori verstand: Um die Tür zu öffnen, mussten sie herausfinden, welche Kugel zuerst wieder leuchten würde. [[SEGMENT]] Wenn die Lichtfolge rückwärts zurückkehrt: Welche Kugel leuchtet zuerst wieder auf – blau, silbern oder gold? [[PAUSE:7]] Die goldene Kugel! Jori berührte die goldene Kugel. Sie strahlte auf, dann die silberne, dann die blaue. Die Tür öffnete sich. Das fremde Licht wurde zu einer kleinen Erinnerung in der Steinwand. „Ich bin ein Licht-Echo der alten Sternwarte“, wisperte es. „Ich bewahre, was verschwunden ist.“ Flimm leuchtete wieder warm und hell. [[SEGMENT]] Jori schob die Tür weiter auf und entdeckte eine Treppe, die tiefer unter den See führte. An der Treppe lag ein Mosaik mit vielen Sternbildern. Eines hatte ein schwarzes Loch, genau in Sternform. Flimms Bauchstern flackerte. Ganz unten antwortete ein winziges Licht – aber es leuchtete nicht golden, sondern tiefblau. Da begann die ganze Treppe zu beben. Was wartete dort unten?",
+  "narration_tts": "Das Licht hinter der Tür glitt rückwärts in die Dunkelheit – und Flimms Bauchstern wurde ganz blass! [[SEGMENT]] Jori hielt sich am steinernen Türrahmen fest. Vor ihr schwebte ein Licht, das Flimm verblüffend ähnlich sah. Doch als Flimm winkte, winkte das fremde Licht erst danach – rückwärts, wie ein Spiegel, der zu spät erwachte. „Das ist kein zweiter Flimm“, flüsterte Jori. „Es ist ein Echo.“ Jori entdeckte an der Tür drei Glaskugeln. Sie leuchteten blau, silbern und gold. Nacheinander erloschen sie: zuerst die blaue, dann die silberne, zuletzt die goldene. Das Echo zog die Lichtspur wieder zurück, als wollte es die Folge rückwärts abspielen. Jori verstand: Um die Tür zu öffnen, mussten sie herausfinden, welche Kugel zuerst wieder leuchten würde. [[SEGMENT]] Wenn die Lichtfolge rückwärts zurückkehrt: Welche Kugel leuchtet zuerst wieder auf – blau, silbern oder gold? [[PAUSE:7]] Die goldene Kugel! Jori berührte die goldene Kugel. Sie strahlte auf, dann die silberne, dann die blaue. Die Tür öffnete sich. Das fremde Licht wurde zu einer kleinen Erinnerung in der Steinwand. „Ich bin ein Licht-Echo der alten Sternwarte“, wisperte es. „Ich bewahre, was verschwunden ist.“ Flimm leuchtete wieder warm und hell. [[SEGMENT]] Jori schob die Tür weiter auf und entdeckte eine Treppe, die tiefer unter den See führte. An der Treppe lag ein Mosaik mit vielen Sternbildern. Eines hatte ein schwarzes Loch, genau in Sternform. Flimms Bauchstern flackerte. Ganz unten antwortete ein winziges Licht – aber es leuchtete nicht golden, sondern tiefblau. Da begann die ganze Treppe zu beben. Was wartete dort unten?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "render_pending",
+  "scene_briefs": [
+    "Hook: unterseeische Steintür einen Spalt offen; Jori (Mädchen, rote Wintermütze) hält sich am Rahmen, Flimm bleibt klein und goldgelb mit gut sichtbarer runder Nase, grüner Strickmütze und Stern am Bauch; ein lichtähnliches Echo gleitet mit rückwärts fließender Spur in die Dunkelheit.",
+    "Jori beobachtet das Echo in einem neuen blaugrünen Perlmutt-Kammerraum; Flimm winkt dem Echo, das zeitversetzt rückwärts antwortet; Figuren bleiben gleich gestaltet.",
+    "Jori und Flimm entdecken drei Glaskugeln an der Tür: blau, silbern, gold; die Kugeln erlöschen nacheinander, Echo-Lichtspur fließt zurück.",
+    "Rätselszene mit drei klaren Glaskugeln und knapper sichtbarer Reihenfolge BLAU → SILBERN → GOLD; Frage oben kurz und lesbar; keine langen Textblöcke, Figuren und Bild bleiben erkennbar.",
+    "Jori berührt zuerst die goldene Kugel; sie leuchtet, danach die silberne und blaue; die Tür öffnet sich; der Lichtzwilling wird als freundliches gespeichertes Licht-Echo sichtbar.",
+    "Hinter der Tür beginnt eine schmale Perlmutt-Treppe zu einem Sternmosaik mit einer schwarzen sternförmigen Lücke; Flimm und Jori sehen unten ein tiefblaues Licht, das Treppenbild beginnt leicht zu beben."
+  ],
+  "critical_visual_objects": [
+    "angelehnte Unterwasser-Steintür aus dem E009-Cliffhanger",
+    "Flimm-ähnliches rückwärts leuchtendes Echo",
+    "Flimm durchgehend klein, goldgelb, mit grüner Strickmütze, runder Nase und Stern am Bauch",
+    "drei Glaskugeln in der Reihenfolge blau, silbern, gold",
+    "goldene Kugel leuchtet als erste bei der Umkehr",
+    "Mosaik mit schwarzer Sternlücke und tiefblauem Licht"
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-010-v1/scene-01.jpg",
+      "scene": 1,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-010-v1/scene-02.jpg",
+      "scene": 2,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-010-v1/scene-03.jpg",
+      "scene": 3,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-010-v1/scene-04.jpg",
+      "scene": 4,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-010-v1/scene-05.jpg",
+      "scene": 5,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-010-v1/scene-06.jpg",
+      "scene": 6,
+      "generated": true,
+      "brief": null
+    }
+  ],
+  "status": "DRAFT_RENDER_PENDING_QC",
+  "approved_for_publish": false,
+  "release_blockers": [
+    "TTS und tatsächlichen Render-QC abwarten",
+    "Sichtprüfung der fertigen MP4 vor Buffer-Freigabe"
+  ]
+}

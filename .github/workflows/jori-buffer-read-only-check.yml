@@ -55,3 +55,5 @@ jobs:
 # Refresh live Jori queue before any Episode 009 booking after final MP4 QC.
 
 # Verify Episode 009 scheduled result and queue after Buffer mutation; read only.
+
+# Refresh actual Jori queue before the Episode 010 slot check on 2026-10-28; read only.
