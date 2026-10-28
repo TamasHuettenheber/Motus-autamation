@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-28T08:20:19.883057+00:00",
+  "checked_at_utc": "2026-10-28T15:59:47.398829+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6adfec9b0565644c94809a98",
       "text": "Halte kurz inne mitten im Trubel und schau dir an, was du bisher bewegt hast. Oft verlieren wir uns in Details, statt den Fortschritt zu sehen. Nimm dir die Zeit für eine echte Pause, die deinen Kopf frei pustet. Ernähre deinen Körper bewusst und gib deinen Gedanken Raum zum Durchatmen. Es geht jetzt nicht um Perfektion, sondern um die richtige Balance zwischen Einsatz und Erholung. Nutze diese Mitte des Tages als klaren Wendepunkt für frische Konzentration.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-28T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-28T11:20:03.378Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7701673888899452193",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-28-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6adfec9b0565644c94809a98_video.mp4"
         }
       ]
     },
