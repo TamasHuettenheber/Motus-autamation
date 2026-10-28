@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-05-1830",
-      "clip_id": "forest-walk-5838174",
-      "source": "https://www.pexels.com/video/vertical-video-of-a-woman-walking-alone-through-the-forest-5838174/",
-      "used_at_utc": "2026-10-05T07:42:05.326895+00:00"
-    },
-    {
       "output_name": "motus-2026-10-05-2200",
       "clip_id": "notebook-sunlight-6541157",
       "source": "https://www.pexels.com/video/person-writing-on-notebook-6541157/",
@@ -599,6 +593,12 @@
       "clip_id": "city-phone-13802094",
       "source": "https://www.pexels.com/video/a-man-in-a-suit-looking-at-his-phone-while-walking-in-the-city-13802094/",
       "used_at_utc": "2026-10-28T00:01:21.902354+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-30-1200",
+      "clip_id": "work-laptop-8479274",
+      "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
+      "used_at_utc": "2026-10-28T23:47:13.704656+00:00"
     }
   ]
 }
