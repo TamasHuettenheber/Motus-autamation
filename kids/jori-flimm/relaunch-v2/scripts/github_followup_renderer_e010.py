@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Render Jori & Flimm follow-up episodes with story-matched, episode-specific art."""
-import argparse,json,math,re,subprocess,os,textwrap
+import argparse,json,math,re,subprocess,os,textwrap,wave
 from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont,ImageFilter
 ROOT=Path.cwd()
@@ -23,6 +23,42 @@ pause_indices=[i for i,item in enumerate(items) if item["kind"]=="pause"]
 assert len(pause_indices)==1 and abs(items[pause_indices[0]]["duration"]-7)<0.12
 pause_index=pause_indices[0]
 assert len(items)==6 and [item["kind"] for item in items]==["speech","speech","speech","pause","speech","speech"]
+D=t["duration"];assert 45<D<150
+# TTS may include a quiet buffer after the spoken riddle. Remove that buffer
+# immediately before the explicit seven-second silence so the measured pause
+# remains seven seconds between Sulafat's question and answer.
+pause_item=items[pause_index]
+previous=items[pause_index-1]
+probe=subprocess.run(["ffmpeg","-hide_banner","-i",str(audio),"-af",
+    "silencedetect=noise=-60dB:d=6.5","-f","null","-"],capture_output=True,text=True)
+starts=[float(x) for x in re.findall(r"silence_start:\s*([0-9.]+)",probe.stderr)]
+durations=[float(x) for x in re.findall(r"silence_duration:\s*([0-9.]+)",probe.stderr)]
+trim=0.0
+for start,duration in zip(starts,durations):
+    if previous["start"] <= start < pause_item["start"] and duration >= 7.05:
+        trim=pause_item["start"]-start
+        break
+if trim>0.04:
+    assert trim<0.75, f"Unexpected TTS silence buffer before riddle: {trim:.3f}s"
+    with wave.open(str(audio),"rb") as src:
+        params=src.getparams();frames=src.readframes(src.getnframes())
+    assert params.framerate==24000 and params.sampwidth==2 and params.nchannels==1
+    cut=round((pause_item["start"]-trim)*params.framerate)
+    pause_start=round(pause_item["start"]*params.framerate)
+    pause_frames=round(pause_item["duration"]*params.framerate)
+    frame_bytes=params.sampwidth*params.nchannels
+    rebuilt=frames[:cut*frame_bytes]+frames[pause_start*frame_bytes:(pause_start+pause_frames)*frame_bytes]+frames[(pause_start+pause_frames)*frame_bytes:]
+    with wave.open(str(audio)+".tmp","wb") as dst:
+        dst.setparams(params);dst.writeframes(rebuilt)
+    os.replace(str(audio)+".tmp",audio)
+    previous["duration"]=round(previous["duration"]-trim,6)
+    previous["end"]=round(previous["end"]-trim,6)
+    for item in items[pause_index:]:
+        item["start"]=round(item["start"]-trim,6)
+        item["end"]=round(item["end"]-trim,6)
+    t["duration"]=round(t["duration"]-trim,6)
+    timeline.write_text(json.dumps(t,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    print(f"JORI_E010_REMOVED_TTS_PAUSE_TAIL seconds={trim:.3f}")
 D=t["duration"];assert 45<D<150
 F="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 F2="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
@@ -65,12 +101,27 @@ def draw_scene(name,section):
 section_names=["hook","story_a","story_b","puzzle","answer","cliff"]
 for section in section_names:
  draw_scene(n,section).save(W/f"{section}.png")
-before=sum(item["duration"] for item in items[:pause_index] if item["kind"]=="speech")
-pause=items[pause_index]["duration"]
-after=sum(item["duration"] for item in items[pause_index+1:] if item["kind"]=="speech")
 pre=items[:pause_index];post=items[pause_index+1:]
 assert len(pre)==3 and len(post)==2
-segments=[("hook",pre[0]["duration"]),("story_a",pre[1]["duration"]),("story_b",pre[2]["duration"]),("puzzle",pause),("answer",post[0]["duration"]),("cliff",post[1]["duration"])]
+story_item=pre[1]
+sentences=re.split(r'(?<=[.!?])["»”]?\s+(?=[A-ZÄÖÜ„])',story_item["text"].strip())
+weights=[max(2,len(sentence)) for sentence in sentences]
+cursor=story_item["start"]
+lamp_reveal=None
+for i,(sentence,weight) in enumerate(zip(sentences,weights)):
+ duration=story_item["end"]-cursor
+ sentence_duration=duration*weight/sum(weights[i:])
+ if "Jori entdeckte" in sentence:
+  prefix=sentence.split("Jori entdeckte",1)[0]
+  lamp_reveal=cursor+sentence_duration*len(prefix)/len(sentence)
+  break
+ cursor+=sentence_duration
+assert lamp_reveal is not None,"No scene boundary found for Jori's discovery of the three glass globes"
+segments=[("hook",pre[0]["duration"]),
+          ("story_a",lamp_reveal-story_item["start"]),
+          ("story_b",story_item["end"]-lamp_reveal+pre[2]["duration"]),
+          ("puzzle",items[pause_index]["duration"]),
+          ("answer",post[0]["duration"]),("cliff",post[1]["duration"])]
 clips=[]
 for i,(name,dur) in enumerate(segments):
  clip=W/f"seg_{i}.mp4"

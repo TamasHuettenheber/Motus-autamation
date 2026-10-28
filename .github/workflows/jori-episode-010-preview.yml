@@ -14,6 +14,7 @@ on:
 
 permissions:
   contents: write
+  actions: read
 concurrency:
   group: jori-episode-010-preview
   cancel-in-progress: false
@@ -36,6 +37,14 @@ jobs:
           if [ -f /etc/apt/apt-mirrors.txt ]; then sudo sed -i 's#azure.archive.ubuntu.com#archive.ubuntu.com#g' /etc/apt/apt-mirrors.txt; fi
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core python3-pil
+      - name: Reuse the Sulafat narration from the successful Free Tier preview
+        uses: actions/download-artifact@v4
+        with:
+          name: Jori-Episode-010-Preview
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          run-id: "40649808627"
+          path: .
       - name: Validate continuation, story, pronouns, and six new scenes
         run: |
           set -euo pipefail
@@ -71,14 +80,6 @@ jobs:
           assert len(set(hashes))==6,'six distinct generated backgrounds required'
           print('JORI_E010_STORY_ART_QC_OK',json.dumps({'title':e['title'],'six_unique_episode_images':dims,'riddle':'reverse the blue, silver, gold light sequence; gold returns first'},ensure_ascii=False))
           PY
-      - name: Generate Sulafat voice with the existing Free Tier model
-        env:
-          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
-          JORI_TTS_MODEL: gemini-3.8-flash-lite-tts
-        run: |
-          set -euo pipefail
-          test -n "$JORI_GEMINI_API_KEY" || { echo 'No Jori TTS key; stop without another voice or paid fallback'; exit 1; }
-          python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_voice_e010.py
       - name: Render and QC the actual MP4
         run: |
           set -euo pipefail
