@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-28T01:13:32.902949+00:00",
+  "checked_at_utc": "2026-10-28T08:20:19.883057+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6adfe73d14a7789a82f7ee61",
       "text": "Der Tag beginnt nicht mit dem ersten Schritt, sondern mit deiner Entschlossenheit. Atme tief ein und spüre die Energie, die in deinen Muskeln liegt. Du brauchst keinen großen Plan für die kommenden Stunden, sondern nur den Mut, das anzufangen, was dir wirklich wichtig ist. Lass Ablenkungen hinter dir und richte deinen Fokus auf das, was heute möglich wird. Deine Ideen haben Gewicht und verdienen es, umgesetzt zu werden. Geh hinaus und mach diesen Vormorgen zu deinem Werk.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-28T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-28T06:02:47.739Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7701594726952160544",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-28-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6adfe73d14a7789a82f7ee61_video.mp4"
         }
       ]
     },
