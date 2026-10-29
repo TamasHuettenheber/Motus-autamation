@@ -78,3 +78,14 @@ MOTUS-Workflows und Metricool wurden nicht geändert bzw. verwendet.
 
 
 - Der Read-only-Nachcheck nach der Buffer-Änderung [40652354211](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40652354211) bestätigt vier geplante Beiträge und genau einen Folge-010-Post mit ID `6ae1a823f94c111d6ec185a7`, `scheduled`, dueAt `2026-10-31T13:00:00.000Z`. Der idempotente Release-Nachlauf [40652354155](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40652354155) fand dieselbe vorhandene Buchung und erzeugte keinen Duplikatpost. Die zusätzliche Jori-Qualitätsprüfung [40652354229](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40652354229) war ebenfalls erfolgreich.
+
+
+## Folge 011 — Der Sternstein im blauen Saal
+
+- **Story:** direkte Fortsetzung von Folge 010 an der bebenden Treppe und dem tiefblauen Licht. Neues visuelles Formrätsel; danach beruhigt der Sternstein die Treppe und die Karte unter dem Glassaal führt zum nächsten Cliffhanger.
+- **Bilder und Kontinuität:** acht eigens für Folge 011 erzeugte, unterschiedliche 9:16-Szenenbilder (720×1280). Nach der Sichtprüfung wurden zwei neue Übergangsbilder ergänzt: Treppe bis zur gesprochenen Glassaal-Enthüllung sowie sinkendes Mosaik bis zur gesprochenen Kartenenthüllung. Jori bleibt weiblich; Flimms runde Nase, grüne Mütze, roter Bommel und Bauchstern sind konsistent.
+- **Render-QC:** 126,520 s, 720×1280 H.264/AAC, Sulafat; acht neue Bilder; Untertitel-Tokenprüfung bestanden. Source-Pause exakt 7,000 s; MP4-Silence-Detection 7,011833 s. Rätsel-Frage und Bildhinweise bleiben während der Pause sichtbar. Die Satz- und Bildwechsel wurden an der tatsächlichen Szenenenthüllung geprüft.
+- **MP4:** [Folge 011 ansehen](https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-neustart-folge001/published/jori-flimm-2026-11-01-e011-v1.mp4).
+- **GitHub-Nachweise:** [Preview/Render](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40838905570), [unabhängiger Final-QC](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40839383801), [Buffer-Liveprüfung vor Buchung](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40839421490), [Release](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40839634275), [Buffer-Nachcheck](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40839817576).
+- **Buffer:** Status scheduled, Post-ID 6ae2fe729c83386213567a72, Kanal @jori.flimm (6ad948ea778b240e2f839607), dueAt 2026-11-01T13:00:00.000Z = **01.11.2026, 14:00 Europe/Berlin**. Der Nachcheck fand denselben einzelnen Beitrag; er ist geplant, nicht bereits veröffentlicht.
+- **Kosten:** sechs Sulafat-Anfragen im verifizierten Free Tier; die Renderkorrektur verwendete den gespeicherten Ton und löste keine weitere TTS-Anfrage aus. Keine kostenpflichtige API und kein Upgrade.
