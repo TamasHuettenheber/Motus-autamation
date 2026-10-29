@@ -10,8 +10,8 @@ parser=argparse.ArgumentParser();parser.add_argument("--episode",type=int,requir
 n=args.episode
 ART=ROOT/"kids/jori-flimm/relaunch-v2/assets/episode-011-v1"
 SCENE_EXT=".jpg"
-SCENE_INDEX={"hook":1,"story_a":2,"story_b":3,"puzzle":4,"answer":5,"cliff":6}
-SCENE_COUNT=6
+SCENE_INDEX={"hook":1,"story_a":2,"story_b":3,"puzzle":4,"answer":5,"cliff":6,"stairs":7,"cliff_transition":8}
+SCENE_COUNT=8
 scene_files=[ART/f"scene-{i:02d}{SCENE_EXT}" for i in range(1,SCENE_COUNT+1)]
 assert all(p.is_file() for p in scene_files), "Missing episode-specific scene art"
 print(f"JORI_SCENE_ART_READY episode={n} unique_scenes={SCENE_COUNT}")
@@ -116,16 +116,33 @@ def draw_scene(name,section):
  if section=="answer":
   pass
  return Image.alpha_composite(im.convert("RGBA"),overlay).convert("RGB")
-section_names=["hook","story_a","story_b","puzzle","answer","cliff"]
-for section in section_names:
- draw_scene(n,section).save(W/f"{section}.png")
 pre=items[:pause_index];post=items[pause_index+1:]
 assert len(pre)==4 and len(post)==2
+def sentence_intervals(item):
+ txt=item["text"].strip()
+ pieces=re.split(r'(?<=[.!?])["»”]?\s+(?=[A-ZÄÖÜ„])',txt)
+ pieces=[p for p in pieces if p.strip()]
+ weights=[max(2,len(p)) for p in pieces]
+ cur=item["start"];out=[]
+ for i,(piece,weight) in enumerate(zip(pieces,weights)):
+  end=item["end"] if i==len(pieces)-1 else cur+(item["end"]-cur)*weight/sum(weights[i:])
+  out.append((cur,end,piece));cur=end
+ return out
+hall_start=sentence_intervals(pre[1])[2][0]
+map_start=sentence_intervals(post[1])[1][0]
+assert pre[1]["start"]<hall_start<pre[1]["end"]
+assert post[1]["start"]<map_start<post[1]["end"]
+section_names=["hook","stairs","story_a","story_b","puzzle","answer","cliff_transition","cliff"]
+for section in section_names:
+ draw_scene(n,section).save(W/f"{section}.png")
 segments=[("hook",pre[0]["duration"]),
-          ("story_a",pre[1]["duration"]),
+          ("stairs",hall_start-pre[1]["start"]),
+          ("story_a",pre[1]["end"]-hall_start),
           ("story_b",pre[2]["duration"]),
           ("puzzle",pre[3]["duration"]+items[pause_index]["duration"]),
-          ("answer",post[0]["duration"]),("cliff",post[1]["duration"])]
+          ("answer",post[0]["duration"]),
+          ("cliff_transition",map_start-post[1]["start"]),
+          ("cliff",post[1]["end"]-map_start)]
 assert len(segments)==SCENE_COUNT
 cursor=0.0
 scene_timing=[]
@@ -133,6 +150,8 @@ for name,duration in segments:
  scene_timing.append({"scene":name,"start":round(cursor,3),"end":round(cursor+duration,3),"duration":round(duration,3)})
  cursor+=duration
 (W/"scene-timing.json").write_text(json.dumps(scene_timing,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+assert abs(scene_timing[2]["start"]-hall_start)<0.01,"Glass-hall image begins before its narrated reveal"
+assert abs(scene_timing[7]["start"]-map_start)<0.01,"Lake map image begins before its narration"
 clips=[]
 for i,(name,dur) in enumerate(segments):
  clip=W/f"seg_{i}.mp4"
@@ -171,13 +190,8 @@ def emit(a,b,txt):
   cues.append((start,end,"\\N".join(group)))
   start=end
 for item in [item for item in items if item["kind"]=="speech"]:
- txt=item["text"].strip()
- pieces=re.split(r'(?<=[.!?])["»”]?\s+(?=[A-ZÄÖÜ„])',txt)
- pieces=[p for p in pieces if p.strip()]
- weights=[max(2,len(p)) for p in pieces];cur=item["start"]
- for i,(p,w) in enumerate(zip(pieces,weights)):
-  end=item["end"] if i==len(pieces)-1 else cur+(item["end"]-cur)*w/sum(weights[i:])
-  emit(cur,end,p);cur=end
+ for start,end,piece in sentence_intervals(item):
+  emit(start,end,piece)
 cues.sort(key=lambda item:(item[0],item[1]))
 pause_start=items[pause_index]["start"]
 expected_words=re.findall(r"\w+"," ".join(item["text"] for item in items if item["kind"]=="speech").lower())

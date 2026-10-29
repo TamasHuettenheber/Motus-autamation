@@ -68,7 +68,7 @@ jobs:
           assert words(clean(e['narration_tts']))==words(clean(e['narration']))
           assert e['voice']=={'provider':'Gemini TTS 3.8','model':'gemini-3.8-flash-lite-tts','speaker_id':'Sulafat'}
           paths=[Path(v['path']) for v in e['visuals']]
-          assert len(paths)==6 and len(set(paths))==6
+          assert len(paths)==8 and len(set(paths))==8
           hashes=[];dims=[]
           for p in paths:
               assert p.is_file(),p
@@ -76,8 +76,8 @@ jobs:
                   dims.append(im.size)
                   assert im.size==(720,1280),(p,im.size)
               hashes.append(hashlib.sha256(p.read_bytes()).hexdigest())
-          assert len(set(hashes))==6,'six distinct new episode images required'
-          print('JORI_E011_STORY_ART_QC_OK',json.dumps({'title':e['title'],'six_unique_9x16_scenes':dims,'riddle':'match the five-point star to the missing shape','continuity':e['continuity']},ensure_ascii=False))
+          assert len(set(hashes))==8,'eight distinct new episode images required'
+          print('JORI_E011_STORY_ART_QC_OK',json.dumps({'title':e['title'],'eight_unique_9x16_scenes':dims,'riddle':'match the five-point star to the missing shape','continuity':e['continuity']},ensure_ascii=False))
           PY
 
       - name: Generate Sulafat using the verified Free Tier model
@@ -144,8 +144,8 @@ jobs:
           measured=[float(x) for x in re.findall(r'silence_duration:\s*([0-9.]+)',proc.stderr)]
           assert any(abs(x-7.0)<=0.2 for x in measured),measured
           scene_timing=json.loads((base/'scene-timing.json').read_text(encoding='utf-8'))
-          assert [x['scene'] for x in scene_timing]==['hook','story_a','story_b','puzzle','answer','cliff']
-          assert abs(scene_timing[3]['end']-pause['end'])<0.01
+          assert [x['scene'] for x in scene_timing]==['hook','stairs','story_a','story_b','puzzle','answer','cliff_transition','cliff']
+          assert abs(scene_timing[4]['end']-pause['end'])<0.01
           print('JORI_E011_MP4_QC_OK',json.dumps({'path':str(media),'duration':duration,'bytes':probe['format']['size'],'video':'720x1280 H.264','audio':'AAC Sulafat','measured_pause_seconds':measured,'caption_token_match':True,'scene_switches_at_narration_boundaries':True},ensure_ascii=False))
           PY
 

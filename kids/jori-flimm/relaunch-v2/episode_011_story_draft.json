@@ -36,10 +36,12 @@
   "tts_status": "render_pending",
   "scene_briefs": [
     "Direkte Fortsetzung des bebenden Treppen-Cliffhangars: Jori in roter Strickmütze und rotem Mantel hält sich am Geländer; Flimm bleibt klein, golden, mit runder Nase, grüner Strickmütze samt rotem Bommel und leuchtendem Bauchstern. Tief unten scheint ein neues blaues Licht. Neues Unterwasser-Treppenmotiv, keine wiederverwendete Szene.",
+    "Übergang vor dem Glassaal: Jori hält sich an der Reling eines neuen tieferen Treppenabschnitts fest, Flimm beleuchtet die Stufen. Der Saal bleibt noch unsichtbar.",
     "Ein neu entdeckter runder Saal aus blauem Glas mit drei flachen Steinplatten und einem schwebenden Saphirkristall. Jori und Flimm treten aus dem Treppenbogen ein. Neuer Hintergrund und anderer Blickwinkel.",
     "Jori und Flimm entdecken ein schwarzes fünfzackiges Loch in einem Mosaikstück. Darunter leuchten drei Zeichen auf Steinplatten: Ring, fünfzackiger Stern und Mondsichel. Die Zeichen sind klar unterscheidbar.",
     "Klares, ruhiges Rätselbild im runden Glassaal; Figuren bleiben sichtbar am unteren Bildrand. Keine eingebetteten Worte. Das Rendering legt nur eine kurze Frage, einen fünfzackigen Zielform-Stern und die drei exakten Symboloptionen Ring, Stern und Mondsichel darüber.",
     "Jori drückt auf die Sternplatte. Ein kleiner blauer Stern löst sich, steigt zum Mosaik empor und füllt die fünfzackige Lücke. Die Treppe beruhigt sich.",
+    "Übergang vor der Kartenenthüllung: Das runde Sternmosaik beginnt in den transparenten Glasboden zu sinken. Die Karte ist noch nicht erschienen.",
     "Neuer Glaskartenraum: Im transparenten Boden liegt eine Karte des Sees mit Joris Dorf und Haus. Ein blauer Punkt löst sich aus der Karte und steigt auf; ein zweiter Punkt antwortet hoch in der Kuppel. Jori und Flimm schauen hinauf."
   ],
   "visuals": [
@@ -50,32 +52,44 @@
       "brief": null
     },
     {
-      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-02.jpg",
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-07.jpg",
       "scene": 2,
       "generated": true,
-      "brief": null
+      "brief": "Jori hält sich an der Reling einer neuen tieferen Treppenpassage fest; Flimm beleuchtet die Stufen, bevor sich der Glassaal öffnet."
     },
     {
-      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-03.jpg",
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-02.jpg",
       "scene": 3,
       "generated": true,
       "brief": null
     },
     {
-      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-04.jpg",
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-03.jpg",
       "scene": 4,
       "generated": true,
       "brief": null
     },
     {
-      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-05.jpg",
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-04.jpg",
       "scene": 5,
       "generated": true,
       "brief": null
     },
     {
-      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-06.jpg",
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-05.jpg",
       "scene": 6,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-08.jpg",
+      "scene": 7,
+      "generated": true,
+      "brief": "Das Sternmosaik sinkt gerade in den transparenten Glasboden; die Karte des Sees ist noch nicht zu sehen."
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-06.jpg",
+      "scene": 8,
       "generated": true,
       "brief": null
     }
