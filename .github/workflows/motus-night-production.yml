@@ -186,6 +186,44 @@ jobs:
                   raise SystemExit("NON_LATIN_LETTERS "+slot.get("time",""))
               if not cta_re.search(text) and "?" not in text:
                   print("CTA_QC_WARNING",slot.get("time",""),"no clear viewer CTA")
+          # Non-blocking 14-day theme audit. Reuses GitHub issue text; no extra AI calls.
+          # A warning must never interrupt the regular four-video production.
+          try:
+              theme_signals={
+                  "digital_ablenkung":("smartphone","handy","bildschirm","scroll","social media"),
+                  "grenzen_arbeit":("kolleg","diensthandy","erreichbar","grenze setzen","grenzziehung"),
+                  "abend_gruebeln":("grübel","gedanken kreisen","einschlaf","nachttisch","schlaf"),
+                  "mittag_essen":("kühlschrank","mittagspause","mahlzeit","mikrowelle"),
+              }
+              def themes(value):
+                  low=value.lower()
+                  return {name for name,terms in theme_signals.items() if any(term in low for term in terms)}
+              q=quote(f'repo:{repo} is:issue in:title "MOTUS-DAY"',safe="")
+              history=gh("GET",f"/search/issues?q={q}&per_page=100").get("items",[])
+              cutoff=datetime.fromisoformat(target).date()-timedelta(days=14)
+              counts={}
+              for item in history:
+                  title_old=str(item.get("title",""))
+                  if not title_old.startswith("[MOTUS-DAY] "):continue
+                  try:day_old=datetime.fromisoformat(title_old[-10:]).date()
+                  except ValueError:continue
+                  if not cutoff<=day_old<datetime.fromisoformat(target).date():continue
+                  try:previous=json.loads(item.get("body") or "{}").get("slots",[])
+                  except (ValueError,TypeError):continue
+                  for previous_slot in previous:
+                      for theme in themes(str(previous_slot.get("text",""))):
+                          counts[theme]=counts.get(theme,0)+1
+              day_themes={}
+              for slot in slots:
+                  for theme in themes(str(slot.get("text",""))):
+                      day_themes[theme]=day_themes.get(theme,0)+1
+                      if counts.get(theme,0)>=3:
+                          print("THEME_14D_WARNING",slot["time"],theme,"prior_count",counts[theme])
+              for theme,n in day_themes.items():
+                  if n>1:print("THEME_SAME_DAY_WARNING",theme,"slots",n)
+              print("THEME_14D_AUDIT_OK","history_issues",len(history))
+          except Exception as exc:
+              print("THEME_14D_AUDIT_UNAVAILABLE",type(exc).__name__)
           batch={"date":target,"slots":[{"slot":t.replace(":",""),"time":t,"timezone":"Europe/Berlin","audio_url":"","broll_url":"","text":s["text"]} for t,s in zip(times,slots)]}
           issue=gh("POST","/issues",{"title":title,"body":json.dumps(batch,ensure_ascii=False)})
           number=issue["number"]
