@@ -16,6 +16,7 @@ Stand: Oktober 2026. Diese Regeln sind verbindlich für jede neue Episode und je
 - Für Kinder ca. 7–10, von Erwachsenen betreuter TikTok-Kanal; positive Fantasie, kein Schock, keine Angst, keine direkte Kaufaufforderung an Kinder.
 - Niemals die bezahlten 24 Buchmissionen, 48 Rätsel oder deren Lösungen im Video wiedergeben.
 - 9:16, kinderfreundliche Bilder, lesbare Untertitel innerhalb der Mobile-Safe-Zone.
+- **TikTok-Safe-Zone:** Rätselschild, Rätsel-Frage, Lösung, Untertitel und alle lösungsrelevanten Bildhinweise müssen vollständig außerhalb der TikTok-Bedienelemente liegen. Bei 720×1280 bleibt der rechte Bereich ab x=560 für Herz, Kommentare, Teilen und Profil frei; wichtiger Text liegt zwischen x=60 und x=540 und nicht im unteren Beschriftungsbereich. Figuren dürfen außerhalb stehen, dürfen wichtige Inhalte aber nicht verdecken. Die fertige MP4 wird vor Buffer mit eingeblendeter TikTok-UI-Safe-Zone bzw. einer entsprechenden Overlay-Schablone stichprobenartig geprüft.
 
 ## Pflicht-QC pro Episode – kein stillschweigendes Durchwinken
 Die Freigabe benötigt **alle** Einzelprüfungen:
