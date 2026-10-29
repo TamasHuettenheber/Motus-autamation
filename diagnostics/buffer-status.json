@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-29T06:59:28.584283+00:00",
+  "checked_at_utc": "2026-10-29T14:10:20.638648+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6ae13b5db24fed5fb48fe7e6",
       "text": "Dein Kollege lehnt sich ueber die Trennwand und fragt, ob du kurz Zeit fuer ein dringendes Problem hast, obwohl deine eigene To-Do-Liste aus allen Nähten platzt. Genau in diesem Moment steckst du in dem klassischen Dilemma zwischen Hilfsbereitschaft und Selbstschutz. Ein kurzes, freundliches 'Erst in einer Stunde' rettet deinen Fokus vor dem sicheren Burnout. Speicher diesen Beitrag, wenn du heute auch konsequent Grenzen setzen willst.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Destiny (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-29T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-29T11:03:18.684Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7702043480671014176",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-29-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae13b5db24fed5fb48fe7e6_video.mp4"
         }
       ]
     },
