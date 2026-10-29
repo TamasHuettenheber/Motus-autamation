@@ -147,6 +147,17 @@ jobs:
               raise SystemExit("GEMINI_ALL_MODELS_FAILED "+last_error)
           raw=generated["candidates"][0]["content"]["parts"][0]["text"]
           slots=json.loads(raw)["slots"]
+          # Deterministic corrections for verified recurrent Gemini misspellings.
+          # Apply only while creating a new day; existing issues/videos stay untouched.
+          spelling_fixes={"Stioerfaktor":"Störfaktor","nervogen":"nervös"}
+          for slot in slots:
+              original=slot.get("text","")
+              corrected=original
+              for wrong,right in spelling_fixes.items():
+                  corrected=corrected.replace(wrong,right)
+              if corrected!=original:
+                  print("SPELLING_QC_CORRECTED",slot.get("time",""))
+                  slot["text"]=corrected
           if len(slots)!=4:raise SystemExit("BAD_SLOT_COUNT")
           times=["07:00","12:00","18:30","22:00"]
           if [s.get("time") for s in slots]!=times:raise SystemExit("BAD_SLOT_TIMES")
