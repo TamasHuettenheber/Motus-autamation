@@ -149,7 +149,17 @@ jobs:
           slots=json.loads(raw)["slots"]
           # Deterministic corrections for verified recurrent Gemini misspellings.
           # Apply only while creating a new day; existing issues/videos stay untouched.
-          spelling_fixes={"Stioerfaktor":"Störfaktor","nervogen":"nervös"}
+          spelling_fixes={
+              "Stioerfaktor":"Störfaktor","nervogen":"nervös",
+              "hartnaeckig":"hartnäckig","waehrend":"während",
+              "Kuechentisch":"Küchentisch","unaufhoerlich":"unaufhörlich",
+              "Geraet":"Gerät","draussen":"draußen",
+              "ueber":"über","fuenf":"fünf","ungeloest":"ungelöst",
+              "Gespraech":"Gespräch","naemlich":"nämlich",
+              "fuer":"für","erschoepft":"erschöpft",
+              "schliesst":"schließt","Tuer":"Tür",
+              "ungelueftet":"ungelüftet","unwillkuerlich":"unwillkürlich"
+          }
           for slot in slots:
               original=slot.get("text","")
               corrected=original
