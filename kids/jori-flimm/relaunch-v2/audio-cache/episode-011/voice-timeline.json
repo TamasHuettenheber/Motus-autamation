@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Die Treppe bebte weiter – tief unten wartete ein blaues Licht!",
+      "start": 0.0,
+      "end": 7.88,
+      "duration": 7.88
+    },
+    {
+      "kind": "speech",
+      "text": "Jori hielt sich am Geländer fest. Flimm leuchtete die Stufen vor ihr aus, während das Beben langsam schwächer wurde. Ganz unten öffnete sich ein runder Saal aus blauem Glas.",
+      "start": 7.88,
+      "end": 23.52,
+      "duration": 15.64
+    },
+    {
+      "kind": "speech",
+      "text": "Über drei flachen Steinplatten schwebte ein Mosaikstück mit einer schwarzen, fünfzackigen Sternlücke. Auf den Platten leuchteten drei Zeichen: ein Ring, ein Stern und eine Mondsichel. Jori rückte näher an die Lücke. Flimm richtete warmes Licht auf die drei Zeichen. Das Beben ließ nach, doch die Treppe zitterte noch immer.",
+      "start": 23.52,
+      "end": 54.0,
+      "duration": 30.48
+    },
+    {
+      "kind": "speech",
+      "text": "Welche Form passt in die fünfzackige Lücke: Ring, Stern oder Mondsichel?",
+      "start": 54.0,
+      "end": 62.4,
+      "duration": 8.4
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 62.4,
+      "end": 69.4,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Der Stern! Jori drückte auf die Sternplatte. Sie leuchtete auf, und ein kleiner blauer Stern löste sich daraus. Er schwebte zur Mosaiklücke und passte genau hinein. Die Treppe wurde ruhig. Flimm sprang zu Jori, und ein blauer Lichtweg führte sie in den Saal.",
+      "start": 69.4,
+      "end": 90.04,
+      "duration": 20.64
+    },
+    {
+      "kind": "speech",
+      "text": "Tief im Saal senkte sich das Mosaik in den gläsernen Boden. Darunter erschien eine Karte des Sees. Jori erkannte ihr Dorf weit oben am Ufer. Ein winziger blauer Punkt wanderte über die Karte bis zum Dach ihres Hauses und hob sich dann aus dem Glas. Er schwebte genau über der Treppe. „Warum kennt das Licht unser Zuhause?“, fragte Jori. Flimm sah nach oben. Dort blitzte in der Dunkelheit ein zweiter Punkt auf.",
+      "start": 90.04,
+      "end": 126.52,
+      "duration": 36.48
+    }
+  ],
+  "duration": 126.52,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
