@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-29T14:10:20.638648+00:00",
+  "checked_at_utc": "2026-10-29T20:15:06.083225+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6ae13b5ab24fed5fb48fe6ae",
       "text": "Der Flur riecht nach Bratfett und die Nachbarin klopft wegen des lauten Fernsehers, waehrend du erschoepft von der Arbeit nach Hause kommst. Statt dich sofort zu rechtfertigen, schliesst du die Tuer und nimmst dir fuenf Minuten Stille im ungeluefteten Schlafzimmer. Diese bewusste Grenzziehung trennt den anstrengenden Arbeitstag zuverlässig vom wohlverdienten Feierabend. Teile dieses Video mit jemandem, der heute ebenfalls eine klare Abgrenzung braucht.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Deserve to be Loved (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-29T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-29T17:33:13.765Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7702143865062444321",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-29-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae13b5ab24fed5fb48fe6ae_video.mp4"
         }
       ]
     },
