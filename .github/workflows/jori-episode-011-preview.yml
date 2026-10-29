@@ -59,7 +59,7 @@ jobs:
           assert e['hook'].startswith('Die Treppe bebte weiter') and 'blaues Licht' in e['hook']
           assert e['riddle']['type']=='visual_shape_match' and e['riddle']['pause_seconds']==7
           assert e['question']==e['riddle']['question'] and e['answer']=='Der Stern!'
-          assert 'fünfzackigen Stern' in e['question'] and 'Mondsichel' in e['story']
+          assert 'fünfzackige Lücke' in e['question'] and 'Mondsichel' in e['story']
           assert e['narration'].count('[[PAUSE:7]]')==1
           assert e['narration'].count('[[SEGMENT]]')==4
           assert not re.search(r'\bJori\b.{0,75}\b(?:er|ihn|sein|ihm)\b',e['narration'],re.I)
