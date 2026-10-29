@@ -6,6 +6,7 @@ Narration transmitted to Google is PUBLICATION-READY STORY TEXT ONLY.
 No production/publication state changes. Any API error stops rendering.
 """
 import base64
+import hashlib
 import json
 import os
 import re
@@ -105,17 +106,36 @@ def main():
     concat=d/"concat.txt"
     cumulative=0.0
     tts_calls=0
+    cached_segments=0
+    cache_dir=Path("kids/jori-flimm/relaunch-v2/audio-cache/episode-011/tts-chunks")
+    cache_dir.mkdir(parents=True,exist_ok=True)
+    speech_count=sum(1 for kind,_ in sequence if kind=="speech")
+    if speech_count>6:raise ValueError("Episode 011 exceeds the safe six-request Free Tier cap")
     with concat.open("w",encoding="utf-8") as f:
         for i,(kind,value) in enumerate(sequence,1):
             dest=d/f"{i:02d}.wav"
             if kind=="speech":
                 if len(value)>2500:raise ValueError("Narration chunk too long")
-                source=d/f"{i:02d}-original.wav"
-                if tts_calls:
-                    # Stay below the verified Google Free Tier limit of 3 requests/minute.
+                source=cache_dir/f"{i:02d}-original.wav"
+                marker=cache_dir/f"{i:02d}-original.sha256"
+                temp=source.with_name(source.name+".tmp")
+                digest=hashlib.sha256(value.encode("utf-8")).hexdigest()
+                if temp.exists() and marker.is_file() and marker.read_text(encoding="utf-8").strip()==digest and not source.exists():
+                    temp.replace(source)
+                if source.exists():
+                    if not marker.is_file() or marker.read_text(encoding="utf-8").strip()!=digest:
+                        raise RuntimeError(f"Cached TTS chunk {i:02d} does not match the approved narration")
+                    with wave.open(str(source),"rb") as cached_wav:
+                        if cached_wav.getnframes()<=0:
+                            raise RuntimeError(f"Cached TTS chunk {i:02d} is empty")
+                    cached_segments += 1
+                else:
+                    # At least 22 seconds before every new request keeps within the verified 3/minute Free Tier limit.
                     time.sleep(22)
-                source.write_bytes(tts_segment(value,voice,secret))
-                tts_calls += 1
+                    marker.write_text(digest+"\n",encoding="utf-8")
+                    temp.write_bytes(tts_segment(value,voice,secret))
+                    temp.replace(source)
+                    tts_calls += 1
                 subprocess.run(["ffmpeg","-nostdin","-y","-v","error","-i",str(source),
                     "-ar","24000","-ac","1","-c:a","pcm_s16le",str(dest)],
                     check=True,timeout=50)
@@ -141,7 +161,7 @@ def main():
         "duration":round(cumulative,3),"provider":"Gemini TTS 3.8",
         "speaker_id":voice},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(f"GEMINI_OMI_VOICE_RENDERED {voice} seconds={cumulative:.1f}; "
-          f"requests={tts_calls} spacing_seconds=22; preview pipeline only")
+          f"new_requests={tts_calls} cached_segments={cached_segments} spacing_seconds=22; preview pipeline only")
 
 if __name__=="__main__":
     try:main()

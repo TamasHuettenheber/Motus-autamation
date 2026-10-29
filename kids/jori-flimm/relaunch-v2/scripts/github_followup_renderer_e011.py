@@ -93,7 +93,7 @@ def draw_scene(name,section):
   d.text((360,202),episode["title"],font=font(25),anchor="mm",fill="white",stroke_width=1,stroke_fill="#1e354f")
  if section=="puzzle":
   d.rounded_rectangle((45,145,675,225),radius=18,fill=(18,37,63,210),outline=(242,205,119,225),width=2)
-  d.text((360,185),"WELCHES ZEICHEN PASST?",font=font(24),anchor="mm",fill="#fff3d0")
+  d.text((360,185),"Welche Form passt in die Lücke?",font=font(25),anchor="mm",fill="#fff3d0")
   d.rounded_rectangle((280,270,440,450),radius=18,fill=(18,37,63,215),outline=(242,205,119,225),width=3)
   target=[]
   for k in range(10):
