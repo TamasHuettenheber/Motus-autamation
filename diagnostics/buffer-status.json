@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-29T00:49:41.027729+00:00",
+  "checked_at_utc": "2026-10-29T06:59:28.584283+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6ae13b52f6d6782c599c12c0",
       "text": "Der Kaffeesatz klebt hartnaeckig im Filter, waehrend das Handy auf dem Kuechentisch unaufhoerlich vibriert. Bevor du den ersten Blick auf ungelesene Nachrichten wirfst, greifst du zu einem Glas Wasser und stellst das Geraet konsequent in den Flur. Diese winzige Entscheidung befreit deinen Kopf sofort von fremden Erwartungen. Welcher digitale Stioerfaktor darf bei dir heute als Erstes draussen bleiben? Schreib es in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Forest Awakes (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-29T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-29T06:02:22.616Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7701965741599296801",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-29-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae13b52f6d6782c599c12c0_video.mp4"
         }
       ]
     },
