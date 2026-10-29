@@ -1,0 +1,99 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 11,
+  "series_version": "relaunch-v2",
+  "title": "Der Sternstein im blauen Saal",
+  "hook": "Die Treppe bebte weiter – tief unten wartete ein blaues Licht!",
+  "story": "Jori hielt sich am Geländer fest. Flimm leuchtete die Stufen vor ihr aus, während das Beben langsam schwächer wurde. Ganz unten öffnete sich ein runder Saal aus blauem Glas. Über drei flachen Steinplatten schwebte ein Mosaikstück mit einer schwarzen, fünfzackigen Sternlücke. Auf den Platten leuchteten drei Zeichen: ein Ring, ein Stern und eine Mondsichel. Jori rückte näher an die Lücke. Flimm richtete warmes Licht auf die drei Zeichen. Das Beben ließ nach, doch die Treppe zitterte noch immer.",
+  "question": "Welche Form passt in die fünfzackige Lücke: Ring, Stern oder Mondsichel?",
+  "answer": "Der Stern!",
+  "after": "Jori drückte auf die Sternplatte. Sie leuchtete auf, und ein kleiner blauer Stern löste sich daraus. Er schwebte zur Mosaiklücke und passte genau hinein. Die Treppe wurde ruhig. Flimm sprang zu Jori, und ein blauer Lichtweg führte sie in den Saal.",
+  "cliff": "Tief im Saal senkte sich das Mosaik in den gläsernen Boden. Darunter erschien eine Karte des Sees. Jori erkannte ihr Dorf weit oben am Ufer. Ein winziger blauer Punkt wanderte über die Karte bis zum Dach ihres Hauses und hob sich dann aus dem Glas. Er schwebte genau über der Treppe. „Warum kennt das Licht unser Zuhause?“, fragte Jori. Flimm sah nach oben. Dort blitzte in der Dunkelheit ein zweiter Punkt auf.",
+  "riddle": {
+    "type": "visual_shape_match",
+    "question": "Welche Form passt in die fünfzackige Lücke: Ring, Stern oder Mondsichel?",
+    "answer": "fünfzackiger Stern",
+    "evidence_in_story": "Die Lücke hat fünf Spitzen. Von Ring, Stern und Mondsichel entspricht nur der fünfzackige Stern dieser Form.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "shape_matching",
+  "clues": [
+    "Ring",
+    "fünfzackiger Stern",
+    "Mondsichel"
+  ],
+  "correct": 1,
+  "puzzle_visual": "Eine kurze Frage, ein deutlich gezeichneter fünfzackiger Stern als Zielform und drei große Zeichen zur Auswahl: Ring, Stern, Mondsichel. Keine weiteren Textblöcke. Alle vier Formen bleiben während der gesamten sieben Sekunden sichtbar.",
+  "continuity": "Setzt direkt an der bebenden Treppe und dem tiefblauen Licht aus Folge 010 an. Jori und Flimm steigen in einen runden Glassaal hinab. Ein schwarzes fünfzackiges Loch im Sternmosaik und drei Zeichen auf Steinplatten bilden ein neues visuelles Zuordnungsrätsel. Der Sternstein füllt die Lücke und beruhigt die Treppe. Im Glasboden erscheint eine Karte mit Joris Dorf und zwei antwortenden blauen Lichtpunkten.",
+  "narration": "Die Treppe bebte weiter – tief unten wartete ein blaues Licht! [[SEGMENT]] Jori hielt sich am Geländer fest. Flimm leuchtete die Stufen vor ihr aus, während das Beben langsam schwächer wurde. Ganz unten öffnete sich ein runder Saal aus blauem Glas. [[SEGMENT]] Über drei flachen Steinplatten schwebte ein Mosaikstück mit einer schwarzen, fünfzackigen Sternlücke. Auf den Platten leuchteten drei Zeichen: ein Ring, ein Stern und eine Mondsichel. Jori rückte näher an die Lücke. Flimm richtete warmes Licht auf die drei Zeichen. Das Beben ließ nach, doch die Treppe zitterte noch immer. [[SEGMENT]] Welche Form passt in die fünfzackige Lücke: Ring, Stern oder Mondsichel? [[PAUSE:7]] Der Stern! Jori drückte auf die Sternplatte. Sie leuchtete auf, und ein kleiner blauer Stern löste sich daraus. Er schwebte zur Mosaiklücke und passte genau hinein. Die Treppe wurde ruhig. Flimm sprang zu Jori, und ein blauer Lichtweg führte sie in den Saal. [[SEGMENT]] Tief im Saal senkte sich das Mosaik in den gläsernen Boden. Darunter erschien eine Karte des Sees. Jori erkannte ihr Dorf weit oben am Ufer. Ein winziger blauer Punkt wanderte über die Karte bis zum Dach ihres Hauses und hob sich dann aus dem Glas. Er schwebte genau über der Treppe. „Warum kennt das Licht unser Zuhause?“, fragte Jori. Flimm sah nach oben. Dort blitzte in der Dunkelheit ein zweiter Punkt auf.",
+  "narration_tts": "Die Treppe bebte weiter – tief unten wartete ein blaues Licht! [[SEGMENT]] Jori hielt sich am Geländer fest. Flimm leuchtete die Stufen vor ihr aus, während das Beben langsam schwächer wurde. Ganz unten öffnete sich ein runder Saal aus blauem Glas. [[SEGMENT]] Über drei flachen Steinplatten schwebte ein Mosaikstück mit einer schwarzen, fünfzackigen Sternlücke. Auf den Platten leuchteten drei Zeichen: ein Ring, ein Stern und eine Mondsichel. Jori rückte näher an die Lücke. Flimm richtete warmes Licht auf die drei Zeichen. Das Beben ließ nach, doch die Treppe zitterte noch immer. [[SEGMENT]] Welche Form passt in die fünfzackige Lücke: Ring, Stern oder Mondsichel? [[PAUSE:7]] Der Stern! Jori drückte auf die Sternplatte. Sie leuchtete auf, und ein kleiner blauer Stern löste sich daraus. Er schwebte zur Mosaiklücke und passte genau hinein. Die Treppe wurde ruhig. Flimm sprang zu Jori, und ein blauer Lichtweg führte sie in den Saal. [[SEGMENT]] Tief im Saal senkte sich das Mosaik in den gläsernen Boden. Darunter erschien eine Karte des Sees. Jori erkannte ihr Dorf weit oben am Ufer. Ein winziger blauer Punkt wanderte über die Karte bis zum Dach ihres Hauses und hob sich dann aus dem Glas. Er schwebte genau über der Treppe. „Warum kennt das Licht unser Zuhause?“, fragte Jori. Flimm sah nach oben. Dort blitzte in der Dunkelheit ein zweiter Punkt auf.",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "render_pending",
+  "scene_briefs": [
+    "Direkte Fortsetzung des bebenden Treppen-Cliffhangars: Jori in roter Strickmütze und rotem Mantel hält sich am Geländer; Flimm bleibt klein, golden, mit runder Nase, grüner Strickmütze samt rotem Bommel und leuchtendem Bauchstern. Tief unten scheint ein neues blaues Licht. Neues Unterwasser-Treppenmotiv, keine wiederverwendete Szene.",
+    "Ein neu entdeckter runder Saal aus blauem Glas mit drei flachen Steinplatten und einem schwebenden Saphirkristall. Jori und Flimm treten aus dem Treppenbogen ein. Neuer Hintergrund und anderer Blickwinkel.",
+    "Jori und Flimm entdecken ein schwarzes fünfzackiges Loch in einem Mosaikstück. Darunter leuchten drei Zeichen auf Steinplatten: Ring, fünfzackiger Stern und Mondsichel. Die Zeichen sind klar unterscheidbar.",
+    "Klares, ruhiges Rätselbild im runden Glassaal; Figuren bleiben sichtbar am unteren Bildrand. Keine eingebetteten Worte. Das Rendering legt nur eine kurze Frage, einen fünfzackigen Zielform-Stern und die drei exakten Symboloptionen Ring, Stern und Mondsichel darüber.",
+    "Jori drückt auf die Sternplatte. Ein kleiner blauer Stern löst sich, steigt zum Mosaik empor und füllt die fünfzackige Lücke. Die Treppe beruhigt sich.",
+    "Neuer Glaskartenraum: Im transparenten Boden liegt eine Karte des Sees mit Joris Dorf und Haus. Ein blauer Punkt löst sich aus der Karte und steigt auf; ein zweiter Punkt antwortet hoch in der Kuppel. Jori und Flimm schauen hinauf."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-01.jpg",
+      "scene": 1,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-02.jpg",
+      "scene": 2,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-03.jpg",
+      "scene": 3,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-04.jpg",
+      "scene": 4,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-05.jpg",
+      "scene": 5,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-011-v1/scene-06.jpg",
+      "scene": 6,
+      "generated": true,
+      "brief": null
+    }
+  ],
+  "critical_visual_objects": [
+    "bebende Unterwasser-Treppe und tiefblaues Licht aus Folge 010",
+    "runder blauer Glassaal mit drei flachen Steinplatten",
+    "schwarze fünfzackige Lücke im Mosaik",
+    "Symbole Ring, fünfzackiger Stern, Mondsichel",
+    "Sternplatte löst sich und füllt die Mosaiklücke",
+    "Glasboden-Karte mit Joris Dorf und zwei antwortenden blauen Lichtpunkten",
+    "Flimm: kleines goldenes Wesen, runde Nase, grüne Strickmütze mit rotem Bommel, Stern am Bauch"
+  ],
+  "status": "DRAFT_RENDER_PENDING_QC",
+  "approved_for_publish": false,
+  "release_blockers": [
+    "Sulafat-TTS und tatsächliche MP4-QC abwarten",
+    "Sichtprüfung der fertigen MP4 vor Buffer-Buchung"
+  ],
+  "cliffhanger": "Tief im Saal senkte sich das Mosaik in den gläsernen Boden. Darunter erschien eine Karte des Sees. Jori erkannte ihr Dorf weit oben am Ufer. Ein winziger blauer Punkt wanderte über die Karte bis zum Dach ihres Hauses und hob sich dann aus dem Glas. Er schwebte genau über der Treppe. „Warum kennt das Licht unser Zuhause?“, fragte Jori. Flimm sah nach oben. Dort blitzte in der Dunkelheit ein zweiter Punkt auf."
+}
