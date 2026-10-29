@@ -89,3 +89,11 @@ MOTUS-Workflows und Metricool wurden nicht geändert bzw. verwendet.
 - **GitHub-Nachweise:** [Preview/Render](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40838905570), [unabhängiger Final-QC](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40839383801), [Buffer-Liveprüfung vor Buchung](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40839421490), [Release](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40839634275), [Buffer-Nachcheck](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40839817576).
 - **Buffer:** Status scheduled, Post-ID 6ae2fe729c83386213567a72, Kanal @jori.flimm (6ad948ea778b240e2f839607), dueAt 2026-11-01T13:00:00.000Z = **01.11.2026, 14:00 Europe/Berlin**. Der Nachcheck fand denselben einzelnen Beitrag; er ist geplant, nicht bereits veröffentlicht.
 - **Kosten:** sechs Sulafat-Anfragen im verifizierten Free Tier; die Renderkorrektur verwendete den gespeicherten Ton und löste keine weitere TTS-Anfrage aus. Keine kostenpflichtige API und kein Upgrade.
+
+
+## TikTok-Safe-Zone-Korrektur Folgen 010 und 011
+
+- Nutzerfeedback vom 29.10.2026: Rätselschilder und lösungsrelevante Hinweise dürfen nicht unter den rechten TikTok-Bedienelementen liegen. Das veröffentlichte Ausgangsvideo bleibt unverändert; für alle künftigen Folgen ist die Safe-Zone verbindlicher QC-Blocker.
+- Folge 010 und 011 wurden vor ihrer Veröffentlichung korrigiert. Frage und sämtliche Antwortmöglichkeiten liegen nun bei 720×1280 vollständig links von x=540; der Bereich ab x=560 bleibt für Herz, Kommentare, Teilen und Profil frei.
+- Der [Korrektur- und Buffer-Lauf 40847854026](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/40847854026) bestand. MP4-Technik und Ton blieben unverändert: Folge 010 144,325 s mit 7,011625 s Stille; Folge 011 126,520 s mit 7,011833 s Stille.
+- Buffer ersetzte nur die Medien der vorhandenen Posts: Folge 010 behielt Post-ID `6ae1a823f94c111d6ec185a7` und den 31.10.2026, 14:00 Europe/Berlin; Folge 011 behielt Post-ID `6ae2fe729c83386213567a72` und den 01.11.2026, 14:00 Europe/Berlin. Status jeweils `scheduled`, Kanal `@jori.flimm`; keine neuen oder doppelten Posts.
