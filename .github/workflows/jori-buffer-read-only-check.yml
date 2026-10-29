@@ -64,3 +64,5 @@ jobs:
 # Refresh the live Jori queue before Episode 011 planning on 2026-10-29; read only.
 
 # Refresh the actual Jori channel and queue immediately before Episode 011 scheduling; read only.
+
+# Verify Episode 011 scheduled Buffer post, channel and dueAt after the actual release response; read only.
