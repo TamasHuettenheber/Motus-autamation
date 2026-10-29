@@ -1,0 +1,81 @@
+name: Jori & Flimm — E010/E011 TikTok safe-zone correction
+
+on:
+  push:
+    branches: [feature/jori-flimm-neustart-folge001]
+    paths:
+      - .github/workflows/jori-e010-e011-tiktok-safezone-correction.yml
+      - kids/jori-flimm/relaunch-v2/scripts/apply_tiktok_safezone_e010_e011.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jori-e010-e011-tiktok-safezone-correction
+  cancel-in-progress: false
+
+jobs:
+  verify-and-replace-buffer-media:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install verification tools
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg python3-pil
+      - name: Render safe-zone correction without changing audio or timing
+        run: |
+          python3 kids/jori-flimm/relaunch-v2/scripts/apply_tiktok_safezone_e010_e011.py --episode 10
+          python3 kids/jori-flimm/relaunch-v2/scripts/apply_tiktok_safezone_e010_e011.py --episode 11
+      - name: Verify corrected MP4 files and seven-second pause
+        run: |
+          python3 - <<'PY'
+          import json,re,subprocess
+          from pathlib import Path
+          from PIL import Image
+
+          expected={
+            10:(Path('published/jori-flimm-2026-10-31-e010-v2.mp4'),144.325),
+            11:(Path('published/jori-flimm-2026-11-01-e011-v1.mp4'),126.520),
+          }
+          for episode,(video,duration) in expected.items():
+            assert video.is_file() and video.stat().st_size>1_000_000
+            probe=json.loads(subprocess.check_output([
+              'ffprobe','-v','error','-show_entries','stream=codec_type,codec_name,width,height',
+              '-show_entries','format=duration,size','-of','json',str(video)],text=True))
+            streams=probe['streams'];assert len(streams)==2,streams
+            v=next(x for x in streams if x['codec_type']=='video')
+            a=next(x for x in streams if x['codec_type']=='audio')
+            assert (v['codec_name'],v['width'],v['height'])==('h264',720,1280),v
+            assert a['codec_name']=='aac',a
+            assert abs(float(probe['format']['duration'])-duration)<0.25,probe['format']
+            p=subprocess.run(['ffmpeg','-hide_banner','-i',str(video),'-af',
+              'silencedetect=noise=-60dB:d=6','-f','null','-'],capture_output=True,text=True,check=True)
+            measured=[float(x) for x in re.findall(r'silence_duration:\s*([0-9.]+)',p.stderr)]
+            assert len([x for x in measured if abs(x-7)<=0.2])==1,measured
+            overlay=Image.open(f'kids/jori-flimm/relaunch-v2/assets/tiktok-safezone/e{episode:03d}-puzzle-overlay.png')
+            assert overlay.size==(720,1280)
+            print('JORI_TIKTOK_SAFEZONE_MP4_OK',episode,probe['format'],measured)
+          source=Path('kids/jori-flimm/relaunch-v2/scripts/apply_tiktok_safezone_e010_e011.py').read_text()
+          assert 'SAFE_RIGHT = 540' in source
+          assert 'WELCHE KUGEL' in source and 'WELCHE FORM PASST' in source
+          print('JORI_TIKTOK_SAFEZONE_CONTENT_BOUNDARY_OK x<=540')
+          PY
+      - name: Commit corrected MP4 files and safe-zone overlays
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            published/jori-flimm-2026-10-31-e010-v2.mp4 \
+            published/jori-flimm-2026-11-01-e011-v1.mp4 \
+            kids/jori-flimm/relaunch-v2/assets/tiktok-safezone/e010-puzzle-overlay.png \
+            kids/jori-flimm/relaunch-v2/assets/tiktok-safezone/e011-puzzle-overlay.png
+          git commit -m "kids: move E010 and E011 puzzles into TikTok safe zone"
+          git push origin HEAD:feature/jori-flimm-neustart-folge001
+      - name: Replace only the media of the existing Buffer posts
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_buffer.py --episode 10 --replace-existing
+          python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_buffer.py --episode 11 --replace-existing
