@@ -51,5 +51,11 @@
   "buffer_due_at": "2026-11-01T13:00:00.000Z",
   "buffer_release_run_id": 40839634275,
   "buffer_postcheck_run_id": 40839817576,
-  "video_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-neustart-folge001/published/jori-flimm-2026-11-01-e011-v1.mp4"
+  "video_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-neustart-folge001/published/jori-flimm-2026-11-01-e011-v1.mp4",
+  "tiktok_safezone_corrected": true,
+  "tiktok_safezone_content_right_edge_px": 540,
+  "tiktok_safezone_correction_run_id": 40847854026,
+  "buffer_media_updated_in_place": true,
+  "buffer_post_id_preserved": true,
+  "buffer_due_at_preserved": true
 }
