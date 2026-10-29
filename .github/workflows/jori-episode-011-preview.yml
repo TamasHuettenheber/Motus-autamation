@@ -82,7 +82,7 @@ jobs:
 
       - name: Generate Sulafat using the verified Free Tier model
         env:
-          JORI_GEMINI_API_KEY: \${{ secrets.JORI_GEMINI_API_KEY }}
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
           JORI_TTS_MODEL: gemini-3.8-flash-lite-tts
         run: python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_voice_e011.py
 
