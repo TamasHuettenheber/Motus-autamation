@@ -45,7 +45,12 @@ jobs:
           base=Path('kids/jori-flimm/relaunch-v2')
           r=json.loads((base/'episode_012_release_record.json').read_text(encoding='utf-8'))
           assert r['episode_number']==12 and r['title']=='Der Lichtweg nach Hause'
-          assert r['user_approved_for_publication'] is True and r['status']=='READY_FOR_BUFFER'
+          assert r['user_approved_for_publication'] is True and r['status'] in {'READY_FOR_BUFFER','SCHEDULED'}
+          if r['status']=='SCHEDULED':
+              assert r.get('buffer_status')=='scheduled'
+              assert r.get('buffer_post_id')=='6ae44979a83a7fb63c9e8426'
+              assert r.get('buffer_channel_id')=='6ad948ea778b240e2f839607'
+              assert r.get('buffer_due_at')=='2026-11-02T13:00:00.000Z'
           assert r['render_qc_passed'] is True and r['final_qc_run_id']==41020691474
           assert r['preview_run_id']==41019843825 and r['queue_check_run_id']==41020714529
           assert r['target_channel']=='@jori.flimm'
