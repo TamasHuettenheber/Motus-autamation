@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-30T00:51:39.544468+00:00",
+  "checked_at_utc": "2026-10-30T07:01:57.838463+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6ae289e8b5c2969a071fe2c1",
       "text": "Dein Wecker klingelt, und sofort greifst du zum Smartphone, um ziellos durch soziale Medien zu wischen. Genau dieser erste Griff raubt dir jeden Morgen wertvolle mentale Klarheit, bevor der Tag überhaupt richtig begonnen hat. Lass das Handy heute in der Schublade liegen und trinke stattdessen in aller Ruhe ein Glas Wasser. Ersetze die digitale Ablenkung durch echte Präsenz. Schreibe mir in den Kommentaren, wie lange du heute Morgen ohne Bildschirm ausgehalten hast.\n\n#motus #fokus #digitalbalance #aufmerksamkeit #selbstentwicklung\n\nMusik: Tanner Helland – Wild Waters (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-30T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-30T06:02:25.117Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7702336857589288225",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-30-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae289e8b5c2969a071fe2c1_video.mp4"
         }
       ]
     },
