@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Der zweite blaue Punkt schoss durch die Glaskuppel – direkt auf die Karte von Joris Dorf!",
+      "start": 0.0,
+      "end": 7.84,
+      "duration": 7.84
+    },
+    {
+      "kind": "speech",
+      "text": "Jori beugte sich über den Glasboden. Der erste Lichtpunkt schwebte über ihrem Haus, der zweite über einer silbernen Weide am Ufer. Flimm leuchtete beide Stellen an. Sofort zogen die Punkte zwei blaue Bögen durch den Saal. Auf der großen Karte lag das Haus deutlich oberhalb der Weide.",
+      "start": 7.84,
+      "end": 31.6,
+      "duration": 23.76
+    },
+    {
+      "kind": "speech",
+      "text": "Drei kleine Glaskarten stiegen aus dem Boden. Auf Karte A lag das Haus über der Weide. Auf Karte B lag es rechts daneben. Auf Karte C lag es darunter. Jori sah von der großen Karte zu den drei kleinen Karten. Flimm rückte näher, damit jedes Zeichen hell und deutlich zu erkennen war.",
+      "start": 31.6,
+      "end": 58.24,
+      "duration": 26.64
+    },
+    {
+      "kind": "speech",
+      "text": "Welche kleine Karte stimmt mit der großen Karte überein: A, B oder C?",
+      "start": 58.24,
+      "end": 66.96,
+      "duration": 8.72
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 66.96,
+      "end": 73.96,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Karte A! Dort liegt das Haus ebenfalls über der Weide. Jori berührte Karte A. Sie leuchtete blau auf, während die anderen beiden Karten erloschen. Die zwei Lichtpunkte verbanden sich zu einem breiten Lichtweg, der spiralförmig zur Kuppel hinaufstieg. Flimm sprang aufgeregt neben Jori.",
+      "start": 73.96,
+      "end": 96.64,
+      "duration": 22.68
+    },
+    {
+      "kind": "speech",
+      "text": "Der Lichtweg hob Jori und Flimm sanft durch die Kuppel. Unter ihnen schrumpfte der Glassaal, über ihnen schimmerte die Unterseite des Seeeises. Dahinter leuchteten schon die ersten Dächer von Joris Dorf. Dann blieb Jori mitten im Licht stehen. In ihrem Dachfenster glomm plötzlich ein roter Punkt auf. Er blinkte einmal – und ein zweiter roter Funke antwortete aus ihrem Zimmer. Flimm hielt den Atem an. Wer war vor ihnen im Haus?",
+      "start": 96.64,
+      "end": 133.52,
+      "duration": 36.88
+    }
+  ],
+  "duration": 133.52,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
