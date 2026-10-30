@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-30T14:02:57.346797+00:00",
+  "checked_at_utc": "2026-10-30T19:15:02.136647+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6ae289b5cc91be5434b81532",
       "text": "Kollegen schreiben dir noch schnell eine dringende Nachricht, obwohl dein Arbeitstag längst vorbei sein sollte. Du zögerst kurz, weil du niemanden enttäuschen möchtest, spürst aber gleichzeitig die pure Erschöpfung in deinen Knochen. Genau jetzt ziehst du eine klare Grenze und schaltest das Diensthandy stumm, um den Abend für dich zu haben. Niemand dankt dir ständige Erreichbarkeit in deiner Freizeit. Teile dieses Video mit jemandem, der heute Abend ganz dringend diesen Weckruf braucht.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – A Memory Away (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-30T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-30T17:32:40.129Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7702514760104807712",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-30-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae289b5cc91be5434b81532_video.mp4"
         }
       ]
     },
