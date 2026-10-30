@@ -1,0 +1,93 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 12,
+  "series_version": "relaunch-v2",
+  "title": "Der Lichtweg nach Hause",
+  "hook": "Der zweite blaue Punkt schoss durch die Glaskuppel – direkt auf die Karte von Joris Dorf!",
+  "story": "Jori beugte sich über den Glasboden. Der erste Lichtpunkt schwebte über ihrem Haus, der zweite über einer silbernen Weide am Ufer. Flimm leuchtete beide Stellen an. Sofort zogen die Punkte zwei blaue Bögen durch den Saal. Auf der großen Karte lag das Haus deutlich oberhalb der Weide. Drei kleine Glaskarten stiegen aus dem Boden. Auf Karte A lag das Haus über der Weide. Auf Karte B lag es rechts daneben. Auf Karte C lag es darunter. Jori sah von der großen Karte zu den drei kleinen Karten. Flimm rückte näher, damit jedes Zeichen hell und deutlich zu erkennen war.",
+  "question": "Welche kleine Karte stimmt mit der großen Karte überein: A, B oder C?",
+  "answer": "Karte A!",
+  "after": "Dort liegt das Haus ebenfalls über der Weide. Jori berührte Karte A. Sie leuchtete blau auf, während die anderen beiden Karten erloschen. Die zwei Lichtpunkte verbanden sich zu einem breiten Lichtweg, der spiralförmig zur Kuppel hinaufstieg. Flimm sprang aufgeregt neben Jori.",
+  "cliff": "Der Lichtweg hob Jori und Flimm sanft durch die Kuppel. Unter ihnen schrumpfte der Glassaal, über ihnen schimmerte die Unterseite des Seeeises. Dahinter leuchteten schon die ersten Dächer von Joris Dorf. Dann blieb Jori mitten im Licht stehen. In ihrem Dachfenster glomm plötzlich ein roter Punkt auf. Er blinkte einmal – und ein zweiter roter Funke antwortete aus ihrem Zimmer. Flimm hielt den Atem an. Wer war vor ihnen im Haus?",
+  "riddle": {
+    "type": "visual_map_match",
+    "question": "Welche kleine Karte stimmt mit der großen Karte überein: A, B oder C?",
+    "answer": "Karte A",
+    "evidence_in_story": "Auf der großen Karte liegt Joris Haus oberhalb der silbernen Weide. Nur Karte A zeigt dieselbe Anordnung.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "map_position_matching",
+  "clues": [
+    "A: Haus über der Weide",
+    "B: Haus rechts von der Weide",
+    "C: Haus unter der Weide"
+  ],
+  "correct": 0,
+  "puzzle_visual": "Kurze Frage „Welche Karte stimmt?“. Oben die Referenz Haus über Weide; darunter drei klare Karten A, B, C. Nur A zeigt dieselbe Anordnung. Keine weiteren Textblöcke. Alles links von x=540 innerhalb der TikTok-Safe-Zone.",
+  "continuity": "Setzt direkt beim zweiten blauen Punkt hoch in der Kuppel aus Folge 011 an. Beide Punkte markieren Joris Haus und eine silberne Weide auf der Karte. Das neue Karten-Zuordnungsrätsel öffnet einen Lichtweg nach oben. Der Cliffhanger zeigt einen unbekannten roten Punkt in Joris Dachfenster.",
+  "narration": "Der zweite blaue Punkt schoss durch die Glaskuppel – direkt auf die Karte von Joris Dorf! [[SEGMENT]] Jori beugte sich über den Glasboden. Der erste Lichtpunkt schwebte über ihrem Haus, der zweite über einer silbernen Weide am Ufer. Flimm leuchtete beide Stellen an. Sofort zogen die Punkte zwei blaue Bögen durch den Saal. Auf der großen Karte lag das Haus deutlich oberhalb der Weide. [[SEGMENT]] Drei kleine Glaskarten stiegen aus dem Boden. Auf Karte A lag das Haus über der Weide. Auf Karte B lag es rechts daneben. Auf Karte C lag es darunter. Jori sah von der großen Karte zu den drei kleinen Karten. Flimm rückte näher, damit jedes Zeichen hell und deutlich zu erkennen war. [[SEGMENT]] Welche kleine Karte stimmt mit der großen Karte überein: A, B oder C? [[PAUSE:7]] Karte A! Dort liegt das Haus ebenfalls über der Weide. Jori berührte Karte A. Sie leuchtete blau auf, während die anderen beiden Karten erloschen. Die zwei Lichtpunkte verbanden sich zu einem breiten Lichtweg, der spiralförmig zur Kuppel hinaufstieg. Flimm sprang aufgeregt neben Jori. [[SEGMENT]] Der Lichtweg hob Jori und Flimm sanft durch die Kuppel. Unter ihnen schrumpfte der Glassaal, über ihnen schimmerte die Unterseite des Seeeises. Dahinter leuchteten schon die ersten Dächer von Joris Dorf. Dann blieb Jori mitten im Licht stehen. In ihrem Dachfenster glomm plötzlich ein roter Punkt auf. Er blinkte einmal – und ein zweiter roter Funke antwortete aus ihrem Zimmer. Flimm hielt den Atem an. Wer war vor ihnen im Haus?",
+  "narration_tts": "Der zweite blaue Punkt schoss durch die Glaskuppel – direkt auf die Karte von Joris Dorf! [[SEGMENT]] Jori beugte sich über den Glasboden. Der erste Lichtpunkt schwebte über ihrem Haus, der zweite über einer silbernen Weide am Ufer. Flimm leuchtete beide Stellen an. Sofort zogen die Punkte zwei blaue Bögen durch den Saal. Auf der großen Karte lag das Haus deutlich oberhalb der Weide. [[SEGMENT]] Drei kleine Glaskarten stiegen aus dem Boden. Auf Karte A lag das Haus über der Weide. Auf Karte B lag es rechts daneben. Auf Karte C lag es darunter. Jori sah von der großen Karte zu den drei kleinen Karten. Flimm rückte näher, damit jedes Zeichen hell und deutlich zu erkennen war. [[SEGMENT]] Welche kleine Karte stimmt mit der großen Karte überein: A, B oder C? [[PAUSE:7]] Karte A! Dort liegt das Haus ebenfalls über der Weide. Jori berührte Karte A. Sie leuchtete blau auf, während die anderen beiden Karten erloschen. Die zwei Lichtpunkte verbanden sich zu einem breiten Lichtweg, der spiralförmig zur Kuppel hinaufstieg. Flimm sprang aufgeregt neben Jori. [[SEGMENT]] Der Lichtweg hob Jori und Flimm sanft durch die Kuppel. Unter ihnen schrumpfte der Glassaal, über ihnen schimmerte die Unterseite des Seeeises. Dahinter leuchteten schon die ersten Dächer von Joris Dorf. Dann blieb Jori mitten im Licht stehen. In ihrem Dachfenster glomm plötzlich ein roter Punkt auf. Er blinkte einmal – und ein zweiter roter Funke antwortete aus ihrem Zimmer. Flimm hielt den Atem an. Wer war vor ihnen im Haus?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "render_pending",
+  "scene_briefs": [
+    "Direkter Anschluss: zwei getrennte blaue Lichtpunkte in der Kuppel, Jori und Flimm schauen hoch.",
+    "Beide Lichtpunkte markieren auf der großen Karte Joris Haus und eine silberne Weide; Haus liegt oberhalb der Weide.",
+    "Drei blanke Glaskarten steigen auf; Jori und Flimm vergleichen sie mit der großen Karte.",
+    "Ruhige Rätselszene mit Platz für die programmgesteuerte Safe-Zone-Grafik.",
+    "Jori berührt Karte A; sie leuchtet und ein Lichtweg öffnet sich.",
+    "Lichtweg hebt Jori und Flimm durch die Kuppel zur Unterseite des Seeeises.",
+    "Cliffhanger: roter Punkt glimmt im Dachfenster von Joris Haus."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-012-v1/scene-01.jpg",
+      "scene": 1,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-012-v1/scene-02.jpg",
+      "scene": 2,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-012-v1/scene-03.jpg",
+      "scene": 3,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-012-v1/scene-04.jpg",
+      "scene": 4,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-012-v1/scene-05.jpg",
+      "scene": 5,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-012-v1/scene-06.jpg",
+      "scene": 6,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-012-v1/scene-07.jpg",
+      "scene": 7,
+      "generated": true,
+      "brief": null
+    }
+  ],
+  "created_at": "2026-10-30T08:30:00+01:00",
+  "status": "PREVIEW_PENDING",
+  "previous_cliffhanger": "Tief im Saal senkte sich das Mosaik in den gläsernen Boden. Darunter erschien eine Karte des Sees. Jori erkannte ihr Dorf weit oben am Ufer. Ein winziger blauer Punkt wanderte über die Karte bis zum Dach ihres Hauses und hob sich dann aus dem Glas. Er schwebte genau über der Treppe. „Warum kennt das Licht unser Zuhause?“, fragte Jori. Flimm sah nach oben. Dort blitzte in der Dunkelheit ein zweiter Punkt auf."
+}

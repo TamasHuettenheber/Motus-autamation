@@ -1,0 +1,153 @@
+name: Jori & Flimm — Folge 012 production preview
+
+on:
+  push:
+    branches: [feature/jori-flimm-neustart-folge001]
+    paths:
+      - .github/workflows/jori-episode-012-preview.yml
+      - kids/jori-flimm/relaunch-v2/episode_012_story_draft.json
+      - kids/jori-flimm/relaunch-v2/assets/episode-012-v1/**
+      - kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer_e012.py
+      - kids/jori-flimm/relaunch-v2/scripts/github_followup_voice_e012.py
+      - kids/jori-flimm/relaunch-v2/scripts/generate_voice_gemini_e012.py
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: jori-episode-012-preview
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          fetch-depth: 1
+          sparse-checkout: |
+            kids/jori-flimm
+            published
+            .github/workflows/jori-episode-012-preview.yml
+      - name: Install local render tools
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then sudo sed -i 's#azure.archive.ubuntu.com#archive.ubuntu.com#g' /etc/apt/apt-mirrors.txt; fi
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends ffmpeg fonts-dejavu-core python3-pil
+      - name: Validate story, seven new images, safe zone and Python before TTS
+        run: |
+          set -euo pipefail
+          python3 -m py_compile \
+            kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer_e012.py \
+            kids/jori-flimm/relaunch-v2/scripts/github_followup_voice_e012.py \
+            kids/jori-flimm/relaunch-v2/scripts/generate_voice_gemini_e012.py
+          python3 - <<'PY'
+          import hashlib,json,re
+          from pathlib import Path
+          from PIL import Image
+          base=Path('kids/jori-flimm/relaunch-v2')
+          e=json.loads((base/'episode_012_story_draft.json').read_text(encoding='utf-8'))
+          prev=json.loads((base/'episode_011_story_draft.json').read_text(encoding='utf-8'))
+          assert e['episode_number']==12 and e['title']=='Der Lichtweg nach Hause'
+          assert prev['episode_number']==11 and 'zweiter Punkt' in prev['cliff']
+          assert e['hook'].startswith('Der zweite blaue Punkt') and 'Karte von Joris Dorf' in e['hook']
+          assert e['riddle']['type']=='visual_map_match' and e['riddle']['pause_seconds']==7
+          assert e['question']==e['riddle']['question'] and e['answer']=='Karte A!'
+          assert 'Haus über der Weide' in e['clues'][0] and e['correct']==0
+          assert e['narration'].count('[[PAUSE:7]]')==1 and e['narration'].count('[[SEGMENT]]')==4
+          assert not re.search(r'\bJori\b.{0,75}\b(?:er|ihn|sein|ihm)\b',e['narration'],re.I)
+          clean=lambda s:re.sub(r'\[\[(?:PAUSE:[0-9.]+|SEGMENT)\]\]',' ',s)
+          words=lambda s:re.findall(r'\w+',s.lower())
+          assert words(clean(e['narration_tts']))==words(clean(e['narration']))
+          assert e['voice']=={'provider':'Gemini TTS 3.8','model':'gemini-3.8-flash-lite-tts','speaker_id':'Sulafat'}
+          paths=[Path(v['path']) for v in e['visuals']]
+          assert len(paths)==7 and len(set(paths))==7
+          hashes=[]
+          for p in paths:
+              assert p.is_file(),p
+              with Image.open(p) as im:assert im.size==(720,1280),(p,im.size)
+              hashes.append(hashlib.sha256(p.read_bytes()).hexdigest())
+          assert len(set(hashes))==7
+          old={hashlib.sha256(p.read_bytes()).hexdigest() for p in (base/'assets/episode-011-v1').glob('scene-*')}
+          assert not (set(hashes)&old),'episode 012 reused an episode 011 image'
+          renderer=(base/'scripts/github_followup_renderer_e012.py').read_text()
+          assert "(42,132,540,802)" in renderer and "MarginL,MarginR" in renderer and "2,60,180,277" in renderer
+          print('JORI_E012_STORY_ART_SAFEZONE_QC_OK',json.dumps({'title':e['title'],'seven_unique_new_9x16_scenes':True,'continuity':e['continuity'],'safe_text_x':'60..540'},ensure_ascii=False))
+          PY
+      - name: Generate Sulafat using the verified Free Tier model
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+          JORI_TTS_MODEL: gemini-3.8-flash-lite-tts
+        run: python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_voice_e012.py
+      - name: Persist successful Sulafat chunks and timeline for safe retries
+        if: always()
+        run: |
+          set -euo pipefail
+          cache_dir='kids/jori-flimm/relaunch-v2/audio-cache/episode-012'
+          if [ -d "$cache_dir" ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add --sparse "$cache_dir"
+            if ! git diff --cached --quiet; then
+              git commit -m 'kids: cache Sulafat audio for Jori episode 012'
+              git pull --rebase origin feature/jori-flimm-neustart-folge001
+              git push origin HEAD:feature/jori-flimm-neustart-folge001
+            fi
+          fi
+      - name: Render and QC the actual MP4
+        run: |
+          set -euo pipefail
+          python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer_e012.py --episode 12
+          python3 - <<'PY'
+          import json,re,subprocess,wave
+          from pathlib import Path
+          base=Path('work/episode_012');t=json.loads((base/'voice-timeline.json').read_text());items=t['items']
+          assert [x['kind'] for x in items]==['speech','speech','speech','speech','pause','speech','speech']
+          pause=items[4];assert abs(pause['duration']-7)<.001
+          with wave.open(str(base/'narration_source.wav'),'rb') as w:
+              assert (w.getframerate(),w.getsampwidth(),w.getnchannels())==(24000,2,1)
+              w.setpos(round(pause['start']*24000));silence=w.readframes(7*24000)
+              assert len(silence)==7*24000*2 and not any(silence)
+          captions=(base/'captions.ass').read_text()
+          def sec(s):h,m,x=s.split(':');return int(h)*3600+int(m)*60+float(x)
+          rows=[x for x in captions.splitlines() if x.startswith('Dialogue:')]
+          for row in rows:
+              cols=row.split(',',9);a,b=sec(cols[1]),sec(cols[2]);assert b<=pause['start']+.01 or a>=pause['end']-.01,row
+          expected=re.findall(r'\w+',' '.join(x['text'] for x in items if x['kind']=='speech').lower())
+          visible=re.findall(r'\w+',' '.join(x.split(',',9)[-1].replace('\\N',' ') for x in rows).lower());assert visible==expected
+          media=Path('published/jori-flimm-2026-11-02-e012-v1.mp4')
+          probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','stream=codec_type,codec_name,width,height','-show_entries','format=duration,size','-of','json',str(media)],text=True))
+          streams=probe['streams'];assert len(streams)==2
+          v=next(x for x in streams if x['codec_type']=='video');a=next(x for x in streams if x['codec_type']=='audio')
+          assert (v['codec_name'],v['width'],v['height'])==('h264',720,1280) and a['codec_name']=='aac'
+          duration=float(probe['format']['duration']);assert 70<duration<150 and abs(duration-float(t['duration']))<.25 and int(probe['format']['size'])>1_000_000
+          p=subprocess.run(['ffmpeg','-hide_banner','-i',str(media),'-af','silencedetect=noise=-60dB:d=6.5','-f','null','-'],capture_output=True,text=True,check=True)
+          measured=[float(x) for x in re.findall(r'silence_duration:\s*([0-9.]+)',p.stderr)];assert any(abs(x-7)<=.2 for x in measured),measured
+          st=json.loads((base/'scene-timing.json').read_text());assert [x['scene'] for x in st]==['hook','story_a','story_b','puzzle','answer','cliff_transition','cliff']
+          assert abs(st[3]['end']-pause['end'])<.01
+          print('JORI_E012_MP4_QC_OK',json.dumps({'duration':duration,'bytes':probe['format']['size'],'video':'720x1280 H.264','audio':'AAC Sulafat','measured_pause_seconds':measured,'caption_token_match':True,'tiktok_safe_zone':True},ensure_ascii=False))
+          PY
+      - name: Save actual preview and QC evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Jori-Episode-012-Preview
+          path: |
+            published/jori-flimm-2026-11-02-e012-v1.mp4
+            work/episode_012/
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Commit only the validated preview MP4
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse published/jori-flimm-2026-11-02-e012-v1.mp4
+          if ! git diff --cached --quiet; then
+            git commit -m 'kids: add validated Jori episode 012 preview'
+            git pull --rebase origin feature/jori-flimm-neustart-folge001
+            git push origin HEAD:feature/jori-flimm-neustart-folge001
+          fi
