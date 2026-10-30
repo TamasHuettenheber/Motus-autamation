@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-06-1200",
-      "clip_id": "planner-writing-7744197",
-      "source": "https://www.pexels.com/video/woman-writing-on-a-notebook-at-the-office-7744197/",
-      "used_at_utc": "2026-10-05T21:28:01.211218+00:00"
-    },
-    {
       "output_name": "motus-2026-10-06-1830",
       "clip_id": "train-window-36620147",
       "source": "https://www.pexels.com/video/scenic-views-through-train-window-36620147/",
@@ -599,6 +593,12 @@
       "clip_id": "sunrise-sea-11382155",
       "source": "https://www.pexels.com/video/vertical-shot-of-sunrise-over-sea-11382155/",
       "used_at_utc": "2026-10-28T23:48:43.289330+00:00"
+    },
+    {
+      "output_name": "motus-2026-10-31-0700",
+      "clip_id": "study-breakfast-5387028",
+      "source": "https://www.pexels.com/video/a-person-studying-while-having-breakfast-5387028/",
+      "used_at_utc": "2026-10-30T00:17:11.997190+00:00"
     }
   ]
 }
