@@ -21,5 +21,12 @@
   "flimm_visual_consistency_checked": true,
   "tiktok_safezone_checked": true,
   "tiktok_safezone_content_right_edge_px": 540,
-  "status": "READY_FOR_BUFFER"
+  "status": "SCHEDULED",
+  "buffer_post_id": "6ae44979a83a7fb63c9e8426",
+  "buffer_status": "scheduled",
+  "buffer_channel_id": "6ad948ea778b240e2f839607",
+  "buffer_due_at": "2026-11-02T13:00:00.000Z",
+  "buffer_release_run_id": 41021222128,
+  "buffer_postcheck_run_id": 41021414565,
+  "video_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-neustart-folge001/published/jori-flimm-2026-11-02-e012-v1.mp4"
 }
