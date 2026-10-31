@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-08-0700",
-      "clip_id": "sunrise-sea-18303443",
-      "source": "https://www.pexels.com/video/sunrise-over-the-sea-vertical-video-18303443/",
-      "used_at_utc": "2026-10-07T20:49:59.969164+00:00"
-    },
-    {
       "output_name": "motus-2026-10-08-1200",
       "clip_id": "work-laptop-8479274",
       "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
@@ -599,6 +593,12 @@
       "clip_id": "sunset-ocean-7975481",
       "source": "https://www.pexels.com/video/vertical-video-of-sunset-7975481/",
       "used_at_utc": "2026-10-31T23:42:54.788126+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-02-1830",
+      "clip_id": "work-laptop-8479274",
+      "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
+      "used_at_utc": "2026-10-31T23:43:05.191323+00:00"
     }
   ]
 }
