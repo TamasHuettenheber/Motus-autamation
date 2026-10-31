@@ -1,0 +1,93 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 13,
+  "series_version": "relaunch-v2",
+  "title": "Der rote Gast im Dachzimmer",
+  "hook": "Im Dachfenster glühten zwei rote Punkte – und dann huschten sie davon!",
+  "story": "Der blaue Lichtweg trug Jori und Flimm bis auf das verschneite Dach. Neben ihnen funkelte das Fenster von Joris Dachzimmer. Jori schob es vorsichtig auf. Zwei rote Funken sausten an ihrer Mütze vorbei und zogen eine leuchtende Spur zwischen Schrank, Spielzeugtruhe und Vorhang. Im Zimmer schwebte eine winzige rote Lichtmotte. Als Flimm seinen Stern heller leuchten ließ, warf sie drei verschiedene Schatten an die Wand. Die Motte selbst hatte oben zwei runde Flügel und unten zwei lange, spitze Flügel. Jori betrachtete die drei Schatten genau.",
+  "question": "Welcher Schatten gehört zur Lichtmotte: A, B oder C?",
+  "answer": "Schatten B!",
+  "after": "Nur bei B sind die oberen Flügel rund und die unteren spitz. Jori zeigte auf den mittleren Schatten. Sofort verschwanden A und C. Die Lichtmotte landete auf Flimms Pfote und öffnete ihre Flügel. Darunter funkelte ein kleiner blauer Sternsteinsplitter.",
+  "cliff": "Die Motte trug den Splitter zur Wand hinter Joris Schrank. Jori schob den Schrank beiseite, und Flimm beleuchtete eingeritzte Sterne. Mit dem Splitter berührte die Motte die Mitte. Da öffnete sich eine verborgene Luke. Silbernes Licht fiel heraus. Tief im schmalen Gang stand eine kleine Gestalt und hob die Hand. „Endlich seid ihr da“, flüsterte sie. Jori und Flimm sahen einander an. Wer wartete in Joris Dachboden auf sie?",
+  "riddle": {
+    "type": "visual_shadow_match",
+    "question": "Welcher Schatten gehört zur Lichtmotte: A, B oder C?",
+    "answer": "Schatten B",
+    "evidence_in_story": "Die Lichtmotte hat runde obere Flügel und lange, spitze untere Flügel. Nur Schatten B zeigt genau diese Kombination.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "shape_feature_matching",
+  "clues": [
+    "Oben: zwei runde Flügel",
+    "Unten: zwei lange, spitze Flügel",
+    "Vergleiche alle drei Schatten"
+  ],
+  "correct": 1,
+  "puzzle_visual": "Kurze Frage „Welcher Schatten passt?“. Drei klare Motten-Schatten A, B, C. Nur B hat oben runde und unten spitze Flügel. Alles links von x=540 innerhalb der TikTok-Safe-Zone.",
+  "continuity": "Setzt direkt bei den zwei roten Funken in Joris Dachfenster aus Folge 012 an. Die Funken gehören zu einer Lichtmotte, deren Schattenrätsel einen Sternsteinsplitter und eine verborgene Dachluke enthüllt.",
+  "narration": "Im Dachfenster glühten zwei rote Punkte – und dann huschten sie davon! [[SEGMENT]] Der blaue Lichtweg trug Jori und Flimm bis auf das verschneite Dach. Neben ihnen funkelte das Fenster von Joris Dachzimmer. Jori schob es vorsichtig auf. Zwei rote Funken sausten an ihrer Mütze vorbei und zogen eine leuchtende Spur zwischen Schrank, Spielzeugtruhe und Vorhang. [[SEGMENT]] Im Zimmer schwebte eine winzige rote Lichtmotte. Als Flimm seinen Stern heller leuchten ließ, warf sie drei verschiedene Schatten an die Wand. Die Motte selbst hatte oben zwei runde Flügel und unten zwei lange, spitze Flügel. Jori betrachtete die drei Schatten genau. [[SEGMENT]] Welcher Schatten gehört zur Lichtmotte: A, B oder C? [[PAUSE:7]] Schatten B! Nur bei B sind die oberen Flügel rund und die unteren spitz. Jori zeigte auf den mittleren Schatten. Sofort verschwanden A und C. Die Lichtmotte landete auf Flimms Pfote und öffnete ihre Flügel. Darunter funkelte ein kleiner blauer Sternsteinsplitter. [[SEGMENT]] Die Motte trug den Splitter zur Wand hinter Joris Schrank. Jori schob den Schrank beiseite, und Flimm beleuchtete eingeritzte Sterne. Mit dem Splitter berührte die Motte die Mitte. Da öffnete sich eine verborgene Luke. Silbernes Licht fiel heraus. Tief im schmalen Gang stand eine kleine Gestalt und hob die Hand. „Endlich seid ihr da“, flüsterte sie. Jori und Flimm sahen einander an. Wer wartete in Joris Dachboden auf sie?",
+  "narration_tts": "Im Dachfenster glühten zwei rote Punkte – und dann huschten sie davon! [[SEGMENT]] Der blaue Lichtweg trug Jori und Flimm bis auf das verschneite Dach. Neben ihnen funkelte das Fenster von Joris Dachzimmer. Jori schob es vorsichtig auf. Zwei rote Funken sausten an ihrer Mütze vorbei und zogen eine leuchtende Spur zwischen Schrank, Spielzeugtruhe und Vorhang. [[SEGMENT]] Im Zimmer schwebte eine winzige rote Lichtmotte. Als Flimm seinen Stern heller leuchten ließ, warf sie drei verschiedene Schatten an die Wand. Die Motte selbst hatte oben zwei runde Flügel und unten zwei lange, spitze Flügel. Jori betrachtete die drei Schatten genau. [[SEGMENT]] Welcher Schatten gehört zur Lichtmotte: A, B oder C? [[PAUSE:7]] Schatten B! Nur bei B sind die oberen Flügel rund und die unteren spitz. Jori zeigte auf den mittleren Schatten. Sofort verschwanden A und C. Die Lichtmotte landete auf Flimms Pfote und öffnete ihre Flügel. Darunter funkelte ein kleiner blauer Sternsteinsplitter. [[SEGMENT]] Die Motte trug den Splitter zur Wand hinter Joris Schrank. Jori schob den Schrank beiseite, und Flimm beleuchtete eingeritzte Sterne. Mit dem Splitter berührte die Motte die Mitte. Da öffnete sich eine verborgene Luke. Silbernes Licht fiel heraus. Tief im schmalen Gang stand eine kleine Gestalt und hob die Hand. „Endlich seid ihr da“, flüsterte sie. Jori und Flimm sahen einander an. Wer wartete in Joris Dachboden auf sie?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "render_pending",
+  "scene_briefs": [
+    "Direkter Anschluss: Jori und Flimm steigen auf dem blauen Lichtweg zum roten Dachfenster.",
+    "Beide landen auf Joris verschneitem Dach; zwei rote Funken leuchten hinter dem Fenster.",
+    "Im warmen Dachzimmer fliegt eine rote Lichtmotte zwischen Schrank, Truhe und Vorhang.",
+    "Ruhige Rätselszene mit drei Motten-Schatten und Platz für die Safe-Zone-Grafik.",
+    "Jori wählt den mittleren Schatten B; die Motte landet auf Flimms Pfote.",
+    "Die Motte bringt einen blauen Sternsteinsplitter zu einer verborgenen Luke hinter dem Schrank.",
+    "Cliffhanger: Die Luke öffnet sich; eine unbekannte kleine Gestalt wartet im silbernen Gang."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-013-v1/scene-01.jpg",
+      "scene": 1,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-013-v1/scene-02.jpg",
+      "scene": 2,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-013-v1/scene-03.jpg",
+      "scene": 3,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-013-v1/scene-04.jpg",
+      "scene": 4,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-013-v1/scene-05.jpg",
+      "scene": 5,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-013-v1/scene-06.jpg",
+      "scene": 6,
+      "generated": true,
+      "brief": null
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-013-v1/scene-07.jpg",
+      "scene": 7,
+      "generated": true,
+      "brief": null
+    }
+  ],
+  "created_at": "2026-10-31T08:20:00+01:00",
+  "status": "PREVIEW_PENDING",
+  "previous_cliffhanger": "Der Lichtweg hob Jori und Flimm sanft durch die Kuppel. Unter ihnen schrumpfte der Glassaal, über ihnen schimmerte die Unterseite des Seeeises. Dahinter leuchteten schon die ersten Dächer von Joris Dorf. Dann blieb Jori mitten im Licht stehen. In ihrem Dachfenster glomm plötzlich ein roter Punkt auf. Er blinkte einmal – und ein zweiter roter Funke antwortete aus ihrem Zimmer. Flimm hielt den Atem an. Wer war vor ihnen im Haus?"
+}
