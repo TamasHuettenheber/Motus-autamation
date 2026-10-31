@@ -42,21 +42,20 @@ D=t['duration'];pause=items[pause_index]
 F='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf';F2='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
 font=lambda size,bold=True:ImageFont.truetype(F if bold else F2,size)
 def cmd(*xs):subprocess.run(list(map(str,xs)),check=True,timeout=600)
-def house(d,x,y,s=1.0):
- w=38*s;h=28*s
- d.rectangle((x-w/2,y-h/2,x+w/2,y+h/2),fill='#f4e6c8',outline='white',width=max(1,round(2*s)))
- d.polygon([(x-w*.65,y-h/2),(x,y-h*1.25),(x+w*.65,y-h/2)],fill='#d84a43',outline='white')
- d.rectangle((x-5*s,y,x+5*s,y+h/2),fill='#6b4935')
-def willow(d,x,y,s=1.0):
- d.rectangle((x-3*s,y-2*s,x+3*s,y+19*s),fill='#b9cad0')
- d.ellipse((x-22*s,y-17*s,x+22*s,y+12*s),fill='#b7dce4',outline='white',width=max(1,round(2*s)))
- for dx in (-12,-5,5,12):d.line((x+dx*s,y,x+dx*1.4*s,y+22*s),fill='#dff7ff',width=max(1,round(2*s)))
+def moth(d,x,y,mode,s=1.0,fill='#d45a54'):
+ body_w=max(2,round(6*s));d.ellipse((x-4*s,y-15*s,x+4*s,y+18*s),fill=fill)
+ d.line((x-2*s,y-13*s,x-10*s,y-26*s),fill=fill,width=body_w);d.line((x+2*s,y-13*s,x+10*s,y-26*s),fill=fill,width=body_w)
+ if mode in ('round_round','round_point'):
+  d.ellipse((x-37*s,y-20*s,x-3*s,y+9*s),fill=fill);d.ellipse((x+3*s,y-20*s,x+37*s,y+9*s),fill=fill)
+ else:
+  d.polygon([(x-3*s,y-4*s),(x-40*s,y-24*s),(x-28*s,y+13*s)],fill=fill);d.polygon([(x+3*s,y-4*s),(x+40*s,y-24*s),(x+28*s,y+13*s)],fill=fill)
+ if mode=='round_round':
+  d.ellipse((x-30*s,y+3*s,x-2*s,y+31*s),fill=fill);d.ellipse((x+2*s,y+3*s,x+30*s,y+31*s),fill=fill)
+ else:
+  d.polygon([(x-2*s,y+3*s),(x-29*s,y+15*s),(x-13*s,y+45*s)],fill=fill);d.polygon([(x+2*s,y+3*s),(x+29*s,y+15*s),(x+13*s,y+45*s)],fill=fill)
 def option_card(d,x,label,mode):
- d.rounded_rectangle((x-65,515,x+65,752),radius=17,fill=(28,54,82,250),outline=(245,216,145,255),width=3)
- d.text((x,548),label,font=font(22),anchor='mm',fill='white')
- if mode=='above':house(d,x,615,.8);willow(d,x,682,.8)
- elif mode=='right':willow(d,x-25,650,.72);house(d,x+28,650,.72)
- else:willow(d,x,615,.8);house(d,x,686,.8)
+ d.rounded_rectangle((x-65,420,x+65,700),radius=17,fill=(28,54,82,250),outline=(245,216,145,255),width=3)
+ d.text((x,463),label,font=font(23),anchor='mm',fill='white');moth(d,x,555,mode,1.25,fill='#ee786d')
 def draw_scene(section):
  im=Image.open(ART/f'scene-{SCENES[section]:02d}.jpg').convert('RGB').resize((720,1280),Image.Resampling.LANCZOS)
  ov=Image.new('RGBA',(720,1280),(0,0,0,0));d=ImageDraw.Draw(ov)
@@ -67,12 +66,11 @@ def draw_scene(section):
   d.rounded_rectangle((40,150,540,245),radius=20,fill=(16,37,62,218))
   d.text((290,197),episode['title'],font=font(25),anchor='mm',fill='white')
  if section=='puzzle':
-  d.rounded_rectangle((42,132,540,802),radius=26,fill=(13,32,56,242),outline=(246,211,127,255),width=4)
-  d.text((291,182),'WELCHE KARTE STIMMT?',font=font(25),anchor='mm',fill='#fff2c9')
-  # Reference arrangement: house above willow.
-  d.rounded_rectangle((220,238,362,450),radius=18,fill=(28,54,82,250),outline=(112,205,244,255),width=3)
-  house(d,291,300,1.0);willow(d,291,380,1.0)
-  option_card(d,126,'A','above');option_card(d,291,'B','right');option_card(d,456,'C','below')
+  d.rounded_rectangle((42,132,540,760),radius=26,fill=(13,32,56,242),outline=(246,211,127,255),width=4)
+  d.text((291,178),'WELCHER SCHATTEN PASST?',font=font(24),anchor='mm',fill='#fff2c9')
+  d.text((291,225),'Oben rund  ·  unten spitz',font=font(20),anchor='mm',fill='white')
+  d.text((291,266),'Vergleiche A, B und C',font=font(18,False),anchor='mm',fill='#bdeaff')
+  option_card(d,126,'A','round_round');option_card(d,291,'B','round_point');option_card(d,456,'C','point_point')
  return Image.alpha_composite(im.convert('RGBA'),ov).convert('RGB')
 for section in SCENES:draw_scene(section).save(W/f'{section}.png')
 def sentence_intervals(item):
