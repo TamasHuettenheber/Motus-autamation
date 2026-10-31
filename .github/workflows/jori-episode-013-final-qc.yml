@@ -1,0 +1,74 @@
+name: Jori & Flimm — Folge 013 independent final QC
+
+on:
+  push:
+    branches: [feature/jori-flimm-neustart-folge001]
+    paths:
+      - .github/workflows/jori-episode-013-final-qc.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  final-qc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          sparse-checkout: |
+            kids/jori-flimm
+            published/jori-flimm-2026-11-03-e013-v1.mp4
+            .github/workflows/jori-episode-013-final-qc.yml
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends ffmpeg fonts-dejavu-core python3-pil
+      - name: Rebuild from cached Sulafat and independently verify final MP4
+        run: |
+          set -euo pipefail
+          python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_voice_e013.py | tee /tmp/voice.log
+          grep -q 'JORI_E013_SULAFAT_CACHE_REUSED; no TTS request' /tmp/voice.log
+          python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer_e013.py --episode 13
+          python3 - <<'PY'
+          import hashlib,json,re,subprocess,wave
+          from pathlib import Path
+          from PIL import Image,ImageDraw
+          root=Path('.');base=root/'kids/jori-flimm/relaunch-v2';work=root/'work/episode_013'
+          e=json.loads((base/'episode_013_story_draft.json').read_text());prev=json.loads((base/'episode_012_story_draft.json').read_text())
+          assert e['previous_cliffhanger']==prev['cliff']
+          assert 'zwei rote Punkte' in e['hook'] and 'zweiter roter Funke' in prev['cliff']
+          assert not re.search(r'\bJori\b.{0,75}\b(?:er|ihn|sein|ihm)\b',e['narration'],re.I)
+          paths=[Path(v['path']) for v in e['visuals']];assert len(paths)==7
+          hashes=[hashlib.sha256(p.read_bytes()).hexdigest() for p in paths];assert len(set(hashes))==7
+          old={hashlib.sha256(p.read_bytes()).hexdigest() for p in (base/'assets/episode-012-v1').glob('scene-*')};assert not set(hashes)&old
+          t=json.loads((work/'voice-timeline.json').read_text());pause=t['items'][4];assert pause['kind']=='pause' and abs(pause['duration']-7)<.001
+          with wave.open(str(work/'narration_source.wav'),'rb') as w:
+              w.setpos(round(pause['start']*w.getframerate()));s=w.readframes(round(7*w.getframerate()));assert not any(s)
+          captions=(work/'captions.ass').read_text();assert 'Style: Child,DejaVu Sans,34' in captions and ',2,60,180,277,1' in captions
+          def sec(x):h,m,s=x.split(':');return int(h)*3600+int(m)*60+float(s)
+          rows=[x for x in captions.splitlines() if x.startswith('Dialogue:')]
+          for row in rows:
+              c=row.split(',',9);a,b=sec(c[1]),sec(c[2]);assert b<=pause['start']+.01 or a>=pause['end']-.01
+          media=Path('published/jori-flimm-2026-11-03-e013-v1.mp4')
+          probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','stream=codec_type,codec_name,width,height','-show_entries','format=duration,size','-of','json',str(media)],text=True))
+          v=next(x for x in probe['streams'] if x['codec_type']=='video');a=next(x for x in probe['streams'] if x['codec_type']=='audio')
+          assert (v['codec_name'],v['width'],v['height'])==('h264',720,1280) and a['codec_name']=='aac'
+          assert abs(float(probe['format']['duration'])-125.708333)<.25 and int(probe['format']['size'])>1_000_000
+          p=subprocess.run(['ffmpeg','-hide_banner','-i',str(media),'-af','silencedetect=noise=-60dB:d=6.5','-f','null','-'],capture_output=True,text=True,check=True)
+          measured=[float(x) for x in re.findall(r'silence_duration:\s*([0-9.]+)',p.stderr)];assert any(abs(x-7)<=.2 for x in measured),measured
+          # Save the actual pause frame with TikTok exclusion overlays for visual evidence.
+          mid=(pause['start']+pause['end'])/2
+          subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-ss',str(mid),'-i',str(media),'-frames:v','1','/tmp/pause.png','-y'],check=True)
+          im=Image.open('/tmp/pause.png').convert('RGBA');d=ImageDraw.Draw(im,'RGBA');d.rectangle((560,0,719,1279),fill=(200,0,0,65));d.rectangle((0,1020,719,1279),fill=(230,120,0,55));im.save('/tmp/pause-safezone.png')
+          print('JORI_E013_INDEPENDENT_FINAL_QC_OK',json.dumps({'duration':probe['format']['duration'],'size':probe['format']['size'],'pause_seconds':measured,'seven_new_images':True,'subtitle_safe_x':'60..540','puzzle_board_right':540,'sulafat_cached_no_tts':True},ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Jori-E013-Final-QC-Evidence
+          path: |
+            /tmp/pause-safezone.png
+            work/episode_013/captions.ass
+            work/episode_013/scene-timing.json
+          retention-days: 14
