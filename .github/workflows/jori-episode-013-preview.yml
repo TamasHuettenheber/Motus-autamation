@@ -100,7 +100,7 @@ jobs:
       - name: Render and QC the actual MP4
         run: |
           set -euo pipefail
-          python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer_e013.py --episode 12
+          python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer_e013.py --episode 13
           python3 - <<'PY'
           import json,re,subprocess,wave
           from pathlib import Path
