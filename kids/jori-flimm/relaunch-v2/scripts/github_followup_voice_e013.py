@@ -5,7 +5,7 @@ from pathlib import Path
 root=Path.cwd()
 base=root/"kids/jori-flimm/relaunch-v2"
 e=json.loads((base/"episode_013_story_draft.json").read_text(encoding="utf-8"))
-assert e["episode_number"]==12
+assert e["episode_number"]==13
 assert e["voice"]=={"provider":"Gemini TTS 3.8","model":"gemini-3.8-flash-lite-tts","speaker_id":"Sulafat"}
 assert e["narration"].count("[[PAUSE:7]]")==1
 tokens=lambda s:re.findall(r"\w+",s.lower())

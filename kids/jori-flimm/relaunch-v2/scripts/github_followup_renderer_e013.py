@@ -5,12 +5,12 @@ from datetime import date,timedelta
 from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
 ROOT=Path.cwd();BASE=ROOT/'kids/jori-flimm/relaunch-v2'
-p=argparse.ArgumentParser();p.add_argument('--episode',type=int,required=True,choices=[12]);a=p.parse_args();n=a.episode
+p=argparse.ArgumentParser();p.add_argument('--episode',type=int,required=True,choices=[13]);a=p.parse_args();n=a.episode
 ART=BASE/'assets/episode-013-v1';W=ROOT/'work/episode_013';W.mkdir(parents=True,exist_ok=True)
 SCENES={name:i for i,name in enumerate(['hook','story_a','story_b','puzzle','answer','cliff_transition','cliff'],1)}
 paths=[ART/f'scene-{i:02d}.jpg' for i in range(1,8)]
 assert all(x.is_file() for x in paths);assert len({x.read_bytes() for x in paths})==7
-print('JORI_SCENE_ART_READY episode=12 unique_scenes=7')
+print('JORI_SCENE_ART_READY episode=13 unique_scenes=7')
 episode=json.loads((BASE/'episode_013_story_draft.json').read_text(encoding='utf-8'))
 audio=W/'narration_source.wav';timeline=W/'voice-timeline.json'
 assert audio.is_file() and timeline.is_file(),'No validated Sulafat narration'
@@ -120,4 +120,4 @@ output=ROOT/'published/jori-flimm-2026-11-03-e013-v1.mp4';output.parent.mkdir(ex
 cmd('ffmpeg','-nostdin','-y','-loglevel','error','-i',video,'-i',audio,'-filter_complex',f'[0:v]ass={sub}[v]','-map','[v]','-map','1:a','-c:v','libx264','-preset','veryfast','-crf','21','-pix_fmt','yuv420p','-r','24','-c:a','aac','-b:a','192k','-movflags','+faststart','-shortest',output)
 rendered=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','default=noprint_wrappers=1:nokey=1',str(output)],text=True).strip())
 assert output.stat().st_size>1_000_000 and abs(rendered-D)<.25
-print(f'JORI_EPISODE_RENDER_OK episode=12 duration={rendered} bytes={output.stat().st_size} tiktok_safe_right=540')
+print(f'JORI_EPISODE_RENDER_OK episode=13 duration={rendered} bytes={output.stat().st_size} tiktok_safe_right=540')
