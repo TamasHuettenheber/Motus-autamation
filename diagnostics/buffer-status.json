@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-31T17:40:57.030690+00:00",
+  "checked_at_utc": "2026-10-31T21:27:32.382999+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -73,15 +73,15 @@
     {
       "id": "6ae3e2304b8768bfb2ce6ce3",
       "text": "Das Zimmer ist dunkel, aber dein Kopf rattert unaufhörlich weiter wie ein Uhrwerk ohne Zeiger. Du wälzt im Halbdunkel die E-Mail von morgen und fragst dich angestrengt, ob du auch wirklich an alles gedacht hast. Genau dann hilft es, diese wirren Gedanken auf einen Zettel neben dem Bett zu werfen, statt sie weiter im Gehirn zu kreisen. Lass mir gerne ein Abo da, wenn du ab heute Abend deine nächtlichen Sorgen verlässlich aus dem Schlafzimmer verbannen möchtest.\n\n#motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-31T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-31T21:10:52.506Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7702940042955705632",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-31-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae3e2304b8768bfb2ce6ce3_video.mp4"
         }
       ]
     },
