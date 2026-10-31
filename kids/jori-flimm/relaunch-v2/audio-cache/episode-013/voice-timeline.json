@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Im Dachfenster glühten zwei rote Punkte – und dann huschten sie davon!",
+      "start": 0.0,
+      "end": 7.24,
+      "duration": 7.24
+    },
+    {
+      "kind": "speech",
+      "text": "Der blaue Lichtweg trug Jori und Flimm bis auf das verschneite Dach. Neben ihnen funkelte das Fenster von Joris Dachzimmer. Jori schob es vorsichtig auf. Zwei rote Funken sausten an ihrer Mütze vorbei und zogen eine leuchtende Spur zwischen Schrank, Spielzeugtruhe und Vorhang.",
+      "start": 7.24,
+      "end": 30.88,
+      "duration": 23.64
+    },
+    {
+      "kind": "speech",
+      "text": "Im Zimmer schwebte eine winzige rote Lichtmotte. Als Flimm seinen Stern heller leuchten ließ, warf sie drei verschiedene Schatten an die Wand. Die Motte selbst hatte oben zwei runde Flügel und unten zwei lange, spitze Flügel. Jori betrachtete die drei Schatten genau.",
+      "start": 30.88,
+      "end": 54.12,
+      "duration": 23.24
+    },
+    {
+      "kind": "speech",
+      "text": "Welcher Schatten gehört zur Lichtmotte: A, B oder C?",
+      "start": 54.12,
+      "end": 60.36,
+      "duration": 6.24
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 60.36,
+      "end": 67.36,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Schatten B! Nur bei B sind die oberen Flügel rund und die unteren spitz. Jori zeigte auf den mittleren Schatten. Sofort verschwanden A und C. Die Lichtmotte landete auf Flimms Pfote und öffnete ihre Flügel. Darunter funkelte ein kleiner blauer Sternsteinsplitter.",
+      "start": 67.36,
+      "end": 88.88,
+      "duration": 21.52
+    },
+    {
+      "kind": "speech",
+      "text": "Die Motte trug den Splitter zur Wand hinter Joris Schrank. Jori schob den Schrank beiseite, und Flimm beleuchtete eingeritzte Sterne. Mit dem Splitter berührte die Motte die Mitte. Da öffnete sich eine verborgene Luke. Silbernes Licht fiel heraus. Tief im schmalen Gang stand eine kleine Gestalt und hob die Hand. „Endlich seid ihr da“, flüsterte sie. Jori und Flimm sahen einander an. Wer wartete in Joris Dachboden auf sie?",
+      "start": 88.88,
+      "end": 125.72,
+      "duration": 36.84
+    }
+  ],
+  "duration": 125.72,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
