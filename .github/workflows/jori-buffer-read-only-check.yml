@@ -72,3 +72,5 @@ jobs:
 # Verify Episode 012 scheduled Buffer post, channel and dueAt after release; read only.
 
 # Refresh live Jori channel and queue before Episode 013 booking on 2026-10-31; read only.
+
+# Verify Episode 013 scheduled Buffer post, channel and dueAt after release; read only.
