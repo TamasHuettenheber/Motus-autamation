@@ -51,7 +51,7 @@ jobs:
           base=Path('kids/jori-flimm/relaunch-v2')
           e=json.loads((base/'episode_013_story_draft.json').read_text(encoding='utf-8'))
           prev=json.loads((base/'episode_012_story_draft.json').read_text(encoding='utf-8'))
-          assert e['episode_number']==12 and e['title']=='Der rote Gast im Dachzimmer'
+          assert e['episode_number']==13 and e['title']=='Der rote Gast im Dachzimmer'
           assert prev['episode_number']==12 and 'zweiter roter Funke' in prev['cliff']
           assert e['hook'].startswith('Im Dachfenster glühten zwei rote Punkte')
           assert e['riddle']['type']=='visual_shadow_match' and e['riddle']['pause_seconds']==7
