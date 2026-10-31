@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-31T12:14:39.758746+00:00",
+  "checked_at_utc": "2026-10-31T17:40:57.030690+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6ae3e2322782e7f331c27c7c",
       "text": "Die Eingangstür fällt ins Schloss, und im Flur türmen sich bereits die ungeöffneten Briefe und schmutzigen Schuhe. Deine Partnerin fragt direkt etwas vom Sofa, während dein Kopf noch voll ist von den ungelösten Aufgaben im Büro. Statt genervt zu reagieren, ziehst du die Jacke noch einmal an und drehst eine kleine Runde um den Häuserblock, um den Arbeitstag hinter dir zu lassen. Teile dieses Video gerne mit jemandem, der nach Feierabend oft genau diesen kleinen Moment des Durchatmens dringend nötig hat.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Home (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-31T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-31T17:32:41.293Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7702885767936281888",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-31-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae3e2322782e7f331c27c7c_video.mp4"
         }
       ]
     },
