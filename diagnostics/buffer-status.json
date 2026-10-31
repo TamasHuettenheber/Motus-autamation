@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-31T05:26:18.477290+00:00",
+  "checked_at_utc": "2026-10-31T12:14:39.758746+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,30 +103,30 @@
     {
       "id": "6ae3e23756e01b9763796550",
       "text": "Die Plastikschale in der Kantine riecht nach aufgewärmter Lasagne und das E-Mail-Postfach explodiert gerade förmlich. Du willst eigentlich konzentriert weiterarbeiten, aber der Kollege lehnt sich schon wieder über die Trennwand, um dir ein angebliches Notfallproblem zu erklären. Das ist der Moment, in dem du eine klare Grenze ziehst und den Bildschirm für zehn Minuten einfach schwarz werden lässt. Speichere diesen Beitrag ab, damit du beim nächsten Mittagschaos genau diesen kurzen Moment der bewussten Pause sofort wiederfindest.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Crossroads (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-31T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-31T11:03:56.596Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7702785545797127457",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-31-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae3e23756e01b9763796550_video.mp4"
         }
       ]
     },
     {
       "id": "6ae3e20b56e01b9763795d03",
       "text": "Der Kaffeelöffel schabt morgens laut an der leeren Dose, während draußen der Lieferwagen poltert. Genau jetzt stehst du vor der stillen Wahl: Greifst du sofort zum Smartphone im Bett oder machst du zuerst drei tiefe Züge am offenen Küchenfenster? Diese winzige Entscheidung bestimmt, ob dein Verstand heute die Führung übernimmt oder sofort wieder durch digitale Reize fremdgesteuert wird. Probiere es heute anders aus und schreibe mir unten in die Kommentare, womit du deinen Kopf zuerst fütterst.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Daybreak (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-10-31T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-10-31T06:02:28.063Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7702707909968334112",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-10-31-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae3e20b56e01b9763795d03_video.mp4"
         }
       ]
     },
