@@ -48,7 +48,7 @@ jobs:
           assert r['user_approved_for_publication'] is True and r['status'] in {'READY_FOR_BUFFER','SCHEDULED'}
           if r['status']=='SCHEDULED':
               assert r.get('buffer_status')=='scheduled'
-              assert r.get('buffer_post_id')=='6ae44979a83a7fb63c9e8426'
+              assert r.get('buffer_post_id')=='6ae59c241891472093bdafc3'
               assert r.get('buffer_channel_id')=='6ad948ea778b240e2f839607'
               assert r.get('buffer_due_at')=='2026-11-03T13:00:00.000Z'
           assert r['render_qc_passed'] is True and r['final_qc_run_id']==41181512030
