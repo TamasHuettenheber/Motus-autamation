@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-08-1830",
-      "clip_id": "phone-cafe-5075207",
-      "source": "https://www.pexels.com/video/a-woman-is-using-her-phone-to-take-a-picture-of-her-coffee-5075207/",
-      "used_at_utc": "2026-10-07T20:44:20.270448+00:00"
-    },
-    {
       "output_name": "motus-2026-10-08-2200",
       "clip_id": "sunset-ocean-7975481",
       "source": "https://www.pexels.com/video/vertical-video-of-sunset-7975481/",
@@ -599,6 +593,12 @@
       "clip_id": "morning-writing-8085706",
       "source": "https://www.pexels.com/video/a-person-writing-in-a-notebook-8085706/",
       "used_at_utc": "2026-10-30T22:49:27.371097+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-02-0700",
+      "clip_id": "work-phone-7174377",
+      "source": "https://www.pexels.com/video/a-man-talking-on-the-phone-while-at-work-7174377/",
+      "used_at_utc": "2026-10-31T23:42:16.028149+00:00"
     }
   ]
 }
