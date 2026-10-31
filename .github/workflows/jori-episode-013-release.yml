@@ -1,0 +1,83 @@
+name: Jori & Flimm — Folge 013 Buffer release
+
+on:
+  push:
+    branches:
+      - feature/jori-flimm-neustart-folge001
+    paths:
+      - .github/workflows/jori-episode-013-release.yml
+      - kids/jori-flimm/relaunch-v2/episode_013_release_record.json
+
+permissions:
+  contents: read
+
+concurrency:
+  group: jori-episode-013-buffer-release
+  cancel-in-progress: false
+
+jobs:
+  validate-and-schedule:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          fetch-depth: 1
+          sparse-checkout: |
+            kids/jori-flimm/relaunch-v2/episode_013_release_record.json
+            kids/jori-flimm/relaunch-v2/episode_013_story_draft.json
+            kids/jori-flimm/relaunch-v2/audio-cache/episode-013
+            kids/jori-flimm/relaunch-v2/scripts/github_followup_buffer.py
+            published/jori-flimm-2026-11-03-e013-v1.mp4
+      - name: Install FFmpeg probe tools
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then sudo sed -i 's#azure.archive.ubuntu.com#archive.ubuntu.com#g' /etc/apt/apt-mirrors.txt; fi
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg
+      - name: Verify approval, final QC, queue proof, safe zone and actual MP4
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,re,subprocess,wave
+          from pathlib import Path
+          from datetime import datetime
+          base=Path('kids/jori-flimm/relaunch-v2')
+          r=json.loads((base/'episode_013_release_record.json').read_text(encoding='utf-8'))
+          assert r['episode_number']==13 and r['title']=='Der rote Gast im Dachzimmer'
+          assert r['user_approved_for_publication'] is True and r['status'] in {'READY_FOR_BUFFER','SCHEDULED'}
+          if r['status']=='SCHEDULED':
+              assert r.get('buffer_status')=='scheduled'
+              assert r.get('buffer_post_id')=='6ae44979a83a7fb63c9e8426'
+              assert r.get('buffer_channel_id')=='6ad948ea778b240e2f839607'
+              assert r.get('buffer_due_at')=='2026-11-03T13:00:00.000Z'
+          assert r['render_qc_passed'] is True and r['final_qc_run_id']==41181512030
+          assert r['preview_run_id']==41181197446 and r['queue_check_run_id']==41181533329
+          assert r['target_channel']=='@jori.flimm'
+          assert datetime.fromisoformat(r['target_due_at']).isoformat(timespec='minutes')=='2026-11-03T14:00+01:00'
+          assert r['seven_unique_new_scenes'] is True and r['tiktok_safezone_checked'] is True
+          assert r['tiktok_safezone_content_right_edge_px']<=540
+          p=Path(r['video_path']);assert p.is_file() and p.stat().st_size>1_000_000
+          probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','stream=codec_type,codec_name,width,height','-show_entries','format=duration,size','-of','json',str(p)],text=True))
+          streams=probe['streams'];assert len(streams)==2,streams
+          v=next(x for x in streams if x['codec_type']=='video');a=next(x for x in streams if x['codec_type']=='audio')
+          assert (v['codec_name'],v['width'],v['height'])==('h264',720,1280),v
+          assert a['codec_name']=='aac',a
+          assert abs(float(probe['format']['duration'])-125.708333)<0.25,probe['format']
+          timeline=json.loads((base/'audio-cache/episode-013/voice-timeline.json').read_text(encoding='utf-8'))
+          pause=timeline['items'][4];assert pause['kind']=='pause' and abs(pause['duration']-7.0)<0.001,pause
+          with wave.open(str(base/'audio-cache/episode-013/narration_source.wav'),'rb') as w:
+              assert (w.getframerate(),w.getsampwidth(),w.getnchannels())==(24000,2,1)
+              w.setpos(round(pause['start']*w.getframerate()))
+              silence=w.readframes(round(7*w.getframerate()))
+              assert len(silence)==7*24000*2 and not any(silence)
+          proc=subprocess.run(['ffmpeg','-hide_banner','-i',str(p),'-af','silencedetect=noise=-60dB:d=6.5','-f','null','-'],capture_output=True,text=True,check=True)
+          measured=[float(x) for x in re.findall(r'silence_duration:\s*([0-9.]+)',proc.stderr)]
+          assert any(abs(x-7.0)<=0.2 for x in measured),measured
+          print('JORI_E013_RELEASE_MP4_OK',json.dumps({'duration':probe['format']['duration'],'pause_seconds':measured,'safe_right':540},ensure_ascii=False))
+          PY
+      - name: Schedule approved episode on the verified Jori TikTok channel
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_buffer.py --episode 13
