@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-09-0700",
-      "clip_id": "park-walk-8296235",
-      "source": "https://www.pexels.com/video/a-man-walking-around-the-park-8296235/",
-      "used_at_utc": "2026-10-08T20:54:56.315000+00:00"
-    },
-    {
       "output_name": "motus-2026-10-09-2200",
       "clip_id": "rain-window-32661246",
       "source": "https://www.pexels.com/video/rainy-window-view-with-drops-on-glass-32661246/",
@@ -599,6 +593,12 @@
       "clip_id": "train-phone-12908973",
       "source": "https://www.pexels.com/video/woman-waiting-for-a-train-and-using-her-phone-12908973/",
       "used_at_utc": "2026-11-01T23:53:34.239404+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-03-1830",
+      "clip_id": "rain-city-13961930",
+      "source": "https://www.pexels.com/video/people-walking-in-city-under-rainfall-13961930/",
+      "used_at_utc": "2026-11-01T23:53:41.708142+00:00"
     }
   ]
 }
