@@ -1,0 +1,58 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 14,
+  "series_version": "relaunch-v2",
+  "title": "Der Takt im Silbergang",
+  "hook": "Die kleine Gestalt hob ihre blaue Laterne – und der silberne Dachgang antwortete mit drei Klopfzeichen!",
+  "story": "Jori blieb an der offenen Luke stehen, Flimm dicht an ihrer Seite. Die kleine Gestalt lächelte. Sie hieß Nemi und war eine Sternenbotin. Nemi hatte auf den blauen Sternsplitter gewartet, denn der geheime Gang hatte seinen Takt verloren. Vor ihnen standen drei kupferne Türen. Über den Türen hingen Messingröhren. Aus ihnen erklang zuerst ein kurzer Schlag, dann ein langer Summton und zuletzt wieder ein kurzer Schlag. Nemi erklärte: Ein kurzer Ton ist ein Punkt, ein langer Ton ist ein Strich. Auf Tür A stand Strich, Punkt, Punkt. Tür B zeigte Punkt, Strich, Punkt. Tür C zeigte Punkt, Punkt, Strich.",
+  "question": "Welche Tür zeigt das gehörte Zeichen: A, B oder C?",
+  "answer": "Tür B!",
+  "after": "Das Signal war kurz, lang, kurz – also Punkt, Strich, Punkt. Genau diese Folge zeigte Tür B. Jori klopfte den Takt an die mittlere Tür, während Flimm die Zeichen mit seinem Stern beleuchtete. Die Tür schwang auf.",
+  "cliff": "Hinter der Tür schwebte eine runde silberne Plattform. Jori, Flimm und Nemi stiegen darauf. Die rote Lichtmotte setzte den blauen Sternsplitter in die Mitte. Da setzte sich die Plattform lautlos in Bewegung. Sie sank unter die Dachbalken hinab in einen riesigen Sternenraum. Unter ihnen hing eine gewaltige blaue Glocke. Ein roter Riss flammte auf. Aus der Glocke kam eine leise Stimme: „Findet meinen verlorenen Ton, bevor ich verstumme.“ Dann bewegte sich der Klöppel – doch kein Klang war zu hören. Wo war der Ton der Sternenglocke geblieben?",
+  "riddle": {
+    "type": "sound_symbol_sequence",
+    "question": "Welche Tür zeigt das gehörte Zeichen: A, B oder C?",
+    "answer": "Tür B",
+    "evidence_in_story": "Kurz entspricht einem Punkt und lang einem Strich. Das gehörte Muster kurz-lang-kurz ergibt Punkt-Strich-Punkt und steht nur auf Tür B.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "audio_to_visual_sequence",
+  "clues": [
+    "Kurz = Punkt",
+    "Lang = Strich",
+    "Signal: kurz – lang – kurz"
+  ],
+  "correct": 1,
+  "puzzle_visual": "Kompakte Frage und das Signal kurz-lang-kurz. Drei klare Optionen A: Strich-Punkt-Punkt, B: Punkt-Strich-Punkt, C: Punkt-Punkt-Strich. Gesamte Grafik links von x=540 innerhalb der TikTok-Safe-Zone.",
+  "continuity": "Setzt direkt bei der unbekannten kleinen Gestalt im silbernen Dachgang aus Folge 013 an. Die Gestalt ist Nemi; ihr Klangrätsel öffnet die mittlere Tür und führt zur stummen Sternenglocke.",
+  "narration": "Die kleine Gestalt hob ihre blaue Laterne – und der silberne Dachgang antwortete mit drei Klopfzeichen! [[SEGMENT]] Jori blieb an der offenen Luke stehen, Flimm dicht an ihrer Seite. Die kleine Gestalt lächelte. Sie hieß Nemi und war eine Sternenbotin. Nemi hatte auf den blauen Sternsplitter gewartet, denn der geheime Gang hatte seinen Takt verloren. Vor ihnen standen drei kupferne Türen. [[SEGMENT]] Über den Türen hingen Messingröhren. Aus ihnen erklang zuerst ein kurzer Schlag, dann ein langer Summton und zuletzt wieder ein kurzer Schlag. Nemi erklärte: Ein kurzer Ton ist ein Punkt, ein langer Ton ist ein Strich. Auf Tür A stand Strich, Punkt, Punkt. Tür B zeigte Punkt, Strich, Punkt. Tür C zeigte Punkt, Punkt, Strich. [[SEGMENT]] Welche Tür zeigt das gehörte Zeichen: A, B oder C? [[PAUSE:7]] Tür B! Das Signal war kurz, lang, kurz – also Punkt, Strich, Punkt. Genau diese Folge zeigte Tür B. Jori klopfte den Takt an die mittlere Tür, während Flimm die Zeichen mit seinem Stern beleuchtete. Die Tür schwang auf. [[SEGMENT]] Hinter der Tür schwebte eine runde silberne Plattform. Jori, Flimm und Nemi stiegen darauf. Die rote Lichtmotte setzte den blauen Sternsplitter in die Mitte. Da setzte sich die Plattform lautlos in Bewegung. Sie sank unter die Dachbalken hinab in einen riesigen Sternenraum. Unter ihnen hing eine gewaltige blaue Glocke. Ein roter Riss flammte auf. Aus der Glocke kam eine leise Stimme: „Findet meinen verlorenen Ton, bevor ich verstumme.“ Dann bewegte sich der Klöppel – doch kein Klang war zu hören. Wo war der Ton der Sternenglocke geblieben?",
+  "narration_tts": "Die kleine Gestalt hob ihre blaue Laterne – und der silberne Dachgang antwortete mit drei Klopfzeichen! [[SEGMENT]] Jori blieb an der offenen Luke stehen, Flimm dicht an ihrer Seite. Die kleine Gestalt lächelte. Sie hieß Nemi und war eine Sternenbotin. Nemi hatte auf den blauen Sternsplitter gewartet, denn der geheime Gang hatte seinen Takt verloren. Vor ihnen standen drei kupferne Türen. [[SEGMENT]] Über den Türen hingen Messingröhren. Aus ihnen erklang zuerst ein kurzer Schlag, dann ein langer Summton und zuletzt wieder ein kurzer Schlag. Nemi erklärte: Ein kurzer Ton ist ein Punkt, ein langer Ton ist ein Strich. Auf Tür A stand Strich, Punkt, Punkt. Tür B zeigte Punkt, Strich, Punkt. Tür C zeigte Punkt, Punkt, Strich. [[SEGMENT]] Welche Tür zeigt das gehörte Zeichen: A, B oder C? [[PAUSE:7]] Tür B! Das Signal war kurz, lang, kurz – also Punkt, Strich, Punkt. Genau diese Folge zeigte Tür B. Jori klopfte den Takt an die mittlere Tür, während Flimm die Zeichen mit seinem Stern beleuchtete. Die Tür schwang auf. [[SEGMENT]] Hinter der Tür schwebte eine runde silberne Plattform. Jori, Flimm und Nemi stiegen darauf. Die rote Lichtmotte setzte den blauen Sternsplitter in die Mitte. Da setzte sich die Plattform lautlos in Bewegung. Sie sank unter die Dachbalken hinab in einen riesigen Sternenraum. Unter ihnen hing eine gewaltige blaue Glocke. Ein roter Riss flammte auf. Aus der Glocke kam eine leise Stimme: „Findet meinen verlorenen Ton, bevor ich verstumme.“ Dann bewegte sich der Klöppel – doch kein Klang war zu hören. Wo war der Ton der Sternenglocke geblieben?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "render_pending",
+  "scene_briefs": [
+    "Direkter Anschluss: Jori und Flimm treten durch die Luke zu Nemi in den Silbergang.",
+    "Nemi zeigt drei kupferne Türen und die darüber hängenden Messingröhren.",
+    "Die Röhren spielen kurz-lang-kurz; Jori und Flimm hören aufmerksam zu.",
+    "Ruhige Rätselszene mit drei Türen und Platz für die Safe-Zone-Grafik.",
+    "Jori wählt Tür B; die mittlere Tür öffnet sich zur silbernen Plattform.",
+    "Die Plattform sinkt mit dem blauen Splitter in einen riesigen Sternenraum.",
+    "Cliffhanger: In einer riesigen blauen Glocke leuchtet ein roter Riss; ihr Ton ist verschwunden."
+  ],
+  "visuals": [
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-014-v1/scene-01.jpg", "scene": 1, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-014-v1/scene-02.jpg", "scene": 2, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-014-v1/scene-03.jpg", "scene": 3, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-014-v1/scene-04.jpg", "scene": 4, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-014-v1/scene-05.jpg", "scene": 5, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-014-v1/scene-06.jpg", "scene": 6, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-014-v1/scene-07.jpg", "scene": 7, "generated": true}
+  ],
+  "created_at": "2026-11-01T08:20:00+01:00",
+  "status": "PREVIEW_PENDING",
+  "previous_cliffhanger": "Die Motte trug den Splitter zur Wand hinter Joris Schrank. Jori schob den Schrank beiseite, und Flimm beleuchtete eingeritzte Sterne. Mit dem Splitter berührte die Motte die Mitte. Da öffnete sich eine verborgene Luke. Silbernes Licht fiel heraus. Tief im schmalen Gang stand eine kleine Gestalt und hob die Hand. „Endlich seid ihr da“, flüsterte sie. Jori und Flimm sahen einander an. Wer wartete in Joris Dachboden auf sie?"
+}
