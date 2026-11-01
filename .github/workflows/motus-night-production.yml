@@ -152,7 +152,16 @@ jobs:
           if generated is None:
               raise SystemExit("GEMINI_ALL_MODELS_FAILED "+last_error)
           raw=generated["candidates"][0]["content"]["parts"][0]["text"]
-          slots=json.loads(raw)["slots"]
+          parsed=json.loads(raw)
+          if isinstance(parsed,dict):
+              slots=parsed.get("slots")
+          elif isinstance(parsed,list):
+              slots=parsed
+              print("GEMINI_ROOT_ARRAY_NORMALIZED")
+          else:
+              raise SystemExit("BAD_GEMINI_ROOT")
+          if not isinstance(slots,list) or any(not isinstance(s,dict) for s in slots):
+              raise SystemExit("BAD_SLOTS_SCHEMA")
           # Deterministic corrections for verified recurrent Gemini misspellings.
           # Apply only while creating a new day; existing issues/videos stay untouched.
           spelling_fixes={
