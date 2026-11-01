@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-01T01:01:56.199825+00:00",
+  "checked_at_utc": "2026-11-01T07:26:33.648713+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6ae51ec0eaa24d6f9a42ce9e",
       "text": "Der Wecker klingelt und statt direkt aufzustehen, wandert die Hand zum Smartphone, um im Halbschlaf den Feed durchzuspulen. Genau diese erste digitale Gewohnheit bestimmt oft den gesamten Vormittag. Wer stattdessen sofort das Kissen glattzieht und die Socken anzieht, schafft ohne Nachdenken den ersten kleinen Erfolg des Morgens. Das Gehirn liebt klare Handlungen statt endlosen Zögerns. Welches kleine Ritual hilft dir morgens am schnellsten aus den Federn? Schreib es in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-01T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-01T06:02:56.251Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7703079008648432929",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-01-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae51ec0eaa24d6f9a42ce9e_video.mp4"
         }
       ]
     },
