@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-01T19:34:23.649396+00:00",
+  "checked_at_utc": "2026-11-01T23:32:30.495186+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -73,15 +73,15 @@
     {
       "id": "6ae51e8c406ab8a0188826e3",
       "text": "Das Zimmer ist dunkel, aber im Kopf läuft das Meeting von vorhin in Dauerschleife ab und will einfach kein Ende nehmen. Gedanken kreisen um ungeklärte Worte und verpasste Chancen des Tages. Wer stattdessen die Decke bis zur Schulter zieht, tief in den Bauch atmet und den Tag innerlich abhakt, signalisiert dem Körper endlich Sicherheit. Grübeln löst nachts kein einziges Problem mehr. Folge diesem Kanal für tägliche Impulse, die dich gedanklich zur Ruhe kommen lassen.\n\n#motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-01T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-01T21:03:17.247Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7703311154176707873",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-01-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae51e8c406ab8a0188826e3_video.mp4"
         }
       ]
     },
