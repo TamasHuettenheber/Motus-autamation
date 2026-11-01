@@ -72,3 +72,5 @@ jobs:
             work/episode_014/captions.ass
             work/episode_014/scene-timing.json
           retention-days: 14
+
+# Recheck after Sulafat cache and validated MP4 were committed.
