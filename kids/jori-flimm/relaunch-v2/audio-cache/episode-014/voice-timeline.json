@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Die kleine Gestalt hob ihre blaue Laterne – und der silberne Dachgang antwortete mit drei Klopfzeichen!",
+      "start": 0.0,
+      "end": 10.08,
+      "duration": 10.08
+    },
+    {
+      "kind": "speech",
+      "text": "Jori blieb an der offenen Luke stehen, Flimm dicht an ihrer Seite. Die kleine Gestalt lächelte. Sie hieß Nemi und war eine Sternenbotin. Nemi hatte auf den blauen Sternsplitter gewartet, denn der geheime Gang hatte seinen Takt verloren. Vor ihnen standen drei kupferne Türen.",
+      "start": 10.08,
+      "end": 35.32,
+      "duration": 25.24
+    },
+    {
+      "kind": "speech",
+      "text": "Über den Türen hingen Messingröhren. Aus ihnen erklang zuerst ein kurzer Schlag, dann ein langer Summton und zuletzt wieder ein kurzer Schlag. Nemi erklärte: Ein kurzer Ton ist ein Punkt, ein langer Ton ist ein Strich. Auf Tür A stand Strich, Punkt, Punkt. Tür B zeigte Punkt, Strich, Punkt. Tür C zeigte Punkt, Punkt, Strich.",
+      "start": 35.32,
+      "end": 66.96,
+      "duration": 31.64
+    },
+    {
+      "kind": "speech",
+      "text": "Welche Tür zeigt das gehörte Zeichen: A, B oder C?",
+      "start": 66.96,
+      "end": 74.0,
+      "duration": 7.04
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 74.0,
+      "end": 81.0,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Tür B! Das Signal war kurz, lang, kurz – also Punkt, Strich, Punkt. Genau diese Folge zeigte Tür B. Jori klopfte den Takt an die mittlere Tür, während Flimm die Zeichen mit seinem Stern beleuchtete. Die Tür schwang auf.",
+      "start": 81.0,
+      "end": 103.0,
+      "duration": 22.0
+    },
+    {
+      "kind": "speech",
+      "text": "Hinter der Tür schwebte eine runde silberne Plattform. Jori, Flimm und Nemi stiegen darauf. Die rote Lichtmotte setzte den blauen Sternsplitter in die Mitte. Da setzte sich die Plattform lautlos in Bewegung. Sie sank unter die Dachbalken hinab in einen riesigen Sternenraum. Unter ihnen hing eine gewaltige blaue Glocke. Ein roter Riss flammte auf. Aus der Glocke kam eine leise Stimme: „Findet meinen verlorenen Ton, bevor ich verstumme.“ Dann bewegte sich der Klöppel – doch kein Klang war zu hören. Wo war der Ton der Sternenglocke geblieben?",
+      "start": 103.0,
+      "end": 149.28,
+      "duration": 46.28
+    }
+  ],
+  "duration": 149.28,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
