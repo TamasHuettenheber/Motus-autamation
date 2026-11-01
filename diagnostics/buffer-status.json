@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-01T07:26:33.648713+00:00",
+  "checked_at_utc": "2026-11-01T15:00:38.928783+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6ae51e8bb84259308ba61bdd",
       "text": "Die Plastikschüssel mit dem Kantinenessen klebt im Rucksack fest, während draußen die Warteschlange vor dem Imbiss länger wird als die Mittagspause selbst. Genau jetzt droht der Punkt, an dem man hungrig und genervt zu ungesunden Snacks greift. Wer stattdessen kurz innehält und sich bewusst für die mitgebrachte Banane entscheidet, bricht das alte Muster. Kleine Aussetzer im Alltag kosten unnötig Kraft. Speicher dieses Video direkt ab, um beim nächsten Jieper standhaft zu bleiben.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Familiar Roads (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-01T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-01T11:03:42.164Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7703156506815941921",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-01-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae51e8bb84259308ba61bdd_video.mp4"
         }
       ]
     },
