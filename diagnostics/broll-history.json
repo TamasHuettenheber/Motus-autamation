@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-09-2200",
-      "clip_id": "rain-window-32661246",
-      "source": "https://www.pexels.com/video/rainy-window-view-with-drops-on-glass-32661246/",
-      "used_at_utc": "2026-10-08T20:55:01.177359+00:00"
-    },
-    {
       "output_name": "motus-2026-10-09-1830",
       "clip_id": "night-city-13658220",
       "source": "https://www.pexels.com/video/people-walking-in-city-at-night-13658220/",
@@ -599,6 +593,12 @@
       "clip_id": "rain-city-13961930",
       "source": "https://www.pexels.com/video/people-walking-in-city-under-rainfall-13961930/",
       "used_at_utc": "2026-11-01T23:53:41.708142+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-03-2200",
+      "clip_id": "night-walk-4121893",
+      "source": "https://www.pexels.com/video/a-person-walking-in-the-street-at-night-4121893/",
+      "used_at_utc": "2026-11-01T23:54:06.348722+00:00"
     }
   ]
 }
