@@ -7,7 +7,7 @@ from PIL import Image,ImageDraw,ImageFont
 ROOT=Path.cwd();BASE=ROOT/'kids/jori-flimm/relaunch-v2'
 p=argparse.ArgumentParser();p.add_argument('--episode',type=int,required=True,choices=[15]);a=p.parse_args();n=a.episode
 ART=BASE/'assets/episode-015-v1';W=ROOT/'work/episode_015';W.mkdir(parents=True,exist_ok=True)
-SCENES={name:i for i,name in enumerate(['hook','story_a','story_b','puzzle','answer','cliff_transition','cliff'],1)}
+SCENES={'hook':1,'intro':1,'story_a':2,'story_b':3,'puzzle':4,'answer':5,'cliff_transition':6,'cliff':7}
 paths=[ART/f'scene-{i:02d}.jpg' for i in range(1,8)]
 assert all(x.is_file() for x in paths);assert len({x.read_bytes() for x in paths})==7
 print('JORI_SCENE_ART_READY episode=15 unique_scenes=7')
@@ -79,14 +79,15 @@ def sentence_intervals(item):
   out.append((cur,end,piece));cur=end
  return out
 pre=items[:pause_index];post=items[pause_index+1:];assert len(pre)==4 and len(post)==2
+story_intervals=sentence_intervals(pre[1]);route_start=next(a for a,b,s in story_intervals if s.startswith('Da erschienen'))
 cliff_intervals=sentence_intervals(post[1]);bell_start=next(a for a,b,s in cliff_intervals if s.startswith('Sie führte durch den Sternenraum'))
-segments=[('hook',pre[0]['duration']),('story_a',pre[1]['duration']),('story_b',pre[2]['duration']),
+segments=[('hook',pre[0]['duration']),('intro',route_start-pre[1]['start']),('story_a',pre[1]['end']-route_start),('story_b',pre[2]['duration']),
  ('puzzle',pre[3]['duration']+pause['duration']),('answer',post[0]['duration']),
  ('cliff_transition',bell_start-post[1]['start']),('cliff',post[1]['end']-bell_start)]
 cursor=0;scene_timing=[]
 for name,dur in segments:scene_timing.append({'scene':name,'start':round(cursor,3),'end':round(cursor+dur,3),'duration':round(dur,3)});cursor+=dur
 (W/'scene-timing.json').write_text(json.dumps(scene_timing,ensure_ascii=False,indent=2)+'\n')
-assert abs(scene_timing[3]['end']-pause['end'])<0.01;assert abs(scene_timing[6]['start']-bell_start)<0.01
+assert abs(scene_timing[4]['end']-pause['end'])<0.01;assert abs(scene_timing[7]['start']-bell_start)<0.01;assert abs(scene_timing[2]['start']-route_start)<0.01
 clips=[]
 for i,(name,dur) in enumerate(segments):
  clip=W/f'seg_{i}.mp4';cmd('ffmpeg','-nostdin','-y','-loglevel','error','-loop','1','-framerate','24','-i',W/f'{name}.png','-t',f'{dur:.3f}','-vf',"zoompan=z='min(zoom+0.00018,1.045)':d=1:fps=24:s=720x1280,format=yuv420p",'-c:v','libx264','-preset','ultrafast','-crf','23','-r','24',clip);clips.append(clip)

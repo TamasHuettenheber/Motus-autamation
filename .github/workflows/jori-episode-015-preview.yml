@@ -126,8 +126,8 @@ jobs:
           duration=float(probe['format']['duration']);assert 70<duration<150 and abs(duration-float(t['duration']))<.25 and int(probe['format']['size'])>1_000_000
           p=subprocess.run(['ffmpeg','-hide_banner','-i',str(media),'-af','silencedetect=noise=-60dB:d=6.5','-f','null','-'],capture_output=True,text=True,check=True)
           measured=[float(x) for x in re.findall(r'silence_duration:\s*([0-9.]+)',p.stderr)];assert any(abs(x-7)<=.2 for x in measured),measured
-          st=json.loads((base/'scene-timing.json').read_text());assert [x['scene'] for x in st]==['hook','story_a','story_b','puzzle','answer','cliff_transition','cliff']
-          assert abs(st[3]['end']-pause['end'])<.01
+          st=json.loads((base/'scene-timing.json').read_text());assert [x['scene'] for x in st]==['hook','intro','story_a','story_b','puzzle','answer','cliff_transition','cliff']
+          assert abs(st[4]['end']-pause['end'])<.01
           print('JORI_E015_MP4_QC_OK',json.dumps({'duration':duration,'bytes':probe['format']['size'],'video':'720x1280 H.264','audio':'AAC Sulafat','measured_pause_seconds':measured,'caption_token_match':True,'tiktok_safe_zone':True},ensure_ascii=False))
           PY
       - name: Save actual preview and QC evidence
