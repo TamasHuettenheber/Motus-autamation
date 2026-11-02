@@ -1,0 +1,86 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 15,
+  "series_version": "relaunch-v2",
+  "title": "Der verlorene Ton der Sternenglocke",
+  "hook": "Der Klöppel der Sternenglocke schwang hin und her – doch der riesige Sternenraum blieb vollkommen still!",
+  "story": "Jori beugte sich über den Rand der silbernen Plattform. Flimm flog zum Klöppel und legte vorsichtig seine kleine Nase daran. Kein Ton. Nemi hob ihre blaue Laterne. Da erschienen auf der Glocke drei leuchtende Wege. Weg A führte direkt zum roten Riss und endete dort. Weg B schlängelte sich zwischen den roten Funken hindurch bis zum Klöppel. Weg C drehte eine Runde und kam wieder am Anfang an.",
+  "question": "Welcher Lichtweg erreicht den Klöppel, ohne den roten Riss zu berühren: A, B oder C?",
+  "answer": "Weg B!",
+  "after": "Weg B! Nur dieser Weg führte sicher durch die Lücken bis zum Klöppel. Jori tippte auf B. Flimm schickte sein goldenes Licht über die blaue Spur. Der Klöppel begann zu leuchten. Die Glocke erklang einmal, tief und warm. Der rote Riss zog sich fast ganz zusammen.",
+  "cliff": "Aus dem Glockenton wuchs eine schimmernde Klangbrücke. Sie führte durch den Sternenraum zu einem Turm, der kopfüber in der Dunkelheit hing. Seine Uhr hatte keine Zeiger. In einem offenen Fenster drehte eine Schattenfigur einen großen goldenen Schlüssel. „Der zweite Ton wartet!“, rief sie. Dann erlosch das Fenster. Wer hatte den Schlüssel zum umgedrehten Uhrturm?",
+  "riddle": {
+    "type": "visual_route_maze",
+    "question": "Welcher Lichtweg erreicht den Klöppel, ohne den roten Riss zu berühren: A, B oder C?",
+    "answer": "Weg B",
+    "evidence_in_story": "Weg A berührt den roten Riss, Weg C kehrt zum Anfang zurück; nur Weg B erreicht den Klöppel durch die sicheren Lücken.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "visual_route_maze",
+  "clues": [
+    "A endet am roten Riss",
+    "B erreicht den Klöppel",
+    "C führt zum Anfang zurück"
+  ],
+  "correct": 1,
+  "puzzle_visual": "Drei kompakte leuchtende Wege A, B und C; A endet am roten Riss, B führt durch sichere Lücken zum Klöppel, C bildet eine Schleife. Frage und alle Hinweise links von x=540 innerhalb der TikTok-Safe-Zone.",
+  "continuity": "Setzt direkt an der stummen blauen Sternenglocke mit rotem Riss aus Folge 014 an. Jori, Flimm und Nemi finden den verlorenen Ton über Weg B; die Klangbrücke führt zum umgedrehten Uhrturm.",
+  "narration": "Der Klöppel der Sternenglocke schwang hin und her – doch der riesige Sternenraum blieb vollkommen still! [[SEGMENT]] Jori beugte sich über den Rand der silbernen Plattform. Flimm flog zum Klöppel und legte vorsichtig seine kleine Nase daran. Kein Ton. Nemi hob ihre blaue Laterne. Da erschienen auf der Glocke drei leuchtende Wege. [[SEGMENT]] Weg A führte direkt zum roten Riss und endete dort. Weg B schlängelte sich zwischen den roten Funken hindurch bis zum Klöppel. Weg C drehte eine Runde und kam wieder am Anfang an. [[SEGMENT]] Welcher Lichtweg erreicht den Klöppel, ohne den roten Riss zu berühren: A, B oder C? [[PAUSE:7]] Weg B! Nur dieser Weg führte sicher durch die Lücken bis zum Klöppel. Jori tippte auf B. Flimm schickte sein goldenes Licht über die blaue Spur. Der Klöppel begann zu leuchten. Die Glocke erklang einmal, tief und warm. Der rote Riss zog sich fast ganz zusammen. [[SEGMENT]] Aus dem Glockenton wuchs eine schimmernde Klangbrücke. Sie führte durch den Sternenraum zu einem Turm, der kopfüber in der Dunkelheit hing. Seine Uhr hatte keine Zeiger. In einem offenen Fenster drehte eine Schattenfigur einen großen goldenen Schlüssel. „Der zweite Ton wartet!“, rief sie. Dann erlosch das Fenster. Wer hatte den Schlüssel zum umgedrehten Uhrturm?",
+  "narration_tts": "Der Klöppel der Sternenglocke schwang hin und her – doch der riesige Sternenraum blieb vollkommen still! [[SEGMENT]] Jori beugte sich über den Rand der silbernen Plattform. Flimm flog zum Klöppel und legte vorsichtig seine kleine Nase daran. Kein Ton. Nemi hob ihre blaue Laterne. Da erschienen auf der Glocke drei leuchtende Wege. [[SEGMENT]] Weg A führte direkt zum roten Riss und endete dort. Weg B schlängelte sich zwischen den roten Funken hindurch bis zum Klöppel. Weg C drehte eine Runde und kam wieder am Anfang an. [[SEGMENT]] Welcher Lichtweg erreicht den Klöppel, ohne den roten Riss zu berühren: A, B oder C? [[PAUSE:7]] Weg B! Nur dieser Weg führte sicher durch die Lücken bis zum Klöppel. Jori tippte auf B. Flimm schickte sein goldenes Licht über die blaue Spur. Der Klöppel begann zu leuchten. Die Glocke erklang einmal, tief und warm. Der rote Riss zog sich fast ganz zusammen. [[SEGMENT]] Aus dem Glockenton wuchs eine schimmernde Klangbrücke. Sie führte durch den Sternenraum zu einem Turm, der kopfüber in der Dunkelheit hing. Seine Uhr hatte keine Zeiger. In einem offenen Fenster drehte eine Schattenfigur einen großen goldenen Schlüssel. „Der zweite Ton wartet!“, rief sie. Dann erlosch das Fenster. Wer hatte den Schlüssel zum umgedrehten Uhrturm?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "render_pending",
+  "scene_briefs": [
+    "Direkter Anschluss: Der Klöppel schwingt lautlos in der riesigen blauen Sternenglocke.",
+    "Drei leuchtende Wege erscheinen auf der Glocke; Jori, Flimm und Nemi untersuchen sie.",
+    "Jori zeigt auf die Messingtafel mit den drei Wegen A, B und C.",
+    "Ruhige Denkpause unter der Glocke mit freiem Bereich für die TikTok-sichere Rätselgrafik.",
+    "Flimms goldenes Licht folgt Weg B durch die Lücken zum Klöppel.",
+    "Die Glocke erklingt; eine blaue Klangbrücke wächst durch den Sternenraum.",
+    "Cliffhanger: Ein kopfüber hängender Uhrturm ohne Zeiger und eine Schattenfigur mit goldenem Schlüssel."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-015-v1/scene-01.jpg",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-015-v1/scene-02.jpg",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-015-v1/scene-03.jpg",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-015-v1/scene-04.jpg",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-015-v1/scene-05.jpg",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-015-v1/scene-06.jpg",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-015-v1/scene-07.jpg",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-02T08:30:00+01:00",
+  "status": "PREVIEW_PENDING",
+  "previous_cliffhanger": "Hinter der Tür schwebte eine runde silberne Plattform. Jori, Flimm und Nemi stiegen darauf. Die rote Lichtmotte setzte den blauen Sternsplitter in die Mitte. Da setzte sich die Plattform lautlos in Bewegung. Sie sank unter die Dachbalken hinab in einen riesigen Sternenraum. Unter ihnen hing eine gewaltige blaue Glocke. Ein roter Riss flammte auf. Aus der Glocke kam eine leise Stimme: „Findet meinen verlorenen Ton, bevor ich verstumme.“ Dann bewegte sich der Klöppel – doch kein Klang war zu hören. Wo war der Ton der Sternenglocke geblieben?"
+}
