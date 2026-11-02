@@ -1,0 +1,74 @@
+name: MOTUS Safety Hold 2026-11-03 12:00
+
+on:
+  push:
+    paths:
+      - ".github/workflows/motus-safety-hold-20261103-1200.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  hold:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Move exactly one unsafe scheduled Buffer post to draft
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json, os, sys, urllib.request
+          POST_ID = "6ae7d138d016796999f97c43"
+          CHANNEL = "6ab5124fea19ca0bded4aa0b"
+          DUE = "2026-11-03T11:00:00.000Z"
+          OTHERS = ("6ae7d101902c3fb1dec4104f", "6ae7d163d016796999f982f2", "6ae7d13101fa08ffbe737a78")
+          key = os.environ.get("BUFFER_API_KEY", "").strip()
+          if not key:
+              raise SystemExit("SAFETY_HOLD_BLOCKED: Buffer secret not available")
+          def api(query, variables):
+              request = urllib.request.Request("https://api.buffer.com", data=json.dumps({"query":query,"variables":variables}).encode(), headers={"Content-Type":"application/json","Authorization":"Bearer "+key}, method="POST")
+              with urllib.request.urlopen(request,timeout=50) as response:
+                  result=json.load(response)
+              if result.get("errors"):
+                  raise RuntimeError("BUFFER_GRAPHQL_ERROR: "+str(result["errors"])[:500])
+              return result["data"]
+          getpost = """query GetPost($id: PostId!) {
+            post(input:{id:$id}) { id status dueAt channelId text externalLink assets { mimeType source } }
+          }"""
+          p=api(getpost,{"id":POST_ID})["post"]
+          if not p:
+              raise SystemExit("SAFETY_HOLD_BLOCKED: specific post not found")
+          if p["id"] != POST_ID or p["channelId"] != CHANNEL or p["dueAt"] != DUE or p["externalLink"]:
+              raise SystemExit("SAFETY_HOLD_BLOCKED: unexpected id/channel/time/published link")
+          if p["status"] == "draft":
+              print("SAFETY_HOLD_ALREADY_DRAFT")
+              raise SystemExit(0)
+          if p["status"] != "scheduled":
+              raise SystemExit("SAFETY_HOLD_BLOCKED: status="+str(p["status"]))
+          text=str(p.get("text") or "")
+          if not ("brennt dir das Essen auf dem Herd an" in text and "Schließe jetzt kurz die Augen" in text):
+              raise SystemExit("SAFETY_HOLD_BLOCKED: expected unsafe text no longer present")
+          others_before={pid:api(getpost,{"id":pid})["post"] for pid in OTHERS}
+          if any(not value or value["status"] != "scheduled" for value in others_before.values()):
+              raise SystemExit("SAFETY_HOLD_BLOCKED: neighboring posts not as expected")
+          mutation = """mutation HoldUnsafePost($id: PostId!) {
+            editPost(input:{id:$id,saveToDraft:true}) {
+              __typename
+              ... on PostActionSuccess { post { id status dueAt } }
+              ... on MutationError { message }
+            }
+          }"""
+          result=api(mutation,{"id":POST_ID})["editPost"]
+          print("SAFETY_HOLD_MUTATION_RESULT",result.get("__typename"),result.get("message",""))
+          after=api(getpost,{"id":POST_ID})["post"]
+          if not after or after.get("status") != "draft" or after.get("id") != POST_ID:
+              raise SystemExit("SAFETY_HOLD_UNVERIFIED: "+str(after.get("status") if after else "missing"))
+          print("SAFETY_HOLD_CONFIRMED",POST_ID,"draft","not scheduled")
+          for pid in OTHERS:
+              p2=api(getpost,{"id":pid})["post"]
+              old=others_before[pid]
+              if not p2 or (p2["id"],p2["status"],p2["dueAt"],p2.get("text"))!=(old["id"],old["status"],old["dueAt"],old.get("text")):
+                  raise SystemExit("SAFETY_HOLD_NEIGHBOR_CHANGED "+pid)
+          print("SAFETY_HOLD_OTHER_THREE_UNCHANGED")
+          PY
