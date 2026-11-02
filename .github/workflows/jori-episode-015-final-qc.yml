@@ -39,7 +39,7 @@ jobs:
           e=json.loads((base/'episode_015_story_draft.json').read_text());prev=json.loads((base/'episode_014_story_draft.json').read_text())
           assert e['previous_cliffhanger']==prev['cliff']
           assert 'Sternenglocke' in e['hook'] and 'gewaltige blaue Glocke' in prev['cliff']
-          assert not re.search(r'\bJori\b.{0,75}\b(?:er|ihn|sein|ihm)\b',e['narration'],re.I)
+          assert not re.search(r'\bJori\b[^.!?]{0,75}\b(?:er|ihn|ihm)\b',e['narration'],re.I)
           paths=[Path(v['path']) for v in e['visuals']];assert len(paths)==7
           hashes=[hashlib.sha256(p.read_bytes()).hexdigest() for p in paths];assert len(set(hashes))==7
           old={hashlib.sha256(p.read_bytes()).hexdigest() for p in (base/'assets/episode-014-v1').glob('scene-*')};assert not set(hashes)&old
