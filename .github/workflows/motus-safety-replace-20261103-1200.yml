@@ -56,3 +56,4 @@ jobs:
               if response.status!=204:raise SystemExit("SAFETY_REPLACEMENT_DISPATCH_UNEXPECTED "+str(response.status))
           print("SAFETY_REPLACEMENT_DISPATCHED",NAME,"existing unsafe post still draft; new renderer must pass QC before Buffer scheduling")
           PY
+# One-time retry after renderer force_rerender safety fix a76006050777e8849235c8bfbb172fcd30b8ad3d.
