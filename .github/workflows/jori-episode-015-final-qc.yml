@@ -5,6 +5,7 @@ on:
     branches: [feature/jori-flimm-neustart-folge001]
     paths:
       - .github/workflows/jori-episode-015-final-qc.yml
+      - published/jori-flimm-2026-11-05-e015-v1.mp4
   workflow_dispatch:
 
 permissions:
