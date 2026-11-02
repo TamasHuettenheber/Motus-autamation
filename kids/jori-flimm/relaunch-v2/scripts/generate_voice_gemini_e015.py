@@ -133,7 +133,23 @@ def main():
                     # At least 22 seconds before every new request keeps within the verified 3/minute Free Tier limit.
                     time.sleep(22)
                     marker.write_text(digest+"\n",encoding="utf-8")
-                    temp.write_bytes(tts_segment(value,voice,secret))
+                    try:
+                        rendered=tts_segment(value,voice,secret)
+                    except RuntimeError as exc:
+                        # The verified Free Tier can return a precise daily-reset wait.
+                        # Wait once for that named window; never switch tiers or billing modes.
+                        msg=str(exc)
+                        wait_match=re.search(r"retry in (?:(\d+)m)?(\d+)s",msg,re.I)
+                        free_daily=("Free Tier" in msg and "10 requests per day" in msg)
+                        if not (wait_match and free_daily):
+                            raise
+                        wait_seconds=int(wait_match.group(1) or 0)*60+int(wait_match.group(2))+5
+                        if not 1<=wait_seconds<=1800:
+                            raise RuntimeError(f"Unsafe Free Tier retry wait: {wait_seconds}s") from exc
+                        print(f"GEMINI_FREE_TIER_DAILY_WAIT seconds={wait_seconds}; one safe retry, no paid fallback")
+                        time.sleep(wait_seconds)
+                        rendered=tts_segment(value,voice,secret)
+                    temp.write_bytes(rendered)
                     temp.replace(source)
                     tts_calls += 1
                 subprocess.run(["ffmpeg","-nostdin","-y","-v","error","-i",str(source),

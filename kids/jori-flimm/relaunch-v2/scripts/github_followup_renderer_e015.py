@@ -61,7 +61,7 @@ def draw_scene(section):
  d.text((55,57),f'JORI & FLIMM   ·   FOLGE {n:03d}',font=font(23),fill='#fff2cf')
  if section=='hook':
   d.rounded_rectangle((40,150,540,245),radius=20,fill=(16,37,62,218))
-  d.text((290,197),episode['title'],font=font(25),anchor='mm',fill='white')
+  d.text((290,197),episode['title'],font=font(23),anchor='mm',fill='white')
  if section=='puzzle':
   d.rounded_rectangle((42,132,540,710),radius=26,fill=(13,32,56,242),outline=(246,211,127,255),width=4)
   d.text((291,174),'WELCHER WEG IST SICHER?',font=font(23),anchor='mm',fill='#fff2c9')
