@@ -1,0 +1,47 @@
+name: MOTUS Safety Hold Replacement 2026-11-03 12:00
+on:
+  push:
+    paths:
+      - ".github/workflows/motus-safety-hold-replacement-20261103-1200.yml"
+permissions:
+  contents: read
+jobs:
+  hold:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Hold replacement if old MP4 was reused
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json,os,urllib.request
+          API="https://api.buffer.com"
+          KEY=os.environ["BUFFER_API_KEY"].strip()
+          DUE="2026-11-03T11:00:00.000Z"
+          CHANNEL="6ab5124fea19ca0bded4aa0b"
+          ORIGINAL="6ae7d138d016796999f97c43"
+          def gql(query,vars):
+              req=urllib.request.Request(API,data=json.dumps({"query":query,"variables":vars}).encode(),headers={"Authorization":"Bearer "+KEY,"Content-Type":"application/json"},method="POST")
+              with urllib.request.urlopen(req,timeout=45) as res:r=json.load(res)
+              if r.get("errors"):raise RuntimeError(str(r["errors"])[:550])
+              return r["data"]
+          get="query Get($id:PostId!){post(input:{id:$id}){id status dueAt text channelId assets{source}}}"
+          original=gql(get,{"id":ORIGINAL})["post"]
+          if not original or original.get("status")!="draft":raise SystemExit("ORIGINAL_DRAFT_NOT_CONFIRMED")
+          q="""query Posts($input:PostsInput!){posts(first:100,input:$input){edges{node{id status dueAt channelId text assets{source}}}}}"""
+          edges=gql(q,{"input":{"organizationId":"6ab500dfc949088b0ba1e58f","filter":{"channelIds":[CHANNEL],"status":["scheduled"]}}})["posts"]["edges"]
+          target=[e["node"] for e in edges if e["node"].get("dueAt")==DUE and e["node"].get("channelId")==CHANNEL]
+          if len(target)!=1:raise SystemExit("TARGET_SLOT_UNEXPECTED_COUNT "+str(len(target)))
+          p=target[0]
+          if p["id"]==ORIGINAL or not p.get("text","").startswith("In der Küche köchelt das Mittagessen"):
+              raise SystemExit("TARGET_NOT_CORRECTED_REPLACEMENT")
+          if not any("motus-2026-11-03-1200.mp4" in a.get("source","") for a in p.get("assets",[])):
+              raise SystemExit("TARGET_MEDIA_UNEXPECTED")
+          m="""mutation Hold($id:PostId!,$text:String!){editPost(input:{id:$id,text:$text,saveToDraft:true}){__typename ... on PostActionSuccess{post{id status}} ... on MutationError{message}}}"""
+          result=gql(m,{"id":p["id"],"text":p["text"]})["editPost"]
+          if result.get("__typename")!="PostActionSuccess":raise SystemExit("HOLD_MUTATION_FAILED "+str(result))
+          check=gql(get,{"id":p["id"]})["post"]
+          if not check or check.get("status")!="draft":raise SystemExit("REPLACEMENT_DRAFT_UNVERIFIED")
+          print("REPLACEMENT_WITH_REUSED_MEDIA_HELD",p["id"],"draft")
+          PY
