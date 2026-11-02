@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-02T17:49:06.604772+00:00",
+  "checked_at_utc": "2026-11-02T23:28:14.307465+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -41,8 +41,8 @@
       ]
     },
     {
-      "id": "6ae7d138d016796999f97c43",
-      "text": "Auf dem Schreibtisch türmen sich die Notizen, und gleichzeitig brennt dir das Essen auf dem Herd an, weil das Telefon unaufhörlich klingelt. Plötzlich steht der Kollege im Türrahmen und bittet um eine schnelle Auskunft. Dieses alltägliche Hindernis frisst deine kostbare Mittagspause auf. Schließe jetzt kurz die Augen, atme dreimal tief durch und schiebe das Störfeuer konsequent beiseite. Schütze deine Pause wie einen heiligen Gral. Speichere diesen Beitrag, um beim nächsten Chaos sofort standhaft zu bleiben.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Destiny (CC BY 4.0)",
+      "id": "6ae8e5a2ff93b610bb9511f7",
+      "text": "In der Küche köchelt das Mittagessen, als das Handy klingelt und plötzlich etwas angebrannt riecht. Du willst gleichzeitig den Anruf annehmen und den Topf retten. Doch jetzt zählt Sicherheit: Schalte zuerst den Herd aus und halte Abstand vom heißen Topf. Erst wenn die Situation sicher ist, kümmerst du dich um den Anruf. Ein klarer erster Schritt ist besser als hektisches Multitasking. Welche einfache Regel hilft dir, in stressigen Momenten den Überblick zu behalten? Schreib es in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Destiny (CC BY 4.0)",
       "status": "scheduled",
       "dueAt": "2026-11-03T11:00:00.000Z",
       "sentAt": null,
@@ -73,15 +73,15 @@
     {
       "id": "6ae67d6bab019b90872f9354",
       "text": "Dein Kissen hat schon längst die perfekte Kuhle gefunden, aber dein Kopfkino spielt unermüdlich die morgendliche Präsentation vor dem Vorstand ab. Die Augenlider brennen, während die Gedanken im Sekundentakt Kreise drehen und jede Entspannung verhindern. Schnapp dir Notizbuch und Stift vom Nachttisch und schreibe alle drängenden Stichpunkte kurz auf, um sie gedanklich abzuhaken. Folge diesem Kanal für tägliche Impulse, die deinen Abend verlässlich zur Ruhe bringen.\n\n#motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-02T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-02T21:03:02.323Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7703682335983553824",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-02-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae67d6bab019b90872f9354_video.mp4"
         }
       ]
     },
