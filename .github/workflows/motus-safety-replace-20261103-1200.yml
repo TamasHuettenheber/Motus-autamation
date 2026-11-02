@@ -1,0 +1,58 @@
+name: MOTUS Safety Replacement 2026-11-03 12:00
+
+on:
+  push:
+    paths:
+      - ".github/workflows/motus-safety-replace-20261103-1200.yml"
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify unsafe draft, deduplicate, and dispatch exactly one corrected renderer
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import json,os,urllib.request
+          from datetime import datetime,timezone
+          UNSAFE_ID="6ae7d138d016796999f97c43"
+          CHANNEL="6ab5124fea19ca0bded4aa0b"
+          DUE="2026-11-03T11:00:00.000Z"
+          NAME="motus-2026-11-03-1200"
+          MEDIA="https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/"+NAME+".mp4"
+          SAFE_TEXT="In der Küche köchelt das Mittagessen, als das Handy klingelt und plötzlich etwas angebrannt riecht. Du willst gleichzeitig den Anruf annehmen und den Topf retten. Doch jetzt zählt Sicherheit: Schalte zuerst den Herd aus und halte Abstand vom heißen Topf. Erst wenn die Situation sicher ist, kümmerst du dich um den Anruf. Ein klarer erster Schritt ist besser als hektisches Multitasking. Welche einfache Regel hilft dir, in stressigen Momenten den Überblick zu behalten? Schreib es in die Kommentare."
+          if not (60<=len(SAFE_TEXT.split())<=85):
+              raise SystemExit("SAFETY_REPLACEMENT_BAD_WORD_COUNT")
+          if datetime.now(timezone.utc).isoformat().replace("+00:00","Z")>=DUE:
+              raise SystemExit("SAFETY_REPLACEMENT_TOO_LATE")
+          key=os.environ.get("BUFFER_API_KEY","").strip()
+          if not key: raise SystemExit("SAFETY_REPLACEMENT_NO_BUFFER_KEY")
+          def buffer(query,variables):
+              req=urllib.request.Request("https://api.buffer.com",data=json.dumps({"query":query,"variables":variables}).encode(),headers={"Content-Type":"application/json","Authorization":"Bearer "+key},method="POST")
+              with urllib.request.urlopen(req,timeout=40) as response: answer=json.load(response)
+              if answer.get("errors"): raise RuntimeError(str(answer["errors"])[:500])
+              return answer["data"]
+          getpost="query GetPost($id: PostId!){post(input:{id:$id}){id status dueAt channelId text}}"
+          unsafe=buffer(getpost,{"id":UNSAFE_ID})["post"]
+          if not unsafe or unsafe["id"]!=UNSAFE_ID or unsafe["channelId"]!=CHANNEL or unsafe["status"]!="draft":
+              raise SystemExit("SAFETY_REPLACEMENT_BLOCKED: unsafe original not held as draft")
+          posts=buffer("""query CheckScheduled($input: PostsInput!){posts(first:100,input:$input){edges{node{id status channelId dueAt assets{source}}}}}""",{"input":{"organizationId":"6ab500dfc949088b0ba1e58f","filter":{"channelIds":[CHANNEL],"status":["scheduled"]}}})["posts"]["edges"]
+          for edge in posts:
+              p=edge["node"]
+              if p.get("dueAt")==DUE:
+                  raise SystemExit("SAFETY_REPLACEMENT_BLOCKED: a scheduled post already occupies target slot "+p["id"])
+          url="https://api.github.com/repos/"+os.environ["REPO"]+"/actions/workflows/motus.yml/dispatches"
+          body={"ref":"main","inputs":{"audio_url":"","text":SAFE_TEXT,"broll_url":"","output_name":NAME,"force_rerender":"true"}}
+          req=urllib.request.Request(url,data=json.dumps(body,ensure_ascii=False).encode(),headers={"Authorization":"Bearer "+os.environ["GH_TOKEN"],"Accept":"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28","Content-Type":"application/json"},method="POST")
+          with urllib.request.urlopen(req,timeout=40) as response:
+              if response.status!=204:raise SystemExit("SAFETY_REPLACEMENT_DISPATCH_UNEXPECTED "+str(response.status))
+          print("SAFETY_REPLACEMENT_DISPATCHED",NAME,"existing unsafe post still draft; new renderer must pass QC before Buffer scheduling")
+          PY
