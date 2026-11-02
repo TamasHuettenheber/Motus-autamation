@@ -52,14 +52,14 @@ jobs:
           others_before={pid:api(getpost,{"id":pid})["post"] for pid in OTHERS}
           if any(not value or value["status"] != "scheduled" for value in others_before.values()):
               raise SystemExit("SAFETY_HOLD_BLOCKED: neighboring posts not as expected")
-          mutation = """mutation HoldUnsafePost($id: PostId!) {
-            editPost(input:{id:$id,saveToDraft:true}) {
+          mutation = """mutation HoldUnsafePost($id: PostId!, $text: String!) {
+            editPost(input:{id:$id,saveToDraft:true,text:$text}) {
               __typename
               ... on PostActionSuccess { post { id status dueAt } }
               ... on MutationError { message }
             }
           }"""
-          result=api(mutation,{"id":POST_ID})["editPost"]
+          result=api(mutation,{"id":POST_ID,"text":text})["editPost"]
           print("SAFETY_HOLD_MUTATION_RESULT",result.get("__typename"),result.get("message",""))
           after=api(getpost,{"id":POST_ID})["post"]
           if not after or after.get("status") != "draft" or after.get("id") != POST_ID:
