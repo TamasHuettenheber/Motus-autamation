@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-02T15:38:30.132263+00:00",
+  "checked_at_utc": "2026-11-02T17:49:06.604772+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6ae67d2921c807e9d5904253",
       "text": "Der Esszimmertisch stapelt sich mit ungeöffneten Briefen, Katalogen und den Schulheften der Kinder, sodass kaum Platz für das Abendbrot bleibt. Dieser visuelle Unordnungsteppich raubt dir unbemerkt die letzte Kraft, die du nach einem langen Arbeitstag noch besitzt. Befreie die Fläche gemeinsam mit deiner Familie in genau fünf Minuten von allem Ballast, bevor ihr euch hinsetzt. Teile dieses Video mit jemandem, der daheim ebenfalls oft im Papierchaos versinkt.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-02T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-02T17:33:50.761Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7703628321510247712",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-02-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae67d2921c807e9d5904253_video.mp4"
         }
       ]
     },
