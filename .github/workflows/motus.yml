@@ -71,6 +71,7 @@ jobs:
               audio=getv('AUDIO_URL',True); text=getv('TEXT',True); broll=getv('BROLL_URL'); output=getv('OUTPUT_NAME',True)
           with open(os.environ['GITHUB_ENV'],'a',encoding='utf-8') as f:
               f.write(f'AUDIO_URL={audio}\nBROLL_URL={broll}\nOUTPUT_NAME={output}\n')
+              f.write('FORCE_RERENDER='+('true' if os.environ.get('FORCE_RERENDER','').strip().lower() in ('true','1','yes') else 'false')+'\n')
               f.write('MOTUS_TEXT<<MOTUS_TEXT_EOF\n'+text+'\nMOTUS_TEXT_EOF\n')
           PY
 
@@ -304,6 +305,7 @@ jobs:
 
       - name: Quality control
         run: |
+          if [ "${FORCE_RERENDER:-}" = "true" ] && [ "${REUSE_EXISTING:-}" = "true" ]; then echo "FORCE_RERENDER_SAFETY_BLOCK: refusing stale video"; exit 1; fi
           VIDEO="work/$SAFE_NAME.mp4"; test -s "$VIDEO"
           WIDTH="$(ffprobe -v error -select_streams v:0 -show_entries stream=width -of csv=p=0 "$VIDEO")"
           HEIGHT="$(ffprobe -v error -select_streams v:0 -show_entries stream=height -of csv=p=0 "$VIDEO")"
