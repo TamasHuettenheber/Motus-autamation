@@ -80,3 +80,5 @@ jobs:
 # Verify Episode 014 scheduled post, channel and dueAt after release; read only.
 
 # Refresh live Jori channel and queue before Episode 015 booking on 2026-11-02; read only.
+
+# Verify Episode 015 scheduled post, channel and dueAt after release; read only.
