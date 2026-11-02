@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-02T05:53:07.077551+00:00",
+  "checked_at_utc": "2026-11-02T14:06:35.140339+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,30 +103,30 @@
     {
       "id": "6ae67d2cab019b90872f8a35",
       "text": "Die Kollegin aus der Buchhaltung drückt dir kurz vor deiner wohlverdienten Mittagspause noch schnell zwei dicke Rechnungen zur Durchsicht in die Hand. Dein Magen knurrt hörbar, und der Hunger zieht bereits im Unterbauch. Genau jetzt musst du eine klare Grenze ziehen, statt lächelnd einzuknicken und hungrig Überstunden zu schieben. Sag höflich aber bestimmt, dass die Prüfung erst um zwei Uhr erfolgt. Speicher dir diesen Beitrag, um beim nächsten unpassenden Zeitfresser standhaft zu bleiben.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-02T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-02T11:03:34.543Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7703527684361522465",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-02-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae67d2cab019b90872f8a35_video.mp4"
         }
       ]
     },
     {
       "id": "6ae67cf821c807e9d5903a79",
       "text": "Der Kaffeefilter reißt genau in dem Moment, als das kochende Wasser den Rand benetzt und die schwarze Brühe auf die weiße Küchenzeile läuft. Dieser kleine Frühmorgenschock testet deine Nerven, bevor der Arbeitstag überhaupt begonnen hat. Statt zu fluchen, atme dreimal tief ein und entscheide bewusst, die Sauerei erst in der Mittagspause zu beseitigen. Nutze diese ungeplante Verzögerung für einen klaren Gedanken. Schreib mir in die Kommentare, wie du auf solche Startschwierigkeiten reagierst.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-02T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-02T06:02:17.446Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7703450060196973856",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-02-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae67cf821c807e9d5903a79_video.mp4"
         }
       ]
     },
