@@ -1,0 +1,48 @@
+name: MOTUS Safety Verify 2026-11-03 12:00
+on:
+  push:
+    paths:
+      - ".github/workflows/motus-safety-verify-20261103-1200.yml"
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Read-only verification of corrected post and neighboring slots
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json,os,urllib.request
+          key=os.environ["BUFFER_API_KEY"].strip()
+          def gql(q,v):
+              req=urllib.request.Request("https://api.buffer.com",data=json.dumps({"query":q,"variables":v}).encode(),headers={"Authorization":"Bearer "+key,"Content-Type":"application/json"},method="POST")
+              with urllib.request.urlopen(req,timeout=45) as x: r=json.load(x)
+              if r.get("errors"):raise RuntimeError(str(r["errors"])[:400])
+              return r["data"]
+          q="query P($id:PostId!){post(input:{id:$id}){id status dueAt channelId text assets{source mimeType}}}"
+          DUE="2026-11-03T11:00:00.000Z"
+          CHANNEL="6ab5124fea19ca0bded4aa0b"
+          ids={"unsafe_original":"6ae7d138d016796999f97c43","unsafe_reused":"6ae8e375fb05897d9d370c9d","safe_new":"6ae8e5a2ff93b610bb9511f7"}
+          posts={key:gql(q,{"id":v})["post"] for key,v in ids.items()}
+          if any(not p for p in posts.values()):raise SystemExit("VERIFY_MISSING_POST")
+          for k in ("unsafe_original","unsafe_reused"):
+              if posts[k]["status"]!="draft":raise SystemExit("VERIFY_UNSAFE_NOT_DRAFT "+k)
+          safe=posts["safe_new"]
+          if safe["status"]!="scheduled" or safe["channelId"]!=CHANNEL or safe["dueAt"]!=DUE:raise SystemExit("VERIFY_CORRECTED_SCHEDULE_MISMATCH")
+          if not safe.get("text","").startswith("In der Küche köchelt das Mittagessen"):raise SystemExit("VERIFY_WRONG_TEXT")
+          if "Schließe jetzt kurz die Augen" in safe["text"]:raise SystemExit("VERIFY_UNSAFE_TEXT")
+          if not any("motus-2026-11-03-1200.mp4" in a.get("source","") and a.get("mimeType","").startswith("video/") for a in safe.get("assets",[])):raise SystemExit("VERIFY_VIDEO_ASSET_MISSING")
+          others={"6ae7d101902c3fb1dec4104f":"2026-11-03T06:00:00.000Z","6ae7d163d016796999f982f2":"2026-11-03T17:30:00.000Z","6ae7d13101fa08ffbe737a78":"2026-11-03T21:00:00.000Z"}
+          for pid,due in others.items():
+              p=gql(q,{"id":pid})["post"]
+              if not p or p["status"]!="scheduled" or p["dueAt"]!=due or p["channelId"]!=CHANNEL:raise SystemExit("VERIFY_NEIGHBOR_MISMATCH "+pid)
+          query="""query Posts($input:PostsInput!){posts(first:100,input:$input){edges{node{id status dueAt channelId}}}}"""
+          resp=gql(query,{"input":{"organizationId":"6ab500dfc949088b0ba1e58f","filter":{"channelIds":[CHANNEL],"status":["scheduled"]}}})["posts"]["edges"]
+          matches=[e["node"]["id"] for e in resp if e["node"].get("dueAt")==DUE]
+          if matches != [ids["safe_new"]]:raise SystemExit("VERIFY_TARGET_DUPLICATE "+str(matches))
+          print("MOTUS_REPAIR_VERIFIED: target scheduled exactly once; unsafe originals held in draft; three other Nov 3 slots unchanged")
+          print("REPLACEMENT_BUFFER_ID:",safe["id"])
+          PY
