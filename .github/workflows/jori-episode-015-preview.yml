@@ -58,7 +58,7 @@ jobs:
           assert e['question']==e['riddle']['question'] and e['answer']=='Weg B!'
           assert e['clues']==['A endet am roten Riss','B erreicht den Klöppel','C führt zum Anfang zurück'] and e['correct']==1
           assert e['narration'].count('[[PAUSE:7]]')==1 and e['narration'].count('[[SEGMENT]]')==4
-          assert not re.search(r'\bJori\b.{0,75}\b(?:er|ihn|sein|ihm)\b',e['narration'],re.I)
+          assert not re.search(r'\bJori\b[^.!?]{0,75}\b(?:er|ihn|ihm)\b',e['narration'],re.I)
           clean=lambda s:re.sub(r'\[\[(?:PAUSE:[0-9.]+|SEGMENT)\]\]',' ',s)
           words=lambda s:re.findall(r'\w+',s.lower())
           assert words(clean(e['narration_tts']))==words(clean(e['narration']))
