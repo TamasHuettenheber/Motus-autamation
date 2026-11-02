@@ -85,6 +85,9 @@ jobs:
                   "Alle Empfehlungen muessen sicher und praktisch umsetzbar sein. "
                   "Rate niemals dazu, verschuettete heisse Fluessigkeiten, rutschige "
                   "Verschmutzungen oder andere unmittelbare Gefahren liegen zu lassen. "
+                  "Wenn auf einem eingeschalteten Herd Essen anbrennt, muss zuerst der Herd "
+                  "sicher ausgeschaltet werden; rate dabei nie zum Augenschliessen, "
+                  "Abwarten oder gedanklichen Wegschieben akuter Gefahren. "
                   "Vermeide austauschbare Phrasen, Kunstwoerter und unnatuerliche Formulierungen. "
                   "Pruefe vor der JSON-Ausgabe jeden Text auf korrekte deutsche Rechtschreibung und Grammatik. "
                   "Verwende ä, ö, ü und ß nach deutschen Rechtschreibregeln; "
@@ -173,6 +176,7 @@ jobs:
               "Gespraech":"Gespräch","naemlich":"nämlich",
               "fuer":"für","erschoepft":"erschöpft",
               "schliesst":"schließt","Tuer":"Tür",
+              "eetrudeln":"eintrudeln",
               "ungelueftet":"ungelüftet","unwillkuerlich":"unwillkürlich"
           }
           for slot in slots:
