@@ -1,0 +1,86 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 16,
+  "series_version": "relaunch-v2",
+  "title": "Das Räderwerk ohne Zeit",
+  "hook": "Die Schattenfigur drehte den goldenen Schlüssel – da kippte der umgedrehte Uhrturm noch weiter zur Seite!",
+  "story": "Jori, Flimm und Nemi eilten über die Klangbrücke. Im Turm stellte sich die Gestalt als Miro, der Uhrenhüter, vor. Das Räderwerk war stehen geblieben, und nur der richtige Antrieb konnte den zweiten Ton wecken. Der Schlüssel drehte sich im Uhrzeigersinn. Miro erklärte: Berühren sich zwei Zahnräder, drehen sie sich immer entgegengesetzt. Zahnrad A berührte den Schlüssel, B berührte A und C berührte B.",
+  "question": "Welches Zahnrad dreht sich wie der Schlüssel im Uhrzeigersinn: A, B oder C?",
+  "answer": "Zahnrad B!",
+  "after": "Zahnrad B! A drehte sich entgegengesetzt, B wieder wie der Schlüssel und C erneut andersherum. Jori zeigte auf B. Flimm ließ sein Sternlicht darüberlaufen. Das Räderwerk sprang an, und der Turm richtete sich auf.",
+  "cliff": "Ein tiefer Glockenton ließ die große Tür auffliegen. Dahinter lag ein leuchtendes Wolkenmeer. Drei dunkle Segelschiffe glitten auf den Turm zu. Auf dem mittleren Segel flammte derselbe rote Riss wie an der Sternenglocke. Wer kam dort über die Wolken?",
+  "riddle": {
+    "type": "gear_direction_logic",
+    "question": "Welches Zahnrad dreht sich wie der Schlüssel im Uhrzeigersinn: A, B oder C?",
+    "answer": "Zahnrad B",
+    "evidence_in_story": "Jedes berührende Zahnrad dreht entgegengesetzt: A entgegen dem Schlüssel, B wieder wie der Schlüssel, C wieder entgegengesetzt.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "mechanical_direction_chain",
+  "clues": [
+    "Schlüssel: im Uhrzeigersinn",
+    "Berührende Zahnräder drehen entgegengesetzt",
+    "Reihe: Schlüssel – A – B – C"
+  ],
+  "correct": 1,
+  "puzzle_visual": "Goldener Schlüssel mit Uhrzeigersinn-Pfeil und drei verbundene Zahnräder A, B, C. Richtungswechsel an jeder Berührung; Frage und Hinweise vollständig links von x=540.",
+  "continuity": "Setzt direkt bei der Schattenfigur mit dem goldenen Schlüssel im umgedrehten Uhrturm aus Folge 015 an. Miro erklärt das Räderwerk; Jori und Flimm wählen Zahnrad B und wecken den zweiten Ton.",
+  "narration": "Die Schattenfigur drehte den goldenen Schlüssel – da kippte der umgedrehte Uhrturm noch weiter zur Seite! [[SEGMENT]] Jori, Flimm und Nemi eilten über die Klangbrücke. Im Turm stellte sich die Gestalt als Miro, der Uhrenhüter, vor. Das Räderwerk war stehen geblieben, und nur der richtige Antrieb konnte den zweiten Ton wecken. [[SEGMENT]] Der Schlüssel drehte sich im Uhrzeigersinn. Miro erklärte: Berühren sich zwei Zahnräder, drehen sie sich immer entgegengesetzt. Zahnrad A berührte den Schlüssel, B berührte A und C berührte B. [[SEGMENT]] Welches Zahnrad dreht sich wie der Schlüssel im Uhrzeigersinn: A, B oder C? [[PAUSE:7]] Zahnrad B! A drehte sich entgegengesetzt, B wieder wie der Schlüssel und C erneut andersherum. Jori zeigte auf B. Flimm ließ sein Sternlicht darüberlaufen. Das Räderwerk sprang an, und der Turm richtete sich auf. [[SEGMENT]] Ein tiefer Glockenton ließ die große Tür auffliegen. Dahinter lag ein leuchtendes Wolkenmeer. Drei dunkle Segelschiffe glitten auf den Turm zu. Auf dem mittleren Segel flammte derselbe rote Riss wie an der Sternenglocke. Wer kam dort über die Wolken?",
+  "narration_tts": "Die Schattenfigur drehte den goldenen Schlüssel – da kippte der umgedrehte Uhrturm noch weiter zur Seite! [[SEGMENT]] Jori, Flimm und Nemi eilten über die Klangbrücke. Im Turm stellte sich die Gestalt als Miro, der Uhrenhüter, vor. Das Räderwerk war stehen geblieben, und nur der richtige Antrieb konnte den zweiten Ton wecken. [[SEGMENT]] Der Schlüssel drehte sich im Uhrzeigersinn. Miro erklärte: Berühren sich zwei Zahnräder, drehen sie sich immer entgegengesetzt. Zahnrad A berührte den Schlüssel, B berührte A und C berührte B. [[SEGMENT]] Welches Zahnrad dreht sich wie der Schlüssel im Uhrzeigersinn: A, B oder C? [[PAUSE:7]] Zahnrad B! A drehte sich entgegengesetzt, B wieder wie der Schlüssel und C erneut andersherum. Jori zeigte auf B. Flimm ließ sein Sternlicht darüberlaufen. Das Räderwerk sprang an, und der Turm richtete sich auf. [[SEGMENT]] Ein tiefer Glockenton ließ die große Tür auffliegen. Dahinter lag ein leuchtendes Wolkenmeer. Drei dunkle Segelschiffe glitten auf den Turm zu. Auf dem mittleren Segel flammte derselbe rote Riss wie an der Sternenglocke. Wer kam dort über die Wolken?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "render_pending",
+  "scene_briefs": [
+    "Direkter Anschluss: Klangbrücke, umgedrehter Uhrturm und Schattenfigur mit goldenem Schlüssel.",
+    "Im invertierten Turm stellt sich der freundliche Uhrenhüter Miro vor.",
+    "Der Schlüssel und die Zahnradkette A-B-C werden erklärt.",
+    "Ruhige Denkpause mit freiem Raum für die TikTok-sichere Zahnradgrafik.",
+    "Jori wählt B; Flimm beleuchtet das mittlere Zahnrad, das Werk startet.",
+    "Der Turm richtet sich auf und der zweite Ton erklingt.",
+    "Cliffhanger: Drei dunkle Segelschiffe nähern sich über dem Wolkenmeer, das mittlere mit rotem Risssymbol."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-016-v1/scene-01.jpg",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-016-v1/scene-02.jpg",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-016-v1/scene-03.jpg",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-016-v1/scene-04.jpg",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-016-v1/scene-05.jpg",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-016-v1/scene-06.jpg",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-016-v1/scene-07.jpg",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-03T08:20:00+01:00",
+  "status": "PREVIEW_PENDING",
+  "previous_cliffhanger": "Aus dem Glockenton wuchs eine schimmernde Klangbrücke. Sie führte durch den Sternenraum zu einem Turm, der kopfüber in der Dunkelheit hing. Seine Uhr hatte keine Zeiger. In einem offenen Fenster drehte eine Schattenfigur einen großen goldenen Schlüssel. „Der zweite Ton wartet!“, rief sie. Dann erlosch das Fenster. Wer hatte den Schlüssel zum umgedrehten Uhrturm?"
+}
