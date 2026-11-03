@@ -179,7 +179,7 @@ jobs:
               "Gespraech":"Gespräch","naemlich":"nämlich",
               "fuer":"für","erschoepft":"erschöpft",
               "schliesst":"schließt","Tuer":"Tür",
-              "eetrudeln":"eintrudeln",
+              "eetrudeln":"eintrudeln","Energiefoch":"Energielevel",
               "ungelueftet":"ungelüftet","unwillkuerlich":"unwillkürlich"
           }
           for slot in slots:
