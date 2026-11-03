@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-03T15:00:01.660245+00:00",
+  "checked_at_utc": "2026-11-03T21:11:38.622406+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -73,30 +73,30 @@
     {
       "id": "6ae7d13101fa08ffbe737a78",
       "text": "Die Gedanken kreisen um das morgige Gespräch mit der Hausverwaltung, während der Wecker unerbittlich näher rückt. Das Kissen fühlt sich plötzlich unbequem an und die Raumtemperatur scheint zu steigen. Wenn der Kopf keine Ruhe gibt, hilft oft ein einfacher Zettel auf dem Nachttisch. Schreib den ungelösten Punkt auf, klappe das Heft zu und übergib die Sorge an den nächsten Tag. Gönn deinem Geist den wohlverdienten Feierabend. Folge unserem Kanal für weitere Impulse zu einem gesunden Alltag.\n\n#motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – Hidden Tears (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-03T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-03T21:03:53.667Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7704053422324206880",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-03-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae7d13101fa08ffbe737a78_video.mp4"
         }
       ]
     },
     {
       "id": "6ae7d163d016796999f982f2",
       "text": "Der Nachbar lädt spontan zum Feierabendbier ein, obwohl du dir vorgenommen hattest, heute endlich mal den Küchentisch zu entrümpeln und früh zu kochen. Du spürst den leisen Drang, zuzusagen, nur um bloß niemanden zu enttäuschen. Doch deine eigene Grenze schützt dich vor Erschöpfung. Sag heute Abend einmal freundlich aber bestimmt Nein, um Raum für dich zu schaffen. Teile diesen Gedanken jetzt mit jemandem, dem es genau wie dir geht.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Deserve to be Loved (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-03T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-03T17:33:21.538Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7703999222512749857",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-03-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae7d163d016796999f982f2_video.mp4"
         }
       ]
     },
