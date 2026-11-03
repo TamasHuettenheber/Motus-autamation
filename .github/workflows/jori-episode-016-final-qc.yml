@@ -74,4 +74,4 @@ jobs:
             work/episode_016/scene-timing.json
           retention-days: 14
 
-# Recheck after Sulafat cache and validated MP4 were committed.
+# Independent recheck triggered after the validated MP4 commit on 2026-11-03.
