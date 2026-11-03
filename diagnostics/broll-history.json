@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-11-1830",
-      "clip_id": "happy-journal-6951182",
-      "source": "https://www.pexels.com/video/happy-woman-writing-in-journal-6951182/",
-      "used_at_utc": "2026-10-10T21:35:15.740075+00:00"
-    },
-    {
       "output_name": "motus-2026-10-12-2200",
       "clip_id": "journal-7260657",
       "source": "https://www.pexels.com/video/a-woman-writing-on-a-journal-7260657/",
@@ -599,6 +593,12 @@
       "clip_id": "sunset-ocean-7975481",
       "source": "https://www.pexels.com/video/vertical-video-of-sunset-7975481/",
       "used_at_utc": "2026-11-03T21:54:58.800869+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-05-0700",
+      "clip_id": "forest-walk-5838469",
+      "source": "https://www.pexels.com/video/vertical-video-of-a-woman-walking-through-the-woods-5838469/",
+      "used_at_utc": "2026-11-03T22:07:51.938655+00:00"
     }
   ]
 }
