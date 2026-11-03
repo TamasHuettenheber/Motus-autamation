@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-11-1200",
-      "clip_id": "coffee-phone-13736547",
-      "source": "https://www.pexels.com/video/a-woman-using-her-phone-and-drinking-a-cup-of-coffee-13736547/",
-      "used_at_utc": "2026-10-10T21:34:22.345353+00:00"
-    },
-    {
       "output_name": "motus-2026-10-11-0700",
       "clip_id": "sunrise-sea-11382155",
       "source": "https://www.pexels.com/video/vertical-shot-of-sunrise-over-sea-11382155/",
@@ -599,6 +593,12 @@
       "clip_id": "happy-journal-6951182",
       "source": "https://www.pexels.com/video/happy-woman-writing-in-journal-6951182/",
       "used_at_utc": "2026-11-03T01:21:06.672254+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-05-1200",
+      "clip_id": "work-laptop-8479274",
+      "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
+      "used_at_utc": "2026-11-03T21:49:21.538329+00:00"
     }
   ]
 }
