@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-03T06:36:05.082484+00:00",
+  "checked_at_utc": "2026-11-03T15:00:01.660245+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6ae8e5a2ff93b610bb9511f7",
       "text": "In der Küche köchelt das Mittagessen, als das Handy klingelt und plötzlich etwas angebrannt riecht. Du willst gleichzeitig den Anruf annehmen und den Topf retten. Doch jetzt zählt Sicherheit: Schalte zuerst den Herd aus und halte Abstand vom heißen Topf. Erst wenn die Situation sicher ist, kümmerst du dich um den Anruf. Ein klarer erster Schritt ist besser als hektisches Multitasking. Welche einfache Regel hilft dir, in stressigen Momenten den Überblick zu behalten? Schreib es in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Destiny (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-03T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-03T11:02:36.941Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7703898639545961761",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-03-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae8e5a2ff93b610bb9511f7_video.mp4"
         }
       ]
     },
