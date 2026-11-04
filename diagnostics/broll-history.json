@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-12-2200",
-      "clip_id": "journal-7260657",
-      "source": "https://www.pexels.com/video/a-woman-writing-on-a-journal-7260657/",
-      "used_at_utc": "2026-10-11T21:25:44.879893+00:00"
-    },
-    {
       "output_name": "motus-2026-10-12-1200",
       "clip_id": "phone-cafe-5075207",
       "source": "https://www.pexels.com/video/a-woman-is-using-her-phone-to-take-a-picture-of-her-coffee-5075207/",
@@ -599,6 +593,12 @@
       "clip_id": "forest-walk-5838469",
       "source": "https://www.pexels.com/video/vertical-video-of-a-woman-walking-through-the-woods-5838469/",
       "used_at_utc": "2026-11-03T22:07:51.938655+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-06-1830",
+      "clip_id": "forest-walk-5838174",
+      "source": "https://www.pexels.com/video/vertical-video-of-a-woman-walking-alone-through-the-forest-5838174/",
+      "used_at_utc": "2026-11-04T21:59:04.968129+00:00"
     }
   ]
 }
