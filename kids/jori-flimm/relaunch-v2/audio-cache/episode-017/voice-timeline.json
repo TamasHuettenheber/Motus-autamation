@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Das mittlere Wolkenschiff raste auf den Uhrturm zu – und der rote Riss im Segel wurde größer!",
+      "start": 0.0,
+      "end": 8.64,
+      "duration": 8.64
+    },
+    {
+      "kind": "speech",
+      "text": "Jori hielt das Geländer. Flimm leuchtete dem Schiff entgegen. Kapitänin Aira rief: „Wir greifen nicht an! Der Riss frisst unser Segel, und ein Sturm folgt uns!“ Miro öffnete die Windhafenkarte mit drei Toren: A, B und C.",
+      "start": 8.64,
+      "end": 29.76,
+      "duration": 21.12
+    },
+    {
+      "kind": "speech",
+      "text": "Der Startpunkt lag links unten. Airas Route lautete: ein Feld hoch, zwei nach rechts, dann ein Feld hoch.",
+      "start": 29.76,
+      "end": 41.0,
+      "duration": 11.24
+    },
+    {
+      "kind": "speech",
+      "text": "Bei welchem Tor endet der Weg: A, B oder C?",
+      "start": 41.0,
+      "end": 46.56,
+      "duration": 5.56
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 46.56,
+      "end": 53.56,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Tor C! Jori fuhr die Route mit dem Finger nach. Flimm zeichnete sie golden nach: hoch, rechts, rechts, hoch. Oben rechts leuchtete C. Das Windtor öffnete sich, und die Schiffe glitten sicher hinein.",
+      "start": 53.56,
+      "end": 74.24,
+      "duration": 20.68
+    },
+    {
+      "kind": "speech",
+      "text": "Doch der rote Riss löste sich wie ein lebendiger Blitz vom Segel. Er sprang an die Turmwand und zeichnete dort eine glühende Tür. Dahinter pochte etwas: bum ... bum ... bum. Was wartete hinter der roten Tür?",
+      "start": 74.24,
+      "end": 93.92,
+      "duration": 19.68
+    }
+  ],
+  "duration": 93.92,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
