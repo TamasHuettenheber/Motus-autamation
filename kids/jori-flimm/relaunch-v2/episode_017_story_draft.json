@@ -1,0 +1,58 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 17,
+  "series_version": "relaunch-v2",
+  "title": "Das Zeichen der Wolkensegler",
+  "hook": "Das mittlere Wolkenschiff raste auf den Uhrturm zu – und der rote Riss im Segel wurde größer!",
+  "story": "Jori hielt das Geländer. Flimm leuchtete dem Schiff entgegen. Kapitänin Aira rief: „Wir greifen nicht an! Der Riss frisst unser Segel, und ein Sturm folgt uns!“ Miro öffnete die Windhafenkarte mit drei Toren: A, B und C. Der Startpunkt lag links unten. Airas Route lautete: ein Feld hoch, zwei nach rechts, dann ein Feld hoch.",
+  "question": "Bei welchem Tor endet der Weg: A, B oder C?",
+  "answer": "Tor C!",
+  "after": "Tor C! Jori fuhr die Route mit dem Finger nach. Flimm zeichnete sie golden nach: hoch, rechts, rechts, hoch. Oben rechts leuchtete C. Das Windtor öffnete sich, und die Schiffe glitten sicher hinein.",
+  "cliff": "Doch der rote Riss löste sich wie ein lebendiger Blitz vom Segel. Er sprang an die Turmwand und zeichnete dort eine glühende Tür. Dahinter pochte etwas: bum ... bum ... bum. Was wartete hinter der roten Tür?",
+  "riddle": {
+    "type": "grid_route_logic",
+    "question": "Bei welchem Tor endet der Weg: A, B oder C?",
+    "answer": "Tor C",
+    "evidence_in_story": "Start links unten; ein Feld hoch, zwei nach rechts, ein Feld hoch führt zum oberen rechten Tor C.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "visible_grid_route",
+  "clues": [
+    "Start: links unten",
+    "Route: hoch – rechts – rechts – hoch",
+    "Tore oben: A – B – C"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Klares 3×3-Feld: Startpunkt links unten; Route hoch, rechts, rechts, hoch; Tore A, B und C über der oberen Reihe. Frage und Hinweise vollständig links von x=540.",
+  "continuity": "Setzt direkt bei den drei dunklen Segelschiffen über dem Wolkenmeer und dem roten Riss auf dem mittleren Segel aus Folge 016 an. Jori und Flimm öffnen mit der richtigen Route Tor C des Windhafens.",
+  "narration": "Das mittlere Wolkenschiff raste auf den Uhrturm zu – und der rote Riss im Segel wurde größer! [[SEGMENT]] Jori hielt das Geländer. Flimm leuchtete dem Schiff entgegen. Kapitänin Aira rief: „Wir greifen nicht an! Der Riss frisst unser Segel, und ein Sturm folgt uns!“ Miro öffnete die Windhafenkarte mit drei Toren: A, B und C. [[SEGMENT]] Der Startpunkt lag links unten. Airas Route lautete: ein Feld hoch, zwei nach rechts, dann ein Feld hoch. [[SEGMENT]] Bei welchem Tor endet der Weg: A, B oder C? [[PAUSE:7]] Tor C! Jori fuhr die Route mit dem Finger nach. Flimm zeichnete sie golden nach: hoch, rechts, rechts, hoch. Oben rechts leuchtete C. Das Windtor öffnete sich, und die Schiffe glitten sicher hinein. [[SEGMENT]] Doch der rote Riss löste sich wie ein lebendiger Blitz vom Segel. Er sprang an die Turmwand und zeichnete dort eine glühende Tür. Dahinter pochte etwas: bum ... bum ... bum. Was wartete hinter der roten Tür?",
+  "narration_tts": "Das mittlere Wolkenschiff raste auf den Uhrturm zu – und der rote Riss im Segel wurde größer! [[SEGMENT]] Jori hielt das Geländer. Flimm leuchtete dem Schiff entgegen. Kapitänin Aira rief: „Wir greifen nicht an! Der Riss frisst unser Segel, und ein Sturm folgt uns!“ Miro öffnete die Windhafenkarte mit drei Toren: A, B und C. [[SEGMENT]] Der Startpunkt lag links unten. Airas Route lautete: ein Feld hoch, zwei nach rechts, dann ein Feld hoch. [[SEGMENT]] Bei welchem Tor endet der Weg: A, B oder C? [[PAUSE:7]] Tor C! Jori fuhr die Route mit dem Finger nach. Flimm zeichnete sie golden nach: hoch, rechts, rechts, hoch. Oben rechts leuchtete C. Das Windtor öffnete sich, und die Schiffe glitten sicher hinein. [[SEGMENT]] Doch der rote Riss löste sich wie ein lebendiger Blitz vom Segel. Er sprang an die Turmwand und zeichnete dort eine glühende Tür. Dahinter pochte etwas: bum ... bum ... bum. Was wartete hinter der roten Tür?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "render_pending",
+  "scene_briefs": [
+    "Direkter Anschluss: Drei dunkle Segelschiffe über dem Wolkenmeer; das mittlere rast mit größer werdendem rotem Riss auf den Uhrturm zu.",
+    "Jori hält das Geländer, Flimm leuchtet; Kapitänin Aira warnt vom mittleren Schiff vor dem Wolkensturm.",
+    "Miro öffnet im Turm die Windhafenkarte mit den drei Toren A, B und C.",
+    "Ruhige Denkpause vor neuer Wolkenkulisse mit freiem Raum für die TikTok-sichere 3×3-Routengrafik.",
+    "Jori fährt die Route auf der Karte nach; Flimm zeichnet hoch, rechts, rechts, hoch mit goldenem Licht.",
+    "Tor C des Windhafens öffnet sich; die drei Wolkenschiffe gleiten sicher in den Hafen.",
+    "Cliffhanger: Der rote Riss löst sich vom Segel und zeichnet eine glühende rote Tür in die Turmwand."
+  ],
+  "visuals": [
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-017-v1/scene-01.jpg", "scene": 1, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-017-v1/scene-02.jpg", "scene": 2, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-017-v1/scene-03.jpg", "scene": 3, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-017-v1/scene-04.jpg", "scene": 4, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-017-v1/scene-05.jpg", "scene": 5, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-017-v1/scene-06.jpg", "scene": 6, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-017-v1/scene-07.jpg", "scene": 7, "generated": true}
+  ],
+  "created_at": "2026-11-04T08:15:00+01:00",
+  "status": "PREVIEW_PENDING",
+  "previous_cliffhanger": "Ein tiefer Glockenton ließ die große Tür auffliegen. Dahinter lag ein leuchtendes Wolkenmeer. Drei dunkle Segelschiffe glitten auf den Turm zu. Auf dem mittleren Segel flammte derselbe rote Riss wie an der Sternenglocke. Wer kam dort über die Wolken?"
+}
