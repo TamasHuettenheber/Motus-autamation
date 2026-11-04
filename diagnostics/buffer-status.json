@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-04T01:14:56.523872+00:00",
+  "checked_at_utc": "2026-11-04T09:00:39.188941+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6ae936b97996caf141c318c3",
       "text": "Der Kaffeebecher steht leer auf dem Küchentresen, während der Wasserkocher noch geräuschvoll aufheizt. Genau jetzt triffst du die stille Entscheidung, den ersten Schluck Wasser vor dem Koffein zu trinken. Diese kleine Gewohnheit versorgt deinen Körper nach der Nacht direkt mit Flüssigkeit und schützt deinen Magen vor dem ersten Reiz. Probier das heute aus und schreib mir deine morgendliche Lieblingsroutine in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Wild Waters (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-04T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-04T06:02:23.252Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7704192267581476128",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-04-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae936b97996caf141c318c3_video.mp4"
         }
       ]
     },
