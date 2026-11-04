@@ -74,4 +74,4 @@ jobs:
             work/episode_017/scene-timing.json
           retention-days: 14
 
-# Independent recheck will be triggered after the validated MP4 commit on 2026-11-04.
+# Independent recheck triggered after the validated MP4 commit on 2026-11-04.
