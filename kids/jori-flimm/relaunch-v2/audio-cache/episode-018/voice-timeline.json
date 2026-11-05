@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Die rote Tür klopfte ein letztes Mal – dann sprang sie auf und zog alle Farben aus dem Gang!",
+      "start": 0.0,
+      "end": 9.16,
+      "duration": 9.16
+    },
+    {
+      "kind": "speech",
+      "text": "Jori blieb dicht bei Flimm. Hinter der Tür lag eine graue Kammer mit einer zerbrochenen Glasbrücke. Darüber zitterte Zisch, ein winziges Wesen aus rotem Licht. „Ich wollte euch mit dem Riss warnen“, rief es. „Die Schatteninsel wacht auf! Doch zuerst brauchen wir die violette Brücke.“",
+      "start": 9.16,
+      "end": 31.32,
+      "duration": 22.16
+    },
+    {
+      "kind": "speech",
+      "text": "Miro zeigte auf drei Lampenpaare: A war Rot und Blau, B war Rot und Gelb, C war Blau und Gelb.",
+      "start": 31.32,
+      "end": 45.6,
+      "duration": 14.28
+    },
+    {
+      "kind": "speech",
+      "text": "Welches Lampenpaar ergibt violettes Licht: A, B oder C?",
+      "start": 45.6,
+      "end": 53.76,
+      "duration": 8.16
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 53.76,
+      "end": 60.76,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Paar A! Rot und Blau ergeben Violett. Jori deutete auf die beiden Lampen. Flimm ließ sie gemeinsam leuchten. Violettes Licht floss über den Abgrund, und die Glasbrücke wurde wieder fest.",
+      "start": 60.76,
+      "end": 78.0,
+      "duration": 17.24
+    },
+    {
+      "kind": "speech",
+      "text": "Zisch übergab Jori einen kleinen Wolkenkompass. Seine Nadel drehte sich wild und zeigte plötzlich nach unten. Unter den Wolken erschien eine dunkle Insel – doch sie warf keinen Schatten. Warum hatte die Schatteninsel keinen Schatten?",
+      "start": 78.0,
+      "end": 99.0,
+      "duration": 21.0
+    }
+  ],
+  "duration": 99.0,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
