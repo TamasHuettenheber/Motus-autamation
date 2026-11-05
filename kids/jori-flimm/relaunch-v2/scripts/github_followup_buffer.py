@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Schedule validated Jori episodes 002–017; never touch MOTUS."""
+"""Schedule validated Jori episodes 002–018; never touch MOTUS."""
 import argparse,json,os,time,urllib.request,urllib.error
 from datetime import datetime,timezone,timedelta
 from zoneinfo import ZoneInfo
-p=argparse.ArgumentParser();p.add_argument("--episode",type=int,required=True,choices=[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]);p.add_argument("--replace-existing",action="store_true");a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument("--episode",type=int,required=True,choices=[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]);p.add_argument("--replace-existing",action="store_true");a=p.parse_args()
 n=a.episode
 key=os.environ.get("BUFFER_API_KEY","").strip()
 assert key,"BUFFER_API_KEY_MISSING"
 due=datetime(2026,10,22,14,0,tzinfo=ZoneInfo("Europe/Berlin"))+timedelta(days=n-1)
 assert datetime.now(ZoneInfo("Europe/Berlin"))<due,"Requested publishing time passed"
 expected_due_utc=due.astimezone(timezone.utc)
-if n in (6,7,8,9,10,11,12,13,14,15,16,17):
+if n in (6,7,8,9,10,11,12,13,14,15,16,17,18):
     release_path=f"kids/jori-flimm/relaunch-v2/episode_{n:03d}_release_record.json"
     release=json.loads(open(release_path,encoding="utf-8").read())
     assert release.get("user_approved_for_publication") is True,f"Episode {n:03d} has no explicit user release approval"
@@ -47,8 +47,11 @@ if n in (6,7,8,9,10,11,12,13,14,15,16,17):
     if n==17:
         assert release.get("render_qc_passed") is True and release.get("video_path")=="published/jori-flimm-2026-11-07-e017-v1.mp4","Episode 017 has no passing render QC record"
         assert release.get("final_qc_run_id") and release.get("queue_check_run_id"),"Episode 017 is missing final QC or live queue verification"
+    if n==18:
+        assert release.get("render_qc_passed") is True and release.get("video_path")=="published/jori-flimm-2026-11-08-e018-v1.mp4","Episode 018 has no passing render QC record"
+        assert release.get("final_qc_run_id") and release.get("queue_check_run_id"),"Episode 018 is missing final QC or live queue verification"
 repo=os.environ["GITHUB_REPOSITORY"]
-version_suffix={6:"-v2",7:"-v1",8:"-v2",9:"-v2",10:"-v2",11:"-v1",12:"-v1",13:"-v1",14:"-v1",15:"-v1",16:"-v1",17:"-v1"}.get(n,"")
+version_suffix={6:"-v2",7:"-v1",8:"-v2",9:"-v2",10:"-v2",11:"-v1",12:"-v1",13:"-v1",14:"-v1",15:"-v1",16:"-v1",17:"-v1",18:"-v1"}.get(n,"")
 media=f"https://raw.githubusercontent.com/{repo}/feature/jori-flimm-neustart-folge001/published/jori-flimm-{due.date().isoformat()}-e{n:03d}{version_suffix}.mp4"
 def gql(query,variables=None):
  req=urllib.request.Request("https://api.buffer.com",method="POST",data=json.dumps({"query":query,"variables":variables or {}}).encode(),headers={"Authorization":"Bearer "+key,"Content-Type":"application/json"})
@@ -104,7 +107,7 @@ if existing:
  assert datetime.fromisoformat(old["dueAt"].replace("Z","+00:00")).astimezone(timezone.utc)==expected_due_utc,{"actual_dueAt":old.get("dueAt"),"expected_dueAt":due.isoformat()}
  print("JORI_EPISODE_ALREADY_SCHEDULED",n,old["id"],old["dueAt"])
  raise SystemExit(0)
-if n in (6,7,8,9,10,11,12,13,14,15,16,17):
+if n in (6,7,8,9,10,11,12,13,14,15,16,17,18):
  e=json.loads(open(f"kids/jori-flimm/relaunch-v2/episode_{n:03d}_story_draft.json",encoding="utf-8").read())
 else:
  data=json.loads(open("kids/jori-flimm/relaunch-v2/staffel1_folgen_001_005.json",encoding="utf-8").read())
