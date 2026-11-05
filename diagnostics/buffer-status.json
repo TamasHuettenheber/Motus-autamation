@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-05T12:11:31.015759+00:00",
+  "checked_at_utc": "2026-11-05T20:37:00.452026+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6aea57b00a183b1b742f9cfd",
       "text": "Deine Nachbarin klingelt an der Tür und fragt, ob du spontan ihre Pakete für das gesamte Wochenende annehmen kannst. Du merkst sofort, wie sich dein Magen zusammenzieht, weil du eigentlich absolute Ruhe brauchst. Lächle freundlich, atme tief durch und sage ganz ehrlich, dass deine Kapazitäten heute erschöpft sind. Eigene Grenzen zu setzen ist kein Egoismus, sondern pure Selbstfürsorge. Folge diesem Kanal, wenn du öfter lernen willst, freundlich aber bestimmt NEIN zu sagen.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Home (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-05T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-05T17:32:34.209Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7704741331859508512",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-05-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aea57b00a183b1b742f9cfd_video.mp4"
         }
       ]
     },
