@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-13-1200",
-      "clip_id": "office-thinking-8873099",
-      "source": "https://www.pexels.com/video/a-businesswoman-working-at-an-office-8873099/",
-      "used_at_utc": "2026-10-12T20:40:06.224803+00:00"
-    },
-    {
       "output_name": "motus-2026-10-13-1830",
       "clip_id": "train-phone-12908973",
       "source": "https://www.pexels.com/video/woman-waiting-for-a-train-and-using-her-phone-12908973/",
@@ -599,6 +593,12 @@
       "clip_id": "night-walk-4121893",
       "source": "https://www.pexels.com/video/a-person-walking-in-the-street-at-night-4121893/",
       "used_at_utc": "2026-11-04T22:19:00.880288+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-07-0700",
+      "clip_id": "waiting-phone-7339414",
+      "source": "https://www.pexels.com/video/a-man-using-his-phone-while-waiting-7339414/",
+      "used_at_utc": "2026-11-05T22:29:08.937708+00:00"
     }
   ]
 }
