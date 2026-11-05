@@ -1,0 +1,58 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 18,
+  "series_version": "relaunch-v2",
+  "title": "Die Farbe hinter der roten Tür",
+  "hook": "Die rote Tür klopfte ein letztes Mal – dann sprang sie auf und zog alle Farben aus dem Gang!",
+  "story": "Jori blieb dicht bei Flimm. Hinter der Tür lag eine graue Kammer mit einer zerbrochenen Glasbrücke. Darüber zitterte Zisch, ein winziges Wesen aus rotem Licht. „Ich wollte euch mit dem Riss warnen“, rief es. „Die Schatteninsel wacht auf! Doch zuerst brauchen wir die violette Brücke.“ Miro zeigte auf drei Lampenpaare.",
+  "question": "Welches Lampenpaar ergibt violettes Licht: A, B oder C?",
+  "answer": "Paar A: Rot und Blau!",
+  "after": "Paar A! Rot und Blau ergeben Violett. Jori deutete auf die beiden Lampen. Flimm ließ sie gemeinsam leuchten. Violettes Licht floss über den Abgrund, und die Glasbrücke wurde wieder fest.",
+  "cliff": "Zisch übergab Jori einen kleinen Wolkenkompass. Seine Nadel drehte sich wild und zeigte plötzlich nach unten. Unter den Wolken erschien eine dunkle Insel – doch sie warf keinen Schatten. Warum hatte die Schatteninsel keinen Schatten?",
+  "riddle": {
+    "type": "color_mix_logic",
+    "question": "Welches Lampenpaar ergibt violettes Licht: A, B oder C?",
+    "answer": "Paar A: Rot und Blau",
+    "evidence_in_story": "Die drei sichtbaren Paare sind A Rot+Blau, B Rot+Gelb und C Blau+Gelb; Rot und Blau ergeben Violett.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "visible_color_pairs",
+  "clues": [
+    "A: Rot + Blau",
+    "B: Rot + Gelb",
+    "C: Blau + Gelb"
+  ],
+  "correct": 0,
+  "puzzle_visual": "Drei klar getrennte Lampenpaare A, B und C; jedes Paar zeigt zwei große Farbkugeln. Frage und Hinweise vollständig links von x=540.",
+  "continuity": "Setzt direkt an der glühenden roten Tür und dem langsamen Pochen aus Folge 017 an. Der rote Riss entpuppt sich als Warnung des Lichtwesens Zisch; Jori und Flimm reparieren mit Rot und Blau die violette Brücke.",
+  "narration": "Die rote Tür klopfte ein letztes Mal – dann sprang sie auf und zog alle Farben aus dem Gang! [[SEGMENT]] Jori blieb dicht bei Flimm. Hinter der Tür lag eine graue Kammer mit einer zerbrochenen Glasbrücke. Darüber zitterte Zisch, ein winziges Wesen aus rotem Licht. „Ich wollte euch mit dem Riss warnen“, rief es. „Die Schatteninsel wacht auf! Doch zuerst brauchen wir die violette Brücke.“ [[SEGMENT]] Miro zeigte auf drei Lampenpaare: A war Rot und Blau, B war Rot und Gelb, C war Blau und Gelb. [[SEGMENT]] Welches Lampenpaar ergibt violettes Licht: A, B oder C? [[PAUSE:7]] Paar A! Rot und Blau ergeben Violett. Jori deutete auf die beiden Lampen. Flimm ließ sie gemeinsam leuchten. Violettes Licht floss über den Abgrund, und die Glasbrücke wurde wieder fest. [[SEGMENT]] Zisch übergab Jori einen kleinen Wolkenkompass. Seine Nadel drehte sich wild und zeigte plötzlich nach unten. Unter den Wolken erschien eine dunkle Insel – doch sie warf keinen Schatten. Warum hatte die Schatteninsel keinen Schatten?",
+  "narration_tts": "Die rote Tür klopfte ein letztes Mal – dann sprang sie auf und zog alle Farben aus dem Gang! [[SEGMENT]] Jori blieb dicht bei Flimm. Hinter der Tür lag eine graue Kammer mit einer zerbrochenen Glasbrücke. Darüber zitterte Zisch, ein winziges Wesen aus rotem Licht. „Ich wollte euch mit dem Riss warnen“, rief es. „Die Schatteninsel wacht auf! Doch zuerst brauchen wir die violette Brücke.“ [[SEGMENT]] Miro zeigte auf drei Lampenpaare: A war Rot und Blau, B war Rot und Gelb, C war Blau und Gelb. [[SEGMENT]] Welches Lampenpaar ergibt violettes Licht: A, B oder C? [[PAUSE:7]] Paar A! Rot und Blau ergeben Violett. Jori deutete auf die beiden Lampen. Flimm ließ sie gemeinsam leuchten. Violettes Licht floss über den Abgrund, und die Glasbrücke wurde wieder fest. [[SEGMENT]] Zisch übergab Jori einen kleinen Wolkenkompass. Seine Nadel drehte sich wild und zeigte plötzlich nach unten. Unter den Wolken erschien eine dunkle Insel – doch sie warf keinen Schatten. Warum hatte die Schatteninsel keinen Schatten?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "render_pending",
+  "scene_briefs": [
+    "Direkter Anschluss: Die glühende rote Tür im Uhrturm springt auf und zieht sichtbar die Farben aus dem Gang; Jori, Flimm, Miro und Nemi weichen erstaunt zurück.",
+    "Hinter der Tür: eine neue graue Farblichtkammer mit zerbrochener Glasbrücke; Zisch, ein freundliches winziges Wesen aus rotem Licht, schwebt über dem Abgrund.",
+    "Miro zeigt Jori und Flimm drei große magische Lampenpaare in Rot, Blau und Gelb an einer neuen Wand der Kammer.",
+    "Ruhige Denkpause vor neuer grauer Kammerkulisse mit viel freiem Raum für die TikTok-sichere Farbmischungs-Rätselgrafik.",
+    "Jori deutet auf die rote und blaue Lampe; Flimm verbindet beide mit goldenem Licht, daraus entsteht ein klarer violetter Lichtstrom.",
+    "Die violette Glasbrücke ist wieder vollständig; Jori, Flimm und Zisch überqueren sie, während Zisch Jori einen kleinen Wolkenkompass übergibt.",
+    "Cliffhanger: Blick durch die Wolken nach unten auf eine geheimnisvolle dunkle Insel ohne sichtbaren Schatten; Jori hält den wild ausschlagenden Wolkenkompass, Flimm leuchtet neben ihr."
+  ],
+  "visuals": [
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-018-v1/scene-01.jpg", "scene": 1, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-018-v1/scene-02.jpg", "scene": 2, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-018-v1/scene-03.jpg", "scene": 3, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-018-v1/scene-04.jpg", "scene": 4, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-018-v1/scene-05.jpg", "scene": 5, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-018-v1/scene-06.jpg", "scene": 6, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-018-v1/scene-07.jpg", "scene": 7, "generated": true}
+  ],
+  "created_at": "2026-11-05T08:15:00+01:00",
+  "status": "PREVIEW_PENDING",
+  "previous_cliffhanger": "Doch der rote Riss löste sich wie ein lebendiger Blitz vom Segel. Er sprang an die Turmwand und zeichnete dort eine glühende Tür. Dahinter pochte etwas: bum ... bum ... bum. Was wartete hinter der roten Tür?"
+}
