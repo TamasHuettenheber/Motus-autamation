@@ -75,3 +75,5 @@ jobs:
           retention-days: 14
 
 # Independent recheck triggered after the validated MP4 commit on 2026-11-05.
+
+# Independent QC retrigger after the actual validated E018 MP4 commit.
