@@ -90,3 +90,5 @@ jobs:
 # E017 precheck before production on 2026-11-04.
 
 # E017 postcheck after Buffer scheduling on 2026-11-04.
+
+# E018 precheck before production on 2026-11-05.
