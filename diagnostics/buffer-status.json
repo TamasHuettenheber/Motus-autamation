@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-05T03:27:00.666807+00:00",
+  "checked_at_utc": "2026-11-05T12:11:31.015759+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,30 +103,30 @@
     {
       "id": "6aea56eafdaa0acca70a45e9",
       "text": "Dein Kollege schaut schon wieder fragend in deine Richtung, obwohl du gerade mitten in einer wichtigen Aufgabe steckst. Dieses ständige Unterbrechen zieht dir die Konzentration ab wie ein Schwamm. Schließe jetzt kurz das E-Mail-Programm, setze dir hörbare Kopfhörer auf und signalisiere dadurch unmissverständlich deine ungestörte Arbeitsphase. Nutze diese klare Grenze für deine eigene Effizienz. Speichere dieses Video direkt ab, wenn dir diese Methode im Büroalltag hilft.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Crossroads (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-05T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-05T11:03:06.677Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7704640928878726433",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-05-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aea56eafdaa0acca70a45e9_video.mp4"
         }
       ]
     },
     {
       "id": "6aea5b3bca28ab6c317ac21a",
       "text": "Der kühle Holzboden kitzelt deine Fußsohlen, während du im Flur stehst und überlegst, ob du sofort die Sportmatte ausrollst. Genau jetzt entscheidet sich, ob der innere Schweinehund gewinnt oder du deinen Vorsprung für den Tag holst. Stell dir einen Wecker, der fünf Minuten früher klingelt, und lege dir den Trainingsanzug direkt neben das Bett. Probiere diesen kleinen Trick morgen aus und schreibe mir in die Kommentare, wie du gestartet bist.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Daybreak (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-05T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-05T06:02:11.438Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7704563291632209184",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-05-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aea5b3bca28ab6c317ac21a_video.mp4"
         }
       ]
     },
