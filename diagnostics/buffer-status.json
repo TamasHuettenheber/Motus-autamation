@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-06T01:30:23.096611+00:00",
+  "checked_at_utc": "2026-11-06T09:16:58.163492+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6aebae0d4cb090f0ac40f36e",
       "text": "Der Kaffeesatz klatscht dumpf in den Biomüll, während du überlegst, ob du heute den längeren Fußweg nimmst. Genau diese kleine morgendliche Richtungsentscheidung prägt den Takt deiner kommenden Stunden. Statt dich treiben zu lassen, wähle bewusst die Treppe statt des Aufzugs. Das setzt einen klaren körperlichen Impuls und weckt deinen Kreislauf verlässlich auf. Welcher kleine Routinewechsel bringt dich heute in Bewegung? Schreib deine Idee in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-06T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-06T06:02:17.318Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7704934422117616928",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-06-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aebae0d4cb090f0ac40f36e_video.mp4"
         }
       ]
     },
