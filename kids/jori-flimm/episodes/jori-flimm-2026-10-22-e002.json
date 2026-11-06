@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-22",
+  "episode_number": 2,
+  "title": "Die Glocke hinter dem Brückentor",
+  "hook": "Jori und Flimm hören ein Klingeln, obwohl niemand da ist.",
+  "narration": "Jori und Flimm schauten vorsichtig hinter das alte Brückentor. Ein helles Klingeln war zu hören, obwohl weit und breit niemand zu sehen war. „Flimm, hast du das gehört?“, fragte Jori. Flimm nickte aufgeregt. Sein Sternenbauch begann golden zu leuchten. „Vielleicht ist das ein Gruß an uns!“, flüsterte Flimm. An einer Holzwand entdeckten die beiden drei kleine Glocken. Die erste trug einen Mond, die zweite einen Stern und die dritte eine Schneeflocke. Flimm zeigte stolz auf seinen leuchtenden Bauch. „Jori, mein Stern sieht genauso aus wie eines dieser Zeichen!“ Jori lächelte: „Dann bist heute du unser Lichtdetektiv, Flimm.“ Gemeinsam schauten sie noch einmal ganz genau hin. Jori stellte die Rätselfrage: Welche Glocke trägt das Zeichen, das auch auf Flimms Bauch leuchtet? [[PAUSE:7]] Die Glocke mit dem Stern! „Richtig erkannt, Flimm!“, jubelte Jori. Flimm berührte vorsichtig die Sternenglocke. Ding! Sofort erschienen kleine Lichtpunkte auf dem verschneiten Weg. „Wir haben den Weg gefunden!“, rief Flimm. Hand in Hand folgten Jori und Flimm den Lichtern. Hinter der nächsten Biegung wartete eine glitzernde Überraschung.",
+  "riddle": {
+    "type": "logic",
+    "question": "Welche Glocke trägt das Zeichen, das auch auf Flimms Bauch leuchtet?",
+    "answer": "Die Glocke mit dem Stern",
+    "pause_seconds": 7
+  },
+  "scenes": [
+    {
+      "order": 1,
+      "duration_seconds": 11,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-01.png",
+      "caption": "Jori mit roter Wintermütze und Flimm, das kleine goldene Laternenwesen, sehen hinter das verschneite Brückentor; keine Nebenfiguren."
+    },
+    {
+      "order": 2,
+      "duration_seconds": 11,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-02.png",
+      "caption": "Flimm mit strahlendem goldenen Sternenbauch hört ein rätselhaftes Klingeln auf einem winterlichen Weg; Jori hört zu."
+    },
+    {
+      "order": 3,
+      "duration_seconds": 11,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-03.jpg",
+      "caption": "Jori und Flimm entdecken drei kleine Glocken mit Mond, Stern und Schneeflocke an einer Holzwand; deutliche Symbole."
+    },
+    {
+      "order": 4,
+      "duration_seconds": 11,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e000/scene-04.jpg",
+      "caption": "Flimms Sternenbauch leuchtet nahe der Sternenglocke; Jori und Flimm überlegen gemeinsam das Rätsel."
+    },
+    {
+      "order": 5,
+      "duration_seconds": 11,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-05.png",
+      "caption": "Flimm berührt selbst die Sternenglocke und Jori freut sich über seine Lösung; goldenes Leuchten."
+    },
+    {
+      "order": 6,
+      "duration_seconds": 11,
+      "image_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-kids-pipeline/kids/jori-flimm/assets/e001/scene-06.png",
+      "caption": "Jori und Flimm folgen gemeinsam den hellen Sternenpunkten im Schnee in Richtung Lichtwerkstatt; keine anderen Figuren."
+    }
+  ],
+  "publish_time": "14:00",
+  "qc": {
+    "book_spoiler_check": false,
+    "continuity_check": false,
+    "duplicate_check": false
+  },
+  "preview_only": true,
+  "continuity_note": "Jori und Flimm lösen gemeinsam das Sternenglockenrätsel. Flimm erkennt den Stern mit seinem Bauchlicht und aktiviert selbst den erleuchteten Weg zur Lichtwerkstatt.",
+  "cta": "Interne Testfolge mit der vom Nutzer ausgewählten warmen Sulafat-Erzählerin. Nicht veröffentlichen.",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-tts",
+    "speaker_id": "Sulafat",
+    "speed": 1
+  }
+}
