@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-06T17:25:21.895964+00:00",
+  "checked_at_utc": "2026-11-06T18:51:26.626755+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6aebaab0c91738fad506fd55",
       "text": "Deine Verwandten schlagen spontan vor, am kommenden Wochenende vorbeizukommen, obwohl du eigentlich dringend Zeit für dich brauchst. Du merkst, wie sich ein leises Zögern in deiner Brust ausbreitet. Sag diesmal freundlich, aber unmissverständlich ab, dass es dir diesmal zu viel wird. Echte Selbstfürsorge beginnt dort, wo du deine eigenen Grenzen respektierst. Teile dieses kurze Video mit jemandem, der heute ebenfalls klare Grenzen setzen muss.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Remember (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-06T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-06T17:33:20.760Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7705112588060822816",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-06-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aebaab0c91738fad506fd55_video.mp4"
         }
       ]
     },
