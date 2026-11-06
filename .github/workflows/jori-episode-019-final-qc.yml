@@ -75,3 +75,5 @@ jobs:
           retention-days: 14
 
 # Independent QC rerun marker for the actual validated E019 MP4 commit.
+
+# Independent QC retrigger after the corrected E019 scene-timing render on 2026-11-06.
