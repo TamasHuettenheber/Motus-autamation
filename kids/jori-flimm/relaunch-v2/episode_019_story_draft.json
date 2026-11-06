@@ -1,0 +1,59 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 19,
+  "series_version": "relaunch-v2",
+  "title": "Die Insel ohne Schatten",
+  "hook": "Der Wolkenkompass riss Joris Arm nach unten – und die dunkle Insel zog sie durch die Wolken!",
+  "story": "Jori, Flimm und Zisch landeten auf einem Ufer aus schwarzem Glas. Obwohl Flimm hell leuchtete, war nirgends ein Schatten zu sehen. Auf einer Terrasse standen drei steinerne Vögel: A, B und C. Flimm schwebte links von ihnen. Der Schatten bei A zeigte nach links, der bei B nach rechts, der bei C lag direkt darunter. Miro erinnerte sie: Ein Schatten zeigt immer weg vom Licht.",
+  "question": "Welcher Vogel zeigt den richtigen Schatten: A, B oder C?",
+  "answer": "Vogel B!",
+  "after": "Vogel B! Flimms Licht kam von links, also musste der Schatten nach rechts zeigen. Jori berührte den schwarzen Streifen bei B. Er wuchs über den Boden und legte sich wie eine Decke unter die ganze Insel.",
+  "cliff": "Kaum war der Inselschatten zurück, öffnete sich im Fels eine Wendeltreppe. Tief darunter hing ein Wald kopfüber. Zwischen silbernen Wurzeln glühte ein Samenkorn und flüsterte: „Jori.“ Wer kannte dort unten ihren Namen?",
+  "riddle": {
+    "type": "light_shadow_direction_logic",
+    "question": "Welcher Vogel zeigt den richtigen Schatten: A, B oder C?",
+    "answer": "Vogel B",
+    "evidence_in_story": "Flimm leuchtet links von den Vögeln; nur bei B zeigt der Schatten nach rechts und damit weg vom Licht.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "visible_light_and_shadow_directions",
+  "clues": [
+    "Flimm leuchtet von links",
+    "A: Schatten nach links",
+    "B: Schatten nach rechts",
+    "C: Schatten direkt darunter"
+  ],
+  "correct": 1,
+  "puzzle_visual": "Drei klare Vogel-Symbole A, B und C mit sichtbarer Lichtquelle links; Schattenpfeile links, rechts und unten. Frage und Hinweise vollständig links von x=540.",
+  "continuity": "Setzt direkt beim Wolkenkompass und der dunklen Insel ohne Schatten aus Folge 018 an. Jori erkennt anhand von Flimms Licht den richtigen Schatten und gibt der Insel ihren Schatten zurück.",
+  "narration": "Der Wolkenkompass riss Joris Arm nach unten – und die dunkle Insel zog sie durch die Wolken! [[SEGMENT]] Jori, Flimm und Zisch landeten auf einem Ufer aus schwarzem Glas. Obwohl Flimm hell leuchtete, war nirgends ein Schatten zu sehen. Auf einer Terrasse standen drei steinerne Vögel: A, B und C. [[SEGMENT]] Flimm schwebte links von ihnen. Der Schatten bei A zeigte nach links, der bei B nach rechts, der bei C lag direkt darunter. Miro erinnerte sie: Ein Schatten zeigt immer weg vom Licht. [[SEGMENT]] Welcher Vogel zeigt den richtigen Schatten: A, B oder C? [[PAUSE:7]] Vogel B! Flimms Licht kam von links, also musste der Schatten nach rechts zeigen. Jori berührte den schwarzen Streifen bei B. Er wuchs über den Boden und legte sich wie eine Decke unter die ganze Insel. [[SEGMENT]] Kaum war der Inselschatten zurück, öffnete sich im Fels eine Wendeltreppe. Tief darunter hing ein Wald kopfüber. Zwischen silbernen Wurzeln glühte ein Samenkorn und flüsterte: „Jori.“ Wer kannte dort unten ihren Namen?",
+  "narration_tts": "Der Wolkenkompass riss Joris Arm nach unten – und die dunkle Insel zog sie durch die Wolken! [[SEGMENT]] Jori, Flimm und Zisch landeten auf einem Ufer aus schwarzem Glas. Obwohl Flimm hell leuchtete, war nirgends ein Schatten zu sehen. Auf einer Terrasse standen drei steinerne Vögel: A, B und C. [[SEGMENT]] Flimm schwebte links von ihnen. Der Schatten bei A zeigte nach links, der bei B nach rechts, der bei C lag direkt darunter. Miro erinnerte sie: Ein Schatten zeigt immer weg vom Licht. [[SEGMENT]] Welcher Vogel zeigt den richtigen Schatten: A, B oder C? [[PAUSE:7]] Vogel B! Flimms Licht kam von links, also musste der Schatten nach rechts zeigen. Jori berührte den schwarzen Streifen bei B. Er wuchs über den Boden und legte sich wie eine Decke unter die ganze Insel. [[SEGMENT]] Kaum war der Inselschatten zurück, öffnete sich im Fels eine Wendeltreppe. Tief darunter hing ein Wald kopfüber. Zwischen silbernen Wurzeln glühte ein Samenkorn und flüsterte: „Jori.“ Wer kannte dort unten ihren Namen?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "render_pending",
+  "scene_briefs": [
+    "Direkter Anschluss: Jori hält den wild ausschlagenden Wolkenkompass, während sie mit Flimm und Zisch durch ein Wolkenloch auf die dunkle Insel hinabgezogen wird.",
+    "Neuer Schauplatz: schwarzes Glas-Ufer der Schatteninsel; Jori, Flimm, Zisch, Miro und Nemi landen, doch selbst unter Flimms Licht sind keine Schatten sichtbar.",
+    "Auf einer Steinterrasse stehen drei unterschiedliche steinerne Vögel; Flimm schwebt deutlich links von ihnen und Jori untersucht schwarze Richtungsstreifen am Boden.",
+    "Ruhige Denkpause auf einer neuen schwarzen Glasterrasse mit freiem Raum für die TikTok-sichere Licht-und-Schatten-Grafik; Jori und Flimm unten links.",
+    "Jori berührt beim mittleren steinernen Vogel den nach rechts weisenden Schatten; Flimm leuchtet klar von links, und der schwarze Streifen beginnt golden-violett zu reagieren.",
+    "Der zurückgekehrte große Inselschatten breitet sich unter der Insel aus; im schwarzen Glas öffnet sich eine leuchtende steinerne Wendeltreppe nach unten.",
+    "Cliffhanger: unter der Insel hängt ein märchenhafter Wald kopfüber; zwischen silbernen Wurzeln glüht ein einzelnes helles Samenkorn, während Jori und Flimm staunend auf der Treppe stehen."
+  ],
+  "visuals": [
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-019-v1/scene-01.jpg", "scene": 1, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-019-v1/scene-02.jpg", "scene": 2, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-019-v1/scene-03.jpg", "scene": 3, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-019-v1/scene-04.jpg", "scene": 4, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-019-v1/scene-05.jpg", "scene": 5, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-019-v1/scene-06.jpg", "scene": 6, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-019-v1/scene-07.jpg", "scene": 7, "generated": true}
+  ],
+  "created_at": "2026-11-06T08:15:00+01:00",
+  "status": "PREVIEW_PENDING",
+  "previous_cliffhanger": "Zisch übergab Jori einen kleinen Wolkenkompass. Seine Nadel drehte sich wild und zeigte plötzlich nach unten. Unter den Wolken erschien eine dunkle Insel – doch sie warf keinen Schatten. Warum hatte die Schatteninsel keinen Schatten?"
+}
