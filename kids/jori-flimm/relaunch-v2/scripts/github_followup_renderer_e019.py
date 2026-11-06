@@ -85,14 +85,15 @@ def sentence_intervals(item):
   out.append((cur,end,piece));cur=end
  return out
 pre=items[:pause_index];post=items[pause_index+1:];assert len(pre)==4 and len(post)==2
+story_a_intervals=sentence_intervals(pre[1]);story_b_start=next(a for a,b,s in story_a_intervals if s.startswith('Auf einer Terrasse'))
 cliff_intervals=sentence_intervals(post[1]);cliff_start=next(a for a,b,s in cliff_intervals if s.startswith('Tief darunter hing'))
-segments=[('hook',pre[0]['duration']),('story_a',pre[1]['duration']),('story_b',pre[2]['duration']),
+segments=[('hook',pre[0]['duration']),('story_a',story_b_start-pre[1]['start']),('story_b',pre[2]['end']-story_b_start),
  ('puzzle',pre[3]['duration']+pause['duration']),('answer',post[0]['duration']),
  ('cliff_transition',cliff_start-post[1]['start']),('cliff',post[1]['end']-cliff_start)]
 cursor=0;scene_timing=[]
 for name,dur in segments:scene_timing.append({'scene':name,'start':round(cursor,3),'end':round(cursor+dur,3),'duration':round(dur,3)});cursor+=dur
 (W/'scene-timing.json').write_text(json.dumps(scene_timing,ensure_ascii=False,indent=2)+'\n')
-assert abs(scene_timing[3]['end']-pause['end'])<0.01;assert abs(scene_timing[6]['start']-cliff_start)<0.01
+assert abs(scene_timing[1]['end']-story_b_start)<0.01;assert abs(scene_timing[3]['end']-pause['end'])<0.01;assert abs(scene_timing[6]['start']-cliff_start)<0.01
 clips=[]
 for i,(name,dur) in enumerate(segments):
  clip=W/f'seg_{i}.mp4';cmd('ffmpeg','-nostdin','-y','-loglevel','error','-loop','1','-framerate','24','-i',W/f'{name}.png','-t',f'{dur:.3f}','-vf',"zoompan=z='min(zoom+0.00019,1.045)':d=1:fps=24:s=720x1280,format=yuv420p",'-c:v','libx264','-preset','ultrafast','-crf','23','-r','24',clip);clips.append(clip)
