@@ -72,11 +72,18 @@ jobs:
               raise SystemExit(0)
           key=os.environ.get("GEMINI_KEY","")
           if not key:raise SystemExit("GEMINI_KEY_MISSING")
-          # Quality experiment for future (not yet generated) days only.
-          # Keep word count, slots, music and renderer unchanged to isolate the effect.
+          # Controlled length A/B test for NEW days only; existing issues and videos stay untouched.
+          # Rotate slot assignments daily to avoid confounding length with publication time.
+          short_times=({"07:00","18:30"} if datetime.fromisoformat(target).date().toordinal()%2==0 else {"12:00","22:00"})
+          long_times={"07:00","12:00","18:30","22:00"}-short_times
+          print("LENGTH_AB_PLAN",target,"SHORT",sorted(short_times),"LONG",sorted(long_times))
           prompt=("Erstelle vier originelle, voneinander klar verschiedene deutsche MOTUS-Kurztexte "
-                  "fuer einen Tagesplan mit den Slots 07:00,12:00,18:30,22:00. Jeweils 65 bis 75 Woerter, "
-                  "strikt niemals mehr als 85 Woerter pro Text. "
+                  "fuer einen Tagesplan mit den Slots 07:00,12:00,18:30,22:00. "
+                  +f"Die Slots {', '.join(sorted(short_times))} sind KURZ mit jeweils 35 bis 45 Woertern; "
+                  +f"die Slots {', '.join(sorted(long_times))} sind LANG mit jeweils 65 bis 75 Woertern. "
+                  +"Halte die Wortzahl pro Slot strikt ein; KURZ maximal 55, LANG maximal 85 Woerter. "
+                  "Bei KURZ sofort Konflikt und Loesung, kein langes Intro. Beide Gruppen muessen "
+                  "gleich starke Hooks, eine konkrete alltagstaugliche Handlung und eine natuerliche CTA haben. "
                   "Beginne JEDEN Text sofort mit einem anderen konkreten Hook: einer beobachtbaren "
                   "Alltagssituation, einer spannenden Frage oder einem nachvollziehbaren Konflikt. "
                   "Die ersten zwei Sekunden duerfen keine allgemeinen Floskeln ueber Energie, "
@@ -209,7 +216,10 @@ jobs:
           for slot in slots:
               text=slot.get("text","").strip()
               word_count=len(text.split())
-              if not 60<=word_count<=85:raise SystemExit("TEXT_WORD_COUNT "+str(word_count))
+              low,high=(30,55) if slot.get("time") in short_times else (55,85)
+              if not low<=word_count<=high:
+                  raise SystemExit("TEXT_WORD_COUNT "+slot.get("time","")+" "+str(word_count)+" expected "+str(low)+"-"+str(high))
+              print("LENGTH_AB_QC",target,slot.get("time"),"SHORT" if slot.get("time") in short_times else "LONG",word_count)
               if weekday_re.search(text) or date_re.search(text):raise SystemExit("CALENDAR_REFERENCE "+slot.get("time",""))
               if any(ch.isalpha() and "LATIN" not in unicodedata.name(ch,"") for ch in text):
                   raise SystemExit("NON_LATIN_LETTERS "+slot.get("time",""))
