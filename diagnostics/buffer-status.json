@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-05T20:37:00.452026+00:00",
+  "checked_at_utc": "2026-11-06T01:30:23.096611+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6aed036cd930780bcacd4300",
+      "text": "Im Halbdunkel des Zimmers fällt dein Blick auf den Kleiderhaufen, den du eigentlich schon gestern hättest wegräumen wollen. Solche unfertigen Kleinigkeiten im Raum ziehen unbewusst Aufmerksamkeit an und stören die Abendruhe. Schalte das Hauptlicht aus und ignoriere diesen optischen Ballast ganz bewusst für den Rest der Nacht. Dein Schlaf ist jetzt wichtiger als Ordnung. Folge unserem Kanal für weitere Impulse für einen ausgeglicheneren Alltag.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-07T21:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-07-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6aed0352d930780bcacd3789",
+      "text": "Im Hausflur begegnest du deiner Nachbarin, die direkt ein längeres Gespräch über die nächste Eigentümerversammlung anfangen möchte, obwohl du gerade völlig k.o. bist. Es fällt schwer, hier höflich aber bestimmt eine Grenze zu ziehen, ohne unhöflich zu wirken. Sage einfach freundlich, dass du heute Abend leider dringend etwas erledigen musst und wünsche einen schönen Abend. Speichere diesen Beitrag, wenn du solche alltäglichen Abgrenzungen üben möchtest.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-07T17:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-07-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6aed03645ab704cc602d9972",
+      "text": "Der Posteingang quillt über, und genau jetzt klemmt das Papier im Drucker, während die Zeit für die Mittagspause drängt. Solche unerwarteten Technikprobleme mitten im Arbeitstag erzeugen sofort unnötigen Stress. Atme kurz tief durch, lass das Papier kurz ruhen und gönne dir erst fünf Minuten echte Pause mit einem Glas Wasser. Teile diesen Beitrag mit jemandem, der heute im Büro ebenfalls eine kleine Atempause braucht.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-07T11:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-07-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6aed0392265cb90551df9868",
+      "text": "Der Kaffee läuft durch, aber statt entspannt zu warten, kreisen deine Gedanken bereits um das große Meeting am Vormittag. Dieses ständige Vorspulen im Kopf kostet wertvolle Ruhe. Versuche heute, morgens bewusst bei einer einzigen kleinen Handlung zu bleiben, wie dem bewussten Spüren der warmen Tasse in deinen Händen. Das erdet deine Gedanken sofort. Welches morgendliche Ritual hilft dir am besten, ruhig in den Tag zu starten? Schreib es gerne in die Kommentare.\n\n#motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-07T06:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-07-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6aebaf66cc6b72be4e080a10",
       "text": "Der Kleiderbügel im Flur wirft im Halbdunkel einen seltsamen Schatten an die Schlafzimmerwand, der dich kurz zusammenzucken lässt. Dein Verstand beginnt sofort, ein kleines nächtliches Drama daraus zu spinnen. Schalte das Licht kurz an, sieh hin und erkenne die harmlose Realität. Wenn der Körper zur Ruhe kommen will, braucht er klare Fakten statt dunkler Fantasien. Folge diesem Kanal für tägliche Impulse, die dich erholt in den nächsten Tag begleiten.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
@@ -73,15 +133,15 @@
     {
       "id": "6aea5838fdaa0acca70aa98c",
       "text": "Im Halbdunkel des Schlafzimmers wandern deine Gedanken unaufhaltsam zum morgigen Kundentermin und lassen deinen Puls spürbar steigen. Dieses endlose Durchkauen von Szenarien raubt dir wertvolle Erholung. Nimm dir stattdessen Zettel und Stift vom Nachttisch, schreibe die anstehenden Punkte kurz auf und schließe das Notizbuch demonstrativ. Damit signalisierst du deinem Kopf das offizielle Ende des Arbeitstages. Teile diesen Beitrag mit jemandem, der heute Abend ebenfalls absolute Ruhe verdient hat.\n\n#motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-05T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-05T21:04:10.355Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7704795681667501344",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-05-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aea5838fdaa0acca70aa98c_video.mp4"
         }
       ]
     },
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6add25596887a2efc1d75eeb_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6add253a0b5343d070a2a18f",
-      "text": "Der Tag neigt sich dem Ende zu und die To-Do-Liste hat sich verändert. Egal, was heute alles passiert ist, du hast deinen Weg gemacht. Betrachte deine erledigten Aufgaben ohne strenge Bewertung. Was gut lief, nimmst du mit; den Rest lässt du einfach hier zurück. Jetzt geht es darum, den Schalter umzulegen. Schließe die Arbeit ab und bereite dich darauf vor, die Anspannung abzustreifen. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Home (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-26T17:30:00.000Z",
-      "sentAt": "2026-10-26T17:31:46.112Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7701030371026144544?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6add253a0b5343d070a2a18f_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ae3e7e3d8aee4f24e7125a7",
-      "text": "Keine große Motivationskur nötig: Mit SCHRITTIVO setzt du sieben Tage lang jeden Tag einen kleinen, konkreten Schritt um. Das digitale Arbeitsbuch führt dich mit Aufgaben und Reflexionsfragen zu deinem nächsten 30-Tage-Schritt. Einmalig 4,90 €: https://payhip.com/b/F9tv3 #SCHRITTIVO #InsTunKommen #PersönlicheEntwicklung",
-      "status": "sent",
-      "dueAt": "2026-10-26T12:03:23.000Z",
-      "sentAt": "2026-10-26T12:03:23.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7700946008942873878?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7700946008942873878?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6add25653d5b27036ba38e70",
-      "text": "Halbzeit. Lass die Hektik der letzten Stunden kurz hinter dir und gönn dir eine echte Pause. Nimm dir etwas Vernünftiges zu essen und schau aus dem Fenster, um deinen Blick zu weiten. Das ist kein Stillstand, sondern die notwendige Wartung für deinen Motor. Sammle deine Gedanken, sortiere die verbleibenden Aufgaben und geh die nächsten Stunden mit neuer, ruhiger Konzentration an. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Crossroads (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-26T11:00:00.000Z",
-      "sentAt": "2026-10-26T11:03:21.976Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7700930189743656224?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6add25653d5b27036ba38e70_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6add256c8b3d437ddcdbdec8",
-      "text": "Der Raum ist अभी still, bevor der Lärm des Tages beginnt. Nutze diese ersten Minuten für dich. Atme tief ein und spüre die Energie, die in deinen Muskeln liegt. Du brauchst keinen großen Startschuss, sondern nur den ersten bewussten Schritt. Bring deinen Kreislauf in Schwung, trinke ein Glas kaltes Wasser und richte deinen Blick nach vorn. Heute entstehen die kleinen Erfolge durch deinen klaren Fokus. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Daybreak (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-26T06:00:00.000Z",
-      "sentAt": "2026-10-26T06:02:15.479Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7700852440991550753?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6add256c8b3d437ddcdbdec8_video.mp4"
         }
       ]
     }
