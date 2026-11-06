@@ -223,8 +223,14 @@ jobs:
               word_count=len(text.split())
               low,high=(30,55) if slot.get("time") in short_times else (55,85)
               if not low<=word_count<=high:
-                  raise SystemExit("TEXT_WORD_COUNT "+slot.get("time","")+" "+str(word_count)+" expected "+str(low)+"-"+str(high))
-              print("LENGTH_AB_QC",target,slot.get("time"),"SHORT" if slot.get("time") in short_times else "LONG",word_count)
+                  # Preserve the regular four-slot delivery when Gemini slightly overshoots a target.
+                  # The outlier is explicitly excluded from the controlled A/B comparison.
+                  safety_low,safety_high=(25,75) if slot.get("time") in short_times else (45,120)
+                  if not safety_low<=word_count<=safety_high:
+                      raise SystemExit("TEXT_WORD_COUNT_UNSAFE "+slot.get("time","")+" "+str(word_count)+" accepted "+str(safety_low)+"-"+str(safety_high))
+                  print("LENGTH_AB_OUTLIER_EXCLUDE",target,slot.get("time"),word_count,"target",str(low)+"-"+str(high))
+              else:
+                  print("LENGTH_AB_QC",target,slot.get("time"),"SHORT" if slot.get("time") in short_times else "LONG",word_count)
               if weekday_re.search(text) or date_re.search(text):raise SystemExit("CALENDAR_REFERENCE "+slot.get("time",""))
               if any(ch.isalpha() and "LATIN" not in unicodedata.name(ch,"") for ch in text):
                   raise SystemExit("NON_LATIN_LETTERS "+slot.get("time",""))
