@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-06T09:16:58.163492+00:00",
+  "checked_at_utc": "2026-11-06T15:45:58.613234+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6aebab5e3a6057e11e78d46a",
       "text": "Dein Kollege schaut kurz vorbei und stellt dir mitten in der konzentrierten Arbeit eine vermeintlich schnelle Zwischenfrage. Plötzlich reißt der rote Faden deiner Aufgabenliste ab und die Mittagspause schrumpft bedrohlich zusammen. Schließe kurz die Augen, atme tief durch und antworte bestimmt, dass du dich nach einer kurzen Pause darum kümmerst. Schütze deinen Rhythmus vor fremden Unterbrechungen. Markiere diesen Beitrag, um ihn im turbulenten Büroalltag sofort wiederzufinden.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Familiar Roads (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-06T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-06T11:03:25.246Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7705012172430118177",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-06-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aebab5e3a6057e11e78d46a_video.mp4"
         }
       ]
     },
