@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Der Wolkenkompass riss Joris Arm nach unten – und die dunkle Insel zog sie durch die Wolken!",
+      "start": 0.0,
+      "end": 7.92,
+      "duration": 7.92
+    },
+    {
+      "kind": "speech",
+      "text": "Jori, Flimm und Zisch landeten auf einem Ufer aus schwarzem Glas. Obwohl Flimm hell leuchtete, war nirgends ein Schatten zu sehen. Auf einer Terrasse standen drei steinerne Vögel: A, B und C.",
+      "start": 7.92,
+      "end": 28.04,
+      "duration": 20.12
+    },
+    {
+      "kind": "speech",
+      "text": "Flimm schwebte links von ihnen. Der Schatten bei A zeigte nach links, der bei B nach rechts, der bei C lag direkt darunter. Miro erinnerte sie: Ein Schatten zeigt immer weg vom Licht.",
+      "start": 28.04,
+      "end": 44.76,
+      "duration": 16.72
+    },
+    {
+      "kind": "speech",
+      "text": "Welcher Vogel zeigt den richtigen Schatten: A, B oder C?",
+      "start": 44.76,
+      "end": 51.68,
+      "duration": 6.92
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 51.68,
+      "end": 58.68,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Vogel B! Flimms Licht kam von links, also musste der Schatten nach rechts zeigen. Jori berührte den schwarzen Streifen bei B. Er wuchs über den Boden und legte sich wie eine Decke unter die ganze Insel.",
+      "start": 58.68,
+      "end": 76.76,
+      "duration": 18.08
+    },
+    {
+      "kind": "speech",
+      "text": "Kaum war der Inselschatten zurück, öffnete sich im Fels eine Wendeltreppe. Tief darunter hing ein Wald kopfüber. Zwischen silbernen Wurzeln glühte ein Samenkorn und flüsterte: „Jori.“ Wer kannte dort unten ihren Namen?",
+      "start": 76.76,
+      "end": 97.0,
+      "duration": 20.24
+    }
+  ],
+  "duration": 97.0,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
