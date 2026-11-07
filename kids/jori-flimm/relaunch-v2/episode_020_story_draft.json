@@ -1,0 +1,87 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 20,
+  "series_version": "relaunch-v2",
+  "title": "Das Samenkorn, das Jori kannte",
+  "hook": "Das silberne Samenkorn rief Joris Namen, und seine Wurzeln drehten sich neugierig zu ihr.",
+  "story": "Jori kniete sich vor das Leuchten. „Woher kennst du mich?“, fragte sie. Das Samenkorn öffnete sich wie eine winzige Blüte. „Die Silberwurzeln bewahren Namen, die ihnen der Sternenwind zuflüstert“, antwortete es. Flimm rückte seine grüne Mütze zurecht und leuchtete den Weg aus. Vor ihnen sprossen drei kleine Keime: Der erste trug ein Blatt, der zweite zwei und der dritte drei. Daneben wartete ein vierter Keim ohne Blätter. „Nur wenn ihr mein Muster fortsetzt, kann ich wachsen“, sagte das Samenkorn.",
+  "question": "Wie viele Blätter muss der vierte Keim bekommen: zwei, drei oder vier?",
+  "answer": "Vier Blätter!",
+  "after": "Vier Blätter! Die Reihe wuchs immer um ein Blatt: eins, zwei, drei – dann vier. Jori berührte den leeren Keim. Sofort entfalteten sich vier silberne Blätter, und Flimms Stern antwortete mit einem warmen Funkeln.",
+  "cliff": "Das Samenkorn schoss zu einer leuchtenden Wurzelbrücke empor. Jori und Flimm folgten ihr durch den kopfüber hängenden Wald. Am Ende steckte eine mondförmige Kapsel in einer riesigen Silberwurzel. Von innen klopfte es dreimal. Dann wisperte eine Stimme: „Jori, beeil dich. Flimms Stern wird gesucht.“ Wer war in der Kapsel?",
+  "riddle": {
+    "type": "growing_leaf_sequence",
+    "question": "Wie viele Blätter muss der vierte Keim bekommen: zwei, drei oder vier?",
+    "answer": "Vier Blätter",
+    "evidence_in_story": "Die sichtbare Reihe zeigt einen Keim mit einem Blatt, dann zwei, dann drei; der nächste Keim braucht vier.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "visible_leaf_count_sequence",
+  "clues": [
+    "Erster Keim: 1 Blatt",
+    "Zweiter Keim: 2 Blätter",
+    "Dritter Keim: 3 Blätter",
+    "Gesucht: vierter Keim"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Vier Keime in klarer Reihe: 1, 2, 3 und ein leerer vierter Keim; Antwortmöglichkeiten 2, 3 und 4. Frage und Hinweise vollständig links von x=540.",
+  "continuity": "Setzt direkt beim kopfüber hängenden Wald und dem silbernen Samenkorn aus Folge 019 an. Das Samenkorn kennt Joris Namen aus den Erinnerungen der Silberwurzeln.",
+  "narration": "Das silberne Samenkorn rief Joris Namen, und seine Wurzeln drehten sich neugierig zu ihr. [[SEGMENT]] Jori kniete sich vor das Leuchten. „Woher kennst du mich?“, fragte sie. Das Samenkorn öffnete sich wie eine winzige Blüte. „Die Silberwurzeln bewahren Namen, die ihnen der Sternenwind zuflüstert“, antwortete es. Flimm rückte seine grüne Mütze zurecht und leuchtete den Weg aus. [[SEGMENT]] Vor ihnen sprossen drei kleine Keime: Der erste trug ein Blatt, der zweite zwei und der dritte drei. Daneben wartete ein vierter Keim ohne Blätter. „Nur wenn ihr mein Muster fortsetzt, kann ich wachsen“, sagte das Samenkorn. [[SEGMENT]] Wie viele Blätter muss der vierte Keim bekommen: zwei, drei oder vier? [[PAUSE:7]] Vier Blätter! Die Reihe wuchs immer um ein Blatt: eins, zwei, drei – dann vier. Jori berührte den leeren Keim. Sofort entfalteten sich vier silberne Blätter, und Flimms Stern antwortete mit einem warmen Funkeln. [[SEGMENT]] Das Samenkorn schoss zu einer leuchtenden Wurzelbrücke empor. Jori und Flimm folgten ihr durch den kopfüber hängenden Wald. Am Ende steckte eine mondförmige Kapsel in einer riesigen Silberwurzel. Von innen klopfte es dreimal. Dann wisperte eine Stimme: „Jori, beeil dich. Flimms Stern wird gesucht.“ Wer war in der Kapsel?",
+  "narration_tts": "Das silberne Samenkorn rief Joris Namen, und seine Wurzeln drehten sich neugierig zu ihr. [[SEGMENT]] Jori kniete sich vor das Leuchten. „Woher kennst du mich?“, fragte sie. Das Samenkorn öffnete sich wie eine winzige Blüte. „Die Silberwurzeln bewahren Namen, die ihnen der Sternenwind zuflüstert“, antwortete es. Flimm rückte seine grüne Mütze zurecht und leuchtete den Weg aus. [[SEGMENT]] Vor ihnen sprossen drei kleine Keime: Der erste trug ein Blatt, der zweite zwei und der dritte drei. Daneben wartete ein vierter Keim ohne Blätter. „Nur wenn ihr mein Muster fortsetzt, kann ich wachsen“, sagte das Samenkorn. [[SEGMENT]] Wie viele Blätter muss der vierte Keim bekommen: zwei, drei oder vier? [[PAUSE:7]] Vier Blätter! Die Reihe wuchs immer um ein Blatt: eins, zwei, drei – dann vier. Jori berührte den leeren Keim. Sofort entfalteten sich vier silberne Blätter, und Flimms Stern antwortete mit einem warmen Funkeln. [[SEGMENT]] Das Samenkorn schoss zu einer leuchtenden Wurzelbrücke empor. Jori und Flimm folgten ihr durch den kopfüber hängenden Wald. Am Ende steckte eine mondförmige Kapsel in einer riesigen Silberwurzel. Von innen klopfte es dreimal. Dann wisperte eine Stimme: „Jori, beeil dich. Flimms Stern wird gesucht.“ Wer war in der Kapsel?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "render_pending",
+  "scene_briefs": [
+    "Direkter Anschluss: Jori und Flimm erreichen auf der Wendeltreppe das silberne Samenkorn im kopfüber hängenden Wald.",
+    "Neuer Wurzelgarten: Jori fragt, woher das Samenkorn ihren Namen kennt; Silberwurzeln und umgekehrte Seen leuchten.",
+    "Das Samenkorn zeigt drei Keime mit einem, zwei und drei Blättern; ein vierter wartet leer.",
+    "Ruhige Denkpause in neuer dunkler Wurzelkammer mit freiem Raum für die TikTok-sichere Blattfolge; Jori und Flimm unten links.",
+    "Jori berührt den vierten Keim, der genau vier silberne Blätter entfaltet; Flimms Stern antwortet.",
+    "Das Samenkorn wächst zu einer leuchtenden Wurzelbrücke, der die Gruppe durch den kopfüber hängenden Wald folgt.",
+    "Cliffhanger: mondförmige Kapsel in einer riesigen Silberwurzel; von innen klopft es und warnt vor der Suche nach Flimms Stern."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-020-v1/scene-01.jpg",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-020-v1/scene-02.jpg",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-020-v1/scene-03.jpg",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-020-v1/scene-04.jpg",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-020-v1/scene-05.jpg",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-020-v1/scene-06.jpg",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-020-v1/scene-07.jpg",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-07T08:20:00+01:00",
+  "status": "PREVIEW_PENDING",
+  "previous_cliffhanger": "Kaum war der Inselschatten zurück, öffnete sich im Fels eine Wendeltreppe. Tief darunter hing ein Wald kopfüber. Zwischen silbernen Wurzeln glühte ein Samenkorn und flüsterte: „Jori.“ Wer kannte dort unten ihren Namen?"
+}
