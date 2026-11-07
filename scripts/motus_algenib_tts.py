@@ -10,7 +10,7 @@ if not key:
 text = os.environ["MOTUS_TEXT"].strip()
 if not text:
     raise SystemExit("Empty narration")
-with genai.Client(api_key=key) as client:
+with genai.Client(api_key=key, http_options=types.HttpOptions(api_version="v1beta")) as client:
     response = client.models.generate_content(
         model="gemini-2.5-flash-preview-tts",
         contents="Sprich auf Deutsch mit einer tiefen, markanten männlichen Stimme. Warm, glaubwürdig, motivierend, ohne Musik oder zusätzliche Wörter. Text: " + text,
