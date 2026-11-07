@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-07T09:57:09.371331+00:00",
+  "checked_at_utc": "2026-11-07T11:51:43.846136+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6aed03645ab704cc602d9972",
       "text": "Der Posteingang quillt über, und genau jetzt klemmt das Papier im Drucker, während die Zeit für die Mittagspause drängt. Solche unerwarteten Technikprobleme mitten im Arbeitstag erzeugen sofort unnötigen Stress. Atme kurz tief durch, lass das Papier kurz ruhen und gönne dir erst fünf Minuten echte Pause mit einem Glas Wasser. Teile diesen Beitrag mit jemandem, der heute im Büro ebenfalls eine kleine Atempause braucht.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-07T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-07T11:02:29.404Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7705383134589652256",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-07-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aed03645ab704cc602d9972_video.mp4"
         }
       ]
     },
