@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-06T23:00:36.113029+00:00",
+  "checked_at_utc": "2026-11-07T02:43:16.785174+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6aee789baf7e526d43f0c955",
+      "text": "Die Straßenlaterne wirft ein helles, gelbes Streifenmuster durch die geschlossenen Jalousien direkt an deine Schlafzimmerdecke. Stell den Wecker auf dem Nachttisch auf die gewohnte Uhrzeit, leg das Gerät mit dem Display nach unten auf die Kommode und schließe die Augen für einen tiefen, ruhigen Atemzug. Folge diesem Kanal für weitere entspannte Impulse am Abend.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Hidden Tears (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-08T21:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-08-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6aee7bf5af7e526d43f1b00e",
+      "text": "Die Regale im Supermarkt sind leergeräumt, und deine geplante Zutat für das Abendessen fehlt im Kühlregal. Nimm stattdessen eine Packung rote Linsen aus dem Nachbarregal, koche sie mit etwas Brühe auf und verfeinere das Ganze mit frischen Kräutern. Speichere dieses Rezept direkt ab.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Deserve to be Loved (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-08T17:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-08-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6aee78939214322f68c0d4a0",
+      "text": "Der Buchhaltungskram stapelt sich auf dem Schreibtisch, und du weißt genau, dass du diese lästige Rechnung heute unbedingt noch rausschicken musst, bevor der Postbote kommt. Schalte jetzt alle Benachrichtigungen am Computer stumm, öffne nur das eine Dokument und tippe die fehlenden Zahlen in die Tabelle ein. Wenn das geschafft ist, klebst du sofort die Briefmarke auf den Umschlag und wirfst ihn unten in den Kasten. Teile dieses Video mit jemandem, der heute auch noch Berge abarbeiten muss.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Destiny (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-08T11:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-08-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6aee78acaf7e526d43f0cce3",
+      "text": "Der Regenschirm tropft auf den Flurfliesen, während du im Schuhchaos nach dem rechten Paar suchst. Lass den nassen Schirm direkt in der Wanne stehen, schnapp dir den Schlüsselbund vom Haken und zieh die Haustür hinter dir zu. Welches Paar Schuhe ziehst du heute an? Schreib es in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Forest Awakes (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-08T06:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-08-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6aed036cd930780bcacd4300",
       "text": "Im Halbdunkel des Zimmers fällt dein Blick auf den Kleiderhaufen, den du eigentlich schon gestern hättest wegräumen wollen. Solche unfertigen Kleinigkeiten im Raum ziehen unbewusst Aufmerksamkeit an und stören die Abendruhe. Schalte das Hauptlicht aus und ignoriere diesen optischen Ballast ganz bewusst für den Rest der Nacht. Dein Schlaf ist jetzt wichtiger als Ordnung. Folge unserem Kanal für weitere Impulse für einen ausgeglicheneren Alltag.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6adfec9b0565644c94809a98_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6adfe73d14a7789a82f7ee61",
-      "text": "Der Tag beginnt nicht mit dem ersten Schritt, sondern mit deiner Entschlossenheit. Atme tief ein und spüre die Energie, die in deinen Muskeln liegt. Du brauchst keinen großen Plan für die kommenden Stunden, sondern nur den Mut, das anzufangen, was dir wirklich wichtig ist. Lass Ablenkungen hinter dir und richte deinen Fokus auf das, was heute möglich wird. Deine Ideen haben Gewicht und verdienen es, umgesetzt zu werden. Geh hinaus und mach diesen Vormorgen zu deinem Werk. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – From Here (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-28T06:00:00.000Z",
-      "sentAt": "2026-10-28T06:02:47.739Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7701594726952160544?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6adfe73d14a7789a82f7ee61_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ade78c36887a2efc1273a3c",
-      "text": "Der Tag neigt sich dem Ende zu und es wird Zeit, alle Gedanken und Erlebnisse sanft zur Ruhe kommen zu lassen. Lass die Anspannung des Tages von dir abfallen und bereite deinen Geist auf einen tiefen, erholsamen Schlaf vor. Du hast heute dein Bestes gegeben, und mehr konnte niemand von dir verlangen. Schließe mit den Ereignissen ab, atme ruhig aus und vertraue darauf, dass sich morgen neue Wege öffnen werden. Gute Nacht. #motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung Musik: Tanner Helland – Lost Islands (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-27T21:00:00.000Z",
-      "sentAt": "2026-10-27T21:03:57.824Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7701455902951345441?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ade78c36887a2efc1273a3c_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ade78bc6887a2efc12739ab",
-      "text": "Betrachte rückblickend die Erlebnisse und Taten der vergangenen Stunden und erkenne an, was du heute alles bewegt hast. Nicht jede Minute lief perfekt, aber jede Erfahrung hat dir wertvolle Erkenntnisse und neue Perspektiven gebracht. Lass den Leistungsdruck jetzt bewusst los und schalte um auf Feierabendmodus. Du darfst stolz auf deinen Einsatz sein und dich nun auf die Dinge konzentrieren, die dir echten Ausgleich schenken und deine innere Balance stärken. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Remember (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-27T17:30:00.000Z",
-      "sentAt": "2026-10-27T17:32:45.670Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7701401547057548576?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ade78bc6887a2efc12739ab_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ade78c3e4be8a4d86ca9567",
-      "text": "Nutze die Mitte des Tages für eine bewusste Atempause, um neue Kraft zu tanken und deinen bisherigen Weg kurz zu überprüfen. Schließe kurz die Augen, lass den Vormittag hinter dir und ordne deine Gedanken neu, bevor die nächsten Aufgaben anstehen. Eine kluge Prioritätensetzung hilft dir jetzt enorm, unnötigen Stress zu vermeiden und die verbleibende Zeit effizient zu nutzen. Mit frischer Energie gehst du die anstehenden Herausforderungen an und behältst dabei stets die Übersicht. #motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung Musik: Tanner Helland – Familiar Roads (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-27T11:00:00.000Z",
-      "sentAt": "2026-10-27T11:03:36.965Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7701301241564990752?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ade78c3e4be8a4d86ca9567_video.mp4"
         }
       ]
     }
