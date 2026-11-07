@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-07T16:20:31.703130+00:00",
+  "checked_at_utc": "2026-11-07T20:49:50.750918+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6aed0352d930780bcacd3789",
       "text": "Im Hausflur begegnest du deiner Nachbarin, die direkt ein längeres Gespräch über die nächste Eigentümerversammlung anfangen möchte, obwohl du gerade völlig k.o. bist. Es fällt schwer, hier höflich aber bestimmt eine Grenze zu ziehen, ohne unhöflich zu wirken. Sage einfach freundlich, dass du heute Abend leider dringend etwas erledigen musst und wünsche einen schönen Abend. Speichere diesen Beitrag, wenn du solche alltäglichen Abgrenzungen üben möchtest.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-07T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-07T17:32:13.784Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7705483519358749985",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-07-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aed0352d930780bcacd3789_video.mp4"
         }
       ]
     },
