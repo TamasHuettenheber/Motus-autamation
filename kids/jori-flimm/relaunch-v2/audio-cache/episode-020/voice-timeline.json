@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Das silberne Samenkorn rief Joris Namen, und seine Wurzeln drehten sich neugierig zu ihr.",
+      "start": 0.0,
+      "end": 8.48,
+      "duration": 8.48
+    },
+    {
+      "kind": "speech",
+      "text": "Jori kniete sich vor das Leuchten. „Woher kennst du mich?“, fragte sie. Das Samenkorn öffnete sich wie eine winzige Blüte. „Die Silberwurzeln bewahren Namen, die ihnen der Sternenwind zuflüstert“, antwortete es. Flimm rückte seine grüne Mütze zurecht und leuchtete den Weg aus.",
+      "start": 8.48,
+      "end": 33.28,
+      "duration": 24.8
+    },
+    {
+      "kind": "speech",
+      "text": "Vor ihnen sprossen drei kleine Keime: Der erste trug ein Blatt, der zweite zwei und der dritte drei. Daneben wartete ein vierter Keim ohne Blätter. „Nur wenn ihr mein Muster fortsetzt, kann ich wachsen“, sagte das Samenkorn.",
+      "start": 33.28,
+      "end": 53.72,
+      "duration": 20.44
+    },
+    {
+      "kind": "speech",
+      "text": "Wie viele Blätter muss der vierte Keim bekommen: zwei, drei oder vier?",
+      "start": 53.72,
+      "end": 60.64,
+      "duration": 6.92
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 60.64,
+      "end": 67.64,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Vier Blätter! Die Reihe wuchs immer um ein Blatt: eins, zwei, drei – dann vier. Jori berührte den leeren Keim. Sofort entfalteten sich vier silberne Blätter, und Flimms Stern antwortete mit einem warmen Funkeln.",
+      "start": 67.64,
+      "end": 89.8,
+      "duration": 22.16
+    },
+    {
+      "kind": "speech",
+      "text": "Das Samenkorn schoss zu einer leuchtenden Wurzelbrücke empor. Jori und Flimm folgten ihr durch den kopfüber hängenden Wald. Am Ende steckte eine mondförmige Kapsel in einer riesigen Silberwurzel. Von innen klopfte es dreimal. Dann wisperte eine Stimme: „Jori, beeil dich. Flimms Stern wird gesucht.“ Wer war in der Kapsel?",
+      "start": 89.8,
+      "end": 118.56,
+      "duration": 28.76
+    }
+  ],
+  "duration": 118.56,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
