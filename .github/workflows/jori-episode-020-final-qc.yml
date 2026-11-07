@@ -77,3 +77,5 @@ jobs:
 # Independent QC rerun marker for the actual validated E020 MP4 commit.
 
 # Independent QC retrigger after the corrected E020 scene-timing render on 2026-11-07.
+
+# Independent QC retrigger for validated E020 MP4 on 2026-11-07.
