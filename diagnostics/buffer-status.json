@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-07T02:43:16.785174+00:00",
+  "checked_at_utc": "2026-11-07T09:57:09.371331+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6aed0392265cb90551df9868",
       "text": "Der Kaffee läuft durch, aber statt entspannt zu warten, kreisen deine Gedanken bereits um das große Meeting am Vormittag. Dieses ständige Vorspulen im Kopf kostet wertvolle Ruhe. Versuche heute, morgens bewusst bei einer einzigen kleinen Handlung zu bleiben, wie dem bewussten Spüren der warmen Tasse in deinen Händen. Das erdet deine Gedanken sofort. Welches morgendliche Ritual hilft dir am besten, ruhig in den Tag zu starten? Schreib es gerne in die Kommentare.\n\n#motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-07T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-07T06:02:20.954Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7705305470549970209",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-07-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aed0392265cb90551df9868_video.mp4"
         }
       ]
     },
