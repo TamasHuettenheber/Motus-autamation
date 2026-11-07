@@ -32,6 +32,7 @@ jobs:
           if os.environ["EVENT"]=="schedule" and not ((now.hour==22 and now.minute>=37) or now.hour==23 or 0<=now.hour<7):
               print("OUTSIDE_NIGHT_WINDOW",now.isoformat());raise SystemExit(0)
           target=(now.date()+timedelta(days=2 if now.hour>=22 else 1)).isoformat()
+          target_weekday=("Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag","Sonntag")[datetime.fromisoformat(target).weekday()]
           repo=os.environ["REPO"]; token=os.environ["GH_TOKEN"]
           headers={"Authorization":"Bearer "+token,"Accept":"application/vnd.github+json","User-Agent":"motus-night-producer"}
           def gh(method,path,payload=None):
@@ -89,6 +90,10 @@ jobs:
                   "Die ersten zwei Sekunden duerfen keine allgemeinen Floskeln ueber Energie, "
                   "Fokus, Motivation oder den Tagesbeginn enthalten. "
                   "Baue in jeden Text eine anschauliche, realistische Alltagsszene ein. "
+                  +f"Der Zieltag ist {target_weekday}, {target}; beachte dies bei der Szenenwahl. "
+                  +"Am Sonntag keine regulaere Briefzustellung, normale Supermarktoeffnung "
+                  "oder andere nur werktags uebliche Ablaeufe voraussetzen. "
+                  "Wochentag und Datum niemals im Beitrag selbst nennen. "
                   "Alle Empfehlungen muessen sicher und praktisch umsetzbar sein. "
                   "Rate niemals dazu, verschuettete heisse Fluessigkeiten, rutschige "
                   "Verschmutzungen oder andere unmittelbare Gefahren liegen zu lassen. "
