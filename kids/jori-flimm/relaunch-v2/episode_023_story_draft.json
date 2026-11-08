@@ -1,0 +1,87 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 23,
+  "series_version": "relaunch-v2",
+  "title": "Das Licht, das zuerst blinkte",
+  "hook": "Über dem stillen Kometenbogen blinkte das mittlere Licht noch vor Flimm.",
+  "story": "Jori, Flimm und Luma blieben unter dem stillen Kometenbogen stehen. Drei kleine Lichter schwebten darüber: A, B und C. Das mittlere Licht sah aus wie Flimms Bauchstern und blinkte schon, bevor sein eigener Stern antwortete. Jori schlug einen Test vor. Flimm neigte zuerst seine grüne Mütze, schlug danach einmal mit den kleinen goldenen Flügeln und ließ zuletzt seinen Bauchstern aufleuchten. Sofort zeigten die drei Lichter unterschiedliche Reihenfolgen.",
+  "question": "Welches Licht wiederholt Flimms Reihenfolge genau: A, B oder C?",
+  "answer": "Licht B!",
+  "after": "Licht B! Flimm neigte zuerst die Mütze, bewegte danach die Flügel und ließ zuletzt den Bauchstern leuchten. Nur B zeigte genau Mütze, Flügel, Stern. Jori deutete auf B. Das Licht sank herab und wurde zu einem winzigen gläsernen Glühkäfer. Auf seinem Rücken leuchteten drei dunkle Punkte wie ein kleines Sternbild. Der Kometenbogen öffnete sich lautlos.",
+  "cliff": "Hinter dem Bogen lag ein spiegelglatter Teich. Jori, Flimm und Luma traten an das Ufer. Im Wasser erschienen Jori und Luma – aber neben ihnen standen zwei Flimms. Jori blickte zur Seite. An Land war nur ein Flimm. Da hob einer der beiden Spiegel-Flimms langsam die Pfote, obwohl der echte Flimm ganz still blieb. Welcher Flimm war der echte?",
+  "riddle": {
+    "type": "visual_action_order",
+    "question": "Welches Licht wiederholt Flimms Reihenfolge genau: A, B oder C?",
+    "answer": "Licht B",
+    "evidence_in_story": "Flimm zeigt Mütze, dann Flügel, dann Stern. A zeigt Mütze–Stern–Flügel, B zeigt Mütze–Flügel–Stern und C zeigt Flügel–Mütze–Stern. Nur B stimmt vollständig.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "three_action_sequences",
+  "clues": [
+    "Flimm: Mütze → Flügel → Stern",
+    "A: Mütze → Stern → Flügel",
+    "B: Mütze → Flügel → Stern",
+    "C: Flügel → Mütze → Stern"
+  ],
+  "correct": 1,
+  "puzzle_visual": "Drei klar getrennte Lichtfolgen A, B und C mit einfachen Bildsymbolen für grüne Mütze, goldene Flügel und weißen Bauchstern. Frage und alle Hinweise vollständig zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt direkt bei den drei Lichtern über dem stillen Kometenbogen am Ende von Folge 022 an. Das vorauseilende Licht wird durch Flimms Handlungsreihenfolge erkannt, verwandelt sich in einen gläsernen Glühkäfer und öffnet den Weg zu einem Teich mit zwei Flimm-Spiegelbildern.",
+  "narration": "Über dem stillen Kometenbogen blinkte das mittlere Licht noch vor Flimm. [[SEGMENT]] Jori, Flimm und Luma blieben unter dem Bogen stehen. Drei kleine Lichter schwebten darüber: A, B und C. Das mittlere Licht sah aus wie Flimms Bauchstern und blinkte schon, bevor sein eigener Stern antwortete. Jori schlug einen Test vor. Flimm neigte zuerst seine grüne Mütze, schlug danach einmal mit den kleinen goldenen Flügeln und ließ zuletzt seinen Bauchstern aufleuchten. Sofort zeigten die drei Lichter unterschiedliche Reihenfolgen. [[SEGMENT]] Welches Licht wiederholt Flimms Reihenfolge genau: A, B oder C? [[PAUSE:7]] Licht B! Flimm neigte zuerst die Mütze, bewegte danach die Flügel und ließ zuletzt den Bauchstern leuchten. Nur B zeigte genau Mütze, Flügel, Stern. Jori deutete auf B. Das Licht sank herab und wurde zu einem winzigen gläsernen Glühkäfer. Auf seinem Rücken leuchteten drei dunkle Punkte wie ein kleines Sternbild. Der Kometenbogen öffnete sich lautlos. Hinter dem Bogen lag ein spiegelglatter Teich. Jori, Flimm und Luma traten an das Ufer. Im Wasser erschienen Jori und Luma – aber neben ihnen standen zwei Flimms. Jori blickte zur Seite. An Land war nur ein Flimm. Da hob einer der beiden Spiegel-Flimms langsam die Pfote, obwohl der echte Flimm ganz still blieb. Welcher Flimm war der echte?",
+  "narration_tts": "Über dem stillen Kometenbogen blinkte das mittlere Licht noch vor Flimm. [[SEGMENT]] Jori, Flimm und Luma blieben unter dem Bogen stehen. Drei kleine Lichter schwebten darüber: A, B und C. Das mittlere Licht sah aus wie Flimms Bauchstern und blinkte schon, bevor sein eigener Stern antwortete. Jori schlug einen Test vor. Flimm neigte zuerst seine grüne Mütze, schlug danach einmal mit den kleinen goldenen Flügeln und ließ zuletzt seinen Bauchstern aufleuchten. Sofort zeigten die drei Lichter unterschiedliche Reihenfolgen. [[SEGMENT]] Welches Licht wiederholt Flimms Reihenfolge genau: A, B oder C? [[PAUSE:7]] Licht B! Flimm neigte zuerst die Mütze, bewegte danach die Flügel und ließ zuletzt den Bauchstern leuchten. Nur B zeigte genau Mütze, Flügel, Stern. Jori deutete auf B. Das Licht sank herab und wurde zu einem winzigen gläsernen Glühkäfer. Auf seinem Rücken leuchteten drei dunkle Punkte wie ein kleines Sternbild. Der Kometenbogen öffnete sich lautlos. Hinter dem Bogen lag ein spiegelglatter Teich. Jori, Flimm und Luma traten an das Ufer. Im Wasser erschienen Jori und Luma – aber neben ihnen standen zwei Flimms. Jori blickte zur Seite. An Land war nur ein Flimm. Da hob einer der beiden Spiegel-Flimms langsam die Pfote, obwohl der echte Flimm ganz still blieb. Welcher Flimm war der echte?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "blocked_daily_free_tier_limit",
+  "scene_briefs": [
+    "Direkter Anschluss: drei Lichter schweben über dem stillen Kometenbogen; das mittlere blinkt vor Flimm.",
+    "Jori schlägt einen Test vor; Flimm neigt zuerst seine grüne Mütze, Luma beobachtet aufmerksam.",
+    "Flimm zeigt nacheinander Mütze, goldene Flügel und weißen Bauchstern; drei Lichter antworten mit verschiedenen Folgen.",
+    "Ruhige Denkpause im Garten der stillen Kometen, Figuren klein links unten, viel ruhige freie Fläche für ein TikTok-sicheres Reihenfolgenrätsel.",
+    "Jori zeigt auf Licht B; die korrekte Folge Mütze, Flügel, Stern leuchtet am Kometenbogen.",
+    "Licht B wird zu einem gläsernen Glühkäfer mit drei dunklen Sternpunkten; der Bogen öffnet sich lautlos.",
+    "Cliffhanger am spiegelglatten Teich: an Land steht ein Flimm, im Wasser erscheinen zwei Flimm-Spiegelbilder; eines hebt eigenständig die Pfote."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-023-v1/scene-01.jpg",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-023-v1/scene-02.jpg",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-023-v1/scene-03.jpg",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-023-v1/scene-04.jpg",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-023-v1/scene-05.jpg",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-023-v1/scene-06.jpg",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-023-v1/scene-07.jpg",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-08T09:25:00+01:00",
+  "status": "STORY_AND_ART_READY_TTS_BLOCKED",
+  "previous_cliffhanger": "Luma legte die Feder auf ihre Mondlichtkarte. Eine silberne Spur zum Garten der stillen Kometen erschien. Jori, Flimm und Luma folgten ihr durch die leuchtenden Wurzeln. Weit voraus schwebten drei kleine Lichter über einem stillen Kometenbogen. Das mittlere Licht sah genauso aus wie Flimms Bauchstern. Es blinkte einmal – noch bevor Flimm selbst blinkte. Wer kannte Flimms Leuchten so genau?"
+}
