@@ -1,0 +1,58 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 21,
+  "series_version": "relaunch-v2",
+  "title": "Die Stimme in der Mondkapsel",
+  "hook": "Die Stimme in der Mondkapsel warnte Jori: Flimms Stern wird gesucht.",
+  "story": "Jori legte die Hand an die leuchtende Kapsel. Flimm schwebte dicht neben ihr, seine grüne Mütze zitterte. Durch einen schmalen Spalt sahen sie Luma, eine winzige silberblaue Sternenkundschafterin. Sie war in der Kapsel eingeschlossen. Am Schloss fehlte die rechte Hälfte eines Zeichens. Auf der festen linken Hälfte endeten oben ein Mondbogen und unten eine Sternspitze. Daneben lagen drei silberne Teile. Nur eines konnte beide Linien ohne Lücke fortsetzen.",
+  "question": "Welches Teil ergänzt das Zeichen: A, B oder C?",
+  "answer": "Teil B!",
+  "after": "Teil B! Nur dort liefen oben der Mondbogen und unten die Sternspitze genau weiter. Jori setzte das Teil ein. Das Zeichen leuchtete vollständig, und die Mondkapsel sprang auf. Luma flatterte erleichtert heraus.",
+  "cliff": "Luma entrollte eine Karte aus Mondlicht. „Die Sternsucher folgen Flimms Leuchten bis zum Garten der stillen Kometen“, erklärte sie. Jori nickte mutig. Da warf Flimms heller Bauchstern plötzlich zwei Schatten. Der erste blieb bei ihm. Der zweite löste sich von der Silberwurzel und kroch allein zur offenen Kapsel. Wem gehörte dieser fremde Schatten?",
+  "riddle": {
+    "type": "complete_broken_emblem",
+    "question": "Welches Teil ergänzt das Zeichen: A, B oder C?",
+    "answer": "Teil B",
+    "evidence_in_story": "Oben muss der Mondbogen und unten die Sternspitze ohne Lücke weiterlaufen; nur Teil B erfüllt beide Hinweise.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "two_line_visual_match",
+  "clues": [
+    "Oben: Mondbogen weiterführen",
+    "Unten: Sternspitze weiterführen",
+    "Nur ein Teil schließt beide Linien"
+  ],
+  "correct": 1,
+  "puzzle_visual": "Links die feste Hälfte mit Mondbogen oben und Sternspitze unten; drei klare Ergänzungen A, B und C. Nur B setzt beide Linien fort. Alles vollständig links von x=540.",
+  "continuity": "Setzt direkt an der mondförmigen Kapsel aus Folge 020 an. Die eingeschlossene Stimme warnt Jori vor der Suche nach Flimms Stern.",
+  "narration": "Die Stimme in der Mondkapsel warnte Jori: Flimms Stern wird gesucht. [[SEGMENT]] Jori legte die Hand an die leuchtende Kapsel. Flimm schwebte dicht neben ihr, seine grüne Mütze zitterte. Durch einen schmalen Spalt sahen sie Luma, eine winzige silberblaue Sternenkundschafterin. Sie war in der Kapsel eingeschlossen. [[SEGMENT]] Am Schloss fehlte die rechte Hälfte eines Zeichens. Auf der festen linken Hälfte endeten oben ein Mondbogen und unten eine Sternspitze. Daneben lagen drei silberne Teile. Nur eines konnte beide Linien ohne Lücke fortsetzen. [[SEGMENT]] Welches Teil ergänzt das Zeichen: A, B oder C? [[PAUSE:7]] Teil B! Nur dort liefen oben der Mondbogen und unten die Sternspitze genau weiter. Jori setzte das Teil ein. Das Zeichen leuchtete vollständig, und die Mondkapsel sprang auf. Luma flatterte erleichtert heraus. [[SEGMENT]] Luma entrollte eine Karte aus Mondlicht. „Die Sternsucher folgen Flimms Leuchten bis zum Garten der stillen Kometen“, erklärte sie. Jori nickte mutig. Da warf Flimms heller Bauchstern plötzlich zwei Schatten. Der erste blieb bei ihm. Der zweite löste sich von der Silberwurzel und kroch allein zur offenen Kapsel. Wem gehörte dieser fremde Schatten?",
+  "narration_tts": "Die Stimme in der Mondkapsel warnte Jori: Flimms Stern wird gesucht. [[SEGMENT]] Jori legte die Hand an die leuchtende Kapsel. Flimm schwebte dicht neben ihr, seine grüne Mütze zitterte. Durch einen schmalen Spalt sahen sie Luma, eine winzige silberblaue Sternenkundschafterin. Sie war in der Kapsel eingeschlossen. [[SEGMENT]] Am Schloss fehlte die rechte Hälfte eines Zeichens. Auf der festen linken Hälfte endeten oben ein Mondbogen und unten eine Sternspitze. Daneben lagen drei silberne Teile. Nur eines konnte beide Linien ohne Lücke fortsetzen. [[SEGMENT]] Welches Teil ergänzt das Zeichen: A, B oder C? [[PAUSE:7]] Teil B! Nur dort liefen oben der Mondbogen und unten die Sternspitze genau weiter. Jori setzte das Teil ein. Das Zeichen leuchtete vollständig, und die Mondkapsel sprang auf. Luma flatterte erleichtert heraus. [[SEGMENT]] Luma entrollte eine Karte aus Mondlicht. „Die Sternsucher folgen Flimms Leuchten bis zum Garten der stillen Kometen“, erklärte sie. Jori nickte mutig. Da warf Flimms heller Bauchstern plötzlich zwei Schatten. Der erste blieb bei ihm. Der zweite löste sich von der Silberwurzel und kroch allein zur offenen Kapsel. Wem gehörte dieser fremde Schatten?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "render_pending",
+  "scene_briefs": [
+    "Direkter Anschluss: Jori klopft an die mondförmige Kapsel; Flimm schwebt besorgt daneben.",
+    "Die Kapsel öffnet sich einen Spalt und zeigt Luma, eine winzige silberblaue Sternenkundschafterin.",
+    "Am Schloss fehlt eine Hälfte; Mondbogen und Sternspitze enden sichtbar an der Bruchkante.",
+    "Ruhige Denkpause in einer dunklen Wurzelkammer mit freiem Raum für das TikTok-sichere Ergänzungsrätsel.",
+    "Jori setzt Teil B ein; beide Linien schließen sich und Luma wird befreit.",
+    "Luma entrollt eine Mondlichtkarte zum Garten der stillen Kometen.",
+    "Cliffhanger: Flimms Bauchstern wirft einen zweiten, selbstständig kriechenden Schatten."
+  ],
+  "visuals": [
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-021-v1/scene-01.jpg", "scene": 1, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-021-v1/scene-02.jpg", "scene": 2, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-021-v1/scene-03.jpg", "scene": 3, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-021-v1/scene-04.jpg", "scene": 4, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-021-v1/scene-05.jpg", "scene": 5, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-021-v1/scene-06.jpg", "scene": 6, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-021-v1/scene-07.jpg", "scene": 7, "generated": true}
+  ],
+  "created_at": "2026-11-08T09:00:00+01:00",
+  "status": "PREVIEW_PENDING",
+  "previous_cliffhanger": "Das Samenkorn schoss zu einer leuchtenden Wurzelbrücke empor. Jori und Flimm folgten ihr durch den kopfüber hängenden Wald. Am Ende steckte eine mondförmige Kapsel in einer riesigen Silberwurzel. Von innen klopfte es dreimal. Dann wisperte eine Stimme: „Jori, beeil dich. Flimms Stern wird gesucht.“ Wer war in der Kapsel?"
+}
