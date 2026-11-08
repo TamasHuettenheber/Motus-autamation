@@ -188,9 +188,12 @@ jobs:
               cooldown=1 if clip['id'] in recent_ids else 0
               tie=int(hashlib.sha256((output+'|'+clip['id']).encode()).hexdigest()[:12],16)
               ranked.append((cooldown,score,tie,clip))
-          # Hard cooldown first: a clip used in the last 8 successful Motus renders loses
-          # to every unused clip, even if its topic score is higher.
-          ranked.sort(key=lambda x:(x[0],-x[1],x[2]))
+          # Prefer new matching scenes. If no unused clip matches any keyword,
+          # allow a recently used relevant clip instead of unrelated footage.
+          if any(cooldown == 0 and score > 0 for cooldown,score,_,_ in ranked):
+              ranked.sort(key=lambda x:(x[0],-x[1],x[2]))
+          else:
+              ranked.sort(key=lambda x:(-x[1],x[0],x[2]))
 
           candidates=[]
           seen=set()
