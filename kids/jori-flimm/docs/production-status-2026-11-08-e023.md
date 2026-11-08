@@ -4,7 +4,7 @@
 
 - Status: Story und sieben neue Szenenbilder vollständig vorbereitet; Sulafat, Render, MP4-QC und Buffer-Freigabe wegen des bereits ausgeschöpften kostenlosen Tageslimits noch offen.
 - Kontinuität: direkter Anschluss an die drei Lichter über dem stillen Kometenbogen aus Folge 022. Das vorauseilende Licht wird über Flimms Reihenfolge Mütze–Flügel–Stern erkannt. Der Cliffhanger führt zu einem Teich mit zwei Flimm-Spiegelbildern.
-- Story-QC: neue, buchunabhängige Handlung; genau ein lösbares visuelles Reihenfolgenrätsel; Jori durchgehend weiblich; Lösung folgt erst nach der vorgesehenen sieben Sekunden langen Denkpause; neuer Cliffhanger vorhanden.
+- Story-QC: neue, buchunabhängige Handlung; genau ein lösbares visuelles Reihenfolgenrätsel; Jori durchgehend weiblich; Lösung folgt erst nach der vorgesehenen sieben Sekunden langen Denkpause; neuer Cliffhanger vorhanden. Branch-QC erfolgreich: Run 42463306630.
 - Bild-QC: sieben neue, unterschiedliche 720×1280-Szenen mit folgenspezifischen Hintergründen; Flimm mit grüner Mütze, runder orangefarbener Nase, kleinen goldenen Flügeln und weißem Bauchstern; Luma mit Silberhaar, blauem Sternenmantel und transparenten Flügeln konsistent.
 - Bild-Safe-Zone: Rätsel-Pausenszene besitzt eine große ruhige Fläche für Frage und alle Hinweise innerhalb x=60–540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben für den späteren Render frei.
 - Live-Buffer-Prüfung: Run 42462504375; Kanal `@jori.flimm` verifiziert, Folgen 018–022 vorhanden, Folge 022 genau einmal für 12.11.2026 geplant. Nächster freier täglicher 14-Uhr-Slot ist 13.11.2026 (`2026-11-13T13:00:00.000Z`), noch nicht gebucht.
