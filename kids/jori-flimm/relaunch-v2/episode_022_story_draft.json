@@ -1,0 +1,86 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 22,
+  "series_version": "relaunch-v2",
+  "title": "Der Schatten ohne Licht",
+  "hook": "Der fremde zweite Schatten kroch ohne Flimm zur offenen Mondkapsel.",
+  "story": "Jori stellte sich ruhig vor die Kapseltür. Luma hob ihre kleine blaue Sternenlampe, während Flimms Bauchstern golden leuchtete. Auf den Silberwurzeln lagen nun drei Schatten: A, B und C. Flimm bedeckte seinen goldenen Stern mit beiden Pfoten. Schatten A verschwand. Luma schloss ihre blaue Lampe. Schatten B verschwand. Doch Schatten C kroch weiter, obwohl beide Lichter verdeckt waren.",
+  "question": "Welcher Schatten ist der fremde Schatten: A, B oder C?",
+  "answer": "Schatten C!",
+  "after": "Schatten C! Ein echter Schatten braucht Licht. A verschwand mit Flimms goldenem Licht, und B verschwand mit Lumas blauem Licht. Nur C bewegte sich ohne Licht weiter. Jori zeigte auf C. Sofort rollte sich der fremde Schatten wie ein Blatt zusammen und wurde zu einer schwarzen Sternenfeder. Auf ihrer Spitze glomm ein winziges Sternbild.",
+  "cliff": "Luma legte die Feder auf ihre Mondlichtkarte. Eine silberne Spur zum Garten der stillen Kometen erschien. Jori, Flimm und Luma folgten ihr durch die leuchtenden Wurzeln. Weit voraus schwebten drei kleine Lichter über einem stillen Kometenbogen. Das mittlere Licht sah genauso aus wie Flimms Bauchstern. Es blinkte einmal – noch bevor Flimm selbst blinkte. Wer kannte Flimms Leuchten so genau?",
+  "riddle": {
+    "type": "light_dependency_logic",
+    "question": "Welcher Schatten ist der fremde Schatten: A, B oder C?",
+    "answer": "Schatten C",
+    "evidence_in_story": "A verschwindet mit Flimms goldenem Licht und B mit Lumas blauem Licht. C bleibt und bewegt sich ohne Licht; daher kann C kein echter Schatten sein.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "two_lights_three_shadows",
+  "clues": [
+    "Goldlicht aus: A verschwindet",
+    "Blaulicht aus: B verschwindet",
+    "C bleibt ohne Licht"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Drei klar getrennte Schatten A, B und C; bei A ein verdeckter goldener Stern, bei B eine geschlossene blaue Lampe, bei C zwei verdeckte Lichter und ein weiterkriechender Schatten. Frage und alle Hinweise vollständig zwischen x=60 und x=540.",
+  "continuity": "Setzt direkt beim selbstständig kriechenden zweiten Schatten am Ende von Folge 021 an. Der falsche Schatten wird als Sternenfeder enttarnt und öffnet den Weg zum Garten der stillen Kometen.",
+  "narration": "Der fremde zweite Schatten löste sich von Flimms Stern und kroch direkt zur offenen Mondkapsel. [[SEGMENT]] Jori stellte sich ruhig vor die Kapseltür. Luma hob ihre kleine blaue Sternenlampe, während Flimms Bauchstern golden leuchtete. Auf den Silberwurzeln lagen nun drei Schatten: A, B und C. Flimm bedeckte seinen goldenen Stern mit beiden Pfoten. Schatten A verschwand. Luma schloss ihre blaue Lampe. Schatten B verschwand. Doch Schatten C kroch weiter, obwohl beide Lichter verdeckt waren. [[SEGMENT]] Welcher Schatten ist der fremde Schatten: A, B oder C? [[PAUSE:7]] Schatten C! Ein echter Schatten braucht Licht. A verschwand mit Flimms goldenem Licht, und B verschwand mit Lumas blauem Licht. Nur C bewegte sich ohne Licht weiter. Jori zeigte auf C. Sofort rollte sich der fremde Schatten wie ein Blatt zusammen und wurde zu einer schwarzen Sternenfeder. Auf ihrer Spitze glomm ein winziges Sternbild. Luma legte die Feder auf ihre Mondlichtkarte. Eine silberne Spur zum Garten der stillen Kometen erschien. Jori, Flimm und Luma folgten ihr durch die leuchtenden Wurzeln. Weit voraus schwebten drei kleine Lichter über einem stillen Kometenbogen. Das mittlere Licht sah genauso aus wie Flimms Bauchstern. Es blinkte einmal – noch bevor Flimm selbst blinkte. Wer kannte Flimms Leuchten so genau?",
+  "narration_tts": "Der fremde zweite Schatten löste sich von Flimms Stern und kroch direkt zur offenen Mondkapsel. [[SEGMENT]] Jori stellte sich ruhig vor die Kapseltür. Luma hob ihre kleine blaue Sternenlampe, während Flimms Bauchstern golden leuchtete. Auf den Silberwurzeln lagen nun drei Schatten: A, B und C. Flimm bedeckte seinen goldenen Stern mit beiden Pfoten. Schatten A verschwand. Luma schloss ihre blaue Lampe. Schatten B verschwand. Doch Schatten C kroch weiter, obwohl beide Lichter verdeckt waren. [[SEGMENT]] Welcher Schatten ist der fremde Schatten: A, B oder C? [[PAUSE:7]] Schatten C! Ein echter Schatten braucht Licht. A verschwand mit Flimms goldenem Licht, und B verschwand mit Lumas blauem Licht. Nur C bewegte sich ohne Licht weiter. Jori zeigte auf C. Sofort rollte sich der fremde Schatten wie ein Blatt zusammen und wurde zu einer schwarzen Sternenfeder. Auf ihrer Spitze glomm ein winziges Sternbild. Luma legte die Feder auf ihre Mondlichtkarte. Eine silberne Spur zum Garten der stillen Kometen erschien. Jori, Flimm und Luma folgten ihr durch die leuchtenden Wurzeln. Weit voraus schwebten drei kleine Lichter über einem stillen Kometenbogen. Das mittlere Licht sah genauso aus wie Flimms Bauchstern. Es blinkte einmal – noch bevor Flimm selbst blinkte. Wer kannte Flimms Leuchten so genau?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "render_pending",
+  "scene_briefs": [
+    "Direkter Anschluss: der fremde zweite Schatten kriecht zur offenen Mondkapsel; Jori, Flimm und Luma erschrecken, bleiben aber handlungsfähig.",
+    "Jori stellt sich schützend vor die Kapsel; Luma hebt ihre blaue Sternenlampe, Flimms Bauchstern leuchtet golden.",
+    "Drei Schatten A, B und C liegen auf den Silberwurzeln; A verschwindet mit Goldlicht, B mit Blaulicht, C bleibt.",
+    "Ruhige Denkpause in der Wurzelkammer, Figuren klein links unten, viel ruhige freie Fläche für ein TikTok-sicheres Lichtlogik-Rätsel.",
+    "Jori zeigt auf C; der falsche Schatten rollt sich zu einer schwarzen Sternenfeder zusammen.",
+    "Luma legt die Sternenfeder auf die Mondlichtkarte; eine silberne Route zum Garten der stillen Kometen öffnet sich.",
+    "Cliffhanger: über einem stillen Kometenbogen schweben drei Lichter; das mittlere kopiert Flimms Bauchstern und blinkt vor ihm."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-022-v1/scene-01.jpg",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-022-v1/scene-02.jpg",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-022-v1/scene-03.jpg",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-022-v1/scene-04.jpg",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-022-v1/scene-05.jpg",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-022-v1/scene-06.jpg",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-022-v1/scene-07.jpg",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-08T10:00:00+01:00",
+  "status": "PREVIEW_PENDING",
+  "previous_cliffhanger": "Luma entrollte eine Karte aus Mondlicht. „Die Sternsucher folgen Flimms Leuchten bis zum Garten der stillen Kometen“, erklärte sie. Jori nickte mutig. Da warf Flimms heller Bauchstern plötzlich zwei Schatten. Der erste blieb bei ihm. Der zweite löste sich von der Silberwurzel und kroch allein zur offenen Kapsel. Wem gehörte dieser fremde Schatten?"
+}
