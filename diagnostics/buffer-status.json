@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-08T07:13:09.273716+00:00",
+  "checked_at_utc": "2026-11-08T15:02:23.651770+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6aee78939214322f68c0d4a0",
       "text": "Der Buchhaltungskram stapelt sich auf dem Schreibtisch, und du weißt genau, dass du diese lästige Rechnung heute unbedingt noch rausschicken musst, bevor der Postbote kommt. Schalte jetzt alle Benachrichtigungen am Computer stumm, öffne nur das eine Dokument und tippe die fehlenden Zahlen in die Tabelle ein. Wenn das geschafft ist, klebst du sofort die Briefmarke auf den Umschlag und wirfst ihn unten in den Kasten. Teile dieses Video mit jemandem, der heute auch noch Berge abarbeiten muss.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Destiny (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-08T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-08T11:02:35.692Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7705754207369940256",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-08-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aee78939214322f68c0d4a0_video.mp4"
         }
       ]
     },
