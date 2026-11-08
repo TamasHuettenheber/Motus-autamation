@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Die Stimme in der Mondkapsel warnte Jori: Flimms Stern wird gesucht.",
+      "start": 0.0,
+      "end": 7.16,
+      "duration": 7.16
+    },
+    {
+      "kind": "speech",
+      "text": "Jori legte die Hand an die leuchtende Kapsel. Flimm schwebte dicht neben ihr, seine grüne Mütze zitterte. Durch einen schmalen Spalt sahen sie Luma, eine winzige silberblaue Sternenkundschafterin. Sie war in der Kapsel eingeschlossen.",
+      "start": 7.16,
+      "end": 28.52,
+      "duration": 21.36
+    },
+    {
+      "kind": "speech",
+      "text": "Am Schloss fehlte die rechte Hälfte eines Zeichens. Auf der festen linken Hälfte endeten oben ein Mondbogen und unten eine Sternspitze. Daneben lagen drei silberne Teile. Nur eines konnte beide Linien ohne Lücke fortsetzen.",
+      "start": 28.52,
+      "end": 47.68,
+      "duration": 19.16
+    },
+    {
+      "kind": "speech",
+      "text": "Welches Teil ergänzt das Zeichen: A, B oder C?",
+      "start": 47.68,
+      "end": 54.52,
+      "duration": 6.84
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 54.52,
+      "end": 61.52,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Teil B! Nur dort liefen oben der Mondbogen und unten die Sternspitze genau weiter. Jori setzte das Teil ein. Das Zeichen leuchtete vollständig, und die Mondkapsel sprang auf. Luma flatterte erleichtert heraus.",
+      "start": 61.52,
+      "end": 82.0,
+      "duration": 20.48
+    },
+    {
+      "kind": "speech",
+      "text": "Luma entrollte eine Karte aus Mondlicht. „Die Sternsucher folgen Flimms Leuchten bis zum Garten der stillen Kometen“, erklärte sie. Jori nickte mutig. Da warf Flimms heller Bauchstern plötzlich zwei Schatten. Der erste blieb bei ihm. Der zweite löste sich von der Silberwurzel und kroch allein zur offenen Kapsel. Wem gehörte dieser fremde Schatten?",
+      "start": 82.0,
+      "end": 113.6,
+      "duration": 31.6
+    }
+  ],
+  "duration": 113.6,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
