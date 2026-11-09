@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-08T23:39:47.010030+00:00",
+  "checked_at_utc": "2026-11-09T06:06:56.479643+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6aefaa83562f2e6de98570e1",
       "text": "Der Reißverschluss deiner Lieblingsjacke klemmt im feuchten Futter fest und du ziehst ungeduldig daran, während die Haustür im Zugluftstoß zufällt. Genau solche kleinen Blockaden bestimmen oft die ersten Minuten deines Vormittags und rauben unnötig Nerven. Reiß den Kragen nicht gewaltsam auf, sondern reibe eine trockene Kerze vorsichtig über die Zähnchen, damit das Metall sofort wieder butterweich gleitet. Spare dir den Frust und probiere diesen Trick heute noch aus. Schreib mir in die Kommentare, welcher Handgriff deinen Morgen sofort rettet.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Wild Waters (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-09T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-09T06:02:15.029Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7706047661648153889",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-09-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aefaa83562f2e6de98570e1_video.mp4"
         }
       ]
     },
