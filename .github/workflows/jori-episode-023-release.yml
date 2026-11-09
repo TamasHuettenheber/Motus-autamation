@@ -81,3 +81,5 @@ jobs:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_buffer.py --episode 23
+
+# Retry after extending the isolated Jori Buffer allowlist through episode 023.
