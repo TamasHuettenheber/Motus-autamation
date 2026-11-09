@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-09T16:06:31.987495+00:00",
+  "checked_at_utc": "2026-11-09T20:54:54.945020+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6aefaa94004e4879a7837fc1",
       "text": "Dein Blick wandert zum dritten Mal auf die Uhr, weil die Gäste gleich an der Haustür klingeln und der Salat im Sieb noch tropft. Anstatt jetzt in Hektik zu verfallen und hektisch das Geschirr umzuräumen, nimm dir eine Minute Zeit zum Durchatmen. Stelle die fertige Schüssel einfach in die Mitte des Tisches und konzentriere dich ganz auf die anstehenden Gespräche. Schicke dieses Video an jemanden, der heute Abend ebenfalls nette Gesellschaft bekommt.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – A Memory Away (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-09T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-09T17:33:46.198Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7706225806548176161",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-09-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aefaa94004e4879a7837fc1_video.mp4"
         }
       ]
     },
