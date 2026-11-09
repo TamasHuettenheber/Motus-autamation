@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Über dem stillen Kometenbogen blinkte das mittlere Licht noch vor Flimm.",
+      "start": 0.0,
+      "end": 6.72,
+      "duration": 6.72
+    },
+    {
+      "kind": "speech",
+      "text": "Jori, Flimm und Luma blieben unter dem Bogen stehen. Drei kleine Lichter schwebten darüber: A, B und C. Das mittlere Licht sah aus wie Flimms Bauchstern und blinkte schon, bevor sein eigener Stern antwortete. Jori schlug einen Test vor. Flimm neigte zuerst seine grüne Mütze, schlug danach einmal mit den kleinen goldenen Flügeln und ließ zuletzt seinen Bauchstern aufleuchten. Sofort zeigten die drei Lichter unterschiedliche Reihenfolgen.",
+      "start": 6.72,
+      "end": 44.32,
+      "duration": 37.6
+    },
+    {
+      "kind": "speech",
+      "text": "Welches Licht wiederholt Flimms Reihenfolge genau: A, B oder C?",
+      "start": 44.32,
+      "end": 52.12,
+      "duration": 7.8
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 52.12,
+      "end": 59.12,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Licht B! Flimm neigte zuerst die Mütze, bewegte danach die Flügel und ließ zuletzt den Bauchstern leuchten. Nur B zeigte genau Mütze, Flügel, Stern. Jori deutete auf B. Das Licht sank herab und wurde zu einem winzigen gläsernen Glühkäfer. Auf seinem Rücken leuchteten drei dunkle Punkte wie ein kleines Sternbild. Der Kometenbogen öffnete sich lautlos. Hinter dem Bogen lag ein spiegelglatter Teich. Jori, Flimm und Luma traten an das Ufer. Im Wasser erschienen Jori und Luma – aber neben ihnen standen zwei Flimms. Jori blickte zur Seite. An Land war nur ein Flimm. Da hob einer der beiden Spiegel-Flimms langsam die Pfote, obwohl der echte Flimm ganz still blieb. Welcher Flimm war der echte?",
+      "start": 59.12,
+      "end": 122.52,
+      "duration": 63.4
+    }
+  ],
+  "duration": 122.52,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
