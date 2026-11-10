@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-17-1200",
-      "clip_id": "phone-cafe-5075207",
-      "source": "https://www.pexels.com/video/a-woman-is-using-her-phone-to-take-a-picture-of-her-coffee-5075207/",
-      "used_at_utc": "2026-10-16T20:51:24.195261+00:00"
-    },
-    {
       "output_name": "motus-2026-10-18-1200",
       "clip_id": "work-laptop-8479274",
       "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
@@ -599,6 +593,12 @@
       "clip_id": "sunrise-sea-11382155",
       "source": "https://www.pexels.com/video/vertical-shot-of-sunrise-over-sea-11382155/",
       "used_at_utc": "2026-11-10T02:55:51.712147+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-11-2200",
+      "clip_id": "study-breakfast-5387028",
+      "source": "https://www.pexels.com/video/a-person-studying-while-having-breakfast-5387028/",
+      "used_at_utc": "2026-11-10T02:59:15.867067+00:00"
     }
   ]
 }
