@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-10T16:59:51.072864+00:00",
+  "checked_at_utc": "2026-11-10T22:19:32.469773+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -73,30 +73,30 @@
     {
       "id": "6af103d1004e4879a7e85d9c",
       "text": "Beim Zähneprüfen fällt dein Blick auf das vollgestellte Bücherregal, in dem die Romane völlig kreuz und quer stehen. Lass die Unordnung heute einfach mal unberührt, dreh stattdessen das grelle Deckenlicht aus und schalte nur die kleine Lampe am Nachttisch an. Das sanfte Licht signalisiert deinem Kopf sofort das Ende des Tages, ohne dass du jetzt noch aufräumen musst. Erholung beginnt im Kopf, wenn du den Blick bewusst auf gemütliche Ecken lenkst. Folge unserem Kanal für tägliche Impulse, die deinen Abend spürbar entspannter machen.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-10T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-10T21:03:35.955Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7706650990023347489",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-10-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af103d1004e4879a7e85d9c_video.mp4"
         }
       ]
     },
     {
       "id": "6af10465229bf05dafdf12b3",
       "text": "Im Flur stapeln sich die leeren Kartons vom letzten Online-Kauf und versperren den Weg. Falte die Schachteln jetzt direkt zusammen und bring sie in den Keller. Danach ist der Eingangsbereich wieder frei. Teile dieses Video mit jemandem, der auch immer zu viele Kartons sammelt.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Home (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-10T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-10T17:33:22.643Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7706596938333965601",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-10-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af10465229bf05dafdf12b3_video.mp4"
         }
       ]
     },
