@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-10T08:20:01.119076+00:00",
+  "checked_at_utc": "2026-11-10T16:59:51.072864+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6af10411562f2e6de9ea6688",
       "text": "Du stehst im Bad vor dem Waschbecken und bemerkst, dass die Tube deiner Lieblingszahnpasta komplett leer ist, obwohl im Schrank noch ein neuer Vorrat liegt. Der klassische Griff ins Leere kostet wertvolle Sekunden. Geh jetzt kurz in die Speisekammer, hole die Ersatzpackung und lege sie direkt bereit, statt dich später zu ärgern. Wenn du den Vorrat sofort aufstockst, sparst du dir im nächsten stressigen Moment spürbare Nerven. Speicher diesen Beitrag direkt ab, damit du solche Handgriffe künftig noch schneller erledigst und deinen Alltag reibungslos organisierst.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Crossroads (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-10T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-10T11:03:19.941Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7706496426892725536",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-10-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af10411562f2e6de9ea6688_video.mp4"
         }
       ]
     },
