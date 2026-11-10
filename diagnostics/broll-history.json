@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-17-2200",
-      "clip_id": "rain-window-32661246",
-      "source": "https://www.pexels.com/video/rainy-window-view-with-drops-on-glass-32661246/",
-      "used_at_utc": "2026-10-16T20:51:14.892535+00:00"
-    },
-    {
       "output_name": "motus-2026-10-17-1200",
       "clip_id": "phone-cafe-5075207",
       "source": "https://www.pexels.com/video/a-woman-is-using-her-phone-to-take-a-picture-of-her-coffee-5075207/",
@@ -599,6 +593,12 @@
       "clip_id": "rain-city-13961930",
       "source": "https://www.pexels.com/video/people-walking-in-city-under-rainfall-13961930/",
       "used_at_utc": "2026-11-10T02:55:44.552483+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-11-0700",
+      "clip_id": "sunrise-sea-11382155",
+      "source": "https://www.pexels.com/video/vertical-shot-of-sunrise-over-sea-11382155/",
+      "used_at_utc": "2026-11-10T02:55:51.712147+00:00"
     }
   ]
 }
