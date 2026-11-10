@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Im Teich hob ein Flimm die Pfote, obwohl der echte Flimm stillstand.",
+      "start": 0.0,
+      "end": 6.8,
+      "duration": 6.8
+    },
+    {
+      "kind": "speech",
+      "text": "Jori kniete am spiegelglatten Ufer. An Land stand nur ein Flimm, doch im Wasser waren zwei. Der linke Wasser-Flimm lächelte genauso wie er. Der rechte winkte weiter, obwohl Flimm beide Pfoten auf den Boden setzte. Jori wollte sicher herausfinden, welches Bild wirklich zu Flimm gehörte. Sie band ein schmales blaues Band um Flimms rechte Pfote. Dann hob Flimm genau diese Pfote. In einem echten Spiegel muss das Band auf der gegenüberliegenden Bildseite erscheinen.",
+      "start": 6.8,
+      "end": 45.16,
+      "duration": 38.36
+    },
+    {
+      "kind": "speech",
+      "text": "Welche Wasserfigur ist Flimms echte Spiegelung: A mit dem Band rechts oder B mit dem Band links?",
+      "start": 45.16,
+      "end": 53.84,
+      "duration": 8.68
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 53.84,
+      "end": 60.84,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Wasserfigur B! Flimms Band saß rechts, doch im Spiegel erschien es links. Nur B zeigte die Seiten richtig vertauscht. A winkte ohne Flimms Bewegung und konnte keine echte Spiegelung sein. Jori berührte vorsichtig die falsche Figur. Sie zerfiel in silberne Tropfen. Unter der glatten Wasserfläche erschienen trockene Steinstufen, als hätte der Teich eine Treppe versteckt. Jori, Flimm und Luma stiegen hinab. Über ihren Köpfen blieb das Wasser wie eine klare Decke stehen. Am Ende der Treppe hing eine kleine Glocke in einem umgedrehten Tor. Niemand berührte sie. Trotzdem klingelte sie einmal, und hinter dem Tor antworteten drei verschiedene Echos. Welches Echo hatte die Glocke wirklich gerufen?",
+      "start": 60.84,
+      "end": 115.48,
+      "duration": 54.64
+    }
+  ],
+  "duration": 115.48,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
