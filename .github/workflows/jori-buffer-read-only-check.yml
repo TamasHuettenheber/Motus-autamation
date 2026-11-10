@@ -116,3 +116,5 @@ jobs:
 # E023 live Buffer recheck before TTS/render on 2026-11-09.
 
 # E023 live Buffer postcheck after scheduling on 2026-11-09.
+
+# E024 live Buffer precheck before production on 2026-11-10.
