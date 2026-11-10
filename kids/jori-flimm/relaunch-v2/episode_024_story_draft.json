@@ -1,0 +1,59 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 24,
+  "series_version": "relaunch-v2",
+  "title": "Der Flimm, der nicht spiegelte",
+  "hook": "Im Teich hob ein Flimm die Pfote, obwohl der echte Flimm stillstand.",
+  "story": "Jori kniete am spiegelglatten Ufer. An Land stand nur ein Flimm, doch im Wasser waren zwei. Der linke Wasser-Flimm lächelte genauso wie er. Der rechte winkte weiter, obwohl Flimm beide Pfoten auf den Boden setzte. Jori wollte sicher herausfinden, welches Bild wirklich zu Flimm gehörte. Sie band ein schmales blaues Band um Flimms rechte Pfote. Dann hob Flimm genau diese Pfote. In einem echten Spiegel muss das Band auf der gegenüberliegenden Bildseite erscheinen.",
+  "question": "Welche Wasserfigur ist Flimms echte Spiegelung: A mit dem Band rechts oder B mit dem Band links?",
+  "answer": "Wasserfigur B!",
+  "after": "Wasserfigur B! Flimms Band saß rechts, doch im Spiegel erschien es links. Nur B zeigte die Seiten richtig vertauscht. A winkte ohne Flimms Bewegung und konnte keine echte Spiegelung sein. Jori berührte vorsichtig die falsche Figur. Sie zerfiel in silberne Tropfen. Unter der glatten Wasserfläche erschienen trockene Steinstufen, als hätte der Teich eine Treppe versteckt.",
+  "cliff": "Jori, Flimm und Luma stiegen hinab. Über ihren Köpfen blieb das Wasser wie eine klare Decke stehen. Am Ende der Treppe hing eine kleine Glocke in einem umgedrehten Tor. Niemand berührte sie. Trotzdem klingelte sie einmal, und hinter dem Tor antworteten drei verschiedene Echos. Welches Echo hatte die Glocke wirklich gerufen?",
+  "riddle": {
+    "type": "visual_mirror_logic",
+    "question": "Welche Wasserfigur ist Flimms echte Spiegelung: A mit dem Band rechts oder B mit dem Band links?",
+    "answer": "Wasserfigur B",
+    "evidence_in_story": "Jori bindet das blaue Band an Flimms rechte Pfote. Ein echter Spiegel vertauscht die sichtbaren Seiten, deshalb muss das Band im Spiegel links erscheinen. Nur Wasserfigur B erfüllt diesen Hinweis.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "mirror_side_comparison",
+  "clues": [
+    "Flimm: blaues Band rechts",
+    "A: Band erscheint rechts",
+    "B: Band erscheint links",
+    "Ein Spiegel vertauscht die sichtbaren Seiten"
+  ],
+  "correct": 1,
+  "puzzle_visual": "Zwei klar getrennte Wasserfiguren A und B. Flimm trägt an seiner rechten Pfote ein blaues Band; bei A erscheint es rechts, bei B links. Frage und Hinweise vollständig zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt ohne Wiederholung am Teich aus Folge 023 an. Jori prüft die zwei Flimm-Spiegelbilder mit einem Seitenwechsel-Test, entlarvt die selbstständig winkende falsche Figur und entdeckt eine trockene Treppe unter dem Wasser.",
+  "narration": "Im Teich hob ein Flimm die Pfote, obwohl der echte Flimm stillstand. [[SEGMENT]] Jori kniete am spiegelglatten Ufer. An Land stand nur ein Flimm, doch im Wasser waren zwei. Der linke Wasser-Flimm lächelte genauso wie er. Der rechte winkte weiter, obwohl Flimm beide Pfoten auf den Boden setzte. Jori wollte sicher herausfinden, welches Bild wirklich zu Flimm gehörte. Sie band ein schmales blaues Band um Flimms rechte Pfote. Dann hob Flimm genau diese Pfote. In einem echten Spiegel muss das Band auf der gegenüberliegenden Bildseite erscheinen. [[SEGMENT]] Welche Wasserfigur ist Flimms echte Spiegelung: A mit dem Band rechts oder B mit dem Band links? [[PAUSE:7]] Wasserfigur B! Flimms Band saß rechts, doch im Spiegel erschien es links. Nur B zeigte die Seiten richtig vertauscht. A winkte ohne Flimms Bewegung und konnte keine echte Spiegelung sein. Jori berührte vorsichtig die falsche Figur. Sie zerfiel in silberne Tropfen. Unter der glatten Wasserfläche erschienen trockene Steinstufen, als hätte der Teich eine Treppe versteckt. Jori, Flimm und Luma stiegen hinab. Über ihren Köpfen blieb das Wasser wie eine klare Decke stehen. Am Ende der Treppe hing eine kleine Glocke in einem umgedrehten Tor. Niemand berührte sie. Trotzdem klingelte sie einmal, und hinter dem Tor antworteten drei verschiedene Echos. Welches Echo hatte die Glocke wirklich gerufen?",
+  "narration_tts": "Im Teich hob ein Flimm die Pfote, obwohl der echte Flimm stillstand. [[SEGMENT]] Jori kniete am spiegelglatten Ufer. An Land stand nur ein Flimm, doch im Wasser waren zwei. Der linke Wasser-Flimm lächelte genauso wie er. Der rechte winkte weiter, obwohl Flimm beide Pfoten auf den Boden setzte. Jori wollte sicher herausfinden, welches Bild wirklich zu Flimm gehörte. Sie band ein schmales blaues Band um Flimms rechte Pfote. Dann hob Flimm genau diese Pfote. In einem echten Spiegel muss das Band auf der gegenüberliegenden Bildseite erscheinen. [[SEGMENT]] Welche Wasserfigur ist Flimms echte Spiegelung: A mit dem Band rechts oder B mit dem Band links? [[PAUSE:7]] Wasserfigur B! Flimms Band saß rechts, doch im Spiegel erschien es links. Nur B zeigte die Seiten richtig vertauscht. A winkte ohne Flimms Bewegung und konnte keine echte Spiegelung sein. Jori berührte vorsichtig die falsche Figur. Sie zerfiel in silberne Tropfen. Unter der glatten Wasserfläche erschienen trockene Steinstufen, als hätte der Teich eine Treppe versteckt. Jori, Flimm und Luma stiegen hinab. Über ihren Köpfen blieb das Wasser wie eine klare Decke stehen. Am Ende der Treppe hing eine kleine Glocke in einem umgedrehten Tor. Niemand berührte sie. Trotzdem klingelte sie einmal, und hinter dem Tor antworteten drei verschiedene Echos. Welches Echo hatte die Glocke wirklich gerufen?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss: realer Flimm steht still am Teich, im Wasser erscheinen zwei Flimm-Figuren; eine hebt eigenständig die Pfote.",
+    "Jori bindet am Ufer ein schmales blaues Band um Flimms rechte Pfote; Luma beobachtet aufmerksam.",
+    "Flimm hebt die bandgeschmückte rechte Pfote; zwei Wasserfiguren zeigen das Band auf verschiedenen sichtbaren Seiten.",
+    "Ruhiger spiegelglatter Teich mit Figuren klein links unten und viel freier dunkler Wasserfläche für ein TikTok-sicheres Spiegelrätsel.",
+    "Jori zeigt auf Wasserfigur B; dort erscheint das blaue Band auf der gegenüberliegenden sichtbaren Seite, A flimmert falsch.",
+    "Die falsche Wasserfigur zerfällt in silberne Tropfen; unter der Wasserfläche öffnet sich eine trockene Steintreppe.",
+    "Cliffhanger unter dem Teich: Jori, Flimm und Luma auf trockenen Stufen, Wasser wie eine klare Decke über ihnen, umgedrehtes Tor mit unberührter klingender Glocke."
+  ],
+  "visuals": [
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-024-v1/scene-01.jpg", "scene": 1, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-024-v1/scene-02.jpg", "scene": 2, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-024-v1/scene-03.jpg", "scene": 3, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-024-v1/scene-04.jpg", "scene": 4, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-024-v1/scene-05.jpg", "scene": 5, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-024-v1/scene-06.jpg", "scene": 6, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-024-v1/scene-07.jpg", "scene": 7, "generated": true}
+  ],
+  "created_at": "2026-11-10T08:18:00+01:00",
+  "status": "STORY_AND_ART_READY_TTS_PENDING",
+  "previous_cliffhanger": "Hinter dem Bogen lag ein spiegelglatter Teich. Jori, Flimm und Luma traten an das Ufer. Im Wasser erschienen Jori und Luma – aber neben ihnen standen zwei Flimms. Jori blickte zur Seite. An Land war nur ein Flimm. Da hob einer der beiden Spiegel-Flimms langsam die Pfote, obwohl der echte Flimm ganz still blieb. Welcher Flimm war der echte?"
+}
