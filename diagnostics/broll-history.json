@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-18-1200",
-      "clip_id": "work-laptop-8479274",
-      "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
-      "used_at_utc": "2026-10-17T21:15:01.806428+00:00"
-    },
-    {
       "output_name": "motus-2026-10-18-2200",
       "clip_id": "night-walk-4121893",
       "source": "https://www.pexels.com/video/a-person-walking-in-the-street-at-night-4121893/",
@@ -599,6 +593,12 @@
       "clip_id": "study-breakfast-5387028",
       "source": "https://www.pexels.com/video/a-person-studying-while-having-breakfast-5387028/",
       "used_at_utc": "2026-11-10T02:59:15.867067+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-12-1200",
+      "clip_id": "forest-walk-5838174",
+      "source": "https://www.pexels.com/video/vertical-video-of-a-woman-walking-alone-through-the-forest-5838174/",
+      "used_at_utc": "2026-11-10T23:52:08.624015+00:00"
     }
   ]
 }
