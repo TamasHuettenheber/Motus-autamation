@@ -183,17 +183,19 @@ jobs:
               history={"uses":[]}
           recent_ids=[x.get("clip_id") for x in history.get("uses",[])[-8:] if x.get("clip_id")]
           ranked=[]
+          generic_tags={'alltag','walking','city','social','bewegung'}
           for clip in library.get('clips',[]):
-              score=sum(1 for tag in clip.get('tags',[]) if fold(str(tag)) in text)
+              # Do not treat generic tags such as "alltag" as evidence of a scene match.
+              matching=[fold(str(tag)) for tag in clip.get('tags',[])
+                        if fold(str(tag)) not in generic_tags and fold(str(tag)) in text]
+              score=sum(2 if len(tag)>=6 else 1 for tag in matching)
               cooldown=1 if clip['id'] in recent_ids else 0
               tie=int(hashlib.sha256((output+'|'+clip['id']).encode()).hexdigest()[:12],16)
               ranked.append((cooldown,score,tie,clip))
-          # Prefer new matching scenes. If no unused clip matches any keyword,
-          # allow a recently used relevant clip instead of unrelated footage.
-          if any(cooldown == 0 and score > 0 for cooldown,score,_,_ in ranked):
-              ranked.sort(key=lambda x:(x[0],-x[1],x[2]))
-          else:
-              ranked.sort(key=lambda x:(-x[1],x[0],x[2]))
+          # Relevance always beats unrelated footage; among relevant scenes,
+          # prefer a fresh clip when its score is comparable.
+          ranked.sort(key=lambda x:(x[1]==0,-(x[1]-x[0]),x[0],x[2]))
+          print('BROLL_RELEVANCE_QC',[(x[3]['id'],x[1],x[0]) for x in ranked[:4]])
 
           candidates=[]
           seen=set()
