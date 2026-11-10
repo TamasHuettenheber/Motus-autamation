@@ -1,0 +1,293 @@
+{
+  "version": 1,
+  "slots": {
+    "07:00": [
+      {
+        "topic": "Mut nach einem Fehler",
+        "hook": "Gestern ist dir ein Fehler passiert und du zweifelst an dir.",
+        "action": "Trenne den Fehler von deinem Wert und entscheide, was du heute daraus lernst."
+      },
+      {
+        "topic": "Fragen statt schweigen",
+        "hook": "Dir fällt eine wichtige Frage ein, doch du befürchtest eine dumme Reaktion.",
+        "action": "Stell die Frage trotzdem. Mut beginnt oft dort, wo du Unsicherheit aushältst."
+      },
+      {
+        "topic": "Eigene Ziele wählen",
+        "hook": "Du merkst, dass dein großes Ziel eigentlich die Erwartung anderer ist.",
+        "action": "Frag dich, welchen Weg du selbst wählen würdest. Klarheit ist wichtiger als Beifall."
+      },
+      {
+        "topic": "Unfertige Ideen zeigen",
+        "hook": "Deine Idee liegt seit Wochen unberührt, weil du auf Perfektion wartest.",
+        "action": "Zeig einer vertrauten Person einen ersten Entwurf. Echte Rückmeldung bringt dich weiter."
+      },
+      {
+        "topic": "Lob annehmen",
+        "hook": "Jemand lobt deine Arbeit und du redest deinen Beitrag sofort klein.",
+        "action": "Sag einfach Danke. Du darfst deine Leistung anerkennen, ohne überheblich zu sein."
+      },
+      {
+        "topic": "Vergleiche überwinden",
+        "hook": "Du siehst den Erfolg eines anderen und fühlst dich plötzlich zurückgeblieben.",
+        "action": "Vergleiche deinen Fortschritt mit deinem früheren Stand, nicht mit fremden Ergebnissen."
+      },
+      {
+        "topic": "Absagen verarbeiten",
+        "hook": "Eine Absage trifft ein und du zweifelst an deinen Fähigkeiten.",
+        "action": "Frag nach einer konkreten Rückmeldung. Eine Entscheidung anderer ist kein Urteil über deine Zukunft."
+      },
+      {
+        "topic": "Bewusste Zusagen",
+        "hook": "Du willst wieder Ja sagen, obwohl dein Kalender bereits voll ist.",
+        "action": "Prüfe zuerst deine Möglichkeiten. Ehrliche Zusagen sind wertvoller als reflexhafte Zustimmung."
+      },
+      {
+        "topic": "Kurswechsel erlauben",
+        "hook": "Du merkst, dass dein alter Plan nicht mehr zu dir passt.",
+        "action": "Erkläre dir selbst, was du dazugelernt hast. Eine kluge Kurskorrektur ist kein Scheitern."
+      },
+      {
+        "topic": "Große Vorhaben klären",
+        "hook": "Ein großes Vorhaben lähmt dich, weil du nur das Endergebnis siehst.",
+        "action": "Definiere, woran du einen guten Anfang erkennst. Klarheit schlägt hektische Beschäftigung."
+      },
+      {
+        "topic": "Kritik neugierig prüfen",
+        "hook": "Eine kritische Bemerkung trifft dich und du möchtest dich sofort verteidigen.",
+        "action": "Frag zuerst nach einem konkreten Beispiel. So trennst du hilfreiche Hinweise von bloßen Vorwürfen."
+      },
+      {
+        "topic": "Neue Verantwortung",
+        "hook": "Du wartest darauf, dass jemand dir eine neue Aufgabe ausdrücklich zutraut.",
+        "action": "Überlege, welche Verantwortung du schon jetzt sinnvoll übernehmen kannst. Selbstvertrauen wächst durch Erfahrung."
+      },
+      {
+        "topic": "Wieder Anfänger sein",
+        "hook": "Dein bisheriger Erfolg fühlt sich plötzlich wie eine Pflicht zur Wiederholung an.",
+        "action": "Erlaube dir, wieder etwas Neues zu lernen. Entwicklung braucht Neugier statt ständiger Selbstbestätigung."
+      },
+      {
+        "topic": "Entscheidungen tragen",
+        "hook": "Du hast dich entschieden und suchst trotzdem immer neue Bestätigung.",
+        "action": "Gib deinem Entschluss einen fairen Zeitraum. Nicht jede Unsicherheit bedeutet, dass du falschliegst."
+      }
+    ],
+    "12:00": [
+      {
+        "topic": "Besprechungen klären",
+        "hook": "Alle reden durcheinander und niemand weiß, was nun beschlossen wurde.",
+        "action": "Fasse die offenen Punkte zusammen und frage nach dem nächsten Verantwortlichen. Klarheit ist wirksamer als Lautstärke."
+      },
+      {
+        "topic": "Missverständnisse ansprechen",
+        "hook": "Eine Nachricht von dir wurde anders verstanden als beabsichtigt.",
+        "action": "Klär den konkreten Punkt im Gespräch. Annahmen wachsen sonst schnell zu unnötigen Konflikten."
+      },
+      {
+        "topic": "Unklare Aufträge",
+        "hook": "Du sollst eine Aufgabe übernehmen, aber das gewünschte Ergebnis bleibt unklar.",
+        "action": "Frag nach dem Ziel, bevor du loslegst. Gute Arbeit beginnt mit gemeinsamem Verständnis."
+      },
+      {
+        "topic": "Ablehnung einer Idee",
+        "hook": "Dein Vorschlag wird abgelehnt und du fühlst dich persönlich getroffen.",
+        "action": "Bitte um einen konkreten Grund. Eine abgelehnte Idee ist keine Ablehnung deiner Person."
+      },
+      {
+        "topic": "Prioritäten mit Wirkung",
+        "hook": "Zwei Aufgaben wirken gleich dringend, aber nur eine hat echte Folgen für andere.",
+        "action": "Prüfe Wirkung und Zusagen, statt nur auf die lauteste Forderung zu reagieren."
+      },
+      {
+        "topic": "Sachlich bleiben",
+        "hook": "Eine Diskussion wird persönlich, obwohl ihr eigentlich ein Problem lösen wolltet.",
+        "action": "Benenne das gemeinsame Ziel und kehre zu überprüfbaren Fakten zurück. Sachlichkeit schafft Handlungsspielraum."
+      },
+      {
+        "topic": "Fehler offenlegen",
+        "hook": "Du entdeckst einen Fehler in einem gemeinsamen Ergebnis und möchtest ihn lieber verschweigen.",
+        "action": "Sprich ihn früh und konkret an. Verantwortung zeigt sich nicht erst beim perfekten Resultat."
+      },
+      {
+        "topic": "Unsicherheit zugeben",
+        "hook": "Jemand erwartet sofort deine Einschätzung zu einem Thema, das du kaum kennst.",
+        "action": "Sag offen, was du weißt und was du prüfen musst. Verlässlichkeit braucht keine Allwissenheit."
+      },
+      {
+        "topic": "Eigene Arbeit sichtbar machen",
+        "hook": "Ein anderer erhält Anerkennung für eine gemeinsame Leistung und du fühlst dich übersehen.",
+        "action": "Sprich sachlich über deinen Beitrag, ohne den Erfolg des anderen kleinzureden."
+      },
+      {
+        "topic": "Verärgerte Menschen verstehen",
+        "hook": "Ein Kunde ist verärgert und du möchtest sofort eine Ausrede anbieten.",
+        "action": "Wiederhole zuerst sein Anliegen und erkläre dann den nächsten konkreten Schritt. Zuhören schafft Vertrauen."
+      },
+      {
+        "topic": "Termine ehrlich korrigieren",
+        "hook": "Du merkst, dass du einen zugesagten Termin nicht einhalten kannst.",
+        "action": "Melde dich frühzeitig mit einem realistischen Vorschlag. Ehrlichkeit ist professioneller als stilles Hoffen."
+      },
+      {
+        "topic": "Fair über Abwesende sprechen",
+        "hook": "In einer Runde wird über jemanden gesprochen, der gar nicht dabei ist.",
+        "action": "Lenke das Gespräch auf das konkrete Problem und darauf, wie es direkt geklärt werden kann."
+      },
+      {
+        "topic": "Ideen umsetzen",
+        "hook": "Viele Ideen liegen auf dem Tisch, aber niemand übernimmt die Umsetzung.",
+        "action": "Entscheidet nach Wirkung und Aufwand und benennt eine verantwortliche Person. Ideen brauchen Handlung."
+      },
+      {
+        "topic": "Stille im Gespräch zulassen",
+        "hook": "Dein Gegenüber wird still und du möchtest die Pause sofort mit Argumenten füllen.",
+        "action": "Frag, ob etwas unklar geblieben ist. Verstehen braucht manchmal einen Moment Ruhe."
+      }
+    ],
+    "18:30": [
+      {
+        "topic": "Neid in Neugier verwandeln",
+        "hook": "Ein Freund erzählt begeistert von einem Erfolg und du spürst einen Stich Neid.",
+        "action": "Gratuliere ehrlich und frage, wie er dorthin gekommen ist. Freude und eigener Ehrgeiz schließen sich nicht aus."
+      },
+      {
+        "topic": "Verbindung statt Rechthaben",
+        "hook": "Beim gemeinsamen Essen streitet ihr über eine Kleinigkeit und niemand will nachgeben.",
+        "action": "Frag dich, ob Rechtbehalten wichtiger ist als die Verbindung zum anderen. Nicht jeder Streit braucht einen Sieger."
+      },
+      {
+        "topic": "Konkreten Dank aussprechen",
+        "hook": "Jemand hat im Hintergrund viel geleistet und kaum Anerkennung bekommen.",
+        "action": "Sag konkret, was dir geholfen hat. Ein ehrlicher Dank macht unsichtbare Arbeit sichtbar."
+      },
+      {
+        "topic": "Zuhören vor Ratschlägen",
+        "hook": "Ein Familienmitglied erzählt von einem Problem und du hast sofort drei Lösungen parat.",
+        "action": "Frag erst, ob Rat oder Zuhören gebraucht wird. Nähe entsteht nicht nur durch Antworten."
+      },
+      {
+        "topic": "Ehrlich absagen",
+        "hook": "Eine Verabredung klingt schön, aber du bist erschöpft und hast ein schlechtes Gewissen.",
+        "action": "Erkläre ehrlich deine Situation und schlage einen anderen Termin vor. Beziehungen vertragen klare Worte."
+      },
+      {
+        "topic": "Alte Konflikte fair klären",
+        "hook": "Ein alter Streit taucht wieder auf und die Vorwürfe werden schnell persönlich.",
+        "action": "Sprich über konkretes Verhalten statt über den Charakter des anderen. So wird Veränderung möglich."
+      },
+      {
+        "topic": "Stärken benennen",
+        "hook": "Ein Mensch in deiner Nähe redet sich selbst ständig klein.",
+        "action": "Nenne eine konkrete Stärke, die du beobachtet hast. Ehrliche Ermutigung ist mehr als pauschaler Trost."
+      },
+      {
+        "topic": "Freundschaft und Freiraum",
+        "hook": "Eine Einladung freut dich, doch du brauchst heute auch Zeit für dich.",
+        "action": "Antworte freundlich und klar. Nähe muss nicht bedeuten, jederzeit verfügbar zu sein."
+      },
+      {
+        "topic": "Gemeinsamen Fortschritt sehen",
+        "hook": "Ein Gespräch dreht sich nur um Probleme und niemand erwähnt, was bereits gelungen ist.",
+        "action": "Frage nach einem echten kleinen Fortschritt. Hoffnung beginnt bei überprüfbaren Verbesserungen."
+      },
+      {
+        "topic": "Andere Perspektiven verstehen",
+        "hook": "Jemand vertritt eine Meinung, die du sofort ablehnen möchtest.",
+        "action": "Bitte zuerst um den wichtigsten Grund. Verstehen ist nicht dasselbe wie Zustimmen."
+      },
+      {
+        "topic": "Mitgefühl bei Fehlern",
+        "hook": "Ein nahestehender Mensch macht einen Fehler und wartet angespannt auf deine Reaktion.",
+        "action": "Besprecht zuerst, wie ihr die Folgen begrenzen könnt. Verantwortung und Mitgefühl passen zusammen."
+      },
+      {
+        "topic": "Freundschaft pflegen",
+        "hook": "Du denkst an einen Freund, dem du lange nicht gesagt hast, wie wichtig er dir ist.",
+        "action": "Schick eine kurze ehrliche Nachricht. Nähe braucht nicht immer einen besonderen Anlass."
+      },
+      {
+        "topic": "Wirklich zuhören",
+        "hook": "Bei einem Treffen merkst du, dass du mehr von dir erzählst als zuhörst.",
+        "action": "Stell eine offene Frage und lass deinem Gegenüber Zeit. Aufmerksamkeit ist ein echtes Geschenk."
+      },
+      {
+        "topic": "Andere Entscheidungen respektieren",
+        "hook": "Ein Familienmitglied entscheidet anders, als du es selbst getan hättest.",
+        "action": "Frag nach seinen Gründen, bevor du Ratschläge gibst. Unterstützung braucht nicht immer Zustimmung."
+      }
+    ],
+    "22:00": [
+      {
+        "topic": "Fehler ohne Selbstvorwurf",
+        "hook": "Du denkst an einen ungeschickten Satz von heute zurück und ärgerst dich über dich selbst.",
+        "action": "Prüfe, ob eine Klärung nötig ist. Endlose Selbstvorwürfe helfen niemandem."
+      },
+      {
+        "topic": "Gute Momente würdigen",
+        "hook": "Zwischen all den offenen Aufgaben ist ein schöner Moment fast untergegangen.",
+        "action": "Erinnere dich bewusst an eine Begegnung, die dir gutgetan hat. Ein Tag hat mehr als eine Geschichte."
+      },
+      {
+        "topic": "Lernen statt Perfektion",
+        "hook": "Du hast heute etwas Neues versucht und es lief nicht so, wie du gehofft hattest.",
+        "action": "Würdige den Versuch. Lernen sieht selten von Anfang an elegant aus."
+      },
+      {
+        "topic": "Aus Fehlern lernen",
+        "hook": "Eine Entscheidung lässt sich nicht mehr ändern und du spielst sie im Kopf immer neu durch.",
+        "action": "Frage nach der Lehre statt nach der nächsten Selbstanklage. Verantwortung ist keine Dauerstrafe."
+      },
+      {
+        "topic": "Schweigen nicht deuten",
+        "hook": "Eine Nachricht bleibt unbeantwortet und du vermutest sofort Ablehnung.",
+        "action": "Erinnere dich daran, dass du die Gründe noch nicht kennst. Beobachtung und Bedeutung sind verschieden."
+      },
+      {
+        "topic": "Grenzen ohne Schuldgefühl",
+        "hook": "Du hast heute eine Grenze gesetzt und zweifelst nun, ob du zu streng warst.",
+        "action": "Prüfe, ob du respektvoll geblieben bist. Unbehagen ist kein Beweis für einen Fehler."
+      },
+      {
+        "topic": "Leistung anerkennen",
+        "hook": "Du siehst vor allem die Aufgaben, die heute liegen geblieben sind.",
+        "action": "Benenne eine Sache, für die du Verantwortung übernommen hast. Ein Tag muss nicht perfekt sein."
+      },
+      {
+        "topic": "Offene Fragen aushalten",
+        "hook": "Ein Gespräch beschäftigt dich und du findest noch keine klare Antwort.",
+        "action": "Erlaube dir, die Frage vorerst offen zu lassen. Erkenntnis braucht manchmal Abstand."
+      },
+      {
+        "topic": "Eigene Maßstäbe",
+        "hook": "Du vergleichst dich mit jemandem und fühlst dich plötzlich weniger erfolgreich.",
+        "action": "Erinnere dich daran, was dir selbst wichtig ist. Zufriedenheit braucht eigene Maßstäbe."
+      },
+      {
+        "topic": "Kontrolle loslassen",
+        "hook": "Der Plan für morgen beschäftigt dich, obwohl du alles Nötige vorbereitet hast.",
+        "action": "Unterscheide Vorbereitung von endloser Kontrolle. Du darfst jetzt den Tag abschließen."
+      },
+      {
+        "topic": "Kleine Gesten bemerken",
+        "hook": "Eine freundliche Geste von heute fällt dir erst jetzt wieder ein.",
+        "action": "Nimm ihre Bedeutung bewusst wahr. Manche guten Dinge sind leise und trotzdem wichtig."
+      },
+      {
+        "topic": "Mut würdigen",
+        "hook": "Du hast heute eine unbequeme Wahrheit ausgesprochen und fragst dich, ob das richtig war.",
+        "action": "Prüfe, ob du fair geblieben bist. Aufrichtigkeit braucht nicht immer ein angenehmes Gespräch."
+      },
+      {
+        "topic": "Einfluss von Sorgen trennen",
+        "hook": "Eine alte Sorge taucht wieder auf, obwohl du heute nichts daran ändern kannst.",
+        "action": "Benenne deinen tatsächlichen Einfluss. Gelassenheit heißt, Kraft dort einzusetzen, wo Handeln möglich ist."
+      },
+      {
+        "topic": "Morgen besser zuhören",
+        "hook": "Du denkst an jemanden, dem du heute zu wenig Aufmerksamkeit geschenkt hast.",
+        "action": "Nimm dir vor, morgen bewusst zuzuhören. Beziehungen wachsen durch echte Begegnungen, nicht durch perfekte Tage."
+      }
+    ]
+  }
+}
