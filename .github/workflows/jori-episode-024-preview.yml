@@ -157,3 +157,5 @@ jobs:
             git pull --rebase origin feature/jori-flimm-neustart-folge001
             git push origin HEAD:feature/jori-flimm-neustart-folge001
           fi
+
+# Start E024 production on 2026-11-10.
