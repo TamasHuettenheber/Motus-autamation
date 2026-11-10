@@ -4,7 +4,7 @@ Dieses Repository enthält die technische Automatisierung hinter MOTUS. Die best
 
 ## Passendes Arbeitsbuch: SCHRITTIVO
 
-**Eigenwerbung / eigenes Produkt:** [SCHRITTIVO – 7 Tage ins Tun](https://payhip.com/b/F9tv3) ist ein digitales, zehnseitiges PDF-Arbeitsbuch mit sieben Tagesaufgaben und Reflexionsfragen. Wer Motivationsimpulse selbst ausprobieren möchte, findet dort eine kurze, strukturierte Wochenübung.
+**Eigenwerbung / eigenes Produkt:** **Kostenloser Einstiegsimpuls (kein Buchauszug):** Notiere eine Sache, die du schon länger aufschiebst, und formuliere den kleinsten Schritt, den du heute erledigen kannst. Wenn du solche Schritte sieben Tage strukturiert angehen möchtest: [SCHRITTIVO – 7 Tage ins Tun](https://payhip.com/b/F9tv3) ist ein digitales, zehnseitiges PDF-Arbeitsbuch mit sieben Tagesaufgaben und Reflexionsfragen.
 
 **Preis laut verlinkter Produktseite:** 4,90 € einmalig, digitaler Download. Kein Abonnement.
 
