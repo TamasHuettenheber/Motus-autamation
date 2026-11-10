@@ -324,7 +324,9 @@ jobs:
               print("EDITORIAL_HISTORY_UNAVAILABLE",type(exc).__name__)
           old_tokens=[tokens(x) for x in previous_texts]
           viewer_cta=re.compile(r"(?i)\b(?:kommentier\w*|schreib\w*|speicher\w*|teil\w*|folg\w*|abonnier\w*)\b")
-          household=re.compile(r"(?i)\b(?:zahnpasta|duschkopf|kartons?|zimmerpflanze|blumengieß\w*|gieß\w*|kalkflecken|putzmittel|ersatzpackung|briefsortier\w*|papiermüll)\b")
+          household=re.compile(r"(?i)\b(?:zahnpasta|duschkopf|kartons?|zimmerpflanze|blumengieß\w*|gieß\w*|kalkflecken|putzmittel|ersatzpackung|briefsortier\w*|papiermüll|staubsauger|wäschesortier\w*|spülmaschine|briefkasten)\b")
+          safety=re.compile(r"(?i)\b(?:anbrenn\w*|herdplatte\w*|kochend\w*|rutschig\w*|essigreiniger|chlorreiniger|brandgefahr|rauchmelder)\b")
+          import unicodedata
           for slot in slots:
               t=slot["time"]; value=str(slot.get("text","")).strip()
               card=editorial_today[t]
@@ -337,6 +339,9 @@ jobs:
               problems=[]
               if overlap<2:problems.append("off_topic")
               if household.search(value):problems.append("household_chore")
+              if safety.search(value):problems.append("unsafe_scenario")
+              if any(ch.isalpha() and "LATIN" not in unicodedata.name(ch,"") for ch in value):
+                  problems.append("non_latin")
               if not viewer_cta.search(value):problems.append("no_cta")
               if not low<=wc<=high:problems.append("length")
               if duplicate:problems.append("14d_duplicate")
