@@ -31,7 +31,7 @@ jobs:
           set -euo pipefail
           python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_voice_e024.py | tee /tmp/voice.log
           grep -q 'JORI_E024_SULAFAT_CACHE_REUSED; no TTS request' /tmp/voice.log
-          python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer_e024.py --episode 23
+          python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer_e024.py --episode 24
           python3 - <<'PY'
           import hashlib,json,re,subprocess,wave
           from pathlib import Path
@@ -74,4 +74,4 @@ jobs:
             work/episode_024/scene-timing.json
           retention-days: 14
 
-# E024 independent final QC for the 2026-11-09 production run.
+# E024 independent final QC for the 2026-11-10 production run.
