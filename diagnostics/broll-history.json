@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-18-0700",
-      "clip_id": "train-window-36620147",
-      "source": "https://www.pexels.com/video/scenic-views-through-train-window-36620147/",
-      "used_at_utc": "2026-10-17T21:15:18.130073+00:00"
-    },
-    {
       "output_name": "motus-2026-10-18-1830",
       "clip_id": "work-phone-7174377",
       "source": "https://www.pexels.com/video/a-man-talking-on-the-phone-while-at-work-7174377/",
@@ -599,6 +593,12 @@
       "clip_id": "phone-cafe-5075207",
       "source": "https://www.pexels.com/video/a-woman-is-using-her-phone-to-take-a-picture-of-her-coffee-5075207/",
       "used_at_utc": "2026-11-10T23:52:17.981232+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-12-0700",
+      "clip_id": "man-thinking-8448889",
+      "source": "https://www.pexels.com/video/man-thinking-and-writing-8448889/",
+      "used_at_utc": "2026-11-10T23:52:24.473218+00:00"
     }
   ]
 }
