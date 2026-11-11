@@ -186,12 +186,16 @@ jobs:
           generic_tags={'alltag','walking','city','social','bewegung'}
           # Explicit workplace scenes outrank generic emotional scenery (future renders only).
           workplace_scene=any(cue in text for cue in ('schreibtisch','arbeitsplatz','buero','meetingraum'))
+          # Tie the footage to actual messaging scenes, not only to generic emotions.
+          message_scene=any(cue in text for cue in ('nachricht','unbeantwortet','sms','chat'))
           for clip in library.get('clips',[]):
               # Do not treat generic tags such as "alltag" as evidence of a scene match.
               matching=[fold(str(tag)) for tag in clip.get('tags',[])
                         if fold(str(tag)) not in generic_tags and fold(str(tag)) in text]
               score=sum(2 if len(tag)>=6 else 1 for tag in matching)
               if workplace_scene and any(fold(str(tag)) in {'arbeit','office','planung','laptop'} for tag in clip.get('tags',[])):
+                  score+=4
+              if message_scene and any(fold(str(tag)) == 'nachricht' for tag in clip.get('tags',[])):
                   score+=4
               cooldown=1 if clip['id'] in recent_ids else 0
               tie=int(hashlib.sha256((output+'|'+clip['id']).encode()).hexdigest()[:12],16)
