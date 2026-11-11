@@ -1,0 +1,88 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 25,
+  "series_version": "relaunch-v2",
+  "title": "Das Echo, das richtig antwortete",
+  "hook": "Die unberührte Glocke klang einmal, doch hinter dem Tor antworteten drei Echos.",
+  "story": "Jori lauschte unter der klaren Wasserdecke. Drei leuchtende Klangringe schwebten hinter dem umgedrehten Tor. Echo A huschte schon durch den Gang, bevor die Glocke klang. Echo B antwortete danach zweimal. Echo C antwortete danach genau einmal. Luma erklärte die Echo-Regel: Ein echtes Echo kommt nach dem ursprünglichen Klang und wiederholt ihn genauso oft. Jori zählte noch einmal: Die Glocke hatte nur einmal geklungen.",
+  "question": "Welches Echo gehört zur Glocke: A vor dem Klang, B zweimal danach oder C einmal danach?",
+  "answer": "Echo C!",
+  "after": "Echo C! Es kam nach der Glocke und wiederholte ihren einen Klang genau einmal. A war zu früh und B hatte einen Klang zu viel. Jori legte die Hand in den silbernen Ring von C. Die falschen Echos zerplatzten wie Blasen. Der echte Klangring glitt zum Tor, und das umgedrehte Schloss drehte sich richtig herum. Dahinter öffnete sich eine Halle voller schwebender Wassertropfen.",
+  "cliff": "Drei große Tropfen sanken vor Jori, Flimm und Luma herab. Der erste flüsterte schon Joris Namen, bevor sie etwas sagte. Der zweite sagte Flimms Namen, als er ihn berührte. Der dritte blieb still, leuchtete aber wie eine winzige Tür. Welcher Tropfen kannte den richtigen Weg?",
+  "riddle": {
+    "type": "temporal_echo_logic",
+    "question": "Welches Echo gehört zur Glocke: A vor dem Klang, B zweimal danach oder C einmal danach?",
+    "answer": "Echo C",
+    "evidence_in_story": "Die Glocke klingt einmal. Ein echtes Echo folgt erst danach und wiederholt denselben Klang gleich oft. Nur Echo C kommt danach genau einmal.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "before_after_count",
+  "clues": [
+    "Glocke: ein Klang",
+    "A: ein Klang davor",
+    "B: zwei Klänge danach",
+    "C: ein Klang danach",
+    "Ein echtes Echo kommt danach und wiederholt gleich oft"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Drei klar getrennte Klangringe A, B und C. A liegt zeitlich vor dem einzelnen Glockenklang, B zeigt zwei Ringe danach, C genau einen Ring danach. Frage und alle Hinweise vollständig zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt unmittelbar an der unberührten Glocke und den drei Echos aus Folge 024 an. Jori prüft Reihenfolge und Klangzahl, wählt Echo C und öffnet das umgedrehte Tor zur Tropfenhalle.",
+  "narration": "Die unberührte Glocke klang einmal, doch hinter dem Tor antworteten drei Echos. [[SEGMENT]] Jori lauschte unter der klaren Wasserdecke. Drei leuchtende Klangringe schwebten hinter dem umgedrehten Tor. Echo A huschte schon durch den Gang, bevor die Glocke klang. Echo B antwortete danach zweimal. Echo C antwortete danach genau einmal. Luma erklärte die Echo-Regel: Ein echtes Echo kommt nach dem ursprünglichen Klang und wiederholt ihn genauso oft. Jori zählte noch einmal: Die Glocke hatte nur einmal geklungen. [[SEGMENT]] Welches Echo gehört zur Glocke: A vor dem Klang, B zweimal danach oder C einmal danach? [[PAUSE:7]] Echo C! Es kam nach der Glocke und wiederholte ihren einen Klang genau einmal. A war zu früh und B hatte einen Klang zu viel. Jori legte die Hand in den silbernen Ring von C. Die falschen Echos zerplatzten wie Blasen. Der echte Klangring glitt zum Tor, und das umgedrehte Schloss drehte sich richtig herum. Dahinter öffnete sich eine Halle voller schwebender Wassertropfen. Drei große Tropfen sanken vor Jori, Flimm und Luma herab. Der erste flüsterte schon Joris Namen, bevor sie etwas sagte. Der zweite sagte Flimms Namen, als er ihn berührte. Der dritte blieb still, leuchtete aber wie eine winzige Tür. Welcher Tropfen kannte den richtigen Weg?",
+  "narration_tts": "Die unberührte Glocke klang einmal, doch hinter dem Tor antworteten drei Echos. [[SEGMENT]] Jori lauschte unter der klaren Wasserdecke. Drei leuchtende Klangringe schwebten hinter dem umgedrehten Tor. Echo A huschte schon durch den Gang, bevor die Glocke klang. Echo B antwortete danach zweimal. Echo C antwortete danach genau einmal. Luma erklärte die Echo-Regel: Ein echtes Echo kommt nach dem ursprünglichen Klang und wiederholt ihn genauso oft. Jori zählte noch einmal: Die Glocke hatte nur einmal geklungen. [[SEGMENT]] Welches Echo gehört zur Glocke: A vor dem Klang, B zweimal danach oder C einmal danach? [[PAUSE:7]] Echo C! Es kam nach der Glocke und wiederholte ihren einen Klang genau einmal. A war zu früh und B hatte einen Klang zu viel. Jori legte die Hand in den silbernen Ring von C. Die falschen Echos zerplatzten wie Blasen. Der echte Klangring glitt zum Tor, und das umgedrehte Schloss drehte sich richtig herum. Dahinter öffnete sich eine Halle voller schwebender Wassertropfen. Drei große Tropfen sanken vor Jori, Flimm und Luma herab. Der erste flüsterte schon Joris Namen, bevor sie etwas sagte. Der zweite sagte Flimms Namen, als er ihn berührte. Der dritte blieb still, leuchtete aber wie eine winzige Tür. Welcher Tropfen kannte den richtigen Weg?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss unter dem Teich: Jori, Flimm und Luma stehen auf trockenen Stufen vor dem umgedrehten Tor; die unberührte Glocke klingt und drei getrennte Klangringe erscheinen dahinter.",
+    "Jori lauscht aufmerksam, während drei verschieden getaktete Klangpfade A, B und C durch den blauen Steingang ziehen; klare Wasserdecke über den Figuren.",
+    "Die drei Echo-Muster werden bildlich unterscheidbar: ein Ring vor der Glocke, zwei Ringe danach und ein Ring danach; Jori zählt mit den Fingern.",
+    "Ruhiger dunkler Unterwassergang mit Figuren klein links unten, umgedrehtem Glockentor oben und großer freier Fläche für ein TikTok-sicheres Echo-Rätsel.",
+    "Jori zeigt auf den einzelnen silbernen Klangring C nach der Glocke; A und B flimmern als falsche Echos.",
+    "Jori berührt Ring C; falsche Echos zerplatzen, der echte Klangring dreht das Schloss richtig herum und das Tor öffnet sich.",
+    "Cliffhanger in einer neuen Halle: Jori, Flimm und Luma stehen vor drei großen schwebenden Wassertropfen; einer flüstert, einer reagiert auf Flimms Berührung, einer leuchtet wie eine winzige Tür."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-025-v1/scene-01.jpg",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-025-v1/scene-02.jpg",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-025-v1/scene-03.jpg",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-025-v1/scene-04.jpg",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-025-v1/scene-05.jpg",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-025-v1/scene-06.jpg",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-025-v1/scene-07.jpg",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-11T08:40:00+01:00",
+  "status": "STORY_AND_ART_READY_TTS_PENDING",
+  "previous_cliffhanger": "Jori, Flimm und Luma stiegen hinab. Über ihren Köpfen blieb das Wasser wie eine klare Decke stehen. Am Ende der Treppe hing eine kleine Glocke in einem umgedrehten Tor. Niemand berührte sie. Trotzdem klingelte sie einmal, und hinter dem Tor antworteten drei verschiedene Echos. Welches Echo hatte die Glocke wirklich gerufen?"
+}
