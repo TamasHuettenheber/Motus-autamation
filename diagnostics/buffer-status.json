@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-10T22:19:32.469773+00:00",
+  "checked_at_utc": "2026-11-11T02:44:51.467779+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6af3ae797b2f1abd6599418b",
+      "text": "Eine wichtige Nachricht bleibt seit Stunden unbeantwortet und in deinem Kopf läuft sofort das Drehbuch der Ablehnung ab. Unser Gehirn liebt es leider, in stressigen Momenten die Lücken mit negativen Geschichten zu füllen, obwohl die Realität meist ganz banal ist. Erinnere dich daran, dass du die wahren Gründe für das Schweigen schlichtweg noch nicht kennst und Beobachtung niemals gleich Bedeutung ist. Lass diesen Gedanken einfach los und gönn dir die nötige Nachtruhe. Folge unserem Kanal für tägliche Impulse zu mehr innerer Stärke.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-12T21:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-12-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6af3ae520b1f930b454da61d",
+      "text": "Eine Einladung klingt eigentlich schön, aber du fühlst dich leer und hast gleichzeitig ein schlechtes Gewissen beim Absagen. Erkläre kurz und ehrlich deine Erschöpfung und schlage direkt einen neuen Termin vor. Beziehungen vertragen klare Worte. Teile dieses Video mit jemandem, der das heute hören muss.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-12T17:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-12-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6af3ae4a0b1f930b454da3f3",
+      "text": "Zwei Aufgaben auf deinem Schreibtisch wirken gerade absolut gleich dringend, aber nur eine davon hat wirklich spürbare Folgen für das Team. Wenn jetzt der erste laute Notfall reinflattert, verfällst du schnell in blinden Aktionismus und verzettelst dich im Klein-Klein. Halte kurz inne, atme durch und prüfe ganz nüchtern die tatsächliche Wirkung sowie deine gemachten Zusagen, statt dich einfach von der lautesten Forderung treiben zu lassen. Das schafft echte Klarheit für den restlichen Tag und schützt vor unnötigem Stress. Speichere diesen Beitrag für deine nächste Planung.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-12T11:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-12-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6af3ae4fce9a7df734519473",
+      "text": "Jemand lobt deine saubere Arbeit und du redest deinen Beitrag sofort klein. Dieses typische Abwinken stiehlt dir die Anerkennung, die du dir erarbeitet hast. Sag heute einfach nur danke. Du darfst deine Leistung anerkennen, ohne überheblich zu wirken. Kommentiere mit einem Emoji, wie du das heute umsetzt.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-12T06:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-12-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6af288ae05af22d726010c70",
       "text": "Die Zimmerpflanze im Flur lässt die Blätter hängen und braucht dringend Wasser, bevor die Nachtruhe beginnt. Gieße sie jetzt kurz und schalte das Licht ab. Speichere diesen Beitrag für deine abendliche Routine.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae51f181891472093a047af_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ae958be068525cf8b6c72d6",
-      "text": "Eigenwerbung: Dienstplan und Personalkosten für die nächste Woche übersichtlich planen: Diese Excel-Vorlage erfasst bis zu 42 Schichten, berechnet Personalkosten mit frei wählbarem Arbeitgeberkostenfaktor und zeigt die Personalquote pro Tag und Woche. Für kleine Restaurants, Cafés und Bars. Einmalig 9,90 €: https://payhip.com/b/g8p5a #Gastronomie #Dienstplanung #Restaurant",
-      "status": "sent",
-      "dueAt": "2026-11-01T12:02:50.000Z",
-      "sentAt": "2026-11-01T12:02:50.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7703172297103887638?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "image/webp",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae958be068525cf8b6c72d6_thumbnail.webp"
-        }
-      ]
-    },
-    {
-      "id": "6ae51e8bb84259308ba61bdd",
-      "text": "Die Plastikschüssel mit dem Kantinenessen klebt im Rucksack fest, während draußen die Warteschlange vor dem Imbiss länger wird als die Mittagspause selbst. Genau jetzt droht der Punkt, an dem man hungrig und genervt zu ungesunden Snacks greift. Wer stattdessen kurz innehält und sich bewusst für die mitgebrachte Banane entscheidet, bricht das alte Muster. Kleine Aussetzer im Alltag kosten unnötig Kraft. Speicher dieses Video direkt ab, um beim nächsten Jieper standhaft zu bleiben. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Familiar Roads (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-01T11:00:00.000Z",
-      "sentAt": "2026-11-01T11:03:42.164Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7703156506815941921?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae51e8bb84259308ba61bdd_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ae51ec0eaa24d6f9a42ce9e",
-      "text": "Der Wecker klingelt und statt direkt aufzustehen, wandert die Hand zum Smartphone, um im Halbschlaf den Feed durchzuspulen. Genau diese erste digitale Gewohnheit bestimmt oft den gesamten Vormittag. Wer stattdessen sofort das Kissen glattzieht und die Socken anzieht, schafft ohne Nachdenken den ersten kleinen Erfolg des Morgens. Das Gehirn liebt klare Handlungen statt endlosen Zögerns. Welches kleine Ritual hilft dir morgens am schnellsten aus den Federn? Schreib es in die Kommentare. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-01T06:00:00.000Z",
-      "sentAt": "2026-11-01T06:02:56.251Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7703079008648432929?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae51ec0eaa24d6f9a42ce9e_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ae3e2304b8768bfb2ce6ce3",
-      "text": "Das Zimmer ist dunkel, aber dein Kopf rattert unaufhörlich weiter wie ein Uhrwerk ohne Zeiger. Du wälzt im Halbdunkel die E-Mail von morgen und fragst dich angestrengt, ob du auch wirklich an alles gedacht hast. Genau dann hilft es, diese wirren Gedanken auf einen Zettel neben dem Bett zu werfen, statt sie weiter im Gehirn zu kreisen. Lass mir gerne ein Abo da, wenn du ab heute Abend deine nächtlichen Sorgen verlässlich aus dem Schlafzimmer verbannen möchtest. #motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung Musik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-10-31T21:00:00.000Z",
-      "sentAt": "2026-10-31T21:10:52.506Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7702940042955705632?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae3e2304b8768bfb2ce6ce3_video.mp4"
         }
       ]
     }
