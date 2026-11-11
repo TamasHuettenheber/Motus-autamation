@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-11T02:44:51.467779+00:00",
+  "checked_at_utc": "2026-11-11T10:45:20.597300+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6af287bae261c09acc968ccb",
       "text": "Der Schlüssel steckt im Schloss, aber die Jackentasche bleibt leer, weil das Portemonnaie auf dem Küchentisch liegt. Statt im Chaos den Bus zu verpassen, etablierst du eine feste Ablage direkt neben der Eingangstür für alles, was du unterwegs brauchst. Das spart morgendlichen Suchstress und gibt dir einen strukturierten Start. Welcher feste Platz an deiner Tür beendet dieses Suchen für immer? Schreibe es in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-11T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-11T06:02:18.330Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7706789828087631137",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-11-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af287bae261c09acc968ccb_video.mp4"
         }
       ]
     },
