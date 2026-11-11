@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Die unberührte Glocke klang einmal, doch hinter dem Tor antworteten drei Echos.",
+      "start": 0.0,
+      "end": 9.48,
+      "duration": 9.48
+    },
+    {
+      "kind": "speech",
+      "text": "Jori lauschte unter der klaren Wasserdecke. Drei leuchtende Klangringe schwebten hinter dem umgedrehten Tor. Echo A huschte schon durch den Gang, bevor die Glocke klang. Echo B antwortete danach zweimal. Echo C antwortete danach genau einmal. Luma erklärte die Echo-Regel: Ein echtes Echo kommt nach dem ursprünglichen Klang und wiederholt ihn genauso oft. Jori zählte noch einmal: Die Glocke hatte nur einmal geklungen.",
+      "start": 9.48,
+      "end": 48.24,
+      "duration": 38.76
+    },
+    {
+      "kind": "speech",
+      "text": "Welches Echo gehört zur Glocke: A vor dem Klang, B zweimal danach oder C einmal danach?",
+      "start": 48.24,
+      "end": 61.36,
+      "duration": 13.12
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 61.36,
+      "end": 68.36,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Echo C! Es kam nach der Glocke und wiederholte ihren einen Klang genau einmal. A war zu früh und B hatte einen Klang zu viel. Jori legte die Hand in den silbernen Ring von C. Die falschen Echos zerplatzten wie Blasen. Der echte Klangring glitt zum Tor, und das umgedrehte Schloss drehte sich richtig herum. Dahinter öffnete sich eine Halle voller schwebender Wassertropfen. Drei große Tropfen sanken vor Jori, Flimm und Luma herab. Der erste flüsterte schon Joris Namen, bevor sie etwas sagte. Der zweite sagte Flimms Namen, als er ihn berührte. Der dritte blieb still, leuchtete aber wie eine winzige Tür. Welcher Tropfen kannte den richtigen Weg?",
+      "start": 68.36,
+      "end": 123.28,
+      "duration": 54.92
+    }
+  ],
+  "duration": 123.28,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
