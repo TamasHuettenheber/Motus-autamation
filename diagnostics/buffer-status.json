@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-11T10:45:20.597300+00:00",
+  "checked_at_utc": "2026-11-11T18:39:14.450973+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,30 +88,30 @@
     {
       "id": "6af287dbd35dff5701d4c39e",
       "text": "Beim Kochen für die Familie stellt sich die Frage, wer das Gemüse wäscht, während der Topf auf dem Herd steht. Teile Aufgaben klar auf, indem du feste Zuständigkeiten für Vorbereitung und Tischdecken vereinbarst. Das entlastet spürbar und macht das gemeinsame Abendessen zu einer entspannten Routine statt zu einer organisatorischen Hürde nach einem langen Tag. Folge unserem Kanal für weitere praktische Alltagstipps.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Remember (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-11T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-11T17:33:18.166Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7706967948845501728",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-11-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af287dbd35dff5701d4c39e_video.mp4"
         }
       ]
     },
     {
       "id": "6af287da26f9e6aeeadd1194",
       "text": "Der Regenschirm tropft auf den Flur und hinterlässt eine nasse Spur, während die Post ungeordnet auf dem Schreibtisch liegt. Stelle eine kleine Abtropfschale auf und sortiere Briefe sofort in ein Fach. Teile diesen Beitrag mit jemandem, der auch täglich Papiermüll sortiert.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Familiar Roads (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-11T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-11T11:03:30.256Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7706867637581532449",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-11-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af287da26f9e6aeeadd1194_video.mp4"
         }
       ]
     },
