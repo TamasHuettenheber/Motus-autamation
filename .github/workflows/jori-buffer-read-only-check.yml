@@ -120,3 +120,5 @@ jobs:
 # E024 live Buffer precheck before production on 2026-11-10.
 
 # E024 live Buffer postcheck after scheduling on 2026-11-10.
+
+# E025 live Buffer precheck before production on 2026-11-11.
