@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-20-0700",
-      "clip_id": "study-writing-9198715",
-      "source": "https://www.pexels.com/video/woman-thinking-and-writing-in-notebook-9198715/",
-      "used_at_utc": "2026-10-19T21:53:13.726408+00:00"
-    },
-    {
       "output_name": "motus-2026-10-20-2200",
       "clip_id": "forest-walk-5838469",
       "source": "https://www.pexels.com/video/vertical-video-of-a-woman-walking-through-the-woods-5838469/",
@@ -599,6 +593,12 @@
       "clip_id": "train-window-36620147",
       "source": "https://www.pexels.com/video/scenic-views-through-train-window-36620147/",
       "used_at_utc": "2026-11-12T01:13:57.073582+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-14-1830",
+      "clip_id": "rain-window-32661246",
+      "source": "https://www.pexels.com/video/rainy-window-view-with-drops-on-glass-32661246/",
+      "used_at_utc": "2026-11-12T22:35:17.735099+00:00"
     }
   ]
 }
