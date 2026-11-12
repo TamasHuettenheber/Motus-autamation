@@ -185,7 +185,7 @@ jobs:
           ranked=[]
           generic_tags={'alltag','walking','city','social','bewegung'}
           # Explicit workplace scenes outrank generic emotional scenery (future renders only).
-          workplace_scene=any(cue in text for cue in ('schreibtisch','arbeitsplatz','buero','meetingraum','im team','kollege','besprechung'))
+          workplace_scene=any(cue in text for cue in ('schreibtisch','arbeitsplatz','buero','meetingraum','im team','kollege','besprechung','bewerbung','beruflich'))
           # Tie the footage to actual messaging scenes, not only to generic emotions.
           message_scene=any(cue in text for cue in ('nachricht','unbeantwortet','sms','chat'))
           for clip in library.get('clips',[]):
