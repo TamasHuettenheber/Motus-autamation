@@ -1,0 +1,59 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 26,
+  "series_version": "relaunch-v2",
+  "title": "Der Tropfen, der den Weg zeigte",
+  "hook": "Der stille Tropfen leuchtete wie eine Tür, während die anderen beiden nur Namen flüsterten.",
+  "story": "Jori stand mit Flimm und Luma mitten in der Tropfenhalle. Tropfen A flüsterte Joris Namen, doch sein Licht blieb rund und zeigte nirgends hin. Als Flimm Tropfen B berührte, sagte er nur Flimms Namen und wurde wieder still. Tropfen C sprach kein Wort. Jori bat Luma, ihre Sternlaterne nacheinander vor alle drei Tropfen zu halten. Bei A und B zerstreute sich das Licht. In C sammelte es sich zu einem hellen Pfeil auf dem Boden. Luma erklärte: Ein Wegweiser muss zeigen, wohin man gehen soll, nicht nur wissen, wer davorsteht.",
+  "question": "Welcher Tropfen kennt den Weg: A, der Joris Namen flüstert, B, der Flimms Namen wiederholt, oder C, der das Laternenlicht zu einem Pfeil bündelt?",
+  "answer": "Tropfen C!",
+  "after": "Tropfen C! Nur er zeigte eine Richtung. A und B kannten Namen, aber keinen Weg. Jori stellte sich auf den Lichtpfeil. Der stille Tropfen wurde breit wie eine gläserne Tür. Flimm schlüpfte zuerst hindurch, Jori und Luma folgten. Hinter ihnen schloss sich die Tropfenhalle lautlos. Vor ihnen spannte sich ein neuer Saal voller schwebender Wasserfäden auf.",
+  "cliff": "Drei leuchtende Strömungen zogen durch den Saal. Die erste floss abwärts. Die zweite drehte sich im Kreis. Die dritte stieg nach oben und trug ein violettes Blütenblatt zu einem Garten über den Wolken. Welche Strömung führte wirklich hinauf?",
+  "riddle": {
+    "type": "directional_evidence_logic",
+    "question": "Welcher Tropfen kennt den Weg: A, der Joris Namen flüstert, B, der Flimms Namen wiederholt, oder C, der das Laternenlicht zu einem Pfeil bündelt?",
+    "answer": "Tropfen C",
+    "evidence_in_story": "A und B nennen nur Personen und zeigen keine Richtung. C bündelt Lumas Laternenlicht zu einem sichtbaren Pfeil und weist damit einen Weg.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "identity_vs_direction",
+  "clues": [
+    "A: sagt Joris Namen, zeigt aber keinen Weg",
+    "B: sagt Flimms Namen, zeigt aber keinen Weg",
+    "C: formt aus Licht einen Pfeil",
+    "Ein Wegweiser zeigt eine Richtung"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Drei klar getrennte Tropfen A, B und C. A und B tragen nur kleine Namenssymbole ohne Richtung; C bündelt Lumas Sternlicht zu einem deutlichen Pfeil. Frage und alle Hinweise vollständig zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt unmittelbar in der Tropfenhalle aus Folge 025 an. Jori prüft die drei Tropfen mit Lumas Sternlaterne, erkennt Tropfen C am sichtbaren Richtungshinweis und gelangt in den Saal der schwebenden Wasserfäden.",
+  "narration": "Der stille Tropfen leuchtete wie eine Tür, während die anderen beiden nur Namen flüsterten. [[SEGMENT]] Jori stand mit Flimm und Luma mitten in der Tropfenhalle. Tropfen A flüsterte Joris Namen, doch sein Licht blieb rund und zeigte nirgends hin. Als Flimm Tropfen B berührte, sagte er nur Flimms Namen und wurde wieder still. Tropfen C sprach kein Wort. Jori bat Luma, ihre Sternlaterne nacheinander vor alle drei Tropfen zu halten. Bei A und B zerstreute sich das Licht. In C sammelte es sich zu einem hellen Pfeil auf dem Boden. Luma erklärte: Ein Wegweiser muss zeigen, wohin man gehen soll, nicht nur wissen, wer davorsteht. [[SEGMENT]] Welcher Tropfen kennt den Weg: A, der Joris Namen flüstert, B, der Flimms Namen wiederholt, oder C, der das Laternenlicht zu einem Pfeil bündelt? [[PAUSE:7]] Tropfen C! Nur er zeigte eine Richtung. A und B kannten Namen, aber keinen Weg. Jori stellte sich auf den Lichtpfeil. Der stille Tropfen wurde breit wie eine gläserne Tür. Flimm schlüpfte zuerst hindurch, Jori und Luma folgten. Hinter ihnen schloss sich die Tropfenhalle lautlos. Vor ihnen spannte sich ein neuer Saal voller schwebender Wasserfäden auf. Drei leuchtende Strömungen zogen durch den Saal. Die erste floss abwärts. Die zweite drehte sich im Kreis. Die dritte stieg nach oben und trug ein violettes Blütenblatt zu einem Garten über den Wolken. Welche Strömung führte wirklich hinauf?",
+  "narration_tts": "Der stille Tropfen leuchtete wie eine Tür, während die anderen beiden nur Namen flüsterten. [[SEGMENT]] Jori stand mit Flimm und Luma mitten in der Tropfenhalle. Tropfen A flüsterte Joris Namen, doch sein Licht blieb rund und zeigte nirgends hin. Als Flimm Tropfen B berührte, sagte er nur Flimms Namen und wurde wieder still. Tropfen C sprach kein Wort. Jori bat Luma, ihre Sternlaterne nacheinander vor alle drei Tropfen zu halten. Bei A und B zerstreute sich das Licht. In C sammelte es sich zu einem hellen Pfeil auf dem Boden. Luma erklärte: Ein Wegweiser muss zeigen, wohin man gehen soll, nicht nur wissen, wer davorsteht. [[SEGMENT]] Welcher Tropfen kennt den Weg: A, der Joris Namen flüstert, B, der Flimms Namen wiederholt, oder C, der das Laternenlicht zu einem Pfeil bündelt? [[PAUSE:7]] Tropfen C! Nur er zeigte eine Richtung. A und B kannten Namen, aber keinen Weg. Jori stellte sich auf den Lichtpfeil. Der stille Tropfen wurde breit wie eine gläserne Tür. Flimm schlüpfte zuerst hindurch, Jori und Luma folgten. Hinter ihnen schloss sich die Tropfenhalle lautlos. Vor ihnen spannte sich ein neuer Saal voller schwebender Wasserfäden auf. Drei leuchtende Strömungen zogen durch den Saal. Die erste floss abwärts. Die zweite drehte sich im Kreis. Die dritte stieg nach oben und trug ein violettes Blütenblatt zu einem Garten über den Wolken. Welche Strömung führte wirklich hinauf?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss in der Tropfenhalle: Jori, Flimm und Luma stehen vor drei großen schwebenden Tropfen; der dritte leuchtet wie eine kleine Tür.",
+    "Jori untersucht Tropfen A, der ihren Namen flüstert, aber nur rund glimmt und keine Richtung zeigt.",
+    "Flimm berührt Tropfen B; der Tropfen wiederholt seinen Namen, während Jori aufmerksam beobachtet.",
+    "Ruhige dunkle Tropfenhalle mit den drei Tropfen im oberen Bildbereich und großer freier Fläche für ein TikTok-sicheres Rätsel.",
+    "Luma hält die Sternlaterne vor Tropfen C; das Licht bündelt sich darin und zeichnet einen hellen Pfeil auf den Boden.",
+    "Tropfen C wird zu einer gläsernen Tür; Flimm schlüpft hindurch, Jori und Luma folgen in den neuen Saal.",
+    "Cliffhanger im Saal der Wasserfäden: drei getrennte Strömungen fließen abwärts, im Kreis und aufwärts; die aufwärts gerichtete trägt ein violettes Blütenblatt zu einem Garten über den Wolken."
+  ],
+  "visuals": [
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-026-v1/scene-01.jpg", "scene": 1, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-026-v1/scene-02.jpg", "scene": 2, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-026-v1/scene-03.jpg", "scene": 3, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-026-v1/scene-04.jpg", "scene": 4, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-026-v1/scene-05.jpg", "scene": 5, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-026-v1/scene-06.jpg", "scene": 6, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-026-v1/scene-07.jpg", "scene": 7, "generated": true}
+  ],
+  "created_at": "2026-11-12T08:28:00+01:00",
+  "status": "STORY_AND_ART_READY_TTS_PENDING",
+  "previous_cliffhanger": "Drei große Tropfen sanken vor Jori, Flimm und Luma herab. Der erste flüsterte schon Joris Namen, bevor sie etwas sagte. Der zweite sagte Flimms Namen, als er ihn berührte. Der dritte blieb still, leuchtete aber wie eine winzige Tür. Welcher Tropfen kannte den richtigen Weg?"
+}
