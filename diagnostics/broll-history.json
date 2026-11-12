@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-20-1200",
-      "clip_id": "city-phone-13802094",
-      "source": "https://www.pexels.com/video/a-man-in-a-suit-looking-at-his-phone-while-walking-in-the-city-13802094/",
-      "used_at_utc": "2026-10-19T21:53:39.571778+00:00"
-    },
-    {
       "output_name": "motus-2026-10-21-2200",
       "clip_id": "rain-window-32661246",
       "source": "https://www.pexels.com/video/rainy-window-view-with-drops-on-glass-32661246/",
@@ -599,6 +593,12 @@
       "clip_id": "office-thinking-8873099",
       "source": "https://www.pexels.com/video/a-businesswoman-working-at-an-office-8873099/",
       "used_at_utc": "2026-11-12T22:35:30.028404+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-14-2200",
+      "clip_id": "sunset-ocean-7975481",
+      "source": "https://www.pexels.com/video/vertical-video-of-sunset-7975481/",
+      "used_at_utc": "2026-11-12T22:36:08.421826+00:00"
     }
   ]
 }
