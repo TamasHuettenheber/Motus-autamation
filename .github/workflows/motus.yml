@@ -390,18 +390,26 @@ jobs:
           else
             echo "REUSE_PUBLISH_GIT_SKIP: published MP4 already exists on main; no pathspec/add required"
           fi
-          # B-roll history is advisory only. Refresh it after the MP4 push and never
-          # fail the production if another parallel run changed the same JSON file.
-          git reset --hard origin/main
-          python3 - <<'PY'
+          # B-roll history is advisory: merge each update against fresh main to avoid
+          # lost records and JSON rebase conflicts from four parallel renderers.
+          # This never modifies the MP4 or a Buffer post and never blocks publishing.
+          history_updated=false
+          for attempt in 1 2 3 4; do
+            if ! git fetch origin main; then
+              echo "BROLL_HISTORY_FETCH_WARNING: attempt=$attempt"
+              break
+            fi
+            git reset --hard origin/main
+            python3 - <<'PY'
           import json, os
           from datetime import datetime, timezone
           from pathlib import Path
           p=Path('diagnostics/broll-history.json')
           d=json.loads(p.read_text(encoding='utf-8')) if p.exists() else {"uses":[]}
-          if not any(x.get("output_name")==os.environ.get("SAFE_NAME","") for x in d.get("uses",[])):
+          name=os.environ.get("SAFE_NAME","")
+          if not any(x.get("output_name")==name for x in d.get("uses",[])):
               d.setdefault("uses",[]).append({
-                  "output_name": os.environ.get("SAFE_NAME",""),
+                  "output_name": name,
                   "clip_id": os.environ.get("BROLL_SELECTED_ID","") or "animated-fallback",
                   "source": os.environ.get("BROLL_SELECTED_SOURCE",""),
                   "used_at_utc": datetime.now(timezone.utc).isoformat()
@@ -409,10 +417,23 @@ jobs:
           d["uses"]=d["uses"][-100:]
           p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding='utf-8')
           PY
-          git add diagnostics/broll-history.json
-          if ! git diff --cached --quiet; then
+            git add diagnostics/broll-history.json
+            if git diff --cached --quiet; then
+              echo "BROLL_HISTORY_ALREADY_PRESENT"
+              history_updated=true
+              break
+            fi
             git commit -m "Update B-roll history for $SAFE_NAME"
-            git pull --rebase origin main && git push || echo "BROLL_HISTORY_WARNING: non-critical history update skipped"
+            if git push origin HEAD:main; then
+              echo "BROLL_HISTORY_UPDATED"
+              history_updated=true
+              break
+            fi
+            echo "BROLL_HISTORY_PUSH_RETRY: attempt=$attempt"
+            sleep 2
+          done
+          if [ "$history_updated" != "true" ]; then
+            echo "BROLL_HISTORY_WARNING: non-critical history update skipped"
           fi
 
       - name: Schedule Motus video in Buffer
