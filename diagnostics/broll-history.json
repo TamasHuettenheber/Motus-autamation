@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-19-1200",
-      "clip_id": "office-thinking-8873099",
-      "source": "https://www.pexels.com/video/a-businesswoman-working-at-an-office-8873099/",
-      "used_at_utc": "2026-10-18T20:44:04.129885+00:00"
-    },
-    {
       "output_name": "motus-2026-10-19-0700",
       "clip_id": "park-walk-8296235",
       "source": "https://www.pexels.com/video/a-man-walking-around-the-park-8296235/",
@@ -599,6 +593,12 @@
       "clip_id": "forest-walk-5838174",
       "source": "https://www.pexels.com/video/vertical-video-of-a-woman-walking-alone-through-the-forest-5838174/",
       "used_at_utc": "2026-11-10T23:53:12.129790+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-13-1200",
+      "clip_id": "planner-writing-7744197",
+      "source": "https://www.pexels.com/video/woman-writing-on-a-notebook-at-the-office-7744197/",
+      "used_at_utc": "2026-11-12T01:12:54.916638+00:00"
     }
   ]
 }
