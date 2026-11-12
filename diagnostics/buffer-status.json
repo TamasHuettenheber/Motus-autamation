@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-12T09:44:22.188041+00:00",
+  "checked_at_utc": "2026-11-12T12:48:24.749032+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6af3ae4a0b1f930b454da3f3",
       "text": "Zwei Aufgaben auf deinem Schreibtisch wirken gerade absolut gleich dringend, aber nur eine davon hat wirklich spürbare Folgen für das Team. Wenn jetzt der erste laute Notfall reinflattert, verfällst du schnell in blinden Aktionismus und verzettelst dich im Klein-Klein. Halte kurz inne, atme durch und prüfe ganz nüchtern die tatsächliche Wirkung sowie deine gemachten Zusagen, statt dich einfach von der lautesten Forderung treiben zu lassen. Das schafft echte Klarheit für den restlichen Tag und schützt vor unnötigem Stress. Speichere diesen Beitrag für deine nächste Planung.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-12T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-12T11:03:11.554Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7707238627637497121",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-12-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af3ae4a0b1f930b454da3f3_video.mp4"
         }
       ]
     },
