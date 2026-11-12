@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-12T01:30:13.579824+00:00",
+  "checked_at_utc": "2026-11-12T09:44:22.188041+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6af3ae4fce9a7df734519473",
       "text": "Jemand lobt deine saubere Arbeit und du redest deinen Beitrag sofort klein. Dieses typische Abwinken stiehlt dir die Anerkennung, die du dir erarbeitet hast. Sag heute einfach nur danke. Du darfst deine Leistung anerkennen, ohne überheblich zu wirken. Kommentiere mit einem Emoji, wie du das heute umsetzt.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-12T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-12T06:02:25.036Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7707160941804195104",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-12-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af3ae4fce9a7df734519473_video.mp4"
         }
       ]
     },
