@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-20-1830",
-      "clip_id": "man-thinking-8448889",
-      "source": "https://www.pexels.com/video/man-thinking-and-writing-8448889/",
-      "used_at_utc": "2026-10-19T21:53:29.917866+00:00"
-    },
-    {
       "output_name": "motus-2026-10-20-1200",
       "clip_id": "city-phone-13802094",
       "source": "https://www.pexels.com/video/a-man-in-a-suit-looking-at-his-phone-while-walking-in-the-city-13802094/",
@@ -599,6 +593,12 @@
       "clip_id": "study-writing-9198715",
       "source": "https://www.pexels.com/video/woman-thinking-and-writing-in-notebook-9198715/",
       "used_at_utc": "2026-11-12T22:35:24.810664+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-14-1200",
+      "clip_id": "office-thinking-8873099",
+      "source": "https://www.pexels.com/video/a-businesswoman-working-at-an-office-8873099/",
+      "used_at_utc": "2026-11-12T22:35:30.028404+00:00"
     }
   ]
 }
