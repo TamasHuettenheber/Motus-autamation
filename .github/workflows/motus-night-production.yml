@@ -241,7 +241,8 @@ jobs:
               "fuer":"für","erschoepft":"erschöpft",
               "schliesst":"schließt","Tuer":"Tür",
               "eetrudeln":"eintrudeln","Energiefoch":"Energielevel",
-              "ungelueftet":"ungelüftet","unwillkuerlich":"unwillkürlich"
+              "ungelueftet":"ungelüftet","unwillkuerlich":"unwillkürlich",
+               "ein kühlen Kopf":"einen kühlen Kopf"
           }
           for slot in slots:
               original=slot.get("text","")
