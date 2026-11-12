@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Der stille Tropfen leuchtete wie eine Tür, während die anderen beiden nur Namen flüsterten.",
+      "start": 0.0,
+      "end": 8.2,
+      "duration": 8.2
+    },
+    {
+      "kind": "speech",
+      "text": "Jori stand mit Flimm und Luma mitten in der Tropfenhalle. Tropfen A flüsterte Joris Namen, doch sein Licht blieb rund und zeigte nirgends hin. Als Flimm Tropfen B berührte, sagte er nur Flimms Namen und wurde wieder still. Tropfen C sprach kein Wort. Jori bat Luma, ihre Sternlaterne nacheinander vor alle drei Tropfen zu halten. Bei A und B zerstreute sich das Licht. In C sammelte es sich zu einem hellen Pfeil auf dem Boden. Luma erklärte: Ein Wegweiser muss zeigen, wohin man gehen soll, nicht nur wissen, wer davorsteht.",
+      "start": 8.2,
+      "end": 47.52,
+      "duration": 39.32
+    },
+    {
+      "kind": "speech",
+      "text": "Welcher Tropfen kennt den Weg: A, der Joris Namen flüstert, B, der Flimms Namen wiederholt, oder C, der das Laternenlicht zu einem Pfeil bündelt?",
+      "start": 47.52,
+      "end": 63.2,
+      "duration": 15.68
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 63.2,
+      "end": 70.2,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Tropfen C! Nur er zeigte eine Richtung. A und B kannten Namen, aber keinen Weg. Jori stellte sich auf den Lichtpfeil. Der stille Tropfen wurde breit wie eine gläserne Tür. Flimm schlüpfte zuerst hindurch, Jori und Luma folgten. Hinter ihnen schloss sich die Tropfenhalle lautlos. Vor ihnen spannte sich ein neuer Saal voller schwebender Wasserfäden auf. Drei leuchtende Strömungen zogen durch den Saal. Die erste floss abwärts. Die zweite drehte sich im Kreis. Die dritte stieg nach oben und trug ein violettes Blütenblatt zu einem Garten über den Wolken. Welche Strömung führte wirklich hinauf?",
+      "start": 70.2,
+      "end": 118.16,
+      "duration": 47.96
+    }
+  ],
+  "duration": 118.16,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
