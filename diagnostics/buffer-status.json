@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-13T16:11:19.202215+00:00",
+  "checked_at_utc": "2026-11-13T19:16:27.198340+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6af512e8bc9f3773a1b098db",
       "text": "Ein alter Streit taucht wieder auf und die Vorwürfe werden schnell persönlich. Sprich über konkretes Verhalten statt über den Charakter des anderen. So wird Veränderung möglich. Nicht jeder Konflikt muss sofort gelöst werden. Wichtig ist, dass du respektvoll und handlungsfähig bleibst. Wer seine Gefühle ernst nimmt, muss ihnen nicht blind folgen. Zwischen Gefühl und Handlung liegt deine Freiheit. Folge MOTUS für neue Gedanken über Mut, Klarheit und Selbstvertrauen.\n\n#motus #emotionen #selbstreflexion #mentaleklarheit #selbstentwicklung\n\nMusik: Tanner Helland – Deserve to be Loved (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-13T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-13T17:32:56.728Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7707710192569290016",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-13-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af512e8bc9f3773a1b098db_video.mp4"
         }
       ]
     },
