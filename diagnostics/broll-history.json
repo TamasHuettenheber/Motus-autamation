@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-21-1830",
-      "clip_id": "coffee-phone-13736547",
-      "source": "https://www.pexels.com/video/a-woman-using-her-phone-and-drinking-a-cup-of-coffee-13736547/",
-      "used_at_utc": "2026-10-21T04:05:38.571021+00:00"
-    },
-    {
       "output_name": "motus-2026-10-21-1200",
       "clip_id": "work-laptop-8479274",
       "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
@@ -599,6 +593,12 @@
       "clip_id": "waiting-phone-7339414",
       "source": "https://www.pexels.com/video/a-man-using-his-phone-while-waiting-7339414/",
       "used_at_utc": "2026-11-13T23:12:12.909137+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-15-0700",
+      "clip_id": "train-window-36620147",
+      "source": "https://www.pexels.com/video/scenic-views-through-train-window-36620147/",
+      "used_at_utc": "2026-11-13T23:12:20.794326+00:00"
     }
   ]
 }
