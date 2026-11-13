@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-21-2200",
-      "clip_id": "rain-window-32661246",
-      "source": "https://www.pexels.com/video/rainy-window-view-with-drops-on-glass-32661246/",
-      "used_at_utc": "2026-10-21T04:05:32.098232+00:00"
-    },
-    {
       "output_name": "motus-2026-10-21-1830",
       "clip_id": "coffee-phone-13736547",
       "source": "https://www.pexels.com/video/a-woman-using-her-phone-and-drinking-a-cup-of-coffee-13736547/",
@@ -599,6 +593,12 @@
       "clip_id": "sunset-ocean-7975481",
       "source": "https://www.pexels.com/video/vertical-video-of-sunset-7975481/",
       "used_at_utc": "2026-11-12T22:36:08.421826+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-15-1830",
+      "clip_id": "waiting-phone-7339414",
+      "source": "https://www.pexels.com/video/a-man-using-his-phone-while-waiting-7339414/",
+      "used_at_utc": "2026-11-13T23:12:12.909137+00:00"
     }
   ]
 }
