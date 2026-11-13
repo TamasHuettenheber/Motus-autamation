@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-12T18:12:48.796512+00:00",
+  "checked_at_utc": "2026-11-13T00:12:04.101160+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6af63f749c1e9613f747b7e3",
+      "text": "Du siehst vor allem die Aufgaben, die heute liegen geblieben sind. Benenne eine Sache, für die du Verantwortung übernommen hast. Ein Tag muss nicht perfekt sein. Die erste Reaktion ist nicht immer die beste. Mit etwas Abstand erkennst du häufig, was wirklich zählt. Du kannst Verantwortung übernehmen, ohne dich für alles schuldig zu fühlen. Beides ist nicht dasselbe. Speichere diesen Gedanken für deinen nächsten schwierigen Moment.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Nevermore (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-14T21:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-14-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6af63f4bbcc05bf8b969bd6b",
+      "text": "Ein Mensch in deinem Umfeld redet sich selbst permanent klein und zweifelt an allem. Hör nicht einfach schweigend zu. Nenne ihm genau eine konkrete Stärke, die du an ihm beobachtet hast. Ehrliche, greifbare Ermutigung bewirkt mehr als pauschaler Trost. Teile diesen Gedanken mit jemandem.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – A Memory Away (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-14T17:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-14-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6af63f529c1e9613f747b0ab",
+      "text": "Du entdeckst im Team einen handfesten Fehler im gemeinsamen Arbeitsergebnis und überlegst kurz, ihn einfach zu verschweigen. Dieser Impuls ist verständlich, doch Verheimlichen vergrößert das Problem nur unnötig. Sprich den Patzer jetzt offen, ruhig und sachlich bei den Beteiligten an. Echte Verantwortung zeigt sich nämlich nicht erst beim perfekten Resultat, sondern im professionellen Umgang mit Unvollkommenheit. Steh für deine Arbeit gerade und korrigiere den Kurs gemeinsam mit den anderen, anstatt auf Zufall zu hoffen. Speichere diesen Beitrag, wenn du das nächste Mal zu Fehlern stehst.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Syntheticity (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-14T11:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-14-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6af63f519df3cac8a2237a1c",
+      "text": "Eine Absage flattert ins Postfach und sofort zweifelst du an deinen Fähigkeiten. Lass dich von dieser Enttäuschung nicht lähmen. Frage stattdessen direkt nach einer sachlichen Rückmeldung zur Begründung. Nur weil andere sich heute anders entscheiden, ist das kein generelles Urteil über deine berufliche Zukunft. Schreib deine gezielte Nachfrage in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Wild Waters (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-14T06:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-14-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6af512d4cb4c7286fd058900",
       "text": "Du hast heute eine Grenze gesetzt und zweifelst nun, ob du zu streng warst. Prüfe, ob du respektvoll geblieben bist. Unbehagen ist kein Beweis für einen Fehler. Was würdest du in dieser Situation tun? Schreib es in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Hidden Tears (CC BY 4.0)",
@@ -73,15 +133,15 @@
     {
       "id": "6af3ae797b2f1abd6599418b",
       "text": "Eine wichtige Nachricht bleibt seit Stunden unbeantwortet und in deinem Kopf läuft sofort das Drehbuch der Ablehnung ab. Unser Gehirn liebt es leider, in stressigen Momenten die Lücken mit negativen Geschichten zu füllen, obwohl die Realität meist ganz banal ist. Erinnere dich daran, dass du die wahren Gründe für das Schweigen schlichtweg noch nicht kennst und Beobachtung niemals gleich Bedeutung ist. Lass diesen Gedanken einfach los und gönn dir die nötige Nachtruhe. Folge unserem Kanal für tägliche Impulse zu mehr innerer Stärke.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-12T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-12T21:03:37.942Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7707393219604024609",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-12-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af3ae797b2f1abd6599418b_video.mp4"
         }
       ]
     },
@@ -697,66 +757,6 @@
         {
           "mimeType": "image/webp",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aee013f80389014664222da_thumbnail.webp"
-        }
-      ]
-    },
-    {
-      "id": "6ae8e5a2ff93b610bb9511f7",
-      "text": "In der Küche köchelt das Mittagessen, als das Handy klingelt und plötzlich etwas angebrannt riecht. Du willst gleichzeitig den Anruf annehmen und den Topf retten. Doch jetzt zählt Sicherheit: Schalte zuerst den Herd aus und halte Abstand vom heißen Topf. Erst wenn die Situation sicher ist, kümmerst du dich um den Anruf. Ein klarer erster Schritt ist besser als hektisches Multitasking. Welche einfache Regel hilft dir, in stressigen Momenten den Überblick zu behalten? Schreib es in die Kommentare. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Destiny (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-03T11:00:00.000Z",
-      "sentAt": "2026-11-03T11:02:36.941Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7703898639545961761?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae8e5a2ff93b610bb9511f7_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ae7d101902c3fb1dec4104f",
-      "text": "Der Kaffeesatz liegt noch feucht im Siebträger, während die Straßenbahn draußen quietschend an der Haltestelle hält. Du stehst in der Küche und überlegst, ob du die Sporttasche einfach im Flur stehen lässt oder sie direkt ins Auto wirfst. Triff jetzt eine klare Entscheidung für deinen Körper, bevor die ersten E-Mails eetrudeln. Verwandle den guten Vorsatz in eine feste Gewohnheit. Welcher feste Baustein bringt dich heute sicher in Bewegung? Schreib es uns in die Kommentare. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – The Forest Awakes (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-03T06:00:00.000Z",
-      "sentAt": "2026-11-03T06:02:27.375Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7703821185473187104?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae7d101902c3fb1dec4104f_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ae67d6bab019b90872f9354",
-      "text": "Dein Kissen hat schon längst die perfekte Kuhle gefunden, aber dein Kopfkino spielt unermüdlich die morgendliche Präsentation vor dem Vorstand ab. Die Augenlider brennen, während die Gedanken im Sekundentakt Kreise drehen und jede Entspannung verhindern. Schnapp dir Notizbuch und Stift vom Nachttisch und schreibe alle drängenden Stichpunkte kurz auf, um sie gedanklich abzuhaken. Folge diesem Kanal für tägliche Impulse, die deinen Abend verlässlich zur Ruhe bringen. #motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung Musik: Tanner Helland – Fate (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-02T21:00:00.000Z",
-      "sentAt": "2026-11-02T21:03:02.323Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7703682335983553824?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae67d6bab019b90872f9354_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ae67d2921c807e9d5904253",
-      "text": "Der Esszimmertisch stapelt sich mit ungeöffneten Briefen, Katalogen und den Schulheften der Kinder, sodass kaum Platz für das Abendbrot bleibt. Dieser visuelle Unordnungsteppich raubt dir unbemerkt die letzte Kraft, die du nach einem langen Arbeitstag noch besitzt. Befreie die Fläche gemeinsam mit deiner Familie in genau fünf Minuten von allem Ballast, bevor ihr euch hinsetzt. Teile dieses Video mit jemandem, der daheim ebenfalls oft im Papierchaos versinkt. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Faith (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-02T17:30:00.000Z",
-      "sentAt": "2026-11-02T17:33:50.761Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7703628321510247712?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae67d2921c807e9d5904253_video.mp4"
         }
       ]
     }
