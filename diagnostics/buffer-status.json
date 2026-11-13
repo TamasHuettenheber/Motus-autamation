@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-13T00:12:04.101160+00:00",
+  "checked_at_utc": "2026-11-13T07:50:30.963582+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6af512bb3d8c751bfd06d09b",
       "text": "Du siehst den Erfolg eines anderen und fühlst dich plötzlich zurückgeblieben. Vergleiche deinen Fortschritt mit deinem früheren Stand, nicht mit fremden Ergebnissen. Ein guter nächster Schritt muss nicht spektakulär sein. Er sollte nur ehrlich zu deinem eigentlichen Ziel passen. Selbstvertrauen entsteht durch Erfahrung, nicht durch ständiges Grübeln. Du darfst etwas versuchen und dabei lernen. Speichere diesen Gedanken für deinen nächsten schwierigen Moment.\n\n#motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – The Forest Awakes (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-13T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-13T06:02:29.060Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7707532073183071520",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-13-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af512bb3d8c751bfd06d09b_video.mp4"
         }
       ]
     },
