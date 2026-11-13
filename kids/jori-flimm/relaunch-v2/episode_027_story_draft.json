@@ -1,0 +1,59 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 27,
+  "series_version": "relaunch-v2",
+  "title": "Die Strömung, die wirklich stieg",
+  "hook": "Das violette Blütenblatt schoss nach oben, doch zwei Strömungen wollten Jori in die Irre führen.",
+  "story": "Jori stand mit Flimm und Luma im Saal der Wasserfäden. Links rauschte eine Strömung abwärts. In der Mitte kreiste eine zweite immer um denselben goldenen Ring. Rechts stieg die dritte zum Wolkengarten hinauf und trug das violette Blütenblatt mit sich. Flimm wollte gleich hineinspringen, doch Jori hob warnend die Hand. Sie ließ drei gleich große Silberblasen los, je eine in jede Strömung. Die linke Blase sank unter ihren Ring. Die mittlere kehrte zu ihrem Ring zurück. Nur die rechte Blase stieg an jedem Ring höher.",
+  "question": "Welche Strömung führt wirklich hinauf: A, die abwärts fließt, B, die immer zum selben Ring zurückkehrt, oder C, deren Blase an jedem Ring höher steigt?",
+  "answer": "Strömung C!",
+  "after": "Strömung C! Nur dort gewann die Silberblase ständig an Höhe. A führte hinunter, B nur im Kreis. Jori trat auf das aufsteigende Wasserband. Flimm sprang neben sie, und Luma hob ihre Sternlaterne. Gemeinsam glitten sie durch das Wolkentor. Über den Wolken landeten sie in einem Garten aus violetten Blüten und gläsernen Tautropfen.",
+  "cliff": "Vor ihnen standen drei geschlossene Tau-Blumen. Die erste bog sich vom Laternenlicht weg. Die zweite blieb ganz still. Die dritte drehte sich zum Licht und enthüllte unter ihren Blättern einen winzigen sternförmigen Pfad. Welche Blume zeigte den nächsten Weg?",
+  "riddle": {
+    "type": "movement_direction_logic",
+    "question": "Welche Strömung führt wirklich hinauf: A, die abwärts fließt, B, die immer zum selben Ring zurückkehrt, oder C, deren Blase an jedem Ring höher steigt?",
+    "answer": "Strömung C",
+    "evidence_in_story": "A lässt die Silberblase sinken, B bringt sie zum gleichen Ring zurück, nur C trägt sie an jedem Ring höher.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "compare_vertical_progress",
+  "clues": [
+    "A: Die Silberblase sinkt",
+    "B: Die Silberblase kehrt zurück",
+    "C: Die Silberblase steigt höher",
+    "Hinauf bedeutet: immer mehr Höhe"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Drei klar getrennte Bewegungen: A als Pfeil nach unten, B als geschlossener Kreis, C als Pfeil nach oben über drei steigende Ringe. Frage und Hinweise vollständig zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt ohne Zeitsprung im Saal der Wasserfäden aus Folge 026 an. Jori prüft die drei Strömungen mit gleichen Silberblasen, erkennt die dauerhaft steigende Strömung C und erreicht mit Flimm und Luma den Wolkengarten.",
+  "narration": "Das violette Blütenblatt schoss nach oben, doch zwei Strömungen wollten Jori in die Irre führen. [[SEGMENT]] Jori stand mit Flimm und Luma im Saal der Wasserfäden. Links rauschte eine Strömung abwärts. In der Mitte kreiste eine zweite immer um denselben goldenen Ring. Rechts stieg die dritte zum Wolkengarten hinauf und trug das violette Blütenblatt mit sich. Flimm wollte gleich hineinspringen, doch Jori hob warnend die Hand. Sie ließ drei gleich große Silberblasen los, je eine in jede Strömung. Die linke Blase sank unter ihren Ring. Die mittlere kehrte zu ihrem Ring zurück. Nur die rechte Blase stieg an jedem Ring höher. [[SEGMENT]] Welche Strömung führt wirklich hinauf: A, die abwärts fließt, B, die immer zum selben Ring zurückkehrt, oder C, deren Blase an jedem Ring höher steigt? [[PAUSE:7]] Strömung C! Nur dort gewann die Silberblase ständig an Höhe. A führte hinunter, B nur im Kreis. Jori trat auf das aufsteigende Wasserband. Flimm sprang neben sie, und Luma hob ihre Sternlaterne. Gemeinsam glitten sie durch das Wolkentor. Über den Wolken landeten sie in einem Garten aus violetten Blüten und gläsernen Tautropfen. Vor ihnen standen drei geschlossene Tau-Blumen. Die erste bog sich vom Laternenlicht weg. Die zweite blieb ganz still. Die dritte drehte sich zum Licht und enthüllte unter ihren Blättern einen winzigen sternförmigen Pfad. Welche Blume zeigte den nächsten Weg?",
+  "narration_tts": "Das violette Blütenblatt schoss nach oben, doch zwei Strömungen wollten Jori in die Irre führen. [[SEGMENT]] Jori stand mit Flimm und Luma im Saal der Wasserfäden. Links rauschte eine Strömung abwärts. In der Mitte kreiste eine zweite immer um denselben goldenen Ring. Rechts stieg die dritte zum Wolkengarten hinauf und trug das violette Blütenblatt mit sich. Flimm wollte gleich hineinspringen, doch Jori hob warnend die Hand. Sie ließ drei gleich große Silberblasen los, je eine in jede Strömung. Die linke Blase sank unter ihren Ring. Die mittlere kehrte zu ihrem Ring zurück. Nur die rechte Blase stieg an jedem Ring höher. [[SEGMENT]] Welche Strömung führt wirklich hinauf: A, die abwärts fließt, B, die immer zum selben Ring zurückkehrt, oder C, deren Blase an jedem Ring höher steigt? [[PAUSE:7]] Strömung C! Nur dort gewann die Silberblase ständig an Höhe. A führte hinunter, B nur im Kreis. Jori trat auf das aufsteigende Wasserband. Flimm sprang neben sie, und Luma hob ihre Sternlaterne. Gemeinsam glitten sie durch das Wolkentor. Über den Wolken landeten sie in einem Garten aus violetten Blüten und gläsernen Tautropfen. Vor ihnen standen drei geschlossene Tau-Blumen. Die erste bog sich vom Laternenlicht weg. Die zweite blieb ganz still. Die dritte drehte sich zum Licht und enthüllte unter ihren Blättern einen winzigen sternförmigen Pfad. Welche Blume zeigte den nächsten Weg?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss im Saal der Wasserfäden mit drei getrennten Strömungen und dem violetten Blütenblatt in der aufsteigenden Bahn.",
+    "Jori setzt drei gleich große Silberblasen in die Strömungen; Flimm und Luma beobachten.",
+    "Die drei Blasen zeigen sinken, zurückkehren und an jedem Ring höher steigen.",
+    "Ruhige dunkle Wasserfadenhalle mit drei Bewegungsarten und freier Fläche für das TikTok-sichere Rätsel.",
+    "Lösung: Jori, Flimm und Luma steigen auf dem Wasserband C an den goldenen Ringen vorbei.",
+    "Das Trio gleitet durch das Wolkentor in einen neuen violetten Taugarten.",
+    "Cliffhanger im Wolkengarten mit drei Tau-Blumen, von denen eine einen sternförmigen Pfad enthüllt."
+  ],
+  "visuals": [
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-027-v1/scene-01.jpg", "scene": 1, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-027-v1/scene-02.jpg", "scene": 2, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-027-v1/scene-03.jpg", "scene": 3, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-027-v1/scene-04.jpg", "scene": 4, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-027-v1/scene-05.jpg", "scene": 5, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-027-v1/scene-06.jpg", "scene": 6, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-027-v1/scene-07.jpg", "scene": 7, "generated": true}
+  ],
+  "created_at": "2026-11-13T08:25:00+01:00",
+  "status": "STORY_AND_ART_READY_TTS_PENDING",
+  "previous_cliffhanger": "Drei leuchtende Strömungen zogen durch den Saal. Die erste floss abwärts. Die zweite drehte sich im Kreis. Die dritte stieg nach oben und trug ein violettes Blütenblatt zu einem Garten über den Wolken. Welche Strömung führte wirklich hinauf?"
+}
