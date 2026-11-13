@@ -189,6 +189,10 @@ jobs:
           # Tie the footage to actual messaging scenes, not only to generic emotions.
           message_scene=any(cue in text for cue in ('nachricht','unbeantwortet','sms','chat'))
           for clip in library.get('clips',[]):
+              # Morning footage must not depict night or evening scenes.
+              # Check metadata before scoring, so emotional keywords cannot outrank time-of-day fit.
+              if output.endswith('-0700') and any(fold(str(tag)) in {'nacht', 'abend'} for tag in clip.get('tags', [])):
+                  continue
               # Do not treat generic tags such as "alltag" as evidence of a scene match.
               matching=[fold(str(tag)) for tag in clip.get('tags',[])
                         if fold(str(tag)) not in generic_tags and fold(str(tag)) in text]
