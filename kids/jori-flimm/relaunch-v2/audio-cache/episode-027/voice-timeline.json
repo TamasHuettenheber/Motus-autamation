@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Das violette Blütenblatt schoss nach oben, doch zwei Strömungen wollten Jori in die Irre führen.",
+      "start": 0.0,
+      "end": 8.48,
+      "duration": 8.48
+    },
+    {
+      "kind": "speech",
+      "text": "Jori stand mit Flimm und Luma im Saal der Wasserfäden. Links rauschte eine Strömung abwärts. In der Mitte kreiste eine zweite immer um denselben goldenen Ring. Rechts stieg die dritte zum Wolkengarten hinauf und trug das violette Blütenblatt mit sich. Flimm wollte gleich hineinspringen, doch Jori hob warnend die Hand. Sie ließ drei gleich große Silberblasen los, je eine in jede Strömung. Die linke Blase sank unter ihren Ring. Die mittlere kehrte zu ihrem Ring zurück. Nur die rechte Blase stieg an jedem Ring höher.",
+      "start": 8.48,
+      "end": 50.0,
+      "duration": 41.52
+    },
+    {
+      "kind": "speech",
+      "text": "Welche Strömung führt wirklich hinauf: A, die abwärts fließt, B, die immer zum selben Ring zurückkehrt, oder C, deren Blase an jedem Ring höher steigt?",
+      "start": 50.0,
+      "end": 65.6,
+      "duration": 15.6
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 65.6,
+      "end": 72.6,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Strömung C! Nur dort gewann die Silberblase ständig an Höhe. A führte hinunter, B nur im Kreis. Jori trat auf das aufsteigende Wasserband. Flimm sprang neben sie, und Luma hob ihre Sternlaterne. Gemeinsam glitten sie durch das Wolkentor. Über den Wolken landeten sie in einem Garten aus violetten Blüten und gläsernen Tautropfen. Vor ihnen standen drei geschlossene Tau-Blumen. Die erste bog sich vom Laternenlicht weg. Die zweite blieb ganz still. Die dritte drehte sich zum Licht und enthüllte unter ihren Blättern einen winzigen sternförmigen Pfad. Welche Blume zeigte den nächsten Weg?",
+      "start": 72.6,
+      "end": 122.76,
+      "duration": 50.16
+    }
+  ],
+  "duration": 122.76,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
