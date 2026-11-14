@@ -1,0 +1,87 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 28,
+  "series_version": "relaunch-v2",
+  "title": "Die Blume, die dem Licht folgte",
+  "hook": "Die dritte Tau-Blume folgte Lumas Laterne, doch Jori wollte sicher sein, dass sie wirklich den Weg zeigte.",
+  "story": "Jori kniete vor den drei Tau-Blumen im Wolkengarten. Die erste bog ihren Stängel vom Licht weg. Die zweite blieb fest geschlossen. Unter der dritten funkelte ein winziger sternförmiger Pfad. Flimm wollte sofort zur dritten Blume hüpfen, doch Jori hielt Flimm freundlich zurück. Sie bat Luma, die Sternlaterne erst nach links und dann nach rechts zu bewegen. Die erste Blume wich dem Licht jedes Mal aus. Die zweite rührte sich nicht. Nur die dritte drehte sich dem Licht nach, und bei jeder Bewegung wurden ihre leuchtenden Sternspuren länger.",
+  "question": "Welche Blume zeigt den nächsten Weg: A, die sich vom Licht wegdreht, B, die still bleibt, oder C, die dem Licht folgt und den Sternpfad verlängert?",
+  "answer": "Blume C!",
+  "after": "Blume C! Sie reagierte auf jede Bewegung der Laterne und machte den Sternpfad sichtbar. A wich dem Licht aus, B gab kein Zeichen. Die dritte Tau-Blume öffnete ihre violetten Blätter. Jori trat auf den leuchtenden Pfad, Flimm sprang neben sie, und Luma folgte mit der Sternlaterne. Der Pfad führte sie durch Bögen aus Tautropfen bis zu einem runden, gläsernen Wolkenteich.",
+  "cliff": "Über dem Wolkenteich schwebten drei Glockenblumen. Die erste klingelte vor jedem fallenden Tautropfen, die zweite genau beim Auftreffen, die dritte erst danach. Welche Blume wusste, wann der nächste Tropfen kam?",
+  "riddle": {
+    "type": "light_response_logic",
+    "question": "Welche Blume zeigt den nächsten Weg: A, die sich vom Licht wegdreht, B, die still bleibt, oder C, die dem Licht folgt und den Sternpfad verlängert?",
+    "answer": "Blume C",
+    "evidence_in_story": "A weicht dem Licht aus, B reagiert nicht, nur C folgt der Laterne und verlängert dabei den Sternpfad.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "compare_light_response",
+  "clues": [
+    "A: Dreht sich vom Licht weg",
+    "B: Bleibt geschlossen und still",
+    "C: Folgt dem Licht",
+    "Nur C verlängert den Sternpfad"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Drei klar getrennte Tau-Blumen: A vom Laternenlicht abgewandt, B still geschlossen, C zum Licht gedreht mit wachsendem Sternpfad. Frage und Hinweise vollständig zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt ohne Zeitsprung bei den drei Tau-Blumen im Wolkengarten aus Folge 027 an. Jori prüft alle drei mit derselben Laternenbewegung, erkennt Blume C und folgt mit Flimm und Luma dem Sternpfad zum Wolkenteich.",
+  "narration": "Die dritte Tau-Blume folgte Lumas Laterne, doch Jori wollte sicher sein, dass sie wirklich den Weg zeigte. [[SEGMENT]] Jori kniete vor den drei Tau-Blumen im Wolkengarten. Die erste bog ihren Stängel vom Licht weg. Die zweite blieb fest geschlossen. Unter der dritten funkelte ein winziger sternförmiger Pfad. Flimm wollte sofort zur dritten Blume hüpfen, doch Jori hielt Flimm freundlich zurück. Sie bat Luma, die Sternlaterne erst nach links und dann nach rechts zu bewegen. Die erste Blume wich dem Licht jedes Mal aus. Die zweite rührte sich nicht. Nur die dritte drehte sich dem Licht nach, und bei jeder Bewegung wurden ihre leuchtenden Sternspuren länger. [[SEGMENT]] Welche Blume zeigt den nächsten Weg: A, die sich vom Licht wegdreht, B, die still bleibt, oder C, die dem Licht folgt und den Sternpfad verlängert? [[PAUSE:7]] Blume C! Sie reagierte auf jede Bewegung der Laterne und machte den Sternpfad sichtbar. A wich dem Licht aus, B gab kein Zeichen. Die dritte Tau-Blume öffnete ihre violetten Blätter. Jori trat auf den leuchtenden Pfad, Flimm sprang neben sie, und Luma folgte mit der Sternlaterne. Der Pfad führte sie durch Bögen aus Tautropfen bis zu einem runden, gläsernen Wolkenteich. Über dem Wolkenteich schwebten drei Glockenblumen. Die erste klingelte vor jedem fallenden Tautropfen, die zweite genau beim Auftreffen, die dritte erst danach. Welche Blume wusste, wann der nächste Tropfen kam?",
+  "narration_tts": "Die dritte Tau-Blume folgte Lumas Laterne, doch Jori wollte sicher sein, dass sie wirklich den Weg zeigte. [[SEGMENT]] Jori kniete vor den drei Tau-Blumen im Wolkengarten. Die erste bog ihren Stängel vom Licht weg. Die zweite blieb fest geschlossen. Unter der dritten funkelte ein winziger sternförmiger Pfad. Flimm wollte sofort zur dritten Blume hüpfen, doch Jori hielt Flimm freundlich zurück. Sie bat Luma, die Sternlaterne erst nach links und dann nach rechts zu bewegen. Die erste Blume wich dem Licht jedes Mal aus. Die zweite rührte sich nicht. Nur die dritte drehte sich dem Licht nach, und bei jeder Bewegung wurden ihre leuchtenden Sternspuren länger. [[SEGMENT]] Welche Blume zeigt den nächsten Weg: A, die sich vom Licht wegdreht, B, die still bleibt, oder C, die dem Licht folgt und den Sternpfad verlängert? [[PAUSE:7]] Blume C! Sie reagierte auf jede Bewegung der Laterne und machte den Sternpfad sichtbar. A wich dem Licht aus, B gab kein Zeichen. Die dritte Tau-Blume öffnete ihre violetten Blätter. Jori trat auf den leuchtenden Pfad, Flimm sprang neben sie, und Luma folgte mit der Sternlaterne. Der Pfad führte sie durch Bögen aus Tautropfen bis zu einem runden, gläsernen Wolkenteich. Über dem Wolkenteich schwebten drei Glockenblumen. Die erste klingelte vor jedem fallenden Tautropfen, die zweite genau beim Auftreffen, die dritte erst danach. Welche Blume wusste, wann der nächste Tropfen kam?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss im Wolkengarten mit drei Tau-Blumen und dem bereits sichtbaren Sternpfad unter der dritten.",
+    "Jori hält Flimm zurück und lässt Luma alle drei Blumen gleich beleuchten.",
+    "Luma bewegt die Laterne; A weicht aus, B bleibt still, C folgt dem Licht und verlängert den Pfad.",
+    "Ruhiger Wolkengarten mit drei klar getrennten Reaktionen und freier Fläche für das TikTok-sichere Rätsel.",
+    "Lösung: Blume C öffnet sich, und Jori, Flimm und Luma betreten den verlängerten Sternpfad.",
+    "Das Trio folgt dem Sternpfad durch Tautropfenbögen zum gläsernen Wolkenteich.",
+    "Cliffhanger am Wolkenteich mit drei Glockenblumen, die vor, bei und nach einem fallenden Tropfen klingeln."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-028-v1/scene-01.jpg",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-028-v1/scene-02.jpg",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-028-v1/scene-03.jpg",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-028-v1/scene-04.jpg",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-028-v1/scene-05.jpg",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-028-v1/scene-06.jpg",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-028-v1/scene-07.jpg",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-14T08:45:00+01:00",
+  "status": "STORY_AND_ART_READY_TTS_PENDING",
+  "previous_cliffhanger": "Vor ihnen standen drei geschlossene Tau-Blumen. Die erste bog sich vom Laternenlicht weg. Die zweite blieb ganz still. Die dritte drehte sich zum Licht und enthüllte unter ihren Blättern einen winzigen sternförmigen Pfad. Welche Blume zeigte den nächsten Weg?"
+}
