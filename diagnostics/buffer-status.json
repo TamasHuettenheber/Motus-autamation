@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-13T22:34:12.059822+00:00",
+  "checked_at_utc": "2026-11-14T03:05:50.859569+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6af799b0bb36d00909d4730b",
+      "text": "Ein kürzlich geführtes Gespräch hallt nach, wirbelt deine Gedanken durcheinander und du findest einfach noch keine stimmige Antwort darauf. Dieser Drang nach sofortiger Perfektion erzeugt unnötigen Druck. Erlaube dir, die Frage heute Abend bewusst offen zu lassen. Tiefe Erkenntnis braucht manchmal einfach etwas zeitlichen Abstand. Folge unserem Kanal für tägliche Impulse.\n\n#motus #kommunikation #alltagspsychologie #selbstentwicklung #mentaleklarheit\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-15T21:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-15-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6af79968d16af15d4ddc4003",
+      "text": "Eine Einladung freut dich, doch du brauchst heute auch Zeit für dich. Antworte freundlich und klar. Nähe muss nicht bedeuten, jederzeit verfügbar zu sein. Wer genauer hinsieht, entdeckt oft mehr Möglichkeiten als zunächst sichtbar waren. Gib dir dafür einen Moment Zeit. Dein Wert hängt nicht davon ab, ob andere sofort zustimmen. Entscheidend ist, wie respektvoll du deinen Weg gehst. Speichere diesen Gedanken für deinen nächsten schwierigen Moment.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Home (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-15T17:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-15-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6af799a778196a0a9728e986",
+      "text": "Jemand erwartet sofort deine Einschätzung zu einem Thema, das du kaum kennst. Sag offen, was du weißt und was du prüfen musst. Verlässlichkeit braucht keine Allwissenheit. Was würdest du in dieser Situation tun? Schreib es in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Crossroads (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-15T11:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-15-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6af799614b28296eb11f951e",
+      "text": "Du willst wieder Ja sagen, obwohl dein Kalender bereits voll ist. Prüfe zuerst deine Möglichkeiten. Ehrliche Zusagen sind wertvoller als reflexhafte Zustimmung. Veränderung braucht keine große Bühne. Oft beginnt sie in einem einzigen Gespräch, das du bewusst anders führst. Du musst dafür nicht perfekt sein. Wichtig ist, dass deine Entscheidung zu deinen Werten passt und du bewusst handelst. Folge MOTUS für neue Gedanken über Mut, Klarheit und Selbstvertrauen.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Daybreak (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-15T06:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-15-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6af63f749c1e9613f747b7e3",
       "text": "Du siehst vor allem die Aufgaben, die heute liegen geblieben sind. Benenne eine Sache, für die du Verantwortung übernommen hast. Ein Tag muss nicht perfekt sein. Die erste Reaktion ist nicht immer die beste. Mit etwas Abstand erkennst du häufig, was wirklich zählt. Du kannst Verantwortung übernehmen, ohne dich für alles schuldig zu fühlen. Beides ist nicht dasselbe. Speichere diesen Gedanken für deinen nächsten schwierigen Moment.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Nevermore (CC BY 4.0)",
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae936e27996caf141c32f6b_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ae936b97996caf141c318c3",
-      "text": "Der Kaffeebecher steht leer auf dem Küchentresen, während der Wasserkocher noch geräuschvoll aufheizt. Genau jetzt triffst du die stille Entscheidung, den ersten Schluck Wasser vor dem Koffein zu trinken. Diese kleine Gewohnheit versorgt deinen Körper nach der Nacht direkt mit Flüssigkeit und schützt deinen Magen vor dem ersten Reiz. Probier das heute aus und schreib mir deine morgendliche Lieblingsroutine in die Kommentare. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Wild Waters (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-04T06:00:00.000Z",
-      "sentAt": "2026-11-04T06:02:23.252Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7704192267581476128?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae936b97996caf141c318c3_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ae7d13101fa08ffbe737a78",
-      "text": "Die Gedanken kreisen um das morgige Gespräch mit der Hausverwaltung, während der Wecker unerbittlich näher rückt. Das Kissen fühlt sich plötzlich unbequem an und die Raumtemperatur scheint zu steigen. Wenn der Kopf keine Ruhe gibt, hilft oft ein einfacher Zettel auf dem Nachttisch. Schreib den ungelösten Punkt auf, klappe das Heft zu und übergib die Sorge an den nächsten Tag. Gönn deinem Geist den wohlverdienten Feierabend. Folge unserem Kanal für weitere Impulse zu einem gesunden Alltag. #motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung Musik: Tanner Helland – Hidden Tears (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-03T21:00:00.000Z",
-      "sentAt": "2026-11-03T21:03:53.667Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7704053422324206880?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae7d13101fa08ffbe737a78_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6ae7d163d016796999f982f2",
-      "text": "Der Nachbar lädt spontan zum Feierabendbier ein, obwohl du dir vorgenommen hattest, heute endlich mal den Küchentisch zu entrümpeln und früh zu kochen. Du spürst den leisen Drang, zuzusagen, nur um bloß niemanden zu enttäuschen. Doch deine eigene Grenze schützt dich vor Erschöpfung. Sag heute Abend einmal freundlich aber bestimmt Nein, um Raum für dich zu schaffen. Teile diesen Gedanken jetzt mit jemandem, dem es genau wie dir geht. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Deserve to be Loved (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-03T17:30:00.000Z",
-      "sentAt": "2026-11-03T17:33:21.538Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7703999222512749857?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6ae7d163d016796999f982f2_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6aee013f80389014664222da",
-      "text": "Wie hoch ist deine Personalquote in dieser Woche? Der Gastro-Personalkostenplaner für Excel hilft dir, bis zu 42 Schichten zu erfassen, Personalkosten mit anpassbarem Arbeitgeberkostenfaktor zu berechnen und die Quote nach Tagen und Woche zu überblicken. Für Restaurants, Cafés und Bars. Einmalig 9,90 €: https://payhip.com/b/g8p5a #Gastronomie #Personalkosten #Dienstplanung",
-      "status": "sent",
-      "dueAt": "2026-11-03T12:03:06.000Z",
-      "sentAt": "2026-11-03T12:03:06.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7703914509332778262?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "image/webp",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aee013f80389014664222da_thumbnail.webp"
         }
       ]
     }
