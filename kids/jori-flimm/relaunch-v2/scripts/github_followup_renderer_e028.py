@@ -53,7 +53,7 @@ def draw_scene(section):
   d.text((290,197),episode['title'],font=font(25),anchor='mm',fill='white')
  if section=='puzzle':
   # TikTok-safe board: every clue and option ends at x=540; x>=560 stays free.
-  d.rounded_rectangle((42,132,540,820),radius=26,fill=(13,32,56,244),outline=(246,211,127,255),width=4)
+  d.rounded_rectangle((60,132,540,820),radius=26,fill=(13,32,56,244),outline=(246,211,127,255),width=4)
   d.text((291,171),'WELCHE BLUME ZEIGT DEN WEG?',font=font(18),anchor='mm',fill='#fff2c9')
   options=[
    ('A','DREHT SICH VOM LICHT WEG',(255,190,70,255)),

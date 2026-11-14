@@ -75,7 +75,7 @@ jobs:
           old={hashlib.sha256(p.read_bytes()).hexdigest() for d in (base/'assets').glob('episode-*-v*') if d.name!='episode-028-v1' for p in d.glob('scene-*')}
           assert not (set(hashes)&old),'episode 028 reused an earlier scene image'
           renderer=(base/'scripts/github_followup_renderer_e028.py').read_text()
-          assert "(42,132,540,820)" in renderer and "MarginL,MarginR" in renderer and "2,60,180,277" in renderer
+          assert "(60,132,540,820)" in renderer and "MarginL,MarginR" in renderer and "2,60,180,277" in renderer
           # Concrete Free Tier evidence from the latest successful production: same secret/model,
           # four requests on 13.11 with 22 s spacing and no billing-mode change. Today is a reset day.
           status=(base.parent/'docs/production-status-2026-11-13-e027.md').read_text(encoding='utf-8')
