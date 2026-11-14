@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-14T03:05:50.859569+00:00",
+  "checked_at_utc": "2026-11-14T10:13:49.170746+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6af63f519df3cac8a2237a1c",
       "text": "Eine Absage flattert ins Postfach und sofort zweifelst du an deinen Fähigkeiten. Lass dich von dieser Enttäuschung nicht lähmen. Frage stattdessen direkt nach einer sachlichen Rückmeldung zur Begründung. Nur weil andere sich heute anders entscheiden, ist das kein generelles Urteil über deine berufliche Zukunft. Schreib deine gezielte Nachfrage in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Wild Waters (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-14T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-14T06:02:17.372Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7707903055643086113",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-14-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af63f519df3cac8a2237a1c_video.mp4"
         }
       ]
     },
