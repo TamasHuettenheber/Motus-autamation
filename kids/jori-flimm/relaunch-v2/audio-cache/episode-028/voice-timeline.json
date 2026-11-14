@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Die dritte Tau-Blume folgte Lumas Laterne, doch Jori wollte sicher sein, dass sie wirklich den Weg zeigte.",
+      "start": 0.0,
+      "end": 8.6,
+      "duration": 8.6
+    },
+    {
+      "kind": "speech",
+      "text": "Jori kniete vor den drei Tau-Blumen im Wolkengarten. Die erste bog ihren Stängel vom Licht weg. Die zweite blieb fest geschlossen. Unter der dritten funkelte ein winziger sternförmiger Pfad. Flimm wollte sofort zur dritten Blume hüpfen, doch Jori hielt Flimm freundlich zurück. Sie bat Luma, die Sternlaterne erst nach links und dann nach rechts zu bewegen. Die erste Blume wich dem Licht jedes Mal aus. Die zweite rührte sich nicht. Nur die dritte drehte sich dem Licht nach, und bei jeder Bewegung wurden ihre leuchtenden Sternspuren länger.",
+      "start": 8.6,
+      "end": 57.8,
+      "duration": 49.2
+    },
+    {
+      "kind": "speech",
+      "text": "Welche Blume zeigt den nächsten Weg: A, die sich vom Licht wegdreht, B, die still bleibt, oder C, die dem Licht folgt und den Sternpfad verlängert?",
+      "start": 57.8,
+      "end": 73.44,
+      "duration": 15.64
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 73.44,
+      "end": 80.44,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Blume C! Sie reagierte auf jede Bewegung der Laterne und machte den Sternpfad sichtbar. A wich dem Licht aus, B gab kein Zeichen. Die dritte Tau-Blume öffnete ihre violetten Blätter. Jori trat auf den leuchtenden Pfad, Flimm sprang neben sie, und Luma folgte mit der Sternlaterne. Der Pfad führte sie durch Bögen aus Tautropfen bis zu einem runden, gläsernen Wolkenteich. Über dem Wolkenteich schwebten drei Glockenblumen. Die erste klingelte vor jedem fallenden Tautropfen, die zweite genau beim Auftreffen, die dritte erst danach. Welche Blume wusste, wann der nächste Tropfen kam?",
+      "start": 80.44,
+      "end": 130.08,
+      "duration": 49.64
+    }
+  ],
+  "duration": 130.08,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
