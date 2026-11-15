@@ -77,14 +77,23 @@ jobs:
           # No new external AI calls and no mutation of already existing day issues.
           import base64
           editorial_file=gh("GET","/contents/config/motus-editorial-cards.json")
-          editorial=json.loads(base64.b64decode(editorial_file["content"]).decode("utf-8"))["slots"]
-          editorial_index=datetime.fromisoformat(target).date().toordinal()%14
+          editorial_config=json.loads(base64.b64decode(editorial_file["content"]).decode("utf-8"))
+          editorial=editorial_config["slots"]
+          editorial_insights=editorial_config["insights"]
+          editorial_ordinal=datetime.fromisoformat(target).date().toordinal()
+          editorial_index=editorial_ordinal%14
           times_editorial=["07:00","12:00","18:30","22:00"]
+          # Distinct slot-offsets prevent the same psychological motif in one day.
+          # Existing finished day issues are left unchanged.
+          editorial_offsets={"07:00":0,"12:00":0,"18:30":7,"22:00":6}
           if any(len(editorial.get(t,[]))!=14 for t in times_editorial):
               raise SystemExit("EDITORIAL_CONFIG_INVALID")
-          editorial_today={t:editorial[t][editorial_index] for t in times_editorial}
-          if len({editorial_today[t]["topic"] for t in times_editorial})!=4:
-              raise SystemExit("EDITORIAL_SAME_DAY_DUPLICATE")
+          editorial_today={t:editorial[t][(editorial_index+editorial_offsets[t])%14] for t in times_editorial}
+          motifs=[editorial_today[t].get("motif") for t in times_editorial]
+          if None in motifs or len(set(motifs))!=4:
+              raise SystemExit("EDITORIAL_SAME_DAY_MOTIF_DUPLICATE")
+          if any(len(editorial_insights.get(m,[]))!=4 for m in motifs):
+              raise SystemExit("EDITORIAL_INSIGHTS_INVALID")
           print("EDITORIAL_PLAN",target,[(t,editorial_today[t]["topic"]) for t in times_editorial])
           # Controlled length A/B test for NEW days only; existing issues and videos stay untouched.
           # Rotate slot assignments daily to avoid confounding length with publication time.
@@ -259,27 +268,25 @@ jobs:
           # psychologically meaningful fallback. No extra model requests or paid services.
           import re
           from urllib.parse import quote
+          # Four CTA types rotate daily; wording changes independently, so fallbacks
+          # do not repeat the same mechanical closing sentence in every video.
           cta_options=[
-              "Was würdest du in dieser Situation tun? Schreib es in die Kommentare.",
-              "Speichere diesen Gedanken für deinen nächsten schwierigen Moment.",
-              "Teile diesen Impuls mit jemandem, dem er heute helfen könnte.",
-              "Folge MOTUS für neue Gedanken über Mut, Klarheit und Selbstvertrauen.",
-          ]
-          reflections=[
-              "Du musst dafür nicht perfekt sein. Wichtig ist, dass deine Entscheidung zu deinen Werten passt und du bewusst handelst.",
-              "Die erste Reaktion ist nicht immer die beste. Mit etwas Abstand erkennst du häufig, was wirklich zählt.",
-              "Nicht jede Unsicherheit verlangt eine schnelle Antwort. Manchmal ist Nachdenken der mutigere und vernünftigere Weg.",
-              "Es geht nicht darum, anderen etwas zu beweisen. Du entscheidest, welche Haltung du selbst vertreten möchtest.",
-              "Wer seine Gefühle ernst nimmt, muss ihnen nicht blind folgen. Zwischen Gefühl und Handlung liegt deine Freiheit.",
-              "Ein guter nächster Schritt muss nicht spektakulär sein. Er sollte nur ehrlich zu deinem eigentlichen Ziel passen.",
-              "Dein Wert hängt nicht davon ab, ob andere sofort zustimmen. Entscheidend ist, wie respektvoll du deinen Weg gehst.",
-              "Veränderung braucht keine große Bühne. Oft beginnt sie in einem einzigen Gespräch, das du bewusst anders führst.",
-              "Du kannst Verantwortung übernehmen, ohne dich für alles schuldig zu fühlen. Beides ist nicht dasselbe.",
-              "Manchmal entsteht Klarheit erst, wenn du eine alte Annahme hinterfragst und offen für neue Erfahrungen bleibst.",
-              "Eine ehrliche Entscheidung kann unbequem sein. Trotzdem bringt sie dich näher an das Leben, das du gestalten möchtest.",
-              "Nicht jeder Konflikt muss sofort gelöst werden. Wichtig ist, dass du respektvoll und handlungsfähig bleibst.",
-              "Selbstvertrauen entsteht durch Erfahrung, nicht durch ständiges Grübeln. Du darfst etwas versuchen und dabei lernen.",
-              "Wer genauer hinsieht, entdeckt oft mehr Möglichkeiten als zunächst sichtbar waren. Gib dir dafür einen Moment Zeit.",
+              ["Welcher Gedanke hilft dir dabei? Schreib es in die Kommentare.",
+               "Kennst du so eine Situation? Erzähl davon in den Kommentaren.",
+               "Wie würdest du darauf reagieren? Schreib deine Erfahrung in die Kommentare.",
+               "Was hat dir in so einem Moment geholfen? Kommentiere deine Erfahrung."],
+              ["Speichere dir diesen Gedanken für einen schwierigen Tag.",
+               "Speichere den Impuls, falls du ihn später brauchst.",
+               "Wenn du das wiedererkennst, speichere dir diesen Beitrag.",
+               "Speichere diesen Gedanken als Erinnerung für deinen Alltag."],
+              ["Teile diesen Gedanken mit jemandem, der das gerade braucht.",
+               "Kennst du jemanden in dieser Lage? Teile den Beitrag mit ihm.",
+               "Teile diesen Impuls mit einer Person, die gerade Mut braucht.",
+               "Schick den Gedanken jemandem, mit dem du darüber sprechen möchtest."],
+              ["Folge MOTUS für neue Impulse zu Selbstvertrauen und Klarheit.",
+               "Für weitere alltagstaugliche Gedanken über innere Stärke: Folge MOTUS.",
+               "Wenn dich diese Perspektive anspricht, folge MOTUS für mehr.",
+               "Folge MOTUS, wenn du bewusste Entscheidungen im Alltag stärken willst."],
           ]
           stopwords={"eine","einer","einen","einem","eines","deine","deinen","deiner","deinem","deines",
                      "dich","dir","dass","dann","heute","morgen","nicht","wenn","weil","aber","oder",
@@ -296,16 +303,32 @@ jobs:
               card=editorial_today[t]
               slot_index=times_editorial.index(t)
               base=card["hook"]+" "+card["action"]
-              cta=cta_options[(editorial_index+slot_index)%len(cta_options)]
+              cta_type=(editorial_index+slot_index)%4
+              cta_variant=(editorial_ordinal//4+slot_index)%4
+              cta=cta_options[cta_type][cta_variant]
+              first,second,bridge,extended=editorial_insights[card["motif"]]
               if t in short_times:
-                  result=base+" "+cta
-                  if word_count(result)<30:
-                      result=base+" Entscheide bewusst, statt nur aus Gewohnheit zu reagieren. "+cta
+                  low,high=35,45
+                  options=[base+" "+cta,base+" "+bridge+" "+cta]
               else:
-                  idx=(editorial_index+slot_index*3)%len(reflections)
-                  result=base+" "+reflections[idx]+" "+cta
-                  if word_count(result)<55:
-                      result=base+" "+reflections[idx]+" "+reflections[(idx+7)%len(reflections)]+" "+cta
+                  low,high=65,75
+                  # Human-curated sentences for the exact psychological motif;
+                  # do not pad with unrelated generic affirmations.
+                  options=[
+                      base+" "+first+" "+cta,
+                      base+" "+second+" "+cta,
+                      base+" "+first+" "+second+" "+cta,
+                      base+" "+first+" "+extended+" "+cta,
+                      base+" "+second+" "+extended+" "+cta,
+                      base+" "+first+" "+second+" "+bridge+" "+cta,
+                      base+" "+first+" "+second+" "+extended+" "+cta,
+                      base+" "+second+" "+first+" "+extended+" "+cta,
+                      base+" "+first+" "+extended+" "+bridge+" "+cta,
+                      base+" "+second+" "+extended+" "+bridge+" "+cta,
+                  ]
+              result=next((value for value in options if low<=word_count(value)<=high),None)
+              if result is None:
+                  raise SystemExit("EDITORIAL_FALLBACK_LENGTH_INVALID "+t+" "+card["motif"])
               return result
           previous_texts=[]
           try:
@@ -328,6 +351,7 @@ jobs:
           household=re.compile(r"(?i)\b(?:zahnpasta|duschkopf|kartons?|zimmerpflanze|blumengieß\w*|gieß\w*|kalkflecken|putzmittel|ersatzpackung|briefsortier\w*|papiermüll|staubsauger|wäschesortier\w*|spülmaschine|briefkasten)\b")
           safety=re.compile(r"(?i)\b(?:anbrenn\w*|herdplatte\w*|kochend\w*|rutschig\w*|essigreiniger|chlorreiniger|brandgefahr|rauchmelder)\b")
           import unicodedata
+          current_day_tokens=[]
           for slot in slots:
               t=slot["time"]; value=str(slot.get("text","")).strip()
               card=editorial_today[t]
@@ -335,7 +359,7 @@ jobs:
               actual=tokens(value)
               overlap=len(expected&actual)
               wc=word_count(value)
-              low,high=(30,55) if t in short_times else (55,85)
+              low,high=(35,45) if t in short_times else (65,75)
               duplicate=any(len(actual&prev)>=7 and len(actual&prev)/max(1,len(actual|prev))>=0.43 for prev in old_tokens)
               problems=[]
               if overlap<2:problems.append("off_topic")
@@ -346,6 +370,8 @@ jobs:
               if not viewer_cta.search(value):problems.append("no_cta")
               if not low<=wc<=high:problems.append("length")
               if duplicate:problems.append("14d_duplicate")
+              if any(len(actual&prior)>=6 and len(actual&prior)/max(1,len(actual|prior))>=0.32 for prior in current_day_tokens):
+                  problems.append("same_day_duplicate")
               if problems:
                   replacement=fallback(t)
                   if not low<=word_count(replacement)<=high or not viewer_cta.search(replacement):
@@ -356,6 +382,7 @@ jobs:
                         "topic",card["topic"])
               else:
                   print("EDITORIAL_QC_PASS",target,t,"words",wc,"topic",card["topic"])
+              current_day_tokens.append(tokens(str(slot["text"])))
           import re
           weekday_re=re.compile(r"(?:montag|dienstag|mittwoch|donnerstag|freitag|samstag|sonntag)",re.IGNORECASE)
           date_re=re.compile(r"\b\d{1,2}[./-]\d{1,2}(?:[./-]\d{2,4})?\b|\b\d{4}-\d{2}-\d{2}\b|\b\d{1,2}\.\s*(?:januar|februar|maerz|märz|april|mai|juni|juli|august|september|oktober|november|dezember)\b",re.IGNORECASE)
@@ -365,18 +392,10 @@ jobs:
           for slot in slots:
               text=slot.get("text","").strip()
               word_count=len(text.split())
-              low,high=(30,55) if slot.get("time") in short_times else (55,85)
-              ab_low,ab_high=(35,45) if slot.get("time") in short_times else (65,75)
+              low,high=(35,45) if slot.get("time") in short_times else (65,75)
               if not low<=word_count<=high:
-                  # Preserve the regular four-slot delivery when Gemini slightly overshoots a target.
-                  # The outlier is explicitly excluded from the controlled A/B comparison.
-                  safety_low,safety_high=(25,75) if slot.get("time") in short_times else (45,120)
-                  if not safety_low<=word_count<=safety_high:
-                      raise SystemExit("TEXT_WORD_COUNT_UNSAFE "+slot.get("time","")+" "+str(word_count)+" accepted "+str(safety_low)+"-"+str(safety_high))
-              if ab_low<=word_count<=ab_high:
-                  print("LENGTH_AB_QC",target,slot.get("time"),"SHORT" if slot.get("time") in short_times else "LONG",word_count)
-              else:
-                  print("LENGTH_AB_OUTLIER_EXCLUDE",target,slot.get("time"),word_count,"target",str(ab_low)+"-"+str(ab_high))
+                  raise SystemExit("TEXT_WORD_COUNT_QC_FAILED "+slot.get("time","")+" "+str(word_count)+" target "+str(low)+"-"+str(high))
+              print("LENGTH_AB_QC",target,slot.get("time"),"SHORT" if slot.get("time") in short_times else "LONG",word_count)
               if weekday_re.search(text) or date_re.search(text):raise SystemExit("CALENDAR_REFERENCE "+slot.get("time",""))
               if any(ch.isalpha() and "LATIN" not in unicodedata.name(ch,"") for ch in text):
                   raise SystemExit("NON_LATIN_LETTERS "+slot.get("time",""))
