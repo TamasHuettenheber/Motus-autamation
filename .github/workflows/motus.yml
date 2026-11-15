@@ -165,7 +165,7 @@ jobs:
       - name: Select and download B-roll
         run: |
           python3 - <<'PY'
-          import hashlib, json, os
+          import hashlib, json, os, re
           from pathlib import Path
 
           def fold(s):
@@ -201,8 +201,13 @@ jobs:
               if output.endswith('-0700') and any(fold(str(tag)) in {'nacht', 'abend'} for tag in clip.get('tags', [])):
                   continue
               # Do not treat generic tags such as "alltag" as evidence of a scene match.
+              # Require an actual word or inflection. Substring matching turned
+              # "dazugelernt" into a false "zug" (train) scene and "gezielt"
+              # into a false "ziel" (planner) scene.
+              def matches_word(tag):
+                  return re.search(r'(?<![a-z])'+re.escape(tag)+r'(?:e|en|er|es|s|n)?(?![a-z])',text) is not None
               matching=[fold(str(tag)) for tag in clip.get('tags',[])
-                        if fold(str(tag)) not in generic_tags and fold(str(tag)) in text]
+                        if fold(str(tag)) not in generic_tags and matches_word(fold(str(tag)))]
               score=sum(2 if len(tag)>=6 else 1 for tag in matching)
               if workplace_scene and any(fold(str(tag)) in {'arbeit','office','planung','laptop'} for tag in clip.get('tags',[])):
                   score+=4
