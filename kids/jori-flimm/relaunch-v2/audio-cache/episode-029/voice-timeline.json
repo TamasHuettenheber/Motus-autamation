@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Noch bevor der nächste Tautropfen fiel, klingelte die erste Glockenblume über dem Wolkenteich.",
+      "start": 0.0,
+      "end": 8.48,
+      "duration": 8.48
+    },
+    {
+      "kind": "speech",
+      "text": "Jori stand mit Flimm und Luma am Rand des gläsernen Wolkenteichs. Über ihnen schwebten drei Glockenblumen. Die erste klingelte, solange ihr Tropfen noch in der Luft hing. Die zweite klingelte genau dann, wenn ihr Tropfen das Wasser berührte. Die dritte klingelte erst, als sich die Ringe auf dem Teich schon ausbreiteten. Flimm hob drei gleiche Kristallschalen an den Teichrand. Jori bat Luma, die Sternlaterne ruhig zu halten, und beobachtete drei weitere Tropfen. Jedes Mal blieb die Reihenfolge gleich: Zuerst klang die erste Blume, dann fiel der Tropfen. Die zweite klang beim Platschen, die dritte erst nach dem Platschen.",
+      "start": 8.48,
+      "end": 56.36,
+      "duration": 47.88
+    },
+    {
+      "kind": "speech",
+      "text": "Welche Glockenblume kündigt den nächsten Tropfen an: A, die vorher klingelt, B, die beim Auftreffen klingelt, oder C, die erst danach klingelt?",
+      "start": 56.36,
+      "end": 70.04,
+      "duration": 13.68
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 70.04,
+      "end": 77.04,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Glockenblume A! Nur ihr Klang kam, bevor der Tropfen fiel. B meldete das Auftreffen, C nur die vergangenen Wellen. Die erste Glockenblume öffnete ihre violetten Blätter, noch ehe der nächste Tropfen den Teich erreichte. Aus ihrem Kelch floss silberner Nebel und spannte eine leuchtende Brücke über das Wasser. Jori betrat die Nebelbrücke, Flimm hüpfte neben sie, und Luma folgte mit der Sternlaterne. Am anderen Ufer wartete ein rundes Tor aus Regenbogenstein. Vor dem Tor schwebten drei glänzende Regenbogensteine. Der erste spiegelte nur den Teich hinter ihnen. Der zweite spiegelte die Wolken über ihnen. Der dritte zeigte eine leuchtende Tür, die im echten Tor noch unsichtbar war. Welcher Stein enthüllte den verborgenen Eingang?",
+      "start": 77.04,
+      "end": 137.12,
+      "duration": 60.08
+    }
+  ],
+  "duration": 137.12,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
