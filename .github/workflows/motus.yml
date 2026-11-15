@@ -233,11 +233,10 @@ jobs:
           }
           slot=output.rsplit('-',1)[-1]
           preferred=set(slot_defaults.get(slot,()))
-          # Genuine contextual matches beat the defaults. Within the same score
-          # avoid recently used clips; at score zero prefer slot-appropriate scenery.
+          # Genuine contextual matches beat the defaults. At comparable relevance
+          # prefer scene-appropriate slot footage; penalize the recent cooldown.
           ranked.sort(key=lambda x:(x[1]==0,-(x[1]-x[0]),
-                                    (x[3]['id'] not in preferred) if x[1]==0 else False,
-                                    x[0],x[2]))
+                                    x[3]['id'] not in preferred,x[0],x[2]))
           print('BROLL_RELEVANCE_QC',[(x[3]['id'],x[1],x[0]) for x in ranked[:4]])
 
           candidates=[]
