@@ -183,7 +183,12 @@ jobs:
               history={"uses":[]}
           recent_ids=[x.get("clip_id") for x in history.get("uses",[])[-8:] if x.get("clip_id")]
           ranked=[]
-          generic_tags={'alltag','walking','city','social','bewegung'}
+          # Abstract words are not visual evidence: "Entscheidung" must not
+          # select a train/phone scene merely because its metadata contains that word.
+          generic_tags={'alltag','walking','city','social','bewegung','gedanken',
+                        'ruhe','entscheidung','beziehung','motivation','fokus',
+                        'klarheit','abstand','reflexion','stress','entspannung',
+                        'entwicklung','positiv','abend','nacht'}
           # Explicit workplace scenes outrank generic emotional scenery (future renders only).
           workplace_scene=any(cue in text for cue in ('schreibtisch','arbeitsplatz','buero','meetingraum','im team','kollege','besprechung','bewerbung','beruflich'))
           # Tie the footage to actual messaging scenes, not only to generic emotions.
@@ -208,9 +213,26 @@ jobs:
               cooldown=1 if clip['id'] in recent_ids else 0
               tie=int(hashlib.sha256((output+'|'+clip['id']).encode()).hexdigest()[:12],16)
               ranked.append((cooldown,score,tie,clip))
-          # Relevance always beats unrelated footage; among relevant scenes,
-          # prefer a fresh clip when its score is comparable.
-          ranked.sort(key=lambda x:(x[1]==0,-(x[1]-x[0]),x[0],x[2]))
+          # When no concrete scene cue matches, use a fitting neutral backdrop
+          # for this slot instead of a randomly tied and semantically unrelated clip.
+          # Distinct default pools also reduce same-day footage collisions.
+          slot_defaults={
+              '0700':('morning-writing-8085706','forest-walk-5838469',
+                      'sunrise-sea-18303443','happy-journal-6951182'),
+              '1200':('desk-thinking-5704904','work-laptop-8479274',
+                      'planner-writing-7744197','office-thinking-8873099'),
+              '1830':('night-city-13658220','phone-cafe-5075207',
+                      'rain-city-13961930','park-walk-8296235'),
+              '2200':('journal-7260657','rain-window-32661246',
+                      'sunset-ocean-7975481','night-walk-4121893'),
+          }
+          slot=output.rsplit('-',1)[-1]
+          preferred=set(slot_defaults.get(slot,()))
+          # Genuine contextual matches beat the defaults. Within the same score
+          # avoid recently used clips; at score zero prefer slot-appropriate scenery.
+          ranked.sort(key=lambda x:(x[1]==0,-(x[1]-x[0]),
+                                    (x[3]['id'] not in preferred) if x[1]==0 else False,
+                                    x[0],x[2]))
           print('BROLL_RELEVANCE_QC',[(x[3]['id'],x[1],x[0]) for x in ranked[:4]])
 
           candidates=[]
