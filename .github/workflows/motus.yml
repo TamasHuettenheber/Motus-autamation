@@ -620,19 +620,23 @@ jobs:
           if not channel:
               raise RuntimeError("TikTok channel motus614 not found")
 
-          # Idempotency: if a retry already scheduled this exact Motus media URL,
-          # remove the old scheduled copy so Buffer refetches the newly rendered file.
-          scheduled = buffer_request(
+          # Idempotent retry: existing scheduled/sent posts are read-only.
+          # Buffer may rehost sent media; also match the original slot and caption.
+          original_due_at = local_due.astimezone(timezone.utc).isoformat(
+              timespec="milliseconds"
+          ).replace("+00:00", "Z")
+          existing_posts = buffer_request(
               """
-              query ScheduledPosts($input: PostsInput!) {
+              query ExistingMotusPosts($input: PostsInput!) {
                 posts(first: 100, input: $input) {
                   edges {
                     node {
                       id
+                      text
+                      status
                       dueAt
-                      assets {
-                        source
-                      }
+                      externalLink
+                      assets { source }
                     }
                   }
                 }
@@ -642,35 +646,54 @@ jobs:
                   "input": {
                       "organizationId": org["id"],
                       "filter": {
-                          "status": ["scheduled"],
+                          "status": ["scheduled", "sent", "error"],
                           "channelIds": [channel["id"]],
                       },
+                      "sort": [
+                          {"field": "dueAt", "direction": "desc"},
+                          {"field": "createdAt", "direction": "desc"},
+                      ],
                   }
               },
           )["posts"]["edges"]
 
-          for edge in scheduled:
+          matching = []
+          slot_conflicts = []
+          for edge in existing_posts:
               post = edge["node"]
               sources = {str(a.get("source") or "") for a in (post.get("assets") or [])}
-              if media_url in sources:
-                  deleted = buffer_request(
-                      """
-                      mutation DeletePost($input: DeletePostInput!) {
-                        deletePost(input: $input) {
-                          __typename
-                          ... on DeletePostSuccess { id }
-                          ... on MutationError { message }
-                        }
-                      }
-                      """,
-                      {"input": {"id": post["id"]}},
-                  )["deletePost"]
-                  if deleted.get("__typename") != "DeletePostSuccess":
-                      raise RuntimeError(
-                          "Could not replace existing Motus scheduled post: "
-                          + json.dumps(deleted, ensure_ascii=False)
-                      )
-                  print("Removed previous scheduled copy:", post["id"])
+              same_media = media_url in sources
+              same_slot = post.get("dueAt") == original_due_at
+              same_content = str(post.get("text") or "").startswith(base_text)
+              if same_media or (same_slot and same_content):
+                  matching.append(post)
+              elif same_slot:
+                  slot_conflicts.append(post.get("id"))
+          if len(matching) > 1 or slot_conflicts:
+              raise RuntimeError(
+                  "BUFFER_DUPLICATE_OR_SLOT_CONFLICT: matched="
+                  + json.dumps([p.get("id") for p in matching])
+                  + " conflicts=" + json.dumps(slot_conflicts)
+              )
+          if matching:
+              post = matching[0]
+              if post.get("dueAt") != original_due_at:
+                  raise RuntimeError(
+                      f"BUFFER_EXISTING_DUE_MISMATCH: id={post.get('id')} "
+                      f"expected={original_due_at} actual={post.get('dueAt')}"
+                  )
+              if post.get("status") == "scheduled":
+                  print("BUFFER_POST_ALREADY_SCHEDULED:", post["id"], original_due_at)
+                  raise SystemExit(0)
+              if post.get("status") == "sent":
+                  link = str(post.get("externalLink") or "")
+                  if not re.match(r"^https://(?:www\.)?tiktok\.com/@", link):
+                      raise RuntimeError("BUFFER_ALREADY_SENT_UNVERIFIED: " + post["id"])
+                  print("BUFFER_POST_ALREADY_SENT:", post["id"], link)
+                  raise SystemExit(0)
+              raise RuntimeError(
+                  "BUFFER_EXISTING_STATUS_REQUIRES_RECOVERY: " + str(post.get("status"))
+              )
 
           create_query = """
               mutation CreatePost($input: CreatePostInput!) {
