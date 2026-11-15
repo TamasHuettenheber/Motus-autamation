@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-15T17:01:34.575788+00:00",
+  "checked_at_utc": "2026-11-15T17:57:32.210039+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6af79968d16af15d4ddc4003",
       "text": "Eine Einladung freut dich, doch du brauchst heute auch Zeit für dich. Antworte freundlich und klar. Nähe muss nicht bedeuten, jederzeit verfügbar zu sein. Wer genauer hinsieht, entdeckt oft mehr Möglichkeiten als zunächst sichtbar waren. Gib dir dafür einen Moment Zeit. Dein Wert hängt nicht davon ab, ob andere sofort zustimmen. Entscheidend ist, wie respektvoll du deinen Weg gehst. Speichere diesen Gedanken für deinen nächsten schwierigen Moment.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Home (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-15T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-15T17:33:12.553Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7708452130838875425",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-15-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af79968d16af15d4ddc4003_video.mp4"
         }
       ]
     },
