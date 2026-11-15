@@ -45,3 +45,27 @@
 
 **Nächste Voraussetzung:** Nächsten tatsächlichen Night-Producer-Run mit Issue für 17.11. abgleichen; bei neuem Fehler Ursache, Run-ID und fehlgeschlagene Stufe belegen. Bereits veröffentlichte oder eingeplante Beiträge nicht verändern.
 
+
+## MOTUS-T-20261116-NIGHT-SCHEDULE-ABNAHME
+**Besitzer:** MOTUS – Technik & Reparatur  
+**Status:** ERLEDIGT (automatische Nachtproduktion 17.11. abgeschlossen; keine manuelle Recovery)  
+**Geprüft:** 2026-11-16 ca. 00:50 Europe/Berlin (2026-11-15 23:50 UTC); GitHub-Laufzeiten separat unten  
+
+**Ausgangslage:** Voriger Stand MOTUS-T-20261115-NIGHT-SCHEDULE: reguläres Tages-Issue 17.11. um 22:57 MEZ noch nicht erzeugt; GitHub-Schedule verspätet, kein belegter Laufabbruch. Kein eigener Produzent gestartet. Der vorhandene GitHub-Night-Producer [43776395115](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/43776395115) lief am 16.11. 00:44 MEZ durch; Issue [#109](https://github.com/TamasHuettenheber/Motus-autamation/issues/109) wurde 2026-11-15T23:44:12Z angelegt und 23:49:40Z mit `MOTUS_DAY_COMPLETE` geschlossen. Tages-Dispatcher [43776409283](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/43776409283) erfolgreich; vier einzelne Renderer-Jobs und Abschlussabgleich [43776872457](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/43776872457) erfolgreich.
+
+**Zielnachweis D+1 (17.11.2026):** Direkter Buffer-Abgleich im erfolgreichen Batch-Reconcile um 2026-11-15T23:49:40Z; zugehörige Produktionslogs enthalten Post-IDs, dueAt und `BUFFER_POST_SCHEDULED` auf TikTok-Kanal `motus614` (`6ab5124fea19ca0bded4aa0b`). Kein `sent` und noch kein `externalLink` beansprucht, da Termine künftig sind:
+
+| Slot MEZ | Run-ID | Post-ID | dueAt UTC | Status / MP4 |
+|---|---|---|---|---|
+| 07:00 | 43776428587 | 6afa44b8d7e5fee6388a5c26 | 2026-11-17T06:00:00.000Z | scheduled / motus-2026-11-17-0700.mp4 (9.946.628 Bytes) |
+| 12:00 | 43776429960 | 6afa450460a910801c56d2e9 | 2026-11-17T11:00:00.000Z | scheduled / motus-2026-11-17-1200.mp4 (6.119.077 Bytes) |
+| 18:30 | 43776431760 | 6afa449506e1675856b36371 | 2026-11-17T17:30:00.000Z | scheduled / motus-2026-11-17-1830.mp4 (7.686.303 Bytes) |
+| 22:00 | 43776433346 | 6afa44b3d7e5fee6388a5a48 | 2026-11-17T21:00:00.000Z | scheduled / motus-2026-11-17-2200.mp4 (4.654.537 Bytes) |
+
+**D (16.11.):** Letzter verfügbarer GitHub-Buffer-Snapshot `diagnostics/buffer-status.json` mit `checked_at_utc=2026-11-15T21:42:46.913955+00:00` enthält die vier geplanten Posts einmalig mit korrektem dueAt; alle vier MP4 existieren im GitHub-`published/`-Tree mit positiver Größe. Als zukünftige Slots zum Prüfzeitpunkt ordnungsgemäß `scheduled`, kein noch nicht fälliger Veröffentlichungsnachweis erwartet. Der spätere 17.11.-Buffer-Abgleich kommt aus dem tatsächlichen Batch-Lauf, nicht aus diesem älteren Snapshot. Kein doppelter Tagesauftrag, keine eigene reguläre Produktion, keine Poständerung.
+
+**Sprach-/QC-Befund:** Alle vier Renderer erfolgreich, Logmarker `MOTUS_ALGENIB_GENERATED` und `AUDIO_QC_PASS` in allen vier Jobs; `BROLL_RELEVANCE_QC` liegt vor (Top-Wert 0 für 07:00 und 12:00, 2 für 18:30 und 22:00). Ausschließlich Qualitätsrolle MOTUS-Q01 ist für redaktionelle Relevanzkorrekturen zuständig; keine gleichzeitige Codeänderung hier. Redaktioneller Produktionshinweis aus vorhandenen Logs, keine Aussage über Qualität der visuellen Wiedergabe außerhalb QC.
+
+**Technisches Postfach / Zugriff:** AgentMail-Nachrichten seit 15.11. 12:00 UTC geprüft: acht neue GitHub-Frantic-Board-Benachrichtigungen, keine neue inhaltliche MOTUS-Behörden-/Kundenantwort. Browser-Connector scheitert konkret am fehlenden `originating browser context`; Desktop Commander zeigt nur Gerät `Rezeption`, offline; ausdrücklich nicht verwendet. Dieser Befund widerlegt nicht die Nutzerangabe zur ChatGPT-Workstation. Pipedream-422 bleibt als externer Mapping-Fall unverändert, nicht in die funktionierende Tagesproduktion eingreifen.
+
+**Nächster Prüfschritt:** D/D+1 ab erstem fälligen Veröffentlichungszeitpunkt mit frischem Buffer-`checked_at` und tatsächlichem `sent`+`externalLink` nachweisen; GitHub-interne 05:00-Kontrolle unberührt, danach Duplikate prüfen. Ein erneut verspäteter GitHub-Cron ohne materielles Fristrisiko ist für sich kein Benutzeralarm.
