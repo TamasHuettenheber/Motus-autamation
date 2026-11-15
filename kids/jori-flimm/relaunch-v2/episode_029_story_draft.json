@@ -1,0 +1,87 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 29,
+  "series_version": "relaunch-v2",
+  "title": "Die Blume, die vorher klingelte",
+  "hook": "Noch bevor der nächste Tautropfen fiel, klingelte die erste Glockenblume über dem Wolkenteich.",
+  "story": "Jori stand mit Flimm und Luma am Rand des gläsernen Wolkenteichs. Über ihnen schwebten drei Glockenblumen. Die erste klingelte, solange ihr Tropfen noch in der Luft hing. Die zweite klingelte genau dann, wenn ihr Tropfen das Wasser berührte. Die dritte klingelte erst, als sich die Ringe auf dem Teich schon ausbreiteten. Flimm hob drei gleiche Kristallschalen an den Teichrand. Jori bat Luma, die Sternlaterne ruhig zu halten, und beobachtete drei weitere Tropfen. Jedes Mal blieb die Reihenfolge gleich: Zuerst klang die erste Blume, dann fiel der Tropfen. Die zweite klang beim Platschen, die dritte erst nach dem Platschen.",
+  "question": "Welche Glockenblume kündigt den nächsten Tropfen an: A, die vorher klingelt, B, die beim Auftreffen klingelt, oder C, die erst danach klingelt?",
+  "answer": "Glockenblume A!",
+  "after": "Glockenblume A! Nur ihr Klang kam, bevor der Tropfen fiel. B meldete das Auftreffen, C nur die vergangenen Wellen. Die erste Glockenblume öffnete ihre violetten Blätter, noch ehe der nächste Tropfen den Teich erreichte. Aus ihrem Kelch floss silberner Nebel und spannte eine leuchtende Brücke über das Wasser. Jori betrat die Nebelbrücke, Flimm hüpfte neben sie, und Luma folgte mit der Sternlaterne. Am anderen Ufer wartete ein rundes Tor aus Regenbogenstein.",
+  "cliff": "Vor dem Tor schwebten drei glänzende Regenbogensteine. Der erste spiegelte nur den Teich hinter ihnen. Der zweite spiegelte die Wolken über ihnen. Der dritte zeigte eine leuchtende Tür, die im echten Tor noch unsichtbar war. Welcher Stein enthüllte den verborgenen Eingang?",
+  "riddle": {
+    "type": "before_during_after_logic",
+    "question": "Welche Glockenblume kündigt den nächsten Tropfen an: A, die vorher klingelt, B, die beim Auftreffen klingelt, oder C, die erst danach klingelt?",
+    "answer": "Glockenblume A",
+    "evidence_in_story": "A klingelt vor dem Fall, B beim Auftreffen und C erst nach dem Auftreffen. Nur A kündigt ein kommendes Ereignis an.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "compare_event_timing",
+  "clues": [
+    "A: Klingelt vor dem Tropfen",
+    "B: Klingelt beim Auftreffen",
+    "C: Klingelt nach dem Auftreffen",
+    "Ankündigen heißt: vorher"
+  ],
+  "correct": 0,
+  "puzzle_visual": "Drei klar getrennte Glockenblumen: A klingelt bei noch schwebendem Tropfen, B beim Wasserkontakt, C erst bei sichtbaren Wellen. Rätselschild, Frage und Hinweise vollständig zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt ohne Zeitsprung bei den drei Glockenblumen über dem Wolkenteich aus Folge 028 an. Jori wiederholt denselben Tropfen-Test, erkennt die vorhersagende Glockenblume A und überquert mit Flimm und Luma die entstehende Nebelbrücke.",
+  "narration": "Noch bevor der nächste Tautropfen fiel, klingelte die erste Glockenblume über dem Wolkenteich. [[SEGMENT]] Jori stand mit Flimm und Luma am Rand des gläsernen Wolkenteichs. Über ihnen schwebten drei Glockenblumen. Die erste klingelte, solange ihr Tropfen noch in der Luft hing. Die zweite klingelte genau dann, wenn ihr Tropfen das Wasser berührte. Die dritte klingelte erst, als sich die Ringe auf dem Teich schon ausbreiteten. Flimm hob drei gleiche Kristallschalen an den Teichrand. Jori bat Luma, die Sternlaterne ruhig zu halten, und beobachtete drei weitere Tropfen. Jedes Mal blieb die Reihenfolge gleich: Zuerst klang die erste Blume, dann fiel der Tropfen. Die zweite klang beim Platschen, die dritte erst nach dem Platschen. [[SEGMENT]] Welche Glockenblume kündigt den nächsten Tropfen an: A, die vorher klingelt, B, die beim Auftreffen klingelt, oder C, die erst danach klingelt? [[PAUSE:7]] Glockenblume A! Nur ihr Klang kam, bevor der Tropfen fiel. B meldete das Auftreffen, C nur die vergangenen Wellen. Die erste Glockenblume öffnete ihre violetten Blätter, noch ehe der nächste Tropfen den Teich erreichte. Aus ihrem Kelch floss silberner Nebel und spannte eine leuchtende Brücke über das Wasser. Jori betrat die Nebelbrücke, Flimm hüpfte neben sie, und Luma folgte mit der Sternlaterne. Am anderen Ufer wartete ein rundes Tor aus Regenbogenstein. Vor dem Tor schwebten drei glänzende Regenbogensteine. Der erste spiegelte nur den Teich hinter ihnen. Der zweite spiegelte die Wolken über ihnen. Der dritte zeigte eine leuchtende Tür, die im echten Tor noch unsichtbar war. Welcher Stein enthüllte den verborgenen Eingang?",
+  "narration_tts": "Noch bevor der nächste Tautropfen fiel, klingelte die erste Glockenblume über dem Wolkenteich. [[SEGMENT]] Jori stand mit Flimm und Luma am Rand des gläsernen Wolkenteichs. Über ihnen schwebten drei Glockenblumen. Die erste klingelte, solange ihr Tropfen noch in der Luft hing. Die zweite klingelte genau dann, wenn ihr Tropfen das Wasser berührte. Die dritte klingelte erst, als sich die Ringe auf dem Teich schon ausbreiteten. Flimm hob drei gleiche Kristallschalen an den Teichrand. Jori bat Luma, die Sternlaterne ruhig zu halten, und beobachtete drei weitere Tropfen. Jedes Mal blieb die Reihenfolge gleich: Zuerst klang die erste Blume, dann fiel der Tropfen. Die zweite klang beim Platschen, die dritte erst nach dem Platschen. [[SEGMENT]] Welche Glockenblume kündigt den nächsten Tropfen an: A, die vorher klingelt, B, die beim Auftreffen klingelt, oder C, die erst danach klingelt? [[PAUSE:7]] Glockenblume A! Nur ihr Klang kam, bevor der Tropfen fiel. B meldete das Auftreffen, C nur die vergangenen Wellen. Die erste Glockenblume öffnete ihre violetten Blätter, noch ehe der nächste Tropfen den Teich erreichte. Aus ihrem Kelch floss silberner Nebel und spannte eine leuchtende Brücke über das Wasser. Jori betrat die Nebelbrücke, Flimm hüpfte neben sie, und Luma folgte mit der Sternlaterne. Am anderen Ufer wartete ein rundes Tor aus Regenbogenstein. Vor dem Tor schwebten drei glänzende Regenbogensteine. Der erste spiegelte nur den Teich hinter ihnen. Der zweite spiegelte die Wolken über ihnen. Der dritte zeigte eine leuchtende Tür, die im echten Tor noch unsichtbar war. Welcher Stein enthüllte den verborgenen Eingang?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss am gläsernen Wolkenteich mit drei Glockenblumen und fallenden Tautropfen.",
+    "Jori lässt mit drei gleichen Kristallschalen denselben Test für alle Blumen durchführen.",
+    "A klingelt vor dem Fall, B beim Auftreffen, C erst bei den Wellen; die Reihenfolge bleibt bei Wiederholung gleich.",
+    "Ruhiger Wolkenteich mit drei klar getrennten Zeitpunkten und freier Fläche für das TikTok-sichere Rätsel.",
+    "Lösung: Glockenblume A öffnet sich vor dem Tropfen und erzeugt eine silberne Nebelbrücke.",
+    "Jori, Flimm und Luma überqueren die Nebelbrücke zu einem Regenbogensteintor.",
+    "Cliffhanger am Tor mit drei Spiegelsteinen, von denen nur einer eine noch unsichtbare Tür zeigt."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-029-v1/scene-01.jpg",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-029-v1/scene-02.jpg",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-029-v1/scene-03.jpg",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-029-v1/scene-04.jpg",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-029-v1/scene-05.jpg",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-029-v1/scene-06.jpg",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-029-v1/scene-07.jpg",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-15T08:20:00+01:00",
+  "status": "STORY_AND_ART_READY_TTS_PENDING",
+  "previous_cliffhanger": "Über dem Wolkenteich schwebten drei Glockenblumen. Die erste klingelte vor jedem fallenden Tautropfen, die zweite genau beim Auftreffen, die dritte erst danach. Welche Blume wusste, wann der nächste Tropfen kam?"
+}
