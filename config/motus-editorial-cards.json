@@ -345,5 +345,157 @@
         "motif": "zuhoeren"
       }
     ]
+  },
+  "insights": {
+    "ablehnung": [
+      "Eine Absage kann schmerzen, ohne dein Können vollständig abzubilden.",
+      "Frage nach einem konkreten Grund, bevor du die Entscheidung als Urteil über dich verstehst.",
+      "So bleibt dein Blick auf neue Chancen offen."
+    ],
+    "anerkennung": [
+      "Gesehen zu werden ist ein menschliches Bedürfnis und kein Zeichen von Eitelkeit.",
+      "Benenne konkrete Leistungen, damit Lob oder Kritik nicht in vagen Floskeln hängen bleiben.",
+      "Echte Wertschätzung braucht konkrete Worte."
+    ],
+    "beziehungen": [
+      "Verlässliche Beziehungen wachsen durch kleine, ehrlich gemeinte Kontakte.",
+      "Du musst dafür keine große Geste planen; Aufmerksamkeit und echtes Interesse sind oft wertvoller.",
+      "Nähe beginnt häufig mit ehrlicher Aufmerksamkeit."
+    ],
+    "dankbarkeit": [
+      "Ein guter Augenblick wird nicht kleiner, nur weil gleichzeitig anderes schwierig war.",
+      "Wenn du ihn bewusst wahrnimmst, erinnerst du dich an mehr als bloße To-do-Listen.",
+      "Auch leise Momente dürfen zählen."
+    ],
+    "entscheidung": [
+      "Eine Entscheidung kann vernünftig sein und sich trotzdem zunächst ungewohnt anfühlen.",
+      "Gib deiner Wahl Raum, bevor du sie allein wegen eines kurzen Zweifels wieder verwirfst.",
+      "Nicht jedes Zögern bedeutet einen Irrtum."
+    ],
+    "fairness": [
+      "Wer über Abwesende spricht, prägt das Vertrauen aller Anwesenden.",
+      "Bleibe bei überprüfbarem Verhalten und kläre strittige Punkte möglichst direkt mit der betroffenen Person.",
+      "So schützt du die Würde aller Beteiligten."
+    ],
+    "fehler": [
+      "Ein Fehler beschreibt einen konkreten Vorgang, nicht deinen gesamten Charakter.",
+      "Sobald du die Ursache verstanden hast, bringt ein korrigierender Schritt mehr als ständiges Selbstanklagen.",
+      "Aus Einsicht kann eine Änderung entstehen."
+    ],
+    "fortschritt": [
+      "Nicht jede Verbesserung ist spektakulär oder sofort messbar.",
+      "Ein kleiner, nachprüfbarer Fortschritt kann zeigen, was bereits funktioniert und worauf ihr aufbauen könnt.",
+      "Fortschritt darf auch unscheinbar sein."
+    ],
+    "grenzen": [
+      "Eine freundliche Grenze schützt Zeit und Vertrauen zugleich.",
+      "Wer die eigenen Möglichkeiten ehrlich ausspricht, verspricht weniger, hält dafür aber mehr ein.",
+      "Klarheit ist freundlicher als Ausweichen."
+    ],
+    "ideen": [
+      "Unfertige Ideen müssen nicht perfekt klingen, um wertvoll zu sein.",
+      "Ein erster Entwurf macht deine Gedanken überprüfbar und eröffnet dir Rückmeldungen, die bloßes Grübeln nicht liefert.",
+      "Rückmeldungen machen neue Wege sichtbar."
+    ],
+    "klarheit": [
+      "Viele Missverständnisse beginnen nicht mit böser Absicht, sondern mit unklaren Erwartungen.",
+      "Eine präzise Rückfrage kann unnötige Arbeit verhindern und allen Beteiligten ein gemeinsames Ziel geben.",
+      "Eine klare Frage verändert oft alles."
+    ],
+    "kommunikation": [
+      "Geschriebene Worte lassen Tonfall und Absicht oft offen.",
+      "Ein kurzes persönliches Nachfragen kann mehr Klarheit schaffen als mehrere gereizte Nachrichten hintereinander.",
+      "Verständigung braucht manchmal einen echten Dialog."
+    ],
+    "konflikt": [
+      "Ein Streit wird leichter lösbar, wenn ihr Verhalten und Persönlichkeit voneinander trennt.",
+      "Suche nach dem eigentlichen Anliegen, statt den letzten Satz oder den Sieg im Gespräch zu erzwingen.",
+      "Das macht wieder Raum für Lösungen."
+    ],
+    "kritik": [
+      "Kritik verdient eine Prüfung, aber nicht automatisch deine Zustimmung.",
+      "Mit einer konkreten Nachfrage findest du heraus, ob ein hilfreicher Hinweis oder nur ein pauschaler Vorwurf dahintersteht.",
+      "Nachfragen schafft Abstand zum ersten Gefühl."
+    ],
+    "kurswechsel": [
+      "Neue Erkenntnisse verändern manchmal die Ausgangslage einer Entscheidung.",
+      "Wenn du deinen Grund dafür klar benennen kannst, ist ein Kurswechsel eher Anpassungsfähigkeit als Schwäche.",
+      "Ein neuer Weg darf sinnvoll sein."
+    ],
+    "lernen": [
+      "Wer Neues versucht, erlebt zwangsläufig ungewohnte und unperfekte Momente.",
+      "Beurteile nicht nur das Ergebnis, sondern auch die Frage, was du beim nächsten Versuch besser machen kannst.",
+      "Lernen beginnt selten mit Perfektion."
+    ],
+    "mut": [
+      "Mut heißt nicht, dass Zweifel plötzlich verschwinden.",
+      "Du kannst die Unsicherheit wahrnehmen und trotzdem freundlich, sachlich und entschlossen den nächsten Schritt wagen.",
+      "Du darfst trotz Zweifel handeln."
+    ],
+    "perspektive": [
+      "Eine fremde Sichtweise muss deine eigene Überzeugung nicht ersetzen.",
+      "Wenn du nach ihren Gründen fragst, erkennst du vielleicht einen Aspekt, den du bislang übersehen hast.",
+      "Neugier schafft neue Blickwinkel."
+    ],
+    "planung": [
+      "Ein großer Plan wirkt oft schwerer, solange der nächste überprüfbare Schritt fehlt.",
+      "Definiere zuerst, woran du einen vernünftigen Anfang erkennst, bevor du hektisch alles gleichzeitig angehst.",
+      "Klarheit gibt deinem Handeln Richtung."
+    ],
+    "prioritaet": [
+      "Dringlichkeit und Bedeutung sind nicht dasselbe.",
+      "Prüfe, welche Entscheidung echte Folgen für andere hat, statt allein dem lautesten Signal zu folgen.",
+      "Wirkung zählt mehr als Lautstärke."
+    ],
+    "respekt": [
+      "Andere dürfen zu einer anderen Entscheidung gelangen als du.",
+      "Du kannst Interesse an ihren Beweggründen zeigen, ohne dein eigenes Urteil aufzugeben oder ungefragte Ratschläge aufzudrängen.",
+      "Respekt braucht nicht immer Zustimmung."
+    ],
+    "sorgen": [
+      "Nicht jeder beunruhigende Gedanke beschreibt etwas, das tatsächlich eintreten wird.",
+      "Unterscheide zwischen einem Problem, das du beeinflussen kannst, und einer Vorstellung, die noch gar nicht bestätigt ist.",
+      "Nicht jeder Gedanke ist eine Tatsache."
+    ],
+    "team": [
+      "Eine gute Besprechung braucht am Ende mehr als viele Wortmeldungen.",
+      "Fasse die gemeinsam getroffenen Entscheidungen zusammen und kläre, wer welchen nächsten Schritt wirklich übernimmt.",
+      "Verantwortung braucht eine klare Absprache."
+    ],
+    "umsetzung": [
+      "Eine Idee wird erst wertvoll, wenn ein sinnvoller nächster Schritt daraus folgt.",
+      "Kläre Wirkung, Aufwand und Verantwortung, statt immer neue Vorschläge ohne konkreten Anfang zu sammeln.",
+      "Ein guter Anfang macht Ideen greifbar."
+    ],
+    "unsicherheit": [
+      "Wo Informationen fehlen, erfindet unser Kopf gern plausible, aber ungeprüfte Erklärungen.",
+      "Eine offene Frage oder das Eingeständnis einer Wissenslücke ist oft ehrlicher als vorschnelle Gewissheit.",
+      "Ungewissheit verlangt nicht immer sofort Antworten."
+    ],
+    "verantwortung": [
+      "Neue Verantwortung beginnt selten erst dann, wenn du dich vollkommen sicher fühlst.",
+      "Übernimm eine Aufgabe in einem realistischen Rahmen und lerne aus der Erfahrung, statt auf perfekte Sicherheit zu warten.",
+      "Verantwortung wächst durch echtes Handeln."
+    ],
+    "vergleich": [
+      "Ein Vergleich zeigt meist nur sichtbare Ergebnisse, nicht den Weg dorthin.",
+      "Frage dich lieber, was sich bei dir selbst verändert hat und welchen Fortschritt du wirklich anstrebst.",
+      "Dein Maßstab darf dein eigener sein."
+    ],
+    "ziele": [
+      "Ein fremdes Ideal kann vernünftig wirken und trotzdem nicht zu deinen Werten passen.",
+      "Frage nach deinem eigentlichen Motiv, bevor du immer mehr Energie in ein Ziel investierst, das andere gewählt haben.",
+      "Deine Ziele brauchen deine eigene Zustimmung."
+    ],
+    "zuhoeren": [
+      "Wer sofort antwortet, übersieht manchmal, worum es dem anderen wirklich geht.",
+      "Eine offene Frage und ein kurzer Moment Stille können mehr Nähe schaffen als ein gut gemeinter Rat.",
+      "Zuhören ist eine bewusste Entscheidung."
+    ],
+    "zusagen": [
+      "Eine Zusage schafft Erwartungen, auf die andere sich verlassen.",
+      "Wenn eine Frist unrealistisch wird, schützt eine frühzeitige ehrliche Rückmeldung das Vertrauen besser als stilles Hoffen.",
+      "Ehrlichkeit macht Verabredungen verlässlich."
+    ]
   }
 }
