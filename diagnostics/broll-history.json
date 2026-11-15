@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-23-2200",
-      "clip_id": "forest-walk-5838174",
-      "source": "https://www.pexels.com/video/vertical-video-of-a-woman-walking-alone-through-the-forest-5838174/",
-      "used_at_utc": "2026-10-22T06:48:54.192517+00:00"
-    },
-    {
       "output_name": "motus-2026-10-23-1200",
       "clip_id": "planner-writing-7744197",
       "source": "https://www.pexels.com/video/woman-writing-on-a-notebook-at-the-office-7744197/",
@@ -599,6 +593,12 @@
       "clip_id": "work-laptop-8479274",
       "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
       "used_at_utc": "2026-11-15T23:47:31.090536+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-17-0700",
+      "clip_id": "happy-journal-6951182",
+      "source": "https://www.pexels.com/video/happy-woman-writing-in-journal-6951182/",
+      "used_at_utc": "2026-11-15T23:47:41.363568+00:00"
     }
   ]
 }
