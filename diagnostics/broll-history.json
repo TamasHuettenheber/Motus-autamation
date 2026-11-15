@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-22-1200",
-      "clip_id": "phone-cafe-5075207",
-      "source": "https://www.pexels.com/video/a-woman-is-using-her-phone-to-take-a-picture-of-her-coffee-5075207/",
-      "used_at_utc": "2026-10-21T06:56:03.280065+00:00"
-    },
-    {
       "output_name": "motus-2026-10-23-1830",
       "clip_id": "happy-journal-6951182",
       "source": "https://www.pexels.com/video/happy-woman-writing-in-journal-6951182/",
@@ -599,6 +593,12 @@
       "clip_id": "night-walk-4121893",
       "source": "https://www.pexels.com/video/a-person-walking-in-the-street-at-night-4121893/",
       "used_at_utc": "2026-11-15T00:14:11.402839+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-16-1200",
+      "clip_id": "desk-thinking-5704904",
+      "source": "https://www.pexels.com/video/woman-working-on-the-desk-5704904/",
+      "used_at_utc": "2026-11-15T00:14:25.483218+00:00"
     }
   ]
 }
