@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-15T01:48:43.554675+00:00",
+  "checked_at_utc": "2026-11-15T08:25:52.855823+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6af799614b28296eb11f951e",
       "text": "Du willst wieder Ja sagen, obwohl dein Kalender bereits voll ist. Prüfe zuerst deine Möglichkeiten. Ehrliche Zusagen sind wertvoller als reflexhafte Zustimmung. Veränderung braucht keine große Bühne. Oft beginnt sie in einem einzigen Gespräch, das du bewusst anders führst. Du musst dafür nicht perfekt sein. Wichtig ist, dass deine Entscheidung zu deinen Werten passt und du bewusst handelst. Folge MOTUS für neue Gedanken über Mut, Klarheit und Selbstvertrauen.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Daybreak (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-15T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-15T06:02:20.759Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7708274118784797985",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-15-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af799614b28296eb11f951e_video.mp4"
         }
       ]
     },
