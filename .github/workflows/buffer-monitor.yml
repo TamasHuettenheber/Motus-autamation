@@ -221,3 +221,4 @@ jobs:
           exit 1
 # manual verification trigger 2026-10-05 after recovery publish
 # Read-only status refresh trigger, 2026-11-02. No publishing, renderer or scheduling changes.
+# One-off read-only MOTUS Buffer publication-status refresh 2026-11-15 after hourly schedule lag; no rendering or scheduling.
