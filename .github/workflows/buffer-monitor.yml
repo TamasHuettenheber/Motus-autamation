@@ -224,3 +224,4 @@ jobs:
 # One-off read-only MOTUS Buffer publication-status refresh 2026-11-15 after hourly schedule lag; no rendering or scheduling.
 # MOTUS tech read-only post-12:00 publication status refresh 2026-11-15; no content, scheduling or production changes.
 # MOTUS tech read-only 18:30 publication status refresh 2026-11-15; no production or post mutations.
+# One-off read-only Buffer status verification after 2026-11-16 07:00 Europe/Berlin; no video production or post changes.
