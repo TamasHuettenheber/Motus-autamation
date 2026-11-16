@@ -123,7 +123,7 @@ for i,(a,b,rendered) in enumerate(cues):
  if b-a>.08:header+=f'Dialogue: 0,{ts(a)},{ts(b)},Child,,0,0,0,,{rendered}\n';visible.extend(re.findall(r'\w+',rendered.replace('\\N',' ').lower()))
 assert visible==expected_words,(len(visible),len(expected_words))
 sub=W/'captions.ass';sub.write_text(header)
-output=ROOT/'published/jori-flimm-2026-11-19-e030-v1.mp4';output.parent.mkdir(exist_ok=True)
+output=ROOT/'published/jori-flimm-2026-11-20-e030-v1.mp4';output.parent.mkdir(exist_ok=True)
 cmd('ffmpeg','-nostdin','-y','-loglevel','error','-i',video,'-i',audio,'-filter_complex',f'[0:v]ass={sub}[v]','-map','[v]','-map','1:a','-c:v','libx264','-preset','veryfast','-crf','21','-pix_fmt','yuv420p','-r','24','-c:a','aac','-b:a','192k','-movflags','+faststart','-shortest',output)
 rendered=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','default=noprint_wrappers=1:nokey=1',str(output)],text=True).strip())
 assert output.stat().st_size>1_000_000 and abs(rendered-D)<.25
