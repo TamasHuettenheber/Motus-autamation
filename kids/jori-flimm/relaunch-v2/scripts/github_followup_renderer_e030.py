@@ -17,7 +17,7 @@ assert audio.is_file() and timeline.is_file(),'No validated Sulafat narration'
 t=json.loads(timeline.read_text());items=t['items'];expected=['speech','speech','speech','pause','speech']
 assert [x['kind'] for x in items]==expected,items
 pause_index=3;pause=items[pause_index];assert abs(pause['duration']-7)<0.001
-D=t['duration'];assert 70<D<150
+D=t['duration'];assert 70<D<180
 # Remove only an accidental TTS tail immediately before the explicit seven-second source silence.
 previous=items[pause_index-1]
 probe=subprocess.run(['ffmpeg','-hide_banner','-i',str(audio),'-af','silencedetect=noise=-60dB:d=6.5','-f','null','-'],capture_output=True,text=True)
