@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-15T21:42:46.913955+00:00",
+  "checked_at_utc": "2026-11-16T01:54:44.175482+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6afa44b3d7e5fee6388a5a48",
+      "text": "Zwischen all den offenen Aufgaben ist ein schöner Moment fast untergegangen. Erinnere dich bewusst an eine Begegnung, die dir gutgetan hat. Ein Tag hat mehr als eine Geschichte. Was hat dir in so einem Moment geholfen? Kommentiere deine Erfahrung.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-17T21:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-17-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6afa449506e1675856b36371",
+      "text": "Jemand hat im Hintergrund viel geleistet und kaum Anerkennung bekommen. Sag konkret, was dir geholfen hat. Ein ehrlicher Dank macht unsichtbare Arbeit sichtbar. Gesehen zu werden ist ein menschliches Bedürfnis und kein Zeichen von Eitelkeit. Benenne konkrete Leistungen, damit Lob oder Kritik nicht in vagen Floskeln hängen bleiben. Wenn Anerkennung konkret wird, wissen alle Beteiligten genauer, welches Verhalten sie künftig beibehalten möchten. Wenn dich diese Perspektive anspricht, folge MOTUS für mehr.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-17T17:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-17-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6afa450460a910801c56d2e9",
+      "text": "Ein Kunde ist verärgert und du möchtest sofort eine Ausrede anbieten. Wiederhole zuerst sein Anliegen und erkläre dann den nächsten konkreten Schritt. Zuhören schafft Vertrauen. Kennst du jemanden in dieser Lage? Teile den Beitrag mit ihm.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-17T11:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-17-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6afa44b8d7e5fee6388a5c26",
+      "text": "Ein großes Vorhaben lähmt dich, weil du nur das Endergebnis siehst. Definiere, woran du einen guten Anfang erkennst. Klarheit schlägt hektische Beschäftigung. Ein großer Plan wirkt oft schwerer, solange der nächste überprüfbare Schritt fehlt. Definiere zuerst, woran du einen vernünftigen Anfang erkennst, bevor du hektisch alles gleichzeitig angehst. Wenn du das wichtigste Ergebnis erkennst, kannst du Nebenaufgaben bewusst zurückstellen und zielgerichteter beginnen. Speichere dir diesen Gedanken für einen schwierigen Tag.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-17T06:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-17-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6af8f974c5b364e06224ab07",
       "text": "Du vergleichst dich mit jemandem und fühlst dich plötzlich weniger erfolgreich. Erinnere dich daran, was dir selbst wichtig ist. Zufriedenheit braucht eigene Maßstäbe. Es geht nicht darum, anderen etwas zu beweisen. Du entscheidest, welche Haltung du selbst vertreten möchtest. Eine ehrliche Entscheidung kann unbequem sein. Trotzdem bringt sie dich näher an das Leben, das du gestalten möchtest. Folge MOTUS für neue Gedanken über Mut, Klarheit und Selbstvertrauen.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aebae0d4cb090f0ac40f36e_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6aea5838fdaa0acca70aa98c",
-      "text": "Im Halbdunkel des Schlafzimmers wandern deine Gedanken unaufhaltsam zum morgigen Kundentermin und lassen deinen Puls spürbar steigen. Dieses endlose Durchkauen von Szenarien raubt dir wertvolle Erholung. Nimm dir stattdessen Zettel und Stift vom Nachttisch, schreibe die anstehenden Punkte kurz auf und schließe das Notizbuch demonstrativ. Damit signalisierst du deinem Kopf das offizielle Ende des Arbeitstages. Teile diesen Beitrag mit jemandem, der heute Abend ebenfalls absolute Ruhe verdient hat. #motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung Musik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-05T21:00:00.000Z",
-      "sentAt": "2026-11-05T21:04:10.355Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7704795681667501344?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aea5838fdaa0acca70aa98c_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6aea57b00a183b1b742f9cfd",
-      "text": "Deine Nachbarin klingelt an der Tür und fragt, ob du spontan ihre Pakete für das gesamte Wochenende annehmen kannst. Du merkst sofort, wie sich dein Magen zusammenzieht, weil du eigentlich absolute Ruhe brauchst. Lächle freundlich, atme tief durch und sage ganz ehrlich, dass deine Kapazitäten heute erschöpft sind. Eigene Grenzen zu setzen ist kein Egoismus, sondern pure Selbstfürsorge. Folge diesem Kanal, wenn du öfter lernen willst, freundlich aber bestimmt NEIN zu sagen. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Home (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-05T17:30:00.000Z",
-      "sentAt": "2026-11-05T17:32:34.209Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7704741331859508512?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aea57b00a183b1b742f9cfd_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6aee013f80389014664222c8",
-      "text": "Dienstplan fertig – aber kennst du die geplante Personalquote? Der Gastro-Personalkostenplaner für Excel hilft dir, bis zu 42 Schichteinträge zu erfassen, einen Arbeitgeberkostenfaktor einzustellen und die Personalquote pro Tag und Woche im Blick zu behalten. Einmalig 9,90 €: https://payhip.com/b/g8p5a #Gastronomie #Personalkosten #Dienstplanung",
-      "status": "sent",
-      "dueAt": "2026-11-05T12:02:43.000Z",
-      "sentAt": "2026-11-05T12:02:43.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7704656610861272342?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "image/webp",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aee013f80389014664222c8_thumbnail.webp"
-        }
-      ]
-    },
-    {
-      "id": "6aea56eafdaa0acca70a45e9",
-      "text": "Dein Kollege schaut schon wieder fragend in deine Richtung, obwohl du gerade mitten in einer wichtigen Aufgabe steckst. Dieses ständige Unterbrechen zieht dir die Konzentration ab wie ein Schwamm. Schließe jetzt kurz das E-Mail-Programm, setze dir hörbare Kopfhörer auf und signalisiere dadurch unmissverständlich deine ungestörte Arbeitsphase. Nutze diese klare Grenze für deine eigene Effizienz. Speichere dieses Video direkt ab, wenn dir diese Methode im Büroalltag hilft. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Crossroads (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-05T11:00:00.000Z",
-      "sentAt": "2026-11-05T11:03:06.677Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7704640928878726433?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aea56eafdaa0acca70a45e9_video.mp4"
         }
       ]
     }
