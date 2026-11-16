@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Im dritten Regenbogenstein erschien eine leuchtende Tür, obwohl das runde Tor vor Jori vollkommen glatt blieb.",
+      "start": 0.0,
+      "end": 10.0,
+      "duration": 10.0
+    },
+    {
+      "kind": "speech",
+      "text": "Jori stand mit Flimm und Luma vor dem runden Regenbogensteintor. Drei Steine schwebten davor. Stein A spiegelte den Wolkenteich hinter ihnen. Stein B spiegelte die Wolken über ihnen. Stein C zeigte eine goldene Tür mit drei Scharnieren und einem Griff. Am echten Tor war weder eine Fuge noch ein Griff zu sehen. Flimm rollte jeden Stein nacheinander durch denselben Lichtstrahl von Lumas Sternlaterne. Jori drehte alle drei auf dieselbe Stelle des Tores. Bei A wanderte nur das Bild des Teiches. Bei B zogen nur die Wolken weiter. Doch in C leuchteten Scharniere, Griff und Türumriss genau dort auf, wo der Regenbogenstein glatt aussah. Jori fuhr mit dem Finger dicht an der Linie entlang, und der verborgene Umriss antwortete mit einem goldenen Funkeln.",
+      "start": 10.0,
+      "end": 67.52,
+      "duration": 57.52
+    },
+    {
+      "kind": "speech",
+      "text": "Welcher Regenbogenstein enthüllt den verborgenen Eingang: A, der den Teich hinter ihnen spiegelt, B, der die Wolken über ihnen spiegelt, oder C, der eine leuchtende Tür im glatten Tor zeigt?",
+      "start": 67.52,
+      "end": 85.0,
+      "duration": 17.48
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 85.0,
+      "end": 92.0,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Regenbogenstein C! A spiegelte nur, was hinter ihnen lag, B nur, was über ihnen schwebte. C zeigte etwas, das ohne ihn verborgen blieb: die Tür. Jori hob Stein C in die runde Vertiefung. Drei goldene Scharniere leuchteten auf, ein Griff wurde sichtbar, und das Tor schwang lautlos nach innen. Jori trat hindurch, Flimm hüpfte an ihrer Seite, und Luma folgte mit der Sternlaterne. Im Prismenflur malten ihre Schritte bunte Spuren auf den Boden. Am Ende des Flurs schwebten drei silberne Windbänder vor einer glatten Kristallwand. Das erste wehte zurück zur offenen Tür, das zweite hing völlig still, das dritte bog sich nach oben zu einem schmalen Spalt. Welches Band zeigte, wo die verborgene Treppe begann?",
+      "start": 92.0,
+      "end": 150.48,
+      "duration": 58.48
+    }
+  ],
+  "duration": 150.48,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
