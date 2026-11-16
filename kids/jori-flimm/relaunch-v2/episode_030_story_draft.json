@@ -1,0 +1,87 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 30,
+  "series_version": "relaunch-v2",
+  "title": "Der Stein mit der unsichtbaren Tür",
+  "hook": "Im dritten Regenbogenstein erschien eine leuchtende Tür, obwohl das runde Tor vor Jori vollkommen glatt blieb.",
+  "story": "Jori stand mit Flimm und Luma vor dem runden Regenbogensteintor. Drei Steine schwebten davor. Stein A spiegelte den Wolkenteich hinter ihnen. Stein B spiegelte die Wolken über ihnen. Stein C zeigte eine goldene Tür mit drei Scharnieren und einem Griff. Am echten Tor war weder eine Fuge noch ein Griff zu sehen. Flimm rollte jeden Stein nacheinander durch denselben Lichtstrahl von Lumas Sternlaterne. Jori drehte alle drei auf dieselbe Stelle des Tores. Bei A wanderte nur das Bild des Teiches. Bei B zogen nur die Wolken weiter. Doch in C leuchteten Scharniere, Griff und Türumriss genau dort auf, wo der Regenbogenstein glatt aussah. Jori fuhr mit dem Finger dicht an der Linie entlang, und der verborgene Umriss antwortete mit einem goldenen Funkeln.",
+  "question": "Welcher Regenbogenstein enthüllt den verborgenen Eingang: A, der den Teich hinter ihnen spiegelt, B, der die Wolken über ihnen spiegelt, oder C, der eine leuchtende Tür im glatten Tor zeigt?",
+  "answer": "Regenbogenstein C!",
+  "after": "Regenbogenstein C! A spiegelte nur, was hinter ihnen lag, B nur, was über ihnen schwebte. C zeigte etwas, das ohne ihn verborgen blieb: die Tür. Jori hob Stein C in die runde Vertiefung. Drei goldene Scharniere leuchteten auf, ein Griff wurde sichtbar, und das Tor schwang lautlos nach innen. Jori trat hindurch, Flimm hüpfte an ihrer Seite, und Luma folgte mit der Sternlaterne. Im Prismenflur malten ihre Schritte bunte Spuren auf den Boden.",
+  "cliff": "Am Ende des Flurs schwebten drei silberne Windbänder vor einer glatten Kristallwand. Das erste wehte zurück zur offenen Tür, das zweite hing völlig still, das dritte bog sich nach oben zu einem schmalen Spalt. Welches Band zeigte, wo die verborgene Treppe begann?",
+  "riddle": {
+    "type": "reflection_reveals_hidden_shape",
+    "question": "Welcher Regenbogenstein enthüllt den verborgenen Eingang: A, der den Teich hinter ihnen spiegelt, B, der die Wolken über ihnen spiegelt, oder C, der eine leuchtende Tür im glatten Tor zeigt?",
+    "answer": "Regenbogenstein C",
+    "evidence_in_story": "A spiegelt nur den Teich hinter ihnen, B nur die Wolken über ihnen. C zeigt als einziger eine Tür, die am echten Tor verborgen ist.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "compare_reflection_to_hidden_detail",
+  "clues": [
+    "A: Spiegelt den Teich dahinter",
+    "B: Spiegelt die Wolken darüber",
+    "C: Zeigt die verborgene Tür",
+    "Gesucht: verborgener Eingang"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Drei klar getrennte Regenbogensteine: A zeigt den Teich, B zeigt Wolken, C zeigt eine goldene Tür mit Griff und Scharnieren. Rätselschild, Frage und Hinweise vollständig zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt ohne Zeitsprung am Regenbogensteintor aus Folge 029 an. Jori prüft alle drei Steine an derselben Stelle, erkennt Stein C als Enthüller der unsichtbaren Tür und betritt mit Flimm und Luma den Prismenflur.",
+  "narration": "Im dritten Regenbogenstein erschien eine leuchtende Tür, obwohl das runde Tor vor Jori vollkommen glatt blieb. [[SEGMENT]] Jori stand mit Flimm und Luma vor dem runden Regenbogensteintor. Drei Steine schwebten davor. Stein A spiegelte den Wolkenteich hinter ihnen. Stein B spiegelte die Wolken über ihnen. Stein C zeigte eine goldene Tür mit drei Scharnieren und einem Griff. Am echten Tor war weder eine Fuge noch ein Griff zu sehen. Flimm rollte jeden Stein nacheinander durch denselben Lichtstrahl von Lumas Sternlaterne. Jori drehte alle drei auf dieselbe Stelle des Tores. Bei A wanderte nur das Bild des Teiches. Bei B zogen nur die Wolken weiter. Doch in C leuchteten Scharniere, Griff und Türumriss genau dort auf, wo der Regenbogenstein glatt aussah. Jori fuhr mit dem Finger dicht an der Linie entlang, und der verborgene Umriss antwortete mit einem goldenen Funkeln. [[SEGMENT]] Welcher Regenbogenstein enthüllt den verborgenen Eingang: A, der den Teich hinter ihnen spiegelt, B, der die Wolken über ihnen spiegelt, oder C, der eine leuchtende Tür im glatten Tor zeigt? [[PAUSE:7]] Regenbogenstein C! A spiegelte nur, was hinter ihnen lag, B nur, was über ihnen schwebte. C zeigte etwas, das ohne ihn verborgen blieb: die Tür. Jori hob Stein C in die runde Vertiefung. Drei goldene Scharniere leuchteten auf, ein Griff wurde sichtbar, und das Tor schwang lautlos nach innen. Jori trat hindurch, Flimm hüpfte an ihrer Seite, und Luma folgte mit der Sternlaterne. Im Prismenflur malten ihre Schritte bunte Spuren auf den Boden. Am Ende des Flurs schwebten drei silberne Windbänder vor einer glatten Kristallwand. Das erste wehte zurück zur offenen Tür, das zweite hing völlig still, das dritte bog sich nach oben zu einem schmalen Spalt. Welches Band zeigte, wo die verborgene Treppe begann?",
+  "narration_tts": "Im dritten Regenbogenstein erschien eine leuchtende Tür, obwohl das runde Tor vor Jori vollkommen glatt blieb. [[SEGMENT]] Jori stand mit Flimm und Luma vor dem runden Regenbogensteintor. Drei Steine schwebten davor. Stein A spiegelte den Wolkenteich hinter ihnen. Stein B spiegelte die Wolken über ihnen. Stein C zeigte eine goldene Tür mit drei Scharnieren und einem Griff. Am echten Tor war weder eine Fuge noch ein Griff zu sehen. Flimm rollte jeden Stein nacheinander durch denselben Lichtstrahl von Lumas Sternlaterne. Jori drehte alle drei auf dieselbe Stelle des Tores. Bei A wanderte nur das Bild des Teiches. Bei B zogen nur die Wolken weiter. Doch in C leuchteten Scharniere, Griff und Türumriss genau dort auf, wo der Regenbogenstein glatt aussah. Jori fuhr mit dem Finger dicht an der Linie entlang, und der verborgene Umriss antwortete mit einem goldenen Funkeln. [[SEGMENT]] Welcher Regenbogenstein enthüllt den verborgenen Eingang: A, der den Teich hinter ihnen spiegelt, B, der die Wolken über ihnen spiegelt, oder C, der eine leuchtende Tür im glatten Tor zeigt? [[PAUSE:7]] Regenbogenstein C! A spiegelte nur, was hinter ihnen lag, B nur, was über ihnen schwebte. C zeigte etwas, das ohne ihn verborgen blieb: die Tür. Jori hob Stein C in die runde Vertiefung. Drei goldene Scharniere leuchteten auf, ein Griff wurde sichtbar, und das Tor schwang lautlos nach innen. Jori trat hindurch, Flimm hüpfte an ihrer Seite, und Luma folgte mit der Sternlaterne. Im Prismenflur malten ihre Schritte bunte Spuren auf den Boden. Am Ende des Flurs schwebten drei silberne Windbänder vor einer glatten Kristallwand. Das erste wehte zurück zur offenen Tür, das zweite hing völlig still, das dritte bog sich nach oben zu einem schmalen Spalt. Welches Band zeigte, wo die verborgene Treppe begann?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss am glatten Regenbogensteintor mit drei Spiegelsteinen; nur C zeigt eine Tür.",
+    "Jori und Flimm testen alle drei Steine nacheinander im gleichen Licht von Lumas Sternlaterne.",
+    "A spiegelt den Teich, B die Wolken, C zeigt Scharniere, Griff und Türumriss am glatten Tor.",
+    "Ruhige Toransicht mit drei klar getrennten Spiegelbildern und freier Fläche für das TikTok-sichere Rätsel.",
+    "Lösung: Jori setzt Stein C in die runde Vertiefung und die unsichtbare Tür wird sichtbar.",
+    "Jori, Flimm und Luma betreten den neuen Prismenflur mit kristallinen Bögen und bunten Fußspuren.",
+    "Cliffhanger an der Kristallwand mit drei Windbändern; nur eines zieht zum Spalt über der verborgenen Treppe."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-030-v1/scene-01.png",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-030-v1/scene-02.png",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-030-v1/scene-03.png",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-030-v1/scene-04.png",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-030-v1/scene-05.png",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-030-v1/scene-06.png",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-030-v1/scene-07.png",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-16T08:35:00+01:00",
+  "status": "STORY_AND_ART_READY_TTS_PENDING",
+  "previous_cliffhanger": "Vor dem Tor schwebten drei glänzende Regenbogensteine. Der erste spiegelte nur den Teich hinter ihnen. Der zweite spiegelte die Wolken über ihnen. Der dritte zeigte eine leuchtende Tür, die im echten Tor noch unsichtbar war. Welcher Stein enthüllte den verborgenen Eingang?"
+}
