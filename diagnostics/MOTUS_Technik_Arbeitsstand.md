@@ -69,3 +69,20 @@
 **Technisches Postfach / Zugriff:** AgentMail-Nachrichten seit 15.11. 12:00 UTC geprüft: acht neue GitHub-Frantic-Board-Benachrichtigungen, keine neue inhaltliche MOTUS-Behörden-/Kundenantwort. Browser-Connector scheitert konkret am fehlenden `originating browser context`; Desktop Commander zeigt nur Gerät `Rezeption`, offline; ausdrücklich nicht verwendet. Dieser Befund widerlegt nicht die Nutzerangabe zur ChatGPT-Workstation. Pipedream-422 bleibt als externer Mapping-Fall unverändert, nicht in die funktionierende Tagesproduktion eingreifen.
 
 **Nächster Prüfschritt:** D/D+1 ab erstem fälligen Veröffentlichungszeitpunkt mit frischem Buffer-`checked_at` und tatsächlichem `sent`+`externalLink` nachweisen; GitHub-interne 05:00-Kontrolle unberührt, danach Duplikate prüfen. Ein erneut verspäteter GitHub-Cron ohne materielles Fristrisiko ist für sich kein Benutzeralarm.
+
+## MOTUS-T-20261116-LIVE-PUBLISH-01
+**Besitzer:** MOTUS – Technik & Reparatur  
+**Status:** ERLEDIGT – reine Live-Statusabfrage, keine Recovery erforderlich  
+**Zielabfrage:** `checked_at_utc=2026-11-16T06:45:15.004348+00:00`, Buffer-Snapshot `diagnostics/buffer-status.json`, Run [43818642242](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/43818642242), `conclusion=success`.
+
+**Ausgangslage/Ursache:** Vorhandener Buffer-Status vom 16.11. 01:54:44 UTC lag vor der heutigen 07:00-MEZ-Veröffentlichung. GitHub-Run-Liste zeigte keinen laufenden Monitor; aus dem veralteten Snapshot wurde ausdrücklich kein Ausfall abgeleitet.
+
+**Autorisierte Maßnahme:** Vorhandenen read-only Buffer-Status-Monitor durch rein dokumentarischen Kommentar-Commit `a1a249bccb978f18499af6449c4973ed99b35e71` an dessen bestehendem `push.paths`-Trigger ausgeführt; vorhandenen Run bis `completed/success` geprüft und Ziel-Snapshot zurückgelesen. Keine Änderung an Buffer-Posts, Renderer, Tages-Issues, Recovery oder Veröffentlichungen.
+
+**Veröffentlichungsbeleg:** 16.11. 07:00 MEZ `postId=6af8f97376c23bf1c74b3313`, `dueAt=2026-11-16T06:00:00.000Z`, `status=sent`, `sentAt=2026-11-16T06:02:24.861Z`, `externalLink=https://tiktok.com/@motus614/video/7708645293163646240`. Die drei späteren 16.11.-Slots und vier 17.11.-Slots jeweils genau einmal als `scheduled` mit korrektem `dueAt`. GitHub `published/` führt alle acht zugehörigen MP4-Dateien mit positiver Größe. Kein doppeltes `dueAt` im geprüften D/D+1-Bestand.
+
+**Technisches Postfach:** `motus-kontakt@agentmail.to` deltaorientiert ab 15.11. 00:00 UTC: 27 empfangene GitHub-Benachrichtigungen zu `auscaster/frantic-board`, keine neue inhaltliche MOTUS-/Behörden-/Kundenantwort. Neuer separater Finanz-/Gewerbeamts-Tagescheck nach 11 Uhr ist zu diesem Zeitpunkt noch nicht fällig.
+
+**Zugriffsgrenzen:** GitHub- und AgentMail-Fachzugang funktionieren. Browser-Connector scheitert konkret an `originating browser context`; Desktop Commander listet ausschließlich die ausdrücklich verbotene `Rezeption` (offline). Daraus wird **keine** generelle Sperre der vom Nutzer genannten ChatGPT-Workstation gefolgert. Rezeption unbenutzt. Pipedream-422-Mapping unverändert ohne neuen autorisierten Pipedream-Sitzungskontext; keine unzulässige Rekonfiguration.
+
+**Nächster Prüfpunkt:** Bei neu fälligem Slot nur aktuellen `checked_at`-Wert und `sent+externalLink` als Veröffentlichung akzeptieren. Bei späterer fehlgeschlagener Stufe zunächst vorhandene Recovery-/Run-ID, MP4/QC und Duplikatstatus prüfen. Keine zweite Produktion.
