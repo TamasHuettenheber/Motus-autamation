@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-16T16:53:05.890396+00:00",
+  "checked_at_utc": "2026-11-16T19:04:12.341993+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6af8f960e5a113497ab76ec8",
       "text": "Dein Abendgespräch dreht sich nur um Probleme und niemand erwähnt, was bereits gelungen ist. Frage gezielt nach einem echten kleinen Fortschritt. Hoffnung beginnt bei überprüfbaren Verbesserungen. Teile diesen Beitrag mit jemandem, der heute Zuversicht braucht.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Remember (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-16T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-16T17:33:43.719Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7708823520288967969",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-16-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af8f960e5a113497ab76ec8_video.mp4"
         }
       ]
     },
