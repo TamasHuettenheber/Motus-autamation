@@ -86,3 +86,14 @@
 **Zugriffsgrenzen:** GitHub- und AgentMail-Fachzugang funktionieren. Browser-Connector scheitert konkret an `originating browser context`; Desktop Commander listet ausschließlich die ausdrücklich verbotene `Rezeption` (offline). Daraus wird **keine** generelle Sperre der vom Nutzer genannten ChatGPT-Workstation gefolgert. Rezeption unbenutzt. Pipedream-422-Mapping unverändert ohne neuen autorisierten Pipedream-Sitzungskontext; keine unzulässige Rekonfiguration.
 
 **Nächster Prüfpunkt:** Bei neu fälligem Slot nur aktuellen `checked_at`-Wert und `sent+externalLink` als Veröffentlichung akzeptieren. Bei späterer fehlgeschlagener Stufe zunächst vorhandene Recovery-/Run-ID, MP4/QC und Duplikatstatus prüfen. Keine zweite Produktion.
+
+## MOTUS-T-20261116-LIVE-PUBLISH-2200
+**Besitzer:** MOTUS – Technik & Reparatur  
+**Status:** ERLEDIGT – bestehender read-only Monitor bestätigt tatsächliche Veröffentlichung  
+**Zielprüfung:** 2026-11-16T21:43:03.508274Z, `diagnostics/buffer-status.json`, Blob `84709f85ff17b920125c250d06818e88f60d744f`, Lauf [43962525899](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/43962525899) `completed/success`.
+
+**Ausgangslage:** Buffer-Snapshot 20:21:28Z lag vor dem 22:00-Slot; fehlender Live-Nachweis war kein belegter Veröffentlichungsausfall. Keinen laufenden Monitor oder Recovery parallel angestoßen.
+
+**Maßnahme und Zielnachweis:** Der vorhandene rein lesende Buffer-Status-Monitor wurde über dessen bestehenden `push.paths`-Trigger einmalig gestartet (Dokumentationskommentar-Commit `e1ec883df458d830f7cd3c4691b61862734dcbb6`), der erfolgreiche Lauf und der neue Snapshot zurückgelesen. Beitrag 16.11. 22:00 MEZ: `postId=6af8f974c5b364e06224ab07`, `dueAt=2026-11-16T21:00:00.000Z`, `status=sent`, `sentAt=2026-11-16T21:03:15.599Z`, `externalLink=https://tiktok.com/@motus614/video/7708877577070431520`. Drei frühere 16.11.-Slots sind ebenfalls `sent` mit externen TikTok-Links, alle vier 17.11.-Slots weiterhin einmalig `scheduled` mit korrekt abgebildetem `dueAt`. Keine Duplikate auf D/D+1, acht zugehörige MP4 im GitHub-Tree mit positiver Größe, Tages-Issues #108/#109 `MOTUS_DAY_COMPLETE`.
+
+**Folgeschritte/Grenzen:** D+2 (18.11.) wurde nach 22:37 MEZ geprüft; GitHub hatte zum Zeitpunkt der Prüfung noch keinen zugehörigen Night-Production-Run bzw. Tagesauftrag erzeugt, während der zuletzt absolvierte Lauf um 21:58 MEZ regulär mit `OUTSIDE_NIGHT_WINDOW` endete. Verspätung allein ist kein belegter Fehler; nicht manuell erzeugen/dispatchen. Frühere externe Pipedream-422-Mapping-Frage unverändert: Browser-Connector benötigt `originating browser context`, Desktop Commander zeigt nur die verbotene Rezeption; dies beweist keine allgemeine fehlende Workstation-Verbindung. Rezeption nicht verwendet. AgentMail nach Finanzamt/Gewerbeamt/Steuer ab 10./15.11. lesend ohne neue inhaltliche Antwort geprüft; keine Mails versandt.
