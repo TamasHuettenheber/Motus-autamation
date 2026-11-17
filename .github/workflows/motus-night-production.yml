@@ -306,6 +306,13 @@ jobs:
               return {w for w in re.findall(r"[a-zäöüß]{4,}",value.lower()) if w not in stopwords}
           def word_count(value):
               return len(value.split())
+          def repetition_penalty(value,cta=""):
+              if cta and value.endswith(" "+cta):
+                  value=value[:-(len(cta)+1)]
+              sentences=[s for s in re.split(r"(?<=[.!?])\s+",value.strip()) if s.strip()]
+              roots=[{w[:7] for w in tokens(s)} for s in sentences]
+              return sum(max(0,len(a & b)-1)**2
+                         for i,a in enumerate(roots) for b in roots[i+1:])
           def fallback(t):
               card=editorial_today[t]
               slot_index=times_editorial.index(t)
@@ -333,10 +340,15 @@ jobs:
                       base+" "+first+" "+extended+" "+bridge+" "+cta,
                       base+" "+second+" "+extended+" "+bridge+" "+cta,
                   ]
-              result=next((value for value in options if low<=word_count(value)<=high),None)
-              if result is None:
-                  raise SystemExit("EDITORIAL_FALLBACK_LENGTH_INVALID "+t+" "+card["motif"])
-              return result
+              valid=[value for value in options if low<=word_count(value)<=high]
+          # Choose the length-compliant variant with the least duplicated substance.
+          result=min(valid,key=lambda value:(
+              repetition_penalty(value,cta),
+              abs(word_count(value)-(40 if t in short_times else 70))
+          )) if valid else None
+          if result is None:
+              raise SystemExit("EDITORIAL_FALLBACK_LENGTH_INVALID "+t+" "+card["motif"])
+          return result
           previous_texts=[]
           try:
               q=quote(f'repo:{repo} is:issue in:title "MOTUS-DAY"',safe="")
@@ -376,6 +388,7 @@ jobs:
                   problems.append("non_latin")
               if not viewer_cta.search(value):problems.append("no_cta")
               if not low<=wc<=high:problems.append("length")
+              if repetition_penalty(value)>=4:problems.append("intra_script_repeat")
               if duplicate:problems.append("14d_duplicate")
               if any(len(actual&prior)>=6 and len(actual&prior)/max(1,len(actual|prior))>=0.32 for prior in current_day_tokens):
                   problems.append("same_day_duplicate")
