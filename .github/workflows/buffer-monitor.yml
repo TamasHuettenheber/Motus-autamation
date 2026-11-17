@@ -230,3 +230,4 @@ jobs:
 # MOTUS tech read-only live check 2026-11-16 19:59 Europe/Berlin for 18:30 publication; no changes to posts or production.
 # MOTUS tech read-only verification for 2026-11-16 22:00 MEZ publication; no publish or production action.
 # MOTUS tech read-only publication verification after 2026-11-17 07:00 Europe/Berlin; snapshot before dueAt was not evidence of failure. No production or post mutation.
+# MOTUS technical one-off read-only check after 2026-11-17 12:00 Europe/Berlin; no additional production or post changes.
