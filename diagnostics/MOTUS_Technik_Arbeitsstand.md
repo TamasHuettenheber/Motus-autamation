@@ -136,3 +136,25 @@
 **Abnahme/Nächste Voraussetzung:** Dies ist eine technische Sicherung, **noch kein** nachgewiesener echter Produktions- oder Veröffentlichungsabschluss. Beim nächsten von GitHub tatsächlich ausgelösten Night-Run exakte Issue `[MOTUS-DAY] 2026-11-18`, Workflow-Run-ID, vier Renderer-/MP4-/QC-Abschlüsse und vier Buffer-Posts mit `scheduled` + korrektem `dueAt` prüfen. Falls GH weiterhin keinen Schedule auslöst, kann eine Codeänderung allein keinen Lauf erzwingen; keine zweite reguläre Produktion beginnen. Die bestehende bereits gemeldete Fristgefahr nicht wiederkehrend melden.
 
 **Zugriff/Postfach:** Browser-Connector meldet konkret `originating browser context`; Desktop Commander sieht ausschließlich `Rezeption` (verboten, nicht verwendet), daraus folgt keine Aussage über den generellen Status der Workstation. GitHub/AgentMail funktionieren. AgentMail 16.–17.11. deltaorientiert: nur GitHub-/Frantic-Benachrichtigungen und ein Buffer-Wochenbericht; keine neue inhaltliche MOTUS-Finanz-/Gewerbeamtsantwort im gesichteten Zeitraum. Keine E-Mail versendet.
+
+
+## MOTUS-T-20261117-SCHED-GAP-02 – Abschluss der Produktionslücke
+**Besitzer:** MOTUS – Technik & Reparatur  
+**Status:** ERLEDIGT – regulär verspätet eingetroffener GitHub-Nachtlauf hat den fehlenden Tagesauftrag für 18.11. vollständig produziert und im Buffer geplant; Veröffentlichung der Zukunfts-Slots noch nicht fällig  
+**Prüfung:** 2026-11-17, ca. 05:14 Europe/Berlin; letzter Buffer-Live-Snapshot `checked_at_utc=2026-11-17T03:44:31.194728+00:00` (04:44 MEZ).
+
+**Vorheriger Fehler/Bezug:** Das zuvor unter MOTUS-T-20261117-SCHED-GAP-02 als fehlend und fristgefährdet gemeldete Issue `#110` existiert jetzt: [MOTUS-DAY 2026-11-18](https://github.com/TamasHuettenheber/Motus-autamation/issues/110), erstellt 2026-11-17T03:05:59Z. GitHub-Night-Run [44007725255](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/44007725255) completed/success um 03:06Z; genau ein Daily-Batch-Run [44007745077](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/44007745077) success; vier reguläre Renderer-Runs `44007773622`, `44007775855`, `44007778109`, `44007780295` completed/success. Die beiden Issue-Kommentare `MOTUS_DAY_DISPATCHED` und `MOTUS_DAY_COMPLETE` belegen die vollständige vorhandene Kette; Issue #110 ist geschlossen.
+
+**Aktueller Zielnachweis:** Im echten aus GitHub zurückgelesenen `diagnostics/buffer-status.json` für TikTok `motus614` vier eindeutige `scheduled`-Posts am 18.11. mit exaktem UTC-`dueAt`:  
+- 07:00 MEZ: postId `6afbc58f3e42cd001e4a3db5`; `2026-11-18T06:00:00.000Z`; `motus-2026-11-18-0700.mp4` (16.187.166 B)  
+- 12:00 MEZ: postId `6afbc58c797935b975da10a9`; `2026-11-18T11:00:00.000Z`; `motus-2026-11-18-1200.mp4` (6.382.736 B)  
+- 18:30 MEZ: postId `6afbc592f83aaca8f3a5e247`; `2026-11-18T17:30:00.000Z`; `motus-2026-11-18-1830.mp4` (3.149.436 B)  
+- 22:00 MEZ: postId `6afbc6123e42cd001e4a8559`; `2026-11-18T21:00:00.000Z`; `motus-2026-11-18-2200.mp4` (10.313.738 B).
+
+Alle vier MP4 existieren unter `published/` mit echten GitHub-SHA und Größen; alle vier Renderer-Jobs zeigen `Quality control`, `Publish MP4` und `Schedule ... in Buffer` jeweils success. Der aktuelle Monitor-Run [44012070814](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/44012070814) completed/success. Vollständiger Buffer-Snapshot 50 Posts mit 50 unterschiedlichen IDs und 50 unterschiedlichen Fälligkeiten; am 17.11. vier eindeutige `scheduled`-Posts (06:00/11:00/17:30/21:00Z), ebenfalls mit MP4. Vergangene Veröffentlichung ist hier NICHT behauptet; die 07:00-Uhr-Veröffentlichung am 17.11. war zur Prüfzeit noch nicht fällig.
+
+**Maßnahme in diesem Lauf:** Automatisch wiederhergestellte bestehende Produktionskette vollständig am Ziel rückgeprüft, keine neue Produktion oder Recovery gestartet. Technische Cron-/Guard-Korrektur aus dem vorigen Lauf nur mit tatsächlicher Produktionswirkung nun abgenommen; nicht als Nachweis für alle künftigen Scheduler-Ereignisse verallgemeinert. Kein Post, Workflow oder Inhalt geändert. Redaktioneller `BROLL_RELEVANCE_QC`-Nullwert im 07:00-Renderer-Log des 18.11. zur eigenständigen Qualitätsrolle, nicht Teil der technischen Reparatur.
+
+**Technisches Postfach/Workstation:** AgentMail `motus-kontakt@agentmail.to` 16.–17.11. (36 Delta-Nachrichten) ohne inhaltliche Finanz-/Gewerbeamtsantwort, ausschließlich GitHub/Frantic plus Buffer-Wochenbericht. Behördenroutine nach 11 Uhr noch nicht fällig. Browser-Connector spezifisch mit Fehler `originating browser context`, kein Schluss auf fehlende Workstation und Rezeption nicht genutzt; GitHub/AgentMail-Fachzugriff funktionsfähig.
+
+**Weiterlauf:** Den bereits erreichten Zustand nicht erneut melden. Nur den künftigen tatsächlichen `sent`-Status mit externem TikTok-Link bestätigen oder bei neuer belegter Fehlstufe idempotent ab dort reparieren. D+2 (19.11.) frühestens nach dem 22:37-Termin prüfen.
