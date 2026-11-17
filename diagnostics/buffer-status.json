@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-17T03:44:31.194728+00:00",
+  "checked_at_utc": "2026-11-17T06:36:07.818210+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6afa44b8d7e5fee6388a5c26",
       "text": "Ein großes Vorhaben lähmt dich, weil du nur das Endergebnis siehst. Definiere, woran du einen guten Anfang erkennst. Klarheit schlägt hektische Beschäftigung. Ein großer Plan wirkt oft schwerer, solange der nächste überprüfbare Schritt fehlt. Definiere zuerst, woran du einen vernünftigen Anfang erkennst, bevor du hektisch alles gleichzeitig angehst. Wenn du das wichtigste Ergebnis erkennst, kannst du Nebenaufgaben bewusst zurückstellen und zielgerichteter beginnen. Speichere dir diesen Gedanken für einen schwierigen Tag.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-17T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-17T06:02:21.754Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7709016340257852704",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-17-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6afa44b8d7e5fee6388a5c26_video.mp4"
         }
       ]
     },
