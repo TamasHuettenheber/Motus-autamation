@@ -30,8 +30,14 @@ jobs:
           from datetime import datetime,timedelta
           from zoneinfo import ZoneInfo
           now=datetime.now(ZoneInfo("Europe/Berlin"))
-          if os.environ["EVENT"]=="schedule" and not ((now.hour==22 and now.minute>=37) or now.hour==23 or 0<=now.hour<7):
-              print("OUTSIDE_NIGHT_WINDOW",now.isoformat());raise SystemExit(0)
+          # The scheduled 22:37 producer is the only creator of regular day issues.
+          # If GitHub drops all overnight schedule events, later scheduled attempts
+          # may catch up ONLY the already-due D+1 day (never D+2 before 22:37).
+          # Exact-title lookup and workflow concurrency below prevent duplication.
+          if os.environ["EVENT"]=="schedule" and now.hour==22 and now.minute<37:
+              print("BEFORE_REGULAR_2237_WINDOW",now.isoformat());raise SystemExit(0)
+          if os.environ["EVENT"]=="schedule" and 7<=now.hour<22:
+              print("DELAYED_SCHEDULE_D_PLUS_1_RECONCILIATION",now.isoformat())
           target=(now.date()+timedelta(days=2 if now.hour>=22 else 1)).isoformat()
           target_weekday=("Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag","Sonntag")[datetime.fromisoformat(target).weekday()]
           repo=os.environ["REPO"]; token=os.environ["GH_TOKEN"]
