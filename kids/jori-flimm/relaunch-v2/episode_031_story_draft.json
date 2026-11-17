@@ -1,0 +1,87 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 31,
+  "series_version": "relaunch-v2",
+  "title": "Das Windband über der Treppe",
+  "hook": "Das dritte Silberband bog sich nach oben, obwohl die Luft im Prismenflur fast stillstand.",
+  "story": "Jori stand mit Flimm und Luma vor der glatten Kristallwand. Drei silberne Windbänder schwebten davor. Band A flatterte zurück zur offenen Tür, aus der sie gekommen waren. Band B hing gerade und völlig ruhig. Band C krümmte sich nach oben zu einem schmalen Spalt über der Wand. Jori hielt ihre Hand nacheinander unter jedes Band. Bei A spürte sie den Luftzug aus dem Prismenflur hinter sich. Unter B bewegte sich kein Härchen ihrer Handschuhe. Unter C strich ein kühler Hauch über ihre Finger und zog hinauf zum Spalt. Flimm ließ eine winzige goldene Feder los. Bei A flog sie zurück zur offenen Tür, bei B sank sie auf den Boden, doch bei C stieg sie in einer Spirale nach oben. Lumas Sternlaterne beleuchtete dabei feine Stufenlinien hinter dem Kristall.",
+  "question": "Welches Windband zeigt, wo die verborgene Treppe beginnt: A, das zurück zur offenen Tür weht, B, das völlig still hängt, oder C, das sich nach oben zum schmalen Spalt biegt?",
+  "answer": "Windband C!",
+  "after": "A zeigte nur den Luftzug zurück zum bereits offenen Flur, B zeigte gar keinen Weg. C folgte dem kühlen Hauch nach oben zum verborgenen Spalt. Jori führte die goldene Feder noch einmal unter C. Sie stieg hoch und berührte den Spalt. Sofort glitt die Kristallwand zur Seite. Dahinter erschienen schmale, leuchtende Stufen. Jori stieg hinauf, Flimm hüpfte neben ihr von Stufe zu Stufe, und Luma ließ die Sternlaterne über ihnen schweben. Mit jedem Schritt malte die Treppe einen neuen Regenbogenbogen in die Luft.",
+  "cliff": "Oben teilte sich die Treppe vor drei gläsernen Bögen. Unter Bogen A lagen Joris und Flimms Fußspuren hinter ihnen. Unter Bogen B endeten die Spuren genau an ihren Füßen. Unter Bogen C liefen leuchtende Fußspuren weiter, obwohl dort noch niemand gegangen war. Welcher Bogen zeigte den Weg nach vorn?",
+  "riddle": {
+    "type": "moving_air_reveals_hidden_stair",
+    "question": "Welches Windband zeigt, wo die verborgene Treppe beginnt: A, das zurück zur offenen Tür weht, B, das völlig still hängt, oder C, das sich nach oben zum schmalen Spalt biegt?",
+    "answer": "Windband C",
+    "evidence_in_story": "A folgt dem Luftzug zurück zur offenen Tür, B hängt ohne Luftzug still. Nur C folgt dem kühlen Hauch nach oben zum Spalt über der verborgenen Treppe.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "compare_air_direction_to_destination",
+  "clues": [
+    "A: Weht zurück zur offenen Tür",
+    "B: Hängt völlig still",
+    "C: Biegt sich nach oben zum Spalt",
+    "Gesucht: Beginn der verborgenen Treppe"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Drei klar getrennte silberne Windbänder: A weht zurück zur offenen Tür, B hängt still, C biegt sich nach oben zum schmalen Spalt. Rätselschild, Frage und Hinweise vollständig zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt ohne Zeitsprung an den drei Windbändern vor der Kristallwand aus Folge 030 an. Jori vergleicht Luftzug und Federbewegung, erkennt Band C als Wegweiser zur verborgenen Treppe und steigt mit Flimm und Luma hinauf.",
+  "narration": "Das dritte Silberband bog sich nach oben, obwohl die Luft im Prismenflur fast stillstand. [[SEGMENT]] Jori stand mit Flimm und Luma vor der glatten Kristallwand. Drei silberne Windbänder schwebten davor. Band A flatterte zurück zur offenen Tür, aus der sie gekommen waren. Band B hing gerade und völlig ruhig. Band C krümmte sich nach oben zu einem schmalen Spalt über der Wand. Jori hielt ihre Hand nacheinander unter jedes Band. Bei A spürte sie den Luftzug aus dem Prismenflur hinter sich. Unter B bewegte sich kein Härchen ihrer Handschuhe. Unter C strich ein kühler Hauch über ihre Finger und zog hinauf zum Spalt. Flimm ließ eine winzige goldene Feder los. Bei A flog sie zurück zur offenen Tür, bei B sank sie auf den Boden, doch bei C stieg sie in einer Spirale nach oben. Lumas Sternlaterne beleuchtete dabei feine Stufenlinien hinter dem Kristall. [[SEGMENT]] Welches Windband zeigt, wo die verborgene Treppe beginnt: A, das zurück zur offenen Tür weht, B, das völlig still hängt, oder C, das sich nach oben zum schmalen Spalt biegt? [[PAUSE:7]] Windband C! A zeigte nur den Luftzug zurück zum bereits offenen Flur, B zeigte gar keinen Weg. C folgte dem kühlen Hauch nach oben zum verborgenen Spalt. Jori führte die goldene Feder noch einmal unter C. Sie stieg hoch und berührte den Spalt. Sofort glitt die Kristallwand zur Seite. Dahinter erschienen schmale, leuchtende Stufen. Jori stieg hinauf, Flimm hüpfte neben ihr von Stufe zu Stufe, und Luma ließ die Sternlaterne über ihnen schweben. Mit jedem Schritt malte die Treppe einen neuen Regenbogenbogen in die Luft. Oben teilte sich die Treppe vor drei gläsernen Bögen. Unter Bogen A lagen Joris und Flimms Fußspuren hinter ihnen. Unter Bogen B endeten die Spuren genau an ihren Füßen. Unter Bogen C liefen leuchtende Fußspuren weiter, obwohl dort noch niemand gegangen war. Welcher Bogen zeigte den Weg nach vorn?",
+  "narration_tts": "Das dritte Silberband bog sich nach oben, obwohl die Luft im Prismenflur fast stillstand. [[SEGMENT]] Jori stand mit Flimm und Luma vor der glatten Kristallwand. Drei silberne Windbänder schwebten davor. Band A flatterte zurück zur offenen Tür, aus der sie gekommen waren. Band B hing gerade und völlig ruhig. Band C krümmte sich nach oben zu einem schmalen Spalt über der Wand. Jori hielt ihre Hand nacheinander unter jedes Band. Bei A spürte sie den Luftzug aus dem Prismenflur hinter sich. Unter B bewegte sich kein Härchen ihrer Handschuhe. Unter C strich ein kühler Hauch über ihre Finger und zog hinauf zum Spalt. Flimm ließ eine winzige goldene Feder los. Bei A flog sie zurück zur offenen Tür, bei B sank sie auf den Boden, doch bei C stieg sie in einer Spirale nach oben. Lumas Sternlaterne beleuchtete dabei feine Stufenlinien hinter dem Kristall. [[SEGMENT]] Welches Windband zeigt, wo die verborgene Treppe beginnt: A, das zurück zur offenen Tür weht, B, das völlig still hängt, oder C, das sich nach oben zum schmalen Spalt biegt? [[PAUSE:7]] Windband C! A zeigte nur den Luftzug zurück zum bereits offenen Flur, B zeigte gar keinen Weg. C folgte dem kühlen Hauch nach oben zum verborgenen Spalt. Jori führte die goldene Feder noch einmal unter C. Sie stieg hoch und berührte den Spalt. Sofort glitt die Kristallwand zur Seite. Dahinter erschienen schmale, leuchtende Stufen. Jori stieg hinauf, Flimm hüpfte neben ihr von Stufe zu Stufe, und Luma ließ die Sternlaterne über ihnen schweben. Mit jedem Schritt malte die Treppe einen neuen Regenbogenbogen in die Luft. Oben teilte sich die Treppe vor drei gläsernen Bögen. Unter Bogen A lagen Joris und Flimms Fußspuren hinter ihnen. Unter Bogen B endeten die Spuren genau an ihren Füßen. Unter Bogen C liefen leuchtende Fußspuren weiter, obwohl dort noch niemand gegangen war. Welcher Bogen zeigte den Weg nach vorn?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss im Prismenflur: drei silberne Windbänder schweben vor der glatten Kristallwand.",
+    "Jori prüft Band A, B und C mit ihrer Hand, während Flimm und Luma aufmerksam zusehen.",
+    "Flimms goldene Feder fliegt bei A zurück, sinkt bei B ab und steigt bei C zum Spalt.",
+    "Ruhige Kristallwand mit drei klar getrennten Windbändern und freier Fläche für das TikTok-sichere Rätsel.",
+    "Lösung: Die Feder steigt unter Band C nach oben und berührt den verborgenen Spalt.",
+    "Die Kristallwand öffnet sich und eine leuchtende Regenbogentreppe erscheint; Jori, Flimm und Luma steigen hinauf.",
+    "Cliffhanger oben an drei gläsernen Bögen: Nur unter C laufen leuchtende Fußspuren in unbekanntes Gebiet weiter."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-031-v1/scene-01.png",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-031-v1/scene-02.png",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-031-v1/scene-03.png",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-031-v1/scene-04.png",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-031-v1/scene-05.png",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-031-v1/scene-06.png",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-031-v1/scene-07.png",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-17T08:20:00+01:00",
+  "status": "STORY_AND_ART_READY_TTS_PENDING",
+  "previous_cliffhanger": "Am Ende des Flurs schwebten drei silberne Windbänder vor einer glatten Kristallwand. Das erste wehte zurück zur offenen Tür, das zweite hing völlig still, das dritte bog sich nach oben zu einem schmalen Spalt. Welches Band zeigte, wo die verborgene Treppe begann?"
+}
