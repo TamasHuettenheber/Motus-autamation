@@ -341,14 +341,14 @@ jobs:
                       base+" "+second+" "+extended+" "+bridge+" "+cta,
                   ]
               valid=[value for value in options if low<=word_count(value)<=high]
-          # Choose the length-compliant variant with the least duplicated substance.
-          result=min(valid,key=lambda value:(
-              repetition_penalty(value,cta),
-              abs(word_count(value)-(40 if t in short_times else 70))
-          )) if valid else None
-          if result is None:
-              raise SystemExit("EDITORIAL_FALLBACK_LENGTH_INVALID "+t+" "+card["motif"])
-          return result
+              # Choose the length-compliant variant with the least duplicated substance.
+              result=min(valid,key=lambda value:(
+                  repetition_penalty(value,cta),
+                  abs(word_count(value)-(40 if t in short_times else 70))
+              )) if valid else None
+              if result is None:
+                  raise SystemExit("EDITORIAL_FALLBACK_LENGTH_INVALID "+t+" "+card["motif"])
+              return result
           previous_texts=[]
           try:
               q=quote(f'repo:{repo} is:issue in:title "MOTUS-DAY"',safe="")
