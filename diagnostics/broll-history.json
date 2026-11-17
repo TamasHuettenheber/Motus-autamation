@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-24-0700",
-      "clip_id": "man-thinking-8448889",
-      "source": "https://www.pexels.com/video/man-thinking-and-writing-8448889/",
-      "used_at_utc": "2026-10-22T23:06:48.608353+00:00"
-    },
-    {
       "output_name": "motus-2026-10-24-2200",
       "clip_id": "rain-city-13961930",
       "source": "https://www.pexels.com/video/people-walking-in-city-under-rainfall-13961930/",
@@ -599,6 +593,12 @@
       "clip_id": "planner-writing-7744197",
       "source": "https://www.pexels.com/video/woman-writing-on-a-notebook-at-the-office-7744197/",
       "used_at_utc": "2026-11-17T03:09:32.266855+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-18-0700",
+      "clip_id": "forest-walk-5838469",
+      "source": "https://www.pexels.com/video/vertical-video-of-a-woman-walking-through-the-woods-5838469/",
+      "used_at_utc": "2026-11-17T03:09:39.774793+00:00"
     }
   ]
 }
