@@ -144,3 +144,5 @@ jobs:
 # E030 live Buffer precheck before production on 2026-11-16.
 
 # E030 live Buffer postcheck after scheduling on 2026-11-16.
+
+# E031 live Buffer precheck before production on 2026-11-17.
