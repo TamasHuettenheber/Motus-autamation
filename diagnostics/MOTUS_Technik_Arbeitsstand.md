@@ -110,3 +110,16 @@
 **Tests und Abnahme:** Vor dem Commit Exaktheitsprüfung der einzigen zu ändernden Cron-Zeile, unveränderter Sommer-/Winter-Trigger, unveränderter übriger Workflow-Inhalt sowie gleiche Anzahl geplanter Watchdog-Ticks; anschließend GitHub-Readback mit exakt neuem Inhalt und Blob `a87eecab7b78c85051311a5a129ce84e34f1e484`. Dies bestätigt die technische Konfiguration, **nicht** den Erfolg des noch ausstehenden regulären Tagesauftrags. Keine versuchte Login-/Rechteumgehung.
 
 **Nächster Beweis/Abschlussbedingung:** Regulären Night-Run mit tatsächlicher Erstellung von `[MOTUS-DAY] 2026-11-18` und vier Renderer-/QC-/MP4-/Buffer-Nachweisen prüfen; vier eindeutige `scheduled`-Posts mit `dueAt=2026-11-18T06:00:00Z,11:00:00Z,17:30:00Z,21:00:00Z` erforderlich. Nur fehlgeschlagene bestehende Stufen idempotent wiederherstellen. Wenn das Ausbleiben trotz neuer Cron-Zeiten andauert, Scheduler-Funktion als externe Voraussetzung führen, nicht ein zweites Issuesystem starten. Eine reine Änderung/Readback ist noch keine Produktion.
+
+## MOTUS-T-20261117-SCHED-GAP-02
+**Besitzer:** MOTUS – Technik & Reparatur  
+**Status:** OFFEN – GitHub-Nachttrigger nach dem regulären Erzeugungszeitpunkt nicht beobachtet; Zieltag 18.11. ungeplant  
+**Geprüft:** 17.11.2026, 02:43 MEZ, GitHub Actions GET /actions/runs?per_page=25, GitHub-Issue #110 (404), letzter Buffer-Snapshot checked_at_utc=2026-11-16T21:43:03.508274+00:00.
+
+**Nachweise:** Der jüngste Night-Run 43955296111 vom 16.11. 20:58:43 UTC beendete sich als completed/success mit OUTSIDE_NIGHT_WINDOW um 21:58 MEZ, also vor dem regulären Produktionsfenster. Im aktuellen GitHub-25-Run-Bestand gab es keinen späteren Nachtlauf und keine aktive Nacht-/Day-Recovery; Issue #110 fehlt. Der vorhandene Buffer-Snapshot enthält keine geplanten Posts für 18.11.; ein Live-Buffer-Status nach checked_at ist dadurch nicht bewiesen. Ursache im GitHub-Scheduler nicht nachgewiesen, keine pauschale Berechtigungssperre behauptet.
+
+**Vorangegangene Gegenmaßnahme:** Die Konfiguration d69372f83e138286416b5c0265565f3447cc8c09 verschob den Watchdog-Cron auf 9,24,39,54 * * * *; die beiden primären 22:37-Trigger bleiben unverändert. GitHub-Readback bestätigt die Konfiguration, aber ein neuer echter Night-Run fehlt weiterhin. Weitere spekulative Cron-Verschiebung ohne Ursachenbeleg unterlassen.
+
+**Sichere Recovery-Grenze:** Der einzige bekannte vorherige Nachtjob endete als Erfolg/Guard-Skip, nicht als fehlgeschlagen/abgebrochen. Der hier verfügbare GitHub-Connector bietet Re-Run für fehlgeschlagene/abgebrochene Jobs, aber keinen zulässigen manuellen Workflow-Dispatch; keine parallele oder neue reguläre Produktion, kein Tagesticket und kein Post erstellt. Browser-Connector benötigt einen originating browser context; Desktop Commander listet nur die verbotene Rezeption. Das belegt nicht, dass die vom Nutzer genannte Workstation generell fehlt; Rezeption unbenutzt.
+
+**Nächster Zielnachweis:** Bei existierendem späterem Night-Run dessen Job-/Issue-/MP4-/QC-/Buffer-Nachweise und Duplikatstatus prüfen. Weiterer Triggerausfall könnte den ersten 18.11.-Slot um 07:00 MEZ gefährden. Ausschließlich autorisierte Wiederaufnahme der vorhandenen idempotenten fehlenden Stufe, keine zweite Produktion.
