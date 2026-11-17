@@ -1,0 +1,8 @@
+{
+  "narration_sha256": "bb9ab30f216d162a395dfdca4f3ab18895db0369494f8cf28bfe8bd612aa21b1",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Das dritte Silberband bog sich nach oben, obwohl die Luft im Prismenflur fast stillstand.",
+      "start": 0.0,
+      "end": 7.76,
+      "duration": 7.76
+    },
+    {
+      "kind": "speech",
+      "text": "Jori stand mit Flimm und Luma vor der glatten Kristallwand. Drei silberne Windbänder schwebten davor. Band A flatterte zurück zur offenen Tür, aus der sie gekommen waren. Band B hing gerade und völlig ruhig. Band C krümmte sich nach oben zu einem schmalen Spalt über der Wand. Jori hielt ihre Hand nacheinander unter jedes Band. Bei A spürte sie den Luftzug aus dem Prismenflur hinter sich. Unter B bewegte sich kein Härchen ihrer Handschuhe. Unter C strich ein kühler Hauch über ihre Finger und zog hinauf zum Spalt. Flimm ließ eine winzige goldene Feder los. Bei A flog sie zurück zur offenen Tür, bei B sank sie auf den Boden, doch bei C stieg sie in einer Spirale nach oben. Lumas Sternlaterne beleuchtete dabei feine Stufenlinien hinter dem Kristall.",
+      "start": 7.76,
+      "end": 67.64,
+      "duration": 59.88
+    },
+    {
+      "kind": "speech",
+      "text": "Welches Windband zeigt, wo die verborgene Treppe beginnt: A, das zurück zur offenen Tür weht, B, das völlig still hängt, oder C, das sich nach oben zum schmalen Spalt biegt?",
+      "start": 67.64,
+      "end": 84.48,
+      "duration": 16.84
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 84.48,
+      "end": 91.48,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Windband C! A zeigte nur den Luftzug zurück zum bereits offenen Flur, B zeigte gar keinen Weg. C folgte dem kühlen Hauch nach oben zum verborgenen Spalt. Jori führte die goldene Feder noch einmal unter C. Sie stieg hoch und berührte den Spalt. Sofort glitt die Kristallwand zur Seite. Dahinter erschienen schmale, leuchtende Stufen. Jori stieg hinauf, Flimm hüpfte neben ihr von Stufe zu Stufe, und Luma ließ die Sternlaterne über ihnen schweben. Mit jedem Schritt malte die Treppe einen neuen Regenbogenbogen in die Luft. Oben teilte sich die Treppe vor drei gläsernen Bögen. Unter Bogen A lagen Joris und Flimms Fußspuren hinter ihnen. Unter Bogen B endeten die Spuren genau an ihren Füßen. Unter Bogen C liefen leuchtende Fußspuren weiter, obwohl dort noch niemand gegangen war. Welcher Bogen zeigte den Weg nach vorn?",
+      "start": 91.48,
+      "end": 156.0,
+      "duration": 64.52
+    }
+  ],
+  "duration": 156.0,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
