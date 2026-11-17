@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-17T06:36:07.818210+00:00",
+  "checked_at_utc": "2026-11-17T11:38:04.755041+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6afa450460a910801c56d2e9",
       "text": "Ein Kunde ist verärgert und du möchtest sofort eine Ausrede anbieten. Wiederhole zuerst sein Anliegen und erkläre dann den nächsten konkreten Schritt. Zuhören schafft Vertrauen. Kennst du jemanden in dieser Lage? Teile den Beitrag mit ihm.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-17T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-17T11:04:05.013Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7709094056420183329",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-17-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6afa450460a910801c56d2e9_video.mp4"
         }
       ]
     },
