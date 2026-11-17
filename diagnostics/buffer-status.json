@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-17T13:10:24.555748+00:00",
+  "checked_at_utc": "2026-11-17T17:45:38.445594+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6afa449506e1675856b36371",
       "text": "Jemand hat im Hintergrund viel geleistet und kaum Anerkennung bekommen. Sag konkret, was dir geholfen hat. Ein ehrlicher Dank macht unsichtbare Arbeit sichtbar. Gesehen zu werden ist ein menschliches Bedürfnis und kein Zeichen von Eitelkeit. Benenne konkrete Leistungen, damit Lob oder Kritik nicht in vagen Floskeln hängen bleiben. Wenn Anerkennung konkret wird, wissen alle Beteiligten genauer, welches Verhalten sie künftig beibehalten möchten. Wenn dich diese Perspektive anspricht, folge MOTUS für mehr.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-17T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-17T17:33:25.601Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7709194573838355744",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-17-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6afa449506e1675856b36371_video.mp4"
         }
       ]
     },
