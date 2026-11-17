@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-17T17:45:38.445594+00:00",
+  "checked_at_utc": "2026-11-17T21:45:49.469824+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -73,15 +73,15 @@
     {
       "id": "6afa44b3d7e5fee6388a5a48",
       "text": "Zwischen all den offenen Aufgaben ist ein schöner Moment fast untergegangen. Erinnere dich bewusst an eine Begegnung, die dir gutgetan hat. Ein Tag hat mehr als eine Geschichte. Was hat dir in so einem Moment geholfen? Kommentiere deine Erfahrung.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-17T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-17T21:04:11.632Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7709249027103051040",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-17-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6afa44b3d7e5fee6388a5a48_video.mp4"
         }
       ]
     },
