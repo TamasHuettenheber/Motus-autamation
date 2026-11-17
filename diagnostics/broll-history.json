@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-24-2200",
-      "clip_id": "rain-city-13961930",
-      "source": "https://www.pexels.com/video/people-walking-in-city-under-rainfall-13961930/",
-      "used_at_utc": "2026-10-22T23:07:47.930248+00:00"
-    },
-    {
       "output_name": "motus-2026-10-25-0700",
       "clip_id": "work-laptop-8479274",
       "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
@@ -599,6 +593,12 @@
       "clip_id": "forest-walk-5838469",
       "source": "https://www.pexels.com/video/vertical-video-of-a-woman-walking-through-the-woods-5838469/",
       "used_at_utc": "2026-11-17T03:09:39.774793+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-18-2200",
+      "clip_id": "study-breakfast-5387028",
+      "source": "https://www.pexels.com/video/a-person-studying-while-having-breakfast-5387028/",
+      "used_at_utc": "2026-11-17T03:11:29.678476+00:00"
     }
   ]
 }
