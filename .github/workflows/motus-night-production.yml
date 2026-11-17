@@ -3,7 +3,8 @@ on:
   schedule:
     - cron: '37 20 * * *'
     - cron: '37 21 * * *'
-    - cron: '*/15 * * * *'
+    # Off busy quarter-hour marks; exact 22:37 Berlin trigger above remains unchanged.
+    - cron: '9,24,39,54 * * * *'
   workflow_dispatch:
 permissions:
   contents: read
