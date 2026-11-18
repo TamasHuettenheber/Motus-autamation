@@ -190,7 +190,11 @@ jobs:
                         'klarheit','abstand','reflexion','stress','entspannung',
                         'entwicklung','positiv','abend','nacht'}
           # Explicit workplace scenes outrank generic emotional scenery (future renders only).
-          workplace_scene=any(cue in text for cue in ('schreibtisch','arbeitsplatz','buero','meetingraum','im team','kollege','besprechung','bewerbung','beruflich'))
+          workplace_scene=(any(cue in text for cue in ('schreibtisch','arbeitsplatz','buero','meetingraum','im team','kollege','besprechung','bewerbung','beruflich'))
+                           or any(cue in text for cue in ('neue aufgabe','neue rolle','berufliche verantwortung')))
+          # A specific friend, invitation or hobby scene calls for people in frame,
+          # not an unrelated lone walker with a coincidental generic keyword.
+          social_scene=re.search(r'(?<![a-z])(?:freund(?:in|e|es|en)?|freundschaft|verabredung|einladung|hobby|familienmitglied|gespraech)(?![a-z])',text) is not None
           # Tie the footage to actual messaging scenes, not only to generic emotions.
           message_scene=any(cue in text for cue in ('nachricht','unbeantwortet','sms','chat'))
           # Knowledge/assessment situations should show thinking or learning, not random scenery.
@@ -215,6 +219,8 @@ jobs:
                   score+=4
               if assessment_scene and any(fold(str(tag)) in {'denken','lernen','reflexion'} for tag in clip.get('tags',[])):
                   score+=4
+              if social_scene and clip['id'] in {'night-city-13658220','rain-city-13961930'}:
+                  score+=3
               cooldown=1 if clip['id'] in recent_ids else 0
               tie=int(hashlib.sha256((output+'|'+clip['id']).encode()).hexdigest()[:12],16)
               ranked.append((cooldown,score,tie,clip))
