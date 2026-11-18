@@ -366,7 +366,18 @@ jobs:
           except Exception as exc:
               print("EDITORIAL_HISTORY_UNAVAILABLE",type(exc).__name__)
           old_tokens=[tokens(x) for x in previous_texts]
-          viewer_cta=re.compile(r"(?i)\b(?:kommentier\w*|schreib\w*|speicher\w*|teil\w*|folg\w*|abonnier\w*|erzähl\w*|schick\w*)\b")
+          # Exact singular Du-imperatives prevent false positives such as
+          # "Schreibtisch", "Beteiligten" and "es folgt".
+          viewer_cta=re.compile(r"(?i)\b(?:kommentier(?:e)?|schreib(?:e)?|speicher(?:e)?|teile|folge|abonnier(?:e)?|erzähl(?:e)?|schick(?:e)?)\b")
+          def has_viewer_cta(value):
+              last=re.split(r"(?<=[.!?])\s+",value.strip())[-1].strip()
+              if viewer_cta.search(last):
+                  return True
+              # A specific final question addressed to the viewer is also a
+              # natural comment CTA, even without "Schreib in die Kommentare".
+              return bool(last.endswith("?")
+                          and re.match(r"(?i)^(?:wie|was|welch\w*|wem|wen|wann|wo|würdest|hast|kennst|findest|wer)\b",last)
+                          and re.search(r"(?i)\b(?:du|dir|dich|dein\w*|euch|ihr|eur\w*)\b",last))
           def compact_generated(value,low,high,required_tokens):
               # Preserve the original hook and natural CTA; remove only ONE complete
               # middle sentence from a slightly oversized Gemini draft, without AI calls.
@@ -374,7 +385,7 @@ jobs:
               if not high < word_count(value) <= high+30:
                   return value
               sentences=[s.strip() for s in re.split(r"(?<=[.!?])\s+",value.strip()) if s.strip()]
-              if len(sentences)<4 or not viewer_cta.search(sentences[-1]):
+              if len(sentences)<4 or not has_viewer_cta(sentences[-1]):
                   return value
               old_penalty=repetition_penalty(value)
               choices=[]
@@ -417,7 +428,7 @@ jobs:
               if safety.search(value):problems.append("unsafe_scenario")
               if any(ch.isalpha() and "LATIN" not in unicodedata.name(ch,"") for ch in value):
                   problems.append("non_latin")
-              if not viewer_cta.search(value):problems.append("no_cta")
+              if not has_viewer_cta(value):problems.append("no_cta")
               if not low<=wc<=high:problems.append("length")
               if repetition_penalty(value)>=4:problems.append("intra_script_repeat")
               if duplicate:problems.append("14d_duplicate")
@@ -425,7 +436,7 @@ jobs:
                   problems.append("same_day_duplicate")
               if problems:
                   replacement=fallback(t)
-                  if not low<=word_count(replacement)<=high or not viewer_cta.search(replacement):
+                  if not low<=word_count(replacement)<=high or not has_viewer_cta(replacement):
                       raise SystemExit("EDITORIAL_FALLBACK_INVALID "+t)
                   slot["text"]=replacement
                   print("EDITORIAL_QC_REPLACED",target,t,",".join(problems),
@@ -439,7 +450,6 @@ jobs:
           date_re=re.compile(r"\b\d{1,2}[./-]\d{1,2}(?:[./-]\d{2,4})?\b|\b\d{4}-\d{2}-\d{2}\b|\b\d{1,2}\.\s*(?:januar|februar|maerz|märz|april|mai|juni|juli|august|september|oktober|november|dezember)\b",re.IGNORECASE)
           import unicodedata
           # Non-blocking CTA audit: record gaps without risking the nightly batch.
-          cta_re=re.compile(r"(?i)\b(?:kommentier\w*|schreib\w*|speicher\w*|teil\w*|folg\w*|abonniere\w*|erzähl\w*|schick\w*)\b")
           for slot in slots:
               text=slot.get("text","").strip()
               word_count=len(text.split())
@@ -450,7 +460,7 @@ jobs:
               if weekday_re.search(text) or date_re.search(text):raise SystemExit("CALENDAR_REFERENCE "+slot.get("time",""))
               if any(ch.isalpha() and "LATIN" not in unicodedata.name(ch,"") for ch in text):
                   raise SystemExit("NON_LATIN_LETTERS "+slot.get("time",""))
-              if not cta_re.search(text) and "?" not in text:
+              if not has_viewer_cta(text):
                   print("CTA_QC_WARNING",slot.get("time",""),"no clear viewer CTA")
           batch={"date":target,"slots":[{"slot":t.replace(":",""),"time":t,"timezone":"Europe/Berlin","audio_url":"","broll_url":"","text":s["text"]} for t,s in zip(times,slots)]}
           issue=gh("POST","/issues",{"title":title,"body":json.dumps(batch,ensure_ascii=False)})
