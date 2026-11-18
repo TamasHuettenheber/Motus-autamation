@@ -247,3 +247,27 @@ Alle vier MP4 existieren unter `published/` mit echten GitHub-SHA und Größen; 
 **Aktueller GitHub-Zielzustand:** Actions-Run-Collection zuletzt `MOTUS Night Production` [44204457849](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/44204457849) `completed/failure` auf voriger Revision `89d01cc`; kein anschließender Night-Run mit dem Fix `161efc6` nachweisbar, exakte Issue-Suche `[MOTUS-DAY] 2026-11-19` bleibt leer. D=18.11. im vorhandenen Buffer-Snapshot `checked_at_utc=2026-11-17T22:14:53.504681+00:00` vier eindeutige, noch nicht fällige `scheduled`-Posts mit passenden `dueAt`; D+1=19.11. noch ungeplant. Stiller Wiederholungsbefund derselben bereits gemeldeten Vorproduktionsgefahr, **keine neue Fehlereskalation**. Keine zweite reguläre Produktion oder doppelte Recovery. 
 
 **Zugriff/Nächste Voraussetzung:** GitHub- und AgentMail-Fachzugriffe funktionieren; Browser meldet speziell fehlenden `originating browser context`, Remote Desktop listet nur untersagte Rezeption (nicht verwendet), **keine** Behauptung einer insgesamt fehlenden Workstation. Technisches AgentMail-Delta enthält neue GitHub-Night-Fehlbenachrichtigung zum bereits bekannten Run, keine neue sachliche Behördenantwort. Der nächste tatsächlich registrierte **vorhandene** Scheduled Night-Run auf der gepatchten Revision muss die 19.11.-Issue sowie alle vier Renderer-/QC-/MP4-/Buffer-Nachweise erzeugen; erst dann PRODUKTIONSWIRKUNG_BESTÄTIGT. Fehlgeschlagenen alten Run nicht erneut mit alter Revision starten.
+
+## MOTUS-T-20261118-NIGHT19-PRODUKTIONSABNAHME
+**Besitzer:** MOTUS – Technik & Reparatur  
+**Status:** ERLEDIGT – Nachtproduktionsstörung des 19.11. durch vorhandene reguläre GitHub-Kette behoben; keine manuelle Recovery  
+**Geprüft:** 2026-11-18, nach Abschluss 02:39:59Z (03:39:59 Europe/Berlin)
+
+**Ursache und Fortgang:** Ursprüngliche Nachtproduktion für 19.11. mit Fehler `EDITORIAL_FALLBACK_INVALID 12:00` gescheitert (vorher gemeldet; Workflow-Lauf 44204457849, failure, 00:02Z). Der bereits gemeldete CTA-Prüf-Fix `161efc6` war allein kein Produktionsnachweis. Der bestehende, regulär durch `schedule` ausgelöste Producer-Lauf [44224151043](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/44224151043) wurde am 18.11. 02:33Z erfolgreich; er erzeugte genau ein Tages-Issue [#111](https://github.com/TamasHuettenheber/Motus-autamation/issues/111), welches nach vier regulären Renderer-Läufen und direktem Buffer-Abgleich um 02:39:59Z als `MOTUS_DAY_COMPLETE` geschlossen wurde (Reconcile-Lauf [44224873548](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/44224873548)). Es wurde hier keine eigene Produktion gestartet, kein geplantes/veröffentlichtes Video verändert oder gelöscht.
+
+**Direkter Buffer-Zielnachweis durch abgeschlossenen GitHub-Reconcile (alle vier Zukunftsslots, jeweils `scheduled`, TikTok `motus614`):**
+
+| Termin 19.11. MEZ | Post-ID | dueAt (UTC) | Renderer-Run |
+|---|---|---|---|
+| 07:00 | `6afd0f8b9f3765f6ab26f417` | `2026-11-19T06:00:00.000Z` | 44224195181 |
+| 12:00 | `6afd0f6493fa11d37dff18ac` | `2026-11-19T11:00:00.000Z` | 44224197794 |
+| 18:30 | `6afd0fe339777dd13e0dd875` | `2026-11-19T17:30:00.000Z` | 44224200182 |
+| 22:00 | `6afd0fe5fc933ac285bb633c` | `2026-11-19T21:00:00.000Z` | 44224202356 |
+
+Die vier Renderer-Läufe endeten `completed/success`, mit `MOTUS_ALGENIB_GENERATED`, `AUDIO_QC_PASS`, positiver MP4-Größe in `published/` (8.278.035 / 3.884.053 / 15.391.443 / 27.168.585 Byte) und `BUFFER_POST_SCHEDULED` für die vier konkreten Post-IDs. Das Issue dokumentiert vier eindeutig zugeordnete Slots mit `QC/Renderer=success` und `Buffer=scheduled`. **Kein Veröffentlichungsnachweis vor dem 19.11.; `sent` und externe TikTok-Links erst nach Fälligkeit prüfen.** Das B-Roll-Qualitätsthema bleibt ausschließlich Eigentum der redaktionellen Qualitätsrolle.
+
+**D (18.11.):** `diagnostics/buffer-status.json` mit `checked_at_utc=2026-11-17T22:14:53.504681Z` zeigt zum Abfragezeitpunkt alle vier 18.11.-Slots einmalig als `scheduled` mit korrekten dueAt, noch vor 07:00 MEZ. Die vier MP4 in `published/` sind vorhanden. Dieser Snapshot ist keine aktuelle Live-Publikationsbestätigung; vor 07:00 ist `sent` noch nicht zu fordern. 05:00-GitHub-Kontrolle bleibt unverändert.
+
+**Postfach und Workstation:** Das technische Postfach `motus-kontakt@agentmail.to` wurde ab 17.11. 08:00Z deltaorientiert geprüft; einziger neuer MOTUS-Eingang war die bekannte GitHub-Nachtlauf-Fehlermeldung (00:02Z), keine neue externe inhaltliche Antwort. Der separate Behörden-Tagescheck nach 11:00 war noch nicht fällig. Browser-Connector lieferte konkret `Browser access requires the originating browser context`; dies belegt keine globale Nichtverfügbarkeit der Nutzers-Workstation. Rezeption wurde nicht verwendet.
+
+**Nächste Voraussetzung:** Ab dem 18.11. 07:00 MEZ bei vorhandener kontrollierter Statusabfrage den jeweiligen `sent`-Status mit echten TikTok-Links nachweisen; nach der internen 05:00-Prüfung auf Dubletten kontrollieren. Bestehende Nachtproduktion und Recovery unverändert lassen.
