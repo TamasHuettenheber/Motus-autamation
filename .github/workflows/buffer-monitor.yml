@@ -233,3 +233,4 @@ jobs:
 # MOTUS technical one-off read-only check after 2026-11-17 12:00 Europe/Berlin; no additional production or post changes.
 # MOTUS technical read-only post-18:30 MEZ verification 2026-11-17; no publishing or render mutation.
 # MOTUS read-only publication verification after 2026-11-17 22:00 Europe/Berlin; no video rendering, scheduling or post mutation.
+# One-off read-only Buffer verification after 2026-11-18 07:00 Europe/Berlin, to establish sent/externalLink without touching production or posts.
