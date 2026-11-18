@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-17T22:14:53.504681+00:00",
+  "checked_at_utc": "2026-11-18T04:13:31.672972+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6afd0fe5fc933ac285bb633c",
+      "text": "Eine Entscheidung lässt sich nicht mehr ändern und du spielst sie im Kopf immer neu durch. Frage nach der Lehre statt nach der nächsten Selbstanklage. Verantwortung ist keine Dauerstrafe. Schick den Gedanken jemandem, mit dem du darüber sprechen möchtest.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Nevermore (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-19T21:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-19-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6afd0fe339777dd13e0dd875",
+      "text": "Eine Verabredung klingt schön, aber du bist erschöpft und hast ein schlechtes Gewissen. Erkläre ehrlich deine Situation und schlage einen anderen Termin vor. Beziehungen vertragen klare Worte. Eine freundliche Grenze schützt Zeit und Vertrauen zugleich. Wer die eigenen Möglichkeiten ehrlich ausspricht, verspricht weniger, hält dafür aber mehr ein. Du darfst freundlich bleiben und trotzdem deutlich sagen, was du leisten kannst und was nicht. Wenn du das wiedererkennst, speichere dir diesen Beitrag.\n\n#motus #beziehungen #selbstrespekt #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – A Memory Away (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-19T17:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-19-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6afd0f6493fa11d37dff18ac",
+      "text": "In einer Runde wird über jemanden gesprochen, der gar nicht dabei ist. Lenke das Gespräch auf das konkrete Problem und darauf, wie es direkt geklärt werden kann. Kennst du so eine Situation? Erzähl davon in den Kommentaren.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Syntheticity (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-19T11:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-19-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6afd0f8b9f3765f6ab26f417",
+      "text": "Du wartest darauf, dass jemand dir eine neue Aufgabe ausdrücklich zutraut. Überlege, welche Verantwortung du schon jetzt sinnvoll übernehmen kannst. Selbstvertrauen wächst durch Erfahrung. Neue Verantwortung beginnt selten erst dann, wenn du dich vollkommen sicher fühlst. Übernimm eine Aufgabe in einem realistischen Rahmen und lerne aus der Erfahrung, statt auf perfekte Sicherheit zu warten. Verantwortung wächst durch echtes Handeln. Folge MOTUS für neue Impulse zu Selbstvertrauen und Klarheit.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Wild Waters (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-19T06:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-19-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6afbc6123e42cd001e4a8559",
       "text": "Du hast heute etwas Neues versucht und es lief nicht so, wie du gehofft hattest. Würdige den Versuch. Lernen sieht selten von Anfang an elegant aus. Beurteile nicht nur das Ergebnis, sondern auch die Frage, was du beim nächsten Versuch besser machen kannst. Eine bewusste Rückschau hilft dir, die nächste Übung genauer anzugehen und deine Fortschritte zu erkennen. Speichere diesen Gedanken als Erinnerung für deinen Alltag.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Hidden Tears (CC BY 4.0)",
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aed036cd930780bcacd4300_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6aed0352d930780bcacd3789",
-      "text": "Im Hausflur begegnest du deiner Nachbarin, die direkt ein längeres Gespräch über die nächste Eigentümerversammlung anfangen möchte, obwohl du gerade völlig k.o. bist. Es fällt schwer, hier höflich aber bestimmt eine Grenze zu ziehen, ohne unhöflich zu wirken. Sage einfach freundlich, dass du heute Abend leider dringend etwas erledigen musst und wünsche einen schönen Abend. Speichere diesen Beitrag, wenn du solche alltäglichen Abgrenzungen üben möchtest. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Faith (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-07T17:30:00.000Z",
-      "sentAt": "2026-11-07T17:32:13.784Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7705483519358749985?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aed0352d930780bcacd3789_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6af2748aab244f728ca49b3c",
-      "text": "Werbung für mein eigenes Produkt | Fiktives Wochenbeispiel: 3.000 € geplante Personalkosten ÷ 10.000 € Netto-Wochenumsatz = 30 % geplante Personalquote. Weißt du, welchen Wert dein Dienstplan für nächste Woche ergibt? Mit dem Gastro-Personalkostenplaner für Excel erfasst du bis zu 6 Schichteinträge pro Tag (42 pro Woche), kalkulierst mit einem frei wählbaren Arbeitgeberkostenfaktor und vergleichst die geplanten Personalkosten mit deinem Netto-Umsatz – pro Tag und Woche. Ohne Makros, mit kurzer Anleitung. 9,90 € einmalig · digitaler Download · Planungshilfe, keine Lohnabrechnung. Jetzt ansehen: https://payhip.com/b/g8p5a #Gastronomie #Personalkosten #Dienstplanung #Excel #GastroManagement",
-      "status": "sent",
-      "dueAt": "2026-11-07T12:02:15.000Z",
-      "sentAt": "2026-11-07T12:02:15.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7705398735450164502?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://www.tiktok.com/@motus614/video/7705398735450164502?utm_campaign=tt4d_open_api&utm_source=7103819247981182978"
-        }
-      ]
-    },
-    {
-      "id": "6aed03645ab704cc602d9972",
-      "text": "Der Posteingang quillt über, und genau jetzt klemmt das Papier im Drucker, während die Zeit für die Mittagspause drängt. Solche unerwarteten Technikprobleme mitten im Arbeitstag erzeugen sofort unnötigen Stress. Atme kurz tief durch, lass das Papier kurz ruhen und gönne dir erst fünf Minuten echte Pause mit einem Glas Wasser. Teile diesen Beitrag mit jemandem, der heute im Büro ebenfalls eine kleine Atempause braucht. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Find You (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-07T11:00:00.000Z",
-      "sentAt": "2026-11-07T11:02:29.404Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7705383134589652256?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aed03645ab704cc602d9972_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6aed0392265cb90551df9868",
-      "text": "Der Kaffee läuft durch, aber statt entspannt zu warten, kreisen deine Gedanken bereits um das große Meeting am Vormittag. Dieses ständige Vorspulen im Kopf kostet wertvolle Ruhe. Versuche heute, morgens bewusst bei einer einzigen kleinen Handlung zu bleiben, wie dem bewussten Spüren der warmen Tasse in deinen Händen. Das erdet deine Gedanken sofort. Welches morgendliche Ritual hilft dir am besten, ruhig in den Tag zu starten? Schreib es gerne in die Kommentare. #motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung Musik: Tanner Helland – From Here (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-07T06:00:00.000Z",
-      "sentAt": "2026-11-07T06:02:20.954Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7705305470549970209?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aed0392265cb90551df9868_video.mp4"
         }
       ]
     }
