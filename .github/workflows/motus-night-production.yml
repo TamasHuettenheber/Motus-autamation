@@ -366,7 +366,7 @@ jobs:
           except Exception as exc:
               print("EDITORIAL_HISTORY_UNAVAILABLE",type(exc).__name__)
           old_tokens=[tokens(x) for x in previous_texts]
-          viewer_cta=re.compile(r"(?i)\b(?:kommentier\w*|schreib\w*|speicher\w*|teil\w*|folg\w*|abonnier\w*)\b")
+          viewer_cta=re.compile(r"(?i)\b(?:kommentier\w*|schreib\w*|speicher\w*|teil\w*|folg\w*|abonnier\w*|erzähl\w*|schick\w*)\b")
           household=re.compile(r"(?i)\b(?:zahnpasta|duschkopf|kartons?|zimmerpflanze|blumengieß\w*|gieß\w*|kalkflecken|putzmittel|ersatzpackung|briefsortier\w*|papiermüll|staubsauger|wäschesortier\w*|spülmaschine|briefkasten)\b")
           safety=re.compile(r"(?i)\b(?:anbrenn\w*|herdplatte\w*|kochend\w*|rutschig\w*|essigreiniger|chlorreiniger|brandgefahr|rauchmelder)\b")
           import unicodedata
@@ -408,7 +408,7 @@ jobs:
           date_re=re.compile(r"\b\d{1,2}[./-]\d{1,2}(?:[./-]\d{2,4})?\b|\b\d{4}-\d{2}-\d{2}\b|\b\d{1,2}\.\s*(?:januar|februar|maerz|märz|april|mai|juni|juli|august|september|oktober|november|dezember)\b",re.IGNORECASE)
           import unicodedata
           # Non-blocking CTA audit: record gaps without risking the nightly batch.
-          cta_re=re.compile(r"(?i)\b(?:kommentier\w*|schreib\w*|speicher\w*|teil\w*|folg\w*|abonniere\w*)\b")
+          cta_re=re.compile(r"(?i)\b(?:kommentier\w*|schreib\w*|speicher\w*|teil\w*|folg\w*|abonniere\w*|erzähl\w*|schick\w*)\b")
           for slot in slots:
               text=slot.get("text","").strip()
               word_count=len(text.split())
