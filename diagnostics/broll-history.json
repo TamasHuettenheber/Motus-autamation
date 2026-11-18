@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-25-1200",
-      "clip_id": "train-phone-12908973",
-      "source": "https://www.pexels.com/video/woman-waiting-for-a-train-and-using-her-phone-12908973/",
-      "used_at_utc": "2026-10-23T21:58:52.154613+00:00"
-    },
-    {
       "output_name": "motus-2026-10-25-1830",
       "clip_id": "work-laptop-8479274",
       "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
@@ -599,6 +593,12 @@
       "clip_id": "desk-thinking-5704904",
       "source": "https://www.pexels.com/video/woman-working-on-the-desk-5704904/",
       "used_at_utc": "2026-11-18T02:37:21.330874+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-19-0700",
+      "clip_id": "waiting-phone-7339414",
+      "source": "https://www.pexels.com/video/a-man-using-his-phone-while-waiting-7339414/",
+      "used_at_utc": "2026-11-18T02:37:40.929504+00:00"
     }
   ]
 }
