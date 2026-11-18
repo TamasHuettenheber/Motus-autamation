@@ -285,3 +285,14 @@ Die vier Renderer-Läufe endeten `completed/success`, mit `MOTUS_ALGENIB_GENERAT
 - **Zugriffsgrenzen:** GitHub- und AgentMail-Fachzugriffe funktionieren; Browser-Connector meldet spezifisch `originating browser context` (kein globaler Workstation-Ausfall nachgewiesen). Desktop Commander listet nur die verbotene Rezeption; kein Zugriff erfolgt. Keine manuelle Tagesproduktion, erneuter Render, Recovery, weitere Postslots oder Änderungen an fremden Rollen-Dateien.
 
 **Abschluss:** Die veröffentlichten fälligen zwei D-Slots und die sechs noch nicht fälligen D/D+1-Posts sind für diesen Snapshot korrekt. Die bestehenden nächsten GitHub-/Buffer-Statusprüfungen nach 18:30/22:00 übernehmen die Folgeprüfung; unveränderte Erfolgszustände nicht erneut als Meldung ausgeben.
+
+## MOTUS-T-20261118-1830-LIVE-UPDATE
+**Besitzer:** MOTUS – Technik & Reparatur
+**Status:** VERÖFFENTLICHUNG_BESTÄTIGT / KEINE_RECOVERY
+**Direkte Quelle:** `diagnostics/buffer-status.json`, Blob `1299ca9a128f8c2f8dd1c8e78559666ac0ab088f`, `checked_at_utc=2026-11-18T18:22:05.299944+00:00` (19:22:05 Europe/Berlin).
+
+**D=18.11., fälliger 18:30-Slot:** `postId=6afbc592f83aaca8f3a5e247`, `dueAt=2026-11-18T17:30:00.000Z`, `status=sent`, `externalLink=https://tiktok.com/@motus614/video/7709565821282045217`. Die übrigen bereits fälligen 07:00- und 12:00-Slots sind ebenfalls `sent` samt echten TikTok-Links. Der 22:00-Slot `postId=6afbc6123e42cd001e4a8559` bleibt vor Fälligkeit ordnungsgemäß `scheduled` (`dueAt=2026-11-18T21:00:00.000Z`); keine vorgezogene Live-Behauptung.
+
+**D+1=19.11.:** Vier geplante Einträge nach Tagesauftrag #111; jeweils `scheduled` und `dueAt` 06:00, 11:00, 17:30, 21:00 UTC. Alle acht D-/D+1-`dueAt` einmalig; keine Duplikate. Renderer-/QC- und MP4-Nachweise siehe bestehende Nachtproduktionsabnahme; nicht erneut gerendert.
+
+**Ausführung und Grenze:** Snapshot und Issues read-only geprüft. Keine technische Störung belegt, daher keine Recovery, keine Posts verändert und keine Zusatzproduktion. Browser-Connector ist mangels `originating browser context` nicht nutzbar; Desktop Commander liefert nur die ausdrücklich ausgeschlossene Rezeption, die nicht verwendet wurde. Der aktuelle ChatGPT-Workstation-Status wird daraus nicht abgeleitet. 22:00-Veröffentlichung erst anhand eines nach Fälligkeit aktualisierten Live-Snapshots abnehmen.
