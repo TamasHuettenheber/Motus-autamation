@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-18T13:53:26.309681+00:00",
+  "checked_at_utc": "2026-11-18T18:22:05.299944+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6afbc592f83aaca8f3a5e247",
       "text": "Ein Familienmitglied erzählt von einem Problem und du hast sofort drei Lösungen parat. Frag erst, ob Rat oder Zuhören gebraucht wird. Nähe entsteht nicht nur durch Antworten. Wie würdest du darauf reagieren? Schreib deine Erfahrung in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Deserve to be Loved (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-18T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-18T17:34:06.549Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7709565821282045217",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-18-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6afbc592f83aaca8f3a5e247_video.mp4"
         }
       ]
     },
