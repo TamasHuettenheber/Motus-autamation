@@ -199,10 +199,10 @@
         "motif": "zuhoeren"
       },
       {
-        "topic": "Ehrlich absagen",
-        "hook": "Eine Verabredung klingt schön, aber du bist erschöpft und hast ein schlechtes Gewissen.",
-        "action": "Erkläre ehrlich deine Situation und schlage einen anderen Termin vor. Beziehungen vertragen klare Worte.",
-        "motif": "grenzen"
+        "topic": "Gemeinsame Neugier",
+        "hook": "Ein Freund erzählt begeistert von einem Hobby, das du bisher überhaupt nicht verstehst.",
+        "action": "Frag nach einem Beispiel, das ihn daran fasziniert, statt das Gespräch höflich abzuwürgen. Aufrichtiges Interesse schafft Nähe.",
+        "motif": "neugier"
       },
       {
         "topic": "Alte Konflikte fair klären",
@@ -498,10 +498,10 @@
       "Du gewinnst Klarheit, indem du nachfragst oder auf Fakten wartest, statt Ungewissheit mit Vermutungen zu füllen."
     ],
     "verantwortung": [
-      "Neue Verantwortung beginnt selten erst dann, wenn du dich vollkommen sicher fühlst.",
-      "Übernimm eine Aufgabe in einem realistischen Rahmen und lerne aus der Erfahrung, statt auf perfekte Sicherheit zu warten.",
-      "Verantwortung wächst durch echtes Handeln.",
-      "Mit einem überschaubaren Auftrag kannst du Erfahrung sammeln, bevor du den nächsten größeren Schritt übernimmst."
+      "Bevor du eine neue Rolle übernimmst, frage, welche Entscheidungen du selbst treffen darfst und wo Rücksprache notwendig ist.",
+      "Vereinbare mit der verantwortlichen Person ein überprüfbares Ergebnis, statt dich ohne Orientierung an jede Aufgabe zu setzen.",
+      "Ein klarer Rahmen erleichtert den Einstieg.",
+      "Bitte nach der ersten Umsetzung um konkrete Rückmeldung zu deiner Vorgehensweise und nimm dir Zeit, daraus zu lernen."
     ],
     "vergleich": [
       "Ein Vergleich zeigt meist nur sichtbare Ergebnisse, nicht den Weg dorthin.",
@@ -526,6 +526,12 @@
       "Erkläre sachlich, was bereits erledigt ist und welche Hindernisse noch bestehen, statt Versäumnisse zu verstecken.",
       "Eine konkrete Absprache hilft beiden Seiten.",
       "Frage, welche Auswirkungen die Verschiebung für andere hat, und vereinbart gemeinsam eine klare neue Frist."
+    ],
+    "neugier": [
+      "Wer nach der Begeisterung eines anderen fragt, entdeckt oft eine unerwartete Seite dieses Menschen.",
+      "Du musst das Interesse nicht teilen; eine echte Frage reicht, um aus oberflächlichem Smalltalk ein persönliches Gespräch zu machen.",
+      "Neugier eröffnet einen neuen Gesprächsfaden.",
+      "Vielleicht lernst du dabei etwas über die Erfahrungen hinter seiner Begeisterung, auch wenn deine eigenen Interessen ganz anders sind."
     ]
   }
 }
