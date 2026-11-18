@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-18T04:13:31.672972+00:00",
+  "checked_at_utc": "2026-11-18T06:51:19.651041+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6afbc58f3e42cd001e4a3db5",
       "text": "Eine kritische Bemerkung trifft dich und du möchtest dich sofort verteidigen. Stattdessen frage jetzt nach einem ganz konkreten Beispiel. So trennst du hilfreiche Hinweise von bloßen Vorwürfen und behältst die Souveränität. Schreibe in die Kommentare, wie du mit unfairem Gegenwind umgehst.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Forest Awakes (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-18T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-18T06:01:33.780Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7709387449767611681",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-18-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6afbc58f3e42cd001e4a3db5_video.mp4"
         }
       ]
     },
