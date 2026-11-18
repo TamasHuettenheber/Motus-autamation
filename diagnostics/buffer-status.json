@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-18T18:22:05.299944+00:00",
+  "checked_at_utc": "2026-11-18T21:54:26.834387+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -73,15 +73,15 @@
     {
       "id": "6afbc6123e42cd001e4a8559",
       "text": "Du hast heute etwas Neues versucht und es lief nicht so, wie du gehofft hattest. Würdige den Versuch. Lernen sieht selten von Anfang an elegant aus. Beurteile nicht nur das Ergebnis, sondern auch die Frage, was du beim nächsten Versuch besser machen kannst. Eine bewusste Rückschau hilft dir, die nächste Übung genauer anzugehen und deine Fortschritte zu erkennen. Speichere diesen Gedanken als Erinnerung für deinen Alltag.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Hidden Tears (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-18T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-18T21:04:01.736Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7709619951031668000",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-18-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6afbc6123e42cd001e4a8559_video.mp4"
         }
       ]
     },
