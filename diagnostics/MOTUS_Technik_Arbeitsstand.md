@@ -271,3 +271,17 @@ Die vier Renderer-Läufe endeten `completed/success`, mit `MOTUS_ALGENIB_GENERAT
 **Postfach und Workstation:** Das technische Postfach `motus-kontakt@agentmail.to` wurde ab 17.11. 08:00Z deltaorientiert geprüft; einziger neuer MOTUS-Eingang war die bekannte GitHub-Nachtlauf-Fehlermeldung (00:02Z), keine neue externe inhaltliche Antwort. Der separate Behörden-Tagescheck nach 11:00 war noch nicht fällig. Browser-Connector lieferte konkret `Browser access requires the originating browser context`; dies belegt keine globale Nichtverfügbarkeit der Nutzers-Workstation. Rezeption wurde nicht verwendet.
 
 **Nächste Voraussetzung:** Ab dem 18.11. 07:00 MEZ bei vorhandener kontrollierter Statusabfrage den jeweiligen `sent`-Status mit echten TikTok-Links nachweisen; nach der internen 05:00-Prüfung auf Dubletten kontrollieren. Bestehende Nachtproduktion und Recovery unverändert lassen.
+
+
+## MOTUS-T-20261118-D-D1-PUBLISH-VERIF
+**Besitzer:** MOTUS – Technik & Reparatur  
+**Stand:** 18.11.2026, 13:52 Europe/Berlin; GitHub/Buffer-Prüf-Snapshot `checked_at_utc=2026-11-18T11:38:44.937271Z`.  
+**Status:** D/D+1-Zielzustand nach Zeitfälligkeit nachgewiesen; keine Recovery ausgelöst.
+
+- **D=18.11.:** 07:00 MEZ `postId=6afbc58f3e42cd001e4a3db5`, `dueAt=2026-11-18T06:00:00Z`, `status=sent`, `externalLink=https://tiktok.com/@motus614/video/7709387449767611681`; 12:00 MEZ `postId=6afbc58c797935b975da10a9`, `dueAt=2026-11-18T11:00:00Z`, `status=sent`, `externalLink=https://tiktok.com/@motus614/video/7709465244183121184`. 18:30 MEZ `6afbc592f83aaca8f3a5e247`, `dueAt=2026-11-18T17:30:00Z`, `scheduled`; 22:00 MEZ `6afbc6123e42cd001e4a8559`, `dueAt=2026-11-18T21:00:00Z`, `scheduled`. Die letzten beiden Slots waren zum Snapshotzeitpunkt noch nicht fällig, daher keine Veröffentlichungsbehauptung.
+- **D+1=19.11.:** Vier `scheduled`-Posts nach Issue #111 und Renderer-/QC-Abnahme: 07:00 `6afd0f8b9f3765f6ab26f417` (`2026-11-19T06:00:00Z`), 12:00 `6afd0f6493fa11d37dff18ac` (`11:00:00Z`), 18:30 `6afd0fe339777dd13e0dd875` (`17:30:00Z`), 22:00 `6afd0fe5fc933ac285bb633c` (`21:00:00Z`). Für alle Zukunftsslots zutreffender `dueAt`, eindeutige IDs, kein Duplikat in diesen acht Slots.
+- **Quelle:** `diagnostics/buffer-status.json` Blob `7986f1770663a22b5e0511f451876e26dc6bc28f` mit Buffer-`checked_at` und Poststatus; GitHub-Issues #110 und #111 mit vier `MOTUS_DAY_COMPLETE`-MP4/QC-Einträgen pro Tag. Quellen vor Fälligkeit nicht als Live-Veröffentlichungsbeweis behandelt.
+- **Technisches Postfach:** 18.11. nach 11 Uhr MEZ deltaorientiert gelesen; neue MOTUS-Night-Fehlermeldung betrifft bereits am Morgen erledigten Nachtlauf für 19.11.; andere neue Meldungen nur fremde Frantic- und Jori-&-Flimm-GitHub-Threads, keine inhaltliche Finanz-/Gewerbeamtsantwort. Frantic/Jori nicht im Eigentum dieser Rolle, keine Antwort/Versand.
+- **Zugriffsgrenzen:** GitHub- und AgentMail-Fachzugriffe funktionieren; Browser-Connector meldet spezifisch `originating browser context` (kein globaler Workstation-Ausfall nachgewiesen). Desktop Commander listet nur die verbotene Rezeption; kein Zugriff erfolgt. Keine manuelle Tagesproduktion, erneuter Render, Recovery, weitere Postslots oder Änderungen an fremden Rollen-Dateien.
+
+**Abschluss:** Die veröffentlichten fälligen zwei D-Slots und die sechs noch nicht fälligen D/D+1-Posts sind für diesen Snapshot korrekt. Die bestehenden nächsten GitHub-/Buffer-Statusprüfungen nach 18:30/22:00 übernehmen die Folgeprüfung; unveränderte Erfolgszustände nicht erneut als Meldung ausgeben.
