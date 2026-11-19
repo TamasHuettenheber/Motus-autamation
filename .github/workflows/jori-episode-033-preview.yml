@@ -17,7 +17,7 @@ permissions:
 
 concurrency:
   group: jori-episode-033-preview
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   render:
@@ -32,11 +32,14 @@ jobs:
             kids/jori-flimm
             published
             .github/workflows/jori-episode-033-preview.yml
-      - name: Install local render tools
+      - name: Verify bundled FFmpeg/fonts and install only Pillow if missing
         run: |
-          if [ -f /etc/apt/apt-mirrors.txt ]; then sudo sed -i 's#azure.archive.ubuntu.com#archive.ubuntu.com#g' /etc/apt/apt-mirrors.txt; fi
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq --no-install-recommends ffmpeg fonts-dejavu-core python3-pil
+          set -euo pipefail
+          command -v ffmpeg
+          command -v ffprobe
+          test -f /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+          python3 -c 'import PIL' || python3 -m pip install --user --disable-pip-version-check Pillow
+          python3 -c 'from PIL import Image,ImageDraw,ImageFont; print("LOCAL_RENDER_TOOLS_READY", Image.__version__)'
       - name: Validate story, seven new images, safe zone and Python before TTS
         run: |
           set -euo pipefail
