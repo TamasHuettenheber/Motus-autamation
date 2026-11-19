@@ -95,7 +95,54 @@ jobs:
           editorial_offsets={"07:00":0,"12:00":0,"18:30":7,"22:00":6}
           if any(len(editorial.get(t,[]))!=14 for t in times_editorial):
               raise SystemExit("EDITORIAL_CONFIG_INVALID")
-          editorial_today={t:editorial[t][(editorial_index+editorial_offsets[t])%14] for t in times_editorial}
+          # Select unused psychological situations before repeating a recent hook.
+          # The fixed 14-day rotation is the tie-breaker; historical matches win only
+          # when an alternative exists. No new issues/runs/calls to paid models.
+          editorial_history=None
+          past_editorial_texts=[]
+          try:
+              q=quote(f'repo:{repo} is:issue in:title "MOTUS-DAY"',safe="")
+              editorial_history=gh("GET",f"/search/issues?q={q}&sort=created&order=desc&per_page=100").get("items",[])
+              cutoff=datetime.fromisoformat(target).date()-timedelta(days=14)
+              for old_issue in editorial_history:
+                  title_old=str(old_issue.get("title",""))
+                  if not title_old.startswith("[MOTUS-DAY] "):continue
+                  try:old_date=datetime.fromisoformat(title_old[-10:]).date()
+                  except ValueError:continue
+                  if not cutoff<=old_date<datetime.fromisoformat(target).date():continue
+                  try:past_slots=json.loads(old_issue.get("body") or "{}").get("slots",[])
+                  except (ValueError,TypeError):continue
+                  past_editorial_texts.extend(str(x.get("text","")) for x in past_slots if isinstance(x,dict))
+          except Exception as exc:
+              print("EDITORIAL_SELECTION_HISTORY_UNAVAILABLE",type(exc).__name__)
+          import re
+          selection_stop=set("eine einer einen einem eines deine deinen deiner deinem deines dich dir dass dann heute morgen nicht wenn weil aber oder wieder wirst wurde werden solltest kannst soll noch schon etwas jemand jemanden jemandem dabei darum statt erst jetzt wichtig wirklich immer mehr ganz auch bevor anderer anderen dein der die das und ist mit für auf von den dem ein zum zur sich über nach".split())
+          def hook_roots(value):
+              return {w[:7] for w in re.findall(r"[a-zäöüß]{4,}",value.lower()) if w not in selection_stop}
+          prior_roots=[hook_roots(text) for text in past_editorial_texts]
+          def recent_hook_matches(card):
+              key=hook_roots(str(card.get("hook","")))
+              if not key:return 0
+              return sum(len(key & previous)>=2 and len(key & previous)/len(key)>=0.46 for previous in prior_roots)
+          editorial_today={}
+          chosen_motifs=set()
+          for t in times_editorial:
+              default_idx=(editorial_index+editorial_offsets[t])%14
+              ranked=[]
+              for i,card in enumerate(editorial[t]):
+                  motif=card.get("motif")
+                  if motif in chosen_motifs:continue
+                  repeats=recent_hook_matches(card)
+                  distance=(i-default_idx)%14
+                  ranked.append((repeats>0,repeats,distance,i,card))
+              if not ranked:raise SystemExit("EDITORIAL_NO_DISTINCT_MOTIF "+t)
+              _,matches,distance,chosen_idx,chosen=min(ranked,key=lambda x:x[:4])
+              editorial_today[t]=chosen
+              chosen_motifs.add(chosen["motif"])
+              if matches or distance:
+                  print("EDITORIAL_HISTORY_SELECTION",target,t,
+                        "default",default_idx,"chosen",chosen_idx,
+                        "recent_hook_matches",matches,"history_slots",len(past_editorial_texts))
           motifs=[editorial_today[t].get("motif") for t in times_editorial]
           if None in motifs or len(set(motifs))!=4:
               raise SystemExit("EDITORIAL_SAME_DAY_MOTIF_DUPLICATE")
@@ -352,7 +399,8 @@ jobs:
           previous_texts=[]
           try:
               q=quote(f'repo:{repo} is:issue in:title "MOTUS-DAY"',safe="")
-              old=gh("GET",f"/search/issues?q={q}&per_page=100").get("items",[])
+              old=(editorial_history if editorial_history is not None
+                   else gh("GET",f"/search/issues?q={q}&sort=created&order=desc&per_page=100").get("items",[]))
               cutoff=datetime.fromisoformat(target).date()-timedelta(days=14)
               for item in old:
                   old_title=str(item.get("title",""))
@@ -400,6 +448,9 @@ jobs:
                       continue
                   choices.append((new_penalty,abs(word_count(candidate)-(low+high)//2),i,candidate))
               return min(choices)[3] if choices else value
+          # Known malformed generated construction, observed in the 20 Nov day issue.
+          # A deterministic guard prevents the same nonsensical German from passing QC.
+          malformed_german=re.compile(r"(?i)\b(?:charakter\s+deklarierten\s+wesenszüge|deklarierten\s+wesenszüge)\b")
           household=re.compile(r"(?i)\b(?:zahnpasta|duschkopf|kartons?|zimmerpflanze|blumengieß\w*|gieß\w*|kalkflecken|putzmittel|ersatzpackung|briefsortier\w*|papiermüll|staubsauger|wäschesortier\w*|spülmaschine|briefkasten)\b")
           safety=re.compile(r"(?i)\b(?:anbrenn\w*|herdplatte\w*|kochend\w*|rutschig\w*|essigreiniger|chlorreiniger|brandgefahr|rauchmelder)\b")
           import unicodedata
@@ -426,6 +477,7 @@ jobs:
               if overlap<2:problems.append("off_topic")
               if household.search(value):problems.append("household_chore")
               if safety.search(value):problems.append("unsafe_scenario")
+              if malformed_german.search(value):problems.append("malformed_german")
               if any(ch.isalpha() and "LATIN" not in unicodedata.name(ch,"") for ch in value):
                   problems.append("non_latin")
               if not has_viewer_cta(value):problems.append("no_cta")
