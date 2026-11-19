@@ -358,3 +358,15 @@ Die vier Renderer-Läufe endeten `completed/success`, mit `MOTUS_ALGENIB_GENERAT
 **Aktuelle D/D+1-Gegenprüfung:** `diagnostics/buffer-status.json` Blob `a133387336051c451685bcc251447b46a9dc1a5d`, `checked_at_utc=2026-11-19T12:53:45.984179Z`: am 19.11. 07:00 und 12:00 je `sent` mit echtem TikTok-Link, 18:30 und 22:00 sowie 20.11. viermal `scheduled` mit je korrektem `dueAt`; keine doppelte Post-ID oder Fälligkeit. Original-Issues #111/#112 jeweils `closed`; Renderer/QC/MP4 laut vorherigen Originalabnahmen. Keine Recovery/Neuproduktion/Änderung vorhandener Beiträge. Nächste 18:30-Fälligkeit erst nach 17:30 UTC anhand eines nach Fälligkeit erzeugten Snapshots prüfen; D+2 21.11. vor 22:37 MEZ nicht anfassen.
 
 **Voraussetzung:** Langfristige Buffer-Retention bei künftiger Archiv-/Exportplanung berücksichtigen; ohne tatsächlich vor Verfall bedrohte MOTUS-Originale kein automatischer Export oder zusätzlicher Prozess. Browser-Connector liefert `originating browser context`-Fehler; daraus keine globale Workstation-Sperre ableiten. Rezeption ungenutzt.
+
+## MOTUS-T-20261119-1830-LIVE-VERIFY
+**Besitzer:** MOTUS – Technik & Reparatur. **Abnahme:** 2026-11-19T18:50:33.202411Z (19:50:33 MEZ), `diagnostics/buffer-status.json` Blob `554841fcbbc6e5c2529878f5d4780a63f6d7dfc7`. **Status:** ZIELNACHWEIS_1830 / KEIN_FEHLER / KEINE_RECOVERY.
+
+**Ausgeführte Maßnahme:** Bestehenden ausschließlich lesenden Buffer Status Monitor nach Fälligkeit über eine isolierte dokumentarische Workflow-Kommentaränderung (`a43f71a22d9a53938b7e9818ffbd14fe14a50ca5`) einmalig ausgelöst. Vorhandener [Run 44591442260](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/44591442260) `completed/success`; Auslesen und Snapshot-Commit nachweislich erfolgreich. Keine Produktion, MP4-Änderung, zusätzliche Posts oder Recovery.
+
+**Live-Abnahme D=19.11.:** Post `6afd0fe339777dd13e0dd875`, `dueAt=2026-11-19T17:30:00.000Z`, `status=sent`, `sentAt=2026-11-19T17:32:43.211Z`, `externalLink=https://tiktok.com/@motus614/video/7709936668110769440`. Die 07:00- und 12:00-Slots bleiben `sent` mit externen TikTok-Links. 22:00 (`6afd0fe5fc933ac285bb633c`, `dueAt=2026-11-19T21:00:00.000Z`) vor Fälligkeit nur `scheduled`. D+1=20.11.: viermal `scheduled` mit je einem richtigen `dueAt` (06:00/11:00/17:30/21:00 UTC), keine Doppel-ID oder Doppel-Fälligkeit. Acht MP4 in `published/` für D/D+1 mit positiver Größe und Tagesissues #111/#112 mit `MOTUS_DAY_COMPLETE` und QC/Renderer-Erfolg zurückgelesen. D+2 vor regulärem 22:37-Erzeugungszeitpunkt nicht geprüft.
+
+**Zugriff/Postfach:** AgentMail-Delta enthält nur bereits bearbeitete Buffer-Retention, fremde Frantic- und Jori-Meldungen; keine neue relevante Finanz-/Gewerbeamts-Sachantwort. Browserzugang konkret ohne `originating browser context`, Desktop Commander ausschließlich untersagte Rezeption, unbenutzt; keine Aussage über generelle Workstation-Verbindung.
+
+**Nächste Voraussetzung:** 22:00-Slot erst nach `dueAt` mit frischem `checked_at`, `sent` und echtem externen TikTok-Link abnehmen. Ohne neue technische Störung keine Änderung/Recovery und keine Benachrichtigung.
+
