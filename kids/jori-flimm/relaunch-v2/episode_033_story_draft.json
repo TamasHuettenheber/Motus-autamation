@@ -1,0 +1,87 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 33,
+  "series_version": "relaunch-v2",
+  "title": "Die Schale, die keinen Ton zurückgab",
+  "hook": "Schale C blieb still, doch von ihrem Fuß lief ein heller Schimmer direkt zur verschlossenen Perlmutttür.",
+  "story": "Jori stand mit Flimm und Luma vor den drei Kristallschalen. Luma ließ ihre kleine Glocke neben Schale A genau einmal klingen. Ein runder Klangring stieg aus A auf und kehrte zu ihnen zurück. Dann hielt Luma die Glocke vor Schale B. Dort liefen zwei Klangringe durch die Luft und kamen beide zurück. Vor Schale C erklang kein Echo. Jori beugte sich näher. Unter C wanderte stattdessen eine dünne blaue Lichtlinie durch den Boden bis zur Tür. Flimm klopfte vorsichtig mit einer Pfote auf den Sockel. Die Lichtlinie wurde heller, während die Tür dahinter schimmerte. Jori erkannte: A und B schickten den Klang zurück, doch C leitete ihn weiter.",
+  "question": "Welche Schale verbirgt den Durchgang: A mit einem zurückkehrenden Klang, B mit zwei zurückkehrenden Klängen oder C ohne Echo, aber mit der Lichtlinie zur Tür?",
+  "answer": "Schale C!",
+  "after": "A und B gaben den Klang an den Garten zurück. C behielt ihn nicht, sondern trug ihn durch ihren Sockel bis zur Tür. Jori legte beide Hände an Schale C. Flimm stellte seine Pfote daneben, und Luma schlug die Glocke noch einmal an. Kein Echo kam zurück. Dafür schoss die blaue Lichtlinie bis in das Sternenschloss. Die Perlmutttür glitt auf. Jori, Flimm und Luma traten in eine neblige Halle mit flachem, silbernem Wasser. Hoch über dem nächsten Durchgang leuchtete ein rundes Schloss.",
+  "cliff": "Unter dem hohen Türschloss schwebten drei Perlenschlüssel in klaren Wassersäulen. Schlüssel A sank bis fast auf den Boden. Schlüssel B blieb auf halber Höhe. Schlüssel C stieg langsam nach oben, direkt auf das hohe Schloss zu. Welcher Schlüssel konnte das Schloss erreichen?",
+  "riddle": {
+    "type": "echo_return_or_forward",
+    "question": "Welche Schale verbirgt den Durchgang: A mit einem zurückkehrenden Klang, B mit zwei zurückkehrenden Klängen oder C ohne Echo, aber mit der Lichtlinie zur Tür?",
+    "answer": "Schale C",
+    "evidence_in_story": "A sendet einen Klangring zurück, B zwei. Nur C sendet keinen Klang zurück; stattdessen führt eine sichtbare Lichtlinie von C zur Tür.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "compare_echo_return_with_forward_light_path",
+  "clues": [
+    "A: Ein Klang kommt zurück",
+    "B: Zwei Klänge kommen zurück",
+    "C: Kein Klang kommt zurück",
+    "Nur bei C läuft Licht zur Tür"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Drei klar getrennte Kristallschalen: A mit einem zurückkehrenden Klangring, B mit zwei, C ohne Echo und mit einer Lichtlinie zur Tür. Rätselschild, Frage und Hinweise vollständig zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt ohne Zeitsprung an den drei Kristallschalen und der schimmernden Perlmutttür aus Folge 032 an. Jori erkennt, dass C den Klang zur Tür weiterleitet, öffnet den Durchgang und gelangt mit Flimm und Luma in die Nebelhalle.",
+  "narration": "Schale C blieb still, doch von ihrem Fuß lief ein heller Schimmer direkt zur verschlossenen Perlmutttür. [[SEGMENT]] Jori stand mit Flimm und Luma vor den drei Kristallschalen. Luma ließ ihre kleine Glocke neben Schale A genau einmal klingen. Ein runder Klangring stieg aus A auf und kehrte zu ihnen zurück. Dann hielt Luma die Glocke vor Schale B. Dort liefen zwei Klangringe durch die Luft und kamen beide zurück. Vor Schale C erklang kein Echo. Jori beugte sich näher. Unter C wanderte stattdessen eine dünne blaue Lichtlinie durch den Boden bis zur Tür. Flimm klopfte vorsichtig mit einer Pfote auf den Sockel. Die Lichtlinie wurde heller, während die Tür dahinter schimmerte. Jori erkannte: A und B schickten den Klang zurück, doch C leitete ihn weiter. [[SEGMENT]] Welche Schale verbirgt den Durchgang: A mit einem zurückkehrenden Klang, B mit zwei zurückkehrenden Klängen oder C ohne Echo, aber mit der Lichtlinie zur Tür? [[PAUSE:7]] Schale C! A und B gaben den Klang an den Garten zurück. C behielt ihn nicht, sondern trug ihn durch ihren Sockel bis zur Tür. Jori legte beide Hände an Schale C. Flimm stellte seine Pfote daneben, und Luma schlug die Glocke noch einmal an. Kein Echo kam zurück. Dafür schoss die blaue Lichtlinie bis in das Sternenschloss. Die Perlmutttür glitt auf. Jori, Flimm und Luma traten in eine neblige Halle mit flachem, silbernem Wasser. Hoch über dem nächsten Durchgang leuchtete ein rundes Schloss. Unter dem hohen Türschloss schwebten drei Perlenschlüssel in klaren Wassersäulen. Schlüssel A sank bis fast auf den Boden. Schlüssel B blieb auf halber Höhe. Schlüssel C stieg langsam nach oben, direkt auf das hohe Schloss zu. Welcher Schlüssel konnte das Schloss erreichen?",
+  "narration_tts": "Schale C blieb still, doch von ihrem Fuß lief ein heller Schimmer direkt zur verschlossenen Perlmutttür. [[SEGMENT]] Jori stand mit Flimm und Luma vor den drei Kristallschalen. Luma ließ ihre kleine Glocke neben Schale A genau einmal klingen. Ein runder Klangring stieg aus A auf und kehrte zu ihnen zurück. Dann hielt Luma die Glocke vor Schale B. Dort liefen zwei Klangringe durch die Luft und kamen beide zurück. Vor Schale C erklang kein Echo. Jori beugte sich näher. Unter C wanderte stattdessen eine dünne blaue Lichtlinie durch den Boden bis zur Tür. Flimm klopfte vorsichtig mit einer Pfote auf den Sockel. Die Lichtlinie wurde heller, während die Tür dahinter schimmerte. Jori erkannte: A und B schickten den Klang zurück, doch C leitete ihn weiter. [[SEGMENT]] Welche Schale verbirgt den Durchgang: A mit einem zurückkehrenden Klang, B mit zwei zurückkehrenden Klängen oder C ohne Echo, aber mit der Lichtlinie zur Tür? [[PAUSE:7]] Schale C! A und B gaben den Klang an den Garten zurück. C behielt ihn nicht, sondern trug ihn durch ihren Sockel bis zur Tür. Jori legte beide Hände an Schale C. Flimm stellte seine Pfote daneben, und Luma schlug die Glocke noch einmal an. Kein Echo kam zurück. Dafür schoss die blaue Lichtlinie bis in das Sternenschloss. Die Perlmutttür glitt auf. Jori, Flimm und Luma traten in eine neblige Halle mit flachem, silbernem Wasser. Hoch über dem nächsten Durchgang leuchtete ein rundes Schloss. Unter dem hohen Türschloss schwebten drei Perlenschlüssel in klaren Wassersäulen. Schlüssel A sank bis fast auf den Boden. Schlüssel B blieb auf halber Höhe. Schlüssel C stieg langsam nach oben, direkt auf das hohe Schloss zu. Welcher Schlüssel konnte das Schloss erreichen?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss im Klanggarten: A und B zeigen auslaufende Klangringe, während eine Lichtlinie von der stillen Schale C zur Perlmutttür führt.",
+    "Luma schlägt ihre Glocke neben A an; genau ein Klangring kehrt zurück.",
+    "Vor B kehren zwei Klangringe zurück; bei C bleibt es still, doch Jori entdeckt die Lichtlinie zur Tür.",
+    "Ruhiges Tableau der drei Schalen mit freier Fläche für das TikTok-sichere Rätsel.",
+    "Lösung: Jori und Flimm berühren C, Luma klingelt, und das Licht läuft in das Türschloss.",
+    "Die Perlmutttür öffnet sich; Jori, Flimm und Luma betreten eine neue Nebelhalle mit silbernem Wasser.",
+    "Cliffhanger: drei Perlenschlüssel sinken, schweben oder steigen unter einem hohen Schloss."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-033-v1/scene-01.png",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-033-v1/scene-02.png",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-033-v1/scene-03.png",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-033-v1/scene-04.png",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-033-v1/scene-05.png",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-033-v1/scene-06.png",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-033-v1/scene-07.png",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-19T08:28:00+01:00",
+  "status": "STORY_AND_ART_READY_TTS_PENDING",
+  "previous_cliffhanger": "Vor einer verschlossenen Perlmutttür standen drei Kristallschalen. Als Luma ihre Glocke einmal anschlug, antwortete Schale A einmal, Schale B zweimal, und Schale C blieb still. Doch nur hinter Schale C schimmerte die Tür. Welche Schale verbarg den Durchgang?"
+}
