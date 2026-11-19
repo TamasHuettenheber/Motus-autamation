@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-19T12:53:45.984179+00:00",
+  "checked_at_utc": "2026-11-19T18:50:33.202411+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6afd0fe339777dd13e0dd875",
       "text": "Eine Verabredung klingt schön, aber du bist erschöpft und hast ein schlechtes Gewissen. Erkläre ehrlich deine Situation und schlage einen anderen Termin vor. Beziehungen vertragen klare Worte. Eine freundliche Grenze schützt Zeit und Vertrauen zugleich. Wer die eigenen Möglichkeiten ehrlich ausspricht, verspricht weniger, hält dafür aber mehr ein. Du darfst freundlich bleiben und trotzdem deutlich sagen, was du leisten kannst und was nicht. Wenn du das wiedererkennst, speichere dir diesen Beitrag.\n\n#motus #beziehungen #selbstrespekt #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – A Memory Away (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-19T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-19T17:32:43.211Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7709936668110769440",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-19-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6afd0fe339777dd13e0dd875_video.mp4"
         }
       ]
     },
