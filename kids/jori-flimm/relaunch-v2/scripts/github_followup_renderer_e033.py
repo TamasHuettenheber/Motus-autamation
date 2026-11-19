@@ -10,7 +10,7 @@ ART=BASE/'assets/episode-033-v1';W=ROOT/'work/episode_033';W.mkdir(parents=True,
 SCENES={name:i for i,name in enumerate(['hook','story_a','story_b','puzzle','answer','cliff_transition','cliff'],1)}
 paths=[ART/f'scene-{i:02d}.png' for i in range(1,8)]
 assert all(x.is_file() for x in paths);assert len({x.read_bytes() for x in paths})==7
-print('JORI_SCENE_ART_READY episode=32 unique_scenes=7')
+print('JORI_SCENE_ART_READY episode=33 unique_scenes=7')
 episode=json.loads((BASE/'episode_033_story_draft.json').read_text(encoding='utf-8'))
 audio=W/'narration_source.wav';timeline=W/'voice-timeline.json'
 assert audio.is_file() and timeline.is_file(),'No validated Sulafat narration'
@@ -127,6 +127,6 @@ output=ROOT/'published/jori-flimm-2026-11-23-e033-v1.mp4';output.parent.mkdir(ex
 cmd('ffmpeg','-nostdin','-y','-loglevel','error','-i',video,'-i',audio,'-filter_complex',f'[0:v]ass={sub}[v]','-map','[v]','-map','1:a','-c:v','libx264','-preset','veryfast','-crf','21','-pix_fmt','yuv420p','-r','24','-c:a','aac','-b:a','192k','-movflags','+faststart','-shortest',output)
 rendered=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','default=noprint_wrappers=1:nokey=1',str(output)],text=True).strip())
 assert output.stat().st_size>1_000_000 and abs(rendered-D)<.25
-print(f'JORI_EPISODE_RENDER_OK episode=32 duration={rendered} bytes={output.stat().st_size} tiktok_safe_right=540')
+print(f'JORI_EPISODE_RENDER_OK episode=33 duration={rendered} bytes={output.stat().st_size} tiktok_safe_right=540')
 
 
