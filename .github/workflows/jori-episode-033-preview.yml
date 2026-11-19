@@ -32,11 +32,17 @@ jobs:
             kids/jori-flimm
             published
             .github/workflows/jori-episode-033-preview.yml
-      - name: Verify bundled FFmpeg/fonts and install only Pillow if missing
+      - name: Install isolated static FFmpeg tools and Pillow
         run: |
           set -euo pipefail
-          command -v ffmpeg
-          command -v ffprobe
+          mkdir -p "$RUNNER_TEMP/ffmpeg-tools" "$RUNNER_TEMP/bin"
+          npm --silent install --prefix "$RUNNER_TEMP/ffmpeg-tools" ffmpeg-static@5.2.0 ffprobe-static@3.1.0
+          ln -sf "$(node -p "require('$RUNNER_TEMP/ffmpeg-tools/node_modules/ffmpeg-static')")" "$RUNNER_TEMP/bin/ffmpeg"
+          ln -sf "$(node -p "require('$RUNNER_TEMP/ffmpeg-tools/node_modules/ffprobe-static').path")" "$RUNNER_TEMP/bin/ffprobe"
+          chmod +x "$RUNNER_TEMP/bin/ffmpeg" "$RUNNER_TEMP/bin/ffprobe"
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+          "$RUNNER_TEMP/bin/ffmpeg" -version | head -1
+          "$RUNNER_TEMP/bin/ffprobe" -version | head -1
           test -f /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
           python3 -c 'import PIL' || python3 -m pip install --user --disable-pip-version-check Pillow
           python3 -c 'from PIL import Image,ImageDraw,ImageFont; print("LOCAL_RENDER_TOOLS_READY", Image.__version__)'
