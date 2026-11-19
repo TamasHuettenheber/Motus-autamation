@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-19T21:26:28.678863+00:00",
+  "checked_at_utc": "2026-11-19T23:23:50.706317+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6aff84151a1724ac8f599290",
+      "text": "Der detaillierte Plan für morgen kreist in deinem Kopf, obwohl du längst alles Nötige vorbereitet hast. Lass jetzt die endlose Kontrolle los. Unterscheide bewusste Vorbereitung von gedanklichem Nachkartern. Du darfst den heutigen Tag jetzt friedlich abschließen. Folge unserem Kanal für tägliche Impulse.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-21T21:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-21-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6aff83e41a1724ac8f598171",
+      "text": "Jemand vertritt eine Meinung, die du am liebsten sofort und laut ablehnen möchtest, weil sie so gar nicht zu deinen eigenen Werten passen will. Bitte dein Gegenüber stattdessen freundlich darum, den für sie oder ihn wichtigsten Grund für diese Ansicht zu nennen. Sich aufrichtig darauf einzulassen schafft echten Raum für neue Einsichten. Denk daran: Verstehen ist niemals dasselbe wie ungespitzt zuzustimmen. Teile dieses Video mit jemandem, der kluge Gespräche schätzt.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Remember (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-21T17:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-21-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6aff83da8d2272fdf519ca79",
+      "text": "Dein Gegenüber wird still und du möchtest die Pause sofort mit Argumenten füllen. Frag, ob etwas unklar geblieben ist. Verstehen braucht manchmal einen Moment Ruhe. Zuhören ist eine bewusste Entscheidung. Teile diesen Impuls mit einer Person, die gerade Mut braucht.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Familiar Roads (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-21T11:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-21-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6aff83e38d2272fdf519d3b9",
+      "text": "Du hast dich entschieden und suchst trotzdem immer neue Bestätigung. Gib deinem Entschluss einen fairen Zeitraum. Nicht jede Unsicherheit bedeutet, dass du falschliegst. Gib deiner Wahl Raum, bevor du sie allein wegen eines kurzen Zweifels wieder verwirfst. Du kannst deinen Entschluss später anhand neuer Fakten überprüfen, ohne ihn ständig aus Angst infrage zu stellen. Nicht jedes Zögern bedeutet einen Irrtum. Speichere den Impuls, falls du ihn später brauchst.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-21T06:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-21-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6afe30254cace847b37df510",
       "text": "Eine Nachricht bleibt unbeantwortet und du vermutest sofort Ablehnung. Erinnere dich daran, dass du die Gründe noch nicht kennst. Beobachtung und Bedeutung sind verschieden. Eine offene Frage oder das Eingeständnis einer Wissenslücke ist oft ehrlicher als vorschnelle Gewissheit. Du gewinnst Klarheit, indem du nachfragst oder auf Fakten wartest, statt Ungewissheit mit Vermutungen zu füllen. Ungewissheit verlangt nicht immer sofort Antworten. Folge MOTUS für neue Impulse zu Selbstvertrauen und Klarheit.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aefaa94004e4879a7837fc1_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6af2748aab244f728ca49608",
-      "text": "Werbung für mein eigenes Produkt | Ein Dienstplan zeigt, wer arbeitet. Aber siehst du auch, was deine geplanten Schichten kosten? Der Gastro-Personalkostenplaner für Excel hilft dir, die nächste Woche durchzurechnen: bis zu 6 Schichteinträge pro Tag, frei wählbarer Arbeitgeberkostenfaktor und Vergleich der geplanten Personalkosten mit deinen eingetragenen Netto-Umsätzen – täglich und für die Woche. Einmalig 9,90 € · digitaler Download · Planungshilfe, keine Lohnabrechnung. Hier ansehen: https://payhip.com/b/g8p5a #Gastronomie #Dienstplanung #Personalkosten #Excel #Restaurantmanagement",
-      "status": "sent",
-      "dueAt": "2026-11-09T12:02:34.000Z",
-      "sentAt": "2026-11-09T12:02:34.000Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7706140902741282070?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "image/webp",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af2748aab244f728ca49608_thumbnail.webp"
-        }
-      ]
-    },
-    {
-      "id": "6aefaa8e004e4879a7837f25",
-      "text": "Die U-Bahn-Tür klemmt halb offen, drinnen drängen die Menschen und dein Magen knurrt, während du die Minuten bis zum Meeting zählst. Lass dich von dem Gedränge nicht stressen. Atme einmal tief aus, trete einen Schritt zurück und verlege die kurze Mittagspause gedanklich auf die ruhige Parkbank um die Ecke. Teile dieses Reel mit jemandem, der heute ebenfalls dringend eine Atempause braucht. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Syntheticity (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-09T11:00:00.000Z",
-      "sentAt": "2026-11-09T11:03:02.041Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7706125332012715297?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aefaa8e004e4879a7837f25_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6aefaa83562f2e6de98570e1",
-      "text": "Der Reißverschluss deiner Lieblingsjacke klemmt im feuchten Futter fest und du ziehst ungeduldig daran, während die Haustür im Zugluftstoß zufällt. Genau solche kleinen Blockaden bestimmen oft die ersten Minuten deines Vormittags und rauben unnötig Nerven. Reiß den Kragen nicht gewaltsam auf, sondern reibe eine trockene Kerze vorsichtig über die Zähnchen, damit das Metall sofort wieder butterweich gleitet. Spare dir den Frust und probiere diesen Trick heute noch aus. Schreib mir in die Kommentare, welcher Handgriff deinen Morgen sofort rettet. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Wild Waters (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-09T06:00:00.000Z",
-      "sentAt": "2026-11-09T06:02:15.029Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7706047661648153889?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aefaa83562f2e6de98570e1_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6aee789baf7e526d43f0c955",
-      "text": "Die Straßenlaterne wirft ein helles, gelbes Streifenmuster durch die geschlossenen Jalousien direkt an deine Schlafzimmerdecke. Stell den Wecker auf dem Nachttisch auf die gewohnte Uhrzeit, leg das Gerät mit dem Display nach unten auf die Kommode und schließe die Augen für einen tiefen, ruhigen Atemzug. Folge diesem Kanal für weitere entspannte Impulse am Abend. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Hidden Tears (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-08T21:00:00.000Z",
-      "sentAt": "2026-11-08T21:03:16.044Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7705908709192371488?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aee789baf7e526d43f0c955_video.mp4"
         }
       ]
     }
