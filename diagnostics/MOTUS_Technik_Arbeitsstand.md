@@ -370,3 +370,24 @@ Die vier Renderer-Läufe endeten `completed/success`, mit `MOTUS_ALGENIB_GENERAT
 
 **Nächste Voraussetzung:** 22:00-Slot erst nach `dueAt` mit frischem `checked_at`, `sent` und echtem externen TikTok-Link abnehmen. Ohne neue technische Störung keine Änderung/Recovery und keine Benachrichtigung.
 
+
+
+## MOTUS-T-20261120-NIGHT-RECOVERY-113
+**Besitzer:** MOTUS – Technik & Reparatur. **Abschluss:** ERLEDIGT — verspätete reguläre Tageserzeugung 21.11.2026 über bestehenden idempotenten GitHub-Produzenten nachgeholt; echte Zielabnahme im Buffer. **checked_at_utc:** `2026-11-19T23:23:50.706317Z`, Buffer-Snapshot `diagnostics/buffer-status.json` Blob `2971c6fd08a2ec2562f67811067246fffb0d97b3`.
+
+**Ursache und Vorprüfung:** Am 19.11. um 22:04 MEZ erreichte der vorhandene Nachtproduzent [Run 44615115980](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/44615115980) die korrekte Schutzbedingung `BEFORE_REGULAR_2237_WINDOW`; `completed/success` war nur Guard-Erfolg, noch kein Tagesauftrag. Nach dem regulären 22:37-MEZ-Fenster und bis ca. 20.11. 00:14 MEZ lag kein neuer Nachtproduzent-Lauf vor; exakte GitHub-Issue- und MP4-/Buffer-Prüfung ergab keine Produktion für den 21.11., es gab keine aktive Night-Recovery. Keine Behauptung eines fehlgeschlagenen Renderer-Laufs.
+
+**Ausgeführte idempotente Recovery:** Ausschließlich den schon existierenden Night-Producer-Job `135881617331` als zweiten Versuch von Run `44615115980` einmal neu ausgeführt, ohne zweiten Produzenten, neues Werbe-/Verkaufsobjekt, neuen Postslot oder direkten API-Post. Job `135954390633` `completed/success`; exakt ein neuer Tagesauftrag [#113](https://github.com/TamasHuettenheber/Motus-autamation/issues/113) für **21.11.**; originaler Dispatcher `44635977209` und die vier Renderer `44636009747 / 44636012804 / 44636016261 / 44636019408` jeweils `completed/success`. Tagesauftrag `closed` mit `MOTUS_DAY_COMPLETE` und vier positiven MP4/QC-Nachweisen. MP4-Größen in Reihenfolge 07:00/12:00/18:30/22:00: `14025055 / 3620622 / 20536179 / 17557487` Bytes. Kein Eingriff in bereits bestehende D/D+1-Veröffentlichungen.
+
+**Unabhängiger Zielcheck:** Vorhandenen lesenden Buffer-Statusmonitor [Run 44618367040](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/44618367040) einmal erneut ausgeführt (Versuch 2: `completed/success`, Job `135957877964`); frischen Originalsnapshot zurückgelesen, `checked_at_utc=2026-11-19T23:23:50.706317Z`. TikTok `motus614`, Kanal-ID `6ab5124fea19ca0bded4aa0b`; am 21.11. genau die folgenden vier **scheduled**, je korrekter `dueAt` UTC, `externalLink=null` (noch nicht veröffentlicht):
+
+| MEZ | postId | dueAt UTC | status | externalLink |
+|---|---|---|---|---|
+| 07:00 | `6aff83e38d2272fdf519d3b9` | `2026-11-21T06:00:00Z` | scheduled | null |
+| 12:00 | `6aff83da8d2272fdf519ca79` | `2026-11-21T11:00:00Z` | scheduled | null |
+| 18:30 | `6aff83e41a1724ac8f598171` | `2026-11-21T17:30:00Z` | scheduled | null |
+| 22:00 | `6aff84151a1724ac8f599290` | `2026-11-21T21:00:00Z` | scheduled | null |
+
+**D/D+1:** 19.11. alle vier `sent` mit echten externen TikTok-Links, einschließlich 22:00 `6afd0fe5fc933ac285bb633c` (`dueAt=2026-11-19T21:00:00Z`, `externalLink=https://tiktok.com/@motus614/video/7709990906522258720`). 20.11. alle vier zukünftigen Termine einmalig `scheduled` mit korrektem `dueAt`. Für jeden der drei geprüften Tage vier unterschiedliche IDs und vier eindeutige Fälligkeiten; keine Duplikate. Kein Anspruch auf spätere Veröffentlichung vor tatsächlichem Termin. D+2 erst nach dem dann gültigen 22:37-Fenster.
+
+**Nächste Voraussetzung:** Reguläre GitHub-05:00-Duplikatkontrolle beibehalten und am ersten Lauf danach erneut abgleichen. Spätere D/D+1-Publikationen nur mit neuem `checked_at`, `sent` und echtem TikTok-Link abnehmen. Kein neuer Recovery-Lauf nötig; frühere Pipedream-422-Konfiguration bleibt eigener externer Zugangsvorgang. Browser in diesem Lauf meldete erneut konkret fehlenden `originating browser context`; Rezeption nicht benutzt und die ChatGPT-Workstation dadurch weder bestätigt noch widerlegt.
