@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-27-1830",
-      "clip_id": "train-window-36620147",
-      "source": "https://www.pexels.com/video/scenic-views-through-train-window-36620147/",
-      "used_at_utc": "2026-10-25T21:46:23.940499+00:00"
-    },
-    {
       "output_name": "motus-2026-10-27-2200",
       "clip_id": "night-walk-4121893",
       "source": "https://www.pexels.com/video/a-person-walking-in-the-street-at-night-4121893/",
@@ -599,6 +593,12 @@
       "clip_id": "coffee-phone-13736547",
       "source": "https://www.pexels.com/video/a-woman-using-her-phone-and-drinking-a-cup-of-coffee-13736547/",
       "used_at_utc": "2026-11-19T23:18:32.255396+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-21-1830",
+      "clip_id": "night-city-13658220",
+      "source": "https://www.pexels.com/video/people-walking-in-city-at-night-13658220/",
+      "used_at_utc": "2026-11-19T23:18:52.042826+00:00"
     }
   ]
 }
