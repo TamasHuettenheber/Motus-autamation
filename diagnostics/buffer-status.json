@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-19T03:15:54.537780+00:00",
+  "checked_at_utc": "2026-11-19T06:55:24.086101+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6afd0f8b9f3765f6ab26f417",
       "text": "Du wartest darauf, dass jemand dir eine neue Aufgabe ausdrücklich zutraut. Überlege, welche Verantwortung du schon jetzt sinnvoll übernehmen kannst. Selbstvertrauen wächst durch Erfahrung. Neue Verantwortung beginnt selten erst dann, wenn du dich vollkommen sicher fühlst. Übernimm eine Aufgabe in einem realistischen Rahmen und lerne aus der Erfahrung, statt auf perfekte Sicherheit zu warten. Verantwortung wächst durch echtes Handeln. Folge MOTUS für neue Impulse zu Selbstvertrauen und Klarheit.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Wild Waters (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-19T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-19T06:02:25.207Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7709758479040351520",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-19-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6afd0f8b9f3765f6ab26f417_video.mp4"
         }
       ]
     },
