@@ -152,3 +152,5 @@ jobs:
 # E032 live Buffer precheck before production on 2026-11-18.
 
 # E032 live Buffer postcheck after scheduling on 2026-11-18.
+
+# Daily live queue preflight for 2026-11-19; Episode 033 candidate only after absence check.
