@@ -5,7 +5,7 @@ from datetime import date,timedelta
 from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
 ROOT=Path.cwd();BASE=ROOT/'kids/jori-flimm/relaunch-v2'
-p=argparse.ArgumentParser();p.add_argument('--episode',type=int,required=True,choices=[32]);a=p.parse_args();n=a.episode
+p=argparse.ArgumentParser();p.add_argument('--episode',type=int,required=True,choices=[33]);a=p.parse_args();n=a.episode
 ART=BASE/'assets/episode-033-v1';W=ROOT/'work/episode_033';W.mkdir(parents=True,exist_ok=True)
 SCENES={name:i for i,name in enumerate(['hook','story_a','story_b','puzzle','answer','cliff_transition','cliff'],1)}
 paths=[ART/f'scene-{i:02d}.png' for i in range(1,8)]
