@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Schale C blieb still, doch von ihrem Fuß lief ein heller Schimmer direkt zur verschlossenen Perlmutttür.",
+      "start": 0.0,
+      "end": 9.64,
+      "duration": 9.64
+    },
+    {
+      "kind": "speech",
+      "text": "Jori stand mit Flimm und Luma vor den drei Kristallschalen. Luma ließ ihre kleine Glocke neben Schale A genau einmal klingen. Ein runder Klangring stieg aus A auf und kehrte zu ihnen zurück. Dann hielt Luma die Glocke vor Schale B. Dort liefen zwei Klangringe durch die Luft und kamen beide zurück. Vor Schale C erklang kein Echo. Jori beugte sich näher. Unter C wanderte stattdessen eine dünne blaue Lichtlinie durch den Boden bis zur Tür. Flimm klopfte vorsichtig mit einer Pfote auf den Sockel. Die Lichtlinie wurde heller, während die Tür dahinter schimmerte. Jori erkannte den Unterschied: A und B schickten den Klang zurück, doch C leitete den Ton weiter.",
+      "start": 9.64,
+      "end": 65.24,
+      "duration": 55.6
+    },
+    {
+      "kind": "speech",
+      "text": "Welche Schale verbirgt den Durchgang: A mit einem zurückkehrenden Klang, B mit zwei zurückkehrenden Klängen oder C ohne Echo, aber mit der Lichtlinie zur Tür?",
+      "start": 65.24,
+      "end": 82.0,
+      "duration": 16.76
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 82.0,
+      "end": 89.0,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Schale C! A und B gaben den Klang an den Garten zurück. C behielt ihn nicht, sondern trug ihn durch ihren Sockel bis zur Tür. Jori legte beide Hände an Schale C. Flimm stellte seine Pfote daneben, und Luma schlug die Glocke noch einmal an. Kein Echo kam zurück. Dafür schoss die blaue Lichtlinie bis in das Sternenschloss. Die Perlmutttür glitt auf. Jori, Flimm und Luma traten in eine neblige Halle mit flachem, silbernem Wasser. Hoch über dem nächsten Durchgang leuchtete ein rundes Schloss. Unter dem hohen Türschloss schwebten drei Perlenschlüssel in klaren Wassersäulen. Schlüssel A sank bis fast auf den Boden. Schlüssel B blieb auf halber Höhe. Schlüssel C stieg langsam nach oben, direkt auf das hohe Schloss zu. Welcher Schlüssel konnte das Schloss erreichen?",
+      "start": 89.0,
+      "end": 147.92,
+      "duration": 58.92
+    }
+  ],
+  "duration": 147.92,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
