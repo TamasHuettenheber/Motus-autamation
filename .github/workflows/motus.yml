@@ -200,17 +200,24 @@ jobs:
           message_scene=any(cue in text for cue in ('nachricht','unbeantwortet','sms','chat'))
           # Knowledge/assessment situations should show thinking or learning, not random scenery.
           assessment_scene=any(cue in text for cue in ('einschaetzung','kenntnisstand','bewertung','fachwissen'))
+          # Spoken pauses and arguments are conversation scenes, not coffee/phone breaks.
+          conversation_scene=re.search(r'(?<![a-z])(?:gegenueber|gespraech|diskussion|zuhoeren|argumente?)(?![a-z])',text) is not None
           for clip in library.get('clips',[]):
               # Morning footage must not depict night or evening scenes.
               # Check metadata before scoring, so emotional keywords cannot outrank time-of-day fit.
               if output.endswith('-0700') and any(fold(str(tag)) in {'nacht', 'abend'} for tag in clip.get('tags', [])):
+                  continue
+              # 22:00 text may say 'morgen' to mean tomorrow; exclude morning footage.
+              if output.endswith('-2200') and any(fold(str(tag)) == 'morgen' for tag in clip.get('tags', [])):
                   continue
               # Do not treat generic tags such as "alltag" as evidence of a scene match.
               # Require an actual word or inflection. Substring matching turned
               # "dazugelernt" into a false "zug" (train) scene and "gezielt"
               # into a false "ziel" (planner) scene.
               def matches_word(tag):
-                  return re.search(r'(?<![a-z])'+re.escape(tag)+r'(?:e|en|er|es|s|n)?(?![a-z])',text) is not None
+                  # Short tags must match exactly: 'wegen' is not 'Weg'.
+                  ending=r'(?:e|en|er|es|s|n)?' if len(tag)>3 else ''
+                  return re.search(r'(?<![a-z])'+re.escape(tag)+ending+r'(?![a-z])',text) is not None
               matching=[fold(str(tag)) for tag in clip.get('tags',[])
                         if fold(str(tag)) not in generic_tags and matches_word(fold(str(tag)))]
               score=sum(2 if len(tag)>=6 else 1 for tag in matching)
@@ -220,6 +227,8 @@ jobs:
                   score+=4
               if assessment_scene and any(fold(str(tag)) in {'denken','lernen','reflexion'} for tag in clip.get('tags',[])):
                   score+=4
+              if conversation_scene and output.endswith('-1200') and clip['id'] in {'desk-thinking-5704904','office-thinking-8873099','man-thinking-8448889'}:
+                  score+=3
               # Only the 18:30 social slot prefers people together; a noon discussion
               # must never be sent to night B-roll by this heuristic.
               if social_scene and output.endswith('-1830'):
