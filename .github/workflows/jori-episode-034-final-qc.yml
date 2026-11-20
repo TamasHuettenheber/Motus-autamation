@@ -48,7 +48,7 @@ jobs:
           from pathlib import Path
           from PIL import Image,ImageDraw
           root=Path('.');base=root/'kids/jori-flimm/relaunch-v2';work=root/'work/episode_034'
-          e=json.loads((base/'episode_034_story_draft.json').read_text());prev=json.loads((base/'episode_032_story_draft.json').read_text())
+          e=json.loads((base/'episode_034_story_draft.json').read_text());prev=json.loads((base/'episode_033_story_draft.json').read_text())
           assert e['previous_cliffhanger']==prev['cliff']
           assert e['episode_number']==34 and e['title']=='Der Schlüssel, der nach oben stieg'
           assert e['hook'].startswith('Schlüssel C stieg in seiner Wassersäule direkt auf das hohe Schloss')
