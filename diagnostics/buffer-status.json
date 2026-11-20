@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-20T20:02:04.169639+00:00",
+  "checked_at_utc": "2026-11-20T21:12:03.301773+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -73,15 +73,15 @@
     {
       "id": "6afe30254cace847b37df510",
       "text": "Eine Nachricht bleibt unbeantwortet und du vermutest sofort Ablehnung. Erinnere dich daran, dass du die Gründe noch nicht kennst. Beobachtung und Bedeutung sind verschieden. Eine offene Frage oder das Eingeständnis einer Wissenslücke ist oft ehrlicher als vorschnelle Gewissheit. Du gewinnst Klarheit, indem du nachfragst oder auf Fakten wartest, statt Ungewissheit mit Vermutungen zu füllen. Ungewissheit verlangt nicht immer sofort Antworten. Folge MOTUS für neue Impulse zu Selbstvertrauen und Klarheit.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-20T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-20T21:03:36.736Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7710361977507417377",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-20-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6afe30254cace847b37df510_video.mp4"
         }
       ]
     },
