@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Schlüssel C stieg in seiner Wassersäule direkt auf das hohe Schloss zu, während A sank und B in der Mitte schwebte.",
+      "start": 0.0,
+      "end": 10.52,
+      "duration": 10.52
+    },
+    {
+      "kind": "speech",
+      "text": "Jori, Flimm und Luma standen im silbernen Wasser der Nebelhalle. Über ihnen wartete das runde Schloss. In der linken Säule sank Schlüssel A immer tiefer. In der mittleren Säule blieb Schlüssel B auf halber Höhe stehen. Nur Schlüssel C stieg langsam nach oben. Flimm legte beide Pfoten an die Säule von A. Kleine Blasen tanzten auf, doch der Schlüssel sank weiter. Dann stupste Flimm die Säule von B an. Der Schlüssel wackelte, blieb aber in der Mitte. Jori entdeckte an allen drei Sockeln denselben Pfeil, der nach oben zeigte. Luma ließ ihre Glocke leise klingen. Bei C schimmerte der Pfeil blau, und der Schlüssel stieg noch ein Stück näher an das Schloss. Jori verglich die Wege: A entfernte sich vom Schloss, B blieb weit darunter, C bewegte sich genau dorthin.",
+      "start": 10.52,
+      "end": 73.24,
+      "duration": 62.72
+    },
+    {
+      "kind": "speech",
+      "text": "Welcher Perlenschlüssel kann das hohe Schloss erreichen: A, der sinkt, B, der in der Mitte bleibt, oder C, der nach oben steigt?",
+      "start": 73.24,
+      "end": 86.04,
+      "duration": 12.8
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 86.04,
+      "end": 93.04,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Schlüssel C! Nur C bewegte sich auf das hohe Schloss zu. Jori drehte den Ring am Sockel von C. Flimm hielt den Ring mit beiden Pfoten fest, und Luma schlug ihre Glocke noch einmal an. Die Wassersäule leuchtete blau. Schlüssel C glitt bis ganz nach oben und sprang mit einem hellen Klick in das Schloss. Das silberne Wasser sank langsam ab. Eine runde Tür öffnete sich, und warmer Wind strich durch die Halle. Dahinter begann ein weiter Raum aus hellem Nebel. Schmale Brücken schwebten über einem tiefen, aber freundlich glitzernden Wolkenbecken. Vor Jori lagen drei Nebelbrücken. Brücke A hatte zwei große Lücken. Brücke B führte im Kreis zurück zur Tür. Brücke C zog sich ohne Unterbrechung bis zu einem leuchtenden Turmbalkon. Welche Brücke führte wirklich zum Turm?",
+      "start": 93.04,
+      "end": 153.0,
+      "duration": 59.96
+    }
+  ],
+  "duration": 153.0,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
