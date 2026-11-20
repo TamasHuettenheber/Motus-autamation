@@ -305,7 +305,8 @@ jobs:
               "schliesst":"schließt","Tuer":"Tür",
               "eetrudeln":"eintrudeln","Energiefoch":"Energielevel",
               "ungelueftet":"ungelüftet","unwillkuerlich":"unwillkürlich",
-               "ein kühlen Kopf":"einen kühlen Kopf"
+               "ein kühlen Kopf":"einen kühlen Kopf",
+               "Verstehen ist niemals dasselbe wie ungespitzt zuzustimmen.":"Verstehen bedeutet nicht, die andere Meinung übernehmen zu müssen."
           }
           for slot in slots:
               original=slot.get("text","")
@@ -335,7 +336,7 @@ jobs:
                "Speichere diesen Gedanken als Erinnerung für deinen Alltag."],
               ["Teile diesen Gedanken mit jemandem, der das gerade braucht.",
                "Kennst du jemanden in dieser Lage? Teile den Beitrag mit ihm.",
-               "Teile diesen Impuls mit einer Person, die gerade Mut braucht.",
+               "Teile diesen Impuls mit jemandem, der diese Situation gut kennt.",
                "Schick den Gedanken jemandem, mit dem du darüber sprechen möchtest."],
               ["Folge MOTUS für neue Impulse zu Selbstvertrauen und Klarheit.",
                "Für weitere alltagstaugliche Gedanken über innere Stärke: Folge MOTUS.",
@@ -450,7 +451,7 @@ jobs:
               return min(choices)[3] if choices else value
           # Known malformed generated construction, observed in the 20 Nov day issue.
           # A deterministic guard prevents the same nonsensical German from passing QC.
-          malformed_german=re.compile(r"(?i)\b(?:charakter\s+deklarierten\s+wesenszüge|deklarierten\s+wesenszüge)\b")
+          malformed_german=re.compile(r"(?i)\b(?:charakter\s+deklarierten\s+wesenszüge|deklarierten\s+wesenszüge|ungespitzt\s+zuzustimmen)\b")
           household=re.compile(r"(?i)\b(?:zahnpasta|duschkopf|kartons?|zimmerpflanze|blumengieß\w*|gieß\w*|kalkflecken|putzmittel|ersatzpackung|briefsortier\w*|papiermüll|staubsauger|wäschesortier\w*|spülmaschine|briefkasten)\b")
           safety=re.compile(r"(?i)\b(?:anbrenn\w*|herdplatte\w*|kochend\w*|rutschig\w*|essigreiniger|chlorreiniger|brandgefahr|rauchmelder)\b")
           import unicodedata
