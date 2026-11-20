@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-20T03:03:38.515398+00:00",
+  "checked_at_utc": "2026-11-20T06:29:24.024485+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6afe2fef01ba7c5e791c7e5e",
       "text": "Dein bisheriger Erfolg fühlt sich plötzlich wie eine Pflicht zur Wiederholung an. Erlaube dir heute bewusst, wieder Anfänger zu sein, der Fehler macht. Wahres Wachstum braucht Neugier statt ständiger Selbstbestätigung. Welches neue Thema lernst du heute ohne Leistungsdruck? Schreib es in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Daybreak (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-20T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-20T06:01:39.449Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7710129598423452960",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-20-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6afe2fef01ba7c5e791c7e5e_video.mp4"
         }
       ]
     },
