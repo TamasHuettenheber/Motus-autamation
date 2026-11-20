@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-20T11:26:00.211117+00:00",
+  "checked_at_utc": "2026-11-20T18:13:59.047994+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6afe3010c462756e9e26a0a5",
       "text": "Ein alter Streit taucht plötzlich wieder auf und die Vorwürfe driften direkt in den persönlichen Bereich ab. Sprich stattdessen sachlich über das beobachtete Verhalten statt über den Charakter deklarierten Wesenszüge deines Gegenübers. Folge uns für mehr innere Stärke im Alltag.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Home (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-20T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-20T18:08:19.842Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7710307834050743585",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-20-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6afe3010c462756e9e26a0a5_video.mp4"
         }
       ]
     },
