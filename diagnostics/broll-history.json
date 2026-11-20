@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-28-0700",
-      "clip_id": "morning-writing-8085706",
-      "source": "https://www.pexels.com/video/a-person-writing-in-a-notebook-8085706/",
-      "used_at_utc": "2026-10-26T23:48:47.773591+00:00"
-    },
-    {
       "output_name": "motus-2026-10-28-2200",
       "clip_id": "forest-walk-5838469",
       "source": "https://www.pexels.com/video/vertical-video-of-a-woman-walking-through-the-woods-5838469/",
@@ -599,6 +593,12 @@
       "clip_id": "park-walk-8296235",
       "source": "https://www.pexels.com/video/a-man-walking-around-the-park-8296235/",
       "used_at_utc": "2026-11-20T22:54:29.513172+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-22-2200",
+      "clip_id": "sunset-ocean-7975481",
+      "source": "https://www.pexels.com/video/vertical-video-of-sunset-7975481/",
+      "used_at_utc": "2026-11-20T22:54:39.871002+00:00"
     }
   ]
 }
