@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-21T23:04:06.815530+00:00",
+  "checked_at_utc": "2026-11-21T23:19:25.995213+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6b02268d02479690920bc4f4",
+      "text": "Du hast heute eine unangenehme, aber notwendige Wahrheit ausgesprochen und zweifelst nun daran, ob das wirklich richtig war. Prüfe jetzt kurz sachlich, ob du inhaltlich fair geblieben bist. Aufrichtigkeit verlangt eben nicht immer ein bequemes Gespräch. Speichere diesen Beitrag für deine Abendreflexion ab.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Hidden Tears (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-23T21:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-23-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6b02267602479690920bbd1c",
+      "text": "Du denkst heute Abend an einen langjährigen Freund, dem du schon viel zu lange nicht mehr gesagt hast, wie wichtig er dir in deinem Leben eigentlich ist. Schick ihm jetzt sofort eine kurze, absolut ehrliche Nachricht, um eure Verbundenheit zu stärken. Echte emotionale Nähe braucht schließlich keinen festen Anlass oder Jahrestag, sondern nur den ehrlichen Mut, den ersten Schritt zu tun. Folge unserem Kanal für tägliche Impulse zu starken Beziehungen.\n\n#motus #beziehungen #selbstrespekt #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – Deserve to be Loved (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-23T17:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-23-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6b0226c902479690920bda36",
+      "text": "Eine geschriebene Nachricht von dir wurde gerade völlig anders verstanden, als du es eigentlich beabsichtigt hattest. Ungeklärte Annahmen wachsen sonst schnell zu unnötigen Konflikten heran. Klär diesen einen Punkt jetzt direkt im persönlichen Gespräch. Teile diesen Beitrag mit jemandem, der heute auch Klarheit braucht.\n\n#motus #kommunikation #alltagspsychologie #selbstentwicklung #mentaleklarheit\n\nMusik: Tanner Helland – Destiny (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-23T11:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-23-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6b022682cc364169c11132de",
+      "text": "Du merkst beim Blick in den Spiegel, dass dein angeblich so großes Lebensziel eigentlich nur die laute Erwartung deiner Umgebung ist. Das fühlt sich schwer an, weil du bisher für den Beifall anderer gelaufen bist statt für dich selbst. Echte Klarheit bringt dir am Ende deutlich mehr innere Zufriedenheit als der Applaus von Menschen, die deinen persönlichen Preis gar nicht tragen müssen. Schreib mir deine Gedanken dazu in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Forest Awakes (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-23T06:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-23-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6b00cfc85e993799d834c48a",
       "text": "Eine freundliche Geste von heute fällt dir erst jetzt wieder ein. Nimm ihre Bedeutung bewusst wahr. Manche guten Dinge sind leise und trotzdem wichtig. Ein guter Augenblick wird nicht kleiner, nur weil gleichzeitig anderes schwierig war. Wenn du ihn bewusst wahrnimmst, erinnerst du dich an mehr als bloße To-do-Listen. Es lohnt sich, diese kleine Erfahrung mit eigenen Worten festzuhalten, statt sie gleich zu vergessen. Folge MOTUS für neue Impulse zu Selbstvertrauen und Klarheit.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af287dbd35dff5701d4c39e_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6af287da26f9e6aeeadd1194",
-      "text": "Der Regenschirm tropft auf den Flur und hinterlässt eine nasse Spur, während die Post ungeordnet auf dem Schreibtisch liegt. Stelle eine kleine Abtropfschale auf und sortiere Briefe sofort in ein Fach. Teile diesen Beitrag mit jemandem, der auch täglich Papiermüll sortiert. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Familiar Roads (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-11T11:00:00.000Z",
-      "sentAt": "2026-11-11T11:03:30.256Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7706867637581532449?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af287da26f9e6aeeadd1194_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6af287bae261c09acc968ccb",
-      "text": "Der Schlüssel steckt im Schloss, aber die Jackentasche bleibt leer, weil das Portemonnaie auf dem Küchentisch liegt. Statt im Chaos den Bus zu verpassen, etablierst du eine feste Ablage direkt neben der Eingangstür für alles, was du unterwegs brauchst. Das spart morgendlichen Suchstress und gibt dir einen strukturierten Start. Welcher feste Platz an deiner Tür beendet dieses Suchen für immer? Schreibe es in die Kommentare. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Now or Never (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-11T06:00:00.000Z",
-      "sentAt": "2026-11-11T06:02:18.330Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7706789828087631137?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af287bae261c09acc968ccb_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6af103d1004e4879a7e85d9c",
-      "text": "Beim Zähneprüfen fällt dein Blick auf das vollgestellte Bücherregal, in dem die Romane völlig kreuz und quer stehen. Lass die Unordnung heute einfach mal unberührt, dreh stattdessen das grelle Deckenlicht aus und schalte nur die kleine Lampe am Nachttisch an. Das sanfte Licht signalisiert deinem Kopf sofort das Ende des Tages, ohne dass du jetzt noch aufräumen musst. Erholung beginnt im Kopf, wenn du den Blick bewusst auf gemütliche Ecken lenkst. Folge unserem Kanal für tägliche Impulse, die deinen Abend spürbar entspannter machen. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-10T21:00:00.000Z",
-      "sentAt": "2026-11-10T21:03:35.955Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7706650990023347489?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af103d1004e4879a7e85d9c_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6af10465229bf05dafdf12b3",
-      "text": "Im Flur stapeln sich die leeren Kartons vom letzten Online-Kauf und versperren den Weg. Falte die Schachteln jetzt direkt zusammen und bring sie in den Keller. Danach ist der Eingangsbereich wieder frei. Teile dieses Video mit jemandem, der auch immer zu viele Kartons sammelt. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Home (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-10T17:30:00.000Z",
-      "sentAt": "2026-11-10T17:33:22.643Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7706596938333965601?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af10465229bf05dafdf12b3_video.mp4"
         }
       ]
     }
