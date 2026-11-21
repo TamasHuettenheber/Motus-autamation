@@ -17,6 +17,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          # This monitor only reads/writes diagnostics/buffer-status.json.
+          # Avoid materializing the growing published MP4 tree on each status refresh.
+          sparse-checkout: |
+            diagnostics
 
       - name: Read Buffer status for motus614
         env:
