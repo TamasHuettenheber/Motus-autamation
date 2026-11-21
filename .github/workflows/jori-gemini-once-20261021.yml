@@ -1,0 +1,62 @@
+name: Jori Flimm – one-time AI key and story test (QC repair)
+
+on:
+  push:
+    branches:
+      - feature/jori-flimm-kids-pipeline
+    paths:
+      - .github/workflows/jori-gemini-once-20261021.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jori-flimm-one-time-ai-check
+  cancel-in-progress: false
+
+jobs:
+  create-one-draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - name: Checkout isolated development branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-kids-pipeline
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            kids/jori-flimm
+      - name: Verify GitHub secret configured without revealing value
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+        run: |
+          if [ -z "$JORI_GEMINI_API_KEY" ]; then
+            echo "JORI_KEY_NOT_CONFIGURED"
+            exit 1
+          fi
+          echo "JORI_KEY_PRESENT"
+      - name: Generate exactly one unpublished episode 003 with bounded QC repair
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+        run: |
+          python3 kids/jori-flimm/scripts/generate_daily_story.py --date 2026-10-23 --model gemini-3.5-flash-lite
+      - name: Keep successful episode draft only on development branch
+        run: |
+          test -s kids/jori-flimm/drafts/jori-flimm-2026-10-23-e003.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("kids/jori-flimm/drafts/jori-flimm-2026-10-23-e003.json")
+          d=json.loads(p.read_text(encoding="utf-8"))
+          assert d.get("approved_for_publish") is False
+          assert d.get("episode_number") == 3 and d.get("date")=="2026-10-23"
+          print("ONE_EPISODE_VALIDATED",d["episode_number"], "unpublished")
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add kids/jori-flimm/drafts/jori-flimm-2026-10-23-e003.json
+          git diff --cached --quiet || {
+            git commit -m 'kids: verify Gemini key and store unpublished original episode 003 draft'
+            git push origin HEAD:feature/jori-flimm-kids-pipeline
+          }

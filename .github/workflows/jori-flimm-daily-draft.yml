@@ -1,0 +1,130 @@
+name: Jori & Flimm – isolated daily story drafting
+
+on:
+  push:
+    branches:
+      - feature/jori-flimm-kids-pipeline
+    paths:
+      - kids/jori-flimm/scripts/generate_daily_story.py
+      - kids/jori-flimm/scripts/test_generate_daily_story.py
+      - kids/jori-flimm/scripts/test_episode002_feedback.py
+      - kids/jori-flimm/scripts/test_build_storyboard.py
+      - kids/jori-flimm/scripts/build_storyboard.py
+      - kids/jori-flimm/scripts/compile_preview_episode.py
+      - kids/jori-flimm/scripts/test_compile_preview_episode.py
+      - kids/jori-flimm/scripts/generate_voice_gemini.py
+      - .github/workflows/jori-flimm-daily-draft.yml
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: Optional next story date YYYY-MM-DD
+        required: false
+        type: string
+  schedule:
+    # Runs only from the repository DEFAULT branch, not this test branch.
+    # At 22:17 Berlin time, create tomorrow's story draft.
+    - cron: '17 22 * * *'
+      timezone: Europe/Berlin
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jori-flimm-daily-story
+  cancel-in-progress: false
+
+jobs:
+  offline-check:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            kids/jori-flimm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install free preview-image library
+        run: python -m pip install 'Pillow>=11,<13'
+      - name: Syntax, narrative tests and image preview tests (no API key)
+        run: |
+          python -m py_compile kids/jori-flimm/scripts/generate_daily_story.py kids/jori-flimm/scripts/build_storyboard.py kids/jori-flimm/scripts/compile_preview_episode.py kids/jori-flimm/scripts/generate_voice_gemini.py
+          python -m unittest discover -s kids/jori-flimm/scripts -p 'test_*.py' -v
+          python kids/jori-flimm/scripts/generate_daily_story.py --dry-run
+          python kids/jori-flimm/scripts/build_storyboard.py \
+            --draft kids/jori-flimm/fixtures/e002-draft-2026-10-22.json \
+            --output-dir /tmp/jori-preview
+      - name: Upload private-test preview artifact (not a TikTok post)
+        uses: actions/upload-artifact@v4
+        with:
+          name: Jori-Flimm-e002-unpublished-storyboard
+          path: /tmp/jori-preview/
+          if-no-files-found: error
+          retention-days: 7
+
+  story-draft:
+    # Deliberately disabled until a separate key and safe rollout are arranged.
+    # No MOTUS production, renderer or publisher is changed.
+    if: (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && vars.JORI_STORY_DRAFTS_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Check out separate story branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-kids-pipeline
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            kids/jori-flimm
+      - name: Write tomorrow's story, but never publish
+        env:
+          JORI_GEMINI_API_KEY: ${{ secrets.JORI_GEMINI_API_KEY }}
+          TARGET_DATE: ${{ inputs.target_date }}
+        run: |
+          if [ -z "$JORI_GEMINI_API_KEY" ]; then
+            echo 'Missing JORI_GEMINI_API_KEY. No external request was made.'
+            exit 1
+          fi
+          if [ -n "$TARGET_DATE" ]; then
+            python3 kids/jori-flimm/scripts/generate_daily_story.py --date "$TARGET_DATE"
+          else
+            python3 kids/jori-flimm/scripts/generate_daily_story.py
+          fi
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Prepare preview illustrations only; do not publish
+        run: |
+          python -m pip install 'Pillow>=11,<13'
+          mkdir -p kids/jori-flimm/previews
+          for draft in kids/jori-flimm/drafts/*.json; do
+            test -f "$draft" || continue
+            folder="$(basename "$draft" .json)"
+            stamp="$(printf '%s' "$folder" | sed -E 's/^jori-flimm-//')"
+            preview_folder="kids/jori-flimm/previews/$stamp"
+            if [ ! -d "$preview_folder" ]; then
+              python kids/jori-flimm/scripts/build_storyboard.py \
+                --draft "$draft" --output-dir kids/jori-flimm/previews
+            fi
+            if [ ! -f "kids/jori-flimm/episodes/$folder.json" ]; then
+              python kids/jori-flimm/scripts/compile_preview_episode.py \
+                --draft "$draft" --preview-folder "$preview_folder" \
+                --output-dir kids/jori-flimm/episodes
+            fi
+          done
+      - name: Save drafts and PREVIEW artwork on separate branch only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add kids/jori-flimm/drafts/ kids/jori-flimm/previews/ kids/jori-flimm/episodes/
+          if git diff --cached --quiet; then
+            echo 'Existing draft; no duplicate commit.'
+            exit 0
+          fi
+          git commit -m 'kids: store Jori and Flimm draft pending illustration and QC'
+          git push origin HEAD:feature/jori-flimm-kids-pipeline
