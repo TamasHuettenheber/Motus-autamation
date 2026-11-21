@@ -158,7 +158,7 @@ jobs:
                   "fuer einen Tagesplan mit den Slots 07:00,12:00,18:30,22:00. "
                   +f"Die Slots {', '.join(sorted(short_times))} sind KURZ mit jeweils 35 bis 45 Woertern; "
                   +f"die Slots {', '.join(sorted(long_times))} sind LANG mit jeweils 65 bis 75 Woertern. "
-                  +"Halte die Wortzahl pro Slot strikt ein; KURZ maximal 55, LANG maximal 85 Woerter. "
+                  +"Pruefe die Wortzahl vor Ausgabe: KURZ 35 bis 45, LANG 65 bis 75 Woerter. "
                   "Bei KURZ sofort Konflikt und Loesung, kein langes Intro. Beide Gruppen muessen "
                   "gleich starke Hooks, eine konkrete alltagstaugliche Handlung und eine natuerliche CTA haben. "
                   "Beginne JEDEN Text sofort mit einem anderen konkreten Hook: einer beobachtbaren "
@@ -295,6 +295,7 @@ jobs:
           # Deterministic corrections for verified recurrent Gemini misspellings.
           # Apply only while creating a new day; existing issues/videos stay untouched.
           spelling_fixes={
+              "Teile in den Kommentaren deine Erfahrung dazu.":"Erzähl in den Kommentaren von deiner Erfahrung.",
               "Stioerfaktor":"Störfaktor","nervogen":"nervös",
               "hartnaeckig":"hartnäckig","waehrend":"während",
               "Kuechentisch":"Küchentisch","unaufhoerlich":"unaufhörlich",
