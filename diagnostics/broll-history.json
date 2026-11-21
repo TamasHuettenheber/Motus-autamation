@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-29-1200",
-      "clip_id": "work-phone-7174377",
-      "source": "https://www.pexels.com/video/a-man-talking-on-the-phone-while-at-work-7174377/",
-      "used_at_utc": "2026-10-28T00:00:35.516888+00:00"
-    },
-    {
       "output_name": "motus-2026-10-29-0700",
       "clip_id": "coffee-phone-13736547",
       "source": "https://www.pexels.com/video/a-woman-using-her-phone-and-drinking-a-cup-of-coffee-13736547/",
@@ -599,6 +593,12 @@
       "clip_id": "desk-thinking-5704904",
       "source": "https://www.pexels.com/video/woman-working-on-the-desk-5704904/",
       "used_at_utc": "2026-11-20T22:54:57.983088+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-23-0700",
+      "clip_id": "sunrise-sea-18303443",
+      "source": "https://www.pexels.com/video/sunrise-over-the-sea-vertical-video-18303443/",
+      "used_at_utc": "2026-11-21T23:16:50.438351+00:00"
     }
   ]
 }
