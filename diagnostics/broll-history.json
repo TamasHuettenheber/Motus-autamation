@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-29-1830",
-      "clip_id": "city-phone-13802094",
-      "source": "https://www.pexels.com/video/a-man-in-a-suit-looking-at-his-phone-while-walking-in-the-city-13802094/",
-      "used_at_utc": "2026-10-28T00:01:21.902354+00:00"
-    },
-    {
       "output_name": "motus-2026-10-30-1200",
       "clip_id": "work-laptop-8479274",
       "source": "https://www.pexels.com/video/man-using-laptop-at-work-8479274/",
@@ -599,6 +593,12 @@
       "clip_id": "phone-cafe-5075207",
       "source": "https://www.pexels.com/video/a-woman-is-using-her-phone-to-take-a-picture-of-her-coffee-5075207/",
       "used_at_utc": "2026-11-21T23:17:07.789752+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-23-1200",
+      "clip_id": "phone-cafe-5075207",
+      "source": "https://www.pexels.com/video/a-woman-is-using-her-phone-to-take-a-picture-of-her-coffee-5075207/",
+      "used_at_utc": "2026-11-21T23:17:49.959767+00:00"
     }
   ]
 }
