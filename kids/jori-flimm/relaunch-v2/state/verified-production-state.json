@@ -1,27 +1,27 @@
 {
   "series": "Jori & Flimm",
   "branch": "feature/jori-flimm-neustart-folge001",
-  "updated_at": "2026-11-20T08:46:00+01:00",
-  "latest_fully_qc_episode": 34,
-  "latest_scheduled_episode": 34,
-  "next_episode_number": 35,
-  "latest_title": "Der Schlüssel, der nach oben stieg",
-  "next_continuity_anchor": "Vor Jori lagen drei Nebelbrücken. Brücke A hatte zwei große Lücken. Brücke B führte im Kreis zurück zur Tür. Brücke C zog sich ohne Unterbrechung bis zu einem leuchtenden Turmbalkon. Welche Brücke führte wirklich zum Turm?",
-  "video_path": "published/jori-flimm-2026-11-24-e034-v1.mp4",
+  "updated_at": "2026-11-21T08:40:00+01:00",
+  "latest_fully_qc_episode": 35,
+  "latest_scheduled_episode": 35,
+  "next_episode_number": 36,
+  "latest_title": "Die Brücke, die nicht zurückführte",
+  "next_continuity_anchor": "Windband A strömte nach unten in den Nebel. Windband B zeigte zurück zur Brücke. Windband C schraubte sich nach oben durch eine goldene Öffnung zum Turmdach. Welches Windband wies den Weg weiter hinauf?",
+  "video_path": "published/jori-flimm-2026-11-25-e035-v1.mp4",
   "buffer": {
-    "post_id": "6afffa3bca85ebefb0069047",
+    "post_id": "6b014a4a5102766245053428",
     "status": "scheduled",
     "channel": "@jori.flimm",
     "channel_id": "6ad948ea778b240e2f839607",
-    "due_at": "2026-11-24T13:00:00.000Z",
-    "local_time": "2026-11-24T14:00:00+01:00"
+    "due_at": "2026-11-25T13:00:00.000Z",
+    "local_time": "2026-11-25T14:00:00+01:00"
   },
   "evidence": {
-    "queue_precheck_run_id": 44692939970,
-    "preview_run_id": 44694820024,
-    "final_qc_run_id": 44696428669,
-    "release_run_id": 44697011644,
-    "postcheck_run_id": 44697231403
+    "queue_precheck_run_id": 44878989932,
+    "preview_run_id": 44880266927,
+    "final_qc_run_id": 44880670016,
+    "release_run_id": 44881058682,
+    "postcheck_run_id": 44881235873
   },
   "warning": "Do not infer the next episode from reset series-state.json or episode-ledger.json; use this verified state plus GitHub MP4s, Action logs and live Buffer evidence."
 }
