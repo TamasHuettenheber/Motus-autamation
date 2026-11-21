@@ -1,0 +1,59 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 35,
+  "series_version": "relaunch-v2",
+  "title": "Die Brücke, die nicht zurückführte",
+  "hook": "Brücke C führte ohne Unterbrechung bis zum leuchtenden Turmbalkon, während A zwei Lücken hatte und B zur Tür zurücklief.",
+  "story": "Jori, Flimm und Luma standen am Rand des Wolkenbeckens. Links brach Brücke A an zwei Stellen ab. Zwischen den Enden schimmerte nur tiefer Nebel. Flimm beugte sich vor, zog seine runde orange Nase aber gleich wieder zurück. Auf Brücke B hüpfte er drei vorsichtige Schritte. Der Weg bog in einem großen Kreis herum und brachte ihn genau zur offenen Tür zurück. Luma flog über die Kurve und ließ ihre Glocke klingeln, als sie wieder am Anfang ankam. Jori betrachtete nun Brücke C. Kein Stück fehlte. Die helle Spur führte vom Sockel bis zum Turmbalkon. Jori verglich die Wege: A konnte niemand vollständig überqueren, B brachte alle zurück, und nur C verband beide Seiten.",
+  "question": "Welche Nebelbrücke führt wirklich zum Turm: A mit zwei Lücken, B im Kreis zurück zur Tür oder C ohne Unterbrechung bis zum Balkon?",
+  "answer": "Brücke C!",
+  "after": "Nur C bildete einen durchgehenden Weg bis zum Turm. Jori setzte ihren Stiefel auf den ersten Nebelschritt. Unter ihrer Sohle leuchtete eine blaue Linie auf. Flimm folgte mit kleinen, mutigen Sprüngen, und Luma flog mit ihrer Glocke voraus. Schritt für Schritt überquerten sie das Wolkenbecken. Als Jori den Turmbalkon erreichte, wurde die Brücke hinter ihnen zu einem stillen Lichtband. Eine runde Tür öffnete sich. Dahinter lag eine hohe Windkammer mit drei Kristallbögen. In jedem Bogen schwebte ein langes Windband.",
+  "cliff": "Windband A strömte nach unten in den Nebel. Windband B zeigte zurück zur Brücke. Windband C schraubte sich nach oben durch eine goldene Öffnung zum Turmdach. Welches Windband wies den Weg weiter hinauf?",
+  "riddle": {
+    "type": "continuous_bridge_reaches_tower",
+    "question": "Welche Nebelbrücke führt wirklich zum Turm: A mit zwei Lücken, B im Kreis zurück zur Tür oder C ohne Unterbrechung bis zum Balkon?",
+    "answer": "Brücke C",
+    "evidence_in_story": "A hat zwei unüberwindbare Lücken, B führt im Kreis zurück zum Ausgang, C verbindet den Sockel ohne Unterbrechung mit dem Turmbalkon.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "compare_path_continuity_and_destination",
+  "clues": [
+    "A: hat zwei Lücken",
+    "B: führt zurück zur Tür",
+    "C: reicht bis zum Balkon",
+    "Nur ein Weg ist durchgehend"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Drei klar unterscheidbare Nebelbrücken: A mit zwei Lücken, B als geschlossener Rückweg zur Tür, C durchgehend bis zum leuchtenden Turmbalkon. Rätselschild, Frage und Hinweise vollständig zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt ohne Zeitsprung an den drei Nebelbrücken aus Folge 034 an. Jori erkennt Brücke C als einzigen durchgehenden Weg, überquert sie mit Flimm und Luma und erreicht eine Windkammer im Turm.",
+  "narration": "Brücke C führte ohne Unterbrechung bis zum leuchtenden Turmbalkon, während A zwei Lücken hatte und B zur Tür zurücklief. [[SEGMENT]] Jori, Flimm und Luma standen am Rand des Wolkenbeckens. Links brach Brücke A an zwei Stellen ab. Zwischen den Enden schimmerte nur tiefer Nebel. Flimm beugte sich vor, zog seine runde orange Nase aber gleich wieder zurück. Auf Brücke B hüpfte er drei vorsichtige Schritte. Der Weg bog in einem großen Kreis herum und brachte ihn genau zur offenen Tür zurück. Luma flog über die Kurve und ließ ihre Glocke klingeln, als sie wieder am Anfang ankam. Jori betrachtete nun Brücke C. Kein Stück fehlte. Die helle Spur führte vom Sockel bis zum Turmbalkon. Jori verglich die Wege: A konnte niemand vollständig überqueren, B brachte alle zurück, und nur C verband beide Seiten. [[SEGMENT]] Welche Nebelbrücke führt wirklich zum Turm: A mit zwei Lücken, B im Kreis zurück zur Tür oder C ohne Unterbrechung bis zum Balkon? [[PAUSE:7]] Brücke C! Nur C bildete einen durchgehenden Weg bis zum Turm. Jori setzte ihren Stiefel auf den ersten Nebelschritt. Unter ihrer Sohle leuchtete eine blaue Linie auf. Flimm folgte mit kleinen, mutigen Sprüngen, und Luma flog mit ihrer Glocke voraus. Schritt für Schritt überquerten sie das Wolkenbecken. Als Jori den Turmbalkon erreichte, wurde die Brücke hinter ihnen zu einem stillen Lichtband. Eine runde Tür öffnete sich. Dahinter lag eine hohe Windkammer mit drei Kristallbögen. In jedem Bogen schwebte ein langes Windband. Windband A strömte nach unten in den Nebel. Windband B zeigte zurück zur Brücke. Windband C schraubte sich nach oben durch eine goldene Öffnung zum Turmdach. Welches Windband wies den Weg weiter hinauf?",
+  "narration_tts": "Brücke C führte ohne Unterbrechung bis zum leuchtenden Turmbalkon, während A zwei Lücken hatte und B zur Tür zurücklief. [[SEGMENT]] Jori, Flimm und Luma standen am Rand des Wolkenbeckens. Links brach Brücke A an zwei Stellen ab. Zwischen den Enden schimmerte nur tiefer Nebel. Flimm beugte sich vor, zog seine runde orange Nase aber gleich wieder zurück. Auf Brücke B hüpfte er drei vorsichtige Schritte. Der Weg bog in einem großen Kreis herum und brachte ihn genau zur offenen Tür zurück. Luma flog über die Kurve und ließ ihre Glocke klingeln, als sie wieder am Anfang ankam. Jori betrachtete nun Brücke C. Kein Stück fehlte. Die helle Spur führte vom Sockel bis zum Turmbalkon. Jori verglich die Wege: A konnte niemand vollständig überqueren, B brachte alle zurück, und nur C verband beide Seiten. [[SEGMENT]] Welche Nebelbrücke führt wirklich zum Turm: A mit zwei Lücken, B im Kreis zurück zur Tür oder C ohne Unterbrechung bis zum Balkon? [[PAUSE:7]] Brücke C! Nur C bildete einen durchgehenden Weg bis zum Turm. Jori setzte ihren Stiefel auf den ersten Nebelschritt. Unter ihrer Sohle leuchtete eine blaue Linie auf. Flimm folgte mit kleinen, mutigen Sprüngen, und Luma flog mit ihrer Glocke voraus. Schritt für Schritt überquerten sie das Wolkenbecken. Als Jori den Turmbalkon erreichte, wurde die Brücke hinter ihnen zu einem stillen Lichtband. Eine runde Tür öffnete sich. Dahinter lag eine hohe Windkammer mit drei Kristallbögen. In jedem Bogen schwebte ein langes Windband. Windband A strömte nach unten in den Nebel. Windband B zeigte zurück zur Brücke. Windband C schraubte sich nach oben durch eine goldene Öffnung zum Turmdach. Welches Windband wies den Weg weiter hinauf?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss: Jori, Flimm und Luma sehen A mit Lücken, B als Schleife und C durchgehend zum Turm.",
+    "Jori und Luma prüfen die zwei großen Lücken von A; Flimm weicht vorsichtig zurück.",
+    "Flimm testet B; der kreisförmige Weg führt ihn sichtbar zur offenen Tür zurück.",
+    "Ruhiges Tableau aller drei Brücken mit freier Fläche für das TikTok-sichere Rätsel.",
+    "Lösung: C leuchtet blau auf, Jori betritt den durchgehenden Weg, Flimm und Luma folgen.",
+    "Jori, Flimm und Luma überqueren C und erreichen den leuchtenden Turmbalkon.",
+    "Cliffhanger: drei Windbänder in der Turmkammer; A abwärts, B zurück, C aufwärts zum Dach."
+  ],
+  "visuals": [
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-035-v1/scene-01.png", "scene": 1, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-035-v1/scene-02.png", "scene": 2, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-035-v1/scene-03.png", "scene": 3, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-035-v1/scene-04.png", "scene": 4, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-035-v1/scene-05.png", "scene": 5, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-035-v1/scene-06.png", "scene": 6, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-035-v1/scene-07.png", "scene": 7, "generated": true}
+  ],
+  "created_at": "2026-11-21T08:18:00+01:00",
+  "status": "STORY_AND_SEVEN_NEW_IMAGES_READY_TTS_PENDING",
+  "previous_cliffhanger": "Vor Jori lagen drei Nebelbrücken. Brücke A hatte zwei große Lücken. Brücke B führte im Kreis zurück zur Tür. Brücke C zog sich ohne Unterbrechung bis zu einem leuchtenden Turmbalkon. Welche Brücke führte wirklich zum Turm?"
+}
