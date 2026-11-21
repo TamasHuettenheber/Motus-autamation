@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-21T09:37:44.389033+00:00",
+  "checked_at_utc": "2026-11-21T13:14:31.975429+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6aff83da8d2272fdf519ca79",
       "text": "Dein Gegenüber wird still und du möchtest die Pause sofort mit Argumenten füllen. Frag, ob etwas unklar geblieben ist. Verstehen braucht manchmal einen Moment Ruhe. Zuhören ist eine bewusste Entscheidung. Teile diesen Impuls mit einer Person, die gerade Mut braucht.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Familiar Roads (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-21T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-21T11:02:44.669Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7710578333922102561",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-21-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6aff83da8d2272fdf519ca79_video.mp4"
         }
       ]
     },
