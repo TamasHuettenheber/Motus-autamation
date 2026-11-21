@@ -195,7 +195,7 @@ jobs:
           # A specific friend, invitation or hobby scene calls for people in frame,
           # not an unrelated lone walker with a coincidental generic keyword.
           # Include disagreement and discussion: they also depict interaction between people.
-          social_scene=re.search(r'(?<![a-z])(?:freund(?:in|e|es|en)?|freundschaft|verabredung|einladung|hobby|familienmitglied|gespraech|streit|konflikt|vorwuerf(?:e|en)?|meinung|diskussion)(?![a-z])',text) is not None
+          social_scene=re.search(r'(?<![a-z])(?:freund(?:in|e|es|en)?|freundschaft|verabredung|einladung|hobby|familienmitglied|nahestehend\w*\s+mensch|gespraech|streit|konflikt|vorwuerf(?:e|en)?|meinung|diskussion)(?![a-z])',text) is not None
           # Tie the footage to actual messaging scenes, not only to generic emotions.
           message_scene=any(cue in text for cue in ('nachricht','unbeantwortet','sms','chat'))
           # Knowledge/assessment situations should show thinking or learning, not random scenery.
