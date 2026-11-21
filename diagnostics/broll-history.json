@@ -1,12 +1,6 @@
 {
   "uses": [
     {
-      "output_name": "motus-2026-10-29-2200",
-      "clip_id": "sunset-ocean-7975481",
-      "source": "https://www.pexels.com/video/vertical-video-of-sunset-7975481/",
-      "used_at_utc": "2026-10-28T00:00:49.125951+00:00"
-    },
-    {
       "output_name": "motus-2026-10-29-1830",
       "clip_id": "city-phone-13802094",
       "source": "https://www.pexels.com/video/a-man-in-a-suit-looking-at-his-phone-while-walking-in-the-city-13802094/",
@@ -599,6 +593,12 @@
       "clip_id": "night-walk-4121893",
       "source": "https://www.pexels.com/video/a-person-walking-in-the-street-at-night-4121893/",
       "used_at_utc": "2026-11-21T23:16:56.508130+00:00"
+    },
+    {
+      "output_name": "motus-2026-11-23-1830",
+      "clip_id": "phone-cafe-5075207",
+      "source": "https://www.pexels.com/video/a-woman-is-using-her-phone-to-take-a-picture-of-her-coffee-5075207/",
+      "used_at_utc": "2026-11-21T23:17:07.789752+00:00"
     }
   ]
 }
