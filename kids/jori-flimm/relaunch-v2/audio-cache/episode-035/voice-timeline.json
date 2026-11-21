@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Brücke C führte ohne Unterbrechung bis zum leuchtenden Turmbalkon, während A zwei Lücken hatte und B zur Tür zurücklief.",
+      "start": 0.0,
+      "end": 12.64,
+      "duration": 12.64
+    },
+    {
+      "kind": "speech",
+      "text": "Jori, Flimm und Luma standen am Rand des Wolkenbeckens. Links brach Brücke A an zwei Stellen ab. Zwischen den Enden schimmerte nur tiefer Nebel. Flimm beugte sich vor, zog seine runde orange Nase aber gleich wieder zurück. Auf Brücke B hüpfte er drei vorsichtige Schritte. Der Weg bog in einem großen Kreis herum und brachte ihn genau zur offenen Tür zurück. Luma flog über die Kurve und ließ ihre Glocke klingeln, als sie wieder am Anfang ankam. Jori betrachtete nun Brücke C. Kein Stück fehlte. Die helle Spur führte vom Sockel bis zum Turmbalkon. Jori verglich die Wege: A konnte niemand vollständig überqueren, B brachte alle zurück, und nur C verband beide Seiten.",
+      "start": 12.64,
+      "end": 69.08,
+      "duration": 56.44
+    },
+    {
+      "kind": "speech",
+      "text": "Welche Nebelbrücke führt wirklich zum Turm: A mit zwei Lücken, B im Kreis zurück zur Tür oder C ohne Unterbrechung bis zum Balkon?",
+      "start": 69.08,
+      "end": 82.84,
+      "duration": 13.76
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 82.84,
+      "end": 89.84,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Brücke C! Nur C bildete einen durchgehenden Weg bis zum Turm. Jori setzte ihren Stiefel auf den ersten Nebelschritt. Unter ihrer Sohle leuchtete eine blaue Linie auf. Flimm folgte mit kleinen, mutigen Sprüngen, und Luma flog mit ihrer Glocke voraus. Schritt für Schritt überquerten sie das Wolkenbecken. Als Jori den Turmbalkon erreichte, wurde die Brücke hinter ihnen zu einem stillen Lichtband. Eine runde Tür öffnete sich. Dahinter lag eine hohe Windkammer mit drei Kristallbögen. In jedem Bogen schwebte ein langes Windband. Windband A strömte nach unten in den Nebel. Windband B zeigte zurück zur Brücke. Windband C schraubte sich nach oben durch eine goldene Öffnung zum Turmdach. Welches Windband wies den Weg weiter hinauf?",
+      "start": 89.84,
+      "end": 150.72,
+      "duration": 60.88
+    }
+  ],
+  "duration": 150.72,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
