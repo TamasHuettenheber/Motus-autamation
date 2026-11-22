@@ -7,7 +7,7 @@ from PIL import Image,ImageDraw,ImageFont
 ROOT=Path.cwd();BASE=ROOT/'kids/jori-flimm/relaunch-v2'
 p=argparse.ArgumentParser();p.add_argument('--episode',type=int,required=True,choices=[36]);a=p.parse_args();n=a.episode
 ART=BASE/'assets/episode-036-v1';W=ROOT/'work/episode_036';W.mkdir(parents=True,exist_ok=True)
-SCENES={name:i for i,name in enumerate(['hook','story_a','story_b','puzzle','answer','cliff_transition','cliff'],1)}
+SCENES={'hook':1,'story_a':2,'story_b':3,'story_c':4,'puzzle':4,'answer':5,'cliff_transition':6,'cliff':7}
 paths=[ART/f'scene-{i:02d}.png' for i in range(1,8)]
 assert all(x.is_file() for x in paths);assert len({x.read_bytes() for x in paths})==7
 print('JORI_SCENE_ART_READY episode=36 unique_scenes=7')
@@ -86,16 +86,17 @@ def sentence_intervals(item):
 pre=items[:pause_index];post=items[pause_index+1:];assert len(pre)==3 and len(post)==1
 story_intervals=sentence_intervals(pre[1])
 story_b_start=next(a for a,b,txt in story_intervals if txt.startswith('Dann prüfte Flimm Windband B'))
+story_c_start=next(a for a,b,txt in story_intervals if txt.startswith('Nun trat Jori vor Windband C'))
 post_intervals=sentence_intervals(post[0])
 transition_start=next(a for a,b,txt in post_intervals if txt.startswith('Jori setzte einen Stiefel in den leuchtenden Luftstrom'))
 cliff_start=next(a for a,b,txt in post_intervals if txt.startswith('Drachen A hatte eine gerissene Schnur'))
-segments=[('hook',pre[0]['duration']),('story_a',story_b_start-pre[1]['start']),('story_b',pre[1]['end']-story_b_start),
+segments=[('hook',pre[0]['duration']),('story_a',story_b_start-pre[1]['start']),('story_b',story_c_start-story_b_start),('story_c',pre[1]['end']-story_c_start),
  ('puzzle',pre[2]['duration']+pause['duration']),('answer',transition_start-post[0]['start']),
  ('cliff_transition',cliff_start-transition_start),('cliff',post[0]['end']-cliff_start)]
 cursor=0;scene_timing=[]
 for name,dur in segments:scene_timing.append({'scene':name,'start':round(cursor,3),'end':round(cursor+dur,3),'duration':round(dur,3)});cursor+=dur
 (W/'scene-timing.json').write_text(json.dumps(scene_timing,ensure_ascii=False,indent=2)+'\n')
-assert abs(scene_timing[1]['end']-story_b_start)<0.01;assert abs(scene_timing[3]['end']-pause['end'])<0.01;assert abs(scene_timing[4]['end']-transition_start)<0.01;assert abs(scene_timing[6]['start']-cliff_start)<0.01
+assert abs(scene_timing[1]['end']-story_b_start)<0.01;assert abs(scene_timing[2]['end']-story_c_start)<0.01;assert abs(scene_timing[4]['end']-pause['end'])<0.01;assert abs(scene_timing[5]['end']-transition_start)<0.01;assert abs(scene_timing[7]['start']-cliff_start)<0.01
 clips=[]
 for i,(name,dur) in enumerate(segments):
  clip=W/f'seg_{i}.mp4';cmd('ffmpeg','-nostdin','-y','-loglevel','error','-loop','1','-framerate','24','-i',W/f'{name}.png','-t',f'{dur:.3f}','-vf',"zoompan=z='min(zoom+0.00020,1.045)':d=1:fps=24:s=720x1280,format=yuv420p",'-c:v','libx264','-preset','ultrafast','-crf','23','-r','24',clip);clips.append(clip)
