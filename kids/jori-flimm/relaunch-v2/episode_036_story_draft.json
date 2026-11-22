@@ -1,0 +1,87 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 36,
+  "series_version": "relaunch-v2",
+  "title": "Das Windband, das nach oben führte",
+  "hook": "Windband C schraubte sich durch die goldene Öffnung zum Turmdach, während A in den Nebel sank und B zurück zur Brücke zeigte.",
+  "story": "Jori, Flimm und Luma standen in der hohen Windkammer. Über ihnen funkelte die runde Dachöffnung. Jori hielt ihre Hand an Windband A. Der Luftstrom zog ihre Fingerspitzen nach unten zum Nebelschacht. Luma flatterte erschrocken zurück und ihre kleine Glocke schwankte abwärts. Dann prüfte Flimm Windband B. Das Band bog zur offenen Balkontür und zur eben überquerten Brücke zurück. Seine runde orange Nase wackelte im Gegenwind. Nun trat Jori vor Windband C. Es drehte sich spiralförmig nach oben. Ein loses Sternenblatt wurde darin sanft angehoben und verschwand durch die goldene Öffnung. Jori verglich die Wege: A führte hinab, B führte zurück, und nur C stieg zum Turmdach hinauf.",
+  "question": "Welches Windband weist den Weg weiter hinauf: A nach unten in den Nebel, B zurück zur Brücke oder C durch die goldene Öffnung zum Turmdach?",
+  "answer": "Windband C!",
+  "after": "Nur C führte nach oben. Jori setzte einen Stiefel in den leuchtenden Luftstrom. Das Band legte sich wie eine weiche Spirale um sie und hob sie langsam an. Flimm sprang hinterher, hielt seine Mütze fest und lachte. Luma flog neben ihnen, während ihre Glocke im Takt des Windes klingelte. Durch die goldene Öffnung gelangten sie auf das Turmdach. Unter ihnen lagen die Nebelbrücken wie dünne Lichtfäden. Vor ihnen schwebten drei sternförmige Drachen über einer mondhellen Plattform.",
+  "cliff": "Drachen A hatte eine gerissene Schnur. Drachen B war fest am Geländer verknotet. Nur Drachen C besaß eine unversehrte, straff leuchtende Schnur, die bis zu einem Tor im Mondschein führte. Welcher Drachen konnte ihnen den Weg zum Mondtor zeigen?",
+  "riddle": {
+    "type": "windband_reaches_tower_roof",
+    "question": "Welches Windband weist den Weg weiter hinauf: A nach unten in den Nebel, B zurück zur Brücke oder C durch die goldene Öffnung zum Turmdach?",
+    "answer": "Windband C",
+    "evidence_in_story": "A zieht nach unten in den Nebelschacht, B führt zurück zur Brücke, C hebt das Sternenblatt durch die goldene Öffnung zum Turmdach.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "compare_direction_and_destination",
+  "clues": [
+    "A: strömt in den Nebel",
+    "B: führt zurück zur Brücke",
+    "C: dreht sich zum Turmdach",
+    "Nur ein Weg geht hinauf"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Drei klar unterscheidbare Windbänder: A abwärts in den Nebel, B zurück zur Brücke, C aufwärts durch die goldene Dachöffnung. Rätselschild, Frage und Hinweise vollständig zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt ohne Zeitsprung in der Windkammer aus Folge 035 an. Jori erkennt Windband C als einzigen Weg hinauf, steigt mit Flimm und Luma zum Turmdach und findet drei Sterndrachen.",
+  "narration": "Windband C schraubte sich durch die goldene Öffnung zum Turmdach, während A in den Nebel sank und B zurück zur Brücke zeigte. [[SEGMENT]] Jori, Flimm und Luma standen in der hohen Windkammer. Über ihnen funkelte die runde Dachöffnung. Jori hielt ihre Hand an Windband A. Der Luftstrom zog ihre Fingerspitzen nach unten zum Nebelschacht. Luma flatterte erschrocken zurück und ihre kleine Glocke schwankte abwärts. Dann prüfte Flimm Windband B. Das Band bog zur offenen Balkontür und zur eben überquerten Brücke zurück. Seine runde orange Nase wackelte im Gegenwind. Nun trat Jori vor Windband C. Es drehte sich spiralförmig nach oben. Ein loses Sternenblatt wurde darin sanft angehoben und verschwand durch die goldene Öffnung. Jori verglich die Wege: A führte hinab, B führte zurück, und nur C stieg zum Turmdach hinauf. [[SEGMENT]] Welches Windband weist den Weg weiter hinauf: A nach unten in den Nebel, B zurück zur Brücke oder C durch die goldene Öffnung zum Turmdach? [[PAUSE:7]] Windband C! Nur C führte nach oben. Jori setzte einen Stiefel in den leuchtenden Luftstrom. Das Band legte sich wie eine weiche Spirale um sie und hob sie langsam an. Flimm sprang hinterher, hielt seine Mütze fest und lachte. Luma flog neben ihnen, während ihre Glocke im Takt des Windes klingelte. Durch die goldene Öffnung gelangten sie auf das Turmdach. Unter ihnen lagen die Nebelbrücken wie dünne Lichtfäden. Vor ihnen schwebten drei sternförmige Drachen über einer mondhellen Plattform. Drachen A hatte eine gerissene Schnur. Drachen B war fest am Geländer verknotet. Nur Drachen C besaß eine unversehrte, straff leuchtende Schnur, die bis zu einem Tor im Mondschein führte. Welcher Drachen konnte ihnen den Weg zum Mondtor zeigen?",
+  "narration_tts": "Windband C schraubte sich durch die goldene Öffnung zum Turmdach, während A in den Nebel sank und B zurück zur Brücke zeigte. [[SEGMENT]] Jori, Flimm und Luma standen in der hohen Windkammer. Über ihnen funkelte die runde Dachöffnung. Jori hielt ihre Hand an Windband A. Der Luftstrom zog ihre Fingerspitzen nach unten zum Nebelschacht. Luma flatterte erschrocken zurück und ihre kleine Glocke schwankte abwärts. Dann prüfte Flimm Windband B. Das Band bog zur offenen Balkontür und zur eben überquerten Brücke zurück. Seine runde orange Nase wackelte im Gegenwind. Nun trat Jori vor Windband C. Es drehte sich spiralförmig nach oben. Ein loses Sternenblatt wurde darin sanft angehoben und verschwand durch die goldene Öffnung. Jori verglich die Wege: A führte hinab, B führte zurück, und nur C stieg zum Turmdach hinauf. [[SEGMENT]] Welches Windband weist den Weg weiter hinauf: A nach unten in den Nebel, B zurück zur Brücke oder C durch die goldene Öffnung zum Turmdach? [[PAUSE:7]] Windband C! Nur C führte nach oben. Jori setzte einen Stiefel in den leuchtenden Luftstrom. Das Band legte sich wie eine weiche Spirale um sie und hob sie langsam an. Flimm sprang hinterher, hielt seine Mütze fest und lachte. Luma flog neben ihnen, während ihre Glocke im Takt des Windes klingelte. Durch die goldene Öffnung gelangten sie auf das Turmdach. Unter ihnen lagen die Nebelbrücken wie dünne Lichtfäden. Vor ihnen schwebten drei sternförmige Drachen über einer mondhellen Plattform. Drachen A hatte eine gerissene Schnur. Drachen B war fest am Geländer verknotet. Nur Drachen C besaß eine unversehrte, straff leuchtende Schnur, die bis zu einem Tor im Mondschein führte. Welcher Drachen konnte ihnen den Weg zum Mondtor zeigen?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss: drei Windbänder in der Turmkammer; A abwärts, B zurück, C aufwärts.",
+    "A zieht sichtbar hinunter in einen tiefen Nebelschacht; Jori und Luma prüfen die Richtung.",
+    "B führt sichtbar durch die Balkontür zurück zur gerade überquerten Brücke; Flimm prüft es.",
+    "Ruhiges Tableau aller drei Windbänder mit freier Fläche für das TikTok-sichere Rätsel.",
+    "Lösung: C leuchtet auf und hebt Jori, Flimm und Luma zur goldenen Öffnung.",
+    "Jori, Flimm und Luma steigen durch den Turmschacht zum Dach.",
+    "Cliffhanger: drei Sterndrachen; A mit gerissener Schnur, B festgebunden, C mit intakter Schnur zum Mondtor."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-036-v1/scene-01.png",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-036-v1/scene-02.png",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-036-v1/scene-03.png",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-036-v1/scene-04.png",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-036-v1/scene-05.png",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-036-v1/scene-06.png",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-036-v1/scene-07.png",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-22T09:15:00+01:00",
+  "status": "STORY_AND_SEVEN_NEW_IMAGES_READY_TTS_PENDING",
+  "previous_cliffhanger": "Windband A strömte nach unten in den Nebel. Windband B zeigte zurück zur Brücke. Windband C schraubte sich nach oben durch eine goldene Öffnung zum Turmdach. Welches Windband wies den Weg weiter hinauf?"
+}
