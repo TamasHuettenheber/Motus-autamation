@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-22T11:06:30.062489+00:00",
+  "checked_at_utc": "2026-11-22T17:39:13.615007+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6b00cfa8d9cbb430a10148b3",
       "text": "Ein nahestehender Mensch macht einen Fehler und wartet angespannt auf deine Reaktion. Besprecht zuerst, wie ihr die Folgen begrenzen könnt. Verantwortung und Mitgefühl passen zusammen. Aus Einsicht kann eine Änderung entstehen. Schick den Gedanken jemandem, mit dem du darüber sprechen möchtest.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-22T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-22T17:32:45.455Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7711049874262871329",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-22-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b00cfa8d9cbb430a10148b3_video.mp4"
         }
       ]
     },
