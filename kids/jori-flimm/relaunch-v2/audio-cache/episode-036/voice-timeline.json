@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Windband C schraubte sich durch die goldene Öffnung zum Turmdach, während A in den Nebel sank und B zurück zur Brücke zeigte.",
+      "start": 0.0,
+      "end": 11.72,
+      "duration": 11.72
+    },
+    {
+      "kind": "speech",
+      "text": "Jori, Flimm und Luma standen in der hohen Windkammer. Über ihnen funkelte die runde Dachöffnung. Jori hielt ihre Hand an Windband A. Der Luftstrom zog ihre Fingerspitzen nach unten zum Nebelschacht. Luma flatterte erschrocken zurück und ihre kleine Glocke schwankte abwärts. Dann prüfte Flimm Windband B. Das Band bog zur offenen Balkontür und zur eben überquerten Brücke zurück. Seine runde orange Nase wackelte im Gegenwind. Nun trat Jori vor Windband C. Es drehte sich spiralförmig nach oben. Ein loses Sternenblatt wurde darin sanft angehoben und verschwand durch die goldene Öffnung. Jori verglich die Wege: A führte hinab, B führte zurück, und nur C stieg zum Turmdach hinauf.",
+      "start": 11.72,
+      "end": 63.84,
+      "duration": 52.12
+    },
+    {
+      "kind": "speech",
+      "text": "Welches Windband weist den Weg weiter hinauf: A nach unten in den Nebel, B zurück zur Brücke oder C durch die goldene Öffnung zum Turmdach?",
+      "start": 63.84,
+      "end": 77.64,
+      "duration": 13.8
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 77.64,
+      "end": 84.64,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Windband C! Nur C führte nach oben. Jori setzte einen Stiefel in den leuchtenden Luftstrom. Das Band legte sich wie eine weiche Spirale um sie und hob sie langsam an. Flimm sprang hinterher, hielt seine Mütze fest und lachte. Luma flog neben ihnen, während ihre Glocke im Takt des Windes klingelte. Durch die goldene Öffnung gelangten sie auf das Turmdach. Unter ihnen lagen die Nebelbrücken wie dünne Lichtfäden. Vor ihnen schwebten drei sternförmige Drachen über einer mondhellen Plattform. Drachen A hatte eine gerissene Schnur. Drachen B war fest am Geländer verknotet. Nur Drachen C besaß eine unversehrte, straff leuchtende Schnur, die bis zu einem Tor im Mondschein führte. Welcher Drachen konnte ihnen den Weg zum Mondtor zeigen?",
+      "start": 84.64,
+      "end": 141.92,
+      "duration": 57.28
+    }
+  ],
+  "duration": 141.92,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
