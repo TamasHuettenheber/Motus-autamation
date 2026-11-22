@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-22T03:01:47.341038+00:00",
+  "checked_at_utc": "2026-11-22T06:18:48.630157+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6b00cfd95e993799d834ce92",
       "text": "Dir fällt eine wichtige Frage ein, doch du befürchtest eine dumme Reaktion im Kreis der anderen. Stell diese Frage trotz deiner Zweifel laut. Mut beginnt oft genau dort, wo du Unsicherheit aushältst, statt aus Angst zu schweigen. Teile in den Kommentaren deine Erfahrung dazu.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-22T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-22T06:02:20.852Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7710871687796985120",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-22-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b00cfd95e993799d834ce92_video.mp4"
         }
       ]
     },
