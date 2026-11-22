@@ -529,3 +529,20 @@ Alle zwölf D/D+1/D+2-Posts besitzen eindeutige IDs und eindeutige Fälligkeiten
 **D=22.11.2026:** 18:30 MEZ: `postId=6b00cfa8d9cbb430a10148b3`, `dueAt=2026-11-22T17:30:00.000Z`, `status=sent`, `sentAt=2026-11-22T17:32:45.455Z`, `externalLink=https://tiktok.com/@motus614/video/7711049874262871329` — echte Veröffentlichung erstmals nach Fälligkeit aktuell bestätigt. 07:00 und 12:00 ebenfalls `sent` mit TikTok-Links; 22:00 vor Fälligkeit `scheduled`, `dueAt=2026-11-22T21:00:00.000Z`, `externalLink=null`. **D+1=23.11.2026:** vier unterschiedliche `postId` und `dueAt` für 07:00/12:00/18:30/22:00 MEZ, sämtlich `scheduled` und ohne Live-Link. Je Tag 4 eindeutige postIds und dueAts, keine Duplikate. Issues #114/#115 bereits geschlossen mit bestehendem QC-/MP4-Nachweis. D+2=24.11. vor dem planmäßigen 22:37-MEZ-Fenster nicht geprüft.
 
 **Abnahme/Handlung:** Die fällige 18:30-Veröffentlichung ist belegt; keine fehlgeschlagene Stufe, daher keine Recovery, kein Video/Issue/Post erstellt, geändert oder gelöscht. Nächste Prüfung des 22:00-Slots ausschließlich nach Fälligkeit. AgentMail-Delta neue Eingänge nur fachfremde Frantic-Benachrichtigungen, keine neue relevante Sachantwort. Browser-Connector konkret ohne `originating browser context`; Desktop Commander zeigt ausschließlich Rezeption (nicht genutzt), kein Gesamturteil über Workstation.
+
+## MOTUS-T-20261122-GEMINI503-D2-24
+**Besitzer:** MOTUS – Technik & Reparatur. **Status:** ERLEDIGT – idempotenter Wiederanlauf nach externem Gemini-Fehler, keine Code-/Stimmenänderung. **Prüfzeit:** 2026-11-22T22:15:39Z (23:15:39 MEZ).
+
+**Ursache/Original:** [Night Run 45075058185](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/45075058185), Attempt 1: gemini-3.5-flash-lite meldete dreimal HTTP 503 (high demand), Gemini-Fallback gemini-3.8-flash danach Timeouts; GEMINI_ALL_MODELS_FAILED, bevor ein Tagesissue erstellt wurde. Vor Recovery: kein Issue für 24.11. und keine 24.11.-MP4; bestehende D/D+1-Issues #114/#115 samt QC und Buffer-Planungen intakt; kein paralleler Recovery-Run.
+
+**Maßnahme und Zielnachweis:** Einmalig nur fehlgeschlagene Jobs des bestehenden Night-Runs 45075058185 über GitHub rerun_failed_workflow_run_jobs erneut ausgeführt, Attempt 2 um 22:09:22Z completed/success. Exakt ein [Tagesissue #116](https://github.com/TamasHuettenheber/Motus-autamation/issues/116) erstellt; Day-Workflow 45076098922 completed/success; vier Renderer-Runs 45076119095 / 45076121226 / 45076123302 / 45076125218 jeweils completed/success mit Audio-/Captions-/MP4-QC und positiv großen MP4 im Original-Tree. Issue #116 durch MOTUS_DAY_COMPLETE um 22:15:39Z geschlossen. Keine Zusatzproduktion, weiteren Issues oder Duplikat-Slots.
+
+**Originale Buffer-Schedule-Antworten (Zukunft; kein TikTok-Veröffentlichungsbeleg):**
+| Slot MEZ | postId | dueAt UTC | status | externalLink |
+| --- | --- | --- | --- | --- |
+| 07:00 | 6b03697ecc364169c18cb48b | 2026-11-24T06:00:00.000Z | scheduled | null |
+| 12:00 | 6b036934c72676f5e9649331 | 2026-11-24T11:00:00.000Z | scheduled | null |
+| 18:30 | 6b036914c72676f5e9648b33 | 2026-11-24T17:30:00.000Z | scheduled | null |
+| 22:00 | 6b036940bf5d5a73b6c7407d | 2026-11-24T21:00:00.000Z | scheduled | null |
+
+**Nachweisgrenze/nächste Voraussetzung:** Neuer vollständiger Buffer-Status-Snapshot noch ausstehend: letzter checked_at_utc=2026-11-22T18:27:57.600058Z liegt vor 22.11. 22:00 und vor Issue #116. Buffer-Planungsantworten und Issue-Reconciliation bestätigen D+2, nicht eine unabhängige aktuelle Kanalsnapshot-Abnahme. 22.11. 22:00 daher UNGEPRÜFT, nicht gescheitert. Beim nächsten vorhandenen sicheren Monitorlauf D/D+1/D+2 mit postId/dueAt/status/externalLink und Duplikaten abgleichen; vergangene Slots nur bei sent + echtem externem TikTok-Link als veröffentlicht führen. Keine weiteren Recovery-Anstöße, keine Postmutation oder redaktionellen Änderungen.
