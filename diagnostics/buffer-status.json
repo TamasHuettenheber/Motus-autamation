@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-22T06:18:48.630157+00:00",
+  "checked_at_utc": "2026-11-22T11:06:30.062489+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6b00cfd3dd205ed779a13946",
       "text": "Im Raum reden alle durcheinander und niemand weiß, was nun tatsächlich beschlossen wurde. Statt dich diesem Chaos anzupassen oder still mitzulaufen, übernimm kurz die Initiative. Fasse die offenen Punkte präzise zusammen und frage direkt nach dem nächsten Verantwortlichen. Echte Klarheit ist in solchen Momenten deutlich wirksamer als bloße Lautstärke. Übe das heute in deiner Gruppe und speichere dir diesen Gedanken für die nächste schwierige Diskussion ab, um sofort handlungsfähig zu bleiben.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-22T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-22T11:03:38.726Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7710949486134152481",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-22-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b00cfd3dd205ed779a13946_video.mp4"
         }
       ]
     },
