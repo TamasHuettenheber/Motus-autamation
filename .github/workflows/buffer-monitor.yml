@@ -51,85 +51,114 @@ jobs:
               )
               with urllib.request.urlopen(req, timeout=60) as response:
                   result = json.load(response)
+                  for limit in response.headers.get_all("RateLimit", []):
+                      print("BUFFER_RATE_LIMIT", limit)
               if result.get("errors"):
                   raise SystemExit(json.dumps(result["errors"], ensure_ascii=False))
               return result["data"]
 
-          orgs = gql("""
-          query {
-            account {
-              organizations { id name }
+          # Reuse previously verified Buffer IDs: normal hourly checks need ONE
+          # GraphQL request instead of repeated organization/channel discovery.
+          # Verify both identities in that same query; rediscover on mismatch.
+          post_selection = """
+            posts(first: 50, input: $input) {
+              edges {
+                node {
+                  id text status dueAt sentAt externalLink channelId
+                  assets { mimeType source }
+                }
+              }
             }
-          }
-          """)["account"]["organizations"]
-          if not orgs:
-              raise SystemExit("No Buffer organization found")
-          org = orgs[0]
+          """
 
-          channels = gql(
-              """
-              query Channels($orgId: OrganizationId!) {
-                channels(input: { organizationId: $orgId }) {
-                  id name displayName service
-                }
+          def posts_input(org_id, channel_id):
+              return {
+                  "organizationId": org_id,
+                  "filter": {
+                      "channelIds": [channel_id],
+                      "status": ["scheduled", "sent", "error"],
+                  },
+                  "sort": [
+                      {"field": "dueAt", "direction": "desc"},
+                      {"field": "createdAt", "direction": "desc"},
+                  ],
               }
-              """,
-              {"orgId": org["id"]},
-          )["channels"]
 
-          channel = next(
-              (
-                  c for c in channels
-                  if str(c.get("service", "")).lower() == "tiktok"
-                  and "motus614" in {
-                      str(c.get("name", "")).lower(),
-                      str(c.get("displayName", "")).lower(),
-                  }
-              ),
-              None,
-          )
-          if not channel:
-              raise SystemExit("TikTok channel motus614 not found")
-
-          posts = gql(
-              """
-              query MotusPosts($input: PostsInput!) {
-                posts(
-                  first: 50
-                  input: $input
-                ) {
-                  edges {
-                    node {
-                      id
-                      text
-                      status
-                      dueAt
-                      sentAt
-                      externalLink
-                      channelId
-                      assets {
-                        mimeType
-                        source
-                      }
+          def discover():
+              orgs = gql("query { account { organizations { id name } } }")["account"]["organizations"]
+              if not orgs:
+                  raise SystemExit("No Buffer organization found")
+              org = orgs[0]
+              channels = gql(
+                  """query Channels($orgId: OrganizationId!) {
+                    channels(input: { organizationId: $orgId }) {
+                      id name displayName service
                     }
-                  }
-                }
-              }
-              """,
-              {
-                  "input": {
-                      "organizationId": org["id"],
-                      "filter": {
-                          "channelIds": [channel["id"]],
-                          "status": ["scheduled", "sent", "error"],
-                      },
-                      "sort": [
-                          {"field": "dueAt", "direction": "desc"},
-                          {"field": "createdAt", "direction": "desc"},
-                      ],
-                  }
-              },
-          )["posts"]["edges"]
+                  }""",
+                  {"orgId": org["id"]},
+              )["channels"]
+              channel = next(
+                  (c for c in channels
+                   if str(c.get("service", "")).lower() == "tiktok"
+                   and "motus614" in {
+                       str(c.get("name", "")).lower(),
+                       str(c.get("displayName", "")).lower(),
+                   }), None,
+              )
+              if not channel:
+                  raise SystemExit("TikTok channel motus614 not found")
+              return org, channel
+
+          cached = {}
+          try:
+              with open("diagnostics/buffer-status.json", encoding="utf-8") as f:
+                  cached = json.load(f)
+          except (OSError, ValueError):
+              pass
+
+          cached_org = cached.get("organization") or {}
+          cached_channel = cached.get("channel") or {}
+          org = None
+          channel = None
+          posts = None
+          if cached_org.get("id") and cached_channel.get("id"):
+              org_id = cached_org["id"]
+              channel_id = cached_channel["id"]
+              data = gql(
+                  """query MotusSnapshot($orgId: OrganizationId!, $input: PostsInput!) {
+                    account { organizations { id name } }
+                    channels(input: { organizationId: $orgId }) {
+                      id name displayName service
+                    }
+                  """ + post_selection + "}",
+                  {"orgId": org_id, "input": posts_input(org_id, channel_id)},
+              )
+              org = next(
+                  (o for o in data["account"]["organizations"] if o["id"] == org_id),
+                  None,
+              )
+              channel = next(
+                  (c for c in data["channels"]
+                   if c["id"] == channel_id
+                   and str(c.get("service", "")).lower() == "tiktok"
+                   and "motus614" in {
+                       str(c.get("name", "")).lower(),
+                       str(c.get("displayName", "")).lower(),
+                   }), None,
+              )
+              if org and channel and data["posts"]["edges"]:
+                  posts = data["posts"]["edges"]
+                  print("BUFFER_STATUS_ONE_REQUEST")
+              else:
+                  print("BUFFER_STATUS_CACHE_STALE_REDISCOVER")
+
+          if posts is None:
+              org, channel = discover()
+              posts = gql(
+                  "query MotusPosts($input: PostsInput!) { " + post_selection + " }",
+                  {"input": posts_input(org["id"], channel["id"])},
+              )["posts"]["edges"]
+              print("BUFFER_STATUS_DISCOVERY_FALLBACK")
 
           out = {
               "checked_at_utc": datetime.now(timezone.utc).isoformat(),
