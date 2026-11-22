@@ -60,7 +60,7 @@ jobs:
           base=Path('kids/jori-flimm/relaunch-v2')
           e=json.loads((base/'episode_036_story_draft.json').read_text(encoding='utf-8'))
           prev=json.loads((base/'episode_035_story_draft.json').read_text(encoding='utf-8'))
-          assert e['episode_number']==35 and e['title']=='Das Windband, das nach oben führte'
+          assert e['episode_number']==36 and e['title']=='Das Windband, das nach oben führte'
           assert prev['episode_number']==35 and 'Windband A' in prev['cliff'] and 'Windband C' in prev['cliff']
           assert e['previous_cliffhanger']==prev['cliff']
           assert e['hook'].startswith('Windband C schraubte sich durch die goldene Öffnung zum Turmdach')
