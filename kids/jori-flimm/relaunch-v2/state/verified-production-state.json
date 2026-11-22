@@ -1,27 +1,27 @@
 {
   "series": "Jori & Flimm",
   "branch": "feature/jori-flimm-neustart-folge001",
-  "updated_at": "2026-11-21T08:40:00+01:00",
-  "latest_fully_qc_episode": 35,
-  "latest_scheduled_episode": 35,
-  "next_episode_number": 36,
-  "latest_title": "Die Brücke, die nicht zurückführte",
-  "next_continuity_anchor": "Windband A strömte nach unten in den Nebel. Windband B zeigte zurück zur Brücke. Windband C schraubte sich nach oben durch eine goldene Öffnung zum Turmdach. Welches Windband wies den Weg weiter hinauf?",
-  "video_path": "published/jori-flimm-2026-11-25-e035-v1.mp4",
+  "updated_at": "2026-11-22T09:00:00+01:00",
+  "latest_fully_qc_episode": 36,
+  "latest_scheduled_episode": 36,
+  "next_episode_number": 37,
+  "latest_title": "Das Windband, das nach oben führte",
+  "next_continuity_anchor": "Drachen A hatte eine gerissene Schnur. Drachen B war fest am Geländer verknotet. Nur Drachen C besaß eine unversehrte, straff leuchtende Schnur, die bis zu einem Tor im Mondschein führte. Welcher Drachen konnte ihnen den Weg zum Mondtor zeigen?",
+  "video_path": "published/jori-flimm-2026-11-26-e036-v1.mp4",
   "buffer": {
-    "post_id": "6b014a4a5102766245053428",
+    "post_id": "6b02a099cc364169c1392bd4",
     "status": "scheduled",
     "channel": "@jori.flimm",
     "channel_id": "6ad948ea778b240e2f839607",
-    "due_at": "2026-11-25T13:00:00.000Z",
-    "local_time": "2026-11-25T14:00:00+01:00"
+    "due_at": "2026-11-26T13:00:00.000Z",
+    "local_time": "2026-11-26T14:00:00+01:00"
   },
   "evidence": {
-    "queue_precheck_run_id": 44878989932,
-    "preview_run_id": 44880266927,
-    "final_qc_run_id": 44880670016,
-    "release_run_id": 44881058682,
-    "postcheck_run_id": 44881235873
+    "queue_precheck_run_id": 44997434724,
+    "preview_run_id": 44999899897,
+    "final_qc_run_id": 45000239281,
+    "release_run_id": 45000546721,
+    "postcheck_run_id": 45000664185
   },
   "warning": "Do not infer the next episode from reset series-state.json or episode-ledger.json; use this verified state plus GitHub MP4s, Action logs and live Buffer evidence."
 }
