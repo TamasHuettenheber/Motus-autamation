@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-22T18:27:57.600058+00:00",
+  "checked_at_utc": "2026-11-22T22:33:00.884510+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6b036940bf5d5a73b6c7407d",
+      "text": "Eine alte Sorge taucht wieder auf, obwohl du heute nichts daran ändern kannst. Benenne deinen tatsächlichen Einfluss. Gelassenheit heißt, Kraft dort einzusetzen, wo Handeln möglich ist. Unterscheide zwischen einem Problem, das du beeinflussen kannst, und einer Vorstellung, die noch gar nicht bestätigt ist. Mit dieser Unterscheidung kannst du über einen sinnvollen Schritt nachdenken, statt jede Möglichkeit auszumalen. Nicht jeder Gedanke ist eine Tatsache. Speichere den Impuls, falls du ihn später brauchst.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Nevermore (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-24T21:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-24-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6b036914c72676f5e9648b33",
+      "text": "Bei einem gemütlichen Treffen merkst du plötzlich, dass du die ganze Zeit nur von dir erzählst, statt wirklich zuzuhören. Stell jetzt eine offene Frage und lass deinem Gegenüber bewusst Zeit zum Antworten. Aufmerksamkeit ist ein echtes Geschenk. Folge uns für mehr echte Tiefe.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – A Memory Away (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-24T17:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-24-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6b036934c72676f5e9649331",
+      "text": "Du sollst eine komplexe Aufgabe übernehmen, aber das letztlich gewünschte Ergebnis bleibt in der aktuellen Besprechung völlig unklar. Lass dich davon nicht entmutigen oder zu voreiligem Aktionismus verleiten. Frag stattdessen gezielt nach dem konkreten Ziel, bevor du unüberlegt loslegst. Gute und nachhaltige Arbeit beginnt immer mit einem gemeinsamen, absolut klaren Verständnis zwischen allen Beteiligten. Spare dir frustrierende Extrarunden, indem du jetzt den Mut zur direkten Nachfrage aufbringst. Schreibe deine Frage in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Syntheticity (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-24T11:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-24-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6b03697ecc364169c18cb48b",
+      "text": "Deine Idee liegt seit Wochen unberührt, weil du auf Perfektion wartest. Zeig heute noch einen ersten rohen Entwurf einer vertrauten Person. Echte Rückmeldung bringt dich sofort weiter, statt im stillen Kämmerlein zu verharren. Teile diesen Beitrag mit jemandem, der deine Pläne unbedingt kennen muss.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Wild Waters (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-24T06:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-24-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6b02268d02479690920bc4f4",
       "text": "Du hast heute eine unangenehme, aber notwendige Wahrheit ausgesprochen und zweifelst nun daran, ob das wirklich richtig war. Prüfe jetzt kurz sachlich, ob du inhaltlich fair geblieben bist. Aufrichtigkeit verlangt eben nicht immer ein bequemes Gespräch. Speichere diesen Beitrag für deine Abendreflexion ab.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Hidden Tears (CC BY 4.0)",
@@ -73,15 +133,15 @@
     {
       "id": "6b00cfc85e993799d834c48a",
       "text": "Eine freundliche Geste von heute fällt dir erst jetzt wieder ein. Nimm ihre Bedeutung bewusst wahr. Manche guten Dinge sind leise und trotzdem wichtig. Ein guter Augenblick wird nicht kleiner, nur weil gleichzeitig anderes schwierig war. Wenn du ihn bewusst wahrnimmst, erinnerst du dich an mehr als bloße To-do-Listen. Es lohnt sich, diese kleine Erfahrung mit eigenen Worten festzuhalten, statt sie gleich zu vergessen. Folge MOTUS für neue Impulse zu Selbstvertrauen und Klarheit.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-22T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-22T21:03:07.733Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7711104133545200928",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-22-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b00cfc85e993799d834c48a_video.mp4"
         }
       ]
     },
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af3ae520b1f930b454da61d_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6af3ae4a0b1f930b454da3f3",
-      "text": "Zwei Aufgaben auf deinem Schreibtisch wirken gerade absolut gleich dringend, aber nur eine davon hat wirklich spürbare Folgen für das Team. Wenn jetzt der erste laute Notfall reinflattert, verfällst du schnell in blinden Aktionismus und verzettelst dich im Klein-Klein. Halte kurz inne, atme durch und prüfe ganz nüchtern die tatsächliche Wirkung sowie deine gemachten Zusagen, statt dich einfach von der lautesten Forderung treiben zu lassen. Das schafft echte Klarheit für den restlichen Tag und schützt vor unnötigem Stress. Speichere diesen Beitrag für deine nächste Planung. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Find You (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-12T11:00:00.000Z",
-      "sentAt": "2026-11-12T11:03:11.554Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7707238627637497121?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af3ae4a0b1f930b454da3f3_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6af3ae4fce9a7df734519473",
-      "text": "Jemand lobt deine saubere Arbeit und du redest deinen Beitrag sofort klein. Dieses typische Abwinken stiehlt dir die Anerkennung, die du dir erarbeitet hast. Sag heute einfach nur danke. Du darfst deine Leistung anerkennen, ohne überheblich zu wirken. Kommentiere mit einem Emoji, wie du das heute umsetzt. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – From Here (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-12T06:00:00.000Z",
-      "sentAt": "2026-11-12T06:02:25.036Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7707160941804195104?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af3ae4fce9a7df734519473_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6af288ae05af22d726010c70",
-      "text": "Die Zimmerpflanze im Flur lässt die Blätter hängen und braucht dringend Wasser, bevor die Nachtruhe beginnt. Gieße sie jetzt kurz und schalte das Licht ab. Speichere diesen Beitrag für deine abendliche Routine. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Lost Islands (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-11T21:00:00.000Z",
-      "sentAt": "2026-11-11T21:03:25.114Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7707022068960808225?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af288ae05af22d726010c70_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6af287dbd35dff5701d4c39e",
-      "text": "Beim Kochen für die Familie stellt sich die Frage, wer das Gemüse wäscht, während der Topf auf dem Herd steht. Teile Aufgaben klar auf, indem du feste Zuständigkeiten für Vorbereitung und Tischdecken vereinbarst. Das entlastet spürbar und macht das gemeinsame Abendessen zu einer entspannten Routine statt zu einer organisatorischen Hürde nach einem langen Tag. Folge unserem Kanal für weitere praktische Alltagstipps. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Remember (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-11T17:30:00.000Z",
-      "sentAt": "2026-11-11T17:33:18.166Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7706967948845501728?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af287dbd35dff5701d4c39e_video.mp4"
         }
       ]
     }
