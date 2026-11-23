@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-23T17:51:55.579844+00:00",
+  "checked_at_utc": "2026-11-23T21:13:42.772511+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -73,15 +73,15 @@
     {
       "id": "6b02268d02479690920bc4f4",
       "text": "Du hast heute eine unangenehme, aber notwendige Wahrheit ausgesprochen und zweifelst nun daran, ob das wirklich richtig war. Prüfe jetzt kurz sachlich, ob du inhaltlich fair geblieben bist. Aufrichtigkeit verlangt eben nicht immer ein bequemes Gespräch. Speichere diesen Beitrag für deine Abendreflexion ab.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Hidden Tears (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-23T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-23T21:04:42.150Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7711475328153079072",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-23-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b02268d02479690920bc4f4_video.mp4"
         }
       ]
     },
