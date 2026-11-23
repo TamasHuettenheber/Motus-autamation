@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-23T00:12:30.034738+00:00",
+  "checked_at_utc": "2026-11-23T06:34:05.289876+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,15 +118,15 @@
     {
       "id": "6b022682cc364169c11132de",
       "text": "Du merkst beim Blick in den Spiegel, dass dein angeblich so großes Lebensziel eigentlich nur die laute Erwartung deiner Umgebung ist. Das fühlt sich schwer an, weil du bisher für den Beifall anderer gelaufen bist statt für dich selbst. Echte Klarheit bringt dir am Ende deutlich mehr innere Zufriedenheit als der Applaus von Menschen, die deinen persönlichen Preis gar nicht tragen müssen. Schreib mir deine Gedanken dazu in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Forest Awakes (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-23T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-23T06:01:23.496Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7711242844790443297",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-23-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b022682cc364169c11132de_video.mp4"
         }
       ]
     },
