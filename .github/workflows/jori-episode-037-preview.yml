@@ -89,7 +89,7 @@ jobs:
           # Concrete Free Tier evidence from the latest successful production: same secret/model,
           # four requests on 20.11 with 22 s spacing and no billing-mode change. Today is a reset day.
           status=(base.parent/'docs/production-status-2026-11-22-e036.md').read_text(encoding='utf-8')
-          assert 'vier Free-Tier-Anfragen' in status and '22 s Abstand' in status
+          assert 'Free Tier: vier Anfragen' in status and '22 s Abstand' in status
           assert 'kein Paid-, Batch-, Flex-, Priority- oder Billing-Wechsel' in status
           print('JORI_E037_STORY_ART_SAFEZONE_QC_OK',json.dumps({'title':e['title'],'seven_unique_new_9x16_scenes':True,'continuity':e['continuity'],'safe_text_x':'60..540'},ensure_ascii=False))
           PY
