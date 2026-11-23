@@ -1,0 +1,87 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 37,
+  "series_version": "relaunch-v2",
+  "title": "Der Sterndrachen mit der ganzen Schnur",
+  "hook": "Nur Sterndrachen C spannte seine ganze leuchtende Schnur bis zum Mondtor; A lag mit gerissener Schnur am Boden, und B blieb am Geländer verknotet.",
+  "story": "Jori kniete sich zuerst neben Sterndrachen A. Zwischen ihren Fingern lagen zwei lose Schnurenden, die sich nicht mehr berührten. Flimm betrachtete die Bruchstelle mit seiner kleinen runden Nase ganz genau. Dann gingen sie zu Sterndrachen B. Seine Schnur war fest um das goldene Geländer geschlungen. Luma zog vorsichtig daran, doch der Knoten hielt den Drachen auf dem Turmdach fest. Schließlich trat Jori zu Sterndrachen C. Von seinem Sternenkörper lief eine einzige unversehrte, straff leuchtende Schnur durch den Mondschein bis zur runden Toröffnung. Jori verglich die drei: A hatte keine ganze Verbindung, B konnte sich nicht lösen, und nur C zeigte einen freien Weg zum Tor.",
+  "question": "Welcher Sterndrachen kann ihnen den Weg zum Mondtor zeigen: A mit gerissener Schnur, B fest am Geländer verknotet oder C mit einer ganzen, straff leuchtenden Schnur?",
+  "answer": "Sterndrachen C!",
+  "after": "Nur seine Schnur war vollständig und frei. Jori umfasste sie mit beiden Händen. Sofort wurde sie zu einem schmalen goldenen Lichtpfad. Flimm hüpfte neben Jori darauf und hielt seine graue Mütze fest. Luma flog voraus, während ihre Glocke hell klingelte. Gemeinsam glitten sie über die Wolken und durch das runde Mondtor. Dahinter landeten sie in einem stillen Saal aus blauem Mondglas. Vor ihnen wartete eine geschlossene Tür mit einem sichelförmigen Schloss und genau drei kleinen Kerben.",
+  "cliff": "Auf einem Sockel lagen drei Schlüssel. Schlüssel A war sternförmig. Schlüssel B war eine gesprungene Mondsichel mit nur zwei Zacken. Schlüssel C war eine ganze Mondsichel mit genau drei Zacken, die zu den drei Kerben im Schloss passten. Welcher Schlüssel konnte die Mondtür öffnen?",
+  "riddle": {
+    "type": "intact_free_kite_string_reaches_moon_gate",
+    "question": "Welcher Sterndrachen kann ihnen den Weg zum Mondtor zeigen: A mit gerissener Schnur, B fest am Geländer verknotet oder C mit einer ganzen, straff leuchtenden Schnur?",
+    "answer": "Sterndrachen C",
+    "evidence_in_story": "A hat zwei getrennte Schnurenden, B ist am Geländer festgeknotet, C besitzt eine ganze freie Schnur bis zum Mondtor.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "compare_string_condition_and_destination",
+  "clues": [
+    "A: Schnur ist gerissen",
+    "B: am Geländer verknotet",
+    "C: ganze leuchtende Schnur",
+    "Nur eine Schnur führt weiter"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Drei klar unterscheidbare Sterndrachen: A mit getrennten Schnurenden, B am Geländer verknotet, C mit ganzer leuchtender Schnur bis zum Mondtor. Rätselschild, Frage und Hinweise vollständig zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt ohne Zeitsprung auf dem Turmdach aus Folge 036 an. Jori erkennt Sterndrachen C als einzigen freien Weg zum Mondtor, folgt seiner ganzen Schnur und findet dahinter drei Schlüssel für eine Mondtür.",
+  "narration": "Nur Sterndrachen C spannte seine ganze leuchtende Schnur bis zum Mondtor; A lag mit gerissener Schnur am Boden, und B blieb am Geländer verknotet. [[SEGMENT]] Jori kniete sich zuerst neben Sterndrachen A. Zwischen ihren Fingern lagen zwei lose Schnurenden, die sich nicht mehr berührten. Flimm betrachtete die Bruchstelle mit seiner kleinen runden Nase ganz genau. Dann gingen sie zu Sterndrachen B. Seine Schnur war fest um das goldene Geländer geschlungen. Luma zog vorsichtig daran, doch der Knoten hielt den Drachen auf dem Turmdach fest. Schließlich trat Jori zu Sterndrachen C. Von seinem Sternenkörper lief eine einzige unversehrte, straff leuchtende Schnur durch den Mondschein bis zur runden Toröffnung. Jori verglich die drei: A hatte keine ganze Verbindung, B konnte sich nicht lösen, und nur C zeigte einen freien Weg zum Tor. [[SEGMENT]] Welcher Sterndrachen kann ihnen den Weg zum Mondtor zeigen: A mit gerissener Schnur, B fest am Geländer verknotet oder C mit einer ganzen, straff leuchtenden Schnur? [[PAUSE:7]] Sterndrachen C! Nur seine Schnur war vollständig und frei. Jori umfasste sie mit beiden Händen. Sofort wurde sie zu einem schmalen goldenen Lichtpfad. Flimm hüpfte neben Jori darauf und hielt seine graue Mütze fest. Luma flog voraus, während ihre Glocke hell klingelte. Gemeinsam glitten sie über die Wolken und durch das runde Mondtor. Dahinter landeten sie in einem stillen Saal aus blauem Mondglas. Vor ihnen wartete eine geschlossene Tür mit einem sichelförmigen Schloss und genau drei kleinen Kerben. Auf einem Sockel lagen drei Schlüssel. Schlüssel A war sternförmig. Schlüssel B war eine gesprungene Mondsichel mit nur zwei Zacken. Schlüssel C war eine ganze Mondsichel mit genau drei Zacken, die zu den drei Kerben im Schloss passten. Welcher Schlüssel konnte die Mondtür öffnen?",
+  "narration_tts": "Nur Sterndrachen C spannte seine ganze leuchtende Schnur bis zum Mondtor; A lag mit gerissener Schnur am Boden, und B blieb am Geländer verknotet. [[SEGMENT]] Jori kniete sich zuerst neben Sterndrachen A. Zwischen ihren Fingern lagen zwei lose Schnurenden, die sich nicht mehr berührten. Flimm betrachtete die Bruchstelle mit seiner kleinen runden Nase ganz genau. Dann gingen sie zu Sterndrachen B. Seine Schnur war fest um das goldene Geländer geschlungen. Luma zog vorsichtig daran, doch der Knoten hielt den Drachen auf dem Turmdach fest. Schließlich trat Jori zu Sterndrachen C. Von seinem Sternenkörper lief eine einzige unversehrte, straff leuchtende Schnur durch den Mondschein bis zur runden Toröffnung. Jori verglich die drei: A hatte keine ganze Verbindung, B konnte sich nicht lösen, und nur C zeigte einen freien Weg zum Tor. [[SEGMENT]] Welcher Sterndrachen kann ihnen den Weg zum Mondtor zeigen: A mit gerissener Schnur, B fest am Geländer verknotet oder C mit einer ganzen, straff leuchtenden Schnur? [[PAUSE:7]] Sterndrachen C! Nur seine Schnur war vollständig und frei. Jori umfasste sie mit beiden Händen. Sofort wurde sie zu einem schmalen goldenen Lichtpfad. Flimm hüpfte neben Jori darauf und hielt seine graue Mütze fest. Luma flog voraus, während ihre Glocke hell klingelte. Gemeinsam glitten sie über die Wolken und durch das runde Mondtor. Dahinter landeten sie in einem stillen Saal aus blauem Mondglas. Vor ihnen wartete eine geschlossene Tür mit einem sichelförmigen Schloss und genau drei kleinen Kerben. Auf einem Sockel lagen drei Schlüssel. Schlüssel A war sternförmig. Schlüssel B war eine gesprungene Mondsichel mit nur zwei Zacken. Schlüssel C war eine ganze Mondsichel mit genau drei Zacken, die zu den drei Kerben im Schloss passten. Welcher Schlüssel konnte die Mondtür öffnen?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss: drei Sterndrachen auf dem Turmdach; A gerissen, B festgebunden, C führt zum Mondtor.",
+    "A liegt mit zwei klar getrennten Schnurenden am Boden; Jori und Flimm prüfen die Bruchstelle.",
+    "B ist mit einem sichtbaren festen Knoten am goldenen Geländer gebunden; Luma prüft ihn.",
+    "Ruhiges Tableau aller drei Sterndrachen mit freier Fläche für das TikTok-sichere Rätsel.",
+    "Lösung: C leuchtet auf; seine ganze Schnur führt zum Mondtor.",
+    "Jori, Flimm und Luma folgen C über die Wolken durch das Mondtor.",
+    "Cliffhanger: Mondtür mit drei Kerben und drei Schlüsseln; A Stern, B kaputte Sichel mit zwei Zacken, C ganze Sichel mit drei Zacken."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-037-v1/scene-01.png",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-037-v1/scene-02.png",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-037-v1/scene-03.png",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-037-v1/scene-04.png",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-037-v1/scene-05.png",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-037-v1/scene-06.png",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-037-v1/scene-07.png",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-23T10:30:00+01:00",
+  "status": "STORY_AND_SEVEN_NEW_IMAGES_READY_TTS_PENDING",
+  "previous_cliffhanger": "Drachen A hatte eine gerissene Schnur. Drachen B war fest am Geländer verknotet. Nur Drachen C besaß eine unversehrte, straff leuchtende Schnur, die bis zu einem Tor im Mondschein führte. Welcher Drachen konnte ihnen den Weg zum Mondtor zeigen?"
+}
