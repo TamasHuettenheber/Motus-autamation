@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-23T12:08:16.444490+00:00",
+  "checked_at_utc": "2026-11-23T17:51:55.579844+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6b02267602479690920bbd1c",
       "text": "Du denkst heute Abend an einen langjährigen Freund, dem du schon viel zu lange nicht mehr gesagt hast, wie wichtig er dir in deinem Leben eigentlich ist. Schick ihm jetzt sofort eine kurze, absolut ehrliche Nachricht, um eure Verbundenheit zu stärken. Echte emotionale Nähe braucht schließlich keinen festen Anlass oder Jahrestag, sondern nur den ehrlichen Mut, den ersten Schritt zu tun. Folge unserem Kanal für tägliche Impulse zu starken Beziehungen.\n\n#motus #beziehungen #selbstrespekt #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – Deserve to be Loved (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-23T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-23T17:35:30.571Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7711421521461398817",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-23-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b02267602479690920bbd1c_video.mp4"
         }
       ]
     },
