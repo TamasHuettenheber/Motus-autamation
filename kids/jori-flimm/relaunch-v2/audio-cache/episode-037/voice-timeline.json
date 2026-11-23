@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Nur Sterndrachen C spannte seine ganze leuchtende Schnur bis zum Mondtor; A lag mit gerissener Schnur am Boden, und B blieb am Geländer verknotet.",
+      "start": 0.0,
+      "end": 15.24,
+      "duration": 15.24
+    },
+    {
+      "kind": "speech",
+      "text": "Jori kniete sich zuerst neben Sterndrachen A. Zwischen ihren Fingern lagen zwei lose Schnurenden, die sich nicht mehr berührten. Flimm betrachtete die Bruchstelle mit seiner kleinen runden Nase ganz genau. Dann gingen sie zu Sterndrachen B. Seine Schnur war fest um das goldene Geländer geschlungen. Luma zog vorsichtig daran, doch der Knoten hielt den Drachen auf dem Turmdach fest. Schließlich trat Jori zu Sterndrachen C. Von seinem Sternenkörper lief eine einzige unversehrte, straff leuchtende Schnur durch den Mondschein bis zur runden Toröffnung. Jori verglich die drei: A hatte keine ganze Verbindung, B konnte sich nicht lösen, und nur C zeigte einen freien Weg zum Tor.",
+      "start": 15.24,
+      "end": 68.52,
+      "duration": 53.28
+    },
+    {
+      "kind": "speech",
+      "text": "Welcher Sterndrachen kann ihnen den Weg zum Mondtor zeigen: A mit gerissener Schnur, B fest am Geländer verknotet oder C mit einer ganzen, straff leuchtenden Schnur?",
+      "start": 68.52,
+      "end": 85.36,
+      "duration": 16.84
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 85.36,
+      "end": 92.36,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Sterndrachen C! Nur seine Schnur war vollständig und frei. Jori umfasste sie mit beiden Händen. Sofort wurde sie zu einem schmalen goldenen Lichtpfad. Flimm hüpfte neben Jori darauf und hielt seine graue Mütze fest. Luma flog voraus, während ihre Glocke hell klingelte. Gemeinsam glitten sie über die Wolken und durch das runde Mondtor. Dahinter landeten sie in einem stillen Saal aus blauem Mondglas. Vor ihnen wartete eine geschlossene Tür mit einem sichelförmigen Schloss und genau drei kleinen Kerben. Auf einem Sockel lagen drei Schlüssel. Schlüssel A war sternförmig. Schlüssel B war eine gesprungene Mondsichel mit nur zwei Zacken. Schlüssel C war eine ganze Mondsichel mit genau drei Zacken, die zu den drei Kerben im Schloss passten. Welcher Schlüssel konnte die Mondtür öffnen?",
+      "start": 92.36,
+      "end": 153.64,
+      "duration": 61.28
+    }
+  ],
+  "duration": 153.64,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
