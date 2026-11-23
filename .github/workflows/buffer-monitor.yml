@@ -23,7 +23,113 @@ jobs:
           sparse-checkout: |
             diagnostics
 
+      # Keep the hourly GitHub check, but spend Buffer API quota only when
+      # a scheduled slot becomes due, an incomplete status needs follow-up,
+      # the next regular batch is missing, or the snapshot needs refreshing.
+      - name: Decide if Buffer needs a live API refresh
+        id: gate
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from collections import Counter
+          from datetime import datetime, time, timedelta, timezone
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          BERLIN = ZoneInfo("Europe/Berlin")
+          SLOTS = ((7, 0), (12, 0), (18, 30), (22, 0))
+
+          def utc(value):
+              try:
+                  parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+                  return parsed.astimezone(timezone.utc) if parsed.tzinfo else None
+              except (TypeError, ValueError):
+                  return None
+
+          def poll_reason(snapshot, now):
+              if not isinstance(snapshot, dict):
+                  return "snapshot_missing_or_invalid"
+              checked = utc(snapshot.get("checked_at_utc"))
+              posts = snapshot.get("posts")
+              if not checked or not isinstance(posts, list) or not posts:
+                  return "snapshot_incomplete"
+              if checked > now + timedelta(minutes=5):
+                  return "snapshot_future_timestamp"
+              if now - checked >= timedelta(hours=12):
+                  return "snapshot_age_12h"
+
+              due_counts = Counter()
+              for post in posts:
+                  if not isinstance(post, dict):
+                      return "invalid_post"
+                  status = post.get("status")
+                  due = utc(post.get("dueAt"))
+                  if status == "error":
+                      return "buffer_error_post"
+                  if due is None:
+                      return "invalid_post_dueAt"
+                  due_counts[due] += 1
+                  if status == "scheduled" and due + timedelta(minutes=2) <= now:
+                      return "scheduled_post_now_due"
+                  if status == "sent" and due <= now:
+                      link = str(post.get("externalLink") or "")
+                      if not link.startswith(("https://tiktok.com/", "https://www.tiktok.com/")):
+                          return "sent_post_missing_tiktok_proof"
+
+              if any(count > 1 for count in due_counts.values()):
+                  return "duplicate_dueAt_in_snapshot"
+
+              local = now.astimezone(BERLIN)
+              # D+2 is expected ONLY after the regular 22:37 Berlin window.
+              offset = 2 if (local.hour, local.minute) >= (22, 37) else 1
+              target = local.date() + timedelta(days=offset)
+              expected = {
+                  datetime.combine(target, time(h, m), BERLIN).astimezone(timezone.utc)
+                  for h, m in SLOTS
+              }
+              if not expected.issubset(due_counts.keys()):
+                  return "next_regular_batch_not_in_snapshot"
+              return None
+
+          # Pure, offline guard tests. No video, GitHub dispatch, or Buffer API call.
+          base = datetime(2026, 11, 23, 5, 10, tzinfo=timezone.utc)
+          def sample():
+              all_due = [
+                  datetime.combine(day, time(h, m), BERLIN).astimezone(timezone.utc)
+                  for day in ((base.astimezone(BERLIN)).date(),
+                              (base.astimezone(BERLIN)).date() + timedelta(days=1))
+                  for h, m in SLOTS
+              ]
+              return {
+                  "checked_at_utc": (base - timedelta(minutes=2)).isoformat(),
+                  "posts": [
+                      {"id": str(i), "status": "scheduled",
+                       "dueAt": due.isoformat(), "externalLink": None}
+                      for i, due in enumerate(all_due)
+                  ],
+              }
+          test = sample()
+          assert poll_reason(test, base) is None
+          assert poll_reason(test, base + timedelta(minutes=55)) == "scheduled_post_now_due"
+          assert poll_reason({**test, "posts": test["posts"][:-1]}, base) == "next_regular_batch_not_in_snapshot"
+          assert poll_reason({**test, "posts": [{**test["posts"][0], "status": "error"}] + test["posts"][1:]}, base) == "buffer_error_post"
+          assert poll_reason(test, base + timedelta(hours=13)) == "snapshot_age_12h"
+          print("BUFFER_GATE_TESTS_OK")
+
+          try:
+              snapshot = json.loads(Path("diagnostics/buffer-status.json").read_text(encoding="utf-8"))
+          except (OSError, ValueError):
+              snapshot = None
+          reason = poll_reason(snapshot, datetime.now(timezone.utc))
+          should_query = "true" if reason else "false"
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              output.write(f"should_query={should_query}\n")
+          print("BUFFER_GATE_QUERY" if reason else "BUFFER_GATE_SKIP", reason or "no_new_due_slot")
+          PY
+
       - name: Read Buffer status for motus614
+        if: steps.gate.outputs.should_query == 'true'
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
         run: |
@@ -196,6 +302,7 @@ jobs:
           PY
 
       - name: Commit Buffer status snapshot
+        if: steps.gate.outputs.should_query == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
