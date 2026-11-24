@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-24T06:33:26.177560+00:00",
+  "checked_at_utc": "2026-11-24T11:26:05.347395+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6b036934c72676f5e9649331",
       "text": "Du sollst eine komplexe Aufgabe übernehmen, aber das letztlich gewünschte Ergebnis bleibt in der aktuellen Besprechung völlig unklar. Lass dich davon nicht entmutigen oder zu voreiligem Aktionismus verleiten. Frag stattdessen gezielt nach dem konkreten Ziel, bevor du unüberlegt loslegst. Gute und nachhaltige Arbeit beginnt immer mit einem gemeinsamen, absolut klaren Verständnis zwischen allen Beteiligten. Spare dir frustrierende Extrarunden, indem du jetzt den Mut zur direkten Nachfrage aufbringst. Schreibe deine Frage in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Syntheticity (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-24T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-24T11:03:44.796Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7711691814335434023",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-24-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b036934c72676f5e9649331_video.mp4"
         }
       ]
     },
