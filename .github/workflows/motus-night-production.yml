@@ -100,6 +100,7 @@ jobs:
           # when an alternative exists. No new issues/runs/calls to paid models.
           editorial_history=None
           past_editorial_texts=[]
+          past_editorial_ages=[]
           try:
               q=quote(f'repo:{repo} is:issue in:title "MOTUS-DAY"',safe="")
               editorial_history=gh("GET",f"/search/issues?q={q}&sort=created&order=desc&per_page=100").get("items",[])
@@ -112,7 +113,10 @@ jobs:
                   if not cutoff<=old_date<datetime.fromisoformat(target).date():continue
                   try:past_slots=json.loads(old_issue.get("body") or "{}").get("slots",[])
                   except (ValueError,TypeError):continue
-                  past_editorial_texts.extend(str(x.get("text","")) for x in past_slots if isinstance(x,dict))
+                  for x in past_slots:
+                      if isinstance(x,dict):
+                          past_editorial_texts.append(str(x.get("text","")))
+                          past_editorial_ages.append((datetime.fromisoformat(target).date()-old_date).days)
           except Exception as exc:
               print("EDITORIAL_SELECTION_HISTORY_UNAVAILABLE",type(exc).__name__)
           import re
@@ -122,8 +126,13 @@ jobs:
           prior_roots=[hook_roots(text) for text in past_editorial_texts]
           def recent_hook_matches(card):
               key=hook_roots(str(card.get("hook","")))
-              if not key:return 0
-              return sum(len(key & previous)>=2 and len(key & previous)/len(key)>=0.46 for previous in prior_roots)
+              if not key:return (0,0,15)
+              matches=[(len(key & previous),age) for previous,age in zip(prior_roots,past_editorial_ages)]
+              repeats=sum(n>=2 and n/len(key)>=0.46 for n,age in matches)
+              strong_ages=[age for n,age in matches if n>=max(2,min(3,len(key))) and n/len(key)>=0.60]
+              # Prefer distance from a concrete recent scenario over a rotation tie.
+              # The same scenario yesterday must not win against a two-week-old one.
+              return (sum(age<=3 for age in strong_ages),repeats,min(strong_ages,default=15))
           editorial_today={}
           chosen_motifs=set()
           for t in times_editorial:
@@ -132,17 +141,18 @@ jobs:
               for i,card in enumerate(editorial[t]):
                   motif=card.get("motif")
                   if motif in chosen_motifs:continue
-                  repeats=recent_hook_matches(card)
+                  recent,repeats,age=recent_hook_matches(card)
                   distance=(i-default_idx)%14
-                  ranked.append((repeats>0,repeats,distance,i,card))
+                  ranked.append((recent,repeats>0,repeats,-age,distance,i,card))
               if not ranked:raise SystemExit("EDITORIAL_NO_DISTINCT_MOTIF "+t)
-              _,matches,distance,chosen_idx,chosen=min(ranked,key=lambda x:x[:4])
+              recent,_,matches,negative_age,distance,chosen_idx,chosen=min(ranked,key=lambda x:x[:6])
               editorial_today[t]=chosen
               chosen_motifs.add(chosen["motif"])
               if matches or distance:
                   print("EDITORIAL_HISTORY_SELECTION",target,t,
                         "default",default_idx,"chosen",chosen_idx,
-                        "recent_hook_matches",matches,"history_slots",len(past_editorial_texts))
+                        "recent_hook_matches",matches,"strong_last_3d",recent,
+                        "nearest_strong_age",-negative_age,"history_slots",len(past_editorial_texts))
           motifs=[editorial_today[t].get("motif") for t in times_editorial]
           if None in motifs or len(set(motifs))!=4:
               raise SystemExit("EDITORIAL_SAME_DAY_MOTIF_DUPLICATE")
