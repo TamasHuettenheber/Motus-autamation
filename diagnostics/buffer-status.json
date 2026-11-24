@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-23T21:13:42.772511+00:00",
+  "checked_at_utc": "2026-11-24T00:17:49.813422+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6b04c2eaf72f10e1883c0a07",
+      "text": "Du liegst im Bett und denkst an einen Menschen, dem du heute im Trubel zu wenig echte Aufmerksamkeit geschenkt hast. Nimm dir fest vor, morgen ganz bewusst zuzuhören und vollkommen präsent zu sein. Beziehungen wachsen durch echte Begegnungen. Folge uns für tägliche Impulse.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-25T21:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-25-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6b04c2fb18db0405bdae06f1",
+      "text": "Ein Familienmitglied trifft heute eine Entscheidung, die du persönlich völlig anders gelöst hättest. Das erzeugt zunächst Unverständnis und den Drang, ungefragt Ratschläge zu erteilen. Atme tief durch und frage stattdessen nach den echten Motiven und Hintergründen dieser Wahl, bevor du urteilst. Echte Unterstützung bedeutet nämlich nicht, immer die eigene Meinung durchzusetzen, sondern den anderen bedingungslos in seiner Eigenverantwortung zu verstehen und zu begleiten. Teile dieses Video mit jemandem, der diesen Impuls gerade gut gebrauchen kann.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Home (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-25T17:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-25-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6b04c2ef8165ce395ba25c88",
+      "text": "Dein konkreter Vorschlag im Team wird heute abgelehnt und im ersten Moment fühlst du dich persönlich getroffen. Bitte sachlich um einen klaren, fachlichen Grund für die Entscheidung. Eine abgelehnte Idee ist niemals eine Ablehnung deiner Person. Speicher diesen Beitrag für deinen nächsten Perspektivwechsel.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Crossroads (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-25T11:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-25-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6b04c2e4f72f10e1883c0863",
+      "text": "Deine Idee liegt seit Wochen unberührt im Notizbuch, weil du insgeheim auf den perfekten Moment und absolute Perfektion wartest. Lass diesen künstlichen Druck los. Zeig heute einem vertrauten Menschen einen ersten, unfertigen Entwurf statt weiter allein zu feilen. Echte, konstruktive Rückmeldung bringt dich im Projekt sofort weiter, während das ewige Verstecken nur Energie kostet. Welches Projekt teilst du heute mit jemandem? Schreib es in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Daybreak (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-25T06:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-25-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6b036940bf5d5a73b6c7407d",
       "text": "Eine alte Sorge taucht wieder auf, obwohl du heute nichts daran ändern kannst. Benenne deinen tatsächlichen Einfluss. Gelassenheit heißt, Kraft dort einzusetzen, wo Handeln möglich ist. Unterscheide zwischen einem Problem, das du beeinflussen kannst, und einer Vorstellung, die noch gar nicht bestätigt ist. Mit dieser Unterscheidung kannst du über einen sinnvollen Schritt nachdenken, statt jede Möglichkeit auszumalen. Nicht jeder Gedanke ist eine Tatsache. Speichere den Impuls, falls du ihn später brauchst.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Nevermore (CC BY 4.0)",
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af512e8bc9f3773a1b098db_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6af51390304f8985c4782e67",
-      "text": "Eine Diskussion im Team wird gerade persönlich, obwohl ihr eigentlich gemeinsam eine sachliche Lösung finden wolltet. Lass dich von den emotionalen Vorwürfen nicht anstecken. Benenne sofort ruhig das gemeinsame Ziel und lenke das Gespräch auf überprüfbare Fakten zurück. Sachlichkeit schafft neuen Handlungsspielraum. Teile diesen Beitrag mit jemandem, der heute ebenfalls ein kühlen Kopf bewahren muss. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Destiny (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-13T11:00:00.000Z",
-      "sentAt": "2026-11-13T11:03:31.227Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7707609686408776992?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af51390304f8985c4782e67_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6af512bb3d8c751bfd06d09b",
-      "text": "Du siehst den Erfolg eines anderen und fühlst dich plötzlich zurückgeblieben. Vergleiche deinen Fortschritt mit deinem früheren Stand, nicht mit fremden Ergebnissen. Ein guter nächster Schritt muss nicht spektakulär sein. Er sollte nur ehrlich zu deinem eigentlichen Ziel passen. Selbstvertrauen entsteht durch Erfahrung, nicht durch ständiges Grübeln. Du darfst etwas versuchen und dabei lernen. Speichere diesen Gedanken für deinen nächsten schwierigen Moment. #motus #innereruhe #mentaleklarheit #alltagspsychologie #selbstentwicklung Musik: Tanner Helland – The Forest Awakes (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-13T06:00:00.000Z",
-      "sentAt": "2026-11-13T06:02:29.060Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7707532073183071520?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af512bb3d8c751bfd06d09b_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6af3ae797b2f1abd6599418b",
-      "text": "Eine wichtige Nachricht bleibt seit Stunden unbeantwortet und in deinem Kopf läuft sofort das Drehbuch der Ablehnung ab. Unser Gehirn liebt es leider, in stressigen Momenten die Lücken mit negativen Geschichten zu füllen, obwohl die Realität meist ganz banal ist. Erinnere dich daran, dass du die wahren Gründe für das Schweigen schlichtweg noch nicht kennst und Beobachtung niemals gleich Bedeutung ist. Lass diesen Gedanken einfach los und gönn dir die nötige Nachtruhe. Folge unserem Kanal für tägliche Impulse zu mehr innerer Stärke. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Fate (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-12T21:00:00.000Z",
-      "sentAt": "2026-11-12T21:03:37.942Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7707393219604024609?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af3ae797b2f1abd6599418b_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6af3ae520b1f930b454da61d",
-      "text": "Eine Einladung klingt eigentlich schön, aber du fühlst dich leer und hast gleichzeitig ein schlechtes Gewissen beim Absagen. Erkläre kurz und ehrlich deine Erschöpfung und schlage direkt einen neuen Termin vor. Beziehungen vertragen klare Worte. Teile dieses Video mit jemandem, der das heute hören muss. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Faith (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-12T17:30:00.000Z",
-      "sentAt": "2026-11-12T17:32:04.467Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7707338922438692129?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af3ae520b1f930b454da61d_video.mp4"
         }
       ]
     }
