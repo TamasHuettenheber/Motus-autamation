@@ -141,12 +141,17 @@ def main():
                         msg=str(exc)
                         wait_match=re.search(r"retry in (?:(\d+)m)?(\d+)s",msg,re.I)
                         free_daily=("Free Tier" in msg and "10 requests per day" in msg)
-                        if not (wait_match and free_daily):
+                        high_demand=("HTTP 503" in msg and "high demand" in msg.lower())
+                        if wait_match and free_daily:
+                            wait_seconds=int(wait_match.group(1) or 0)*60+int(wait_match.group(2))+5
+                            if not 1<=wait_seconds<=1800:
+                                raise RuntimeError(f"Unsafe Free Tier retry wait: {wait_seconds}s") from exc
+                            print(f"GEMINI_FREE_TIER_DAILY_WAIT seconds={wait_seconds}; one safe retry, no paid fallback")
+                        elif high_demand:
+                            wait_seconds=120
+                            print("GEMINI_FREE_TIER_HIGH_DEMAND_WAIT seconds=120; one safe retry, no paid fallback")
+                        else:
                             raise
-                        wait_seconds=int(wait_match.group(1) or 0)*60+int(wait_match.group(2))+5
-                        if not 1<=wait_seconds<=1800:
-                            raise RuntimeError(f"Unsafe Free Tier retry wait: {wait_seconds}s") from exc
-                        print(f"GEMINI_FREE_TIER_DAILY_WAIT seconds={wait_seconds}; one safe retry, no paid fallback")
                         time.sleep(wait_seconds)
                         rendered=tts_segment(value,voice,secret)
                     temp.write_bytes(rendered)
