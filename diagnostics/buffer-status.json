@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-24T11:26:05.347395+00:00",
+  "checked_at_utc": "2026-11-24T19:04:18.878975+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6b036914c72676f5e9648b33",
       "text": "Bei einem gemütlichen Treffen merkst du plötzlich, dass du die ganze Zeit nur von dir erzählst, statt wirklich zuzuhören. Stell jetzt eine offene Frage und lass deinem Gegenüber bewusst Zeit zum Antworten. Aufmerksamkeit ist ein echtes Geschenk. Folge uns für mehr echte Tiefe.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – A Memory Away (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-24T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-24T17:33:25.604Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7711792242964368679",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-24-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b036914c72676f5e9648b33_video.mp4"
         }
       ]
     },
