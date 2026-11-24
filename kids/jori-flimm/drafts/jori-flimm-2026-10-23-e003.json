@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "draft_requires_illustration_and_qc",
+  "approved_for_publish": false,
+  "episode_number": 3,
+  "date": "2026-10-23",
+  "generated_by": "gemini-3.5-flash-lite",
+  "title": "Das Rätsel der Eiskristall-Brücke",
+  "hook": "Hinter dem Tor liegt eine glitzernde Eiskristall-Brücke, aber sie führt über den rauschenden Winterbach!",
+  "narration": "Hallo, kleine Detektive! Jori und Flimm haben den beleuchteten Weg zur Lichtwerkstatt betreten, doch plötzlich versperrt ihnen ein kleiner Winterbach den Weg. Über das Wasser führt nur eine Brücke aus drei wunderschönen, verschiedenfarbigen Eiskristall-Platten: blau, grün und rot. Die blaue Platte liegt direkt vor ihnen. Flimms Sternenbauch leuchtet auf und gibt ihnen einen klugen Tipp. Hört genau zu und ratet mit: Welche Farbe hat die Platte in der Mitte der Brücke, wenn die rote Platte ganz am Ende liegt? [[PAUSE:7]] Die Platte in der Mitte ist grün! Jori und Flimm lächeln, überqueren sicher die Brücke und folgen dem warmen Licht weiter.",
+  "riddle": {
+    "type": "logic",
+    "question": "Welche Farbe hat die Platte in der Mitte der Brücke, wenn die rote Platte ganz am Ende liegt?",
+    "answer": "grün",
+    "pause_seconds": 7
+  },
+  "scene_briefs": [
+    "Szene 1: Jori mit roter Pudelmütze und dunkelblauem Mantel steht mit Flimm vor dem malerischen, verschneiten Eingang der Lichtwerkstatt in Flockenfels.",
+    "Szene 2: Jori und Flimm entdecken den kleinen Winterbach, der von einer seltsamen Brücke aus drei bunten Eiskristall-Platten überquert wird.",
+    "Szene 3: Nahaufnahme auf Flimm, dessen goldener Körper und der Sternenbauch warm leuchten, während er neugierig auf die Eiskristalle deutet.",
+    "Szene 4: Jori geht in die Hocke, betrachtet die blaue, die grüne und die rote Eiskristall-Platte ganz genau und überlegt logisch.",
+    "Szene 5: Das große Denk- und Mitratebild erscheint im Video, während die sieben Sekunden lange Pause läuft und das Rätsel zu sehen ist.",
+    "Szene 6: Jori und Flimm betreten glücklich die wärmende Lichtwerkstatt, während die grüne Eiskristall-Platte sanft im Hintergrund aufleuchtet."
+  ],
+  "continuity_note": "Jori und Flimm setzen ihren Weg fort, lösen gemeinsam das Eiskristall-Brückenrätsel und gelangen zur Lichtwerkstatt von Flockenfels.",
+  "next_cliffhanger": "In der Lichtwerkstatt angekommen, entdecken Jori und Flimm ein seltsam schlafendes Glühwürmchen auf einem alten Buch."
+}
