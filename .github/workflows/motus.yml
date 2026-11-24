@@ -186,7 +186,7 @@ jobs:
           # Abstract words are not visual evidence: "Entscheidung" must not
           # select a train/phone scene merely because its metadata contains that word.
           generic_tags={'alltag','walking','city','social','bewegung','gedanken',
-                        'ruhe','entscheidung','beziehung','motivation','fokus',
+                        'ruhe','entscheidung','beziehung','motivation','fokus','menschen',
                         'klarheit','abstand','reflexion','stress','entspannung',
                         'entwicklung','positiv','abend','nacht'}
           # Explicit workplace scenes outrank generic emotional scenery (future renders only).
@@ -202,6 +202,9 @@ jobs:
           assessment_scene=any(cue in text for cue in ('einschaetzung','kenntnisstand','bewertung','fachwissen'))
           # Spoken pauses and arguments are conversation scenes, not coffee/phone breaks.
           conversation_scene=re.search(r'(?<![a-z])(?:gegenueber|gespraech|diskussion|zuhoer\w*|zuzuhoer\w*|argumente?|treffen|erzaehl\w*|reden)(?![a-z])',text) is not None
+          # A personal disagreement with a question or advice is also an interaction,
+          # even if the speaker never says the literal word Gespraech.
+          conversation_scene=conversation_scene or (social_scene and re.search(r'(?<![a-z])(?:frag\\w*|ratschlaeg\\w*|rat)(?![a-z])',text) is not None)
           for clip in library.get('clips',[]):
               # This vertical dialogue clip fits spoken evening interactions only.
               if clip['id']=='friends-cafe-talk-5359021' and (not output.endswith('-1830') or not conversation_scene):
@@ -236,7 +239,7 @@ jobs:
                   score+=7
               # Only the 18:30 social slot prefers people together; a noon discussion
               # must never be sent to night B-roll by this heuristic.
-              if social_scene and output.endswith('-1830'):
+              if social_scene and not conversation_scene and output.endswith('-1830'):
                   if clip['id']=='night-city-13658220':score+=5
                   elif clip['id']=='rain-city-13961930':score+=2
               cooldown=1 if clip['id'] in recent_ids else 0
