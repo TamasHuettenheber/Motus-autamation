@@ -619,3 +619,24 @@ D=23.11. und D+1=24.11.: unveränderter Original-Snapshot `checked_at_utc=2026-1
 D+2=25.11. nach 22:37 geprüft: exakte Issuesuche leer, kein entsprechendes MP4 im published-Verzeichnis, kein neuer Night-Producer-Run nach 21:37Z sichtbar. Letzter [Night-Run 45162718525](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/45162718525) 11:10Z meldete tatsächlich ALREADY_EXISTS 116 closed. Kein laufender MOTUS-Recovery-Run in der jüngsten Liste. Der vorhandene Nachtproduzent besitzt weiterhin 22:37-Trigger, Watchdog, idempotente Titelprüfung und D+1-Nachholpfad. Verspätung von ca. 40 Minuten bei weiterhin vollständig vorbereitetem 24.11. ist noch kein nachgewiesener Produktionsausfall. D+2-Buffer-Zustand ungeprüft (Snapshot vor Produktionsfenster); keine Dublettenfreiheit für diesen Tag behauptet. Keine zusätzliche Produktion oder spekulative Workflow-Änderung; nächste Voraussetzung ist ein tatsächlicher Night-Run bzw. belegter Ausfall der bestehenden Kette.
 
 AgentMail-Delta nach dem letzten 22:13-Abgleich: eine fachfremde Frantic-Benachrichtigung; keine neue technische oder fristrelevante Antwort. Keine Computerarbeit erforderlich, Rezeption nicht benutzt.
+
+
+## MOTUS-T-20261124-NIGHT25-ABNAHME
+**Besitzer:** MOTUS – Technik & Reparatur. **Status:** ERLEDIGT für Vorgang MOTUS-T-20261123-2317-NIGHT25; reguläre Produktion verspätet vollständig abgeschlossen, keine Recovery erforderlich. **checked_at_utc:** `2026-11-24T00:17:49.813422+00:00` (01:17 MEZ).
+
+**Ursache/Abnahme:** Der zuvor noch nicht sichtbare reguläre Night-Trigger lief tatsächlich am 23.11. 22:44:11 UTC (23:44 MEZ) als [Run 45282475222](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/45282475222), Event schedule, success; Log CREATED_DAY 2026-11-25 ISSUE 117. Issue [#117](https://github.com/TamasHuettenheber/Motus-autamation/issues/117) geschlossen 22:49:56 UTC, einziger exakter Tagesauftrag laut Issuesuche, [Reconcile 45283314313](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/45283314313) success mit MOTUS_DAY_COMPLETE 117. Vier tatsächliche Renderer-Jobs 45282533107/45282536906/45282541279/45282545141 success, jeweils MOTUS_ALGENIB_GENERATED und AUDIO_QC_PASS. MP4 im published-Tree: 9.121.842 / 5.139.678 / 23.041.668 / 12.718.145 Bytes (Slotreihenfolge). Kein weiterer Produzent oder Recovery gestartet; Grund der GitHub-Schedule-Verspätung nicht nachgewiesen.
+
+**Zielnachweis:** Vorhandenen rein lesenden Monitor [45267475415, Attempt 2](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/45267475415) einmalig ausgeführt, nachdem kein laufender Monitor/Recovery sichtbar war und der alte Snapshot die neu produzierten Slots nicht enthielt. Job 138116331967 completed/success, BUFFER_GATE_TESTS_OK, BUFFER_STATUS_ONE_REQUEST, BUFFER_STATUS_OK, BUFFER_STATUS_COMMIT_OK. Originalsnapshot Blob `55ff7eabdc4b5dd6d05c9e7953ad30e5c740ce9e`. Alle folgenden Posts status=scheduled, externalLink=null vor Fälligkeit:
+
+| dueAt UTC | postId |
+|---|---|
+| 2026-11-24T06:00:00.000Z | 6b03697ecc364169c18cb48b |
+| 2026-11-24T11:00:00.000Z | 6b036934c72676f5e9649331 |
+| 2026-11-24T17:30:00.000Z | 6b036914c72676f5e9648b33 |
+| 2026-11-24T21:00:00.000Z | 6b036940bf5d5a73b6c7407d |
+| 2026-11-25T06:00:00.000Z | 6b04c2e4f72f10e1883c0863 |
+| 2026-11-25T11:00:00.000Z | 6b04c2ef8165ce395ba25c88 |
+| 2026-11-25T17:30:00.000Z | 6b04c2fb18db0405bdae06f1 |
+| 2026-11-25T21:00:00.000Z | 6b04c2eaf72f10e1883c0a07 |
+
+Acht eindeutige dueAt und IDs im D/D+1-Snapshot; keine Dubletten dort. D+2=26.11. vor 24.11. 22:37 MEZ nicht geprüft. Echte RateLimit-Header: 15m r=149, 24h r=580, 30d r=1978 (deutlich höher als der zuletzt dokumentierte Restwert 397; keine Ursache/Planänderung unterstellt). Kein zusätzlicher API-Abruf erforderlich. Der vorherige abgeschlossene 23.11. weiterhin sent laut Snapshot. AgentMail seit 23.11. 11:00 UTC: nur bekannte Wochenstatistik und fachfremde Frantic-Benachrichtigungen, letzte 21:36 UTC; kein neuer relevanter technischer Eingang. Behördenprüfung nach 11 Uhr heute noch nicht fällig. Browser-Origin-Kontext weiterhin nicht bereitgestellt, Desktop Commander nur Rezeption offline (nicht verwendet); Fachzugang ausreichend, keine Aussage zur allgemeinen Workstation-Verbindung. Nächster Prüfpunkt nach vorhandener 05:00-Kontrolle bzw. erster fälliger Live-Veröffentlichung. Keine Änderung an Produktionslogik, Posts, Stimmen oder Qualitätsdateien.
