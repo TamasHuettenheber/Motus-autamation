@@ -1,0 +1,97 @@
+name: Jori & Flimm — Folge 038 independent final QC
+
+on:
+  push:
+    branches: [feature/jori-flimm-neustart-folge001]
+    paths:
+      - .github/workflows/jori-episode-038-final-qc.yml
+      - published/jori-flimm-2026-11-28-e038-v1.mp4
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  final-qc:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/jori-flimm-neustart-folge001
+          sparse-checkout: |
+            kids/jori-flimm
+            published/jori-flimm-2026-11-28-e038-v1.mp4
+            .github/workflows/jori-episode-038-final-qc.yml
+      - name: Install isolated static FFmpeg tools and Pillow
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/ffmpeg-tools" "$RUNNER_TEMP/bin"
+          npm --silent install --prefix "$RUNNER_TEMP/ffmpeg-tools" ffmpeg-static@5.2.0 ffprobe-static@3.1.0
+          ln -sf "$(node -p "require('$RUNNER_TEMP/ffmpeg-tools/node_modules/ffmpeg-static')")" "$RUNNER_TEMP/bin/ffmpeg"
+          ln -sf "$(node -p "require('$RUNNER_TEMP/ffmpeg-tools/node_modules/ffprobe-static').path")" "$RUNNER_TEMP/bin/ffprobe"
+          chmod +x "$RUNNER_TEMP/bin/ffmpeg" "$RUNNER_TEMP/bin/ffprobe"
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+          "$RUNNER_TEMP/bin/ffmpeg" -version | head -1
+          "$RUNNER_TEMP/bin/ffprobe" -version | head -1
+          test -f /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+          python3 -c 'import PIL' || python3 -m pip install --user --disable-pip-version-check Pillow
+          python3 -c 'from PIL import Image,ImageDraw,ImageFont; print("LOCAL_QC_TOOLS_READY", Image.__version__)'
+      - name: Rebuild from cached Sulafat and independently verify final MP4
+        run: |
+          set -euo pipefail
+          python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_voice_e038.py | tee /tmp/voice.log
+          grep -q 'JORI_E038_SULAFAT_CACHE_REUSED; no TTS request' /tmp/voice.log
+          python3 kids/jori-flimm/relaunch-v2/scripts/github_followup_renderer_e038.py --episode 38
+          python3 - <<'PY'
+          import hashlib,json,re,subprocess,wave
+          from pathlib import Path
+          from PIL import Image,ImageDraw
+          root=Path('.');base=root/'kids/jori-flimm/relaunch-v2';work=root/'work/episode_038'
+          e=json.loads((base/'episode_038_story_draft.json').read_text());prev=json.loads((base/'episode_037_story_draft.json').read_text())
+          assert e['previous_cliffhanger']==prev['cliff']
+          assert e['episode_number']==38 and e['title']=='Der Schlüssel mit den drei Zacken'
+          assert e['hook'].startswith('Vor Jori, Flimm und Luma warteten drei Schlüssel')
+          assert 'Schlüssel A' in prev['cliff'] and 'Schlüssel C' in prev['cliff']
+          assert not re.search(r'\bJori\b[^.!?]{0,75}\b(?:er|ihn|ihm)\b',e['narration'],re.I)
+          paths=[Path(v['path']) for v in e['visuals']];assert len(paths)==7
+          hashes=[hashlib.sha256(p.read_bytes()).hexdigest() for p in paths];assert len(set(hashes))==7
+          old={hashlib.sha256(p.read_bytes()).hexdigest() for d in (base/'assets').glob('episode-*-v*') if d.name!='episode-038-v1' for p in d.glob('scene-*')};assert not set(hashes)&old
+          t=json.loads((work/'voice-timeline.json').read_text());pause=t['items'][3];assert pause['kind']=='pause' and abs(pause['duration']-7)<.001
+          with wave.open(str(work/'narration_source.wav'),'rb') as w:
+              w.setpos(round(pause['start']*w.getframerate()));s=w.readframes(round(7*w.getframerate()));assert not any(s)
+          captions=(work/'captions.ass').read_text();assert 'Style: Child,DejaVu Sans,34' in captions and ',2,60,180,277,1' in captions
+          renderer=(base/'scripts/github_followup_renderer_e038.py').read_text();assert '(60,132,540,820)' in renderer
+          def sec(x):h,m,s=x.split(':');return int(h)*3600+int(m)*60+float(s)
+          rows=[x for x in captions.splitlines() if x.startswith('Dialogue:')]
+          for row in rows:
+              c=row.split(',',9);a,b=sec(c[1]),sec(c[2]);assert b<=pause['start']+.01 or a>=pause['end']-.01
+          expected=re.findall(r'\w+',' '.join(x['text'] for x in t['items'] if x['kind']=='speech').lower())
+          visible=re.findall(r'\w+',' '.join(x.split(',',9)[-1].replace('\\N',' ') for x in rows).lower());assert visible==expected
+          scenes=json.loads((work/'scene-timing.json').read_text());assert [x['scene'] for x in scenes]==['hook','story_a','story_b','story_c','puzzle','answer','cliff_transition','cliff']
+          assert abs(scenes[4]['end']-pause['end'])<.01 and scenes[5]['start']>=pause['end']-.01
+          media=Path('published/jori-flimm-2026-11-28-e038-v1.mp4')
+          probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','stream=codec_type,codec_name,width,height','-show_entries','format=duration,size','-of','json',str(media)],text=True))
+          v=next(x for x in probe['streams'] if x['codec_type']=='video');a=next(x for x in probe['streams'] if x['codec_type']=='audio')
+          assert (v['codec_name'],v['width'],v['height'])==('h264',720,1280) and a['codec_name']=='aac'
+          assert 70<float(probe['format']['duration'])<180 and abs(float(probe['format']['duration'])-float(t['duration']))<.25 and int(probe['format']['size'])>1_000_000
+          p=subprocess.run(['ffmpeg','-hide_banner','-i',str(media),'-af','silencedetect=noise=-60dB:d=6.5','-f','null','-'],capture_output=True,text=True,check=True)
+          measured=[float(x) for x in re.findall(r'silence_duration:\s*([0-9.]+)',p.stderr)];assert any(abs(x-7)<=.2 for x in measured),measured
+          mid=(pause['start']+pause['end'])/2
+          subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-ss',str(mid),'-i',str(media),'-frames:v','1','/tmp/pause.png','-y'],check=True)
+          im=Image.open('/tmp/pause.png').convert('RGBA');d=ImageDraw.Draw(im,'RGBA');d.rectangle((560,0,719,1279),fill=(200,0,0,65));d.rectangle((0,1020,719,1279),fill=(230,120,0,55));d.rectangle((60,80,540,980),outline=(0,220,80,180),width=4);im.save('/tmp/pause-safezone.png')
+          print('JORI_E038_INDEPENDENT_FINAL_QC_OK',json.dumps({'duration':probe['format']['duration'],'size':probe['format']['size'],'pause_seconds':measured,'seven_new_images':True,'subtitle_safe_x':'60..540','puzzle_board_bounds':'60,132,540,820','sulafat_cached_no_tts':True},ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Jori-E038-Final-QC-Evidence
+          path: |
+            /tmp/pause-safezone.png
+            work/episode_038/captions.ass
+            work/episode_038/scene-timing.json
+          retention-days: 14
+
+# E038 independent final QC for the 2026-11-24 production run.
+
+
+# Trigger E038 independent QC after validated MP4 commit.

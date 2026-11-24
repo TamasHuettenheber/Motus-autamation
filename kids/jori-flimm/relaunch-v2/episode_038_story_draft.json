@@ -1,0 +1,87 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 38,
+  "series_version": "relaunch-v2",
+  "title": "Der Schlüssel mit den drei Zacken",
+  "hook": "Vor Jori, Flimm und Luma warteten drei Schlüssel und eine verschlossene Mondtür: Das sichelförmige Schloss besaß genau drei kleine Kerben.",
+  "story": "Jori nahm zuerst Schlüssel A vom Sockel. Sein Kopf war ein fünfzackiger Stern und passte nicht in die runde Sichelöffnung. Flimm hielt seine kleine runde Nase dicht an das Schloss und schüttelte den Kopf. Dann prüfte Luma Schlüssel B. Er sah zwar wie eine Mondsichel aus, doch eine Stelle war gesprungen und nur zwei Zacken standen hervor. Am Schloss warteten aber drei Kerben. Schließlich hob Jori Schlüssel C an. Seine ganze Mondsichel war unversehrt, und genau drei Zacken lagen an den richtigen Stellen. Jori verglich die Formen: A war ein Stern, B fehlte ein Zacken, und nur C passte zu allen drei Kerben.",
+  "question": "Welcher Schlüssel öffnet die Mondtür: A als Stern, B als gesprungene Sichel mit zwei Zacken oder C als ganze Sichel mit drei Zacken?",
+  "answer": "Schlüssel C!",
+  "after": "Jori schob Schlüssel C vorsichtig in das Schloss. Alle drei Zacken glitten gleichzeitig in die drei Kerben. Ein sanftes Klicken hallte durch den Saal, und die Mondtür schwang auf. Dahinter floss silbernes Mondwasser durch eine neue Galerie aus blauem Glas. Flimm hüpfte neben Jori über die leuchtenden Steine, während Luma mit ihrer Glocke den Weg erhellte. Bald teilte sich das Mondwasser vor einem violetten Tor in drei Rinnen.",
+  "cliff": "Rinne A endete vor einer dunklen Steinwand. Rinne B bog im großen Kreis zurück zur Mondtür. Nur Rinne C floss frei unter einem leuchtenden violetten Bogen hindurch. Welche Rinne führte Jori, Flimm und Luma weiter?",
+  "riddle": {
+    "type": "three_prong_crescent_key_matches_three_notches",
+    "question": "Welcher Schlüssel öffnet die Mondtür: A als Stern, B als gesprungene Sichel mit zwei Zacken oder C als ganze Sichel mit drei Zacken?",
+    "answer": "Schlüssel C",
+    "evidence_in_story": "A ist ein Stern, B besitzt nur zwei Zacken, C besitzt genau drei Zacken für die drei Kerben.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "compare_key_shape_and_prongs_to_lock_notches",
+  "clues": [
+    "A: Stern passt nicht",
+    "B: Sichel mit zwei Zacken",
+    "C: Sichel mit drei Zacken",
+    "Das Schloss hat drei Kerben"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Drei klar unterscheidbare Schlüssel vor einem Sichel-Schloss mit drei Kerben. Rätselschild, Frage und Hinweise vollständig zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt ohne Zeitsprung im blauen Mondglassaal aus Folge 037 an. Jori wählt Schlüssel C, öffnet die Mondtür und erreicht drei Mondwasserrinnen.",
+  "narration": "Vor Jori, Flimm und Luma warteten drei Schlüssel und eine verschlossene Mondtür: Das sichelförmige Schloss besaß genau drei kleine Kerben. [[SEGMENT]] Jori nahm zuerst Schlüssel A vom Sockel. Sein Kopf war ein fünfzackiger Stern und passte nicht in die runde Sichelöffnung. Flimm hielt seine kleine runde Nase dicht an das Schloss und schüttelte den Kopf. Dann prüfte Luma Schlüssel B. Er sah zwar wie eine Mondsichel aus, doch eine Stelle war gesprungen und nur zwei Zacken standen hervor. Am Schloss warteten aber drei Kerben. Schließlich hob Jori Schlüssel C an. Seine ganze Mondsichel war unversehrt, und genau drei Zacken lagen an den richtigen Stellen. Jori verglich die Formen: A war ein Stern, B fehlte ein Zacken, und nur C passte zu allen drei Kerben. [[SEGMENT]] Welcher Schlüssel öffnet die Mondtür: A als Stern, B als gesprungene Sichel mit zwei Zacken oder C als ganze Sichel mit drei Zacken? [[PAUSE:7]] Schlüssel C! Jori schob Schlüssel C vorsichtig in das Schloss. Alle drei Zacken glitten gleichzeitig in die drei Kerben. Ein sanftes Klicken hallte durch den Saal, und die Mondtür schwang auf. Dahinter floss silbernes Mondwasser durch eine neue Galerie aus blauem Glas. Flimm hüpfte neben Jori über die leuchtenden Steine, während Luma mit ihrer Glocke den Weg erhellte. Bald teilte sich das Mondwasser vor einem violetten Tor in drei Rinnen. Rinne A endete vor einer dunklen Steinwand. Rinne B bog im großen Kreis zurück zur Mondtür. Nur Rinne C floss frei unter einem leuchtenden violetten Bogen hindurch. Welche Rinne führte Jori, Flimm und Luma weiter?",
+  "narration_tts": "Vor Jori, Flimm und Luma warteten drei Schlüssel und eine verschlossene Mondtür: Das sichelförmige Schloss besaß genau drei kleine Kerben. [[SEGMENT]] Jori nahm zuerst Schlüssel A vom Sockel. Sein Kopf war ein fünfzackiger Stern und passte nicht in die runde Sichelöffnung. Flimm hielt seine kleine runde Nase dicht an das Schloss und schüttelte den Kopf. Dann prüfte Luma Schlüssel B. Er sah zwar wie eine Mondsichel aus, doch eine Stelle war gesprungen und nur zwei Zacken standen hervor. Am Schloss warteten aber drei Kerben. Schließlich hob Jori Schlüssel C an. Seine ganze Mondsichel war unversehrt, und genau drei Zacken lagen an den richtigen Stellen. Jori verglich die Formen: A war ein Stern, B fehlte ein Zacken, und nur C passte zu allen drei Kerben. [[SEGMENT]] Welcher Schlüssel öffnet die Mondtür: A als Stern, B als gesprungene Sichel mit zwei Zacken oder C als ganze Sichel mit drei Zacken? [[PAUSE:7]] Schlüssel C! Jori schob Schlüssel C vorsichtig in das Schloss. Alle drei Zacken glitten gleichzeitig in die drei Kerben. Ein sanftes Klicken hallte durch den Saal, und die Mondtür schwang auf. Dahinter floss silbernes Mondwasser durch eine neue Galerie aus blauem Glas. Flimm hüpfte neben Jori über die leuchtenden Steine, während Luma mit ihrer Glocke den Weg erhellte. Bald teilte sich das Mondwasser vor einem violetten Tor in drei Rinnen. Rinne A endete vor einer dunklen Steinwand. Rinne B bog im großen Kreis zurück zur Mondtür. Nur Rinne C floss frei unter einem leuchtenden violetten Bogen hindurch. Welche Rinne führte Jori, Flimm und Luma weiter?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss: Jori, Flimm und Luma vor der Mondtür mit drei Schlüsseln und drei Kerben.",
+    "Schlüssel A ist ein fünfzackiger Stern und passt nicht in das sichelförmige Schloss.",
+    "Schlüssel B ist eine gesprungene Mondsichel mit nur zwei Zacken; das Schloss hat drei Kerben.",
+    "Ruhiges Tableau des Sichel-Schlosses mit drei Kerben und freier Fläche für das TikTok-sichere Rätsel.",
+    "Lösung: Jori steckt den ganzen Mondsichelschlüssel C mit drei Zacken in das Schloss.",
+    "Die Mondtür öffnet sich zu einer Galerie aus blauem Glas mit silbernem Mondwasser.",
+    "Cliffhanger: drei Rinnen; A endet an einer Wand, B führt zurück, C fließt frei unter einem violetten Bogen."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-038-v1/scene-01.png",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-038-v1/scene-02.png",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-038-v1/scene-03.png",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-038-v1/scene-04.png",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-038-v1/scene-05.png",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-038-v1/scene-06.png",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-038-v1/scene-07.png",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-24T09:30:00+01:00",
+  "status": "STORY_AND_SEVEN_NEW_IMAGES_READY_TTS_PENDING",
+  "previous_cliffhanger": "Auf einem Sockel lagen drei Schlüssel. Schlüssel A war sternförmig. Schlüssel B war eine gesprungene Mondsichel mit nur zwei Zacken. Schlüssel C war eine ganze Mondsichel mit genau drei Zacken, die zu den drei Kerben im Schloss passten. Welcher Schlüssel konnte die Mondtür öffnen?"
+}
