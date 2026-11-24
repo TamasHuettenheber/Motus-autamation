@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Vor Jori, Flimm und Luma warteten drei Schlüssel und eine verschlossene Mondtür: Das sichelförmige Schloss besaß genau drei kleine Kerben.",
+      "start": 0.0,
+      "end": 14.0,
+      "duration": 14.0
+    },
+    {
+      "kind": "speech",
+      "text": "Jori nahm zuerst Schlüssel A vom Sockel. Sein Kopf war ein fünfzackiger Stern und passte nicht in die runde Sichelöffnung. Flimm hielt seine kleine runde Nase dicht an das Schloss und schüttelte den Kopf. Dann prüfte Luma Schlüssel B. Er sah zwar wie eine Mondsichel aus, doch eine Stelle war gesprungen und nur zwei Zacken standen hervor. Am Schloss warteten aber drei Kerben. Schließlich hob Jori Schlüssel C an. Seine ganze Mondsichel war unversehrt, und genau drei Zacken lagen an den richtigen Stellen. Jori verglich die Formen: A war ein Stern, B fehlte ein Zacken, und nur C passte zu allen drei Kerben.",
+      "start": 14.0,
+      "end": 62.56,
+      "duration": 48.56
+    },
+    {
+      "kind": "speech",
+      "text": "Welcher Schlüssel öffnet die Mondtür: A als Stern, B als gesprungene Sichel mit zwei Zacken oder C als ganze Sichel mit drei Zacken?",
+      "start": 62.56,
+      "end": 78.32,
+      "duration": 15.76
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 78.32,
+      "end": 85.32,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Schlüssel C! Jori schob Schlüssel C vorsichtig in das Schloss. Alle drei Zacken glitten gleichzeitig in die drei Kerben. Ein sanftes Klicken hallte durch den Saal, und die Mondtür schwang auf. Dahinter floss silbernes Mondwasser durch eine neue Galerie aus blauem Glas. Flimm hüpfte neben Jori über die leuchtenden Steine, während Luma mit ihrer Glocke den Weg erhellte. Bald teilte sich das Mondwasser vor einem violetten Tor in drei Rinnen. Rinne A endete vor einer dunklen Steinwand. Rinne B bog im großen Kreis zurück zur Mondtür. Nur Rinne C floss frei unter einem leuchtenden violetten Bogen hindurch. Welche Rinne führte Jori, Flimm und Luma weiter?",
+      "start": 85.32,
+      "end": 136.52,
+      "duration": 51.2
+    }
+  ],
+  "duration": 136.52,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
