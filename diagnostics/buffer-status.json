@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-24T00:17:49.813422+00:00",
+  "checked_at_utc": "2026-11-24T06:33:26.177560+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -118,25 +118,25 @@
     {
       "id": "6b03697ecc364169c18cb48b",
       "text": "Deine Idee liegt seit Wochen unberührt, weil du auf Perfektion wartest. Zeig heute noch einen ersten rohen Entwurf einer vertrauten Person. Echte Rückmeldung bringt dich sofort weiter, statt im stillen Kämmerlein zu verharren. Teile diesen Beitrag mit jemandem, der deine Pläne unbedingt kennen muss.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Wild Waters (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-24T06:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-24T06:02:50.870Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7711614065000369441",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-24-0700.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b03697ecc364169c18cb48b_video.mp4"
         }
       ]
     },
     {
       "id": "6b02268d02479690920bc4f4",
-      "text": "Du hast heute eine unangenehme, aber notwendige Wahrheit ausgesprochen und zweifelst nun daran, ob das wirklich richtig war. Prüfe jetzt kurz sachlich, ob du inhaltlich fair geblieben bist. Aufrichtigkeit verlangt eben nicht immer ein bequemes Gespräch. Speichere diesen Beitrag für deine Abendreflexion ab.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Hidden Tears (CC BY 4.0)",
+      "text": "Du hast heute eine unangenehme, aber notwendige Wahrheit ausgesprochen und zweifelst nun daran, ob das wirklich richtig war. Prüfe jetzt kurz sachlich, ob du inhaltlich fair geblieben bist. Aufrichtigkeit verlangt eben nicht immer ein bequemes Gespräch. Speichere diesen Beitrag für deine Abendreflexion ab. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Hidden Tears (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-11-23T21:00:00.000Z",
       "sentAt": "2026-11-23T21:04:42.150Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7711475328153079072",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7711475328153079072?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -147,11 +147,11 @@
     },
     {
       "id": "6b02267602479690920bbd1c",
-      "text": "Du denkst heute Abend an einen langjährigen Freund, dem du schon viel zu lange nicht mehr gesagt hast, wie wichtig er dir in deinem Leben eigentlich ist. Schick ihm jetzt sofort eine kurze, absolut ehrliche Nachricht, um eure Verbundenheit zu stärken. Echte emotionale Nähe braucht schließlich keinen festen Anlass oder Jahrestag, sondern nur den ehrlichen Mut, den ersten Schritt zu tun. Folge unserem Kanal für tägliche Impulse zu starken Beziehungen.\n\n#motus #beziehungen #selbstrespekt #alltagspsychologie #selbstentwicklung\n\nMusik: Tanner Helland – Deserve to be Loved (CC BY 4.0)",
+      "text": "Du denkst heute Abend an einen langjährigen Freund, dem du schon viel zu lange nicht mehr gesagt hast, wie wichtig er dir in deinem Leben eigentlich ist. Schick ihm jetzt sofort eine kurze, absolut ehrliche Nachricht, um eure Verbundenheit zu stärken. Echte emotionale Nähe braucht schließlich keinen festen Anlass oder Jahrestag, sondern nur den ehrlichen Mut, den ersten Schritt zu tun. Folge unserem Kanal für tägliche Impulse zu starken Beziehungen. #motus #beziehungen #selbstrespekt #alltagspsychologie #selbstentwicklung Musik: Tanner Helland – Deserve to be Loved (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-11-23T17:30:00.000Z",
       "sentAt": "2026-11-23T17:35:30.571Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7711421521461398817",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7711421521461398817?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -162,11 +162,11 @@
     },
     {
       "id": "6b0226c902479690920bda36",
-      "text": "Eine geschriebene Nachricht von dir wurde gerade völlig anders verstanden, als du es eigentlich beabsichtigt hattest. Ungeklärte Annahmen wachsen sonst schnell zu unnötigen Konflikten heran. Klär diesen einen Punkt jetzt direkt im persönlichen Gespräch. Teile diesen Beitrag mit jemandem, der heute auch Klarheit braucht.\n\n#motus #kommunikation #alltagspsychologie #selbstentwicklung #mentaleklarheit\n\nMusik: Tanner Helland – Destiny (CC BY 4.0)",
+      "text": "Eine geschriebene Nachricht von dir wurde gerade völlig anders verstanden, als du es eigentlich beabsichtigt hattest. Ungeklärte Annahmen wachsen sonst schnell zu unnötigen Konflikten heran. Klär diesen einen Punkt jetzt direkt im persönlichen Gespräch. Teile diesen Beitrag mit jemandem, der heute auch Klarheit braucht. #motus #kommunikation #alltagspsychologie #selbstentwicklung #mentaleklarheit Musik: Tanner Helland – Destiny (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-11-23T11:00:00.000Z",
       "sentAt": "2026-11-23T11:03:59.940Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7711320608444861728",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7711320608444861728?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -177,11 +177,11 @@
     },
     {
       "id": "6b022682cc364169c11132de",
-      "text": "Du merkst beim Blick in den Spiegel, dass dein angeblich so großes Lebensziel eigentlich nur die laute Erwartung deiner Umgebung ist. Das fühlt sich schwer an, weil du bisher für den Beifall anderer gelaufen bist statt für dich selbst. Echte Klarheit bringt dir am Ende deutlich mehr innere Zufriedenheit als der Applaus von Menschen, die deinen persönlichen Preis gar nicht tragen müssen. Schreib mir deine Gedanken dazu in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Forest Awakes (CC BY 4.0)",
+      "text": "Du merkst beim Blick in den Spiegel, dass dein angeblich so großes Lebensziel eigentlich nur die laute Erwartung deiner Umgebung ist. Das fühlt sich schwer an, weil du bisher für den Beifall anderer gelaufen bist statt für dich selbst. Echte Klarheit bringt dir am Ende deutlich mehr innere Zufriedenheit als der Applaus von Menschen, die deinen persönlichen Preis gar nicht tragen müssen. Schreib mir deine Gedanken dazu in die Kommentare. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – The Forest Awakes (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-11-23T06:00:00.000Z",
       "sentAt": "2026-11-23T06:01:23.496Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7711242844790443297",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7711242844790443297?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -192,11 +192,11 @@
     },
     {
       "id": "6b00cfc85e993799d834c48a",
-      "text": "Eine freundliche Geste von heute fällt dir erst jetzt wieder ein. Nimm ihre Bedeutung bewusst wahr. Manche guten Dinge sind leise und trotzdem wichtig. Ein guter Augenblick wird nicht kleiner, nur weil gleichzeitig anderes schwierig war. Wenn du ihn bewusst wahrnimmst, erinnerst du dich an mehr als bloße To-do-Listen. Es lohnt sich, diese kleine Erfahrung mit eigenen Worten festzuhalten, statt sie gleich zu vergessen. Folge MOTUS für neue Impulse zu Selbstvertrauen und Klarheit.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Fate (CC BY 4.0)",
+      "text": "Eine freundliche Geste von heute fällt dir erst jetzt wieder ein. Nimm ihre Bedeutung bewusst wahr. Manche guten Dinge sind leise und trotzdem wichtig. Ein guter Augenblick wird nicht kleiner, nur weil gleichzeitig anderes schwierig war. Wenn du ihn bewusst wahrnimmst, erinnerst du dich an mehr als bloße To-do-Listen. Es lohnt sich, diese kleine Erfahrung mit eigenen Worten festzuhalten, statt sie gleich zu vergessen. Folge MOTUS für neue Impulse zu Selbstvertrauen und Klarheit. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Fate (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-11-22T21:00:00.000Z",
       "sentAt": "2026-11-22T21:03:07.733Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7711104133545200928",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7711104133545200928?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -207,11 +207,11 @@
     },
     {
       "id": "6b00cfa8d9cbb430a10148b3",
-      "text": "Ein nahestehender Mensch macht einen Fehler und wartet angespannt auf deine Reaktion. Besprecht zuerst, wie ihr die Folgen begrenzen könnt. Verantwortung und Mitgefühl passen zusammen. Aus Einsicht kann eine Änderung entstehen. Schick den Gedanken jemandem, mit dem du darüber sprechen möchtest.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Faith (CC BY 4.0)",
+      "text": "Ein nahestehender Mensch macht einen Fehler und wartet angespannt auf deine Reaktion. Besprecht zuerst, wie ihr die Folgen begrenzen könnt. Verantwortung und Mitgefühl passen zusammen. Aus Einsicht kann eine Änderung entstehen. Schick den Gedanken jemandem, mit dem du darüber sprechen möchtest. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Faith (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-11-22T17:30:00.000Z",
       "sentAt": "2026-11-22T17:32:45.455Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7711049874262871329",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7711049874262871329?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -222,11 +222,11 @@
     },
     {
       "id": "6b00cfd3dd205ed779a13946",
-      "text": "Im Raum reden alle durcheinander und niemand weiß, was nun tatsächlich beschlossen wurde. Statt dich diesem Chaos anzupassen oder still mitzulaufen, übernimm kurz die Initiative. Fasse die offenen Punkte präzise zusammen und frage direkt nach dem nächsten Verantwortlichen. Echte Klarheit ist in solchen Momenten deutlich wirksamer als bloße Lautstärke. Übe das heute in deiner Gruppe und speichere dir diesen Gedanken für die nächste schwierige Diskussion ab, um sofort handlungsfähig zu bleiben.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
+      "text": "Im Raum reden alle durcheinander und niemand weiß, was nun tatsächlich beschlossen wurde. Statt dich diesem Chaos anzupassen oder still mitzulaufen, übernimm kurz die Initiative. Fasse die offenen Punkte präzise zusammen und frage direkt nach dem nächsten Verantwortlichen. Echte Klarheit ist in solchen Momenten deutlich wirksamer als bloße Lautstärke. Übe das heute in deiner Gruppe und speichere dir diesen Gedanken für die nächste schwierige Diskussion ab, um sofort handlungsfähig zu bleiben. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Find You (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-11-22T11:00:00.000Z",
       "sentAt": "2026-11-22T11:03:38.726Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7710949486134152481",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7710949486134152481?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -237,11 +237,11 @@
     },
     {
       "id": "6b00cfd95e993799d834ce92",
-      "text": "Dir fällt eine wichtige Frage ein, doch du befürchtest eine dumme Reaktion im Kreis der anderen. Stell diese Frage trotz deiner Zweifel laut. Mut beginnt oft genau dort, wo du Unsicherheit aushältst, statt aus Angst zu schweigen. Teile in den Kommentaren deine Erfahrung dazu.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – From Here (CC BY 4.0)",
+      "text": "Dir fällt eine wichtige Frage ein, doch du befürchtest eine dumme Reaktion im Kreis der anderen. Stell diese Frage trotz deiner Zweifel laut. Mut beginnt oft genau dort, wo du Unsicherheit aushältst, statt aus Angst zu schweigen. Teile in den Kommentaren deine Erfahrung dazu. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – From Here (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-11-22T06:00:00.000Z",
       "sentAt": "2026-11-22T06:02:20.852Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7710871687796985120",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7710871687796985120?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -252,11 +252,11 @@
     },
     {
       "id": "6aff84151a1724ac8f599290",
-      "text": "Der detaillierte Plan für morgen kreist in deinem Kopf, obwohl du längst alles Nötige vorbereitet hast. Lass jetzt die endlose Kontrolle los. Unterscheide bewusste Vorbereitung von gedanklichem Nachkartern. Du darfst den heutigen Tag jetzt friedlich abschließen. Folge unserem Kanal für tägliche Impulse.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
+      "text": "Der detaillierte Plan für morgen kreist in deinem Kopf, obwohl du längst alles Nötige vorbereitet hast. Lass jetzt die endlose Kontrolle los. Unterscheide bewusste Vorbereitung von gedanklichem Nachkartern. Du darfst den heutigen Tag jetzt friedlich abschließen. Folge unserem Kanal für tägliche Impulse. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Lost Islands (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-11-21T21:00:00.000Z",
       "sentAt": "2026-11-21T21:03:16.132Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7710733037566315808",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7710733037566315808?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -267,11 +267,11 @@
     },
     {
       "id": "6aff83e41a1724ac8f598171",
-      "text": "Jemand vertritt eine Meinung, die du am liebsten sofort und laut ablehnen möchtest, weil sie so gar nicht zu deinen eigenen Werten passen will. Bitte dein Gegenüber stattdessen freundlich darum, den für sie oder ihn wichtigsten Grund für diese Ansicht zu nennen. Sich aufrichtig darauf einzulassen schafft echten Raum für neue Einsichten. Denk daran: Verstehen ist niemals dasselbe wie ungespitzt zuzustimmen. Teile dieses Video mit jemandem, der kluge Gespräche schätzt.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Remember (CC BY 4.0)",
+      "text": "Jemand vertritt eine Meinung, die du am liebsten sofort und laut ablehnen möchtest, weil sie so gar nicht zu deinen eigenen Werten passen will. Bitte dein Gegenüber stattdessen freundlich darum, den für sie oder ihn wichtigsten Grund für diese Ansicht zu nennen. Sich aufrichtig darauf einzulassen schafft echten Raum für neue Einsichten. Denk daran: Verstehen ist niemals dasselbe wie ungespitzt zuzustimmen. Teile dieses Video mit jemandem, der kluge Gespräche schätzt. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Remember (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-11-21T17:30:00.000Z",
       "sentAt": "2026-11-21T17:33:12.945Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7710678854603459872",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7710678854603459872?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -282,11 +282,11 @@
     },
     {
       "id": "6aff83da8d2272fdf519ca79",
-      "text": "Dein Gegenüber wird still und du möchtest die Pause sofort mit Argumenten füllen. Frag, ob etwas unklar geblieben ist. Verstehen braucht manchmal einen Moment Ruhe. Zuhören ist eine bewusste Entscheidung. Teile diesen Impuls mit einer Person, die gerade Mut braucht.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Familiar Roads (CC BY 4.0)",
+      "text": "Dein Gegenüber wird still und du möchtest die Pause sofort mit Argumenten füllen. Frag, ob etwas unklar geblieben ist. Verstehen braucht manchmal einen Moment Ruhe. Zuhören ist eine bewusste Entscheidung. Teile diesen Impuls mit einer Person, die gerade Mut braucht. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Familiar Roads (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-11-21T11:00:00.000Z",
       "sentAt": "2026-11-21T11:02:44.669Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7710578333922102561",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7710578333922102561?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -297,11 +297,11 @@
     },
     {
       "id": "6aff83e38d2272fdf519d3b9",
-      "text": "Du hast dich entschieden und suchst trotzdem immer neue Bestätigung. Gib deinem Entschluss einen fairen Zeitraum. Nicht jede Unsicherheit bedeutet, dass du falschliegst. Gib deiner Wahl Raum, bevor du sie allein wegen eines kurzen Zweifels wieder verwirfst. Du kannst deinen Entschluss später anhand neuer Fakten überprüfen, ohne ihn ständig aus Angst infrage zu stellen. Nicht jedes Zögern bedeutet einen Irrtum. Speichere den Impuls, falls du ihn später brauchst.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Now or Never (CC BY 4.0)",
+      "text": "Du hast dich entschieden und suchst trotzdem immer neue Bestätigung. Gib deinem Entschluss einen fairen Zeitraum. Nicht jede Unsicherheit bedeutet, dass du falschliegst. Gib deiner Wahl Raum, bevor du sie allein wegen eines kurzen Zweifels wieder verwirfst. Du kannst deinen Entschluss später anhand neuer Fakten überprüfen, ohne ihn ständig aus Angst infrage zu stellen. Nicht jedes Zögern bedeutet einen Irrtum. Speichere den Impuls, falls du ihn später brauchst. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Now or Never (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-11-21T06:00:00.000Z",
       "sentAt": "2026-11-21T06:02:28.145Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7710500636822981920",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7710500636822981920?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -312,11 +312,11 @@
     },
     {
       "id": "6afe30254cace847b37df510",
-      "text": "Eine Nachricht bleibt unbeantwortet und du vermutest sofort Ablehnung. Erinnere dich daran, dass du die Gründe noch nicht kennst. Beobachtung und Bedeutung sind verschieden. Eine offene Frage oder das Eingeständnis einer Wissenslücke ist oft ehrlicher als vorschnelle Gewissheit. Du gewinnst Klarheit, indem du nachfragst oder auf Fakten wartest, statt Ungewissheit mit Vermutungen zu füllen. Ungewissheit verlangt nicht immer sofort Antworten. Folge MOTUS für neue Impulse zu Selbstvertrauen und Klarheit.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
+      "text": "Eine Nachricht bleibt unbeantwortet und du vermutest sofort Ablehnung. Erinnere dich daran, dass du die Gründe noch nicht kennst. Beobachtung und Bedeutung sind verschieden. Eine offene Frage oder das Eingeständnis einer Wissenslücke ist oft ehrlicher als vorschnelle Gewissheit. Du gewinnst Klarheit, indem du nachfragst oder auf Fakten wartest, statt Ungewissheit mit Vermutungen zu füllen. Ungewissheit verlangt nicht immer sofort Antworten. Folge MOTUS für neue Impulse zu Selbstvertrauen und Klarheit. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-11-20T21:00:00.000Z",
       "sentAt": "2026-11-20T21:03:36.736Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7710361977507417377",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7710361977507417377?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
@@ -327,11 +327,11 @@
     },
     {
       "id": "6afe3010c462756e9e26a0a5",
-      "text": "Ein alter Streit taucht plötzlich wieder auf und die Vorwürfe driften direkt in den persönlichen Bereich ab. Sprich stattdessen sachlich über das beobachtete Verhalten statt über den Charakter deklarierten Wesenszüge deines Gegenübers. Folge uns für mehr innere Stärke im Alltag.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Home (CC BY 4.0)",
+      "text": "Ein alter Streit taucht plötzlich wieder auf und die Vorwürfe driften direkt in den persönlichen Bereich ab. Sprich stattdessen sachlich über das beobachtete Verhalten statt über den Charakter deklarierten Wesenszüge deines Gegenübers. Folge uns für mehr innere Stärke im Alltag. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Home (CC BY 4.0)",
       "status": "sent",
       "dueAt": "2026-11-20T17:30:00.000Z",
       "sentAt": "2026-11-20T18:08:19.842Z",
-      "externalLink": "https://tiktok.com/@motus614/video/7710307834050743585",
+      "externalLink": "https://www.tiktok.com/@motus614/video/7710307834050743585?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
