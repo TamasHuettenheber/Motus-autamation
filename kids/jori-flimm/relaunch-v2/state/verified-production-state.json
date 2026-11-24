@@ -1,27 +1,27 @@
 {
   "series": "Jori & Flimm",
   "branch": "feature/jori-flimm-neustart-folge001",
-  "updated_at": "2026-11-23T08:40:00+01:00",
-  "latest_fully_qc_episode": 37,
-  "latest_scheduled_episode": 37,
-  "next_episode_number": 38,
-  "latest_title": "Der Sterndrachen mit der ganzen Schnur",
-  "next_continuity_anchor": "Auf einem Sockel lagen drei Schlüssel. Schlüssel A war sternförmig. Schlüssel B war eine gesprungene Mondsichel mit nur zwei Zacken. Schlüssel C war eine ganze Mondsichel mit genau drei Zacken, die zu den drei Kerben im Schloss passten. Welcher Schlüssel konnte die Mondtür öffnen?",
-  "video_path": "published/jori-flimm-2026-11-27-e037-v1.mp4",
+  "updated_at": "2026-11-24T08:43:00+01:00",
+  "latest_fully_qc_episode": 38,
+  "latest_scheduled_episode": 38,
+  "next_episode_number": 39,
+  "latest_title": "Der Schlüssel mit den drei Zacken",
+  "next_continuity_anchor": "Rinne A endete vor einer dunklen Steinwand. Rinne B bog im großen Kreis zurück zur Mondtür. Nur Rinne C floss frei unter einem leuchtenden violetten Bogen hindurch. Welche Rinne führte Jori, Flimm und Luma weiter?",
+  "video_path": "published/jori-flimm-2026-11-28-e038-v1.mp4",
   "buffer": {
-    "post_id": "6b03eda09c1a68014f5819b4",
+    "post_id": "6b053fd4ca4899309e6a891a",
     "status": "scheduled",
     "channel": "@jori.flimm",
     "channel_id": "6ad948ea778b240e2f839607",
-    "due_at": "2026-11-27T13:00:00.000Z",
-    "local_time": "2026-11-27T14:00:00+01:00"
+    "due_at": "2026-11-28T13:00:00.000Z",
+    "local_time": "2026-11-28T14:00:00+01:00"
   },
   "evidence": {
-    "queue_precheck_run_id": 45128747855,
-    "preview_run_id": 45131097186,
-    "final_qc_run_id": 45132067853,
-    "release_run_id": 45132499978,
-    "postcheck_run_id": 45132723799
+    "queue_precheck_run_id": 45346474937,
+    "preview_run_id": 45348738411,
+    "final_qc_run_id": 45349484279,
+    "release_run_id": 45349865079,
+    "postcheck_run_id": 45350073625
   },
   "warning": "Do not infer the next episode from reset series-state.json or episode-ledger.json; use this verified state plus GitHub MP4s, Action logs and live Buffer evidence."
 }
