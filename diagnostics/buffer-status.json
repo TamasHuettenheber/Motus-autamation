@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-24T19:04:18.878975+00:00",
+  "checked_at_utc": "2026-11-24T21:10:30.465893+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -73,15 +73,15 @@
     {
       "id": "6b036940bf5d5a73b6c7407d",
       "text": "Eine alte Sorge taucht wieder auf, obwohl du heute nichts daran ändern kannst. Benenne deinen tatsächlichen Einfluss. Gelassenheit heißt, Kraft dort einzusetzen, wo Handeln möglich ist. Unterscheide zwischen einem Problem, das du beeinflussen kannst, und einer Vorstellung, die noch gar nicht bestätigt ist. Mit dieser Unterscheidung kannst du über einen sinnvollen Schritt nachdenken, statt jede Möglichkeit auszumalen. Nicht jeder Gedanke ist eine Tatsache. Speichere den Impuls, falls du ihn später brauchst.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Nevermore (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-24T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-24T21:04:41.621Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7711846584123673895",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-24-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b036940bf5d5a73b6c7407d_video.mp4"
         }
       ]
     },
