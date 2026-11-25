@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Rinne C war der freie Weg! Jori, Flimm und Luma liefen durch den violetten Bogen, während die beiden falschen Rinnen hinter ihnen verschwanden.",
+      "start": 0.0,
+      "end": 13.36,
+      "duration": 13.36
+    },
+    {
+      "kind": "speech",
+      "text": "Das Mondwasser führte sie in eine Kristallgrotte. Vor ihnen lag eine dunkle Glasbrücke über einem funkelnden Abgrund. Neben der Brücke wartete ein Prisma-Pult mit drei Kristallpaaren. Über Paar A lagen Blau und Gelb; darüber leuchtete Grün. Über Paar B lagen Rot und Blau; darüber leuchtete Violett. Über Paar C lagen Rot und Gelb; darüber leuchtete Orange. Am Tor auf der anderen Seite glühte nur ein violetter Bogen. Flimm hielt seine kleine runde Nase dicht ans Pult. Jori zeigte auf den Bogen: Die Brücke brauchte genau dieselbe Farbe.",
+      "start": 13.36,
+      "end": 65.2,
+      "duration": 51.84
+    },
+    {
+      "kind": "speech",
+      "text": "Welches Kristallpaar aktiviert die violette Brücke: A mit Blau und Gelb, B mit Rot und Blau oder C mit Rot und Gelb?",
+      "start": 65.2,
+      "end": 80.08,
+      "duration": 14.88
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 80.08,
+      "end": 87.08,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Paar B! Rot und Blau mischen sich zu Violett. Jori und Flimm berührten die beiden Kristalle gleichzeitig. Ein violetter Lichtstrahl floss über das Glas, und die Brücke erwachte. Luma läutete freudig. Gemeinsam gingen sie hinüber in einen stillen Mondgarten. Zwischen silbernen Blüten führte ein Weg zu einer riesigen, geschlossenen Mondblume. Da entfaltete die Blume langsam ihre schimmernden Blätter. In ihrer Mitte lag ein einziges Kristallei. Von innen drückte eine winzige Pfote gegen die Schale, und ein leuchtender Riss erschien. Wer wollte aus dem Kristallei schlüpfen?",
+      "start": 87.08,
+      "end": 136.68,
+      "duration": 49.6
+    }
+  ],
+  "duration": 136.68,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
