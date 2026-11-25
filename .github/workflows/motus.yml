@@ -191,7 +191,8 @@ jobs:
                         'entwicklung','positiv','abend','nacht'}
           # Explicit workplace scenes outrank generic emotional scenery (future renders only).
           workplace_scene=(any(cue in text for cue in ('schreibtisch','arbeitsplatz','buero','meetingraum','im team','kollege','besprechung','bewerbung','beruflich'))
-                           or any(cue in text for cue in ('neue aufgabe','neue rolle','berufliche verantwortung')))
+                           or any(cue in text for cue in ('neue aufgabe','neue rolle','berufliche verantwortung'))
+                           or (output.endswith('-1200') and re.search(r'(?<![a-z])(?:aufgaben|fristen|zusagen|verpflichtungen)(?![a-z])',text) is not None))
           # A specific friend, invitation or hobby scene calls for people in frame,
           # not an unrelated lone walker with a coincidental generic keyword.
           # Include disagreement and discussion: they also depict interaction between people.
@@ -209,9 +210,9 @@ jobs:
               # This vertical dialogue clip fits spoken evening interactions only.
               if clip['id']=='friends-cafe-talk-5359021' and (not output.endswith('-1830') or not conversation_scene):
                   continue
-              # Morning footage must not depict night or evening scenes.
+              # Morning and noon footage must not depict night or evening scenes.
               # Check metadata before scoring, so emotional keywords cannot outrank time-of-day fit.
-              if output.endswith('-0700') and any(fold(str(tag)) in {'nacht', 'abend'} for tag in clip.get('tags', [])):
+              if output.endswith(('-0700','-1200')) and any(fold(str(tag)) in {'nacht', 'abend'} for tag in clip.get('tags', [])):
                   continue
               # 22:00 text may say 'morgen' to mean tomorrow; exclude morning footage.
               if output.endswith('-2200') and any(fold(str(tag)) == 'morgen' for tag in clip.get('tags', [])):
