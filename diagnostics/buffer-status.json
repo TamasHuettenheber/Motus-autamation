@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-25T06:15:49.117853+00:00",
+  "checked_at_utc": "2026-11-25T11:29:31.913119+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6b04c2ef8165ce395ba25c88",
       "text": "Dein konkreter Vorschlag im Team wird heute abgelehnt und im ersten Moment fühlst du dich persönlich getroffen. Bitte sachlich um einen klaren, fachlichen Grund für die Entscheidung. Eine abgelehnte Idee ist niemals eine Ablehnung deiner Person. Speicher diesen Beitrag für deinen nächsten Perspektivwechsel.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Crossroads (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-25T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-25T11:03:55.398Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7712062968569040167",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-25-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b04c2ef8165ce395ba25c88_video.mp4"
         }
       ]
     },
