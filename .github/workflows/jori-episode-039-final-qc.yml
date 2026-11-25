@@ -94,5 +94,5 @@ jobs:
 # E039 independent final QC for the 2026-11-25 production run.
 
 
-# Trigger E039 independent QC after validated MP4 commit.
+# Trigger E039 independent QC after validated MP4 commit 2fc8821.
 
