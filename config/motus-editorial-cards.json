@@ -291,10 +291,10 @@
         "motif": "unsicherheit"
       },
       {
-        "topic": "Grenzen ohne Schuldgefühl",
-        "hook": "Du hast heute eine Grenze gesetzt und zweifelst nun, ob du zu streng warst.",
-        "action": "Prüfe, ob du respektvoll geblieben bist. Unbehagen ist kein Beweis für einen Fehler.",
-        "motif": "grenzen"
+        "topic": "Vom Arbeitsmodus abschalten",
+        "hook": "Beim Abendessen beantwortest du im Kopf noch immer die Fragen aus der Arbeit.",
+        "action": "Notiere einen Wiedereinstiegspunkt für morgen und wähle etwas, das dich jetzt auf andere Gedanken bringt.",
+        "motif": "rollenwechsel"
       },
       {
         "topic": "Leistung anerkennen",
@@ -462,10 +462,10 @@
       "Verabrede einen ersten überprüfbaren Zwischenstand und hole dir danach Rückmeldung, bevor du weitere Energie investierst."
     ],
     "prioritaet": [
-      "Dringlichkeit und Bedeutung sind nicht dasselbe.",
-      "Prüfe, welche Entscheidung echte Folgen für andere hat, statt allein dem lautesten Signal zu folgen.",
-      "Wirkung zählt mehr als Lautstärke.",
-      "So schützt du deine Zeit und sorgst zugleich dafür, dass wichtige Verpflichtungen nicht übersehen werden."
+      "Frag die Beteiligten nach der spätesten Frist und danach, was bei einer Verzögerung passiert.",
+      "Eine Entscheidung wird leichter, wenn du weißt, wer auf das Ergebnis wartet und welche Arbeit davon abhängt.",
+      "Bei Gleichstand kannst du nach dem Aufwand entscheiden.",
+      "Sag den Betroffenen auch, wann sie mit der anderen Aufgabe rechnen können, damit sie ihren eigenen Ablauf planen können."
     ],
     "respekt": [
       "Andere dürfen zu einer anderen Entscheidung gelangen als du.",
@@ -532,6 +532,12 @@
       "Du musst das Interesse nicht teilen; eine echte Frage reicht, um aus oberflächlichem Smalltalk ein persönliches Gespräch zu machen.",
       "Neugier eröffnet einen neuen Gesprächsfaden.",
       "Vielleicht lernst du dabei etwas über die Erfahrungen hinter seiner Begeisterung, auch wenn deine eigenen Interessen ganz anders sind."
+    ],
+    "rollenwechsel": [
+      "Ein bewusst gewählter Übergang hilft dir, den Feierabend wahrzunehmen, statt unbemerkt im Arbeitsmodus zu bleiben.",
+      "Vielleicht hilft dir dabei ein kurzer Spaziergang, ein Stück Musik oder ein Gespräch über etwas völlig anderes.",
+      "Dein Feierabend braucht kein weiteres Arbeitsergebnis.",
+      "Wenn dir später doch noch eine Aufgabe einfällt, leg sie zu deiner Notiz, ohne sie sofort zu bearbeiten."
     ]
   }
 }
