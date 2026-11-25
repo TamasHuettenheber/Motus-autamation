@@ -1,0 +1,87 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 39,
+  "series_version": "relaunch-v2",
+  "title": "Die Brücke aus violettem Licht",
+  "hook": "Rinne C war der freie Weg! Jori, Flimm und Luma liefen durch den violetten Bogen, während die beiden falschen Rinnen hinter ihnen verschwanden.",
+  "story": "Das Mondwasser führte sie in eine Kristallgrotte. Vor ihnen lag eine dunkle Glasbrücke über einem funkelnden Abgrund. Neben der Brücke wartete ein Prisma-Pult mit drei Kristallpaaren. Über Paar A lagen Blau und Gelb; darüber leuchtete Grün. Über Paar B lagen Rot und Blau; darüber leuchtete Violett. Über Paar C lagen Rot und Gelb; darüber leuchtete Orange. Am Tor auf der anderen Seite glühte nur ein violetter Bogen. Flimm hielt seine kleine runde Nase dicht ans Pult. Jori zeigte auf den Bogen: Die Brücke brauchte genau dieselbe Farbe.",
+  "question": "Welches Kristallpaar aktiviert die violette Brücke: A mit Blau und Gelb, B mit Rot und Blau oder C mit Rot und Gelb?",
+  "answer": "Paar B!",
+  "after": "Rot und Blau mischen sich zu Violett. Jori und Flimm berührten die beiden Kristalle gleichzeitig. Ein violetter Lichtstrahl floss über das Glas, und die Brücke erwachte. Luma läutete freudig. Gemeinsam gingen sie hinüber in einen stillen Mondgarten. Zwischen silbernen Blüten führte ein Weg zu einer riesigen, geschlossenen Mondblume.",
+  "cliff": "Da entfaltete die Blume langsam ihre schimmernden Blätter. In ihrer Mitte lag ein einziges Kristallei. Von innen drückte eine winzige Pfote gegen die Schale, und ein leuchtender Riss erschien. Wer wollte aus dem Kristallei schlüpfen?",
+  "riddle": {
+    "type": "color_pair_makes_violet",
+    "question": "Welches Kristallpaar aktiviert die violette Brücke: A mit Blau und Gelb, B mit Rot und Blau oder C mit Rot und Gelb?",
+    "answer": "Paar B",
+    "evidence_in_story": "A ergibt Grün, B ergibt Violett, C ergibt Orange; der Zielbogen ist violett.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "compare_color_pairs_to_violet_target",
+  "clues": [
+    "A: Blau + Gelb = Grün",
+    "B: Rot + Blau = Violett",
+    "C: Rot + Gelb = Orange",
+    "Ziel: violetter Bogen"
+  ],
+  "correct": 1,
+  "puzzle_visual": "Drei klar getrennte Kristallpaare mit ihren sichtbaren Mischfarben und ein violetter Zielbogen. Rätselschild, Frage und Hinweise vollständig zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt ohne Zeitsprung an den drei Mondwasserrinnen aus Folge 038 an. Jori wählt Rinne C, erreicht die Prismabrücke und aktiviert sie mit dem rot-blauen Kristallpaar.",
+  "narration": "Rinne C war der freie Weg! Jori, Flimm und Luma liefen durch den violetten Bogen, während die beiden falschen Rinnen hinter ihnen verschwanden. [[SEGMENT]] Das Mondwasser führte sie in eine Kristallgrotte. Vor ihnen lag eine dunkle Glasbrücke über einem funkelnden Abgrund. Neben der Brücke wartete ein Prisma-Pult mit drei Kristallpaaren. Über Paar A lagen Blau und Gelb; darüber leuchtete Grün. Über Paar B lagen Rot und Blau; darüber leuchtete Violett. Über Paar C lagen Rot und Gelb; darüber leuchtete Orange. Am Tor auf der anderen Seite glühte nur ein violetter Bogen. Flimm hielt seine kleine runde Nase dicht ans Pult. Jori zeigte auf den Bogen: Die Brücke brauchte genau dieselbe Farbe. [[SEGMENT]] Welches Kristallpaar aktiviert die violette Brücke: A mit Blau und Gelb, B mit Rot und Blau oder C mit Rot und Gelb? [[PAUSE:7]] Paar B! Rot und Blau mischen sich zu Violett. Jori und Flimm berührten die beiden Kristalle gleichzeitig. Ein violetter Lichtstrahl floss über das Glas, und die Brücke erwachte. Luma läutete freudig. Gemeinsam gingen sie hinüber in einen stillen Mondgarten. Zwischen silbernen Blüten führte ein Weg zu einer riesigen, geschlossenen Mondblume. Da entfaltete die Blume langsam ihre schimmernden Blätter. In ihrer Mitte lag ein einziges Kristallei. Von innen drückte eine winzige Pfote gegen die Schale, und ein leuchtender Riss erschien. Wer wollte aus dem Kristallei schlüpfen?",
+  "narration_tts": "Rinne C war der freie Weg! Jori, Flimm und Luma liefen durch den violetten Bogen, während die beiden falschen Rinnen hinter ihnen verschwanden. [[SEGMENT]] Das Mondwasser führte sie in eine Kristallgrotte. Vor ihnen lag eine dunkle Glasbrücke über einem funkelnden Abgrund. Neben der Brücke wartete ein Prisma-Pult mit drei Kristallpaaren. Über Paar A lagen Blau und Gelb; darüber leuchtete Grün. Über Paar B lagen Rot und Blau; darüber leuchtete Violett. Über Paar C lagen Rot und Gelb; darüber leuchtete Orange. Am Tor auf der anderen Seite glühte nur ein violetter Bogen. Flimm hielt seine kleine runde Nase dicht ans Pult. Jori zeigte auf den Bogen: Die Brücke brauchte genau dieselbe Farbe. [[SEGMENT]] Welches Kristallpaar aktiviert die violette Brücke: A mit Blau und Gelb, B mit Rot und Blau oder C mit Rot und Gelb? [[PAUSE:7]] Paar B! Rot und Blau mischen sich zu Violett. Jori und Flimm berührten die beiden Kristalle gleichzeitig. Ein violetter Lichtstrahl floss über das Glas, und die Brücke erwachte. Luma läutete freudig. Gemeinsam gingen sie hinüber in einen stillen Mondgarten. Zwischen silbernen Blüten führte ein Weg zu einer riesigen, geschlossenen Mondblume. Da entfaltete die Blume langsam ihre schimmernden Blätter. In ihrer Mitte lag ein einziges Kristallei. Von innen drückte eine winzige Pfote gegen die Schale, und ein leuchtender Riss erschien. Wer wollte aus dem Kristallei schlüpfen?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss: Jori, Flimm und Luma wählen Rinne C und gehen unter dem violetten Bogen weiter.",
+    "Eine neue Kristallgrotte mit dunkler Glasbrücke, Abgrund und Prisma-Pult.",
+    "Drei Kristallpaare zeigen klar ihre Mischfarben Grün, Violett und Orange.",
+    "Ruhiges, TikTok-sicheres Rätsel-Tableau mit allen Farbpaaren und violettem Zielbogen.",
+    "Lösung: Jori und Flimm wählen gemeinsam Rot und Blau; violettes Licht aktiviert die Brücke.",
+    "Das Team überquert die violette Brücke und erreicht einen neuen Mondgarten mit geschlossener Silberblume.",
+    "Cliffhanger: Die Silberblume öffnet sich; ein Kristallei mit winziger Pfote und leuchtendem Riss liegt darin."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-039-v1/scene-01.png",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-039-v1/scene-02.png",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-039-v1/scene-03.png",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-039-v1/scene-04.png",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-039-v1/scene-05.png",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-039-v1/scene-06.png",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-039-v1/scene-07.png",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-25T09:05:00+01:00",
+  "status": "STORY_AND_SEVEN_NEW_IMAGES_READY_TTS_PENDING",
+  "previous_cliffhanger": "Rinne A endete vor einer dunklen Steinwand. Rinne B bog im großen Kreis zurück zur Mondtür. Nur Rinne C floss frei unter einem leuchtenden violetten Bogen hindurch. Welche Rinne führte Jori, Flimm und Luma weiter?"
+}
