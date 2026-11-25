@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-25T18:13:50.829376+00:00",
+  "checked_at_utc": "2026-11-25T21:37:12.703678+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -73,15 +73,15 @@
     {
       "id": "6b04c2eaf72f10e1883c0a07",
       "text": "Du liegst im Bett und denkst an einen Menschen, dem du heute im Trubel zu wenig echte Aufmerksamkeit geschenkt hast. Nimm dir fest vor, morgen ganz bewusst zuzuhören und vollkommen präsent zu sein. Beziehungen wachsen durch echte Begegnungen. Folge uns für tägliche Impulse.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – The Journey (Kroc's Theme) (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-25T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-25T21:03:53.342Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7712217464699882791",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-25-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b04c2eaf72f10e1883c0a07_video.mp4"
         }
       ]
     },
