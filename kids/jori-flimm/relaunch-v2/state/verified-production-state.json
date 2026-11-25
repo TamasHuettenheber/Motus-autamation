@@ -1,27 +1,27 @@
 {
   "series": "Jori & Flimm",
   "branch": "feature/jori-flimm-neustart-folge001",
-  "updated_at": "2026-11-24T08:43:00+01:00",
-  "latest_fully_qc_episode": 38,
-  "latest_scheduled_episode": 38,
-  "next_episode_number": 39,
-  "latest_title": "Der Schlüssel mit den drei Zacken",
-  "next_continuity_anchor": "Rinne A endete vor einer dunklen Steinwand. Rinne B bog im großen Kreis zurück zur Mondtür. Nur Rinne C floss frei unter einem leuchtenden violetten Bogen hindurch. Welche Rinne führte Jori, Flimm und Luma weiter?",
-  "video_path": "published/jori-flimm-2026-11-28-e038-v1.mp4",
+  "updated_at": "2026-11-25T08:46:00+01:00",
+  "latest_fully_qc_episode": 39,
+  "latest_scheduled_episode": 39,
+  "next_episode_number": 40,
+  "latest_title": "Die Brücke aus violettem Licht",
+  "next_continuity_anchor": "Da entfaltete die Blume langsam ihre schimmernden Blätter. In ihrer Mitte lag ein einziges Kristallei. Von innen drückte eine winzige Pfote gegen die Schale, und ein leuchtender Riss erschien. Wer wollte aus dem Kristallei schlüpfen?",
+  "video_path": "published/jori-flimm-2026-11-29-e039-v1.mp4",
   "buffer": {
-    "post_id": "6b053fd4ca4899309e6a891a",
+    "post_id": "6b0691569cddd8483abce88c",
     "status": "scheduled",
     "channel": "@jori.flimm",
     "channel_id": "6ad948ea778b240e2f839607",
-    "due_at": "2026-11-28T13:00:00.000Z",
-    "local_time": "2026-11-28T14:00:00+01:00"
+    "due_at": "2026-11-29T13:00:00.000Z",
+    "local_time": "2026-11-29T14:00:00+01:00"
   },
   "evidence": {
-    "queue_precheck_run_id": 45346474937,
-    "preview_run_id": 45348738411,
-    "final_qc_run_id": 45349484279,
-    "release_run_id": 45349865079,
-    "postcheck_run_id": 45350073625
+    "queue_precheck_run_id": 45566177293,
+    "preview_run_id": 45568409354,
+    "final_qc_run_id": 45569474757,
+    "release_run_id": 45570070215,
+    "postcheck_run_id": 45570432457
   },
   "warning": "Do not infer the next episode from reset series-state.json or episode-ledger.json; use this verified state plus GitHub MP4s, Action logs and live Buffer evidence."
 }
