@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-25T11:29:31.913119+00:00",
+  "checked_at_utc": "2026-11-25T18:13:50.829376+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6b04c2fb18db0405bdae06f1",
       "text": "Ein Familienmitglied trifft heute eine Entscheidung, die du persönlich völlig anders gelöst hättest. Das erzeugt zunächst Unverständnis und den Drang, ungefragt Ratschläge zu erteilen. Atme tief durch und frage stattdessen nach den echten Motiven und Hintergründen dieser Wahl, bevor du urteilst. Echte Unterstützung bedeutet nämlich nicht, immer die eigene Meinung durchzusetzen, sondern den anderen bedingungslos in seiner Eigenverantwortung zu verstehen und zu begleiten. Teile dieses Video mit jemandem, der diesen Impuls gerade gut gebrauchen kann.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Home (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-25T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-25T17:33:47.296Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7712163355745701153",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-25-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b04c2fb18db0405bdae06f1_video.mp4"
         }
       ]
     },
