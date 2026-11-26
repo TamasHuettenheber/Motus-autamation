@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-26T11:51:08.828259+00:00",
+  "checked_at_utc": "2026-11-26T17:44:19.579411+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -88,15 +88,15 @@
     {
       "id": "6b06258bf0b405190ac53563",
       "text": "Dein bester Freund erzählt stolz von seiner Beförderung und in dir zieht sich plötzlich alles zusammen. Atme tief durch und erlaube dir diesen Stich, ohne dich dafür zu verurteilen. Gratuliere ihm von Herzen und frage nach seinem Weg. Folge für tägliche Impulse.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Remember (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-26T17:30:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-26T17:33:26.034Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7712534318048005415",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-26-1830.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b06258bf0b405190ac53563_video.mp4"
         }
       ]
     },
