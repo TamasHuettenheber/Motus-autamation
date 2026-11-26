@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-26T17:44:19.579411+00:00",
+  "checked_at_utc": "2026-11-26T21:55:24.139505+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -73,15 +73,15 @@
     {
       "id": "6b06258ba2fd17422e6efc00",
       "text": "Du hast heute eine Grenze gesetzt und zweifelst nun, ob du zu streng warst. Prüfe, ob du respektvoll geblieben bist. Unbehagen ist kein Beweis für einen Fehler. Wer die eigenen Möglichkeiten ehrlich ausspricht, verspricht weniger, hält dafür aber mehr ein. Du darfst freundlich bleiben und trotzdem deutlich sagen, was du leisten kannst und was nicht. Klarheit ist freundlicher als Ausweichen. Für weitere alltagstaugliche Gedanken über innere Stärke: Folge MOTUS.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Lost Islands (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-26T21:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-26T21:04:10.808Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7712588543939448103",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-26-2200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b06258ba2fd17422e6efc00_video.mp4"
         }
       ]
     },
