@@ -5,7 +5,6 @@ on:
     branches:
       - feature/jori-flimm-neustart-folge001
     paths:
-      - .github/workflows/jori-episode-040-release.yml
       - kids/jori-flimm/relaunch-v2/episode_040_release_record.json
 
 permissions:

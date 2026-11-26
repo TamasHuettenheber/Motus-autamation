@@ -61,7 +61,7 @@ jobs:
           e=json.loads((base/'episode_040_story_draft.json').read_text(encoding='utf-8'))
           prev=json.loads((base/'episode_039_story_draft.json').read_text(encoding='utf-8'))
           assert e['episode_number']==40 and e['title']=='Das Klopfen im Kristallei'
-          assert prev['episode_number']==39 and 'Kristallei' in prev['cliff'] and 'kleine Pfote' in prev['cliff']
+          assert prev['episode_number']==39 and 'Kristallei' in prev['cliff'] and 'winzige Pfote' in prev['cliff']
           assert e['previous_cliffhanger']==prev['cliff']
           assert e['hook'].startswith('Der Riss im Kristallei wurde breiter.')
           assert e['riddle']['type']=='sound_pattern_match_soft_loud_soft' and e['riddle']['pause_seconds']==7

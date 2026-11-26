@@ -52,7 +52,7 @@ jobs:
           assert e['previous_cliffhanger']==prev['cliff']
           assert e['episode_number']==40 and e['title']=='Das Klopfen im Kristallei'
           assert e['hook'].startswith('Der Riss im Kristallei wurde breiter.')
-          assert 'Kristallei' in prev['cliff'] and 'kleine Pfote' in prev['cliff']
+          assert 'Kristallei' in prev['cliff'] and 'winzige Pfote' in prev['cliff']
           assert not re.search(r'\bJori\b[^.!?]{0,75}\b(?:er|ihn|ihm)\b',e['narration'],re.I)
           paths=[Path(v['path']) for v in e['visuals']];assert len(paths)==7
           hashes=[hashlib.sha256(p.read_bytes()).hexdigest() for p in paths];assert len(set(hashes))==7
