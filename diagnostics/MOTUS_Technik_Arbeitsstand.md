@@ -832,3 +832,21 @@ Vorheriger Snapshot 07:11Z lag vor 12:00-MEZ-Fälligkeit. GitHub-Liste vor Eingr
 | 6b0773349f6dda31cca80bd6 | 2026-11-27T21:00:00.000Z | scheduled | null |
 
 Acht eindeutige IDs und dueAt; 12:00 sentAt 11:03:49.670Z. Exakte Issuesuche je ein Treffer 26./27.11., #118/#119 geschlossen, QC 7148084910/7179386289, alle acht positiven MP4-Größen und SHAs unverändert. Technischer AgentMail-Abgleich nach letzter Tagesprüfung drei fachfremde Frantic-Meldungen, keine neue technische Antwort; kein Versand, keine wiederholte Behördenauswertung. Autorisierte Workstation Backoffice-PC PID 16044 hostname bestätigt; Rezeption unbenutzt. Pipedream-Zugang ohne neue Voraussetzung nicht erneut versucht. Kein belegter neuer Codefehler, kein Post geändert und kein Renderer gestartet. Vorbekannte externe Triggerursache offen unter MOTUS-T-20261125-2326-NIGHT27. Nächster Prüfpunkt 18:30-MEZ-Fälligkeit; D+2 erst nach 22:37 MEZ.
+
+
+## MOTUS-T-20261126-1844-LIVE1830
+**Besitzer:** MOTUS – Technik & Reparatur. **Status:** LIVE_NACHWEIS_18:30_BESTÄTIGT. **checked_at_utc:** 2026-11-26T17:44:19.579411+00:00.
+Voriger Snapshot 11:51Z war vor Fälligkeit; regulärer Monitor 45844522636 hatte 14:59Z korrekt BUFFER_GATE_SKIP no_new_due_slot gemeldet. Queued/in_progress vor Eingriff je 0; Workflow-Blob main und Run-Ref dcb9d6c6e33ff1b0a8015b53ea659e2aa1c3b73c. Nur vorhandenen read-only [Monitor 45844522636](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/45844522636) erneut ausgeführt. Job 140083431598 completed/success, BUFFER_GATE_TESTS_OK, BUFFER_GATE_QUERY scheduled_post_now_due, BUFFER_STATUS_ONE_REQUEST, BUFFER_STATUS_COMMIT_OK. Originalsnapshot 008011ff5a73a0ecbbccf377e4d0f6ad8ad96b52, Kanal motus614. Acht eindeutige IDs und korrekte dueAt, drei fällige Slots sent mit externem TikTok-Link, fünf zukünftige scheduled; 18:30 sentAt 17:33:26.034Z. Keine Duplikate.
+
+| postId | dueAt UTC | status | externalLink |
+|---|---|---|---|
+| 6b0625b1a8becebb77462533 | 2026-11-26T06:00:00.000Z | sent | https://tiktok.com/@motus614/video/7712356220908129575 |
+| 6b06254d615ec212af71050d | 2026-11-26T11:00:00.000Z | sent | https://tiktok.com/@motus614/video/7712434088891714849 |
+| 6b06258bf0b405190ac53563 | 2026-11-26T17:30:00.000Z | sent | https://tiktok.com/@motus614/video/7712534318048005415 |
+| 6b06258ba2fd17422e6efc00 | 2026-11-26T21:00:00.000Z | scheduled | null |
+| 6b077352d4eda4b659be6384 | 2026-11-27T06:00:00.000Z | scheduled | null |
+| 6b07734da791bea1b2381f56 | 2026-11-27T11:00:00.000Z | scheduled | null |
+| 6b0773759f6dda31cca821b0 | 2026-11-27T17:30:00.000Z | scheduled | null |
+| 6b0773349f6dda31cca80bd6 | 2026-11-27T21:00:00.000Z | scheduled | null |
+
+#118/#119 jeweils einmal in der jüngsten Issues-Liste, geschlossen; QC-Abschlusskommentare 7148084910/7179386289 und acht MP4-Blobs mit positiven Größen bestätigt. AgentMail-Delta ab 11:51Z fünf fachfremde Frantic-Meldungen; Behörden-Tagesprüfung bereits erledigt, kein Versand. Autorisierte Workstation Backoffice-PC per hostname PID 9784 bestätigt, Rezeption unbenutzt. Keine neue Pipedream-Zugangsvoraussetzung oder belegte neue Codeursache; kein erneuter Fehlversuch, keine zusätzliche Produktion, Post- oder Stimmenänderung. Nächster Nachweis nach 22:00 MEZ; D+2 erst nach 22:37 MEZ. Vorbekannte externe Triggerverzögerung bleibt unter MOTUS-T-20261125-2326-NIGHT27 offen.
