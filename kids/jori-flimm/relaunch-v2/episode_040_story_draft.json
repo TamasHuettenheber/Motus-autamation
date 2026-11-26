@@ -1,0 +1,87 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 40,
+  "series_version": "relaunch-v2",
+  "title": "Das Klopfen im Kristallei",
+  "hook": "Der Riss im Kristallei wurde breiter. Plötzlich klopfte die kleine Pfote dreimal gegen die Schale: leise, laut, leise.",
+  "story": "Jori hielt den Atem an. Flimm wackelte mit seiner kleinen runden Nase, und Luma hielt ihre Glocke ganz still. Unter der Blüte öffneten sich drei gläserne Klangreihen. In Reihe A warteten ein kleiner Stern, ein großer Mond und ein kleiner Stern. Reihe B zeigte einen großen Mond, einen kleinen Stern und einen großen Mond. Reihe C zeigte einen kleinen Stern, einen kleinen Stern und einen großen Mond. Jeder kleine Stern klang leise, jeder große Mond laut. Aus dem Ei kam wieder: leise, laut, leise.",
+  "question": "Welche Klangreihe antwortet dem Ei genau richtig: A mit leise, laut, leise, B mit laut, leise, laut oder C mit leise, leise, laut?",
+  "answer": "Klangreihe A!",
+  "after": "Sie wiederholte genau das Klopfen aus dem Ei. Jori tippte den ersten kleinen Stern sanft an, Flimm drückte den großen Mond, und Luma berührte den letzten kleinen Stern mit dem Griff ihrer Glocke. Das Kristallei öffnete sich wie eine Blüte. Ein winziges silbernes Mondfüchslein mit langen Ohren, Ringelschwanz und leuchtender Sichel auf der Brust schlüpfte heraus. Es stupste Flimm an, und sein Stern leuchtete vor Freude heller.",
+  "cliff": "Plötzlich stellte das Mondfüchslein ein Ohr auf und lief zu einem runden, verschlossenen Mondbrunnen. Von tief unten kam dasselbe Klopfen zurück – leise, laut, leise – und dann noch ein vierter, kräftiger Schlag. Wer antwortete unter dem Mondgarten?",
+  "riddle": {
+    "type": "sound_pattern_match_soft_loud_soft",
+    "question": "Welche Klangreihe antwortet dem Ei genau richtig: A mit leise, laut, leise, B mit laut, leise, laut oder C mit leise, leise, laut?",
+    "answer": "Klangreihe A",
+    "evidence_in_story": "Das Ei klopft leise-laut-leise. Kleine Sterne klingen leise, große Monde laut. Nur Reihe A zeigt kleiner Stern – großer Mond – kleiner Stern.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "match_heard_rhythm_to_visible_symbol_sequence",
+  "clues": [
+    "Ei: leise · laut · leise",
+    "A: leise · laut · leise",
+    "B: laut · leise · laut",
+    "C: leise · leise · laut"
+  ],
+  "correct": 0,
+  "puzzle_visual": "Ein TikTok-sicheres Rätselschild zeigt das gehörte Ei-Muster und drei vollständig sichtbare Klangfolgen. Alle Texte und Hinweise liegen zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt ohne Zeitsprung am Kristallei in der geöffneten Mondblume aus Folge 039 an. Jori, Flimm und Luma spiegeln das Klopfmuster, helfen dem Mondfüchslein beim Schlüpfen und hören danach eine Antwort aus dem verschlossenen Mondbrunnen.",
+  "narration": "Der Riss im Kristallei wurde breiter. Plötzlich klopfte die kleine Pfote dreimal gegen die Schale: leise, laut, leise. [[SEGMENT]] Jori hielt den Atem an. Flimm wackelte mit seiner kleinen runden Nase, und Luma hielt ihre Glocke ganz still. Unter der Blüte öffneten sich drei gläserne Klangreihen. In Reihe A warteten ein kleiner Stern, ein großer Mond und ein kleiner Stern. Reihe B zeigte einen großen Mond, einen kleinen Stern und einen großen Mond. Reihe C zeigte einen kleinen Stern, einen kleinen Stern und einen großen Mond. Jeder kleine Stern klang leise, jeder große Mond laut. Aus dem Ei kam wieder: leise, laut, leise. [[SEGMENT]] Welche Klangreihe antwortet dem Ei genau richtig: A mit leise, laut, leise, B mit laut, leise, laut oder C mit leise, leise, laut? [[PAUSE:7]] Klangreihe A! Sie wiederholte genau das Klopfen aus dem Ei. Jori tippte den ersten kleinen Stern sanft an, Flimm drückte den großen Mond, und Luma berührte den letzten kleinen Stern mit dem Griff ihrer Glocke. Das Kristallei öffnete sich wie eine Blüte. Ein winziges silbernes Mondfüchslein mit langen Ohren, Ringelschwanz und leuchtender Sichel auf der Brust schlüpfte heraus. Es stupste Flimm an, und sein Stern leuchtete vor Freude heller. Plötzlich stellte das Mondfüchslein ein Ohr auf und lief zu einem runden, verschlossenen Mondbrunnen. Von tief unten kam dasselbe Klopfen zurück – leise, laut, leise – und dann noch ein vierter, kräftiger Schlag. Wer antwortete unter dem Mondgarten?",
+  "narration_tts": "Der Riss im Kristallei wurde breiter. Plötzlich klopfte die kleine Pfote dreimal gegen die Schale: leise, laut, leise. [[SEGMENT]] Jori hielt den Atem an. Flimm wackelte mit seiner kleinen runden Nase, und Luma hielt ihre Glocke ganz still. Unter der Blüte öffneten sich drei gläserne Klangreihen. In Reihe A warteten ein kleiner Stern, ein großer Mond und ein kleiner Stern. Reihe B zeigte einen großen Mond, einen kleinen Stern und einen großen Mond. Reihe C zeigte einen kleinen Stern, einen kleinen Stern und einen großen Mond. Jeder kleine Stern klang leise, jeder große Mond laut. Aus dem Ei kam wieder: leise, laut, leise. [[SEGMENT]] Welche Klangreihe antwortet dem Ei genau richtig: A mit leise, laut, leise, B mit laut, leise, laut oder C mit leise, leise, laut? [[PAUSE:7]] Klangreihe A! Sie wiederholte genau das Klopfen aus dem Ei. Jori tippte den ersten kleinen Stern sanft an, Flimm drückte den großen Mond, und Luma berührte den letzten kleinen Stern mit dem Griff ihrer Glocke. Das Kristallei öffnete sich wie eine Blüte. Ein winziges silbernes Mondfüchslein mit langen Ohren, Ringelschwanz und leuchtender Sichel auf der Brust schlüpfte heraus. Es stupste Flimm an, und sein Stern leuchtete vor Freude heller. Plötzlich stellte das Mondfüchslein ein Ohr auf und lief zu einem runden, verschlossenen Mondbrunnen. Von tief unten kam dasselbe Klopfen zurück – leise, laut, leise – und dann noch ein vierter, kräftiger Schlag. Wer antwortete unter dem Mondgarten?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss: Der Riss im Kristallei wird breiter; eine winzige Pfote klopft leise-laut-leise.",
+    "Neue Innenansicht der Mondblume: Das Ei sendet drei Klangwellen und die gläsernen Klangreihen erscheinen.",
+    "Jori, Flimm und Luma untersuchen die drei Klangreihen aufmerksam und halten Lumas Glocke still.",
+    "Ruhiges TikTok-sicheres Rätsel-Tableau; Ei-Muster und alle drei Optionen vollständig im Safe-Bereich.",
+    "Lösung: Das Team spielt Klangreihe A gemeinsam in der Folge leise-laut-leise.",
+    "Das Kristallei öffnet sich; ein freundliches silbernes Mondfüchslein schlüpft.",
+    "Cliffhanger: Das Mondfüchslein führt zum verschlossenen Mondbrunnen; von unten antwortet ein vierter Schlag."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-040-v1/scene-01.jpg",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-040-v1/scene-02.jpg",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-040-v1/scene-03.jpg",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-040-v1/scene-04.jpg",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-040-v1/scene-05.jpg",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-040-v1/scene-06.jpg",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-040-v1/scene-07.jpg",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-26T08:22:00+01:00",
+  "status": "STORY_AND_SEVEN_NEW_IMAGES_READY_TTS_PENDING",
+  "previous_cliffhanger": "Da entfaltete die Blume langsam ihre schimmernden Blätter. In ihrer Mitte lag ein einziges Kristallei. Von innen drückte eine winzige Pfote gegen die Schale, und ein leuchtender Riss erschien. Wer wollte aus dem Kristallei schlüpfen?"
+}
