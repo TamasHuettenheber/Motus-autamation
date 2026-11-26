@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-26T07:11:43.608886+00:00",
+  "checked_at_utc": "2026-11-26T11:51:08.828259+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6b06254d615ec212af71050d",
       "text": "Zwei Aufgaben wirken gleich dringend, aber nur eine hat echte Folgen für andere. Prüfe Wirkung und Zusagen, statt nur auf die lauteste Forderung zu reagieren. Dringlichkeit und Bedeutung sind nicht dasselbe. Prüfe, welche Entscheidung echte Folgen für andere hat, statt allein dem lautesten Signal zu folgen. So schützt du deine Zeit und sorgst zugleich dafür, dass wichtige Verpflichtungen nicht übersehen werden. Speichere diesen Gedanken als Erinnerung für deinen Alltag.\n\n#motus #produktivitaet #klarheit #fokus #selbstentwicklung\n\nMusik: Tanner Helland – Familiar Roads (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-26T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-26T11:03:49.670Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7712434088891714849",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-26-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b06254d615ec212af71050d_video.mp4"
         }
       ]
     },
