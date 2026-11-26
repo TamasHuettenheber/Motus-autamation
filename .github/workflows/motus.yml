@@ -93,7 +93,7 @@ jobs:
           ffmpeg -y -i work/audio_source -vn -ar 48000 -ac 2 -b:a 192k work/audio.mp3
           AUDIO_DURATION="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 work/audio.mp3)"
           VIDEO_DURATION="$(python3 - <<PY
-          a=float('$AUDIO_DURATION'); print(f'{a+0.35:.3f}')
+          a=float('$AUDIO_DURATION'); print(f'{a+0.8:.3f}')
           PY
           )"
           echo "AUDIO_DURATION=$AUDIO_DURATION" >> "$GITHUB_ENV"
@@ -155,7 +155,7 @@ jobs:
           ass='''[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 2\nScaledBorderAndShadow: yes\n\n[V4+ Styles]\nFormat: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding\nStyle: Motus,DejaVu Sans,62,&H00FFFFFF,&H000000FF,&H00151515,&HFF000000,-1,0,0,0,100,100,0,0,1,2,0,8,115,115,420,1\n\n[Events]\nFormat: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text\n'''
           t=0.0
           for i,(c,w) in enumerate(zip(chunks,weights)):
-              end=dur if i==len(chunks)-1 else t+dur*w/total
+              end=dur+0.45 if i==len(chunks)-1 else t+dur*w/total
               wrapped='\\N'.join(textwrap.wrap(c,width=24,break_long_words=False,break_on_hyphens=False))
               ass+=f'Dialogue: 0,{ts(t)},{ts(end)},Motus,,0,0,0,,{esc(wrapped)}\n'; t=end
           open('work/captions.ass','w',encoding='utf-8').write(ass)
@@ -380,7 +380,7 @@ jobs:
       - name: Render with B-roll
         if: env.REUSE_EXISTING != 'true' && env.BROLL_READY == 'true'
         run: |
-          timeout 180 ffmpeg -y -stream_loop -1 -i work/broll.mp4 -i work/audio.mp3 -stream_loop -1 -i work/music.mp3 -t "$VIDEO_DURATION" -filter_complex "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,eq=brightness=-0.08:saturation=0.90,drawbox=x=0:y=0:w=iw:h=ih:color=black@0.12:t=fill,subtitles=work/captions.ass[v];[1:a]volume=1.0[voice];[2:a]volume=${MOTUS_MUSIC_GAIN},afade=t=in:st=0:d=0.6[music];[voice][music]amix=inputs=2:duration=first:dropout_transition=0[a]" -map "[v]" -map "[a]" -c:v libx264 -preset veryfast -crf 22 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -movflags +faststart -shortest "work/$SAFE_NAME.mp4"
+          timeout 180 ffmpeg -y -stream_loop -1 -i work/broll.mp4 -i work/audio.mp3 -stream_loop -1 -i work/music.mp3 -t "$VIDEO_DURATION" -filter_complex "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,eq=brightness=-0.08:saturation=0.90,drawbox=x=0:y=0:w=iw:h=ih:color=black@0.12:t=fill,subtitles=work/captions.ass[v];[1:a]volume=1.0,apad=pad_dur=0.8[voice];[2:a]volume=${MOTUS_MUSIC_GAIN},afade=t=in:st=0:d=0.6[music];[voice][music]amix=inputs=2:duration=first:dropout_transition=0[a]" -map "[v]" -map "[a]" -c:v libx264 -preset veryfast -crf 22 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -movflags +faststart "work/$SAFE_NAME.mp4"
 
       - name: Reject missing moving B-roll
         if: env.REUSE_EXISTING != 'true' && env.BROLL_READY != 'true'
@@ -417,6 +417,20 @@ jobs:
           if v < a-0.25: raise SystemExit(f'QC failed: video {v:.2f}s, audio {a:.2f}s')
           print(f'QC passed: audio={a:.2f}s video={v:.2f}s')
           PY
+          if [ "${REUSE_EXISTING:-}" != "true" ]; then
+            python3 - <<'PY'
+          import json, os, subprocess
+          source=float(os.environ['AUDIO_DURATION'])
+          video='work/'+os.environ['SAFE_NAME']+'.mp4'
+          streams=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-of','json',video]))['streams']
+          for kind in ('audio','video'):
+              stream=next(s for s in streams if s['codec_type']==kind)
+              duration=float(stream['duration'])
+              if duration < source+0.65:
+                  raise SystemExit(f'AUDIO_TAIL_QC_BLOCK: {kind}={duration:.3f}s source={source:.3f}s')
+              print(f'AUDIO_TAIL_QC_PASS: {kind}={duration:.3f}s source={source:.3f}s tail={duration-source:.3f}s')
+          PY
+          fi
 
       - name: Upload workflow artifact
         uses: actions/upload-artifact@v4
