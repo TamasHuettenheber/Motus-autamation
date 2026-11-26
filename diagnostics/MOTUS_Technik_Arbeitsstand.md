@@ -814,3 +814,21 @@ sentAt des ersten Slots 2026-11-26T06:02:48.086Z. API-Restkontingent 15m=149, 24
 
 ## MOTUS-T-20261126-1201-POSTFACH
 **Besitzer:** MOTUS – Technik & Reparatur. **Prüfzeit:** 26.11.2026, 12:01 MEZ (autorisierter Backoffice-PC, PID 15844). Behörden-Tagesprüfung nach 11 Uhr: AgentMail-Delta ab 25.11. 10:00Z vollständig (24 Nachrichten, ausschließlich fachfremde Frantic-/Jori-Benachrichtigungen), keine neue inhaltliche Behörden- oder technische MOTUS-Antwort; kein Versand. #118/#119 geschlossen, exakte Titelsuche je ein Treffer, QC 7148084910/7179386289 und acht positive MP4-Blobs unverändert. Buffer-Snapshot df77ad03c5adce1367ebbcdf1042099fbf1b841b, checked_at=2026-11-26T07:11:43.608886Z, bestätigt 07:00 sent mit TikTok-Link und sieben zum Snapshot zukünftige Slots (IDs/dueAt siehe voriger Abschnitt). 12:00-Slot 6b06254d615ec212af71050d / 11:00Z / scheduled / externalLink=null stammt aus Vorfälligkeitssnapshot; um 12:01 liegt er noch innerhalb der bestehenden 2-Minuten-Monitor-Gate-Frist, kein Ausfallnachweis. Queued/in_progress jeweils 0. Nächste Prüfung nach Gate-Frist, kein vorzeitiger Dispatch, kein D+2, keine Rezeption. Vorbekannte Trigger-/Pipedream-Vorgänge unverändert; keine Änderung an Produktion oder redaktioneller Logik.
+
+
+## MOTUS-T-20261126-1251-LIVE1200
+**Besitzer:** MOTUS – Technik & Reparatur. **Status:** LIVE_NACHWEIS_12:00_BESTÄTIGT / keine Produktionsrecovery erforderlich. **checked_at_utc:** 2026-11-26T11:51:08.828259+00:00.
+Vorheriger Snapshot 07:11Z lag vor 12:00-MEZ-Fälligkeit. GitHub-Liste vor Eingriff queued/in_progress je 0, letzter regulärer Monitor 45758267668, Job 139751489897. Main und Run-Ref des Monitor-Workflows unverändert (Blob dcb9d6c6e33ff1b0a8015b53ea659e2aa1c3b73c). Nur bestehenden read-only [Monitor](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/45758267668) einmal erneut ausgeführt; neuer Job 139889734922 completed/success, Original-Logs BUFFER_GATE_TESTS_OK, BUFFER_GATE_QUERY scheduled_post_now_due, BUFFER_STATUS_ONE_REQUEST, BUFFER_STATUS_COMMIT_OK. Snapshot 83c2ed16ad0533b5579be03a83325db9784dc74e; Kanal motus614. API-Restkontingent 15m=149, 24h=579, 30d=1876.
+
+| postId | dueAt UTC | status | externalLink |
+|---|---|---|---|
+| 6b0625b1a8becebb77462533 | 2026-11-26T06:00:00.000Z | sent | https://tiktok.com/@motus614/video/7712356220908129575 |
+| 6b06254d615ec212af71050d | 2026-11-26T11:00:00.000Z | sent | https://tiktok.com/@motus614/video/7712434088891714849 |
+| 6b06258bf0b405190ac53563 | 2026-11-26T17:30:00.000Z | scheduled | null |
+| 6b06258ba2fd17422e6efc00 | 2026-11-26T21:00:00.000Z | scheduled | null |
+| 6b077352d4eda4b659be6384 | 2026-11-27T06:00:00.000Z | scheduled | null |
+| 6b07734da791bea1b2381f56 | 2026-11-27T11:00:00.000Z | scheduled | null |
+| 6b0773759f6dda31cca821b0 | 2026-11-27T17:30:00.000Z | scheduled | null |
+| 6b0773349f6dda31cca80bd6 | 2026-11-27T21:00:00.000Z | scheduled | null |
+
+Acht eindeutige IDs und dueAt; 12:00 sentAt 11:03:49.670Z. Exakte Issuesuche je ein Treffer 26./27.11., #118/#119 geschlossen, QC 7148084910/7179386289, alle acht positiven MP4-Größen und SHAs unverändert. Technischer AgentMail-Abgleich nach letzter Tagesprüfung drei fachfremde Frantic-Meldungen, keine neue technische Antwort; kein Versand, keine wiederholte Behördenauswertung. Autorisierte Workstation Backoffice-PC PID 16044 hostname bestätigt; Rezeption unbenutzt. Pipedream-Zugang ohne neue Voraussetzung nicht erneut versucht. Kein belegter neuer Codefehler, kein Post geändert und kein Renderer gestartet. Vorbekannte externe Triggerursache offen unter MOTUS-T-20261125-2326-NIGHT27. Nächster Prüfpunkt 18:30-MEZ-Fälligkeit; D+2 erst nach 22:37 MEZ.
