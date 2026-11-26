@@ -206,6 +206,11 @@ jobs:
           # A personal disagreement with a question or advice is also an interaction,
           # even if the speaker never says the literal word Gespraech.
           conversation_scene=conversation_scene or (social_scene and re.search(r'(?<![a-z])(?:frag\\w*|ratschlaeg\\w*|rat)(?![a-z])',text) is not None)
+          # For evening detachment from work, illustrate the recovery action rather
+          # than the workplace that the speaker is trying to leave behind.
+          off_work_scene=(output.endswith('-2200')
+                          and re.search(r'(?<![a-z])(?:arbeit|arbeitsmodus|beruf\w*)(?![a-z])',text) is not None
+                          and re.search(r'(?<![a-z])(?:abendessen|feierabend|abschalten|wiedereinstiegspunkt)(?![a-z])',text) is not None)
           for clip in library.get('clips',[]):
               # This vertical dialogue clip fits spoken evening interactions only.
               if clip['id']=='friends-cafe-talk-5359021' and (not output.endswith('-1830') or not conversation_scene):
@@ -216,6 +221,8 @@ jobs:
                   continue
               # 22:00 text may say 'morgen' to mean tomorrow; exclude morning footage.
               if output.endswith('-2200') and any(fold(str(tag)) == 'morgen' for tag in clip.get('tags', [])):
+                  continue
+              if off_work_scene and any(fold(str(tag)) in {'arbeit','office','laptop','telefon','handy'} for tag in clip.get('tags',[])):
                   continue
               # Do not treat generic tags such as "alltag" as evidence of a scene match.
               # Require an actual word or inflection. Substring matching turned
@@ -243,6 +250,9 @@ jobs:
               if social_scene and not conversation_scene and output.endswith('-1830'):
                   if clip['id']=='night-city-13658220':score+=5
                   elif clip['id']=='rain-city-13961930':score+=2
+              if off_work_scene:
+                  if clip['id']=='journal-7260657':score+=6
+                  elif clip['id'] in {'rain-window-32661246','sunset-ocean-7975481','night-walk-4121893'}:score+=4
               cooldown=1 if clip['id'] in recent_ids else 0
               tie=int(hashlib.sha256((output+'|'+clip['id']).encode()).hexdigest()[:12],16)
               ranked.append((cooldown,score,tie,clip))
