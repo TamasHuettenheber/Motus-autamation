@@ -94,6 +94,6 @@ jobs:
 # E040 independent final QC for the 2026-11-26 production run.
 
 
-# Trigger E040 independent QC after validated MP4 commit.
+# Trigger E040 independent QC after validated MP4 from preview run 45776356759.
 
 
