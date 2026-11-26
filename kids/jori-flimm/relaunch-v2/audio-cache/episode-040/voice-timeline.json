@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Der Riss im Kristallei wurde breiter. Plötzlich klopfte die kleine Pfote dreimal gegen die Schale: leise, laut, leise.",
+      "start": 0.0,
+      "end": 12.98,
+      "duration": 12.98
+    },
+    {
+      "kind": "speech",
+      "text": "Jori hielt den Atem an. Flimm wackelte mit seiner kleinen runden Nase, und Luma hielt ihre Glocke ganz still. Unter der Blüte öffneten sich drei gläserne Klangreihen. In Reihe A warteten ein kleiner Stern, ein großer Mond und ein kleiner Stern. Reihe B zeigte einen großen Mond, einen kleinen Stern und einen großen Mond. Reihe C zeigte einen kleinen Stern, einen kleinen Stern und einen großen Mond. Jeder kleine Stern klang leise, jeder große Mond laut. Aus dem Ei kam wieder: leise, laut, leise.",
+      "start": 12.98,
+      "end": 57.38,
+      "duration": 44.4
+    },
+    {
+      "kind": "speech",
+      "text": "Welche Klangreihe antwortet dem Ei genau richtig: A mit leise, laut, leise, B mit laut, leise, laut oder C mit leise, leise, laut?",
+      "start": 57.38,
+      "end": 75.15,
+      "duration": 17.77
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 75.15,
+      "end": 82.15,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Klangreihe A! Sie wiederholte genau das Klopfen aus dem Ei. Jori tippte den ersten kleinen Stern sanft an, Flimm drückte den großen Mond, und Luma berührte den letzten kleinen Stern mit dem Griff ihrer Glocke. Das Kristallei öffnete sich wie eine Blüte. Ein winziges silbernes Mondfüchslein mit langen Ohren, Ringelschwanz und leuchtender Sichel auf der Brust schlüpfte heraus. Es stupste Flimm an, und sein Stern leuchtete vor Freude heller. Plötzlich stellte das Mondfüchslein ein Ohr auf und lief zu einem runden, verschlossenen Mondbrunnen. Von tief unten kam dasselbe Klopfen zurück – leise, laut, leise – und dann noch ein vierter, kräftiger Schlag. Wer antwortete unter dem Mondgarten?",
+      "start": 82.15,
+      "end": 136.81,
+      "duration": 54.66
+    }
+  ],
+  "duration": 136.81,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
