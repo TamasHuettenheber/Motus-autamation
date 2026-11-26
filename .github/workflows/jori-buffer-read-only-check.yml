@@ -182,3 +182,5 @@ jobs:
 # E039 post-schedule verification 2026-11-25 run after Buffer post 6b0691569cddd8483abce88c.
 
 # E039 final duplicate check after idempotent release run 45570742100.
+
+# E040 live Buffer precheck before production on 2026-11-26.
