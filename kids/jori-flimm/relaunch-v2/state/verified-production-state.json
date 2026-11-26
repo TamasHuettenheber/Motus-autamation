@@ -1,27 +1,27 @@
 {
   "series": "Jori & Flimm",
   "branch": "feature/jori-flimm-neustart-folge001",
-  "updated_at": "2026-11-25T08:46:00+01:00",
-  "latest_fully_qc_episode": 39,
-  "latest_scheduled_episode": 39,
-  "next_episode_number": 40,
-  "latest_title": "Die Brücke aus violettem Licht",
-  "next_continuity_anchor": "Da entfaltete die Blume langsam ihre schimmernden Blätter. In ihrer Mitte lag ein einziges Kristallei. Von innen drückte eine winzige Pfote gegen die Schale, und ein leuchtender Riss erschien. Wer wollte aus dem Kristallei schlüpfen?",
-  "video_path": "published/jori-flimm-2026-11-29-e039-v1.mp4",
+  "updated_at": "2026-11-26T08:46:00+01:00",
+  "latest_fully_qc_episode": 40,
+  "latest_scheduled_episode": 40,
+  "next_episode_number": 41,
+  "latest_title": "Das Klopfen im Kristallei",
+  "next_continuity_anchor": "Plötzlich stellte das Mondfüchslein ein Ohr auf und lief zu einem runden, verschlossenen Mondbrunnen. Von tief unten kam dasselbe Klopfen zurück – leise, laut, leise – und dann noch ein vierter, kräftiger Schlag. Wer antwortete unter dem Mondgarten?",
+  "video_path": "published/jori-flimm-2026-11-30-e040-v1.mp4",
   "buffer": {
-    "post_id": "6b0691569cddd8483abce88c",
+    "post_id": "6b07e37cd96a331f4a6e8508",
     "status": "scheduled",
     "channel": "@jori.flimm",
     "channel_id": "6ad948ea778b240e2f839607",
-    "due_at": "2026-11-29T13:00:00.000Z",
-    "local_time": "2026-11-29T14:00:00+01:00"
+    "due_at": "2026-11-30T13:00:00.000Z",
+    "local_time": "2026-11-30T14:00:00+01:00"
   },
   "evidence": {
-    "queue_precheck_run_id": 45566177293,
-    "preview_run_id": 45568409354,
-    "final_qc_run_id": 45569474757,
-    "release_run_id": 45570070215,
-    "postcheck_run_id": 45570432457
+    "queue_precheck_run_id": 45773707917,
+    "preview_run_id": 45776356759,
+    "final_qc_run_id": 45776985049,
+    "release_run_id": 45777507204,
+    "postcheck_run_id": 45777730298
   },
   "warning": "Do not infer the next episode from reset series-state.json or episode-ledger.json; use this verified state plus GitHub MP4s, Action logs and live Buffer evidence."
 }
