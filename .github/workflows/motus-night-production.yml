@@ -124,12 +124,29 @@ jobs:
           def hook_roots(value):
               return {w[:7] for w in re.findall(r"[a-zäöüß]{4,}",value.lower()) if w not in selection_stop}
           prior_roots=[hook_roots(text) for text in past_editorial_texts]
+          # Narrow scenario signatures: synonyms count only when the concrete conflict
+          # and action occur together; broad psychological motifs alone do not count.
+          semantic_patterns = {
+              "freund_erfolg_neid": (r"\bfreund\w*\b", r"\b(?:erfolg\w*|beförder\w*)\b", r"\b(?:neid\w*|stich|gratulier\w*)\b"),
+              "lob_annehmen": (r"\b(?:lob\w*|kompliment\w*)\b", r"\b(?:klein\w*|abwink\w*|danke)\b"),
+              "gemeinsamen_fehler_offenlegen": (r"\b(?:fehler\w*|versehen|patzer)\b", r"\b(?:verschweig\w*|verheimlich\w*)\b", r"\b(?:gemeinsam\w*|team\w*|arbeitsergebnis\w*)\b"),
+              "unfertigen_entwurf_zeigen": (r"\bentwurf\w*\b", r"\b(?:unfertig\w*|roh\w*|perfekt\w*)\b", r"\b(?:zeig\w*|teil\w*)\b"),
+          }
+          def scenario_keys(value):
+              value=value.lower()
+              return {key for key,patterns in semantic_patterns.items()
+                      if all(re.search(pattern,value) for pattern in patterns)}
+          prior_scenarios=[scenario_keys(text) for text in past_editorial_texts]
+          recent_scenarios=set().union(*(keys for keys,age in zip(prior_scenarios,past_editorial_ages) if age<=3))
           def recent_hook_matches(card):
               key=hook_roots(str(card.get("hook","")))
               if not key:return (0,0,15)
-              matches=[(len(key & previous),age) for previous,age in zip(prior_roots,past_editorial_ages)]
-              repeats=sum(n>=2 and n/len(key)>=0.46 for n,age in matches)
-              strong_ages=[age for n,age in matches if n>=max(2,min(3,len(key))) and n/len(key)>=0.60]
+              scenario=scenario_keys(str(card.get("hook",""))+" "+str(card.get("action","")))
+              matches=[(len(key & previous),age,bool(scenario & past))
+                       for previous,age,past in zip(prior_roots,past_editorial_ages,prior_scenarios)]
+              repeats=sum(semantic or (n>=2 and n/len(key)>=0.46) for n,age,semantic in matches)
+              strong_ages=[age for n,age,semantic in matches
+                           if semantic or (n>=max(2,min(3,len(key))) and n/len(key)>=0.60)]
               # Prefer distance from a concrete recent scenario over a rotation tie.
               # The same scenario yesterday must not win against a two-week-old one.
               return (sum(age<=3 for age in strong_ages),repeats,min(strong_ages,default=15))
@@ -230,11 +247,13 @@ jobs:
                   "slots, Array von vier Objekten mit time und text.")
           # Explicit positive editorial direction, not merely a growing list of forbidden topics.
           # Keep the AI output fresh but anchored in 56 distinct MOTUS psychology/motivation concepts.
+          cta_kinds=("Kommentarfrage","Speichern","Teilen","Folgen")
           briefs=" ".join(
               f"{t}: THEMA '{editorial_today[t]['topic']}'. "
               f"Aufhaenger: {editorial_today[t]['hook']} "
-              f"Konkrete psychologische Handlung: {editorial_today[t]['action']}"
-              for t in times_editorial
+              f"Konkrete psychologische Handlung: {editorial_today[t]['action']} "
+              f"Einzige Schluss-CTA: {cta_kinds[(editorial_index+index)%4]}."
+              for index,t in enumerate(times_editorial)
           )
           prompt += (" VERBINDLICHER REDAKTIONSPLAN: "+briefs+
                      " Jeder Slot MUSS genau seinen zugeordneten psychologischen Kernkonflikt "
@@ -438,6 +457,27 @@ jobs:
               return bool(last.endswith("?")
                           and re.match(r"(?i)^(?:wie|was|welch\w*|wem|wen|wann|wo|würdest|hast|kennst|findest|wer)\b",last)
                           and re.search(r"(?i)\b(?:du|dir|dich|dein\w*|euch|ihr|eur\w*)\b",last))
+          def cta_kind(value):
+              last=re.split(r"(?<=[.!?])\s+",value.strip())[-1].strip()
+              if re.search(r"(?i)\b(?:kommentier(?:e)?|kommentare?\w*)\b",last):return 0
+              if re.search(r"(?i)\b(?:speicher(?:e)?|merk(?:e)?)\b",last) and re.search(r"(?i)\b(?:beitrag|video|impuls|gedanken|erinnerung)\w*\b",last):return 1
+              if re.search(r"(?i)\b(?:teile|schick(?:e)?)\b",last) and re.search(r"(?i)\b(?:jemand\w*|person|beitrag|video|impuls|gedanken|ihm|ihr)\b",last):return 2
+              if re.search(r"(?i)\b(?:folge|abonnier(?:e)?)\b",last) and re.search(r"(?i)\b(?:motus|uns|unser\w*|kanal|impuls\w*|mehr)\b",last):return 3
+              if last.endswith("?") and re.match(r"(?i)^(?:wie|was|welch\w*|wem|wen|wann|wo|würdest|hast|kennst|findest|wer)\b",last) and re.search(r"(?i)\b(?:du|dir|dich|dein\w*|euch|ihr|eur\w*)\b",last):return 0
+              return None
+
+          def align_cta(value,kind,low,high):
+              if cta_kind(value)==kind:return value
+              sentences=[s.strip() for s in re.split(r"(?<=[.!?])\s+",value.strip()) if s.strip()]
+              if len(sentences)<3 or cta_kind(sentences[-1]) is None:return value
+              end=len(sentences)-1
+              # Remove an immediately preceding viewer question only if it is itself a CTA.
+              if end>2 and cta_kind(sentences[end-1])==0:end-=1
+              body=" ".join(sentences[:end])
+              candidates=[body+" "+cta for cta in cta_options[kind]]
+              valid=[candidate for candidate in candidates if low<=word_count(candidate)<=high and cta_kind(candidate)==kind]
+              return min(valid,key=lambda candidate:abs(word_count(candidate)-word_count(value))) if valid else value
+
           def compact_generated(value,low,high,required_tokens):
               # Preserve the original hook and natural CTA; remove only ONE complete
               # middle sentence from a slightly oversized Gemini draft, without AI calls.
@@ -484,6 +524,15 @@ jobs:
                       slot["text"]=value
                       actual=tokens(value)
                       wc=word_count(value)
+              expected_cta=(editorial_index+times_editorial.index(t))%4
+              aligned=align_cta(value,expected_cta,low,high)
+              if aligned!=value:
+                  print("EDITORIAL_CTA_ALIGNED",target,t,"from",cta_kind(value),"to",expected_cta)
+                  value=aligned
+                  slot["text"]=value
+                  actual=tokens(value)
+                  wc=word_count(value)
+              overlap=len(expected&actual)
               duplicate=any(len(actual&prev)>=7 and len(actual&prev)/max(1,len(actual|prev))>=0.43 for prev in old_tokens)
               problems=[]
               if overlap<2:problems.append("off_topic")
@@ -493,6 +542,10 @@ jobs:
               if any(ch.isalpha() and "LATIN" not in unicodedata.name(ch,"") for ch in value):
                   problems.append("non_latin")
               if not has_viewer_cta(value):problems.append("no_cta")
+              if cta_kind(value)!=expected_cta:problems.append("cta_rotation")
+              card_scenarios=scenario_keys(card["hook"]+" "+card["action"])
+              if (scenario_keys(value)&recent_scenarios)-card_scenarios:
+                  problems.append("semantic_repeat_off_plan")
               if not low<=wc<=high:problems.append("length")
               if repetition_penalty(value)>=4:problems.append("intra_script_repeat")
               if duplicate:problems.append("14d_duplicate")
@@ -500,7 +553,7 @@ jobs:
                   problems.append("same_day_duplicate")
               if problems:
                   replacement=fallback(t)
-                  if not low<=word_count(replacement)<=high or not has_viewer_cta(replacement):
+                  if not low<=word_count(replacement)<=high or not has_viewer_cta(replacement) or cta_kind(replacement)!=expected_cta:
                       raise SystemExit("EDITORIAL_FALLBACK_INVALID "+t)
                   slot["text"]=replacement
                   print("EDITORIAL_QC_REPLACED",target,t,",".join(problems),
