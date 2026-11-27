@@ -478,6 +478,28 @@ jobs:
               valid=[candidate for candidate in candidates if low<=word_count(candidate)<=high and cta_kind(candidate)==kind]
               return min(valid,key=lambda candidate:abs(word_count(candidate)-word_count(value))) if valid else value
 
+          def repair_missing_cta(value,kind,low,high,required_tokens):
+              # Do not replace an unclassified apparent CTA or incomplete sentence.
+              if has_viewer_cta(value) or cta_kind(value) is not None or not value.endswith('.'):
+                  return value
+              sentences=[s.strip() for s in re.split(r"(?<=[.!?])\s+",value.strip()) if s.strip()]
+              if len(sentences)<2 or any(has_viewer_cta(s) and cta_kind(s) is not None for s in sentences):return value
+              if re.search(r"(?i)\b(?:like|liken|feedback|kommentar\w*|kanal|motus|abonnier\w*|markier\w*)\b",sentences[-1]):return value
+              short_ctas=("Was denkst du darüber?","Speichere den Impuls für später.","Teile den Beitrag mit jemandem.","Folge MOTUS für weitere Impulse.")
+              options=cta_options[kind]+[short_ctas[kind]]
+              anchors=tokens(value)&required_tokens
+              bodies=[(0,value)]
+              if len(anchors)>=2:
+                  # At most one complete interior sentence, preserving hook, ending and all action anchors.
+                  for i in range(1,len(sentences)-1):
+                      body=" ".join(sentences[:i]+sentences[i+1:])
+                      if anchors<=tokens(body) and repetition_penalty(body)<=repetition_penalty(value):
+                          bodies.append((1,body))
+              candidates=[(removed,repetition_penalty(body),abs(word_count(body+' '+cta)-(low+high)//2),body+' '+cta)
+                          for removed,body in bodies for cta in options
+                          if low<=word_count(body+' '+cta)<=high and cta_kind(body+' '+cta)==kind and has_viewer_cta(body+' '+cta)]
+              return min(candidates)[3] if candidates else value
+
           def compact_generated(value,low,high,required_tokens):
               # Preserve the original hook and natural CTA; remove only ONE complete
               # middle sentence from a slightly oversized Gemini draft, without AI calls.
@@ -526,6 +548,8 @@ jobs:
                       wc=word_count(value)
               expected_cta=(editorial_index+times_editorial.index(t))%4
               aligned=align_cta(value,expected_cta,low,high)
+              if aligned==value:
+                  aligned=repair_missing_cta(value,expected_cta,low,high,tokens(card["action"]))
               if aligned!=value:
                   print("EDITORIAL_CTA_ALIGNED",target,t,"from",cta_kind(value),"to",expected_cta)
                   value=aligned
