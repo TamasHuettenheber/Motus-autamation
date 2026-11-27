@@ -1,0 +1,86 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 42,
+  "series_version": "relaunch-v2",
+  "title": "Die Spur unter dem Mondfluss",
+  "hook": "Die dunkle Muschellaterne zog weiter gegen die Strömung. Miro hob seine Wurzellaterne, und unter dem klaren Wasser erschienen drei leuchtende Spuren.",
+  "story": "Jori beugte sich über den Mondfluss. Flimms kleine runde Nase spiegelte sich im Wasser, während Luma und das Mondfüchslein über den Steinen schwebten. Spur A leuchtete blassblau, brach aber an einem Kristall ab. Spur B glühte golden und verlief ohne Unterbrechung bis zu einem Wasserfall. Spur C schimmerte violett, machte eine Schleife und kehrte zur Muschellaterne zurück. Nur eine durchgehende Spur konnte zeigen, wer die Laterne flussaufwärts zog.",
+  "question": "Welche Spur führt wirklich zum Ziehen der Muschellaterne: A mit der Unterbrechung, B ohne Unterbrechung bis zum Wasserfall oder C als Schleife zurück?",
+  "answer": "Spur B!",
+  "after": "Sie ist die einzige durchgehende Verbindung. Jori, Flimm, Luma, das Mondfüchslein und Miro folgten dem goldenen Licht hinter den Wasserfall. In einer verborgenen Grotte fanden sie einen winzigen türkisfarbenen Wassergeist. Eine silberne Wurzelranke hielt ihn fest, und an seinem Arm hing die Schnur der dunklen Muschellaterne. Er hatte sie flussaufwärts gezogen, um Hilfe zu rufen. Gemeinsam lösten sie die Ranke, und der Wassergeist führte sie zu einem alten Mondtor.",
+  "cliff": "Vor dem geschlossenen Tor schwebten drei Schlüssel über dem Wasser. Zwei spiegelten sich silbern im Fluss. Doch der schwarze Glasschlüssel warf überhaupt kein Spiegelbild. Wer hatte einen Schlüssel ohne Spiegel geschaffen?",
+  "riddle": {
+    "type": "unbroken_path_to_source",
+    "question": "Welche Spur führt wirklich zum Ziehen der Muschellaterne: A mit der Unterbrechung, B ohne Unterbrechung bis zum Wasserfall oder C als Schleife zurück?",
+    "answer": "Spur B",
+    "evidence_in_story": "Spur A ist am Kristall unterbrochen, Spur C führt als Schleife zur Laterne zurück. Nur Spur B ist eine ununterbrochene Verbindung bis zum Wasserfall.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "trace_the_only_unbroken_path",
+  "clues": [
+    "A: am Kristall unterbrochen",
+    "B: durchgehend bis zum Wasserfall",
+    "C: Schleife zurück zur Laterne"
+  ],
+  "correct": 1,
+  "puzzle_visual": "Ein TikTok-sicheres Rätselschild zeigt die Muschellaterne und drei leuchtende Spuren A, B und C. Alle Texte und Hinweise liegen zwischen x=60 und x=540; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt ohne Zeitsprung an der dunklen Muschellaterne aus Folge 041 an. Jori, Flimm, Luma, das Mondfüchslein und Miro verfolgen drei Unterwasserspuren, befreien den Wassergeist und erreichen ein altes Mondtor.",
+  "narration": "Die dunkle Muschellaterne zog weiter gegen die Strömung. Miro hob seine Wurzellaterne, und unter dem klaren Wasser erschienen drei leuchtende Spuren. [[SEGMENT]] Jori beugte sich über den Mondfluss. Flimms kleine runde Nase spiegelte sich im Wasser, während Luma und das Mondfüchslein über den Steinen schwebten. Spur A leuchtete blassblau, brach aber an einem Kristall ab. Spur B glühte golden und verlief ohne Unterbrechung bis zu einem Wasserfall. Spur C schimmerte violett, machte eine Schleife und kehrte zur Muschellaterne zurück. Nur eine durchgehende Spur konnte zeigen, wer die Laterne flussaufwärts zog. [[SEGMENT]] Welche Spur führt wirklich zum Ziehen der Muschellaterne: A mit der Unterbrechung, B ohne Unterbrechung bis zum Wasserfall oder C als Schleife zurück? [[PAUSE:7]] Spur B! Sie ist die einzige durchgehende Verbindung. Jori, Flimm, Luma, das Mondfüchslein und Miro folgten dem goldenen Licht hinter den Wasserfall. In einer verborgenen Grotte fanden sie einen winzigen türkisfarbenen Wassergeist. Eine silberne Wurzelranke hielt ihn fest, und an seinem Arm hing die Schnur der dunklen Muschellaterne. Er hatte sie flussaufwärts gezogen, um Hilfe zu rufen. Gemeinsam lösten sie die Ranke, und der Wassergeist führte sie zu einem alten Mondtor. Vor dem geschlossenen Tor schwebten drei Schlüssel über dem Wasser. Zwei spiegelten sich silbern im Fluss. Doch der schwarze Glasschlüssel warf überhaupt kein Spiegelbild. Wer hatte einen Schlüssel ohne Spiegel geschaffen?",
+  "narration_tts": "Die dunkle Muschellaterne zog weiter gegen die Strömung. Miro hob seine Wurzellaterne, und unter dem klaren Wasser erschienen drei leuchtende Spuren. [[SEGMENT]] Jori beugte sich über den Mondfluss. Flimms kleine runde Nase spiegelte sich im Wasser, während Luma und das Mondfüchslein über den Steinen schwebten. Spur A leuchtete blassblau, brach aber an einem Kristall ab. Spur B glühte golden und verlief ohne Unterbrechung bis zu einem Wasserfall. Spur C schimmerte violett, machte eine Schleife und kehrte zur Muschellaterne zurück. Nur eine durchgehende Spur konnte zeigen, wer die Laterne flussaufwärts zog. [[SEGMENT]] Welche Spur führt wirklich zum Ziehen der Muschellaterne: A mit der Unterbrechung, B ohne Unterbrechung bis zum Wasserfall oder C als Schleife zurück? [[PAUSE:7]] Spur B! Sie ist die einzige durchgehende Verbindung. Jori, Flimm, Luma, das Mondfüchslein und Miro folgten dem goldenen Licht hinter den Wasserfall. In einer verborgenen Grotte fanden sie einen winzigen türkisfarbenen Wassergeist. Eine silberne Wurzelranke hielt ihn fest, und an seinem Arm hing die Schnur der dunklen Muschellaterne. Er hatte sie flussaufwärts gezogen, um Hilfe zu rufen. Gemeinsam lösten sie die Ranke, und der Wassergeist führte sie zu einem alten Mondtor. Vor dem geschlossenen Tor schwebten drei Schlüssel über dem Wasser. Zwei spiegelten sich silbern im Fluss. Doch der schwarze Glasschlüssel warf überhaupt kein Spiegelbild. Wer hatte einen Schlüssel ohne Spiegel geschaffen?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss: Die dunkle Muschellaterne zieht weiter flussaufwärts.",
+    "Miro beleuchtet drei folgenspezifische Spuren unter dem klaren Mondfluss.",
+    "Draufsicht zeigt A unterbrochen, B durchgehend und C als Schleife.",
+    "Ruhiges TikTok-sicheres Rätsel-Tableau mit Laterne und allen drei Spuren.",
+    "Lösung: Die goldene Spur B leuchtet durchgehend bis zum Wasserfall.",
+    "Hinter dem Wasserfall befreit die Gruppe einen Wassergeist aus einer silbernen Wurzelranke.",
+    "Cliffhanger: Vor dem Mondtor schweben drei Schlüssel; der schwarze Glasschlüssel hat kein Spiegelbild."
+  ],
+  "visuals": [
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-042-v1/scene-01.jpg",
+      "scene": 1,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-042-v1/scene-02.jpg",
+      "scene": 2,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-042-v1/scene-03.jpg",
+      "scene": 3,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-042-v1/scene-04.jpg",
+      "scene": 4,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-042-v1/scene-05.jpg",
+      "scene": 5,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-042-v1/scene-06.jpg",
+      "scene": 6,
+      "generated": true
+    },
+    {
+      "path": "kids/jori-flimm/relaunch-v2/assets/episode-042-v1/scene-07.jpg",
+      "scene": 7,
+      "generated": true
+    }
+  ],
+  "created_at": "2026-11-27T08:50:00+01:00",
+  "status": "STORY_AND_SEVEN_NEW_IMAGES_READY_TTS_PENDING",
+  "previous_cliffhanger": "Dort trieben drei leuchtende Muschellaternen mit der Strömung. Doch eine dunkle Muschellaterne bewegte sich gegen das Wasser nach oben und zog eine umgekehrte Spur hinter sich her. Wer zog sie flussaufwärts?"
+}
