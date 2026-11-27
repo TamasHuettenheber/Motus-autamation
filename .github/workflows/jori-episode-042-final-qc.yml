@@ -61,7 +61,8 @@ jobs:
           with wave.open(str(work/'narration_source.wav'),'rb') as w:
               w.setpos(round(pause['start']*w.getframerate()));s=w.readframes(round(7*w.getframerate()));assert not any(s)
           captions=(work/'captions.ass').read_text();assert 'Style: Child,DejaVu Sans,34' in captions and ',2,60,180,277,1' in captions
-          renderer=(base/'scripts/github_followup_renderer_e042.py').read_text();assert '(60,132,540,820)' in renderer
+          renderer=(base/'scripts/github_followup_renderer_e042.py').read_text()
+          assert '(60,210,540,898)' in renderer and 'fit_wrapped_title' in renderer and '(60,270,540,box_bottom)' in renderer
           def sec(x):h,m,s=x.split(':');return int(h)*3600+int(m)*60+float(s)
           rows=[x for x in captions.splitlines() if x.startswith('Dialogue:')]
           for row in rows:
@@ -80,7 +81,7 @@ jobs:
           mid=(pause['start']+pause['end'])/2
           subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-ss',str(mid),'-i',str(media),'-frames:v','1','/tmp/pause.png','-y'],check=True)
           im=Image.open('/tmp/pause.png').convert('RGBA');d=ImageDraw.Draw(im,'RGBA');d.rectangle((560,0,719,1279),fill=(200,0,0,65));d.rectangle((0,1020,719,1279),fill=(230,120,0,55));d.rectangle((60,80,540,980),outline=(0,220,80,180),width=4);im.save('/tmp/pause-safezone.png')
-          print('JORI_E042_INDEPENDENT_FINAL_QC_OK',json.dumps({'duration':probe['format']['duration'],'size':probe['format']['size'],'pause_seconds':measured,'seven_new_images':True,'subtitle_safe_x':'60..540','puzzle_board_bounds':'60,132,540,820','sulafat_cached_no_tts':True},ensure_ascii=False))
+          print('JORI_E042_INDEPENDENT_FINAL_QC_OK',json.dumps({'duration':probe['format']['duration'],'size':probe['format']['size'],'pause_seconds':measured,'seven_new_images':True,'subtitle_safe_x':'60..540','puzzle_board_bounds':'60,210,540,898','safe_text_y_min':180,'wrapped_title_max_lines':2,'sulafat_cached_no_tts':True},ensure_ascii=False))
           PY
       - uses: actions/upload-artifact@v4
         with:

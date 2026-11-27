@@ -42,39 +42,54 @@ D=t['duration'];pause=items[pause_index]
 F='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf';F2='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
 font=lambda size,bold=True:ImageFont.truetype(F if bold else F2,size)
 def cmd(*xs):subprocess.run(list(map(str,xs)),check=True,timeout=600)
+def fit_wrapped_title(text,max_width=430,max_lines=2):
+ # Long titles must stay fully inside the left safe area.
+ for size in range(28,17,-1):
+  f=font(size);lines=[];line=''
+  for word in text.split():
+   trial=(line+' '+word).strip()
+   if line and f.getlength(trial)>max_width:lines.append(line);line=word
+   else:line=trial
+  if line:lines.append(line)
+  if len(lines)<=max_lines and all(f.getlength(x)<=max_width for x in lines):
+   return '\\n'.join(lines),f
+ raise ValueError('Episode title does not fit the two-line TikTok-safe title box')
 def draw_scene(section):
  im=Image.open(ART/f'scene-{SCENES[section]:02d}.jpg').convert('RGB').resize((720,1280),Image.Resampling.LANCZOS)
  ov=Image.new('RGBA',(720,1280),(0,0,0,0));d=ImageDraw.Draw(ov)
- # All important title text ends at x=540; x>=560 stays free for TikTok controls.
- d.rounded_rectangle((34,38,540,102),radius=17,fill=(15,37,67,210))
- d.text((55,57),f'JORI & FLIMM   ·   FOLGE {n:03d}',font=font(23),fill='#fff2cf')
+ # TikTok navigation occupies the upper edge. Branding begins below it.
+ if section!='puzzle':
+  d.rounded_rectangle((60,180,540,244),radius=17,fill=(15,37,67,210))
+  d.text((80,199),f'JORI & FLIMM   ·   FOLGE {n:03d}',font=font(20),fill='#fff2cf')
  if section=='hook':
-  d.rounded_rectangle((40,150,540,245),radius=20,fill=(16,37,62,218))
-  d.text((290,197),episode['title'],font=font(25),anchor='mm',fill='white')
+  title_text,title_font=fit_wrapped_title(episode['title'])
+  lines=title_text.count('\\n')+1;box_bottom=348 if lines==1 else 382
+  d.rounded_rectangle((60,270,540,box_bottom),radius=20,fill=(16,37,62,226))
+  d.multiline_text((300,(270+box_bottom)/2),title_text,font=title_font,anchor='mm',align='center',spacing=5,fill='white')
  if section=='puzzle':
-  # TikTok-safe board: every clue and option ends at x=540; x>=560 stays free.
-  d.rounded_rectangle((60,132,540,820),radius=26,fill=(13,32,56,244),outline=(246,211,127,255),width=4)
-  d.text((291,169),'WELCHE SPUR FÜHRT WEITER?',font=font(21),anchor='mm',fill='#fff2c9')
-  d.rounded_rectangle((76,201,524,277),radius=16,fill=(52,37,83,252),outline=(246,211,127,255),width=3)
-  d.text((300,225),'MUSCHELLATERNE:',font=font(15),anchor='mm',fill='#fff2c9')
-  d.text((300,252),'WER ZIEHT SIE FLUSSAUFWÄRTS?',font=font(17),anchor='mm',fill='white')
+  # Puzzle and clues begin below TikTok's top navigation and end at x=540.
+  d.rounded_rectangle((60,210,540,898),radius=26,fill=(13,32,56,244),outline=(246,211,127,255),width=4)
+  d.text((291,247),'WELCHE SPUR FÜHRT WEITER?',font=font(21),anchor='mm',fill='#fff2c9')
+  d.rounded_rectangle((76,279,524,355),radius=16,fill=(52,37,83,252),outline=(246,211,127,255),width=3)
+  d.text((300,303),'MUSCHELLATERNE:',font=font(15),anchor='mm',fill='#fff2c9')
+  d.text((300,330),'WER ZIEHT SIE FLUSSAUFWÄRTS?',font=font(17),anchor='mm',fill='white')
   options=[
    ('A','AM KRISTALL UNTERBROCHEN',(115,225,255,255)),
    ('B','DURCHGEHEND ZUM WASSERFALL',(215,155,255,255)),
    ('C','SCHLEIFE ZURÜCK',(255,190,90,255)),
   ]
-  y=304
+  y=382
   for label,sequence,color in options:
    d.rounded_rectangle((76,y,524,y+94),radius=17,fill=(27,51,79,252),outline=color,width=3)
    d.ellipse((91,y+22,141,y+72),fill=color)
    d.text((116,y+47),label,font=font(24),anchor='mm',fill='#10253b')
    d.text((154,y+47),sequence,font=font(14),anchor='lm',fill='white')
    y+=112
-  d.rounded_rectangle((94,673,506,766),radius=18,fill=(52,37,83,252),outline=(246,211,127,255),width=3)
-  d.text((300,719),'A, B ODER C?',font=font(26),anchor='mm',fill='#fff2c9')
+  d.rounded_rectangle((94,751,506,844),radius=18,fill=(52,37,83,252),outline=(246,211,127,255),width=3)
+  d.text((300,797),'A, B ODER C?',font=font(26),anchor='mm',fill='#fff2c9')
  if section=='answer':
-  d.rounded_rectangle((40,145,540,225),radius=20,fill=(16,37,62,224),outline=(246,211,127,255),width=3)
-  d.text((290,185),'SPUR B!',font=font(30),anchor='mm',fill='white')
+  d.rounded_rectangle((60,270,540,350),radius=20,fill=(16,37,62,224),outline=(246,211,127,255),width=3)
+  d.text((300,310),'SPUR B!',font=font(30),anchor='mm',fill='white')
  return Image.alpha_composite(im.convert('RGBA'),ov).convert('RGB')
 for section in SCENES:draw_scene(section).save(W/f'{section}.png')
 def sentence_intervals(item):

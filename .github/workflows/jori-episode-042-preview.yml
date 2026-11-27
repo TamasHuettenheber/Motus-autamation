@@ -85,13 +85,14 @@ jobs:
           old={hashlib.sha256(p.read_bytes()).hexdigest() for d in (base/'assets').glob('episode-*-v*') if d.name!='episode-042-v1' for p in d.glob('scene-*')}
           assert not (set(hashes)&old),'episode 042 reused an earlier scene image'
           renderer=(base/'scripts/github_followup_renderer_e042.py').read_text()
-          assert "(60,132,540,820)" in renderer and "MarginL,MarginR" in renderer and "2,60,180,277" in renderer
+          assert "(60,210,540,898)" in renderer and "fit_wrapped_title" in renderer and "(60,270,540,box_bottom)" in renderer
+          assert "MarginL,MarginR" in renderer and "2,60,180,277" in renderer
           # Concrete evidence from yesterday's successful production: same secret/model,
           # Free Tier confirmed and no billing-mode change. The TTS script enforces 22 s spacing and at most four requests.
           status=(base.parent/'docs/production-status-2026-11-27-e041.md').read_text(encoding='utf-8')
           assert 'gemini-3.8-flash-lite-tts' in status and 'Free-Tier-Anfragen' in status
           assert 'kein Paid-Fallback' in status
-          print('JORI_E042_STORY_ART_SAFEZONE_QC_OK',json.dumps({'title':e['title'],'seven_unique_new_9x16_scenes':True,'continuity':e['continuity'],'safe_text_x':'60..540'},ensure_ascii=False))
+          print('JORI_E042_STORY_ART_SAFEZONE_QC_OK',json.dumps({'title':e['title'],'seven_unique_new_9x16_scenes':True,'continuity':e['continuity'],'safe_text_x':'60..540','safe_text_y_min':180,'wrapped_title_max_lines':2},ensure_ascii=False))
           PY
       - name: Generate Sulafat using the verified Free Tier model
         env:
