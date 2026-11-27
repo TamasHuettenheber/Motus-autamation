@@ -924,3 +924,21 @@ Vorheriger Snapshot 26.11. 23:14Z lag vor Fälligkeit; kein Ausfallbeweis. GitHu
 ## MOTUS-T-20261127-POSTFACH
 **Besitzer:** MOTUS – Technik & Reparatur. **Prüfzeit:** 27.11.2026, 11:46 MEZ. Behörden-Tagesprüfung nach 11 Uhr: AgentMail-Delta ab 26.11. 10:00Z, 33 Nachrichten, keine weitere Seite; ausschließlich 30 Frantic- und drei Jori-CI-Benachrichtigungen, keine neue inhaltliche Finanz-/Gewerbeamtsantwort oder MOTUS-Störung. Kein Versand. Jori-CI-Meldungen liegen außerhalb der Rolle; spätere erfolgreiche QC-/Release-Runs für Folgen 041/042 vorhanden, keine Doppelarbeit.
 #119/#120 geschlossen, je ein exakter Titel im aktuellen 30-Issue-Abruf, QC-Originalkommentare 7179386289/7204332621, acht unveränderte positive MP4-Blobs im vollständigen Git-Tree. Aktueller Batch-Run 45969536324 / Job 140406283794 success, NO_OPEN_MOTUS_DAY_BATCH; Monitor 45963550214 / Job 140386753828 success, BUFFER_GATE_TESTS_OK und BUFFER_GATE_SKIP no_new_due_slot. Originalsnapshot e25ddd0d6852b9cea1851eebec3b2865547f01dd, checked_at_utc=2026-11-27T06:31:17.535602+00:00, acht eindeutige postIds/dueAt, 07:00 sent mit echtem TikTok-Link, sieben künftige Slots scheduled, Einzelwerte im Abschnitt LIVE0700. Vor 12:00 keine neue Fälligkeit; kein Anlass für erneuten Buffer-Call oder Recovery. Desktop Commander listet nur Backoffice-PC und Rezeption; beide unbenutzt. GitHub/AgentMail-Fachzugriff erfolgreich. Bekannte Triggerursache weiterhin nicht belegt, D+2 nicht geprüft. Nächster Prüfanlass nach 12:00 MEZ. Keine Produktion, Post-, Code- oder Stimmenänderung.
+
+
+## MOTUS-T-20261127-1226-LIVE1200
+**Besitzer:** MOTUS – Technik & Reparatur. **Status:** LIVE_NACHWEIS_12:00_BESTÄTIGT. **checked_at_utc:** 2026-11-27T11:26:17.563292+00:00.
+Voriger Snapshot 06:31Z lag vor Fälligkeit. Aktive Runs vor Eingriff queued/in_progress je 0. Bestehenden read-only Monitor [45963550214](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/45963550214) erneut ausgeführt, Workflow-Blob main/Run-Ref dcb9d6c6e33ff1b0a8015b53ea659e2aa1c3b73c. Job 140476660059 completed/success, Original-Logs BUFFER_GATE_TESTS_OK, BUFFER_GATE_QUERY scheduled_post_now_due, BUFFER_STATUS_ONE_REQUEST, BUFFER_STATUS_COMMIT_OK; Restkontingent 15m=149, 24h=568, 30d=1822. Snapshot 3d0b2c2d0cbb1208c9c24076508f7bc973f0075d, Kanal motus614. Acht eindeutige postIds und korrekte dueAt; 12:00 sentAt 2026-11-27T11:03:41.692Z.
+
+| postId | dueAt UTC | status | externalLink |
+|---|---|---|---|
+| 6b077352d4eda4b659be6384 | 2026-11-27T06:00:00.000Z | sent | https://tiktok.com/@motus614/video/7712727229880421665 |
+| 6b07734da791bea1b2381f56 | 2026-11-27T11:00:00.000Z | sent | https://tiktok.com/@motus614/video/7712804999595625767 |
+| 6b0773759f6dda31cca821b0 | 2026-11-27T17:30:00.000Z | scheduled | null |
+| 6b0773349f6dda31cca80bd6 | 2026-11-27T21:00:00.000Z | scheduled | null |
+| 6b08accd860e3591ea341366 | 2026-11-28T06:00:00.000Z | scheduled | null |
+| 6b08acd9de5162ee91b46ee0 | 2026-11-28T11:00:00.000Z | scheduled | null |
+| 6b08acd069a72ce42056510d | 2026-11-28T17:30:00.000Z | scheduled | null |
+| 6b08accf2b711838a8bcb1e9 | 2026-11-28T21:00:00.000Z | scheduled | null |
+
+#119/#120 je einmal im aktuellen 30-Issue-Abruf, geschlossen, Original-QC-Kommentare 7179386289/7204332621, acht positive unveränderte MP4-Blobs im Git-Tree. AgentMail heute 15 Nachrichten, ausschließlich Frantic/Jori-CI, letzte 10:53Z; Behörden-Tagesprüfung bereits 11:46 MEZ dokumentiert, kein Versand. Desktop Commander listet nur Backoffice-PC und Rezeption; beide unbenutzt, keine Aussage zur allgemeinen Workstation-Verbindung. Fach-APIs erfolgreich. Keine neue technische Fehlerstufe belegt, keine Recovery, keine Post-, Code- oder Stimmenänderung. D+2 nicht geprüft. Nächster Live-Nachweis nach 18:30 MEZ. Bekannte Triggerursache unverändert offen.
