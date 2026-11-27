@@ -901,3 +901,21 @@ AgentMail-Delta seit 26.11. 21:56Z leer; Behördenprüfung vor 11 Uhr nicht fäl
 **Besitzer:** MOTUS – Technik & Reparatur; Gerätezuordnung SYS-ZUGRIFF01 bei USCHI. **Geprüft:** 27.11.2026, 06:22 MEZ.
 **Klarstellung:** Die historischen Nachprüfungen vom 27.11. 00:25 und 04:44 MEZ bezeichnen Backoffice-PC als Workstation bzw. berichten einen hostname-Aufruf dort. Diese Gleichsetzung ist nicht zulässig: Nutzerregel ausschließlich ausdrücklich autorisierte Workstation; Backoffice-PC und Rezeption ohne konkrete Einzelerlaubnis tabu. Die historische Behauptung ist kein Autorisierungsnachweis. Die heutigen Gerätelisten liefern Backoffice-PC online und Rezeption offline, aber keinen eindeutig als Workstation ausgewiesenen Eintrag. In diesem Lauf ausschließlich Geräteliste und Fach-APIs gelesen; kein Zugriff auf einen der beiden Rechner, kein Browserzugriff, keine Aussage über die allgemeine Workstation-Verbindung. Keine neue Nutzerhandlung für den funktionierenden GitHub-Fachweg erforderlich. USCHI kann diese Klarstellung hier lesen; eine separate bestätigte Übergabe wird nicht behauptet.
 **D/D+1-Abgleich:** #119/#120 jeweils genau einmal im aktuellen Issues-Bestand, geschlossen, Abschlusskommentare 7179386289/7204332621 unverändert; vollständiger Git-Tree bestätigt acht unveränderte positive MP4-Blobs. Buffer-Snapshot ca2cd62a00bba2191e98d3c5be9389ba3143849e, checked_at_utc=2026-11-26T23:14:30.984951Z, alle acht IDs/dueAt wie oben, scheduled, externalLink=null; kein Slot fällig um 06:22 MEZ. Jüngste 20 Runs beendet, jüngster Night-Run 45938143348 unverändert erfolgreich; keine weitere Recovery oder Live-Abfrage vor Fälligkeit. AgentMail-Delta nach 03:46Z: zwei fachfremde Frantic-Benachrichtigungen; kein Versand. Keine technische Störung oder neue Ursache belegt, D+2 nicht geprüft. Nächster sinnvoller Live-Prüfanlass nach 07:00.
+
+
+## MOTUS-T-20261127-0731-LIVE0700
+**Besitzer:** MOTUS – Technik & Reparatur. **Status:** LIVE_NACHWEIS_BESTÄTIGT. **checked_at_utc:** 2026-11-27T06:31:17.535602+00:00.
+Vorheriger Snapshot 26.11. 23:14Z lag vor Fälligkeit; kein Ausfallbeweis. GitHub vor Eingriff queued/in_progress jeweils 0. Ausschließlich vorhandenen read-only Monitor [45912702805](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/45912702805) erneut ausgeführt, Workflow-Blob main/Run-Ref dcb9d6c6e33ff1b0a8015b53ea659e2aa1c3b73c. Neuer Job 140350948218 completed/success, Originalmarker BUFFER_GATE_TESTS_OK, BUFFER_GATE_QUERY scheduled_post_now_due, BUFFER_STATUS_ONE_REQUEST, BUFFER_STATUS_COMMIT_OK. Snapshot e25ddd0d6852b9cea1851eebec3b2865547f01dd; Restkontingent 15m=149, 24h=599, 30d=1853. Acht eindeutige IDs/dueAt; 07:00 sentAt 06:02:23.266Z. Keine Postmutation.
+
+| postId | dueAt UTC | status | externalLink |
+|---|---|---|---|
+| 6b077352d4eda4b659be6384 | 2026-11-27T06:00:00.000Z | sent | https://tiktok.com/@motus614/video/7712727229880421665 |
+| 6b07734da791bea1b2381f56 | 2026-11-27T11:00:00.000Z | scheduled | null |
+| 6b0773759f6dda31cca821b0 | 2026-11-27T17:30:00.000Z | scheduled | null |
+| 6b0773349f6dda31cca80bd6 | 2026-11-27T21:00:00.000Z | scheduled | null |
+| 6b08accd860e3591ea341366 | 2026-11-28T06:00:00.000Z | scheduled | null |
+| 6b08acd9de5162ee91b46ee0 | 2026-11-28T11:00:00.000Z | scheduled | null |
+| 6b08acd069a72ce42056510d | 2026-11-28T17:30:00.000Z | scheduled | null |
+| 6b08accf2b711838a8bcb1e9 | 2026-11-28T21:00:00.000Z | scheduled | null |
+
+#119/#120 je ein exakter Titel in jüngsten 20 Issues, geschlossen; Original-QC 7179386289/7204332621 mit MOTUS_DAY_COMPLETE, vollständiger Git-Tree acht positive MP4-Blobs. Nach-05:00-Duplikatprüfung bereits dokumentiert, kein neuer Produktionslauf. AgentMail seit 04:00Z vier fachfremde Frantic-Nachrichten; Behördenprüfung erst nach 11 Uhr, kein Versand. Desktop Commander listet Backoffice-PC online und Rezeption offline; keine eindeutig autorisierte Workstation in dieser Liste, kein Computerzugriff, keine allgemeine Aussage zur Workstation-Verbindung. GitHub-Fachzugriff erfolgreich. Keine neue technische Fehlerstufe oder neue Ursache der bekannten Triggerverzögerung; keine Recovery, keine Zusatzproduktion, keine Code-/Stimmenänderung. D+2 nicht geprüft. Nächster Live-Nachweis nach 12:00 MEZ.
