@@ -1,7 +1,7 @@
 {
   "series": "Jori & Flimm",
   "branch": "feature/jori-flimm-neustart-folge001",
-  "updated_at": "2026-11-27T09:06:00+01:00",
+  "updated_at": "2026-11-27T16:45:00+01:00",
   "latest_fully_qc_episode": 42,
   "latest_scheduled_episode": 42,
   "next_episode_number": 43,
@@ -18,8 +18,8 @@
   },
   "evidence": {
     "queue_precheck_run_id": 45959987880,
-    "preview_run_id": 45961531440,
-    "final_qc_run_id": 45962274113,
+    "preview_run_id": 46026541069,
+    "final_qc_run_id": 46027206992,
     "release_run_id": 45962737071,
     "postcheck_run_id": 45962942903
   },

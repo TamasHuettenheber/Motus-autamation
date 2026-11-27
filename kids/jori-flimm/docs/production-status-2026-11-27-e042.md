@@ -17,12 +17,13 @@
 - Rätselpause in der MP4: 7,02383 s gemessene echte Stille; Frage und alle Hinweise sichtbar.
 - Untertitel, Szenenwechsel, Auflösung und Schlusszeitpunkt an der fertigen MP4 geprüft.
 - TikTok-Safe-Zone geprüft: relevanter Inhalt x=60…540; rechter Bedienbereich ab x=560 frei.
+- Titelbereich nach Nutzerhinweis neu gerendert: unterhalb der TikTok-Navigation ab y=180; lange Titel werden auf höchstens zwei Zeilen umgebrochen.
 
 ## Nachweise
 
 - Vorprüfung/Live-Slot: https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/45959987880
-- Produktion/Render: https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/45961531440
-- Unabhängige Final-QC: https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/45962274113
+- Produktion/Render: https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/46026541069
+- Unabhängige Final-QC: https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/46027206992
 - Buffer-Buchung: https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/45962737071
 - Live-Buffer-Nachprüfung: https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/45962942903
 - MP4: https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-neustart-folge001/published/jori-flimm-2026-12-02-e042-v1.mp4
