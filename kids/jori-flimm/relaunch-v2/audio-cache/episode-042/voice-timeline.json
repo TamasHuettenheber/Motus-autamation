@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Die dunkle Muschellaterne zog weiter gegen die Strömung. Miro hob seine Wurzellaterne, und unter dem klaren Wasser erschienen drei leuchtende Spuren.",
+      "start": 0.0,
+      "end": 15.04,
+      "duration": 15.04
+    },
+    {
+      "kind": "speech",
+      "text": "Jori beugte sich über den Mondfluss. Flimms kleine runde Nase spiegelte sich im Wasser, während Luma und das Mondfüchslein über den Steinen schwebten. Spur A leuchtete blassblau, brach aber an einem Kristall ab. Spur B glühte golden und verlief ohne Unterbrechung bis zu einem Wasserfall. Spur C schimmerte violett, machte eine Schleife und kehrte zur Muschellaterne zurück. Nur eine durchgehende Spur konnte zeigen, wer die Laterne flussaufwärts zog.",
+      "start": 15.04,
+      "end": 52.72,
+      "duration": 37.68
+    },
+    {
+      "kind": "speech",
+      "text": "Welche Spur führt wirklich zum Ziehen der Muschellaterne: A mit der Unterbrechung, B ohne Unterbrechung bis zum Wasserfall oder C als Schleife zurück?",
+      "start": 52.72,
+      "end": 67.96,
+      "duration": 15.24
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 67.96,
+      "end": 74.96,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Spur B! Sie ist die einzige durchgehende Verbindung. Jori, Flimm, Luma, das Mondfüchslein und Miro folgten dem goldenen Licht hinter den Wasserfall. In einer verborgenen Grotte fanden sie einen winzigen türkisfarbenen Wassergeist. Eine silberne Wurzelranke hielt ihn fest, und an seinem Arm hing die Schnur der dunklen Muschellaterne. Er hatte sie flussaufwärts gezogen, um Hilfe zu rufen. Gemeinsam lösten sie die Ranke, und der Wassergeist führte sie zu einem alten Mondtor. Vor dem geschlossenen Tor schwebten drei Schlüssel über dem Wasser. Zwei spiegelten sich silbern im Fluss. Doch der schwarze Glasschlüssel warf überhaupt kein Spiegelbild. Wer hatte einen Schlüssel ohne Spiegel geschaffen?",
+      "start": 74.96,
+      "end": 126.86,
+      "duration": 51.9
+    }
+  ],
+  "duration": 126.86,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
