@@ -41,3 +41,5 @@ jobs:
           fi
           python kids/jori-flimm/relaunch-v2/scripts/check_buffer_channel.py
 # E041 live Buffer precheck before production on 2026-11-27.
+
+# E041 post-schedule verification 2026-11-27 after Buffer post 6b0932741fd46e62e7228c90.
