@@ -52,7 +52,7 @@ def fit_wrapped_title(text,max_width=430,max_lines=2):
    else:line=trial
   if line:lines.append(line)
   if len(lines)<=max_lines and all(f.getlength(x)<=max_width for x in lines):
-   return '\\n'.join(lines),f
+   return '\n'.join(lines),f
  raise ValueError('Episode title does not fit the two-line TikTok-safe title box')
 def draw_scene(section):
  im=Image.open(ART/f'scene-{SCENES[section]:02d}.jpg').convert('RGB').resize((720,1280),Image.Resampling.LANCZOS)
