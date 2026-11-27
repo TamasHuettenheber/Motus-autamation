@@ -1,27 +1,27 @@
 {
   "series": "Jori & Flimm",
   "branch": "feature/jori-flimm-neustart-folge001",
-  "updated_at": "2026-11-27T08:36:00+01:00",
-  "latest_fully_qc_episode": 41,
-  "latest_scheduled_episode": 41,
-  "next_episode_number": 42,
-  "latest_title": "Das fehlende Mondstück",
-  "next_continuity_anchor": "Dort trieben drei leuchtende Muschellaternen mit der Strömung. Doch eine dunkle Muschellaterne bewegte sich gegen das Wasser nach oben und zog eine umgekehrte Spur hinter sich her. Wer zog sie flussaufwärts?",
-  "video_path": "published/jori-flimm-2026-12-01-e041-v1.mp4",
+  "updated_at": "2026-11-27T09:06:00+01:00",
+  "latest_fully_qc_episode": 42,
+  "latest_scheduled_episode": 42,
+  "next_episode_number": 43,
+  "latest_title": "Die Spur unter dem Mondfluss",
+  "next_continuity_anchor": "Vor dem geschlossenen Tor schwebten drei Schlüssel über dem Wasser. Zwei spiegelten sich silbern im Fluss. Doch der schwarze Glasschlüssel warf überhaupt kein Spiegelbild. Wer hatte einen Schlüssel ohne Spiegel geschaffen?",
+  "video_path": "published/jori-flimm-2026-12-02-e042-v1.mp4",
   "buffer": {
-    "post_id": "6b0932741fd46e62e7228c90",
+    "post_id": "6b0939841fd46e62e7258c5f",
     "status": "scheduled",
     "channel": "@jori.flimm",
     "channel_id": "6ad948ea778b240e2f839607",
-    "due_at": "2026-12-01T13:00:00.000Z",
-    "local_time": "2026-12-01T14:00:00+01:00"
+    "due_at": "2026-12-02T13:00:00.000Z",
+    "local_time": "2026-12-02T14:00:00+01:00"
   },
   "evidence": {
-    "queue_precheck_run_id": 45956418354,
-    "preview_run_id": 45958247616,
-    "final_qc_run_id": 45958801505,
-    "release_run_id": 45959232288,
-    "postcheck_run_id": 45959412273
+    "queue_precheck_run_id": 45959987880,
+    "preview_run_id": 45961531440,
+    "final_qc_run_id": 45962274113,
+    "release_run_id": 45962737071,
+    "postcheck_run_id": 45962942903
   },
   "warning": "Do not infer the next episode from reset series-state.json or episode-ledger.json; use this verified state plus GitHub MP4s, Action logs and live Buffer evidence."
 }
