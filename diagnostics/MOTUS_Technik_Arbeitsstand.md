@@ -960,3 +960,20 @@ Vorheriger Snapshot 11:26Z lag vor Fälligkeit. Nach 2-Minuten-Gate, bei queued/
 | 6b08accf2b711838a8bcb1e9 | 2026-11-28T21:00:00.000Z | scheduled | null |
 
 #119/#120 je einmal im 30-Issue-Abruf, geschlossen; Original-QC-Kommentare 7179386289/7204332621, acht positive MP4-Blobs im vollständigen Git-Tree bestätigt. Regulärer Night-Run 46009984060 / Job 140542719945 success, Originalausgabe ALREADY_EXISTS 120 closed um 13:46:26Z; keine Doppelproduktion. AgentMail-Delta ab 10:53Z sieben ausschließlich fachfremde Frantic-Meldungen, jüngste 16:10:55Z; Behörden-Tagesprüfung bereits erfolgt, kein Versand. Desktop Commander listet Backoffice-PC online und Rezeption offline; beide unbenutzt, kein eindeutig autorisierter Workstation-Eintrag in dieser Liste, kein Rückschluss auf allgemeine Workstation-Verbindung. GitHub/AgentMail-Fachzugang erfolgreich. Bekannte externe Triggerverzögerung ohne neue Ursachenbelege; keine Recovery, keine Zusatzproduktion, keine Code-/Stimmenänderung. D+2 nicht geprüft. Nächster Live-Nachweis nach 22:00 MEZ.
+
+## MOTUS-T-20261127-2317-LIVE2200
+**Besitzer:** MOTUS – Technik & Reparatur. **Status:** LIVE_NACHWEIS_22:00_BESTÄTIGT; D+2 ERZEUGUNGSNACHWEIS_OFFEN. **checked_at_utc:** 2026-11-27T22:17:34.696245+00:00.
+Voriger Snapshot 17:32Z lag vor Fälligkeit. Queued/in_progress vor Eingriff je 0. Bestehenden read-only Monitor [46052455858](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/46052455858), Job 140686852371, erneut ausgeführt; neuer Job 140762834789 completed/success, Originalmarker BUFFER_GATE_TESTS_OK, BUFFER_GATE_QUERY scheduled_post_now_due, BUFFER_STATUS_ONE_REQUEST, BUFFER_STATUS_COMMIT_OK. Snapshot 639a785e9a2274375127e20b5fc1b67c2ee1194c; Restkontingent 15m=149, 24h=563, 30d=1817. Kein Post verändert.
+
+| postId | dueAt UTC | status | externalLink |
+|---|---|---|---|
+| 6b077352d4eda4b659be6384 | 2026-11-27T06:00:00.000Z | sent | https://www.tiktok.com/@motus614/video/7712727229880421665?utm_campaign=tt4d_open_api&utm_source=7103819247981182978 |
+| 6b07734da791bea1b2381f56 | 2026-11-27T11:00:00.000Z | sent | https://www.tiktok.com/@motus614/video/7712804999595625767?utm_campaign=tt4d_open_api&utm_source=7103819247981182978 |
+| 6b0773759f6dda31cca821b0 | 2026-11-27T17:30:00.000Z | sent | https://tiktok.com/@motus614/video/7712905270967504167 |
+| 6b0773349f6dda31cca80bd6 | 2026-11-27T21:00:00.000Z | sent | https://tiktok.com/@motus614/video/7712959483558808865 |
+| 6b08accd860e3591ea341366 | 2026-11-28T06:00:00.000Z | scheduled | null |
+| 6b08acd9de5162ee91b46ee0 | 2026-11-28T11:00:00.000Z | scheduled | null |
+| 6b08acd069a72ce42056510d | 2026-11-28T17:30:00.000Z | scheduled | null |
+| 6b08accf2b711838a8bcb1e9 | 2026-11-28T21:00:00.000Z | scheduled | null |
+
+D/D+1: 8 Einträge, 8 eindeutige IDs, 8 eindeutige dueAt; vollständiger Git-Tree acht positive MP4-Blobs, Original-QC-Abschlusskommentare #119/7179386289 und #120/7204332621. D+2 (29.11.): exakte Issuesuche leer, #121 API 404, kein MP4 im vollständigen Tree und kein Post im frischen Snapshot; jüngster beobachteter Night-Run 46009984060 bereits 13:46Z erfolgreich, jüngster Handoff 46073087765/Job 140754406830 um 21:52Z NO_DAY_REQUEST 2026-11-29. Erzeugungszeit 22:37 MEZ überschritten; bekannte Triggerverzögerung, kein gescheiterter Produktionslauf belegt. Bei nächstem regulären Lauf Abnahme; falls weiter kein Auftrag und tatsächliches Fristrisiko besteht, vorhandene idempotente Recovery nach erneutem Aktivitäts-/Duplikatabgleich. Keine zweite Produktion. AgentMail-Delta nach 16:10:55Z sechs neue fachfremde Frantic-Meldungen, jüngste 20:58:08Z; Behördenprüfung bereits nach 11 Uhr durchgeführt. Desktop-Commander-Liste ausschließlich Backoffice-PC und Rezeption, beide nicht benutzt; Fachzugänge GitHub/AgentMail funktionieren. Keine Code-, Stimmen-, Poständerung oder neue externe Mail.
