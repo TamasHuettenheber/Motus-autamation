@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-27T06:31:17.535602+00:00",
+  "checked_at_utc": "2026-11-27T11:26:17.563292+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -103,15 +103,15 @@
     {
       "id": "6b07734da791bea1b2381f56",
       "text": "Du entdeckst einen Fehler in einem gemeinsamen Ergebnis und möchtest ihn am liebsten erst einmal verschweigen. Sprich das Versehen stattdessen früh und ganz konkret an. Verantwortung zeigt sich nicht erst beim perfekten Resultat. Teile dieses Video jetzt mit jemandem, der heute auch Haltung zeigen muss.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Find You (CC BY 4.0)",
-      "status": "scheduled",
+      "status": "sent",
       "dueAt": "2026-11-27T11:00:00.000Z",
-      "sentAt": null,
-      "externalLink": null,
+      "sentAt": "2026-11-27T11:03:41.692Z",
+      "externalLink": "https://tiktok.com/@motus614/video/7712804999595625767",
       "channelId": "6ab5124fea19ca0bded4aa0b",
       "assets": [
         {
           "mimeType": "video/mp4",
-          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-27-1200.mp4"
+          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6b07734da791bea1b2381f56_video.mp4"
         }
       ]
     },
