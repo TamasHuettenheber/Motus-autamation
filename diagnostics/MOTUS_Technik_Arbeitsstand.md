@@ -982,3 +982,22 @@ D/D+1: 8 Einträge, 8 eindeutige IDs, 8 eindeutige dueAt; vollständiger Git-Tre
 ## MOTUS-T-20261127-2325-DAY121
 **Besitzer:** MOTUS – Technik & Reparatur. **Status:** REGULÄR_ERZEUGT / PRODUKTION_LÄUFT; Abnahme offen. **Prüfzeit:** 27.11.2026 ca. 23:25 MEZ.
 D+2: Regulärer Night-Run [46076354212](https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/46076354212) schedule/success, Job 140764869147 Originalmarker `CREATED_DAY 2026-11-29 ISSUE 121` um 22:23:39Z und `DAY_WORKFLOW_DISPATCHED 121` um 22:23:40Z. Verzögerung ca. 47 Minuten gegenüber 22:37 MEZ. Exakt ein Tagesauftrag #121 in aktueller 15-Issue-Liste; Dispatcher 46076370500 success, Kommentar 7229295087 `MOTUS_DAY_DISPATCHED` mit vier Slots. Renderer 0700/1200/1830/2200: 46076393319 / 46076395127 / 46076397017 / 46076398962; alle in_progress, Checkout läuft, keine Fehlstufe. Keine parallele Recovery; Abschluss erst nach MP4/QC/Algenib und Buffer-Abgleich. Bekannte Scheduler-Ursache nicht neu belegt. D/D+1: bestehender Snapshot checked_at_utc=2026-11-27T22:17:34.696245+00:00 erneut gelesen; unveränderte acht eindeutige IDs/dueAt und Statuswerte im unmittelbar vorigen Abschnitt; kein neuer fälliger Slot, keine zusätzliche Buffer-Abfrage. AgentMail-Delta ab 20:58:09Z leer, Behörden-Tagesprüfung bereits erfolgt. Geräteübersicht ausschließlich Backoffice-PC und Rezeption, beide nicht benutzt; GitHub/AgentMail-Fachzugriffe erfolgreich. Nächster Schritt: bestehende vier Run-IDs und #121 bis zur tatsächlichen Abnahme prüfen; keine neue Produktion, keine Postmutation, keine Code-/Stimmenänderung.
+
+
+## MOTUS-T-20261128-DAY121-ABNAHME
+**Besitzer:** MOTUS – Technik & Reparatur. **Status:** REGULÄR_PRODUZIERT / TERMINPLANUNG_ABGENOMMEN. **checked_at_utc:** 2026-11-27T23:36:01.983936+00:00.
+Fortsetzung des offenen Vorgangs DAY121: #121 für 29.11. und #120 für 28.11. jeweils genau einmal in jüngster Issue-Liste, beide geschlossen. Night-Run 46076354212 regulär success; vier Renderer 46076393319/46076395127/46076397017/46076398962 success, Originaljobs 140765001088/140765005240/140765011013/140765017626 mit MOTUS_ALGENIB_GENERATED, AUDIO_QC_PASS und AUDIO_TAIL_QC_PASS (Video-Tail 0,802/0,789/0,802/0,789 s). Alle QC- und Publish-MP4-Schritte success; vollständiger Git-Tree bestätigt acht positive MP4-Blobs, vier neue am 29.11. 84bf8fde04485480359c4e11ec1fa88a7b56a07c / 30c5184d62f05f46121a95fe9f5ba061d65c1b08 / 9fd7a5484308f3e243012fcd649fd9e3a708e393 / 5de562f4aefe08b32cd04ebb53b318f33aef65d0. Reconcile-Run 46076959280 / Job 140766847918 Originalmarker MOTUS_DAY_COMPLETE 121 um 22:29:53Z.
+Vor neuer Statusabfrage queued/in_progress je 0. Voriger Buffer-Snapshot lag vor #121-Abschluss; ausschließlich bestehenden read-only Monitor 46052455858 / vorherigen Job 140762834789 erneut ausgeführt. Neuer Job 140787298192 completed/success, BUFFER_GATE_TESTS_OK, BUFFER_GATE_QUERY scheduled_post_now_due, BUFFER_STATUS_ONE_REQUEST und BUFFER_STATUS_COMMIT_OK; Restkontingent 15m=149, 24h=543, 30d=1797. Snapshot e402b8b888466bb2c49d8672d199d1eee7827524, Kanal motus614, acht eindeutige IDs/dueAt, passende MP4-Assets. Alle Termine liegen in der Zukunft, daher keine Veröffentlichungsbehauptung.
+
+| postId | dueAt UTC | status | externalLink |
+|---|---|---|---|
+| 6b08accd860e3591ea341366 | 2026-11-28T06:00:00.000Z | scheduled | null |
+| 6b08acd9de5162ee91b46ee0 | 2026-11-28T11:00:00.000Z | scheduled | null |
+| 6b08acd069a72ce42056510d | 2026-11-28T17:30:00.000Z | scheduled | null |
+| 6b08accf2b711838a8bcb1e9 | 2026-11-28T21:00:00.000Z | scheduled | null |
+| 6b0a03fd41454797eacbb8d9 | 2026-11-29T06:00:00.000Z | scheduled | null |
+| 6b0a045270e80ae8f1ae8b03 | 2026-11-29T11:00:00.000Z | scheduled | null |
+| 6b0a042523fb5b7700f92dd4 | 2026-11-29T17:30:00.000Z | scheduled | null |
+| 6b0a041341454797eacbbf4d | 2026-11-29T21:00:00.000Z | scheduled | null |
+
+AgentMail-Delta seit 27.11. 21:00Z eine fachfremde Frantic-Meldung; kein Versand. Behörden-Tagesprüfung für 28.11. erst nach 11 Uhr. Desktop-Commander-Geräteliste nur Backoffice-PC und Rezeption, beide nicht benutzt; Fachzugriffe funktionieren, keine Aussage zum allgemeinen Workstation-Verbindungsstatus. Bekannte Scheduler-Verzögerung ohne neue Ursachenbelege; regulärer Lauf hat selbstständig abgeschlossen, keine Recovery oder Änderung an Posts, Produktion, Stimme, Code. D+2 (30.11.) vor 22:37 nicht geprüft. Nächster fälliger Publikationsnachweis 28.11. nach 07:00 MEZ.
