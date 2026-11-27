@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Der vierte, kräftige Schlag ließ den Deckel des Mondbrunnens beben. Silberner Staub sprang aus dem Rand, und das Mondfüchslein scharrte aufgeregt mit den Pfoten.",
+      "start": 0.0,
+      "end": 12.62,
+      "duration": 12.62
+    },
+    {
+      "kind": "speech",
+      "text": "Jori kniete sich neben den Brunnen. Flimms kleine runde Nase leuchtete, während Luma ihre Glocke über das Siegel hielt. Im Mondring fehlte unten links ein gebogenes Stück. Neben dem Deckel stiegen drei Steinteile aus dem Moos. Teil A war nach oben rechts gebogen. Teil B war nach unten links gebogen. Teil C hatte die Form eines Sterns. Nur ein Teil konnte die Lücke schließen, ohne über den Rand zu ragen.",
+      "start": 12.62,
+      "end": 50.77,
+      "duration": 38.15
+    },
+    {
+      "kind": "speech",
+      "text": "Welches Teil vervollständigt den Mondring: A für oben rechts, B für unten links oder C mit dem Stern?",
+      "start": 50.77,
+      "end": 61.86,
+      "duration": 11.09
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 61.86,
+      "end": 68.86,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Teil B! Seine Biegung passt genau in die Lücke unten links. Jori schob Teil B vorsichtig in das Siegel. Der Mondring leuchtete vollständig, und der schwere Deckel glitt zur Seite. Aus einer Spiraltreppe stieg ein kleiner blaugrauer Maulwurf mit runder Brille, Blätterweste und leuchtender Wurzellaterne. Er hieß Miro und hatte von unten geklopft, weil eine steinerne Klammer den Brunnen verschlossen hatte. Gemeinsam folgten sie Miro hinab zu einem unterirdischen Mondfluss. Dort trieben drei leuchtende Muschellaternen mit der Strömung. Doch eine dunkle Muschellaterne bewegte sich gegen das Wasser nach oben und zog eine umgekehrte Spur hinter sich her. Wer zog sie flussaufwärts?",
+      "start": 68.86,
+      "end": 119.38,
+      "duration": 50.52
+    }
+  ],
+  "duration": 119.38,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
