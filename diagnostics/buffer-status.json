@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-27T22:17:34.696245+00:00",
+  "checked_at_utc": "2026-11-27T23:36:01.983936+00:00",
   "organization": {
     "id": "6ab500dfc949088b0ba1e58f",
     "name": "My organization"
@@ -10,6 +10,66 @@
     "service": "tiktok"
   },
   "posts": [
+    {
+      "id": "6b0a041341454797eacbbf4d",
+      "text": "Du liegst im Bett und siehst vor allem jene Aufgaben, die heute mal wieder liegen geblieben sind. Mach dir bewusst: Ein Tag muss nicht perfekt sein, um wertvoll zu sein. Das stärkt deinen Frieden. Teile diesen Gedanken.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Nevermore (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-29T21:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-29-2200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6b0a042523fb5b7700f92dd4",
+      "text": "Beim gemeinsamen Essen am Tisch entfacht ein Streit über eine völlig belanglose Kleinigkeit und plötzlich will niemand mehr nachgeben. In diesem Moment lohnt sich ein bewusster Schritt zurück aus der emotionalen Sackgasse. Nicht jeder Disput braucht am Ende einen eindeutigen Sieger, um wertvoll zu sein. Oft entsteht echter Frieden erst dann, wenn einer von beiden bewusst den Raum für Harmonie öffnet. Speichere diesen Beitrag ab, um beim nächsten Konflikt sofort an diesen Perspektivwechsel zu denken.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – A Memory Away (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-29T17:30:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-29-1830.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6b0a045270e80ae8f1ae8b03",
+      "text": "Jemand erwartet sofort deine fundierte Einschätzung zu einem Thema, bei dem du völlig im Dunkeln tappst. Überspiele deine Lücke nicht mit leeren Worten. Echte Verlässlichkeit braucht keine gespielte Allwissenheit. Welcher Gedanke hilft dir dabei? Schreib es in die Kommentare.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Syntheticity (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-29T11:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-29-1200.mp4"
+        }
+      ]
+    },
+    {
+      "id": "6b0a03fd41454797eacbb8d9",
+      "text": "Eine Absage trifft ein und du zweifelst an deinen Fähigkeiten. Frag nach einer konkreten Rückmeldung. Eine Entscheidung anderer ist kein Urteil über deine Zukunft. Eine Absage kann schmerzen, ohne dein Können vollständig abzubilden. Eine Rückmeldung eröffnet dir neue Handlungsmöglichkeiten, ohne dass du den vergangenen Ausgang noch verändern musst. So bleibt dein Blick auf neue Chancen offen. Folge MOTUS, wenn du bewusste Entscheidungen im Alltag stärken willst.\n\n#motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset\n\nMusik: Tanner Helland – Wild Waters (CC BY 4.0)",
+      "status": "scheduled",
+      "dueAt": "2026-11-29T06:00:00.000Z",
+      "sentAt": null,
+      "externalLink": null,
+      "channelId": "6ab5124fea19ca0bded4aa0b",
+      "assets": [
+        {
+          "mimeType": "video/mp4",
+          "source": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/main/published/motus-2026-11-29-0700.mp4"
+        }
+      ]
+    },
     {
       "id": "6b08accf2b711838a8bcb1e9",
       "text": "Du liegst im Bett und denkst an einen ungeschickten Satz von heute Nachmittag zurück, während du dich leise ärgerst. Diese Gedankenschleife bringt dich keinen Zentimeter weiter. Prüfe stattdessen sachlich, ob morgen noch eine kurze Klärung nötig ist, oder hake es ab. Endlose Selbstvorwürfe rauben dir nur wertvolle Kraft und verändern nichts mehr am vergangenen Moment. Speichere dir diese Erinnerung für den nächsten Abend, an dem du gedanklich nicht abschalten kannst.\n\n#motus #abendroutine #innereruhe #mentaleklarheit #selbstentwicklung\n\nMusik: Tanner Helland – Hidden Tears (CC BY 4.0)",
@@ -697,66 +757,6 @@
         {
           "mimeType": "video/mp4",
           "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6afa449506e1675856b36371_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6afa450460a910801c56d2e9",
-      "text": "Ein Kunde ist verärgert und du möchtest sofort eine Ausrede anbieten. Wiederhole zuerst sein Anliegen und erkläre dann den nächsten konkreten Schritt. Zuhören schafft Vertrauen. Kennst du jemanden in dieser Lage? Teile den Beitrag mit ihm. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Find You (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-17T11:00:00.000Z",
-      "sentAt": "2026-11-17T11:04:05.013Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7709094056420183329?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6afa450460a910801c56d2e9_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6afa44b8d7e5fee6388a5c26",
-      "text": "Ein großes Vorhaben lähmt dich, weil du nur das Endergebnis siehst. Definiere, woran du einen guten Anfang erkennst. Klarheit schlägt hektische Beschäftigung. Ein großer Plan wirkt oft schwerer, solange der nächste überprüfbare Schritt fehlt. Definiere zuerst, woran du einen vernünftigen Anfang erkennst, bevor du hektisch alles gleichzeitig angehst. Wenn du das wichtigste Ergebnis erkennst, kannst du Nebenaufgaben bewusst zurückstellen und zielgerichteter beginnen. Speichere dir diesen Gedanken für einen schwierigen Tag. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – From Here (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-17T06:00:00.000Z",
-      "sentAt": "2026-11-17T06:02:21.754Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7709016340257852704?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6afa44b8d7e5fee6388a5c26_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6af8f974c5b364e06224ab07",
-      "text": "Du vergleichst dich mit jemandem und fühlst dich plötzlich weniger erfolgreich. Erinnere dich daran, was dir selbst wichtig ist. Zufriedenheit braucht eigene Maßstäbe. Es geht nicht darum, anderen etwas zu beweisen. Du entscheidest, welche Haltung du selbst vertreten möchtest. Eine ehrliche Entscheidung kann unbequem sein. Trotzdem bringt sie dich näher an das Leben, das du gestalten möchtest. Folge MOTUS für neue Gedanken über Mut, Klarheit und Selbstvertrauen. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Lost Islands (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-16T21:00:00.000Z",
-      "sentAt": "2026-11-16T21:03:15.599Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7708877577070431520?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af8f974c5b364e06224ab07_video.mp4"
-        }
-      ]
-    },
-    {
-      "id": "6af8f960e5a113497ab76ec8",
-      "text": "Dein Abendgespräch dreht sich nur um Probleme und niemand erwähnt, was bereits gelungen ist. Frage gezielt nach einem echten kleinen Fortschritt. Hoffnung beginnt bei überprüfbaren Verbesserungen. Teile diesen Beitrag mit jemandem, der heute Zuversicht braucht. #motus #alltagspsychologie #selbstentwicklung #mentaleklarheit #mindset Musik: Tanner Helland – Remember (CC BY 4.0)",
-      "status": "sent",
-      "dueAt": "2026-11-16T17:30:00.000Z",
-      "sentAt": "2026-11-16T17:33:43.719Z",
-      "externalLink": "https://www.tiktok.com/@motus614/video/7708823520288967969?utm_campaign=tt4d_open_api&utm_source=7103819247981182978",
-      "channelId": "6ab5124fea19ca0bded4aa0b",
-      "assets": [
-        {
-          "mimeType": "video/mp4",
-          "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ab500dfc949088b0ba1e58f/6ab5124fea19ca0bded4aa0b/6af8f960e5a113497ab76ec8_video.mp4"
         }
       ]
     }
