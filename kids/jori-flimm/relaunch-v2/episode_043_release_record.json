@@ -26,7 +26,16 @@
   "title_layout_qc_passed": true,
   "title_layout_safe_y_min": 180,
   "title_layout_max_lines": 2,
-  "status": "READY_FOR_BUFFER",
+  "status": "SCHEDULED",
   "video_url": "https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-neustart-folge001/published/jori-flimm-2026-12-03-e043-v1.mp4",
-  "publication_state": "planned_not_published"
+  "publication_state": "planned_not_published",
+  "buffer_post_id": "6b0a862cd089f54571993fcf",
+  "buffer_status": "scheduled",
+  "buffer_channel_id": "6ad948ea778b240e2f839607",
+  "buffer_due_at": "2026-12-03T13:00:00.000Z",
+  "buffer_local_time": "2026-12-03T14:00:00+01:00",
+  "buffer_release_run_id": 46122268314,
+  "buffer_postcheck_run_id": null,
+  "buffer_postcheck_verified_exactly_once": false,
+  "buffer_external_link": null
 }
