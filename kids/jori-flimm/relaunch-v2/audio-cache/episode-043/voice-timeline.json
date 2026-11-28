@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "kind": "speech",
+      "text": "Vor dem geschlossenen Mondtor schwebten noch immer drei Schlüssel über dem Wasser. Zwei warfen silberne Spiegelbilder, doch unter dem schwarzen Glasschlüssel blieb die Wasserfläche leer.",
+      "start": 0.0,
+      "end": 15.46,
+      "duration": 15.46
+    },
+    {
+      "kind": "speech",
+      "text": "Jori kniete am Ufer und strich mit den Fingern über das Mondwasser. Flimms kleine runde Nase leuchtete, während Luma und Miro die drei Schlüssel betrachteten. Der erste Silberschlüssel trug einen Mond und spiegelte sich klar im Wasser. Der zweite Silberschlüssel trug einen Stern und hatte ebenfalls ein helles Spiegelbild. Nur der schwarze Glasschlüssel schwebte über einer leeren Stelle. Auf dem Tor glühte der Hinweis: Nimm den Schlüssel, den das Mondwasser nicht kennt.",
+      "start": 15.46,
+      "end": 53.25,
+      "duration": 37.79
+    },
+    {
+      "kind": "speech",
+      "text": "Welcher Schlüssel öffnet nach dem Hinweis das Mondtor: A der silberne Mondschlüssel mit Spiegelbild, B der silberne Sternschlüssel mit Spiegelbild oder C der schwarze Glasschlüssel ohne Spiegelbild?",
+      "start": 53.25,
+      "end": 69.44,
+      "duration": 16.19
+    },
+    {
+      "kind": "pause",
+      "text": "",
+      "start": 69.44,
+      "end": 76.44,
+      "duration": 7.0
+    },
+    {
+      "kind": "speech",
+      "text": "Schlüssel C! Er ist der einzige ohne Spiegelbild. Jori nahm den schwarzen Glasschlüssel aus der Luft. Vorsichtig glitt er in das mondförmige Schloss. Violettes Licht lief über das Tor, und die Flügel öffneten sich. Hinter dem Tor begann eine Halle aus silbernen Spiegeln und lebenden violetten Ranken. In jedem Spiegel erschienen Jori, Luma, Miro, das Mondfüchslein und der Wassergeist. Dann blieb Flimm vor dem größten Spiegel stehen. Jori sah Flimm direkt neben sich, doch im Spiegel war an seiner Stelle nur leere Luft. Warum hatte Flimm plötzlich kein Spiegelbild?",
+      "start": 76.44,
+      "end": 121.97,
+      "duration": 45.53
+    }
+  ],
+  "duration": 121.97,
+  "provider": "Gemini TTS 3.8",
+  "speaker_id": "Sulafat"
+}
