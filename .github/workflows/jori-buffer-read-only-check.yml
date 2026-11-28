@@ -47,3 +47,5 @@ jobs:
 # E042 live Buffer precheck before production on 2026-11-27.
 
 # E042 post-schedule verification 2026-11-27 after Buffer post 6b0939841fd46e62e7258c5f.
+
+# E043 live Buffer precheck before production on 2026-11-28.
