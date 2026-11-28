@@ -131,13 +131,14 @@ jobs:
               "lob_annehmen": (r"\b(?:lob\w*|kompliment\w*)\b", r"\b(?:klein\w*|abwink\w*|danke)\b"),
               "gemeinsamen_fehler_offenlegen": (r"\b(?:fehler\w*|versehen|patzer)\b", r"\b(?:verschweig\w*|verheimlich\w*)\b", r"\b(?:gemeinsam\w*|team\w*|arbeitsergebnis\w*)\b"),
               "unfertigen_entwurf_zeigen": (r"\bentwurf\w*\b", r"\b(?:unfertig\w*|roh\w*|perfekt\w*)\b", r"\b(?:zeig\w*|teil\w*)\b"),
+              "absage_rueckmeldung": (r"\b(?:absage\w*|abgelehn\w*|ablehnung\w*)\b", r"\b(?:frag\w*|bitt\w*)\b", r"\b(?:rückmeld\w*|grund|gründe|begründ\w*|feedback)\b", r"\b(?:fähigkeiten|persönlich|person|können|selbstwert|urteil)\b"),
           }
           def scenario_keys(value):
               value=value.lower()
               return {key for key,patterns in semantic_patterns.items()
                       if all(re.search(pattern,value) for pattern in patterns)}
           prior_scenarios=[scenario_keys(text) for text in past_editorial_texts]
-          recent_scenarios=set().union(*(keys for keys,age in zip(prior_scenarios,past_editorial_ages) if age<=3))
+          recent_scenarios=set().union(*(keys for keys,age in zip(prior_scenarios,past_editorial_ages) if age<=7))
           def recent_hook_matches(card):
               key=hook_roots(str(card.get("hook","")))
               if not key:return (0,0,15)
@@ -149,7 +150,10 @@ jobs:
                            if semantic or (n>=max(2,min(3,len(key))) and n/len(key)>=0.60)]
               # Prefer distance from a concrete recent scenario over a rotation tie.
               # The same scenario yesterday must not win against a two-week-old one.
-              return (sum(age<=3 for age in strong_ages),repeats,min(strong_ages,default=15))
+              # Concrete paraphrased scenarios need a longer cooldown than lexical overlap.
+              recent=sum((semantic and age<=7) or (age<=3 and n>=max(2,min(3,len(key))) and n/len(key)>=0.60)
+                         for n,age,semantic in matches)
+              return (recent,repeats,min(strong_ages,default=15))
           editorial_today={}
           chosen_motifs=set()
           for t in times_editorial:
@@ -168,7 +172,7 @@ jobs:
               if matches or distance:
                   print("EDITORIAL_HISTORY_SELECTION",target,t,
                         "default",default_idx,"chosen",chosen_idx,
-                        "recent_hook_matches",matches,"strong_last_3d",recent,
+                        "recent_hook_matches",matches,"strong_recent_3d_lexical_7d_semantic",recent,
                         "nearest_strong_age",-negative_age,"history_slots",len(past_editorial_texts))
           motifs=[editorial_today[t].get("motif") for t in times_editorial]
           if None in motifs or len(set(motifs))!=4:
