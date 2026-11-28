@@ -1,7 +1,7 @@
 {
   "series": "Jori & Flimm",
   "branch": "feature/jori-flimm-neustart-folge001",
-  "updated_at": "2026-11-28T08:45:00+01:00",
+  "updated_at": "2026-11-28T08:46:00+01:00",
   "latest_fully_qc_episode": 43,
   "latest_scheduled_episode": 43,
   "next_episode_number": 44,
@@ -21,7 +21,7 @@
     "preview_run_id": 46121271240,
     "final_qc_run_id": 46121946544,
     "release_run_id": 46122268314,
-    "postcheck_run_id": null
+    "postcheck_run_id": 46122615300
   },
   "warning": "Do not infer the next episode from reset series-state.json or episode-ledger.json; use this verified state plus GitHub MP4s, Action logs and live Buffer evidence."
 }
