@@ -25,9 +25,10 @@
 - Produktion/Render: https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/46121271240
 - Unabhängige Final-QC: https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/46121946544
 - Buffer-Buchung: https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/46122268314
+- Live-Buffer-Nachprüfung: https://github.com/TamasHuettenheber/Motus-autamation/actions/runs/46122615300
 - MP4: https://raw.githubusercontent.com/TamasHuettenheber/Motus-autamation/feature/jori-flimm-neustart-folge001/published/jori-flimm-2026-12-03-e043-v1.mp4
 
-Ein externer TikTok-Link ist noch nicht vorhanden; deshalb wird die Folge korrekt als geplant und nicht als veröffentlicht geführt.
+Die Live-Nachprüfung fand genau einen geplanten Eintrag für Folge 043 mit der erwarteten Post-ID, dem Jori-Kanal und der UTC-Zeit. Ein externer TikTok-Link ist noch nicht vorhanden; deshalb wird die Folge korrekt als geplant und nicht als veröffentlicht geführt.
 
 ## Nächster Produktionsanker
 
