@@ -1,0 +1,58 @@
+{
+  "series": "Jori & Flimm",
+  "season": "Neustart",
+  "episode_number": 43,
+  "series_version": "relaunch-v2",
+  "title": "Der Schlüssel ohne Spiegelbild",
+  "hook": "Vor dem geschlossenen Mondtor schwebten noch immer drei Schlüssel über dem Wasser. Zwei warfen silberne Spiegelbilder, doch unter dem schwarzen Glasschlüssel blieb die Wasserfläche leer.",
+  "story": "Jori kniete am Ufer und strich mit den Fingern über das Mondwasser. Flimms kleine runde Nase leuchtete, während Luma und Miro die drei Schlüssel betrachteten. Der erste Silberschlüssel trug einen Mond und spiegelte sich klar im Wasser. Der zweite Silberschlüssel trug einen Stern und hatte ebenfalls ein helles Spiegelbild. Nur der schwarze Glasschlüssel schwebte über einer leeren Stelle. Auf dem Tor glühte der Hinweis: Nimm den Schlüssel, den das Mondwasser nicht kennt.",
+  "question": "Welcher Schlüssel öffnet nach dem Hinweis das Mondtor: A der silberne Mondschlüssel mit Spiegelbild, B der silberne Sternschlüssel mit Spiegelbild oder C der schwarze Glasschlüssel ohne Spiegelbild?",
+  "answer": "Schlüssel C!",
+  "after": "Er ist der einzige ohne Spiegelbild. Jori hob den schwarzen Glasschlüssel aus der Luft und steckte ihn in das mondförmige Schloss. Violettes Licht lief über das Tor, und die Flügel öffneten sich. Hinter dem Tor begann eine Halle aus silbernen Spiegeln und lebenden violetten Ranken. In jedem Spiegel erschienen Jori, Luma, Miro, das Mondfüchslein und der Wassergeist.",
+  "cliff": "Dann blieb Flimm vor dem größten Spiegel stehen. Jori sah Flimm direkt neben sich, doch im Spiegel war an seiner Stelle nur leere Luft. Warum hatte Flimm plötzlich kein Spiegelbild?",
+  "riddle": {
+    "type": "key_without_reflection",
+    "question": "Welcher Schlüssel öffnet nach dem Hinweis das Mondtor: A der silberne Mondschlüssel mit Spiegelbild, B der silberne Sternschlüssel mit Spiegelbild oder C der schwarze Glasschlüssel ohne Spiegelbild?",
+    "answer": "Schlüssel C",
+    "evidence_in_story": "Der Torhinweis verlangt den Schlüssel, den das Mondwasser nicht kennt. A und B spiegeln sich; nur C aus schwarzem Glas hat kein Spiegelbild.",
+    "pause_seconds": 7
+  },
+  "clue_mode": "match_gate_hint_to_missing_reflection",
+  "clues": [
+    "A: Silbermond mit Spiegelbild",
+    "B: Silberstern mit Spiegelbild",
+    "C: Schwarzes Glas ohne Spiegelbild"
+  ],
+  "correct": 2,
+  "puzzle_visual": "Ein TikTok-sicheres Rätselschild zeigt die drei Schlüssel A, B und C mit ihren Spiegelhinweisen. Alle Texte liegen zwischen x=60 und x=540, beginnen unter y=180; rechter Bereich ab x=560 und unterer Beschriftungsbereich bleiben frei.",
+  "continuity": "Setzt ohne Zeitsprung am geschlossenen Mondtor aus Folge 042 an. Jori, Flimm, Luma, das Mondfüchslein, Miro und der Wassergeist prüfen die Spiegelbilder der drei Schlüssel, öffnen das Tor mit dem schwarzen Glasschlüssel und betreten die Halle der Spiegelranken.",
+  "narration": "Vor dem geschlossenen Mondtor schwebten noch immer drei Schlüssel über dem Wasser. Zwei warfen silberne Spiegelbilder, doch unter dem schwarzen Glasschlüssel blieb die Wasserfläche leer. [[SEGMENT]] Jori kniete am Ufer und strich mit den Fingern über das Mondwasser. Flimms kleine runde Nase leuchtete, während Luma und Miro die drei Schlüssel betrachteten. Der erste Silberschlüssel trug einen Mond und spiegelte sich klar im Wasser. Der zweite Silberschlüssel trug einen Stern und hatte ebenfalls ein helles Spiegelbild. Nur der schwarze Glasschlüssel schwebte über einer leeren Stelle. Auf dem Tor glühte der Hinweis: Nimm den Schlüssel, den das Mondwasser nicht kennt. [[SEGMENT]] Welcher Schlüssel öffnet nach dem Hinweis das Mondtor: A der silberne Mondschlüssel mit Spiegelbild, B der silberne Sternschlüssel mit Spiegelbild oder C der schwarze Glasschlüssel ohne Spiegelbild? [[PAUSE:7]] Schlüssel C! Er ist der einzige ohne Spiegelbild. Jori hob den schwarzen Glasschlüssel aus der Luft und steckte ihn in das mondförmige Schloss. Violettes Licht lief über das Tor, und die Flügel öffneten sich. Hinter dem Tor begann eine Halle aus silbernen Spiegeln und lebenden violetten Ranken. In jedem Spiegel erschienen Jori, Luma, Miro, das Mondfüchslein und der Wassergeist. Dann blieb Flimm vor dem größten Spiegel stehen. Jori sah Flimm direkt neben sich, doch im Spiegel war an seiner Stelle nur leere Luft. Warum hatte Flimm plötzlich kein Spiegelbild?",
+  "narration_tts": "Vor dem geschlossenen Mondtor schwebten noch immer drei Schlüssel über dem Wasser. Zwei warfen silberne Spiegelbilder, doch unter dem schwarzen Glasschlüssel blieb die Wasserfläche leer. [[SEGMENT]] Jori kniete am Ufer und strich mit den Fingern über das Mondwasser. Flimms kleine runde Nase leuchtete, während Luma und Miro die drei Schlüssel betrachteten. Der erste Silberschlüssel trug einen Mond und spiegelte sich klar im Wasser. Der zweite Silberschlüssel trug einen Stern und hatte ebenfalls ein helles Spiegelbild. Nur der schwarze Glasschlüssel schwebte über einer leeren Stelle. Auf dem Tor glühte der Hinweis: Nimm den Schlüssel, den das Mondwasser nicht kennt. [[SEGMENT]] Welcher Schlüssel öffnet nach dem Hinweis das Mondtor: A der silberne Mondschlüssel mit Spiegelbild, B der silberne Sternschlüssel mit Spiegelbild oder C der schwarze Glasschlüssel ohne Spiegelbild? [[PAUSE:7]] Schlüssel C! Er ist der einzige ohne Spiegelbild. Jori hob den schwarzen Glasschlüssel aus der Luft und steckte ihn in das mondförmige Schloss. Violettes Licht lief über das Tor, und die Flügel öffneten sich. Hinter dem Tor begann eine Halle aus silbernen Spiegeln und lebenden violetten Ranken. In jedem Spiegel erschienen Jori, Luma, Miro, das Mondfüchslein und der Wassergeist. Dann blieb Flimm vor dem größten Spiegel stehen. Jori sah Flimm direkt neben sich, doch im Spiegel war an seiner Stelle nur leere Luft. Warum hatte Flimm plötzlich kein Spiegelbild?",
+  "voice": {
+    "provider": "Gemini TTS 3.8",
+    "model": "gemini-3.8-flash-lite-tts",
+    "speaker_id": "Sulafat"
+  },
+  "tts_status": "pending_verified_free_tier",
+  "scene_briefs": [
+    "Direkter Anschluss: Vor dem Mondtor schweben zwei silberne Schlüssel mit Spiegelbildern und ein schwarzer Glasschlüssel ohne Spiegelbild.",
+    "Jori prüft die klaren Spiegelbilder der beiden silbernen Schlüssel im Mondwasser.",
+    "Wellen verzerren A und B; unter C bleibt die Wasserfläche ohne Spiegelbild.",
+    "Ruhiges TikTok-sicheres Rätsel-Tableau mit allen drei Schlüsseln und Spiegelhinweisen.",
+    "Lösung: Jori steckt den schwarzen Glasschlüssel C in das mondförmige Schloss; das Tor öffnet sich.",
+    "Die Gruppe betritt eine Halle aus silbernen Spiegeln und lebenden violetten Ranken.",
+    "Cliffhanger: Flimm steht vor dem größten Spiegel, doch sein Spiegelbild fehlt."
+  ],
+  "visuals": [
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-043-v1/scene-01.jpg", "scene": 1, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-043-v1/scene-02.jpg", "scene": 2, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-043-v1/scene-03.jpg", "scene": 3, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-043-v1/scene-04.jpg", "scene": 4, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-043-v1/scene-05.jpg", "scene": 5, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-043-v1/scene-06.jpg", "scene": 6, "generated": true},
+    {"path": "kids/jori-flimm/relaunch-v2/assets/episode-043-v1/scene-07.jpg", "scene": 7, "generated": true}
+  ],
+  "created_at": "2026-11-28T08:20:00+01:00",
+  "status": "STORY_AND_SEVEN_NEW_IMAGES_READY_TTS_PENDING",
+  "previous_cliffhanger": "Vor dem geschlossenen Tor schwebten drei Schlüssel über dem Wasser. Zwei spiegelten sich silbern im Fluss. Doch der schwarze Glasschlüssel warf überhaupt kein Spiegelbild. Wer hatte einen Schlüssel ohne Spiegel geschaffen?"
+}
