@@ -35,7 +35,7 @@
   "buffer_due_at": "2026-12-03T13:00:00.000Z",
   "buffer_local_time": "2026-12-03T14:00:00+01:00",
   "buffer_release_run_id": 46122268314,
-  "buffer_postcheck_run_id": null,
-  "buffer_postcheck_verified_exactly_once": false,
+  "buffer_postcheck_run_id": 46122615300,
+  "buffer_postcheck_verified_exactly_once": true,
   "buffer_external_link": null
 }
